@@ -1,0 +1,6 @@
+{
+  "stories": [
+    { "id": "genesis-1", "title": "In the Beginning", "reference": "Genesis 1–2" },
+    { "id": "noah", "title": "Noah's Ark", "reference": "Genesis 6–9" }
+  ]
+}

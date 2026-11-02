@@ -1,0 +1,56 @@
+{
+ "line": "In the very beginning, before there was anything at all, there was God. Then God spoke: \"Let there be light!\" And light burst into being.",
+ "speed": 0.85,
+ "voices": [
+  {
+   "voice": "bm_george",
+   "label": "George \u2014 British, mature storyteller",
+   "src": "audio/voices/bm_george.m4a"
+  },
+  {
+   "voice": "bm_fable",
+   "label": "Fable \u2014 British, warm and grand",
+   "src": "audio/voices/bm_fable.m4a"
+  },
+  {
+   "voice": "bm_lewis",
+   "label": "Lewis \u2014 British, deep",
+   "src": "audio/voices/bm_lewis.m4a"
+  },
+  {
+   "voice": "bm_daniel",
+   "label": "Daniel \u2014 British, calm",
+   "src": "audio/voices/bm_daniel.m4a"
+  },
+  {
+   "voice": "am_onyx",
+   "label": "Onyx \u2014 American, very deep",
+   "src": "audio/voices/am_onyx.m4a"
+  },
+  {
+   "voice": "am_fenrir",
+   "label": "Fenrir \u2014 American, strong",
+   "src": "audio/voices/am_fenrir.m4a"
+  },
+  {
+   "voice": "am_michael",
+   "label": "Michael \u2014 American, warm",
+   "src": "audio/voices/am_michael.m4a"
+  },
+  {
+   "voice": "am_adam",
+   "label": "Adam \u2014 American, low",
+   "src": "audio/voices/am_adam.m4a"
+  },
+  {
+   "voice": "bm_george,am_onyx",
+   "label": "George + Onyx blend \u2014 British gravitas, deeper",
+   "src": "audio/voices/bm_george+am_onyx.m4a"
+  },
+  {
+   "voice": "bm_fable,bm_lewis",
+   "label": "Fable + Lewis blend \u2014 grand and deep",
+   "src": "audio/voices/bm_fable+bm_lewis.m4a"
+  }
+ ]
+}

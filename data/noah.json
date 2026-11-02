@@ -1,0 +1,591 @@
+{
+  "title": "Noah's Ark",
+  "reference": "Genesis 6:9 – 9:17",
+  "subtitle": "The story of a flood, a boat and a promise",
+  "book": "Genesis",
+  "text": "data/noah-text.json",
+  "art": "art/noah",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "noah",
+      "name": "Noah",
+      "prompt": "Noah standing alone, full body, front view: a kind, strong old man with a long white beard and white hair, warm brown skin and gentle eyes, wearing a simple sand-colored robe with a deep blue sash and leather sandals, holding a wooden staff",
+      "src": "art/noah/cast/noah.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 400017,
+        "at": "2026-11-02T22:01:07.527Z"
+      }
+    },
+    {
+      "id": "ark",
+      "name": "the ark",
+      "prompt": "Noah's ark alone, seen from the side: a huge, long wooden boat of warm brown planks with a pitched-roof cabin running along its deck, a row of small square windows under the roof, and one big door in its side with a wooden ramp",
+      "src": "art/noah/cast/ark.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 773649,
+        "at": "2026-11-02T22:01:26.228Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "walked",
+      "eyebrow": "Part One",
+      "title": "A Man Who Walked with God",
+      "verses": [
+        "6:9",
+        "6:13"
+      ],
+      "beats": [
+        "Long after the first days, the world had filled up with people — but it had also filled up with fighting and wrong. People hurt one another, and the earth was spoiled.",
+        "But one man was different. His name was Noah. Noah was good, he loved God, and he walked with God every day.",
+        "God was sad about what the world had become. So He told Noah what He was going to do."
+      ],
+      "layers": [
+        {
+          "id": "evening",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "evening",
+          "refs": [
+            "noah"
+          ],
+          "prompt": "Evening on a quiet hillside: Noah stands with his wife, his three grown sons and their three wives, right of center, looking out over a wide valley. Far away in the valley, a dark, crowded city sits under a haze of smoke. A warm golden sky above, with the first stars coming out",
+          "src": "art/noah/walked/evening.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 365167,
+            "at": "2026-11-02T22:02:03.736Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.64,
+        0.5
+      ]
+    },
+    {
+      "id": "build",
+      "eyebrow": "Part Two",
+      "title": "Build an Ark",
+      "verses": [
+        "6:14",
+        "6:22"
+      ],
+      "beats": [
+        "God said to Noah, “I am going to send a great flood. Build a huge boat — an ark — out of wood, and cover it with tar inside and out.”",
+        "“Bring your family into it, and two of every kind of animal, so they will stay alive with you.”",
+        "So Noah did everything just as God told him. Day after day, he built and built."
+      ],
+      "layers": [
+        {
+          "id": "building",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "building",
+          "refs": [
+            "noah",
+            "ark"
+          ],
+          "prompt": "In a wide green valley, the ark is being built, right of center: its wooden frame of curved ribs with half of its planks in place, surrounded by scaffolding, ladders, stacks of timber and buckets of tar. Noah stands on the scaffolding holding a hammer while his sons carry planks. A bright daytime sky with soft clouds",
+          "src": "art/noah/build/building.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 499015,
+            "at": "2026-11-02T22:02:30.589Z"
+          }
+        },
+        {
+          "id": "finished",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "finished",
+          "editOf": "building",
+          "refs": [
+            "ark"
+          ],
+          "edit": "The ark is now finished: whole and complete, with all its planks, its roof cabin, its windows and its big door, exactly like the ark in the reference. The scaffolding, ladders and timber stacks are gone, and Noah and his sons stand proudly beside it.",
+          "src": "art/noah/build/finished.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 499015,
+            "at": "2026-11-02T22:03:00.007Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "hammer",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to help build",
+        "at": [
+          0.72,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "wind"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ]
+    },
+    {
+      "id": "animals",
+      "eyebrow": "Part Three",
+      "title": "Two by Two",
+      "verses": [
+        "7:1",
+        "7:16"
+      ],
+      "beats": [
+        "When the ark was ready, the animals came — two by two, every kind: lions and lambs, elephants and mice, and birds of every color.",
+        "Noah and his family went inside with them all. And then God Himself shut the door."
+      ],
+      "layers": [
+        {
+          "id": "parade",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "parade",
+          "refs": [
+            "noah",
+            "ark"
+          ],
+          "prompt": "The finished ark stands on a green valley floor, right of center, with its big door open and a ramp leading up to it. A long line of animals walks up the ramp two by two: elephants, giraffes, lions, zebras, sheep, camels and rabbits, while pairs of birds fly in. Noah stands beside the door, welcoming them. Bright morning light",
+          "src": "art/noah/animals/parade.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 801808,
+            "at": "2026-11-02T22:03:44.170Z"
+          }
+        },
+        {
+          "id": "shut",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "shut",
+          "editOf": "parade",
+          "edit": "Now everyone is inside: the ark's big door is closed, and the ramp and the valley are empty of animals and people. The sky has turned grey, with heavy clouds gathering.",
+          "src": "art/noah/animals/shut.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 801808,
+            "at": "2026-11-02T22:03:58.724Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 1.1
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky to call the birds",
+        "at": [
+          0.7,
+          0.3
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.55,
+        0.5
+      ]
+    },
+    {
+      "id": "flood",
+      "eyebrow": "Part Four",
+      "title": "The Rain Came",
+      "verses": [
+        "7:17",
+        "7:24"
+      ],
+      "beats": [
+        "Then the rain began. It rained for forty days and forty nights. Springs burst up from deep below, and the water rose, and rose, and rose.",
+        "The water covered the hills, and then even the highest mountains. But the ark floated safely on top of it all."
+      ],
+      "layers": [
+        {
+          "id": "storm",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "storm",
+          "refs": [
+            "ark"
+          ],
+          "prompt": "A great storm at sea: heavy rain pours from dark grey-blue clouds onto a vast, rising, choppy sea of deep blue, teal and slate-grey paper waves that fills the whole lower half of the picture from edge to edge, with white paper foam on the crests. The ark floats safely on the waves, right of center, with warm light glowing from its windows; its door is shut and there is no ramp. Only the tops of a few mountains still peek above the water far away",
+          "src": "art/noah/flood/storm.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 4711,
+            "at": "2026-11-02T22:09:10.184Z"
+          },
+          "seed": 4711
+        },
+        {
+          "id": "deep",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "deep",
+          "editOf": "storm",
+          "edit": "The water has risen even higher: the mountaintops on the horizon are gone, covered by the sea, and there is nothing but stormy water all around the ark, all the way to the horizon. The ark floats calmly on top in the rain.",
+          "src": "art/noah/flood/deep.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 930839,
+            "at": "2026-11-02T22:09:27.700Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rain",
+          "from": 0
+        },
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "lightning",
+          "from": 0,
+          "sky": 0.4
+        }
+      ],
+      "touch": {
+        "hint": "Tap the clouds",
+        "at": [
+          0.75,
+          0.15
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "rain",
+          "thunder",
+          "waves"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "id": "remembered",
+      "eyebrow": "Part Five",
+      "title": "God Remembered Noah",
+      "verses": [
+        "8:1",
+        "8:5"
+      ],
+      "beats": [
+        "But God remembered Noah, and all the animals in the ark. He sent a wind over the earth, and the rain stopped, and the water began to go down.",
+        "Slowly, slowly, the ark came to rest high on the mountains of Ararat. And one by one, the mountaintops appeared."
+      ],
+      "layers": [
+        {
+          "id": "calm",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "calm",
+          "refs": [
+            "ark"
+          ],
+          "prompt": "After the flood: a calm, wide sea under a clearing sky, a fresh wind pushing the last clouds away and sunbeams breaking through. The ark floats peacefully, right of center, near a few mountaintops just appearing above the water",
+          "src": "art/noah/remembered/calm.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 793203,
+            "at": "2026-11-02T22:05:14.768Z"
+          }
+        },
+        {
+          "id": "ararat",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "ararat",
+          "editOf": "calm",
+          "edit": "The water has gone down: the ark now rests on the top of a mountain, and more mountaintops and green hillsides rise out of the sea around it.",
+          "src": "art/noah/remembered/ararat.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 793203,
+            "at": "2026-11-02T22:05:32.423Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0,
+          "x": 0.82,
+          "y": 0.08,
+          "soft": true
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.55
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.5
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea",
+        "at": [
+          0.62,
+          0.64
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "wind",
+          "gulls"
+        ],
+        "mood": "sky"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "id": "dove",
+      "eyebrow": "Part Six",
+      "title": "The Dove",
+      "verses": [
+        "8:6",
+        "8:19"
+      ],
+      "beats": [
+        "Noah opened a window and sent out a dove. But the dove found nowhere to land, so she flew back to him.",
+        "A week later, he sent the dove out again — and that evening she came back with a fresh olive leaf in her beak! The land was drying out.",
+        "At last God said, “Come out of the ark!” And out they all came — Noah, his family and every animal — into a fresh, new world."
+      ],
+      "layers": [
+        {
+          "id": "window",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "window",
+          "refs": [
+            "noah",
+            "ark"
+          ],
+          "prompt": "The ark rests on a mountainside above a sea that is going down. Noah leans out of a window high on the side of the ark, right of center, letting a white dove fly out into a wide, soft morning sky",
+          "src": "art/noah/dove/window.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 554177,
+            "at": "2026-11-02T22:06:05.068Z"
+          }
+        },
+        {
+          "id": "out",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "out",
+          "editOf": "window",
+          "refs": [
+            "noah"
+          ],
+          "edit": "The land is dry and green again: Noah, his wife, his three sons and their wives walk out of the ark's open door onto fresh grass, and pairs of animals of every kind spread out across the green hillside, with the white dove flying above.",
+          "src": "art/noah/dove/out.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 554177,
+            "at": "2026-11-02T22:06:36.143Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dove",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky to send the dove",
+        "at": [
+          0.75,
+          0.28
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds",
+          "gulls"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "rainbow",
+      "eyebrow": "Part Seven",
+      "title": "The Rainbow",
+      "verses": [
+        "8:20",
+        "9:17"
+      ],
+      "beats": [
+        "Noah thanked God. And God made a promise: “Never again will a flood destroy the whole earth.”",
+        "“Here is the sign of My promise,” God said. “I have put My rainbow in the clouds. Whenever it appears, I will remember My promise to you and to every living thing — forever.”"
+      ],
+      "layers": [
+        {
+          "id": "after",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "after",
+          "refs": [
+            "noah"
+          ],
+          "prompt": "A fresh, rain-washed world: green hills and wildflowers, the ark resting on a far mountain, and a soft sky of clearing grey-white clouds. Noah and his family stand together on a hill, right of center, looking up at the sky, with animals grazing nearby",
+          "src": "art/noah/rainbow/after.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 347087,
+            "at": "2026-11-02T22:06:58.881Z"
+          }
+        },
+        {
+          "id": "rainbow",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "rainbow",
+          "editOf": "after",
+          "edit": "A great, glowing rainbow now arches across the whole sky above Noah, his family and the hills, and the clouds part into warm golden light.",
+          "trigger": "tap",
+          "hint": "Tap the sky",
+          "origin": [
+            0.66,
+            0.28
+          ],
+          "mood": "dawn",
+          "sfx": "promise",
+          "src": "art/noah/rainbow/rainbow.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 347087,
+            "at": "2026-11-02T22:07:16.302Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "with": "rainbow",
+          "x": 0.66,
+          "y": 0.28,
+          "soft": true
+        },
+        {
+          "type": "motes",
+          "with": "rainbow"
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.7,
+        0.5
+      ]
+    }
+  ]
+}

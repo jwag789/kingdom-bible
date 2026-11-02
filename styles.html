@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose the Look · Kingdom Bible</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #f5ecda; --soft: rgba(245,236,218,0.62); --gold: #f0cc8a; --night: #04050a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 70% 20%, #2a2440, var(--night) 70%); color: var(--ink);
+    font-family: 'Literata', Georgia, serif; padding: 48px max(16px, 5vw); }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.4rem, 6vw, 3.6rem); margin: 0 0 0.4rem; }
+  .line { color: var(--soft); max-width: 44rem; margin: 0 0 2rem; line-height: 1.6; }
+  section { margin: 0 0 3rem; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2rem; margin: 0 0 0.8rem; color: var(--gold); }
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 12px; }
+  figure { margin: 0; }
+  img { width: 100%; display: block; border-radius: 12px; cursor: zoom-in; }
+  figcaption { color: var(--soft); font-size: 0.85rem; margin-top: 6px; }
+  dialog { padding: 0; border: 0; background: transparent; max-width: 96vw; }
+  dialog img { max-height: 92vh; width: auto; max-width: 96vw; cursor: zoom-out; }
+  dialog::backdrop { background: rgba(0,0,0,0.85); }
+</style>
+</head>
+<body>
+<h1>Choose the look</h1>
+<p class="line">The same two scenes in four art directions. The one you pick becomes the look for every picture in the story. Click a picture to see it full size.</p>
+<div id="looks"></div>
+<dialog id="big"><img alt=""></dialog>
+<script type="module">
+const { looks, scenes } = await (await fetch('art/style-test/looks.json')).json();
+const big = document.getElementById('big');
+big.onclick = () => big.close();
+for (const look of looks) {
+  const section = document.createElement('section');
+  const h2 = document.createElement('h2');
+  h2.textContent = look.label;
+  const pair = document.createElement('div');
+  pair.className = 'pair';
+  for (const scene of scenes) {
+    const fig = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = `art/style-test/${look.id}-${scene.id}.jpg`;
+    img.alt = `${look.label}: ${scene.label}`;
+    img.onclick = () => { big.querySelector('img').src = img.src; big.showModal(); };
+    const cap = document.createElement('figcaption');
+    cap.textContent = scene.label;
+    fig.append(img, cap);
+    pair.append(fig);
+  }
+  section.append(h2, pair);
+  document.getElementById('looks').append(section);
+}
+</script>
+</body>
+</html>

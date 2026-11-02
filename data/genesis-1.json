@@ -1,0 +1,558 @@
+{
+  "title": "In the Beginning",
+  "reference": "Genesis 1:1 – 2:3",
+  "subtitle": "The story of how everything began",
+  "book": "Genesis",
+  "text": "data/genesis-1-text.json",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "scenes": [
+    {
+      "id": "beginning",
+      "eyebrow": "The First Day",
+      "title": "Let There Be Light",
+      "verses": [
+        "1:1",
+        "1:5"
+      ],
+      "beats": [
+        "In the very beginning, before there was anything at all, there was God.",
+        "Everything was dark and empty — only deep, deep water in the dark. But God's Spirit was there, hovering over the waters.",
+        "Then God spoke: “Let there be light!” And light burst into being.",
+        "God saw that the light was good. He called the light “day” and the darkness “night.” Evening came, and then morning — the very first day."
+      ],
+      "layers": [
+        {
+          "id": "dark",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "void",
+          "prompt": "Total darkness before creation: an endless deep ocean of dark blue-black paper waves fills the whole lower half of the picture from edge to edge, out to a low horizon, under a dim night-blue sky of dark grey-blue paper clouds, faint blue-grey paper mist drifting low over the water. Everything is dim and hushed. An empty world of only water, mist and darkness: no shore, no land, no people, no creatures",
+          "src": "art/beginning/dark.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 1717,
+            "at": "2026-11-02T21:51:09.921Z"
+          },
+          "seed": 1718
+        },
+        {
+          "id": "light",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "firstLight",
+          "editOf": "dark",
+          "edit": "Light breaks into this scene: the dark paper clouds part high up, right of center, and warm golden light pours down through the opening, spreading across the mist and the water and pushing the darkness back. It is still an empty world of only water, mist, clouds and light.",
+          "src": "art/beginning/light.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 307446,
+            "at": "2026-11-02T21:51:27.977Z"
+          },
+          "trigger": "tap",
+          "hint": "Tap the darkness",
+          "origin": [
+            0.66,
+            0.24
+          ],
+          "mood": "dawn"
+        }
+      ],
+      "effects": [
+        {
+          "type": "mist",
+          "from": 1
+        },
+        {
+          "type": "spirit",
+          "from": 1,
+          "until": "light",
+          "water": 0.62
+        },
+        {
+          "type": "glow",
+          "with": "light",
+          "follow": true,
+          "color": "#fff0c4"
+        },
+        {
+          "type": "rays",
+          "with": "light",
+          "x": 0.66,
+          "y": 0.24
+        },
+        {
+          "type": "motes",
+          "with": "light"
+        }
+      ],
+      "sound": {
+        "ambience": [
+          "deep",
+          "wind"
+        ],
+        "mood": "void"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ]
+    },
+    {
+      "id": "expanse",
+      "eyebrow": "The Second Day",
+      "title": "The Sky Above the Waters",
+      "verses": [
+        "1:6",
+        "1:8"
+      ],
+      "beats": [
+        "Next, God made a great open space — the sky — stretching between the waters above and the waters below.",
+        "Evening came, and then morning — the second day."
+      ],
+      "layers": [
+        {
+          "id": "expanse",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "expanse",
+          "prompt": "A vast open sky high above a calm endless ocean: towering luminous paper clouds stacked in layers, gentle even daylight, an enormous sense of space. Only sky, clouds and water: an empty world with no land, no creatures and no people",
+          "src": "art/expanse/expanse.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 260597,
+            "at": "2026-11-02T21:47:47.994Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.9
+        },
+        {
+          "type": "lift",
+          "from": 0,
+          "water": 0.86
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea",
+        "at": [
+          0.7,
+          0.93
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "wind"
+        ],
+        "mood": "sky"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "id": "land",
+      "eyebrow": "The Third Day",
+      "title": "Land and Every Green Thing",
+      "verses": [
+        "1:9",
+        "1:13"
+      ],
+      "beats": [
+        "Then God gathered the waters together into seas, and dry ground rose up out of them. He called the dry ground “land” and the waters “seas.” And God saw that it was good.",
+        "God said, “Let the land grow green!” And up came grass, and plants, and trees heavy with fruit — each one full of seeds to make more.",
+        "God saw that it was good. Evening came, and then morning — the third day."
+      ],
+      "layers": [
+        {
+          "id": "waters",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "waters",
+          "prompt": "A wide calm ocean under a soft bright sky with gentle layered paper clouds, even morning light, the horizon a little above the middle. Only sky and water: an empty world with no land, no creatures and no people",
+          "src": "art/land/waters.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 778802,
+            "at": "2026-11-02T21:47:59.018Z"
+          }
+        },
+        {
+          "id": "land",
+          "kind": "plate",
+          "depth": 0.12,
+          "from": 0,
+          "paint": "land",
+          "editOf": "waters",
+          "edit": "Dry land rises out of this ocean: gentle bare hills of tan and ochre paper emerge along the horizon, and a broad bare shore of sandy paper land rises in the foreground, filling the whole bottom third of the picture from edge to edge. No plants yet, no creatures, no people.",
+          "src": "art/land/land.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 778802,
+            "at": "2026-11-02T21:51:09.688Z"
+          }
+        },
+        {
+          "id": "trees",
+          "kind": "plate",
+          "depth": 0.12,
+          "from": 1,
+          "paint": "trees",
+          "editOf": "land",
+          "edit": "The land turns green: layers of paper grass and wildflowers cover the hills and the shore, and a few lush fruit trees heavy with colorful fruit grow on the near hills at the left and right, rooted firmly in the ground. The sea stays open water. Only plants: no creatures, no people.",
+          "src": "art/land/trees.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 778802,
+            "at": "2026-11-02T21:51:32.017Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 1
+        },
+        {
+          "type": "sprout",
+          "from": 1,
+          "ground": 0.86
+        }
+      ],
+      "touch": {
+        "hint": "Tap the ground to plant",
+        "at": [
+          0.72,
+          0.93
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "birds"
+        ],
+        "mood": "growing"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "lights",
+      "eyebrow": "The Fourth Day",
+      "title": "Sun, Moon, and Stars",
+      "verses": [
+        "1:14",
+        "1:19"
+      ],
+      "beats": [
+        "Then God filled the sky with lights.",
+        "He made the great sun to shine by day and the softer moon to glow by night. He made the stars, too.",
+        "The lights would mark the days and the seasons and the years. And God saw that it was good. Evening came, and then morning — the fourth day."
+      ],
+      "layers": [
+        {
+          "id": "twilight",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "twilight",
+          "prompt": "A vast twilight sky over quiet green hills and a calm sea: a great golden paper sun setting on the horizon at the left, a pale full moon rising high on the right, the first small stars appearing in a deep blue sky that fills the upper half. No creatures, no people",
+          "src": "art/lights/twilight.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 681316,
+            "at": "2026-11-02T21:48:48.432Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "glow",
+          "from": 1,
+          "x": 0.23,
+          "y": 0.38,
+          "color": "#ffb36b"
+        },
+        {
+          "type": "stars",
+          "from": 1
+        },
+        {
+          "type": "starmaker",
+          "from": 1,
+          "sky": 0.45
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky to place a star",
+        "at": [
+          0.72,
+          0.3
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets",
+          "wind"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "creatures",
+      "eyebrow": "The Fifth Day",
+      "title": "Creatures of Sea and Sky",
+      "verses": [
+        "1:20",
+        "1:23"
+      ],
+      "beats": [
+        "Next, God filled the seas with living things — fish of every kind, and great creatures of the deep.",
+        "And He filled the sky with birds, soaring above the earth.",
+        "God blessed them: “Have many young ones, and fill the seas and the skies!” Evening came, and then morning — the fifth day."
+      ],
+      "layers": [
+        {
+          "id": "teeming",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "teeming",
+          "prompt": "A sparkling morning sea teeming with life: shoals of bright paper fish swim just under the clear layered water, a bright sky with gentle clouds above, a green coastline in the distance, the horizon a little above the middle. No people",
+          "src": "art/creatures/teeming.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 235629,
+            "at": "2026-11-02T21:49:00.526Z"
+          }
+        },
+        {
+          "id": "whale",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 0,
+          "paint": "whale",
+          "editOf": "teeming",
+          "edit": "A great humpback whale breaches joyfully out of this sea, right of center in the middle distance, with a big splash of white paper spray, and a pod of dolphins arcs out of the water nearby. The shoals of fish stay. No people.",
+          "src": "art/creatures/whale.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 235629,
+            "at": "2026-11-02T21:49:17.917Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.5
+        },
+        {
+          "type": "birds",
+          "from": 1
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.4
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea or the sky",
+        "at": [
+          0.72,
+          0.72
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "gulls",
+          "birds"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ]
+    },
+    {
+      "id": "living",
+      "eyebrow": "The Sixth Day",
+      "title": "Animals, and People",
+      "verses": [
+        "1:24",
+        "1:31"
+      ],
+      "beats": [
+        "Then God made animals for the land — cattle, creeping things, and wild animals of every kind.",
+        "And then God made people. He made them in His own image, to be like Him. Male and female He created them.",
+        "God blessed them and gave them a job: to fill the earth and to rule over it — to take care of the fish and the birds and every living thing.",
+        "God looked at everything He had made, and it was very good. Evening came, and then morning — the sixth day."
+      ],
+      "layers": [
+        {
+          "id": "meadow",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "meadow",
+          "prompt": "A peaceful wide meadow of wildflowers under a golden afternoon sky, distant blue hills and a gentle winding river. An empty, untouched landscape with no people and no animals",
+          "src": "art/living/meadow.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 128944,
+            "at": "2026-11-02T21:49:29.880Z"
+          }
+        },
+        {
+          "id": "animals",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 0,
+          "paint": "animals",
+          "editOf": "meadow",
+          "edit": "Animals of every kind now live in this meadow together in peace, mostly right of center: two elephants and a tall giraffe in the middle distance near the river, a lion resting calmly beside a lamb, deer, sheep, cattle and rabbits among the flowers. No people yet.",
+          "src": "art/living/animals.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 128944,
+            "at": "2026-11-02T21:49:49.419Z"
+          }
+        },
+        {
+          "id": "people",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "people",
+          "editOf": "animals",
+          "edit": "In the near meadow, right of center, add the first man and woman, Adam and Eve, standing side by side among tall wildflowers, seen from behind as they look out over the animals and the river. They have warm olive-brown skin; he has dark curly hair and a short beard, she has long dark wavy hair down her back. They wear modest garments of layered green leaves that cover them from shoulders to knees. Keep every animal where it is.",
+          "src": "art/living/people.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 128944,
+            "at": "2026-11-02T21:50:08.114Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 2
+        },
+        {
+          "type": "flutter",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the meadow",
+        "at": [
+          0.5,
+          0.86
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow",
+          "wind"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "id": "rest",
+      "eyebrow": "The Seventh Day",
+      "title": "Rest",
+      "verses": [
+        "2:1",
+        "2:3"
+      ],
+      "beats": [
+        "And so the heavens and the earth were finished, in all their beauty.",
+        "On the seventh day, God rested from all His work. He blessed the seventh day and made it holy."
+      ],
+      "layers": [
+        {
+          "id": "rest",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "rest",
+          "prompt": "The finished creation at golden evening in perfect stillness: a soft glow of light high in the center of the sky over gardens, fruit trees, hills and a calm sea, a few animals resting peacefully far away, deep peace. No people",
+          "src": "art/rest/rest.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 961563,
+            "at": "2026-11-02T21:50:22.830Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0,
+          "x": 0.5,
+          "y": 0.2,
+          "soft": true
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "next": {
+    "story": "noah",
+    "title": "Noah's Ark",
+    "sub": "Genesis 6–9: a flood, a boat and a promise."
+  }
+}

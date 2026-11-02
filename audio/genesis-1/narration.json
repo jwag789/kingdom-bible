@@ -1,0 +1,2474 @@
+{
+ "cover": {
+  "src": "audio/genesis-1/cover.m4a",
+  "text": "In the Beginning.",
+  "voice": "bm_lewis",
+  "duration": 2.675,
+  "words": [
+   {
+    "w": "In",
+    "s": 0.725,
+    "e": 0.975
+   },
+   {
+    "w": "the",
+    "s": 0.975,
+    "e": 1.1
+   },
+   {
+    "w": "Beginning",
+    "s": 1.1,
+    "e": 2.025
+   }
+  ]
+ },
+ "beginning-title": {
+  "src": "audio/genesis-1/beginning-title.m4a",
+  "text": "The First Day. Let There Be Light.",
+  "voice": "bm_lewis",
+  "duration": 3.825,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "First",
+    "s": 0.825,
+    "e": 1.225
+   },
+   {
+    "w": "Day",
+    "s": 1.225,
+    "e": 1.725
+   },
+   {
+    "w": "Let",
+    "s": 1.913,
+    "e": 2.15
+   },
+   {
+    "w": "There",
+    "s": 2.15,
+    "e": 2.325
+   },
+   {
+    "w": "Be",
+    "s": 2.325,
+    "e": 2.475
+   },
+   {
+    "w": "Light",
+    "s": 2.475,
+    "e": 3.15
+   }
+  ]
+ },
+ "beginning-0": {
+  "src": "audio/genesis-1/beginning-0.m4a",
+  "text": "In the very beginning, before there was anything at all, there was God.",
+  "voice": "bm_lewis",
+  "duration": 6.025,
+  "words": [
+   {
+    "w": "In",
+    "s": 0.725,
+    "e": 0.812
+   },
+   {
+    "w": "the",
+    "s": 0.812,
+    "e": 0.938
+   },
+   {
+    "w": "very",
+    "s": 0.938,
+    "e": 1.3
+   },
+   {
+    "w": "beginning",
+    "s": 1.3,
+    "e": 2.075
+   },
+   {
+    "w": "before",
+    "s": 2.175,
+    "e": 2.525
+   },
+   {
+    "w": "there",
+    "s": 2.525,
+    "e": 2.675
+   },
+   {
+    "w": "was",
+    "s": 2.675,
+    "e": 2.875
+   },
+   {
+    "w": "anything",
+    "s": 2.875,
+    "e": 3.375
+   },
+   {
+    "w": "at",
+    "s": 3.375,
+    "e": 3.538
+   },
+   {
+    "w": "all",
+    "s": 3.538,
+    "e": 4.05
+   },
+   {
+    "w": "there",
+    "s": 4.15,
+    "e": 4.3
+   },
+   {
+    "w": "was",
+    "s": 4.3,
+    "e": 4.55
+   },
+   {
+    "w": "God",
+    "s": 4.55,
+    "e": 5.3
+   }
+  ]
+ },
+ "beginning-1": {
+  "src": "audio/genesis-1/beginning-1.m4a",
+  "text": "Everything was dark and empty — only deep, deep water in the dark. But God's Spirit was there, hovering over the waters.",
+  "voice": "bm_lewis",
+  "duration": 10.55,
+  "words": [
+   {
+    "w": "Everything",
+    "s": 0.7,
+    "e": 1.225
+   },
+   {
+    "w": "was",
+    "s": 1.225,
+    "e": 1.45
+   },
+   {
+    "w": "dark",
+    "s": 1.45,
+    "e": 1.925
+   },
+   {
+    "w": "and",
+    "s": 1.925,
+    "e": 2.087
+   },
+   {
+    "w": "empty",
+    "s": 2.087,
+    "e": 2.812
+   },
+   {
+    "w": "only",
+    "s": 2.95,
+    "e": 3.312
+   },
+   {
+    "w": "deep",
+    "s": 3.312,
+    "e": 3.75
+   },
+   {
+    "w": "deep",
+    "s": 3.875,
+    "e": 4.275
+   },
+   {
+    "w": "water",
+    "s": 4.275,
+    "e": 4.7
+   },
+   {
+    "w": "in",
+    "s": 4.7,
+    "e": 4.812
+   },
+   {
+    "w": "the",
+    "s": 4.812,
+    "e": 4.9
+   },
+   {
+    "w": "dark",
+    "s": 4.9,
+    "e": 5.825
+   },
+   {
+    "w": "But",
+    "s": 5.975,
+    "e": 6.138
+   },
+   {
+    "w": "God's",
+    "s": 6.138,
+    "e": 6.6
+   },
+   {
+    "w": "Spirit",
+    "s": 6.6,
+    "e": 7.125
+   },
+   {
+    "w": "was",
+    "s": 7.125,
+    "e": 7.325
+   },
+   {
+    "w": "there",
+    "s": 7.325,
+    "e": 7.9
+   },
+   {
+    "w": "hovering",
+    "s": 8.037,
+    "e": 8.525
+   },
+   {
+    "w": "over",
+    "s": 8.525,
+    "e": 8.8
+   },
+   {
+    "w": "the",
+    "s": 8.8,
+    "e": 8.938
+   },
+   {
+    "w": "waters",
+    "s": 8.938,
+    "e": 9.825
+   }
+  ]
+ },
+ "beginning-2": {
+  "src": "audio/genesis-1/beginning-2.m4a",
+  "text": "Then God spoke: “Let there be light!” And light burst into being.",
+  "voice": "bm_lewis",
+  "duration": 6.25,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.7,
+    "e": 0.975
+   },
+   {
+    "w": "God",
+    "s": 0.975,
+    "e": 1.4
+   },
+   {
+    "w": "spoke",
+    "s": 1.4,
+    "e": 2.125
+   },
+   {
+    "w": "Let",
+    "s": 2.35,
+    "e": 2.525
+   },
+   {
+    "w": "there",
+    "s": 2.525,
+    "e": 2.675
+   },
+   {
+    "w": "be",
+    "s": 2.675,
+    "e": 2.862
+   },
+   {
+    "w": "light",
+    "s": 2.862,
+    "e": 3.5
+   },
+   {
+    "w": "And",
+    "s": 3.65,
+    "e": 3.8
+   },
+   {
+    "w": "light",
+    "s": 3.8,
+    "e": 4.15
+   },
+   {
+    "w": "burst",
+    "s": 4.15,
+    "e": 4.588
+   },
+   {
+    "w": "into",
+    "s": 4.588,
+    "e": 4.825
+   },
+   {
+    "w": "being",
+    "s": 4.825,
+    "e": 5.55
+   }
+  ]
+ },
+ "beginning-3": {
+  "src": "audio/genesis-1/beginning-3.m4a",
+  "text": "God saw that the light was good. He called the light “day” and the darkness “night.” Evening came, and then morning — the very first day.",
+  "voice": "bm_lewis",
+  "duration": 11.075,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "saw",
+    "s": 1.062,
+    "e": 1.35
+   },
+   {
+    "w": "that",
+    "s": 1.35,
+    "e": 1.475
+   },
+   {
+    "w": "the",
+    "s": 1.475,
+    "e": 1.613
+   },
+   {
+    "w": "light",
+    "s": 1.613,
+    "e": 1.975
+   },
+   {
+    "w": "was",
+    "s": 1.975,
+    "e": 2.163
+   },
+   {
+    "w": "good",
+    "s": 2.163,
+    "e": 2.8
+   },
+   {
+    "w": "He",
+    "s": 2.95,
+    "e": 3.1
+   },
+   {
+    "w": "called",
+    "s": 3.1,
+    "e": 3.362
+   },
+   {
+    "w": "the",
+    "s": 3.362,
+    "e": 3.475
+   },
+   {
+    "w": "light",
+    "s": 3.475,
+    "e": 3.862
+   },
+   {
+    "w": "day",
+    "s": 3.95,
+    "e": 4.35
+   },
+   {
+    "w": "and",
+    "s": 4.45,
+    "e": 4.562
+   },
+   {
+    "w": "the",
+    "s": 4.562,
+    "e": 4.688
+   },
+   {
+    "w": "darkness",
+    "s": 4.688,
+    "e": 5.35
+   },
+   {
+    "w": "night",
+    "s": 5.425,
+    "e": 6.275
+   },
+   {
+    "w": "Evening",
+    "s": 6.537,
+    "e": 7.037
+   },
+   {
+    "w": "came",
+    "s": 7.037,
+    "e": 7.7
+   },
+   {
+    "w": "and",
+    "s": 7.8,
+    "e": 7.912
+   },
+   {
+    "w": "then",
+    "s": 7.912,
+    "e": 8.125
+   },
+   {
+    "w": "morning",
+    "s": 8.125,
+    "e": 8.775
+   },
+   {
+    "w": "the",
+    "s": 8.85,
+    "e": 8.95
+   },
+   {
+    "w": "very",
+    "s": 8.95,
+    "e": 9.3
+   },
+   {
+    "w": "first",
+    "s": 9.3,
+    "e": 9.7
+   },
+   {
+    "w": "day",
+    "s": 9.7,
+    "e": 10.3
+   }
+  ]
+ },
+ "expanse-title": {
+  "src": "audio/genesis-1/expanse-title.m4a",
+  "text": "The Second Day. The Sky Above the Waters.",
+  "voice": "bm_lewis",
+  "duration": 4.725,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Second",
+    "s": 0.825,
+    "e": 1.25
+   },
+   {
+    "w": "Day",
+    "s": 1.25,
+    "e": 1.8
+   },
+   {
+    "w": "The",
+    "s": 1.975,
+    "e": 2.125
+   },
+   {
+    "w": "Sky",
+    "s": 2.125,
+    "e": 2.688
+   },
+   {
+    "w": "Above",
+    "s": 2.688,
+    "e": 3.05
+   },
+   {
+    "w": "the",
+    "s": 3.05,
+    "e": 3.188
+   },
+   {
+    "w": "Waters",
+    "s": 3.188,
+    "e": 4.05
+   }
+  ]
+ },
+ "expanse-0": {
+  "src": "audio/genesis-1/expanse-0.m4a",
+  "text": "Next, God made a great open space — the sky — stretching between the waters above and the waters below.",
+  "voice": "bm_lewis",
+  "duration": 9.425,
+  "words": [
+   {
+    "w": "Next",
+    "s": 0.725,
+    "e": 1.175
+   },
+   {
+    "w": "God",
+    "s": 1.262,
+    "e": 1.625
+   },
+   {
+    "w": "made",
+    "s": 1.625,
+    "e": 1.812
+   },
+   {
+    "w": "a",
+    "s": 1.812,
+    "e": 1.913
+   },
+   {
+    "w": "great",
+    "s": 1.913,
+    "e": 2.325
+   },
+   {
+    "w": "open",
+    "s": 2.325,
+    "e": 2.8
+   },
+   {
+    "w": "space",
+    "s": 2.8,
+    "e": 3.675
+   },
+   {
+    "w": "the",
+    "s": 3.775,
+    "e": 3.925
+   },
+   {
+    "w": "sky",
+    "s": 3.925,
+    "e": 4.8
+   },
+   {
+    "w": "stretching",
+    "s": 4.963,
+    "e": 5.45
+   },
+   {
+    "w": "between",
+    "s": 5.45,
+    "e": 5.787
+   },
+   {
+    "w": "the",
+    "s": 5.787,
+    "e": 5.912
+   },
+   {
+    "w": "waters",
+    "s": 5.912,
+    "e": 6.4
+   },
+   {
+    "w": "above",
+    "s": 6.4,
+    "e": 7.062
+   },
+   {
+    "w": "and",
+    "s": 7.062,
+    "e": 7.188
+   },
+   {
+    "w": "the",
+    "s": 7.188,
+    "e": 7.312
+   },
+   {
+    "w": "waters",
+    "s": 7.312,
+    "e": 7.862
+   },
+   {
+    "w": "below",
+    "s": 7.862,
+    "e": 8.675
+   }
+  ]
+ },
+ "expanse-1": {
+  "src": "audio/genesis-1/expanse-1.m4a",
+  "text": "Evening came, and then morning — the second day.",
+  "voice": "bm_lewis",
+  "duration": 4.95,
+  "words": [
+   {
+    "w": "Evening",
+    "s": 0.7,
+    "e": 1.188
+   },
+   {
+    "w": "came",
+    "s": 1.188,
+    "e": 1.875
+   },
+   {
+    "w": "and",
+    "s": 2.0,
+    "e": 2.112
+   },
+   {
+    "w": "then",
+    "s": 2.112,
+    "e": 2.325
+   },
+   {
+    "w": "morning",
+    "s": 2.325,
+    "e": 3.0
+   },
+   {
+    "w": "the",
+    "s": 3.062,
+    "e": 3.2
+   },
+   {
+    "w": "second",
+    "s": 3.2,
+    "e": 3.625
+   },
+   {
+    "w": "day",
+    "s": 3.625,
+    "e": 4.25
+   }
+  ]
+ },
+ "land-title": {
+  "src": "audio/genesis-1/land-title.m4a",
+  "text": "The Third Day. Land and Every Green Thing.",
+  "voice": "bm_lewis",
+  "duration": 5.05,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Third",
+    "s": 0.825,
+    "e": 1.25
+   },
+   {
+    "w": "Day",
+    "s": 1.25,
+    "e": 1.8
+   },
+   {
+    "w": "Land",
+    "s": 2.025,
+    "e": 2.663
+   },
+   {
+    "w": "and",
+    "s": 2.663,
+    "e": 2.85
+   },
+   {
+    "w": "Every",
+    "s": 2.85,
+    "e": 3.25
+   },
+   {
+    "w": "Green",
+    "s": 3.25,
+    "e": 3.675
+   },
+   {
+    "w": "Thing",
+    "s": 3.675,
+    "e": 4.325
+   }
+  ]
+ },
+ "land-0": {
+  "src": "audio/genesis-1/land-0.m4a",
+  "text": "Then God gathered the waters together into seas, and dry ground rose up out of them. He called the dry ground “land” and the waters “seas.” And God saw that it was good.",
+  "voice": "bm_lewis",
+  "duration": 14.125,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.7,
+    "e": 0.95
+   },
+   {
+    "w": "God",
+    "s": 0.95,
+    "e": 1.337
+   },
+   {
+    "w": "gathered",
+    "s": 1.337,
+    "e": 1.7
+   },
+   {
+    "w": "the",
+    "s": 1.7,
+    "e": 1.837
+   },
+   {
+    "w": "waters",
+    "s": 1.837,
+    "e": 2.225
+   },
+   {
+    "w": "together",
+    "s": 2.225,
+    "e": 2.6
+   },
+   {
+    "w": "into",
+    "s": 2.6,
+    "e": 2.913
+   },
+   {
+    "w": "seas",
+    "s": 2.913,
+    "e": 3.65
+   },
+   {
+    "w": "and",
+    "s": 3.75,
+    "e": 3.9
+   },
+   {
+    "w": "dry",
+    "s": 3.9,
+    "e": 4.325
+   },
+   {
+    "w": "ground",
+    "s": 4.325,
+    "e": 4.862
+   },
+   {
+    "w": "rose",
+    "s": 4.862,
+    "e": 5.225
+   },
+   {
+    "w": "up",
+    "s": 5.225,
+    "e": 5.425
+   },
+   {
+    "w": "out",
+    "s": 5.425,
+    "e": 5.638
+   },
+   {
+    "w": "of",
+    "s": 5.638,
+    "e": 5.75
+   },
+   {
+    "w": "them",
+    "s": 5.75,
+    "e": 6.3
+   },
+   {
+    "w": "He",
+    "s": 6.425,
+    "e": 6.575
+   },
+   {
+    "w": "called",
+    "s": 6.575,
+    "e": 6.862
+   },
+   {
+    "w": "the",
+    "s": 6.862,
+    "e": 6.987
+   },
+   {
+    "w": "dry",
+    "s": 6.987,
+    "e": 7.4
+   },
+   {
+    "w": "ground",
+    "s": 7.4,
+    "e": 8.137
+   },
+   {
+    "w": "land",
+    "s": 8.275,
+    "e": 8.875
+   },
+   {
+    "w": "and",
+    "s": 8.975,
+    "e": 9.088
+   },
+   {
+    "w": "the",
+    "s": 9.088,
+    "e": 9.213
+   },
+   {
+    "w": "waters",
+    "s": 9.213,
+    "e": 9.863
+   },
+   {
+    "w": "seas",
+    "s": 10.0,
+    "e": 11.05
+   },
+   {
+    "w": "And",
+    "s": 11.225,
+    "e": 11.438
+   },
+   {
+    "w": "God",
+    "s": 11.438,
+    "e": 11.875
+   },
+   {
+    "w": "saw",
+    "s": 11.875,
+    "e": 12.175
+   },
+   {
+    "w": "that",
+    "s": 12.175,
+    "e": 12.312
+   },
+   {
+    "w": "it",
+    "s": 12.312,
+    "e": 12.425
+   },
+   {
+    "w": "was",
+    "s": 12.425,
+    "e": 12.625
+   },
+   {
+    "w": "good",
+    "s": 12.625,
+    "e": 13.3
+   }
+  ]
+ },
+ "land-1": {
+  "src": "audio/genesis-1/land-1.m4a",
+  "text": "God said, “Let the land grow green!” And up came grass, and plants, and trees heavy with fruit — each one full of seeds to make more.",
+  "voice": "bm_lewis",
+  "duration": 11.1,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 0.988
+   },
+   {
+    "w": "said",
+    "s": 0.988,
+    "e": 1.4
+   },
+   {
+    "w": "Let",
+    "s": 1.525,
+    "e": 1.65
+   },
+   {
+    "w": "the",
+    "s": 1.65,
+    "e": 1.775
+   },
+   {
+    "w": "land",
+    "s": 1.775,
+    "e": 2.188
+   },
+   {
+    "w": "grow",
+    "s": 2.188,
+    "e": 2.55
+   },
+   {
+    "w": "green",
+    "s": 2.55,
+    "e": 3.5
+   },
+   {
+    "w": "And",
+    "s": 3.675,
+    "e": 3.812
+   },
+   {
+    "w": "up",
+    "s": 3.812,
+    "e": 4.0
+   },
+   {
+    "w": "came",
+    "s": 4.0,
+    "e": 4.325
+   },
+   {
+    "w": "grass",
+    "s": 4.325,
+    "e": 4.9
+   },
+   {
+    "w": "and",
+    "s": 4.938,
+    "e": 5.075
+   },
+   {
+    "w": "plants",
+    "s": 5.075,
+    "e": 5.825
+   },
+   {
+    "w": "and",
+    "s": 5.9,
+    "e": 6.05
+   },
+   {
+    "w": "trees",
+    "s": 6.05,
+    "e": 6.513
+   },
+   {
+    "w": "heavy",
+    "s": 6.513,
+    "e": 6.85
+   },
+   {
+    "w": "with",
+    "s": 6.85,
+    "e": 7.05
+   },
+   {
+    "w": "fruit",
+    "s": 7.05,
+    "e": 7.7
+   },
+   {
+    "w": "each",
+    "s": 7.8,
+    "e": 8.075
+   },
+   {
+    "w": "one",
+    "s": 8.075,
+    "e": 8.425
+   },
+   {
+    "w": "full",
+    "s": 8.425,
+    "e": 8.662
+   },
+   {
+    "w": "of",
+    "s": 8.662,
+    "e": 8.825
+   },
+   {
+    "w": "seeds",
+    "s": 8.825,
+    "e": 9.275
+   },
+   {
+    "w": "to",
+    "s": 9.275,
+    "e": 9.4
+   },
+   {
+    "w": "make",
+    "s": 9.4,
+    "e": 9.65
+   },
+   {
+    "w": "more",
+    "s": 9.65,
+    "e": 10.325
+   }
+  ]
+ },
+ "land-2": {
+  "src": "audio/genesis-1/land-2.m4a",
+  "text": "God saw that it was good. Evening came, and then morning — the third day.",
+  "voice": "bm_lewis",
+  "duration": 6.825,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "saw",
+    "s": 1.062,
+    "e": 1.35
+   },
+   {
+    "w": "that",
+    "s": 1.35,
+    "e": 1.488
+   },
+   {
+    "w": "it",
+    "s": 1.488,
+    "e": 1.562
+   },
+   {
+    "w": "was",
+    "s": 1.562,
+    "e": 1.738
+   },
+   {
+    "w": "good",
+    "s": 1.738,
+    "e": 2.4
+   },
+   {
+    "w": "Evening",
+    "s": 2.625,
+    "e": 3.062
+   },
+   {
+    "w": "came",
+    "s": 3.062,
+    "e": 3.7
+   },
+   {
+    "w": "and",
+    "s": 3.825,
+    "e": 3.938
+   },
+   {
+    "w": "then",
+    "s": 3.938,
+    "e": 4.15
+   },
+   {
+    "w": "morning",
+    "s": 4.15,
+    "e": 4.775
+   },
+   {
+    "w": "the",
+    "s": 4.85,
+    "e": 5.013
+   },
+   {
+    "w": "third",
+    "s": 5.013,
+    "e": 5.475
+   },
+   {
+    "w": "day",
+    "s": 5.475,
+    "e": 6.075
+   }
+  ]
+ },
+ "lights-title": {
+  "src": "audio/genesis-1/lights-title.m4a",
+  "text": "The Fourth Day. Sun, Moon, and Stars.",
+  "voice": "bm_lewis",
+  "duration": 4.55,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Fourth",
+    "s": 0.825,
+    "e": 1.2
+   },
+   {
+    "w": "Day",
+    "s": 1.2,
+    "e": 1.7
+   },
+   {
+    "w": "Sun",
+    "s": 1.9,
+    "e": 2.325
+   },
+   {
+    "w": "Moon",
+    "s": 2.413,
+    "e": 2.825
+   },
+   {
+    "w": "and",
+    "s": 2.862,
+    "e": 3.0
+   },
+   {
+    "w": "Stars",
+    "s": 3.0,
+    "e": 3.875
+   }
+  ]
+ },
+ "lights-0": {
+  "src": "audio/genesis-1/lights-0.m4a",
+  "text": "Then God filled the sky with lights.",
+  "voice": "bm_lewis",
+  "duration": 4.025,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.7,
+    "e": 0.963
+   },
+   {
+    "w": "God",
+    "s": 0.963,
+    "e": 1.462
+   },
+   {
+    "w": "filled",
+    "s": 1.462,
+    "e": 1.837
+   },
+   {
+    "w": "the",
+    "s": 1.837,
+    "e": 1.962
+   },
+   {
+    "w": "sky",
+    "s": 1.962,
+    "e": 2.45
+   },
+   {
+    "w": "with",
+    "s": 2.45,
+    "e": 2.625
+   },
+   {
+    "w": "lights",
+    "s": 2.625,
+    "e": 3.375
+   }
+  ]
+ },
+ "lights-1": {
+  "src": "audio/genesis-1/lights-1.m4a",
+  "text": "He made the great sun to shine by day and the softer moon to glow by night. He made the stars, too.",
+  "voice": "bm_lewis",
+  "duration": 8.625,
+  "words": [
+   {
+    "w": "He",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "made",
+    "s": 0.787,
+    "e": 0.963
+   },
+   {
+    "w": "the",
+    "s": 0.963,
+    "e": 1.05
+   },
+   {
+    "w": "great",
+    "s": 1.05,
+    "e": 1.413
+   },
+   {
+    "w": "sun",
+    "s": 1.413,
+    "e": 1.675
+   },
+   {
+    "w": "to",
+    "s": 1.675,
+    "e": 1.825
+   },
+   {
+    "w": "shine",
+    "s": 1.825,
+    "e": 2.225
+   },
+   {
+    "w": "by",
+    "s": 2.225,
+    "e": 2.462
+   },
+   {
+    "w": "day",
+    "s": 2.462,
+    "e": 3.188
+   },
+   {
+    "w": "and",
+    "s": 3.188,
+    "e": 3.337
+   },
+   {
+    "w": "the",
+    "s": 3.337,
+    "e": 3.475
+   },
+   {
+    "w": "softer",
+    "s": 3.475,
+    "e": 3.888
+   },
+   {
+    "w": "moon",
+    "s": 3.888,
+    "e": 4.25
+   },
+   {
+    "w": "to",
+    "s": 4.25,
+    "e": 4.388
+   },
+   {
+    "w": "glow",
+    "s": 4.388,
+    "e": 4.8
+   },
+   {
+    "w": "by",
+    "s": 4.8,
+    "e": 5.025
+   },
+   {
+    "w": "night",
+    "s": 5.025,
+    "e": 5.825
+   },
+   {
+    "w": "He",
+    "s": 5.975,
+    "e": 6.125
+   },
+   {
+    "w": "made",
+    "s": 6.125,
+    "e": 6.312
+   },
+   {
+    "w": "the",
+    "s": 6.312,
+    "e": 6.425
+   },
+   {
+    "w": "stars",
+    "s": 6.425,
+    "e": 7.075
+   },
+   {
+    "w": "too",
+    "s": 7.175,
+    "e": 7.9
+   }
+  ]
+ },
+ "lights-2": {
+  "src": "audio/genesis-1/lights-2.m4a",
+  "text": "The lights would mark the days and the seasons and the years. And God saw that it was good. Evening came, and then morning — the fourth day.",
+  "voice": "bm_lewis",
+  "duration": 11.325,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.775
+   },
+   {
+    "w": "lights",
+    "s": 0.775,
+    "e": 1.175
+   },
+   {
+    "w": "would",
+    "s": 1.175,
+    "e": 1.35
+   },
+   {
+    "w": "mark",
+    "s": 1.35,
+    "e": 1.7
+   },
+   {
+    "w": "the",
+    "s": 1.7,
+    "e": 1.837
+   },
+   {
+    "w": "days",
+    "s": 1.837,
+    "e": 2.375
+   },
+   {
+    "w": "and",
+    "s": 2.375,
+    "e": 2.487
+   },
+   {
+    "w": "the",
+    "s": 2.487,
+    "e": 2.638
+   },
+   {
+    "w": "seasons",
+    "s": 2.638,
+    "e": 3.362
+   },
+   {
+    "w": "and",
+    "s": 3.362,
+    "e": 3.487
+   },
+   {
+    "w": "the",
+    "s": 3.487,
+    "e": 3.612
+   },
+   {
+    "w": "years",
+    "s": 3.612,
+    "e": 4.55
+   },
+   {
+    "w": "And",
+    "s": 4.675,
+    "e": 4.9
+   },
+   {
+    "w": "God",
+    "s": 4.9,
+    "e": 5.325
+   },
+   {
+    "w": "saw",
+    "s": 5.325,
+    "e": 5.625
+   },
+   {
+    "w": "that",
+    "s": 5.625,
+    "e": 5.763
+   },
+   {
+    "w": "it",
+    "s": 5.763,
+    "e": 5.85
+   },
+   {
+    "w": "was",
+    "s": 5.85,
+    "e": 6.05
+   },
+   {
+    "w": "good",
+    "s": 6.05,
+    "e": 6.75
+   },
+   {
+    "w": "Evening",
+    "s": 6.975,
+    "e": 7.513
+   },
+   {
+    "w": "came",
+    "s": 7.513,
+    "e": 8.2
+   },
+   {
+    "w": "and",
+    "s": 8.325,
+    "e": 8.438
+   },
+   {
+    "w": "then",
+    "s": 8.438,
+    "e": 8.65
+   },
+   {
+    "w": "morning",
+    "s": 8.65,
+    "e": 9.3
+   },
+   {
+    "w": "the",
+    "s": 9.363,
+    "e": 9.512
+   },
+   {
+    "w": "fourth",
+    "s": 9.512,
+    "e": 9.925
+   },
+   {
+    "w": "day",
+    "s": 9.925,
+    "e": 10.55
+   }
+  ]
+ },
+ "creatures-title": {
+  "src": "audio/genesis-1/creatures-title.m4a",
+  "text": "The Fifth Day. Creatures of Sea and Sky.",
+  "voice": "bm_lewis",
+  "duration": 4.625,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Fifth",
+    "s": 0.825,
+    "e": 1.175
+   },
+   {
+    "w": "Day",
+    "s": 1.175,
+    "e": 1.65
+   },
+   {
+    "w": "Creatures",
+    "s": 1.837,
+    "e": 2.35
+   },
+   {
+    "w": "of",
+    "s": 2.35,
+    "e": 2.55
+   },
+   {
+    "w": "Sea",
+    "s": 2.55,
+    "e": 2.95
+   },
+   {
+    "w": "and",
+    "s": 2.95,
+    "e": 3.125
+   },
+   {
+    "w": "Sky",
+    "s": 3.125,
+    "e": 3.9
+   }
+  ]
+ },
+ "creatures-0": {
+  "src": "audio/genesis-1/creatures-0.m4a",
+  "text": "Next, God filled the seas with living things — fish of every kind, and great creatures of the deep.",
+  "voice": "bm_lewis",
+  "duration": 8.95,
+  "words": [
+   {
+    "w": "Next",
+    "s": 0.725,
+    "e": 1.175
+   },
+   {
+    "w": "God",
+    "s": 1.262,
+    "e": 1.675
+   },
+   {
+    "w": "filled",
+    "s": 1.675,
+    "e": 2.038
+   },
+   {
+    "w": "the",
+    "s": 2.038,
+    "e": 2.188
+   },
+   {
+    "w": "seas",
+    "s": 2.188,
+    "e": 2.675
+   },
+   {
+    "w": "with",
+    "s": 2.675,
+    "e": 2.85
+   },
+   {
+    "w": "living",
+    "s": 2.85,
+    "e": 3.225
+   },
+   {
+    "w": "things",
+    "s": 3.225,
+    "e": 4.1
+   },
+   {
+    "w": "fish",
+    "s": 4.237,
+    "e": 4.575
+   },
+   {
+    "w": "of",
+    "s": 4.575,
+    "e": 4.737
+   },
+   {
+    "w": "every",
+    "s": 4.737,
+    "e": 5.125
+   },
+   {
+    "w": "kind",
+    "s": 5.125,
+    "e": 5.95
+   },
+   {
+    "w": "and",
+    "s": 6.075,
+    "e": 6.213
+   },
+   {
+    "w": "great",
+    "s": 6.213,
+    "e": 6.625
+   },
+   {
+    "w": "creatures",
+    "s": 6.625,
+    "e": 7.25
+   },
+   {
+    "w": "of",
+    "s": 7.25,
+    "e": 7.4
+   },
+   {
+    "w": "the",
+    "s": 7.4,
+    "e": 7.537
+   },
+   {
+    "w": "deep",
+    "s": 7.537,
+    "e": 8.15
+   }
+  ]
+ },
+ "creatures-1": {
+  "src": "audio/genesis-1/creatures-1.m4a",
+  "text": "And He filled the sky with birds, soaring above the earth.",
+  "voice": "bm_lewis",
+  "duration": 5.35,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.65,
+    "e": 0.762
+   },
+   {
+    "w": "He",
+    "s": 0.762,
+    "e": 0.925
+   },
+   {
+    "w": "filled",
+    "s": 0.925,
+    "e": 1.262
+   },
+   {
+    "w": "the",
+    "s": 1.262,
+    "e": 1.387
+   },
+   {
+    "w": "sky",
+    "s": 1.387,
+    "e": 1.825
+   },
+   {
+    "w": "with",
+    "s": 1.825,
+    "e": 2.013
+   },
+   {
+    "w": "birds",
+    "s": 2.013,
+    "e": 2.75
+   },
+   {
+    "w": "soaring",
+    "s": 2.938,
+    "e": 3.425
+   },
+   {
+    "w": "above",
+    "s": 3.425,
+    "e": 3.725
+   },
+   {
+    "w": "the",
+    "s": 3.725,
+    "e": 3.888
+   },
+   {
+    "w": "earth",
+    "s": 3.888,
+    "e": 4.55
+   }
+  ]
+ },
+ "creatures-2": {
+  "src": "audio/genesis-1/creatures-2.m4a",
+  "text": "God blessed them: “Have many young ones, and fill the seas and the skies!” Evening came, and then morning — the fifth day.",
+  "voice": "bm_lewis",
+  "duration": 9.775,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "blessed",
+    "s": 1.062,
+    "e": 1.413
+   },
+   {
+    "w": "them",
+    "s": 1.413,
+    "e": 1.9
+   },
+   {
+    "w": "Have",
+    "s": 2.1,
+    "e": 2.3
+   },
+   {
+    "w": "many",
+    "s": 2.3,
+    "e": 2.525
+   },
+   {
+    "w": "young",
+    "s": 2.525,
+    "e": 2.825
+   },
+   {
+    "w": "ones",
+    "s": 2.825,
+    "e": 3.175
+   },
+   {
+    "w": "and",
+    "s": 3.212,
+    "e": 3.375
+   },
+   {
+    "w": "fill",
+    "s": 3.375,
+    "e": 3.65
+   },
+   {
+    "w": "the",
+    "s": 3.65,
+    "e": 3.825
+   },
+   {
+    "w": "seas",
+    "s": 3.825,
+    "e": 4.35
+   },
+   {
+    "w": "and",
+    "s": 4.35,
+    "e": 4.463
+   },
+   {
+    "w": "the",
+    "s": 4.463,
+    "e": 4.575
+   },
+   {
+    "w": "skies",
+    "s": 4.575,
+    "e": 5.475
+   },
+   {
+    "w": "Evening",
+    "s": 5.688,
+    "e": 6.138
+   },
+   {
+    "w": "came",
+    "s": 6.138,
+    "e": 6.75
+   },
+   {
+    "w": "and",
+    "s": 6.875,
+    "e": 6.987
+   },
+   {
+    "w": "then",
+    "s": 6.987,
+    "e": 7.2
+   },
+   {
+    "w": "morning",
+    "s": 7.2,
+    "e": 7.825
+   },
+   {
+    "w": "the",
+    "s": 7.888,
+    "e": 8.025
+   },
+   {
+    "w": "fifth",
+    "s": 8.025,
+    "e": 8.375
+   },
+   {
+    "w": "day",
+    "s": 8.375,
+    "e": 9.0
+   }
+  ]
+ },
+ "living-title": {
+  "src": "audio/genesis-1/living-title.m4a",
+  "text": "The Sixth Day. Animals, and People.",
+  "voice": "bm_lewis",
+  "duration": 4.1,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Sixth",
+    "s": 0.825,
+    "e": 1.2
+   },
+   {
+    "w": "Day",
+    "s": 1.2,
+    "e": 1.7
+   },
+   {
+    "w": "Animals",
+    "s": 1.9,
+    "e": 2.525
+   },
+   {
+    "w": "and",
+    "s": 2.575,
+    "e": 2.725
+   },
+   {
+    "w": "People",
+    "s": 2.725,
+    "e": 3.425
+   }
+  ]
+ },
+ "living-0": {
+  "src": "audio/genesis-1/living-0.m4a",
+  "text": "Then God made animals for the land — cattle, creeping things, and wild animals of every kind.",
+  "voice": "bm_lewis",
+  "duration": 8.65,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.7,
+    "e": 0.975
+   },
+   {
+    "w": "God",
+    "s": 0.975,
+    "e": 1.375
+   },
+   {
+    "w": "made",
+    "s": 1.375,
+    "e": 1.613
+   },
+   {
+    "w": "animals",
+    "s": 1.613,
+    "e": 2.125
+   },
+   {
+    "w": "for",
+    "s": 2.125,
+    "e": 2.25
+   },
+   {
+    "w": "the",
+    "s": 2.25,
+    "e": 2.388
+   },
+   {
+    "w": "land",
+    "s": 2.388,
+    "e": 3.112
+   },
+   {
+    "w": "cattle",
+    "s": 3.263,
+    "e": 3.925
+   },
+   {
+    "w": "creeping",
+    "s": 4.088,
+    "e": 4.55
+   },
+   {
+    "w": "things",
+    "s": 4.55,
+    "e": 5.25
+   },
+   {
+    "w": "and",
+    "s": 5.375,
+    "e": 5.55
+   },
+   {
+    "w": "wild",
+    "s": 5.55,
+    "e": 6.0
+   },
+   {
+    "w": "animals",
+    "s": 6.0,
+    "e": 6.5
+   },
+   {
+    "w": "of",
+    "s": 6.5,
+    "e": 6.662
+   },
+   {
+    "w": "every",
+    "s": 6.662,
+    "e": 7.025
+   },
+   {
+    "w": "kind",
+    "s": 7.025,
+    "e": 7.875
+   }
+  ]
+ },
+ "living-1": {
+  "src": "audio/genesis-1/living-1.m4a",
+  "text": "And then God made people. He made them in His own image, to be like Him. Male and female He created them.",
+  "voice": "bm_lewis",
+  "duration": 9.0,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "then",
+    "s": 0.787,
+    "e": 1.038
+   },
+   {
+    "w": "God",
+    "s": 1.038,
+    "e": 1.5
+   },
+   {
+    "w": "made",
+    "s": 1.5,
+    "e": 1.75
+   },
+   {
+    "w": "people",
+    "s": 1.75,
+    "e": 2.4
+   },
+   {
+    "w": "He",
+    "s": 2.525,
+    "e": 2.675
+   },
+   {
+    "w": "made",
+    "s": 2.675,
+    "e": 2.9
+   },
+   {
+    "w": "them",
+    "s": 2.9,
+    "e": 3.125
+   },
+   {
+    "w": "in",
+    "s": 3.125,
+    "e": 3.212
+   },
+   {
+    "w": "His",
+    "s": 3.212,
+    "e": 3.413
+   },
+   {
+    "w": "own",
+    "s": 3.413,
+    "e": 3.763
+   },
+   {
+    "w": "image",
+    "s": 3.763,
+    "e": 4.3
+   },
+   {
+    "w": "to",
+    "s": 4.375,
+    "e": 4.475
+   },
+   {
+    "w": "be",
+    "s": 4.475,
+    "e": 4.675
+   },
+   {
+    "w": "like",
+    "s": 4.675,
+    "e": 5.0
+   },
+   {
+    "w": "Him",
+    "s": 5.0,
+    "e": 5.75
+   },
+   {
+    "w": "Male",
+    "s": 5.963,
+    "e": 6.412
+   },
+   {
+    "w": "and",
+    "s": 6.412,
+    "e": 6.562
+   },
+   {
+    "w": "female",
+    "s": 6.562,
+    "e": 7.05
+   },
+   {
+    "w": "He",
+    "s": 7.05,
+    "e": 7.2
+   },
+   {
+    "w": "created",
+    "s": 7.2,
+    "e": 7.775
+   },
+   {
+    "w": "them",
+    "s": 7.775,
+    "e": 8.275
+   }
+  ]
+ },
+ "living-2": {
+  "src": "audio/genesis-1/living-2.m4a",
+  "text": "God blessed them and gave them a job: to fill the earth and to rule over it — to take care of the fish and the birds and every living thing.",
+  "voice": "bm_lewis",
+  "duration": 11.25,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.075
+   },
+   {
+    "w": "blessed",
+    "s": 1.075,
+    "e": 1.488
+   },
+   {
+    "w": "them",
+    "s": 1.488,
+    "e": 1.7
+   },
+   {
+    "w": "and",
+    "s": 1.7,
+    "e": 1.825
+   },
+   {
+    "w": "gave",
+    "s": 1.825,
+    "e": 2.138
+   },
+   {
+    "w": "them",
+    "s": 2.138,
+    "e": 2.275
+   },
+   {
+    "w": "a",
+    "s": 2.275,
+    "e": 2.4
+   },
+   {
+    "w": "job",
+    "s": 2.4,
+    "e": 3.225
+   },
+   {
+    "w": "to",
+    "s": 3.438,
+    "e": 3.6
+   },
+   {
+    "w": "fill",
+    "s": 3.6,
+    "e": 3.9
+   },
+   {
+    "w": "the",
+    "s": 3.9,
+    "e": 4.075
+   },
+   {
+    "w": "earth",
+    "s": 4.075,
+    "e": 4.525
+   },
+   {
+    "w": "and",
+    "s": 4.525,
+    "e": 4.65
+   },
+   {
+    "w": "to",
+    "s": 4.65,
+    "e": 4.825
+   },
+   {
+    "w": "rule",
+    "s": 4.825,
+    "e": 5.2
+   },
+   {
+    "w": "over",
+    "s": 5.2,
+    "e": 5.525
+   },
+   {
+    "w": "it",
+    "s": 5.525,
+    "e": 6.0
+   },
+   {
+    "w": "to",
+    "s": 6.1,
+    "e": 6.225
+   },
+   {
+    "w": "take",
+    "s": 6.225,
+    "e": 6.525
+   },
+   {
+    "w": "care",
+    "s": 6.525,
+    "e": 6.925
+   },
+   {
+    "w": "of",
+    "s": 6.925,
+    "e": 7.075
+   },
+   {
+    "w": "the",
+    "s": 7.075,
+    "e": 7.237
+   },
+   {
+    "w": "fish",
+    "s": 7.237,
+    "e": 7.7
+   },
+   {
+    "w": "and",
+    "s": 7.7,
+    "e": 7.812
+   },
+   {
+    "w": "the",
+    "s": 7.812,
+    "e": 7.95
+   },
+   {
+    "w": "birds",
+    "s": 7.95,
+    "e": 8.738
+   },
+   {
+    "w": "and",
+    "s": 8.738,
+    "e": 8.925
+   },
+   {
+    "w": "every",
+    "s": 8.925,
+    "e": 9.287
+   },
+   {
+    "w": "living",
+    "s": 9.287,
+    "e": 9.762
+   },
+   {
+    "w": "thing",
+    "s": 9.762,
+    "e": 10.45
+   }
+  ]
+ },
+ "living-3": {
+  "src": "audio/genesis-1/living-3.m4a",
+  "text": "God looked at everything He had made, and it was very good. Evening came, and then morning — the sixth day.",
+  "voice": "bm_lewis",
+  "duration": 8.825,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.725,
+    "e": 1.05
+   },
+   {
+    "w": "looked",
+    "s": 1.05,
+    "e": 1.288
+   },
+   {
+    "w": "at",
+    "s": 1.288,
+    "e": 1.375
+   },
+   {
+    "w": "everything",
+    "s": 1.375,
+    "e": 1.837
+   },
+   {
+    "w": "He",
+    "s": 1.837,
+    "e": 1.962
+   },
+   {
+    "w": "had",
+    "s": 1.962,
+    "e": 2.125
+   },
+   {
+    "w": "made",
+    "s": 2.125,
+    "e": 2.725
+   },
+   {
+    "w": "and",
+    "s": 2.825,
+    "e": 2.938
+   },
+   {
+    "w": "it",
+    "s": 2.938,
+    "e": 3.013
+   },
+   {
+    "w": "was",
+    "s": 3.013,
+    "e": 3.188
+   },
+   {
+    "w": "very",
+    "s": 3.188,
+    "e": 3.55
+   },
+   {
+    "w": "good",
+    "s": 3.55,
+    "e": 4.325
+   },
+   {
+    "w": "Evening",
+    "s": 4.575,
+    "e": 5.062
+   },
+   {
+    "w": "came",
+    "s": 5.062,
+    "e": 5.7
+   },
+   {
+    "w": "and",
+    "s": 5.8,
+    "e": 5.912
+   },
+   {
+    "w": "then",
+    "s": 5.912,
+    "e": 6.125
+   },
+   {
+    "w": "morning",
+    "s": 6.125,
+    "e": 6.775
+   },
+   {
+    "w": "the",
+    "s": 6.85,
+    "e": 7.013
+   },
+   {
+    "w": "sixth",
+    "s": 7.013,
+    "e": 7.45
+   },
+   {
+    "w": "day",
+    "s": 7.45,
+    "e": 8.075
+   }
+  ]
+ },
+ "rest-title": {
+  "src": "audio/genesis-1/rest-title.m4a",
+  "text": "The Seventh Day. Rest.",
+  "voice": "bm_lewis",
+  "duration": 3.375,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "Seventh",
+    "s": 0.825,
+    "e": 1.262
+   },
+   {
+    "w": "Day",
+    "s": 1.262,
+    "e": 1.7
+   },
+   {
+    "w": "Rest",
+    "s": 1.9,
+    "e": 2.675
+   }
+  ]
+ },
+ "rest-0": {
+  "src": "audio/genesis-1/rest-0.m4a",
+  "text": "And so the heavens and the earth were finished, in all their beauty.",
+  "voice": "bm_lewis",
+  "duration": 5.65,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "so",
+    "s": 0.825,
+    "e": 1.075
+   },
+   {
+    "w": "the",
+    "s": 1.075,
+    "e": 1.212
+   },
+   {
+    "w": "heavens",
+    "s": 1.212,
+    "e": 1.738
+   },
+   {
+    "w": "and",
+    "s": 1.738,
+    "e": 1.837
+   },
+   {
+    "w": "the",
+    "s": 1.837,
+    "e": 1.988
+   },
+   {
+    "w": "earth",
+    "s": 1.988,
+    "e": 2.35
+   },
+   {
+    "w": "were",
+    "s": 2.35,
+    "e": 2.5
+   },
+   {
+    "w": "finished",
+    "s": 2.5,
+    "e": 3.3
+   },
+   {
+    "w": "in",
+    "s": 3.462,
+    "e": 3.625
+   },
+   {
+    "w": "all",
+    "s": 3.625,
+    "e": 3.85
+   },
+   {
+    "w": "their",
+    "s": 3.85,
+    "e": 4.1
+   },
+   {
+    "w": "beauty",
+    "s": 4.1,
+    "e": 4.95
+   }
+  ]
+ },
+ "rest-1": {
+  "src": "audio/genesis-1/rest-1.m4a",
+  "text": "On the seventh day, God rested from all His work. He blessed the seventh day and made it holy.",
+  "voice": "bm_lewis",
+  "duration": 8.075,
+  "words": [
+   {
+    "w": "On",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "the",
+    "s": 0.787,
+    "e": 0.925
+   },
+   {
+    "w": "seventh",
+    "s": 0.925,
+    "e": 1.337
+   },
+   {
+    "w": "day",
+    "s": 1.337,
+    "e": 1.875
+   },
+   {
+    "w": "God",
+    "s": 2.062,
+    "e": 2.462
+   },
+   {
+    "w": "rested",
+    "s": 2.462,
+    "e": 2.925
+   },
+   {
+    "w": "from",
+    "s": 2.925,
+    "e": 3.125
+   },
+   {
+    "w": "all",
+    "s": 3.125,
+    "e": 3.312
+   },
+   {
+    "w": "His",
+    "s": 3.312,
+    "e": 3.513
+   },
+   {
+    "w": "work",
+    "s": 3.513,
+    "e": 4.325
+   },
+   {
+    "w": "He",
+    "s": 4.475,
+    "e": 4.625
+   },
+   {
+    "w": "blessed",
+    "s": 4.625,
+    "e": 5.025
+   },
+   {
+    "w": "the",
+    "s": 5.025,
+    "e": 5.188
+   },
+   {
+    "w": "seventh",
+    "s": 5.188,
+    "e": 5.612
+   },
+   {
+    "w": "day",
+    "s": 5.612,
+    "e": 6.088
+   },
+   {
+    "w": "and",
+    "s": 6.088,
+    "e": 6.225
+   },
+   {
+    "w": "made",
+    "s": 6.225,
+    "e": 6.412
+   },
+   {
+    "w": "it",
+    "s": 6.412,
+    "e": 6.562
+   },
+   {
+    "w": "holy",
+    "s": 6.562,
+    "e": 7.375
+   }
+  ]
+ }
+}

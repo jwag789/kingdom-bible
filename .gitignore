@@ -1,0 +1,9 @@
+.env
+node_modules/
+.DS_Store
+.venv-uv/
+.narration/
+__pycache__/
+dist/
+art/style-test/
+art/**/history/
