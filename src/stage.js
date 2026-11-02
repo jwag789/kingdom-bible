@@ -7,7 +7,8 @@
 // An effect can follow a layer: `"with": "light"` shows it as that layer is revealed,
 // `"until": "light"` hides it once that layer starts to appear.
 // Taps that aren't revealing a layer go to the scene's playable effects (touch.js),
-// and a scene's `touch.hint` invites the first tap.
+// and a scene's `touch.hint` invites the first tap. A tap on a hidden secret (a sticker with
+// `earn: "secret"`, see stickers.js) is offered to `onSecret` first.
 //
 // Positions in the story (effects, tap origins, hints) are fractions of the picture, not the
 // screen. On a tall phone screen only a slice of the wide picture fits, so the picture is
@@ -38,6 +39,7 @@ export class Stage {
       alpha: 0,
       focus: null,
       touch: s.touch ?? null,
+      secrets: (s.stickers ?? []).filter(k => k.earn === 'secret'),
       tapped: false,
       since: 0,                        // when this scene last became the active one
       layers: s.layers.map(l => ({
@@ -59,6 +61,7 @@ export class Stage {
     this.progress = 0;
     this.waiting = null;               // the tap-triggered layer currently waiting, if any
     this.onEvent = null;               // (kind, detail) for 'reveal' and 'touch', e.g. to play sounds
+    this.onSecret = null;              // (sceneIndex, sticker) → true if that find was new
     this.bursts = [];
     this.pointer = { x: 0.5, y: 0.5, active: false, moved: -Infinity };
     this.drift = { x: 0, y: 0 };
@@ -75,7 +78,7 @@ export class Stage {
     // Presses on the words or controls are for reading, not for the art.
     let press = null;
     addEventListener('pointerdown', e => {
-      press = e.target.closest('p, h1, h2, summary, a, button, nav, .eyebrow, .verses, .kicker, .sub')
+      press = e.target.closest('p, h1, h2, summary, a, button, nav, .eyebrow, .verses, .kicker, .sub, .book, .toast')
         ? null : { x: e.clientX, y: e.clientY, at: performance.now() };
     });
     addEventListener('pointerup', e => {
@@ -147,11 +150,22 @@ export class Stage {
 
   tap(x, y) {
     if (this.waiting) {
-      this.reveal(this.waiting, x, y);
+      this.reveal(this.waiting, x, y, true);
       return;
     }
     // Use the animation clock, so a tap never lands "in the future" of the frame drawing it.
     const s = this.scenes[this.active], now = this.t ?? performance.now() / 1000;
+    const shown = id => s.layers.find(l => l.id === id)?.reveal ?? 0;
+    // Secrets only count once the scene has faded in, so a tap can't find the last scene's.
+    for (const secret of s.alpha > 0.8 ? s.secrets : []) {
+      if (secret.with && shown(secret.with) < 0.5) continue;
+      if (secret.until && shown(secret.until) > 0.5) continue;
+      const near = Math.hypot(x - secret.at[0], (y - secret.at[1]) / ASPECT) < (secret.hit ?? 0.05);
+      if (near && this.onSecret?.(this.active, secret)) {
+        this.burst(secret.at[0], secret.at[1], 0.45);
+        return;
+      }
+    }
     let played = false;
     for (const f of s.fx) {
       if (f.play && f.reveal > 0.3) {
@@ -163,17 +177,23 @@ export class Stage {
     if (played) s.tapped = true;
   }
 
-  reveal(layer, x, y) {
+  // `tapped` is false when the layer revealed itself because nobody tapped.
+  reveal(layer, x, y, tapped = false) {
     const now = performance.now() / 1000;
     layer.wipe = { x, y, start: now };
     this.scenes[this.active].focus = { x, y };
     this.waiting = null;
-    const sparks = Array.from({ length: 90 }, () => {
-      const a = Math.random() * 6.28, v = 0.08 + Math.random() * 0.45;
+    this.burst(x, y);
+    this.onEvent?.('reveal', { layer, x, y, tapped });
+  }
+
+  // A flash and a spray of sparks; `size` 1 is the big one for "let there be light".
+  burst(x, y, size = 1) {
+    const sparks = Array.from({ length: Math.round(90 * size) }, () => {
+      const a = Math.random() * 6.28, v = (0.08 + Math.random() * 0.45) * size;
       return { a, v, s: 0.6 + Math.random() * 2 };
     });
-    this.bursts.push({ x, y, start: now, sparks });
-    this.onEvent?.('reveal', { layer, x, y });
+    this.bursts.push({ x, y, start: performance.now() / 1000, sparks, size });
   }
 
   source(layer) {
@@ -213,7 +233,7 @@ export class Stage {
           if (l.reveal < 0.01) s.focus = null;
         } else if (!l.wipe) {
           l.waitStart ??= t;
-          if (t - l.waitStart > TAP_PATIENCE) this.reveal(l, l.origin?.[0] ?? 0.62, l.origin?.[1] ?? 0.22);
+          if (t - l.waitStart > TAP_PATIENCE) this.reveal(l, l.origin?.[0] ?? 0.62, l.origin?.[1] ?? 0.22, false);
           else waiting = l;
         } else {
           l.reveal = clamp01((t - l.wipe.start) / WIPE_SECONDS);
@@ -336,7 +356,7 @@ export class Stage {
       const age = t - b.start;
       if (age > 2.4) return false;
       const x = v.x + b.x * v.pw, y = v.y + b.y * v.ph;
-      stamp(ctx, glowSprite('255,246,218'), x, y, w * (0.1 + age * 0.35), 0.9 * Math.max(0, 1 - age / 0.9));
+      stamp(ctx, glowSprite('255,246,218'), x, y, w * (0.1 + age * 0.35) * b.size, 0.9 * Math.max(0, 1 - age / 0.9));
       const fade = 1 - age / 2.4;
       for (const p of b.sparks) {
         const d = p.v * w * easeOut(Math.min(1, age / 2));

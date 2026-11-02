@@ -55,6 +55,9 @@ export class Sound {
   }
 
   build() {
+    // On iPhones, web audio is silenced by the ring/silent switch unless the page says it's
+    // playing media (like a video would). Safari 17+ understands this; elsewhere it's ignored.
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch {}
     const ctx = this.ctx = new AudioContext();
     this.out = this.gain(this.enabled ? 1 : 0);
     const comp = ctx.createDynamicsCompressor();
@@ -427,6 +430,13 @@ export class Sound {
     this.noiseBurst({ at: now, peak: 0.06, attack: 0.8, release: 2.5, type: 'highpass', from: 4000, to: 7000, q: 0.5 });
     const steps = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
     steps.forEach((s, i) => this.bell(KEY + s, now + 0.1 + i * 0.13, 0.075 - i * 0.003, 5.5, this.sfxBus));
+  }
+
+  sticker() {                        // a new sticker: a paper pop and a bright little run of bells
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.12, attack: 0.003, release: 0.08, from: 3000, to: 1200, q: 1.2, buffer: this.pink });
+    [12, 16, 19, 24].forEach((s, i) => this.bell(KEY + s, now + 0.08 + i * 0.08, 0.07, 3, this.sfxBus));
   }
 
   // While the narrator speaks, the music and ambience step back.

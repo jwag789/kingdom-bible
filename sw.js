@@ -8,9 +8,9 @@
 
 const VERSION = 'dev';
 const CACHE = `kingdom-bible-${VERSION}`;
-const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png',
+const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'fonts/fonts.css',
   'src/reader.js', 'src/stage.js', 'src/effects.js', 'src/touch.js', 'src/sprites.js', 'src/placeholders.js',
-  'src/audio.js', 'src/narrator.js', 'data/library.json'];
+  'src/audio.js', 'src/narrator.js', 'src/stickers.js', 'data/library.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -27,9 +27,8 @@ self.addEventListener('fetch', e => {
   // Unbuilt (the dev server): stay out of the way, so freshly made art and code always show.
   if (VERSION === 'dev' || req.method !== 'GET') return;
   const url = new URL(req.url);
-  const fonts = url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com';
-  if (url.origin !== location.origin && !fonts) return;
-  if (fonts || /\/(art|audio|icons)\//.test(url.pathname)) e.respondWith(cacheFirst(req));
+  if (url.origin !== location.origin) return;
+  if (/\/(art|audio|icons|fonts)\//.test(url.pathname)) e.respondWith(cacheFirst(req));
   else e.respondWith(networkFirst(req));
 });
 

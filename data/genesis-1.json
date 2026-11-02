@@ -96,6 +96,19 @@
       "frame": [
         0.62,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "first-light",
+          "name": "The First Light",
+          "earn": "reveal",
+          "layer": "light",
+          "at": [
+            0.65,
+            0.24
+          ],
+          "r": 0.12
+        }
       ]
     },
     {
@@ -158,6 +171,18 @@
       "frame": [
         0.6,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "great-cloud",
+          "name": "The Great Cloud",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.36
+          ],
+          "r": 0.15
+        }
       ]
     },
     {
@@ -246,6 +271,32 @@
       "frame": [
         0.5,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "fruit-tree",
+          "name": "The Fruit Tree",
+          "earn": "play",
+          "layer": "trees",
+          "at": [
+            0.93,
+            0.46
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "first-fruit",
+          "name": "The First Fruit",
+          "earn": "secret",
+          "layer": "trees",
+          "at": [
+            0.08,
+            0.45
+          ],
+          "r": 0.08,
+          "hit": 0.07,
+          "with": "trees"
+        }
       ]
     },
     {
@@ -311,6 +362,29 @@
       "frame": [
         0.5,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "sun",
+          "name": "The Sun",
+          "earn": "play",
+          "at": [
+            0.23,
+            0.37
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "moon",
+          "name": "The Moon",
+          "earn": "secret",
+          "at": [
+            0.83,
+            0.23
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
       ]
     },
     {
@@ -390,6 +464,31 @@
       "frame": [
         0.62,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "whale",
+          "name": "The Great Whale",
+          "earn": "play",
+          "layer": "whale",
+          "at": [
+            0.6,
+            0.32
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "dolphins",
+          "name": "The Dolphins",
+          "earn": "secret",
+          "layer": "whale",
+          "at": [
+            0.77,
+            0.4
+          ],
+          "r": 0.07,
+          "hit": 0.06
+        }
       ]
     },
     {
@@ -483,6 +582,45 @@
       "frame": [
         0.6,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "lion-lamb",
+          "name": "The Lion and the Lamb",
+          "earn": "play",
+          "layer": "animals",
+          "at": [
+            0.22,
+            0.52
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "giraffe",
+          "name": "The Giraffe",
+          "earn": "secret",
+          "layer": "animals",
+          "at": [
+            0.61,
+            0.24
+          ],
+          "r": 0.08,
+          "hit": 0.06,
+          "with": "animals"
+        },
+        {
+          "id": "adam-eve",
+          "name": "Adam and Eve",
+          "earn": "secret",
+          "layer": "people",
+          "at": [
+            0.54,
+            0.56
+          ],
+          "r": 0.1,
+          "hit": 0.07,
+          "with": "people"
+        }
       ]
     },
     {
@@ -546,6 +684,29 @@
       "frame": [
         0.5,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "evening-sun",
+          "name": "The Seventh Evening",
+          "earn": "play",
+          "at": [
+            0.5,
+            0.22
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "resting-sheep",
+          "name": "The Resting Sheep",
+          "earn": "secret",
+          "at": [
+            0.83,
+            0.46
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
       ]
     }
   ],

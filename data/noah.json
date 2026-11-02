@@ -96,6 +96,29 @@
       "frame": [
         0.64,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "noah",
+          "name": "Noah",
+          "earn": "play",
+          "at": [
+            0.61,
+            0.48
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "evening-star",
+          "name": "The Evening Star",
+          "earn": "secret",
+          "at": [
+            0.77,
+            0.15
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
       ]
     },
     {
@@ -175,6 +198,30 @@
       "frame": [
         0.66,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "ark",
+          "name": "The Ark",
+          "earn": "play",
+          "layer": "finished",
+          "at": [
+            0.62,
+            0.47
+          ],
+          "r": 0.2
+        },
+        {
+          "id": "builder",
+          "name": "Noah the Builder",
+          "earn": "secret",
+          "at": [
+            0.76,
+            0.18
+          ],
+          "r": 0.07,
+          "hit": 0.06
+        }
       ]
     },
     {
@@ -251,6 +298,32 @@
       "frame": [
         0.55,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "two-by-two",
+          "name": "Two by Two",
+          "earn": "play",
+          "layer": "parade",
+          "at": [
+            0.25,
+            0.78
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "rabbits",
+          "name": "The Little Rabbits",
+          "earn": "secret",
+          "layer": "parade",
+          "until": "shut",
+          "at": [
+            0.205,
+            0.83
+          ],
+          "r": 0.05,
+          "hit": 0.045
+        }
       ]
     },
     {
@@ -332,6 +405,30 @@
       "frame": [
         0.6,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "storm-ark",
+          "name": "The Ark in the Storm",
+          "earn": "play",
+          "at": [
+            0.56,
+            0.5
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "last-peak",
+          "name": "The Last Mountaintop",
+          "earn": "secret",
+          "until": "deep",
+          "at": [
+            0.93,
+            0.53
+          ],
+          "r": 0.06,
+          "hit": 0.06
+        }
       ]
     },
     {
@@ -416,6 +513,19 @@
       "frame": [
         0.6,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "ararat",
+          "name": "Mount Ararat",
+          "earn": "play",
+          "layer": "ararat",
+          "at": [
+            0.58,
+            0.52
+          ],
+          "r": 0.14
+        }
       ]
     },
     {
@@ -496,6 +606,32 @@
       "frame": [
         0.5,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "dove",
+          "name": "The Dove",
+          "earn": "play",
+          "layer": "window",
+          "at": [
+            0.71,
+            0.26
+          ],
+          "r": 0.07
+        },
+        {
+          "id": "lion",
+          "name": "The Lion Comes Out",
+          "earn": "secret",
+          "layer": "out",
+          "at": [
+            0.83,
+            0.71
+          ],
+          "r": 0.06,
+          "hit": 0.06,
+          "with": "out"
+        }
       ]
     },
     {
@@ -585,6 +721,30 @@
       "frame": [
         0.7,
         0.5
+      ],
+      "stickers": [
+        {
+          "id": "rainbow",
+          "name": "The Rainbow",
+          "earn": "reveal",
+          "layer": "rainbow",
+          "at": [
+            0.48,
+            0.26
+          ],
+          "r": 0.22
+        },
+        {
+          "id": "goats",
+          "name": "The Goats",
+          "earn": "secret",
+          "at": [
+            0.9,
+            0.7
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
       ]
     }
   ]

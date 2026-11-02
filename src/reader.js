@@ -6,6 +6,7 @@
 import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
+import { Collection, stickerSrc, showToast, openBook } from './stickers.js';
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
 const asked = new URLSearchParams(location.search).get('story');
@@ -210,8 +211,35 @@ function applySound() {
   sound.setAmbience(s.sound?.ambience ?? []);
 }
 
+// ---- Stickers: one for playing with each scene, more for its hidden secrets.
+const collection = new Collection();
+const bookButton = $('stickers');
+const showCount = () => { bookButton.querySelector('.count').textContent = collection.size || ''; };
+showCount();
+function earn(si, sticker) {
+  if (!sticker || !collection.add(`${storyId}/${sticker.id}`)) return false;
+  sound.sticker();
+  navigator.vibrate?.(18);
+  showToast(sticker, stickerSrc(story.scenes[si], sticker), bookButton);
+  setTimeout(showCount, 3100);
+  return true;
+}
+const stickersOf = (si, earnBy) => (story.scenes[si].stickers ?? []).filter(k => k.earn === earnBy);
+stage.onSecret = (si, secret) => earn(si, secret);
+bookButton.onclick = () => {
+  narrator.stop();
+  clearTimeout(advanceTimer);
+  openBook({ collection, library, onClose: () => { bookButton.focus(); narrate(); } });
+};
+
 stage.onEvent = (kind, e) => {
-  if (kind === 'reveal') { e.layer.sfx === 'promise' ? sound.promise() : sound.lightBurst(); return; }
+  const si = slides[index].scene;
+  if (kind === 'reveal') {
+    e.layer.sfx === 'promise' ? sound.promise() : sound.lightBurst();
+    if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
+    return;
+  }
+  setTimeout(() => earn(si, stickersOf(si, 'play')[0]), 900);
   const play = {
     lift: () => sound.lift(),
     sprout: () => sound.sprout(e.x),
@@ -269,8 +297,9 @@ deck.querySelector('.begin.read').onclick = () => { readAloud = true; setReadAlo
 const SETTLE_MS = 650, GESTURE_GAP_MS = 160, NEW_GESTURE_MS = 600;
 let lastWheel = -Infinity, lastSize = 0, wheelSum = 0, spent = false;
 const scrollsInside = (el, dy) => el && (dy > 0 ? el.scrollTop + el.clientHeight < el.scrollHeight - 1 : el.scrollTop > 0);
+const bookOpen = () => document.body.classList.contains('book-open');
 addEventListener('wheel', e => {
-  if (e.ctrlKey) return;                                          // pinch-zoom
+  if (e.ctrlKey || bookOpen()) return;                            // pinch-zoom, or reading the sticker book
   if (scrollsInside(e.target.closest?.('.verses'), e.deltaY)) return; // let the verse list scroll
   e.preventDefault();
   const now = e.timeStamp, gap = now - lastWheel, size = Math.abs(e.deltaY);
@@ -287,7 +316,7 @@ addEventListener('wheel', e => {
 }, { passive: false });
 
 addEventListener('keydown', e => {
-  if (e.altKey || e.metaKey || e.ctrlKey) return;
+  if (e.altKey || e.metaKey || e.ctrlKey || bookOpen()) return;
   const onControl = e.target.closest?.('a, button, summary, input, textarea');
   const forward = ['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key) || (e.key === ' ' && !e.shiftKey && !onControl);
   const back = ['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key) || (e.key === ' ' && e.shiftKey && !onControl);
@@ -303,7 +332,7 @@ addEventListener('keydown', e => {
 let touchStart = null;
 addEventListener('touchstart', e => {
   const t = e.touches[0];
-  touchStart = e.touches.length === 1 && !e.target.closest?.('.verses') ? { x: t.clientX, y: t.clientY } : null;
+  touchStart = e.touches.length === 1 && !bookOpen() && !e.target.closest?.('.verses') ? { x: t.clientX, y: t.clientY } : null;
 }, { passive: true });
 addEventListener('touchend', e => {
   if (!touchStart) return;
