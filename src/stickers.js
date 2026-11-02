@@ -86,6 +86,7 @@ function howToFind(sticker, scene) {
 
 // The sticker book: every story's stickers, the ones found and the ones still to find.
 export async function openBook({ collection, library, onClose }) {
+  if (document.querySelector('.book')) return;   // already open
   const book = document.createElement('div');
   book.className = 'book';
   book.setAttribute('role', 'dialog');
