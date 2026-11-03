@@ -40,7 +40,8 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 904247,
         "at": "2026-11-03T03:06:11.649Z"
-      }
+      },
+      "wide": true
     }
   ],
   "scenes": [

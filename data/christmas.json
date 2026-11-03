@@ -34,6 +34,13 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 510520,
         "at": "2026-11-03T02:13:40.869Z"
+      },
+      "fullPiece": true,
+      "pieceSrc": "art/christmas/cast/joseph-piece.jpg",
+      "pieceGenerated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/edit",
+        "seed": 938841,
+        "at": "2026-11-03T16:58:03.045Z"
       }
     },
     {

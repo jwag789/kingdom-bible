@@ -1,13 +1,145 @@
 {
   "style": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single animal alone, full body, seen from the side facing left, centered on a plain pure white background, nothing else in the picture. No text, no border",
   "props": [
-    { "id": "lion", "name": "lions", "prompt": "a friendly lion with a big fluffy golden-orange mane" },
-    { "id": "elephant", "name": "elephants", "prompt": "a gentle grey elephant with big ears and a curled trunk" },
-    { "id": "giraffe", "name": "giraffes", "prompt": "a tall, sweet giraffe with orange-brown patches and a long neck" },
-    { "id": "zebra", "name": "zebras", "prompt": "a cheerful zebra with bold black and white stripes" },
-    { "id": "sheep", "name": "sheep", "prompt": "a fluffy cream sheep with a dark face and little dark legs" },
-    { "id": "rabbit", "name": "rabbits", "prompt": "a small brown-and-white rabbit with long ears, sitting up" },
-    { "id": "camel", "name": "camels", "prompt": "a sandy-brown camel with one big hump and a happy face" },
-    { "id": "hippo", "name": "hippos", "prompt": "a round, smiling purple-grey hippo" }
-  ]
+    {
+      "id": "lion",
+      "name": "lions",
+      "prompt": "a friendly lion with a big fluffy golden-orange mane"
+    },
+    {
+      "id": "elephant",
+      "name": "elephants",
+      "prompt": "a gentle grey elephant with big ears and a curled trunk"
+    },
+    {
+      "id": "giraffe",
+      "name": "giraffes",
+      "prompt": "a tall, sweet giraffe with orange-brown patches and a long neck"
+    },
+    {
+      "id": "zebra",
+      "name": "zebras",
+      "prompt": "a cheerful zebra with bold black and white stripes"
+    },
+    {
+      "id": "sheep",
+      "name": "sheep",
+      "prompt": "a fluffy cream sheep with a dark face and little dark legs"
+    },
+    {
+      "id": "rabbit",
+      "name": "rabbits",
+      "prompt": "a small brown-and-white rabbit with long ears, sitting up"
+    },
+    {
+      "id": "camel",
+      "name": "camels",
+      "prompt": "a sandy-brown camel with one big hump and a happy face"
+    },
+    {
+      "id": "hippo",
+      "name": "hippos",
+      "prompt": "a round, smiling purple-grey hippo"
+    },
+    {
+      "id": "sun",
+      "name": "the sun",
+      "prompt": "a big, bright, friendly golden sun with wavy paper rays",
+      "thing": true
+    },
+    {
+      "id": "moon",
+      "name": "the moon",
+      "prompt": "a glowing pale-gold crescent moon",
+      "thing": true
+    },
+    {
+      "id": "star",
+      "name": "a star",
+      "prompt": "a shining five-pointed golden star",
+      "thing": true
+    },
+    {
+      "id": "tree",
+      "name": "a tree",
+      "prompt": "a leafy green fruit tree with round red fruit and a brown trunk",
+      "thing": true
+    },
+    {
+      "id": "flower",
+      "name": "a flower",
+      "prompt": "a bright cheerful flower with pink and yellow petals and two green leaves",
+      "thing": true
+    },
+    {
+      "id": "fish",
+      "name": "fish",
+      "prompt": "a cheerful little striped orange and blue fish, seen from the side facing left"
+    },
+    {
+      "id": "bird",
+      "name": "birds",
+      "prompt": "a little bluebird flying with wings spread, seen from the side facing left"
+    },
+    {
+      "id": "frog",
+      "name": "frogs",
+      "prompt": "a cheerful bright green frog sitting, seen from the side facing left"
+    },
+    {
+      "id": "basket",
+      "name": "a basket",
+      "prompt": "a woven reed baby basket floating, with a sleeping baby wrapped in a cream blanket peeking out, seen from the side",
+      "thing": true
+    },
+    {
+      "id": "rock",
+      "name": "a rock",
+      "prompt": "a rounded grey river boulder with a little moss",
+      "thing": true
+    },
+    {
+      "id": "reeds",
+      "name": "reeds",
+      "prompt": "a clump of tall green papyrus reeds growing out of a little patch of water",
+      "thing": true
+    },
+    {
+      "id": "lotus",
+      "name": "a lotus flower",
+      "prompt": "a pink water lily flower on a round green lily pad",
+      "thing": true
+    },
+    {
+      "id": "family",
+      "name": "a family",
+      "prompt": "a small family of travelers walking to the left: a father with a staff, a mother carrying a bundle and a small child holding her hand, in simple colorful robes",
+      "thing": true
+    },
+    {
+      "id": "family2",
+      "name": "a family",
+      "prompt": "a grandmother and two children walking to the left, the older child leading a little white goat, in simple colorful robes",
+      "thing": true
+    },
+    {
+      "id": "smooth",
+      "name": "a smooth stone",
+      "prompt": "a single smooth, round, polished grey river stone",
+      "thing": true
+    },
+    {
+      "id": "rough",
+      "name": "a rough rock",
+      "prompt": "a single jagged, rough, pointy brown rock with sharp corners",
+      "thing": true
+    },
+    {
+      "id": "bag",
+      "name": "a shepherd's bag",
+      "prompt": "a small brown leather shepherd's bag with a strap, its flap open",
+      "thing": true
+    }
+  ],
+  "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"
 }

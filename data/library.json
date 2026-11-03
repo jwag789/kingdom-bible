@@ -57,6 +57,14 @@
       "cover": "art/covers/moses-sea.jpg"
     },
     {
+      "id": "david",
+      "title": "David and Goliath",
+      "reference": "1 Samuel 16–17",
+      "coverFrom": "art/david/giant/valley.jpg",
+      "testament": "old",
+      "cover": "art/covers/david.jpg"
+    },
+    {
       "id": "jonah",
       "title": "Jonah and the Big Fish",
       "reference": "Jonah 1–4",

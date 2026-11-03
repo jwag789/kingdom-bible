@@ -206,6 +206,109 @@
     color: #fff3d6; text-shadow: 0 0 30px rgba(255,215,112,0.8), 0 2px 12px rgba(0,0,0,0.6); pointer-events: none; }
   .game .tally.pop { animation: tally 0.45s cubic-bezier(0.2, 1.6, 0.4, 1); }
   @keyframes tally { 0% { transform: translateX(-50%) scale(0.4); } 100% { transform: translateX(-50%) scale(1); } }
+
+  /* The games in play.js play on a field over the picture; a backdrop fades the picture into another. */
+  .game .top, .game .say, .game .tray { z-index: 2; }
+  .game .won { z-index: 4; }
+  .game .confetti { z-index: 5; }
+  @media (max-height: 520px) { .game h2 { font-size: 1.7rem; margin-top: 0.2rem; } .game .say { font-size: 1rem; margin-top: 0.3rem; } }
+  .game .field { position: absolute; inset: 0; z-index: 1; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .game .backdrop { position: absolute; inset: 0; z-index: -1; background-size: cover; opacity: 0; transition: opacity 0.9s ease; }
+  .game .backdrop.in { opacity: 1; }
+  .game .field > * { position: absolute; transform: translate(-50%, -50%); }
+  .game .field img { display: block; pointer-events: none; }
+  .game .field button:not(.piece) { border: 0; padding: 0; background: none; cursor: pointer; }
+  .game .field.shake { animation: shake 0.45s ease; }
+  @keyframes pulse { 50% { scale: 1.18; } }
+  @keyframes wiggle { 20%, 60% { rotate: -12deg; } 40%, 80% { rotate: 12deg; } }
+  @keyframes shake { 20% { translate: -6px 3px; } 40% { translate: 6px -3px; } 60% { translate: -4px 2px; } 80% { translate: 3px -1px; } }
+
+  /* Which Day? */
+  .game .daybox { left: 50%; width: min(620px, 86%); transform: translateX(-50%); border: 3px dashed rgba(240,204,138,0.85); border-radius: 26px;
+    background: rgba(10,12,20,0.38); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 8px 12px; }
+  .game .daylabel { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4.4vw, 2.6rem); line-height: 1.1; color: #fff3d6; text-shadow: 0 2px 14px rgba(0,0,0,0.6); }
+  .game .daybox .inside { display: flex; gap: 10px; min-height: calc(var(--p) * 0.75); flex-wrap: wrap; justify-content: center; }
+  .game .daybox .piece { position: relative; width: calc(var(--p) * 0.75); height: calc(var(--p) * 0.75); padding: 5px; animation: pop 0.35s ease-out; }
+  .game .pool { left: 50%; top: auto; bottom: 0; transform: translateX(-50%); width: 96%; display: flex; flex-wrap: wrap; justify-content: center;
+    gap: clamp(8px, 1.6vw, 14px); padding-bottom: 6px; }
+  .game .pool { align-items: center; }
+  .game .pool .piece { position: relative; touch-action: none; width: var(--p); height: var(--p); padding: 6px; }
+  .game .piece.held { z-index: 3; transform: scale(1.12); box-shadow: 0 0 0 4px var(--gold), 0 18px 30px rgba(0,0,0,0.45); transition: none; }
+
+  /* Animal Memory */
+  .game .cards { left: 50%; transform: translateX(-50%); display: grid; grid-template-columns: repeat(var(--cols), var(--c)); gap: 10px; }
+  .game .card { position: relative; width: var(--c); aspect-ratio: 1; transform-style: preserve-3d; transition: transform 0.4s ease; }
+  .game .card.up { transform: rotateY(180deg); }
+  .game .card .back, .game .card .face { position: absolute; inset: 0; border-radius: 18px; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    border: 3px solid #fbf6ea; box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+  .game .card .back { background: radial-gradient(circle at 30% 30%, #8fcf6a, #4c8a3c); }
+  .game .card .back::after { content: '❦'; position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255,250,230,0.7); font-size: calc(var(--c) * 0.4); }
+  .game .card .face { background: rgba(251,246,234,0.95); transform: rotateY(180deg); display: grid; place-items: center; }
+  .game .card .face img { width: 86%; height: 86%; object-fit: contain; }
+  .game .card.matched .face { box-shadow: 0 0 0 4px var(--gold), 0 0 26px rgba(255,215,112,0.7); }
+
+  /* Float the Basket */
+  .game .basket { filter: drop-shadow(0 8px 10px rgba(0,0,0,0.35)); }
+  .game .drift { filter: drop-shadow(0 6px 8px rgba(0,0,0,0.3)); transition: opacity 0.4s; }
+  .game .drift.bumped { opacity: 0.55; }
+  .game .drift.got { animation: gotit 0.5s ease-out forwards; }
+  @keyframes gotit { to { scale: 1.7; opacity: 0; } }
+
+  /* Frog Frenzy */
+  .game .frog { animation: popup 0.25s cubic-bezier(0.2, 1.6, 0.4, 1); filter: drop-shadow(0 6px 8px rgba(0,0,0,0.35)); }
+  .game .frog img { width: 100%; }
+  .game .frog.caught { animation: leapaway 0.7s ease-in forwards; pointer-events: none; }
+  .game .frog.away { animation: hopoff 0.6s ease-in forwards; pointer-events: none; }
+  @keyframes popup { from { scale: 0.2; } }
+  @keyframes leapaway { 40% { translate: 0 -120px; rotate: -20deg; } 100% { translate: 0 -60vh; scale: 0.3; opacity: 0; } }
+  @keyframes hopoff { 50% { translate: 40px -40px; } 100% { translate: 90px 10px; opacity: 0; } }
+
+  /* Part the Sea */
+  .game .trail { width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(#fff, rgba(160,220,255,0.6) 50%, transparent 70%);
+    pointer-events: none; animation: trail 0.7s ease-out forwards; }
+  @keyframes trail { to { scale: 2.4; opacity: 0; } }
+  .game .walker { filter: drop-shadow(0 0 6px #fff3c4) drop-shadow(0 0 16px rgba(255,215,112,0.8)); animation: popup 0.3s ease-out; }
+  .game .walker.going { filter: drop-shadow(0 6px 8px rgba(0,0,0,0.4)); }
+  .game .walker::before { content: ''; position: absolute; left: 0; right: 0; bottom: -10%; height: 30%; border-radius: 50%; z-index: -1;
+    background: radial-gradient(closest-side, rgba(255,232,160,0.85), rgba(255,232,160,0)); }
+  .game .walker.going::before { opacity: 0; transition: opacity 0.4s; }
+  .game .walker img { width: 100%; }
+  .game .walker:not(.going) { animation: popup 0.3s ease-out, pulse 1.6s ease-in-out infinite 0.3s; }
+
+  /* To the Beach */
+  .game .light { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(#fff8dc, rgba(255,226,140,0.5) 55%, transparent 72%); opacity: 0.45; pointer-events: none; }
+  .game .light.next { opacity: 1; animation: pulse 1.1s ease-in-out infinite; }
+  .game .light.lit { opacity: 1; background: radial-gradient(#fff, #ffd770 50%, transparent 72%); box-shadow: 0 0 22px #ffd770; }
+  .game .swimmer { filter: drop-shadow(0 10px 14px rgba(0,0,0,0.4)); }
+  .game .tumble { animation: tumble 1.2s ease-out forwards; }
+  @keyframes tumble { 0% { scale: 0.3; } 50% { translate: 60px -90px; rotate: 200deg; } 100% { translate: 110px 20px; rotate: 360deg; scale: 1.2; } }
+
+  /* Stable Puzzle */
+  .game .board { transform: none; border-radius: 12px; background-size: cover; box-shadow: 0 0 0 3px rgba(251,246,234,0.8), 0 14px 34px rgba(0,0,0,0.45); }
+  .game .board::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: rgba(8,10,18,0.78); }
+  .game .board.done::before { background: transparent; transition: background 0.8s; }
+  .game .board.done { box-shadow: 0 0 0 4px var(--gold), 0 0 40px rgba(255,215,112,0.6); }
+  .game .tile { border-radius: 6px; box-shadow: 0 0 0 2px rgba(251,246,234,0.9), 0 8px 18px rgba(0,0,0,0.4); cursor: grab; touch-action: none; transition: scale 0.2s; }
+  .game .tile.held { z-index: 3; cursor: grabbing; box-shadow: 0 0 0 3px var(--gold), 0 18px 30px rgba(0,0,0,0.5); }
+  .game .tile.placed { box-shadow: none; border-radius: 0; cursor: default; }
+  .game .hint { border-radius: 6px; box-shadow: inset 0 0 0 4px var(--gold); pointer-events: none; animation: twinkle 0.6s ease-in-out 2; }
+
+  /* Fill the Nets */
+  .game .hoop { border-radius: 50%; border: 5px solid #c8a46e; pointer-events: none; box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+    background: repeating-linear-gradient(45deg, rgba(240,226,196,0.55) 0 2px, transparent 2px 14px), repeating-linear-gradient(-45deg, rgba(240,226,196,0.55) 0 2px, transparent 2px 14px); }
+  .game .leaper { pointer-events: auto; filter: drop-shadow(0 6px 8px rgba(0,0,0,0.3)); cursor: pointer; }
+  .game .leaper.caught { animation: gotit 0.5s ease-out forwards; }
+
+  /* Five Smooth Stones */
+  .game .bag { filter: drop-shadow(0 8px 10px rgba(0,0,0,0.35)); }
+  .game .stone { filter: drop-shadow(0 5px 6px rgba(0,0,0,0.35)); transition: left 0.6s ease-in, top 0.6s cubic-bezier(0.5, -0.6, 0.6, 1), scale 0.6s; }
+  .game .stone img { width: 100%; }
+  .game .stone.nope { animation: wiggle 0.4s ease; }
+  .game .stone.bagged { scale: 0.4; opacity: 0.0; transition: left 0.6s ease-in, top 0.6s cubic-bezier(0.5, -0.6, 0.6, 1), scale 0.6s, opacity 0.3s 0.5s; pointer-events: none; }
+  .game .ring { border-radius: 50%; border: 4px dashed rgba(255,232,160,0.95); pointer-events: none; box-shadow: 0 0 24px rgba(255,215,112,0.6); animation: pulse 1.4s ease-in-out infinite; }
+  .game .band { left: 0; top: 0; width: 100%; height: 100%; transform: none; pointer-events: none; overflow: visible; }
+  .game .band line { stroke: #7a4a26; stroke-width: 5; stroke-linecap: round; }
+  .game .shot { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); pointer-events: none; }
   .sticker.badge.emoji { display: grid; place-items: center; background: #f3d38d; line-height: 1; }
   .sticker.badge { background-color: #f3d38d; background-size: 70%; background-position: 50% 55%; border-color: #fff4d6;
     box-shadow: 0 0 0 3px #d9a646, 0 8px 20px rgba(0,0,0,0.4); }
@@ -443,7 +546,7 @@
   @media (max-width: 760px) {
     #scrim { background: linear-gradient(0deg, rgba(4,5,10,0.9) 0%, rgba(4,5,10,0.6) 42%, rgba(4,5,10,0) 70%); }
     .slide { align-items: flex-end; padding-bottom: calc(16vh + env(safe-area-inset-bottom)); padding-right: 44px; }
-    .cover, .title { padding-bottom: calc(22vh + env(safe-area-inset-bottom)); }
+    .slide.cover, .slide.title { padding-bottom: calc(22vh + env(safe-area-inset-bottom)); }
     #hint { top: 28% !important; left: 50% !important; }
     #nav { gap: 6px; }
     #nav button, #nav .navlink { width: 38px; height: 38px; }

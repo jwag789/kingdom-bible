@@ -4,11 +4,14 @@
 //
 // "pairs" (Two by Two): animals wait in the meadow; tap two that match and they walk up
 // the ramp into the ark together. Bring every pair in to win.
-// "count" (Count the Stars, Pop the Bubbles, Find the Lambs): ten things are hidden around the
-// picture — `item` is "star", "bubble" or "lamb" — and each one tapped is counted out loud.
+// "count" (Count the Stars): ten things are hidden around the picture — `item` is "star",
+// "bubble" or "lamb" — and each one tapped is counted out loud.
+// Every other kind (Which Day?, Frog Frenzy, Five Smooth Stones…) is in play.js.
 //
 // Spoken lines (intro, win, "Two lions!") are recorded by scripts/narrate_games.py into
 // audio/games/<story>/<key>.m4a; without them the game simply plays silently.
+
+import { PLAY } from './play.js';
 
 const ASPECT = 16 / 9;
 const shuffle = list => {
@@ -69,6 +72,7 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
   };
 
   const done = () => {
+    run++;
     voice.pause();
     root.classList.remove('in');
     document.body.classList.remove('game-open');
@@ -88,7 +92,54 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
     return { x: x0 + game.target[0] * pw, y: y0 + game.target[1] * ph };
   };
 
-  const start = () => (game.type === 'count' ? startCount() : startPairs());
+  // Each play of a game gets a fresh field to play on; playing again (or closing) retires the old one.
+  let run = 0;
+  const start = () => {
+    run++;
+    root.querySelectorAll('.field, .backdrop, .tally').forEach(n => n.remove());
+    tray.replaceChildren();
+    if (game.type === 'count') return startCount();
+    if (game.type === 'pairs') return startPairs();
+    const mine = run, field = el('div', 'field');
+    root.append(field);
+    const alive = () => mine === run && root.isConnected;
+    PLAY[game.type]({
+      root, field, game, sound, names: animalNames, alive,
+      progress: text => { progress.textContent = text; },
+      head: () => say.offsetTop + say.offsetHeight + 8,     // where the words end and the playing room begins
+      say: (text, key) => { say.textContent = text; if (key) speak(key); },
+      line: key => { say.textContent = game.lines[key] ?? ''; speak(key); },
+      win: () => { if (alive()) win(); },
+      // A point on the picture (fractions of it) to pixels on the field.
+      screen: (px, py) => {
+        const W = root.clientWidth, H = root.clientHeight, pw = Math.max(W, H * ASPECT), ph = pw / ASPECT;
+        return { x: (W - pw) * game.frame[0] + px * pw, y: (H - ph) * game.frame[1] + py * ph };
+      },
+      // Fade the background to another painting (the sea parted, the nets full).
+      backdrop: src => {
+        if (!src) return;
+        const b = el('div', 'backdrop');
+        b.style.backgroundImage = `url("${src}")`;
+        b.style.backgroundPosition = root.style.backgroundPosition;
+        const last = [...root.querySelectorAll('.backdrop')].pop();
+        if (last) last.after(b); else root.prepend(b);   // each one over the last
+        requestAnimationFrame(() => b.classList.add('in'));
+      },
+      // Calls fn(seconds, secondsSinceLastFrame) every frame while this play lasts.
+      loop: fn => {
+        let t0 = null, last = 0;
+        const frame = now => {
+          if (!alive()) return;
+          t0 ??= now;
+          const t = (now - t0) / 1000;
+          fn(t, Math.min(0.05, t - last));
+          last = t;
+          requestAnimationFrame(frame);
+        };
+        requestAnimationFrame(frame);
+      },
+    });
+  };
 
   // ---- Tap and count: ten things around the picture, counted out loud as they're found.
   const startCount = () => {

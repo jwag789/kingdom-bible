@@ -86,6 +86,18 @@ for (const { id } of library.stories) {
   }
 }
 
+// The pictures the games play on that aren't already in (a clean river, a puzzle, a badge).
+for (const [id, game] of Object.entries(games)) {
+  if (!published.has(id)) continue;
+  for (const src of Object.values(game).filter(v => typeof v === 'string' && v.startsWith('art/'))) {
+    const to = join(out, src);
+    if (await stat(to).then(() => true, () => false)) continue;
+    await mkdir(dirname(to), { recursive: true });
+    if (src.endsWith('.jpg')) execFileSync('sips', ['-Z', String(ART_WIDTH), '-s', 'format', 'jpeg', '-s', 'formatOptions', String(ART_QUALITY), join(root, src), '--out', to], { stdio: 'ignore' });
+    else await copy(src);
+  }
+}
+
 // Spoken lines for the published stories' games.
 for (const id of Object.keys(games).filter(id => published.has(id))) {
   await cp(join(root, 'audio/games', id), join(out, 'audio/games', id), { recursive: true }).catch(() => {});

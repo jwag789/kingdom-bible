@@ -34,7 +34,8 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 156481,
         "at": "2026-11-03T02:46:36.079Z"
-      }
+      },
+      "wide": true
     },
     {
       "id": "ship",
@@ -45,7 +46,8 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 542501,
         "at": "2026-11-03T02:46:49.596Z"
-      }
+      },
+      "wide": true
     }
   ],
   "scenes": [

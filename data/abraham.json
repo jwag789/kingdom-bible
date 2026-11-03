@@ -29,6 +29,13 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 532994,
         "at": "2026-11-03T03:05:59.252Z"
+      },
+      "fullPiece": true,
+      "pieceSrc": "art/abraham/cast/sarah-piece.jpg",
+      "pieceGenerated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/edit",
+        "seed": 496995,
+        "at": "2026-11-03T16:58:03.218Z"
       }
     }
   ],

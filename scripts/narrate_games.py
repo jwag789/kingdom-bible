@@ -1,4 +1,4 @@
-"""Records the games' spoken lines (the intro, "You did it!", "Two lions!") with the same
+"""Records the games' spoken lines (the intro, "Day Four…", "Two lions!", "You did it!") with the same
 narrator as the stories.
 
     .narration/bin/python scripts/narrate_games.py [--voice bm_lewis] [--speed 0.9] [--force]
@@ -33,7 +33,8 @@ pipeline = KPipeline(lang_code="b" if args.voice.startswith("b") else "a", repo_
 for story, game in games.items():
     out = ROOT / "audio" / "games" / story
     out.mkdir(parents=True, exist_ok=True)
-    lines = {"intro": game["lines"]["intro"], "win": game["lines"]["win"]}
+    # Every line is spoken except "done" (shown on the win card) and "pair" (a pattern, below).
+    lines = {key: text for key, text in game["lines"].items() if key not in ("done", "pair")}
     if game.get("type") == "count":
         numbers = "One Two Three Four Five Six Seven Eight Nine Ten".split()
         for n in range(1, game.get("count", 10) + 1):

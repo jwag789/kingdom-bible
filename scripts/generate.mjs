@@ -18,6 +18,11 @@
 // as references, so Noah looks like the same Noah in every scene. `--only cast` remakes them.
 // An edit can set `"editModel": "kontext"` to use FLUX Kontext, which keeps the picture's
 // composition more exactly (no reference pictures, though) — for "the same scene, but…".
+//
+// Cast pictures of people are painted tall, head to toe, since Your Kingdom cuts its pieces
+// out of them; things like the ark or a boat are marked `"wide": true` and painted wide.
+// A member painted wide before that (so cut off at the knees) can be given `"fullPiece": true`:
+// a tall, full-length copy of the same picture is painted for its piece (`--only cast/<id>-piece`).
 
 import { readFile, writeFile, mkdir, rename, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -39,6 +44,8 @@ const EDIT_MODEL = 'fal-ai/bytedance/seedream/v4.5/edit';
 const KONTEXT_MODEL = 'fal-ai/flux-pro/kontext';
 const CUTOUT_MODEL = 'fal-ai/birefnet';
 const SIZE = { width: 2048, height: 1152 };
+const TALL = { width: 1152, height: 2048 };
+const FULL_BODY = 'Full body from head to toe with both feet showing, standing, with clear space above the head and below the feet';
 
 async function falKey() {
   if (process.env.FAL_KEY) return process.env.FAL_KEY;
@@ -86,6 +93,11 @@ for (const entry of cast.values()) {
   if (editTarget || (entry.src && !(force && (only === 'cast' || only === name)))) continue;
   jobs.push({ layer: entry, name, how: 'cast' });
 }
+for (const entry of cast.values()) {
+  const name = `cast/${entry.id}-piece`;
+  if (editTarget || !entry.fullPiece || (entry.pieceSrc && !(force && (only === 'cast' || only === name)))) continue;
+  jobs.push({ layer: entry, name, how: 'piece' });
+}
 for (const scene of story.scenes) {
   const changed = new Set();
   for (const layer of scene.layers) {
@@ -113,7 +125,7 @@ for (const scene of story.scenes) {
 if (editTarget && !jobs.length) throw new Error(`No layer called ${editTarget}`);
 
 const withRefs = j => j.layer.refs?.length ? ` with ${j.layer.refs.join(', ')}` : '';
-const describe = j => j.how === 'cast' ? 'reference picture'
+const describe = j => j.how === 'cast' ? 'reference picture' : j.how === 'piece' ? 'full-length piece, from the reference'
   : j.how === 'paint' ? `paint (${j.layer.kind})` + (j.layer.kind === 'cutout' ? ' + cut out' : '') + withRefs(j)
   : j.how === 'edit-self' ? `edit: “${j.instruction}”` : `edit of ${j.layer.editOf}` + withRefs(j);
 const paints = jobs.filter(j => j.how === 'cast' || (j.how === 'paint' && !j.layer.refs?.length)).length;
@@ -146,9 +158,16 @@ for (const job of jobs) {
   let url, model, note;
   if (how === 'cast') {
     process.stdout.write(`${name}: painting…`);
-    const prompt = `${story.castStyle ?? story.style}. ${layer.prompt}`;
-    url = (await fal(IMAGE_MODEL, { prompt, image_size: SIZE, num_images: 1, seed, enable_safety_checker: true }, key)).images[0].url;
+    const prompt = `${story.castStyle ?? story.style}. ${layer.prompt}` + (layer.wide ? '' : `. ${FULL_BODY}`);
+    url = (await fal(IMAGE_MODEL, { prompt, image_size: layer.wide ? SIZE : TALL, num_images: 1, seed, enable_safety_checker: true }, key)).images[0].url;
     model = IMAGE_MODEL;
+  } else if (how === 'piece') {
+    process.stdout.write(`${name}: painting from ${layer.src}…`);
+    const prompt = `${story.castStyle ?? story.style}. The same ${layer.name ?? layer.id} as in image 1, drawn exactly as they look there: `
+      + `the same face, hair, clothes and colors. ${FULL_BODY}.`;
+    const made = await fal(EDIT_MODEL, { prompt, image_urls: [await dataUri(layer.src)], image_size: TALL, num_images: 1, seed, enable_safety_checker: true }, key);
+    url = made.images?.[0]?.url;
+    model = EDIT_MODEL;
   } else if (how === 'paint' && refs.length) {
     process.stdout.write(`${name}: painting with ${layer.refs.join(', ')}…`);
     const prompt = `${story.style}. ${layer.prompt}.${refNote(layer.refs, 1)}`;
@@ -173,7 +192,8 @@ for (const job of jobs) {
     const lead = refs.length ? ' Image 1 is the picture to change.' : '';
     const prompt = [instruction, story.editKeep].filter(Boolean).join(' ') + lead + refNote(layer.refs, 2);
     if (layer.editModel === 'kontext') {
-      if (refs.length) throw new Error(`${name}: Kontext edits can't use reference pictures`);
+      // Kontext takes no reference pictures: fine for touching up a picture itself, not for painting someone new into it.
+      if (refs.length && how !== 'edit-self') throw new Error(`${name}: Kontext edits can't use reference pictures`);
       const made = await fal(KONTEXT_MODEL, { prompt, image_url: await dataUri(base.src), aspect_ratio: '16:9', seed }, key);
       url = made.images?.[0]?.url;
       model = KONTEXT_MODEL;
@@ -189,14 +209,22 @@ for (const job of jobs) {
   const img = await fetch(url);
   if (!img.ok) throw new Error(`Download failed for ${name}: ${img.status}`);
   const ext = (img.headers.get('content-type') ?? '').includes('png') ? 'png' : 'jpg';
-  const folder = how === 'cast' ? 'cast' : scene.id;
+  const folder = how === 'cast' || how === 'piece' ? 'cast' : scene.id;
+  const base = how === 'piece' ? `${layer.id}-piece` : layer.id;
   const dir = join(root, artRoot, folder);
   await mkdir(join(dir, 'history'), { recursive: true });
-  const file = join(dir, `${layer.id}.${ext}`);
+  const file = join(dir, `${base}.${ext}`);
   const stamp = Date.now();
-  if (await exists(file)) await rename(file, join(dir, 'history', `${layer.id}-${stamp}.${ext}`));
+  if (await exists(file)) await rename(file, join(dir, 'history', `${base}-${stamp}.${ext}`));
   await writeFile(file, Buffer.from(await img.arrayBuffer()));
 
+  if (how === 'piece') {
+    layer.pieceSrc = `${artRoot}/${folder}/${base}.${ext}`;
+    layer.pieceGenerated = { model, seed, at: new Date(stamp).toISOString() };
+    await writeFile(join(root, storyFile), JSON.stringify(story, null, 2) + '\n');
+    console.log(` saved ${layer.pieceSrc}`);
+    continue;
+  }
   layer.src = `${artRoot}/${folder}/${layer.id}.${ext}`;
   // Hand edits are kept as a list, so the image can be rebuilt by repainting and replaying them.
   const edits = how === 'paint' || how === 'cast' ? [] : (layer.generated?.edits ?? []);

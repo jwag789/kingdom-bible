@@ -5,7 +5,8 @@
 //   node scripts/props.mjs --go            paint the missing ones (bills your fal account, ~5¢ each)
 //   node scripts/props.mjs --go --force    repaint them all
 //
-// The list is data/props.json; pictures go to art/props/<id>.png. Then trim them with
+// The list is data/props.json (a prop marked `"thing": true` is an object, painted with the
+// `thing` style instead of the animal one); pictures go to art/props/<id>.png. Then trim them with
 // scripts/trim_props.py so each picture ends at the animal's edges.
 
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
@@ -13,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const { style, props } = JSON.parse(await readFile(join(root, 'data/props.json'), 'utf8'));
+const { style, thing, props } = JSON.parse(await readFile(join(root, 'data/props.json'), 'utf8'));
 const go = process.argv.includes('--go'), force = process.argv.includes('--force');
 const exists = p => access(p).then(() => true, () => false);
 const todo = [];
@@ -40,7 +41,7 @@ await Promise.all([worker(), worker()]);
 
 async function paint(prop, i) {
   const painted = (await fal('fal-ai/bytedance/seedream/v4.5/text-to-image',
-    { prompt: `${style}. ${prop.prompt}`, image_size: { width: 1024, height: 1024 }, num_images: 1, seed: 500 + i, enable_safety_checker: true })).images[0].url;
+    { prompt: `${prop.thing ? thing : style}. ${prop.prompt}`, image_size: { width: 1024, height: 1024 }, num_images: 1, seed: 500 + i, enable_safety_checker: true })).images[0].url;
   const cut = (await fal('fal-ai/birefnet', { image_url: painted })).image.url;
   await writeFile(join(root, 'art/props', `${prop.id}.png`), Buffer.from(await (await fetch(cut)).arrayBuffer()));
   console.log(`saved art/props/${prop.id}.png`);

@@ -18,6 +18,13 @@
         "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
         "seed": 410038,
         "at": "2026-11-03T03:05:51.720Z"
+      },
+      "fullPiece": true,
+      "pieceSrc": "art/moses/cast/moses-piece.jpg",
+      "pieceGenerated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/edit",
+        "seed": 506967,
+        "at": "2026-11-03T16:58:01.450Z"
       }
     },
     {

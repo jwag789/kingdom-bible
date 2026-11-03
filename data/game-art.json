@@ -1,0 +1,45 @@
+{
+  "title": "Game backgrounds",
+  "art": "art/games",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [],
+  "scenes": [
+    {
+      "id": "river",
+      "layers": [
+        {
+          "id": "nile",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "nile",
+          "prompt": "A wide, calm river Nile in warm golden afternoon light, seen from the near bank: smooth blue-green water with gentle ripples fills the lower two thirds of the picture, with a line of tall papyrus reeds and palm trees along the far bank and soft hills under a pale sky; no people, no boats, no baskets",
+          "src": "art/games/river/nile.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 930149,
+            "at": "2026-11-03T17:29:47.523Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sea",
+      "layers": [
+        {
+          "id": "deep",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "deep",
+          "prompt": "Deep under the sea: soft blue-green water with sunbeams slanting down from the bright surface, gentle swaying seaweed and a few small fish near the sandy sea floor, a sunny sandy beach rising out of the water at the far right; no people, nothing else in the water",
+          "src": "art/games/sea/deep.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 322280,
+            "at": "2026-11-03T17:33:23.434Z"
+          }
+        }
+      ]
+    }
+  ]
+}

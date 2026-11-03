@@ -1,92 +1,316 @@
 {
-  "noah": {
-    "id": "two-by-two",
-    "title": "Two by Two",
-    "type": "pairs",
-    "scene": "animals",
-    "background": "art/noah/animals/parade.jpg",
-    "frame": [
-      0.62,
-      0.5
-    ],
-    "target": [
-      0.64,
-      0.45
-    ],
-    "pieces": [
-      "lion",
-      "elephant",
-      "giraffe",
-      "zebra",
-      "sheep",
-      "rabbit",
-      "camel",
-      "hippo"
-    ],
-    "count": 6,
-    "badge": "art/props/lion.png",
-    "lines": {
-      "intro": "Help Noah load the ark! Tap two animals that match, and they’ll walk in together.",
-      "win": "You did it! Every animal is safe inside the ark.",
-      "pair": "Two {name}!",
-      "done": "Every animal is safe inside the ark."
-    }
-  },
-  "abraham": {
-    "id": "count-stars",
-    "title": "Count the Stars",
-    "type": "count",
-    "item": "star",
-    "scene": "stars",
-    "count": 10,
-    "background": "art/abraham/stars/night.jpg",
-    "frame": [
-      0.68,
-      0.5
-    ],
-    "badgeEmoji": "⭐",
-    "lines": {
-      "intro": "God told Abraham to count the stars! Tap each star to make it shine, and let’s count them together.",
-      "win": "You counted ten stars! And God’s promise to Abraham was even bigger than the sky.",
-      "done": "God’s promise to Abraham was even bigger than the sky."
-    }
-  },
-  "jonah": {
-    "id": "bubbles",
-    "title": "Pop the Bubbles",
-    "type": "count",
-    "item": "bubble",
-    "scene": "fish",
-    "count": 10,
-    "background": "art/jonah/fish/deep.jpg",
-    "frame": [
-      0.62,
-      0.5
-    ],
-    "badgeEmoji": "🐟",
-    "lines": {
-      "intro": "Jonah is deep down in the sea! Pop the bubbles as they float up, and let’s count them.",
-      "win": "Ten bubbles! And God sent a great big fish to save Jonah.",
-      "done": "And God sent a great big fish to save Jonah."
-    }
-  },
-  "christmas": {
-    "id": "find-lambs",
-    "title": "Find the Lambs",
-    "type": "count",
-    "item": "lamb",
-    "scene": "shepherds",
-    "count": 10,
-    "background": "art/christmas/shepherds/fields.jpg",
-    "frame": [
-      0.65,
-      0.5
-    ],
-    "badge": "art/lamb.png",
-    "lines": {
-      "intro": "The shepherds’ little lambs are hiding in the fields! Can you find all ten?",
-      "win": "You found every lamb! Now the shepherds can hurry to see baby Jesus.",
-      "done": "Now the shepherds can hurry to see baby Jesus."
-    }
+ "genesis-1": {
+  "id": "which-day",
+  "title": "Which Day?",
+  "type": "sort",
+  "scene": "rest",
+  "background": "art/living/meadow.jpg",
+  "frame": [
+   0.6,
+   0.5
+  ],
+  "badge": "art/props/sun.png",
+  "rounds": [
+   {
+    "label": "Day Three",
+    "items": [
+     "tree",
+     "flower"
+    ]
+   },
+   {
+    "label": "Day Four",
+    "items": [
+     "sun",
+     "moon",
+     "star"
+    ]
+   },
+   {
+    "label": "Day Five",
+    "items": [
+     "fish",
+     "bird"
+    ]
+   },
+   {
+    "label": "Day Six",
+    "items": [
+     "lion",
+     "sheep",
+     "elephant"
+    ]
+   }
+  ],
+  "lines": {
+   "intro": "God made the whole world in six days! Help put each thing on the day God made it.",
+   "round-1": "Day Three: God made the dry land, and trees and flowers grew. Drag them in!",
+   "round-2": "Day Four: God put lights in the sky. Find the sun, the moon and a star!",
+   "round-3": "Day Five: God filled the sea with fish and the sky with birds.",
+   "round-4": "Day Six: God made the animals. Find the lion, the sheep and the elephant!",
+   "nope": "Not that one yet! That one comes on another day.",
+   "win": "You did it! And on Day Seven, God rested, because everything He made was very good.",
+   "done": "Everything God made was very good."
   }
+ },
+ "garden": {
+  "id": "animal-memory",
+  "title": "Animal Memory",
+  "type": "memory",
+  "scene": "naming",
+  "background": "art/garden/naming/animals.jpg",
+  "frame": [
+   0.6,
+   0.5
+  ],
+  "pieces": [
+   "lion",
+   "elephant",
+   "giraffe",
+   "zebra",
+   "sheep",
+   "rabbit",
+   "camel",
+   "hippo"
+  ],
+  "count": 6,
+  "badge": "art/props/giraffe.png",
+  "lines": {
+   "intro": "Adam gave every animal its name! Flip the cards over and find two that match.",
+   "pair": "You found the {name}!",
+   "win": "You found every pair! God made every animal, and Adam named them all.",
+   "done": "God made every animal, and Adam named them all."
+  }
+ },
+ "noah": {
+  "id": "two-by-two",
+  "title": "Two by Two",
+  "type": "pairs",
+  "scene": "animals",
+  "background": "art/noah/animals/parade.jpg",
+  "frame": [
+   0.62,
+   0.5
+  ],
+  "target": [
+   0.64,
+   0.45
+  ],
+  "pieces": [
+   "lion",
+   "elephant",
+   "giraffe",
+   "zebra",
+   "sheep",
+   "rabbit",
+   "camel",
+   "hippo"
+  ],
+  "count": 6,
+  "badge": "art/props/lion.png",
+  "lines": {
+   "intro": "Help Noah load the ark! Tap two animals that match, and they’ll walk in together.",
+   "win": "You did it! Every animal is safe inside the ark.",
+   "pair": "Two {name}!",
+   "done": "Every animal is safe inside the ark."
+  }
+ },
+ "abraham": {
+  "id": "count-stars",
+  "title": "Count the Stars",
+  "type": "count",
+  "item": "star",
+  "scene": "stars",
+  "count": 10,
+  "background": "art/abraham/stars/night.jpg",
+  "frame": [
+   0.68,
+   0.5
+  ],
+  "badgeEmoji": "⭐",
+  "lines": {
+   "intro": "God told Abraham to count the stars! Tap each star to make it shine, and let’s count them together.",
+   "win": "You counted ten stars! And God’s promise to Abraham was even bigger than the sky.",
+   "done": "God’s promise to Abraham was even bigger than the sky."
+  }
+ },
+ "moses-baby": {
+  "id": "float-basket",
+  "title": "Float the Basket",
+  "type": "float",
+  "scene": "hidden",
+  "background": "art/games/river/nile.jpg",
+  "end": "art/moses/princess/nile.jpg",
+  "frame": [
+   0.5,
+   0.5
+  ],
+  "count": 6,
+  "badge": "art/props/basket.png",
+  "lines": {
+   "intro": "Baby Moses is floating down the river! Steer his basket up and down, around the rocks and reeds, and collect six water lilies.",
+   "bump": "Oops! Gently does it.",
+   "win": "You did it! The basket floated right to the princess, and God kept baby Moses safe.",
+   "done": "God kept baby Moses safe."
+  }
+ },
+ "moses-plagues": {
+  "id": "frog-frenzy",
+  "title": "Frog Frenzy",
+  "type": "frogs",
+  "scene": "frogs",
+  "background": "art/moses/frogs/palace.jpg",
+  "frame": [
+   0.6,
+   0.5
+  ],
+  "count": 15,
+  "badge": "art/props/frog.png",
+  "lines": {
+   "intro": "Frogs, frogs, everywhere! Tap the frogs to hop them out of Pharaoh’s palace.",
+   "win": "Fifteen frogs! Pharaoh’s palace is frog-free, for now!",
+   "done": "Pharaoh’s palace is frog-free!"
+  }
+ },
+ "moses-sea": {
+  "id": "part-sea",
+  "title": "Part the Sea",
+  "type": "part",
+  "scene": "sea",
+  "background": "art/moses/sea/shore.jpg",
+  "reveal": "art/moses/sea/parted.jpg",
+  "frame": [
+   0.5,
+   0.5
+  ],
+  "count": 6,
+  "path": [
+   [
+    0.6,
+    0.92
+   ],
+   [
+    0.5,
+    0.8
+   ],
+   [
+    0.42,
+    0.62
+   ],
+   [
+    0.33,
+    0.43
+   ],
+   [
+    0.26,
+    0.26
+   ]
+  ],
+  "badge": "art/props/family.png",
+  "lines": {
+   "intro": "Moses lifted his staff over the sea. Swipe your finger across the water to part the sea!",
+   "more": "Keep going! Swipe again!",
+   "parted": "The sea is open! Now tap each family to lead them across on dry ground.",
+   "win": "Everyone made it across! God made a way where there was no way.",
+   "done": "God made a way where there was no way."
+  }
+ },
+ "david": {
+  "id": "five-stones",
+  "title": "Five Smooth Stones",
+  "type": "sling",
+  "scene": "falls",
+  "background": "art/david/stones/brook.jpg",
+  "sling": "art/david/falls/sling.jpg",
+  "fallen": "art/david/falls/fallen.jpg",
+  "frame": [
+   0.66,
+   0.5
+  ],
+  "from": [
+   0.42,
+   0.5
+  ],
+  "target": [
+   0.79,
+   0.22
+  ],
+  "badge": "art/props/smooth.png",
+  "lines": {
+   "intro": "Help David choose five smooth stones from the stream. Tap only the smooth, round ones!",
+   "rough": "That one’s too pointy! Find a smooth one.",
+   "ready": "Five smooth stones! Now pull back the sling, and let go to send a stone at Goliath’s helmet.",
+   "miss": "Try again! Pull back and aim for the helmet.",
+   "hit": "Down he goes!",
+   "win": "Crash! The giant fell down, and God won the battle!",
+   "done": "The battle belongs to the Lord!"
+  }
+ },
+ "jonah": {
+  "id": "to-the-beach",
+  "title": "To the Beach",
+  "type": "trace",
+  "scene": "fish",
+  "background": "art/games/sea/deep.jpg",
+  "reveal": "art/jonah/fish/beach.jpg",
+  "frame": [
+   0.5,
+   0.5
+  ],
+  "count": 12,
+  "fish": "art/pieces/jonah-fish.png",
+  "jonah": "art/pieces/jonah-jonah.png",
+  "badge": "art/pieces/jonah-fish.png",
+  "lines": {
+   "intro": "Jonah is inside the big fish! Drag the fish along the shining lights to bring Jonah to the beach.",
+   "win": "Splash! The fish spat Jonah out onto dry land. God gave Jonah a second chance!",
+   "done": "God gave Jonah a second chance."
+  }
+ },
+ "christmas": {
+  "id": "stable-puzzle",
+  "title": "Stable Puzzle",
+  "type": "puzzle",
+  "scene": "birth",
+  "background": "art/christmas/birth/town.jpg",
+  "frame": [
+   0.68,
+   0.5
+  ],
+  "puzzle": "art/christmas/birth/stable.jpg",
+  "cols": 2,
+  "rows": 3,
+  "badge": "art/pieces/christmas-baby.png",
+  "lines": {
+   "intro": "Let’s put together the picture of the night Jesus was born! Drag each piece to where it belongs.",
+   "win": "You did it! A baby was born in Bethlehem: Jesus, God’s own Son.",
+   "done": "Jesus, God’s own Son, was born in Bethlehem."
+  },
+  "crop": [
+   0.5,
+   0.04,
+   1.0,
+   0.96
+  ]
+ },
+ "follow": {
+  "id": "fill-nets",
+  "title": "Fill the Nets",
+  "type": "net",
+  "scene": "nets",
+  "background": "art/follow/nets/empty.jpg",
+  "reveal": "art/follow/nets/full.jpg",
+  "frame": [
+   0.7,
+   0.5
+  ],
+  "count": 12,
+  "water": 0.8,
+  "badge": "art/props/fish.png",
+  "lines": {
+   "intro": "Jesus told Peter to put his nets down into the deep water. Drag the net to catch the jumping fish!",
+   "win": "So many fish! The nets were so full, they began to break.",
+   "done": "Then Jesus said, “Follow Me!”"
+  }
+ }
 }

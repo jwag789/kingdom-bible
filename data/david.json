@@ -1,0 +1,760 @@
+{
+  "title": "David and Goliath",
+  "reference": "1 Samuel 16–17",
+  "subtitle": "The story of a shepherd boy, a giant, and a God who is bigger than both",
+  "book": "1 Samuel",
+  "text": "data/david-text.json",
+  "art": "art/david",
+  "next": {
+    "story": "jonah",
+    "title": "Jonah and the Big Fish",
+    "sub": "Jonah 1–4: the story of a runaway prophet and a God who loves everyone."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "david",
+      "name": "David",
+      "prompt": "David standing alone, front view: a cheerful shepherd boy of about twelve with fair, rosy skin, curly reddish-brown hair and bright kind eyes, wearing a simple cream tunic with a brown woven belt, a small leather shepherd's bag at his side, a leather sling in one hand and a wooden shepherd's staff in the other, and sandals",
+      "src": "art/david/cast/david.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 684267,
+        "at": "2026-11-03T17:06:26.307Z"
+      }
+    },
+    {
+      "id": "goliath",
+      "name": "Goliath",
+      "prompt": "Goliath standing alone, front view: an enormous, burly giant warrior, more grumpy than scary, with a big bushy black beard, a frowning face and a large round nose, wearing a shining bronze helmet with a crest, bronze scale armor over a red tunic and bronze shin guards, holding a huge spear and a big round shield",
+      "src": "art/david/cast/goliath.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 380807,
+        "at": "2026-11-03T17:06:39.870Z"
+      }
+    },
+    {
+      "id": "saul",
+      "name": "King Saul",
+      "prompt": "King Saul standing alone, front view: a tall, worried king with fair skin, a greying dark beard and a small gold crown, wearing a royal purple robe over bronze armor, with a sword at his belt, and sandals",
+      "src": "art/david/cast/saul.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 536142,
+        "at": "2026-11-03T17:06:52.622Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "shepherd",
+      "eyebrow": "Part One",
+      "title": "The Shepherd Boy",
+      "verses": [
+        "16:11",
+        "16:13"
+      ],
+      "beats": [
+        "Long ago in Bethlehem lived a boy named David. He was the youngest in his family, and his job was to take care of his father’s sheep.",
+        "Out in the hills, David played his harp and sang songs to God. And when a lion or a bear came to snatch a lamb, God helped David save it!",
+        "God looked at David’s heart, and He loved what He saw. God chose David to be king of Israel one day."
+      ],
+      "layers": [
+        {
+          "id": "hills",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hills",
+          "prompt": "On green rolling hills near Bethlehem in the warm golden afternoon: the shepherd boy David sits on a big rock, right of center, playing a small wooden harp and singing, with his flock of fluffy white sheep and little lambs grazing all around him and a few olive trees on the hills",
+          "refs": [
+            "david"
+          ],
+          "src": "art/david/shepherd/hills.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 693430,
+            "at": "2026-11-03T17:07:43.618Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 0,
+          "voice": "harp"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to play David’s harp",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "shepherd",
+          "name": "David the Shepherd",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.45
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "little-lamb",
+          "name": "The Littlest Lamb",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.37,
+            0.84
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.3,
+            0.63
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.92,
+            0.64
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.73,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.045
+        },
+        {
+          "at": [
+            0.1,
+            0.22
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.29,
+            0.37
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.86,
+            0.33
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "giant",
+      "eyebrow": "Part Two",
+      "title": "A Giant Named Goliath",
+      "verses": [
+        "17:4",
+        "17:11"
+      ],
+      "beats": [
+        "One day, God’s people went to war against the Philistines. The two armies camped on two hills, with a valley in between.",
+        "Out of the Philistine camp stomped a giant named Goliath. He was taller than two grown-ups! His armor was shiny bronze, and his spear was as big as a tree.",
+        "“Send someone to fight me!” Goliath roared. Every day he shouted, and every day the soldiers of Israel shook with fear."
+      ],
+      "layers": [
+        {
+          "id": "valley",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "valley",
+          "prompt": "In a wide valley between two hills in soft, warm daylight: the enormous giant Goliath stands in the middle of the valley, right of center, shouting up at the hill on the left, with exactly two arms: one arm holds his big round shield and the other hand grips his huge spear. Tiny frightened soldiers of Israel peek out from behind rocks and their tents on the far hill, and the Philistine army's tents and banners line the hill behind him",
+          "refs": [
+            "goliath"
+          ],
+          "src": "art/david/giant/valley.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 3131,
+            "at": "2026-11-03T17:16:10.999Z"
+          },
+          "seed": 3131
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to make Goliath stomp",
+        "at": [
+          0.57,
+          0.8
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "goliath",
+          "name": "Goliath the Giant",
+          "earn": "play",
+          "at": [
+            0.57,
+            0.52
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "peeking",
+          "name": "The Peeking Soldiers",
+          "earn": "secret",
+          "hit": 0.06,
+          "at": [
+            0.12,
+            0.62
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.57,
+            0.36
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.52,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.045
+        }
+      ]
+    },
+    {
+      "id": "brave",
+      "eyebrow": "Part Three",
+      "title": "Too Big!",
+      "verses": [
+        "17:32",
+        "17:39"
+      ],
+      "beats": [
+        "David came to bring food to his big brothers, and he heard the giant shouting. “I’ll fight him!” said David. “God saved me from the lion and the bear. He will save me from this giant too!”",
+        "So King Saul gave David his own armor. But it was much too big! The helmet wobbled, the armor clanked, and David could hardly walk.",
+        "“I can’t walk in these,” David laughed. So he took them off. David didn’t need armor. He had God!"
+      ],
+      "layers": [
+        {
+          "id": "armor",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "armor",
+          "prompt": "Inside King Saul's big tent: the shepherd boy David stands right of center wearing King Saul's enormous bronze armor and a helmet that is far too big for him, sliding down over his eyes, the sleeves flopping past his hands, looking funny and wobbly, while King Saul watches with a puzzled smile",
+          "refs": [
+            "david",
+            "saul"
+          ],
+          "src": "art/david/brave/armor.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 402265,
+            "at": "2026-11-03T17:08:50.802Z"
+          }
+        },
+        {
+          "id": "off",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "off",
+          "editOf": "armor",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to take off the armor",
+          "origin": [
+            0.66,
+            0.55
+          ],
+          "sfx": "promise",
+          "edit": "David has taken off the armor: he now stands happily in his own simple cream tunic, holding his shepherd's staff and his sling and smiling, with the oversized bronze armor and helmet lying in a heap on the floor beside him. King Saul still watches.",
+          "refs": [
+            "david"
+          ],
+          "src": "art/david/brave/off.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 402265,
+            "at": "2026-11-03T17:09:25.576Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "with": "off"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "too-big",
+          "name": "Too Big!",
+          "earn": "play",
+          "layer": "armor",
+          "at": [
+            0.57,
+            0.55
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "just-david",
+          "name": "Just David",
+          "earn": "reveal",
+          "layer": "off",
+          "at": [
+            0.56,
+            0.65
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "crown",
+          "name": "King Saul's Crown",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.82,
+            0.33
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.57,
+            0.33
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "off"
+        },
+        {
+          "at": [
+            0.43,
+            0.88
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "off"
+        },
+        {
+          "at": [
+            0.25,
+            0.85
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "off"
+        }
+      ]
+    },
+    {
+      "id": "stones",
+      "eyebrow": "Part Four",
+      "title": "Five Smooth Stones",
+      "verses": [
+        "17:40",
+        "17:45"
+      ],
+      "beats": [
+        "David went down to a little stream. He picked out five smooth stones and put them in his shepherd’s bag.",
+        "When Goliath saw a boy coming, he laughed. But David called out, “You come with a sword and a spear. But I come in the name of the Lord, the God of Israel!”"
+      ],
+      "layers": [
+        {
+          "id": "brook",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "brook",
+          "prompt": "Down in the valley beside a clear, sparkling little stream in the morning light: the shepherd boy David kneels at the water's edge, right of center, holding up a smooth round stone with a few more smooth stones in his other hand and his shepherd's bag and sling beside him; far off across the valley stands the giant Goliath, small in the distance",
+          "refs": [
+            "david",
+            "goliath"
+          ],
+          "src": "art/david/stones/brook.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 487733,
+            "at": "2026-11-03T17:10:01.190Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.7
+        },
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the stream",
+        "at": [
+          0.55,
+          0.8
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "wind"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "five-stones",
+          "name": "Five Smooth Stones",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.75
+          ],
+          "r": 0.09
+        },
+        {
+          "id": "far-giant",
+          "name": "The Giant Far Away",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.25,
+            0.25
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.45,
+            0.6
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.85,
+            0.8
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.73,
+            0.86
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "falls",
+      "eyebrow": "Part Five",
+      "title": "The Giant Falls",
+      "verses": [
+        "17:47",
+        "17:50"
+      ],
+      "beats": [
+        "Goliath stomped closer. David ran toward him! He put a stone in his sling, swung it round and round, and let it fly.",
+        "Whizz! The stone hit Goliath right on the forehead. The giant wobbled and toppled, and down he fell with a great big CRASH!",
+        "All of Israel cheered! With just a sling and a stone, God won the battle. “The battle belongs to the Lord!”"
+      ],
+      "layers": [
+        {
+          "id": "sling",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "sling",
+          "prompt": "One single, continuous landscape under one unbroken sky, with no fold, seam or page edge: in the wide valley in bright daylight, the brave shepherd boy David runs toward the right, right of center, whirling his sling over his head, while the enormous giant Goliath strides toward him from the right edge with his huge spear and shield, and the armies watch from the two hills in the distance",
+          "refs": [
+            "david",
+            "goliath"
+          ],
+          "src": "art/david/falls/sling.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 4242,
+            "at": "2026-11-03T17:12:28.719Z"
+          },
+          "seed": 4242
+        },
+        {
+          "id": "fallen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fallen",
+          "editOf": "sling",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to throw the stone",
+          "origin": [
+            0.72,
+            0.4
+          ],
+          "sfx": "promise",
+          "mood": "glory",
+          "edit": "The giant Goliath has toppled over and lies flat on the ground, face down, in a big cartoonish puff of dust, his bronze helmet rolling away and his spear and shield dropped; he is not hurt-looking, just knocked flat. David stands tall nearby with his sling raised in joy, and the soldiers of Israel on the hill cheer and wave.",
+          "refs": [
+            "david",
+            "goliath"
+          ],
+          "src": "art/david/falls/fallen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 600177,
+            "at": "2026-11-03T17:13:06.341Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "fallen"
+        },
+        {
+          "type": "sing",
+          "with": "fallen",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to cheer",
+        "at": [
+          0.6,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "sling",
+          "name": "David's Sling",
+          "earn": "play",
+          "layer": "sling",
+          "at": [
+            0.48,
+            0.5
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "giant-falls",
+          "name": "The Giant Falls!",
+          "earn": "reveal",
+          "layer": "fallen",
+          "at": [
+            0.7,
+            0.75
+          ],
+          "r": 0.15
+        },
+        {
+          "id": "helmet",
+          "name": "Goliath's Helmet",
+          "earn": "secret",
+          "layer": "fallen",
+          "hit": 0.05,
+          "with": "fallen",
+          "at": [
+            0.43,
+            0.82
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.79,
+            0.22
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "fallen"
+        },
+        {
+          "at": [
+            0.43,
+            0.82
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "fallen"
+        },
+        {
+          "at": [
+            0.33,
+            0.65
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "fallen"
+        },
+        {
+          "at": [
+            0.85,
+            0.25
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07,
+          "with": "fallen"
+        },
+        {
+          "at": [
+            0.15,
+            0.22
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07,
+          "with": "fallen"
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Everyone else was afraid of the giant. Why wasn’t David afraid?",
+      "What is something that feels as big as a giant to you?",
+      "David said God would help him. How can God help you be brave?"
+    ],
+    "verse": {
+      "ref": "1 Samuel 17:47",
+      "text": "The battle is the LORD’s."
+    }
+  }
+}

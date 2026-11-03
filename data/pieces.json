@@ -87,6 +87,30 @@
       ]
     },
     {
+      "id": "david-david",
+      "name": "David",
+      "src": "art/pieces/david-david.png",
+      "stories": [
+        "david"
+      ]
+    },
+    {
+      "id": "david-goliath",
+      "name": "Goliath",
+      "src": "art/pieces/david-goliath.png",
+      "stories": [
+        "david"
+      ]
+    },
+    {
+      "id": "david-saul",
+      "name": "King Saul",
+      "src": "art/pieces/david-saul.png",
+      "stories": [
+        "david"
+      ]
+    },
+    {
       "id": "jonah-jonah",
       "name": "Jonah",
       "src": "art/pieces/jonah-jonah.png",

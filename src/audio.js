@@ -461,12 +461,13 @@ export class Sound {
     g.gain.setTargetAtTime(0.0001, at + length * 0.6, length * 0.2);
   }
 
-  sing(voice, y) {                   // a sung note (choir) or a music-box note: higher on the screen, higher the note
+  sing(voice, y) {                   // a sung note (choir), a harp chord, a tambourine or a music-box note: higher on the screen, higher the note
     if (!this.ready) return;
     const step = Math.round((1 - Math.min(1, Math.max(0, y))) * 9), at = this.ctx.currentTime;
     const midi = KEY + PENTA[step % 5] + 12 * Math.floor(step / 5);
     if (voice === 'choir') { this.voice(midi, at, 0.05); this.voice(midi - 12 + 7, at + 0.05, 0.03); }
     else if (voice === 'timbrel') this.jingle(at, midi);
+    else if (voice === 'harp') [0, 4, 7].forEach((up, i) => this.pluck(midi + up, at + i * 0.07, 0.09 - i * 0.02));
     else this.bell(midi + 12, at, 0.08, 2.2, this.sfxBus);
   }
 
@@ -569,6 +570,21 @@ export class Sound {
       this.env(g, now + d, 0.08, 0.01, 0.14);
       o.start(now + d); o.stop(now + d + 0.18);
     });
+  }
+
+  whoosh(size = 1) {                 // a hand swept through the air, or a wave pushed aside
+    if (!this.ready) return;
+    this.noiseBurst({ at: this.ctx.currentTime, peak: 0.14 * size, attack: 0.12, release: 0.5, from: 500, to: 2400, q: 0.7 });
+  }
+
+  thud() {                           // something big lands: a low, soft boom and a puff of dust
+    if (!this.ready) return;
+    const now = this.ctx.currentTime, o = this.osc('sine', 120), g = this.gain(0);
+    o.connect(g).connect(this.sfxBus);
+    o.frequency.exponentialRampToValueAtTime(38, now + 0.5);
+    this.env(g, now, 0.35, 0.005, 0.6);
+    o.start(now); o.stop(now + 0.8);
+    this.noiseBurst({ at: now, peak: 0.12, attack: 0.01, release: 0.7, type: 'lowpass', from: 900, to: 200, q: 0.5, buffer: this.brown });
   }
 
   ribbit() {                         // a frog
