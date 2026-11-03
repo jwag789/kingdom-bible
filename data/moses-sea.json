@@ -101,7 +101,69 @@
           "crowd"
         ],
         "mood": "dawn"
-      }
+      },
+      "stickers": [
+        {
+          "id": "pillar",
+          "name": "The Pillar of Fire",
+          "earn": "play",
+          "at": [
+            0.67,
+            0.33
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "donkey",
+          "name": "The Little Donkey",
+          "earn": "secret",
+          "hit": 0.06,
+          "at": [
+            0.27,
+            0.8
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.67,
+            0.42
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.06,
+          "size": 1.5
+        },
+        {
+          "at": [
+            0.62,
+            0.88
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.72,
+            0.72
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.56,
+            0.77
+          ],
+          "fx": "notes",
+          "sound": "heehaw",
+          "hit": 0.04
+        }
+      ]
     },
     {
       "id": "sea",
@@ -139,7 +201,7 @@
           "depth": 0.1,
           "paint": "parted",
           "editOf": "shore",
-          "edit": "The sea now splits in two: tall walls of blue water rise up on both sides of a dry path straight through the middle, glowing in the moonlight, and the people begin walking through.",
+          "edit": "The sea on the left has split wide open: a broad, dry sandy path now runs from Moses's rock straight out across the sea bed toward the far horizon, with two towering, curling walls of deep blue water standing up on each side of the path, foamy at the top and glowing in the moonlight. The first Israelites are stepping off the shore onto the dry path.",
           "from": 2,
           "trigger": "tap",
           "hint": "Tap the sea",
@@ -148,7 +210,13 @@
             0.6
           ],
           "sfx": "part",
-          "mood": "glory"
+          "mood": "glory",
+          "src": "art/moses/sea/parted.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 322280,
+            "at": "2026-11-03T16:19:15.586Z"
+          }
         }
       ],
       "effects": [
@@ -179,7 +247,82 @@
           "wind"
         ],
         "mood": "storm"
-      }
+      },
+      "stickers": [
+        {
+          "id": "moses-sea",
+          "name": "Moses at the Sea",
+          "earn": "play",
+          "layer": "shore",
+          "at": [
+            0.67,
+            0.55
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "sea-opens",
+          "name": "The Sea Opens!",
+          "earn": "reveal",
+          "layer": "parted",
+          "at": [
+            0.35,
+            0.4
+          ],
+          "r": 0.18
+        },
+        {
+          "id": "chariots",
+          "name": "Pharaoh's Chariots",
+          "earn": "secret",
+          "hit": 0.06,
+          "at": [
+            0.83,
+            0.21
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.12,
+            0.45
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.35,
+            0.75
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.22,
+            0.2
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "with": "parted"
+        },
+        {
+          "at": [
+            0.42,
+            0.2
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "with": "parted"
+        }
+      ]
     },
     {
       "id": "safe",
@@ -203,7 +346,13 @@
           "prompt": "Sunrise on the far shore of the Red Sea: Moses and a crowd of Israelite families stand safe on the sandy beach, right of center, looking back at the calm, closed sea in wonder",
           "refs": [
             "moses"
-          ]
+          ],
+          "src": "art/moses/safe/far-shore.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 987092,
+            "at": "2026-11-03T16:16:53.882Z"
+          }
         }
       ],
       "effects": [
@@ -231,7 +380,60 @@
           "gulls"
         ],
         "mood": "sky"
-      }
+      },
+      "stickers": [
+        {
+          "id": "safe",
+          "name": "Safe on the Other Side",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.68
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "little-ones",
+          "name": "The Little Ones",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.77,
+            0.55
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.7,
+            0.16
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.2,
+            0.4
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.45,
+            0.33
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        }
+      ]
     },
     {
       "id": "song",
@@ -254,7 +456,13 @@
           "prompt": "On the far shore of the sea in the bright morning sun: Miriam dances joyfully with her tambourine, right of center, as women dance with her and the happy people cheer",
           "refs": [
             "miriam"
-          ]
+          ],
+          "src": "art/moses/song/dance.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 796,
+            "at": "2026-11-03T16:17:21.835Z"
+          }
         }
       ],
       "effects": [
@@ -281,7 +489,50 @@
           "crowd"
         ],
         "mood": "glory"
-      }
+      },
+      "stickers": [
+        {
+          "id": "miriam-song",
+          "name": "Miriam's Song",
+          "earn": "play",
+          "at": [
+            0.52,
+            0.42
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "tambourine",
+          "name": "The Tambourine",
+          "earn": "secret",
+          "hit": 0.045,
+          "at": [
+            0.61,
+            0.24
+          ],
+          "r": 0.045
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.35,
+            0.34
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.66,
+            0.4
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        }
+      ]
     }
   ],
   "next": {

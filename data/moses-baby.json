@@ -94,7 +94,50 @@
           "crowd"
         ],
         "mood": "night"
-      }
+      },
+      "stickers": [
+        {
+          "id": "bricks",
+          "name": "Making Bricks",
+          "earn": "play",
+          "at": [
+            0.4,
+            0.75
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "basket",
+          "name": "The Brick Basket",
+          "earn": "secret",
+          "hit": 0.045,
+          "at": [
+            0.5,
+            0.53
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.5,
+            0.34
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.935,
+            0.28
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        }
+      ]
     },
     {
       "id": "hidden",
@@ -150,7 +193,60 @@
           "birds"
         ],
         "mood": "rest"
-      }
+      },
+      "stickers": [
+        {
+          "id": "basket-boat",
+          "name": "Baby Moses in the Basket",
+          "earn": "play",
+          "at": [
+            0.61,
+            0.82
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "tambourine-girl",
+          "name": "Miriam Hides",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.24,
+            0.6
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.79,
+            0.33
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.8,
+            0.68
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.12,
+            0.3
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        }
+      ]
     },
     {
       "id": "princess",
@@ -174,7 +270,16 @@
           "prompt": "Tall green reeds along the river Nile in morning light: a little woven basket with a baby inside floats among the reeds, right of center, as an Egyptian princess in white linen with her maids kneels at the water's edge to lift it out, while a young girl, Miriam, peeks out from the reeds",
           "refs": [
             "miriam"
-          ]
+          ],
+          "src": "art/moses/princess/nile.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 852592,
+            "at": "2026-11-03T16:25:06.285Z",
+            "edits": [
+              "Remove the second basket floating in the reeds on the right, so only the basket the princess is holding remains; the reeds and water fill that spot."
+            ]
+          }
         }
       ],
       "effects": [
@@ -202,7 +307,59 @@
           "birds"
         ],
         "mood": "warm"
-      }
+      },
+      "stickers": [
+        {
+          "id": "princess",
+          "name": "The Princess Finds Moses",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.74
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "miriam-watches",
+          "name": "Miriam Watches",
+          "earn": "secret",
+          "hit": 0.06,
+          "at": [
+            0.24,
+            0.58
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.12,
+            0.25
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.88,
+            0.35
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.45,
+            0.62
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        }
+      ]
     },
     {
       "id": "runs",
@@ -226,7 +383,13 @@
           "prompt": "A stone well in the wide desert of Midian at sunset: Moses, a young man, helps seven shepherd girls draw water for their thirsty sheep and goats, right of center",
           "refs": [
             "moses"
-          ]
+          ],
+          "src": "art/moses/runs/well.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 976783,
+            "at": "2026-11-03T16:17:18.776Z"
+          }
         }
       ],
       "effects": [
@@ -251,7 +414,60 @@
           "wind"
         ],
         "mood": "warm"
-      }
+      },
+      "stickers": [
+        {
+          "id": "well",
+          "name": "Moses at the Well",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.72
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "thirsty-sheep",
+          "name": "The Thirsty Sheep",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.92,
+            0.7
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.7,
+            0.22
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.88,
+            0.82
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.64,
+            0.68
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.04
+        }
+      ]
     }
   ],
   "next": {

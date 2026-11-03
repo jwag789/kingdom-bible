@@ -135,6 +135,14 @@
       ]
     },
     {
+      "id": "christmas-baby",
+      "name": "baby Jesus",
+      "src": "art/pieces/christmas-baby.png",
+      "stories": [
+        "christmas"
+      ]
+    },
+    {
       "id": "follow-jesus",
       "name": "Jesus",
       "src": "art/pieces/follow-jesus.png",

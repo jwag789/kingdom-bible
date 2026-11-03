@@ -126,7 +126,66 @@
           "wind"
         ],
         "mood": "void"
-      }
+      },
+      "stickers": [
+        {
+          "id": "burning-bush",
+          "name": "The Burning Bush",
+          "earn": "reveal",
+          "layer": "fire",
+          "at": [
+            0.47,
+            0.72
+          ],
+          "r": 0.13
+        },
+        {
+          "id": "moses-sheep",
+          "name": "Moses's Sheep",
+          "earn": "secret",
+          "layer": "fire",
+          "hit": 0.05,
+          "with": "fire",
+          "at": [
+            0.9,
+            0.73
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.47,
+            0.7
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.07,
+          "size": 1.4,
+          "with": "fire"
+        },
+        {
+          "at": [
+            0.8,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05,
+          "with": "fire"
+        },
+        {
+          "at": [
+            0.23,
+            0.88
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.04,
+          "with": "fire"
+        }
+      ]
     },
     {
       "id": "staff",
@@ -150,7 +209,13 @@
           "prompt": "On the rocky mountainside by the glowing bush: Moses stands looking down at his long wooden staff, which he has just thrown on the ground in front of him, right of center",
           "refs": [
             "moses"
-          ]
+          ],
+          "src": "art/moses/staff/thrown.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 161209,
+            "at": "2026-11-03T16:16:30.008Z"
+          }
         },
         {
           "id": "snake",
@@ -158,7 +223,7 @@
           "depth": 0.1,
           "paint": "snake",
           "editOf": "thrown",
-          "edit": "The wooden staff on the ground has turned into a long, wriggling brown paper snake, and Moses jumps back in surprise.",
+          "edit": "The wooden staff on the ground has turned into a long brown paper snake curving in an S-shape across the sand, with its head raised up toward Moses, two round eyes and a little forked tongue, its tail trailing behind. Moses jumps back in surprise.",
           "from": 1,
           "trigger": "tap",
           "hint": "Tap the staff",
@@ -167,7 +232,13 @@
             0.8
           ],
           "sfx": "hiss",
-          "editModel": "kontext"
+          "editModel": "kontext",
+          "src": "art/moses/staff/snake.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 161209,
+            "at": "2026-11-03T16:19:44.009Z"
+          }
         }
       ],
       "effects": [
@@ -195,7 +266,42 @@
           "wind"
         ],
         "mood": "dawn"
-      }
+      },
+      "stickers": [
+        {
+          "id": "staff",
+          "name": "Moses and His Staff",
+          "earn": "play",
+          "layer": "thrown",
+          "at": [
+            0.3,
+            0.55
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "snake",
+          "name": "The Staff Becomes a Snake",
+          "earn": "reveal",
+          "layer": "snake",
+          "at": [
+            0.58,
+            0.8
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.78,
+            0.65
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.07
+        }
+      ]
     },
     {
       "id": "frogs",
@@ -220,7 +326,13 @@
           "refs": [
             "moses",
             "pharaoh"
-          ]
+          ],
+          "src": "art/moses/frogs/palace.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 109352,
+            "at": "2026-11-03T16:17:16.993Z"
+          }
         },
         {
           "id": "hopping",
@@ -229,7 +341,13 @@
           "paint": "hopping",
           "editOf": "palace",
           "edit": "Now dozens of little green frogs hop everywhere in the palace — on the throne, on the steps and in Pharaoh's lap — while Pharaoh looks very annoyed.",
-          "from": 1
+          "from": 1,
+          "src": "art/moses/frogs/hopping.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 109352,
+            "at": "2026-11-03T16:17:39.645Z"
+          }
         }
       ],
       "effects": [
@@ -250,7 +368,44 @@
           "crowd"
         ],
         "mood": "lively"
-      }
+      },
+      "stickers": [
+        {
+          "id": "pharaoh",
+          "name": "Pharaoh on His Throne",
+          "earn": "play",
+          "layer": "hopping",
+          "at": [
+            0.79,
+            0.42
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "throne-frog",
+          "name": "The Frog on the Throne",
+          "earn": "secret",
+          "layer": "hopping",
+          "hit": 0.04,
+          "with": "hopping",
+          "at": [
+            0.83,
+            0.33
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.665,
+            0.51
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        }
+      ]
     },
     {
       "id": "passover",
@@ -271,7 +426,13 @@
           "kind": "plate",
           "depth": 0.1,
           "paint": "meal",
-          "prompt": "Inside a simple mud-brick house at night, lit by an oil lamp: an Israelite family stands around a table eating a meal of flat bread and herbs, dressed for a journey with sandals on and bags packed, right of center; through the open doorway, red marks show on the doorframe and the moon shines"
+          "prompt": "Inside a simple mud-brick house at night, lit by an oil lamp: an Israelite family stands around a table eating a meal of flat bread and herbs, dressed for a journey with sandals on and bags packed, right of center; through the open doorway, red marks show on the doorframe and the moon shines",
+          "src": "art/moses/passover/meal.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 474412,
+            "at": "2026-11-03T16:17:53.284Z"
+          }
         }
       ],
       "effects": [
@@ -296,7 +457,60 @@
           "crickets"
         ],
         "mood": "night"
-      }
+      },
+      "stickers": [
+        {
+          "id": "passover",
+          "name": "The Passover Meal",
+          "earn": "play",
+          "at": [
+            0.74,
+            0.71
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "moon",
+          "name": "The Night Moon",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.885,
+            0.11
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.75,
+            0.47
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.73,
+            0.75
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.885,
+            0.11
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "size": 1.3
+        }
+      ]
     }
   ],
   "next": {

@@ -174,7 +174,45 @@
           0.42
         ],
         "size": 0.025
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.72,
+            0.12
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.88,
+            0.08
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.12,
+            0.25
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.6,
+            0.85
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        }
+      ]
     },
     {
       "id": "nets",
@@ -286,7 +324,28 @@
           0.39
         ],
         "size": 0.025
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.85
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.4,
+            0.68
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "with": "full"
+        }
+      ]
     },
     {
       "id": "called",
@@ -376,7 +435,28 @@
           0.62
         ],
         "size": 0.03
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.9,
+            0.3
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.15,
+            0.62
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        }
+      ]
     },
     {
       "id": "storm",
@@ -407,7 +487,10 @@
           "generated": {
             "model": "fal-ai/bytedance/seedream/v4.5/edit",
             "seed": 175042,
-            "at": "2026-11-03T03:09:12.268Z"
+            "at": "2026-11-03T16:25:29.309Z",
+            "edits": [
+              "Remove the pale beige panel along the left edge: the dark, stormy night sea with big waves and rain continues all the way to the left edge of the picture."
+            ]
           }
         }
       ],
@@ -461,10 +544,39 @@
           "name": "Jesus Sleeps",
           "earn": "secret",
           "at": [
-            0.75,
-            0.42
+            0.71,
+            0.47
           ],
           "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.55
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.78,
+            0.2
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.88,
+            0.6
+          ],
+          "fx": "splash",
+          "sound": "splash",
           "hit": 0.05
         }
       ]
@@ -505,11 +617,6 @@
           "kind": "plate",
           "depth": 0.1,
           "paint": "calm",
-          "prompt": "After the storm at night: the lake is perfectly calm and smooth as glass, with a bright full moon and stars in a clear, cloudless sky and no lightning at all. The small wooden fishing boat rests still on the water, right of center, where Jesus stands peacefully while the fishermen in the boat stare at Him in amazement",
-          "refs": [
-            "jesus",
-            "boat"
-          ],
           "from": 1,
           "trigger": "tap",
           "hint": "Tap the waves",
@@ -521,11 +628,13 @@
           "mood": "rest",
           "src": "art/follow/still/calm.jpg",
           "generated": {
-            "model": "fal-ai/bytedance/seedream/v4.5/edit",
-            "seed": 1357,
-            "at": "2026-11-03T03:15:12.616Z"
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 169089,
+            "at": "2026-11-03T16:20:14.294Z"
           },
-          "seed": 1357
+          "editOf": "stand",
+          "editModel": "kontext",
+          "edit": "The storm is over: the giant wave is gone and the lake is perfectly calm and smooth as glass, gently reflecting the light. The dark clouds and rain are gone, leaving a clear night sky with a bright full moon and stars. Jesus still stands in the boat with His hand raised, and the fishermen behind Him look up at Him in amazement."
         }
       ],
       "effects": [
@@ -577,6 +686,39 @@
             0.4
           ],
           "r": 0.2
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.85,
+            0.25
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.06,
+          "until": "calm"
+        },
+        {
+          "at": [
+            0.28,
+            0.16
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6,
+          "with": "calm"
+        },
+        {
+          "at": [
+            0.92,
+            0.27
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04,
+          "with": "calm"
         }
       ]
     }

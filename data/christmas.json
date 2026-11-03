@@ -46,6 +46,17 @@
         "seed": 286456,
         "at": "2026-11-03T02:13:55.866Z"
       }
+    },
+    {
+      "id": "baby",
+      "name": "baby Jesus",
+      "prompt": "Baby Jesus alone, front view: a sweet, peaceful newborn baby with fair skin and rosy cheeks, sleeping, wrapped snugly in soft cream swaddling cloths, lying on golden straw in a small wooden manger, on a plain empty background with nothing behind the manger",
+      "src": "art/christmas/cast/baby.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 29119,
+        "at": "2026-11-03T16:21:22.693Z"
+      }
     }
   ],
   "scenes": [
