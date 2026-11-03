@@ -1,0 +1,1622 @@
+{
+ "cover": {
+  "src": "audio/follow/cover.m4a",
+  "text": "Follow Me.",
+  "voice": "bm_lewis",
+  "duration": 2.425,
+  "words": [
+   {
+    "w": "Follow",
+    "s": 0.725,
+    "e": 1.2
+   },
+   {
+    "w": "Me",
+    "s": 1.2,
+    "e": 1.8
+   }
+  ]
+ },
+ "baptism-title": {
+  "src": "audio/follow/baptism-title.m4a",
+  "text": "Part One. Jesus Is Baptized.",
+  "voice": "bm_lewis",
+  "duration": 4.2,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 0.975
+   },
+   {
+    "w": "One",
+    "s": 0.975,
+    "e": 1.45
+   },
+   {
+    "w": "Jesus",
+    "s": 1.625,
+    "e": 2.175
+   },
+   {
+    "w": "Is",
+    "s": 2.175,
+    "e": 2.388
+   },
+   {
+    "w": "Baptized",
+    "s": 2.388,
+    "e": 3.5
+   }
+  ]
+ },
+ "baptism-0": {
+  "src": "audio/follow/baptism-0.m4a",
+  "text": "When Jesus was grown up, He came to the river Jordan, where His cousin John was baptizing people.",
+  "voice": "bm_lewis",
+  "duration": 8.45,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.875
+   },
+   {
+    "w": "Jesus",
+    "s": 0.875,
+    "e": 1.425
+   },
+   {
+    "w": "was",
+    "s": 1.425,
+    "e": 1.637
+   },
+   {
+    "w": "grown",
+    "s": 1.637,
+    "e": 2.025
+   },
+   {
+    "w": "up",
+    "s": 2.025,
+    "e": 2.55
+   },
+   {
+    "w": "He",
+    "s": 2.675,
+    "e": 2.825
+   },
+   {
+    "w": "came",
+    "s": 2.825,
+    "e": 3.175
+   },
+   {
+    "w": "to",
+    "s": 3.175,
+    "e": 3.3
+   },
+   {
+    "w": "the",
+    "s": 3.3,
+    "e": 3.438
+   },
+   {
+    "w": "river",
+    "s": 3.438,
+    "e": 3.812
+   },
+   {
+    "w": "Jordan",
+    "s": 3.812,
+    "e": 4.575
+   },
+   {
+    "w": "where",
+    "s": 4.7,
+    "e": 4.862
+   },
+   {
+    "w": "His",
+    "s": 4.862,
+    "e": 5.075
+   },
+   {
+    "w": "cousin",
+    "s": 5.075,
+    "e": 5.55
+   },
+   {
+    "w": "John",
+    "s": 5.55,
+    "e": 6.0
+   },
+   {
+    "w": "was",
+    "s": 6.0,
+    "e": 6.225
+   },
+   {
+    "w": "baptizing",
+    "s": 6.225,
+    "e": 7.025
+   },
+   {
+    "w": "people",
+    "s": 7.025,
+    "e": 7.725
+   }
+  ]
+ },
+ "baptism-1": {
+  "src": "audio/follow/baptism-1.m4a",
+  "text": "As Jesus came up out of the water, heaven opened, and God’s Spirit came down on Him like a dove.",
+  "voice": "bm_lewis",
+  "duration": 8.25,
+  "words": [
+   {
+    "w": "As",
+    "s": 0.675,
+    "e": 0.875
+   },
+   {
+    "w": "Jesus",
+    "s": 0.875,
+    "e": 1.3
+   },
+   {
+    "w": "came",
+    "s": 1.3,
+    "e": 1.538
+   },
+   {
+    "w": "up",
+    "s": 1.538,
+    "e": 1.688
+   },
+   {
+    "w": "out",
+    "s": 1.688,
+    "e": 1.837
+   },
+   {
+    "w": "of",
+    "s": 1.837,
+    "e": 1.913
+   },
+   {
+    "w": "the",
+    "s": 1.913,
+    "e": 2.038
+   },
+   {
+    "w": "water",
+    "s": 2.038,
+    "e": 2.725
+   },
+   {
+    "w": "heaven",
+    "s": 2.888,
+    "e": 3.288
+   },
+   {
+    "w": "opened",
+    "s": 3.288,
+    "e": 4.125
+   },
+   {
+    "w": "and",
+    "s": 4.25,
+    "e": 4.412
+   },
+   {
+    "w": "God's",
+    "s": 4.412,
+    "e": 4.8
+   },
+   {
+    "w": "Spirit",
+    "s": 4.8,
+    "e": 5.338
+   },
+   {
+    "w": "came",
+    "s": 5.338,
+    "e": 5.675
+   },
+   {
+    "w": "down",
+    "s": 5.675,
+    "e": 6.013
+   },
+   {
+    "w": "on",
+    "s": 6.013,
+    "e": 6.15
+   },
+   {
+    "w": "Him",
+    "s": 6.15,
+    "e": 6.4
+   },
+   {
+    "w": "like",
+    "s": 6.4,
+    "e": 6.625
+   },
+   {
+    "w": "a",
+    "s": 6.625,
+    "e": 6.75
+   },
+   {
+    "w": "dove",
+    "s": 6.75,
+    "e": 7.475
+   }
+  ]
+ },
+ "baptism-2": {
+  "src": "audio/follow/baptism-2.m4a",
+  "text": "And a voice from heaven said: “This is My Son, whom I love. I am so pleased with Him!”",
+  "voice": "bm_lewis",
+  "duration": 7.75,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "a",
+    "s": 0.787,
+    "e": 0.887
+   },
+   {
+    "w": "voice",
+    "s": 0.887,
+    "e": 1.25
+   },
+   {
+    "w": "from",
+    "s": 1.25,
+    "e": 1.45
+   },
+   {
+    "w": "heaven",
+    "s": 1.45,
+    "e": 1.788
+   },
+   {
+    "w": "said",
+    "s": 1.788,
+    "e": 2.4
+   },
+   {
+    "w": "This",
+    "s": 2.65,
+    "e": 2.825
+   },
+   {
+    "w": "is",
+    "s": 2.825,
+    "e": 2.975
+   },
+   {
+    "w": "My",
+    "s": 2.975,
+    "e": 3.288
+   },
+   {
+    "w": "Son",
+    "s": 3.288,
+    "e": 3.775
+   },
+   {
+    "w": "whom",
+    "s": 3.85,
+    "e": 4.05
+   },
+   {
+    "w": "I",
+    "s": 4.05,
+    "e": 4.225
+   },
+   {
+    "w": "love",
+    "s": 4.225,
+    "e": 4.925
+   },
+   {
+    "w": "I",
+    "s": 5.088,
+    "e": 5.225
+   },
+   {
+    "w": "am",
+    "s": 5.225,
+    "e": 5.4
+   },
+   {
+    "w": "so",
+    "s": 5.4,
+    "e": 5.775
+   },
+   {
+    "w": "pleased",
+    "s": 5.775,
+    "e": 6.3
+   },
+   {
+    "w": "with",
+    "s": 6.3,
+    "e": 6.463
+   },
+   {
+    "w": "Him",
+    "s": 6.463,
+    "e": 7.0
+   }
+  ]
+ },
+ "nets-title": {
+  "src": "audio/follow/nets-title.m4a",
+  "text": "Part Two. Nets Full of Fish.",
+  "voice": "bm_lewis",
+  "duration": 3.7,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Two",
+    "s": 0.963,
+    "e": 1.475
+   },
+   {
+    "w": "Nets",
+    "s": 1.637,
+    "e": 1.988
+   },
+   {
+    "w": "Full",
+    "s": 1.988,
+    "e": 2.163
+   },
+   {
+    "w": "of",
+    "s": 2.163,
+    "e": 2.325
+   },
+   {
+    "w": "Fish",
+    "s": 2.325,
+    "e": 3.025
+   }
+  ]
+ },
+ "nets-0": {
+  "src": "audio/follow/nets-0.m4a",
+  "text": "One morning, Jesus got into Peter’s fishing boat. Peter and his friends had fished all night and caught nothing.",
+  "voice": "bm_lewis",
+  "duration": 8.825,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.725,
+    "e": 0.95
+   },
+   {
+    "w": "morning",
+    "s": 0.95,
+    "e": 1.525
+   },
+   {
+    "w": "Jesus",
+    "s": 1.65,
+    "e": 2.15
+   },
+   {
+    "w": "got",
+    "s": 2.15,
+    "e": 2.312
+   },
+   {
+    "w": "into",
+    "s": 2.312,
+    "e": 2.575
+   },
+   {
+    "w": "Peter's",
+    "s": 2.575,
+    "e": 3.075
+   },
+   {
+    "w": "fishing",
+    "s": 3.075,
+    "e": 3.5
+   },
+   {
+    "w": "boat",
+    "s": 3.5,
+    "e": 4.2
+   },
+   {
+    "w": "Peter",
+    "s": 4.362,
+    "e": 4.725
+   },
+   {
+    "w": "and",
+    "s": 4.725,
+    "e": 4.838
+   },
+   {
+    "w": "his",
+    "s": 4.838,
+    "e": 5.013
+   },
+   {
+    "w": "friends",
+    "s": 5.013,
+    "e": 5.438
+   },
+   {
+    "w": "had",
+    "s": 5.438,
+    "e": 5.625
+   },
+   {
+    "w": "fished",
+    "s": 5.625,
+    "e": 6.0
+   },
+   {
+    "w": "all",
+    "s": 6.0,
+    "e": 6.225
+   },
+   {
+    "w": "night",
+    "s": 6.225,
+    "e": 6.825
+   },
+   {
+    "w": "and",
+    "s": 6.825,
+    "e": 7.037
+   },
+   {
+    "w": "caught",
+    "s": 7.037,
+    "e": 7.35
+   },
+   {
+    "w": "nothing",
+    "s": 7.35,
+    "e": 8.075
+   }
+  ]
+ },
+ "nets-1": {
+  "src": "audio/follow/nets-1.m4a",
+  "text": "“Go out into the deep water,” Jesus said, “and let down your nets.” “We caught nothing all night,” said Peter, “but because You say so, I will.”",
+  "voice": "bm_lewis",
+  "duration": 11.85,
+  "words": [
+   {
+    "w": "Go",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "out",
+    "s": 0.825,
+    "e": 1.012
+   },
+   {
+    "w": "into",
+    "s": 1.012,
+    "e": 1.212
+   },
+   {
+    "w": "the",
+    "s": 1.212,
+    "e": 1.35
+   },
+   {
+    "w": "deep",
+    "s": 1.35,
+    "e": 1.712
+   },
+   {
+    "w": "water",
+    "s": 1.712,
+    "e": 2.275
+   },
+   {
+    "w": "Jesus",
+    "s": 2.462,
+    "e": 2.913
+   },
+   {
+    "w": "said",
+    "s": 2.913,
+    "e": 3.475
+   },
+   {
+    "w": "and",
+    "s": 3.65,
+    "e": 3.75
+   },
+   {
+    "w": "let",
+    "s": 3.75,
+    "e": 3.987
+   },
+   {
+    "w": "down",
+    "s": 3.987,
+    "e": 4.375
+   },
+   {
+    "w": "your",
+    "s": 4.375,
+    "e": 4.588
+   },
+   {
+    "w": "nets",
+    "s": 4.588,
+    "e": 5.6
+   },
+   {
+    "w": "We",
+    "s": 5.825,
+    "e": 5.963
+   },
+   {
+    "w": "caught",
+    "s": 5.963,
+    "e": 6.287
+   },
+   {
+    "w": "nothing",
+    "s": 6.287,
+    "e": 6.675
+   },
+   {
+    "w": "all",
+    "s": 6.675,
+    "e": 6.9
+   },
+   {
+    "w": "night",
+    "s": 6.9,
+    "e": 7.425
+   },
+   {
+    "w": "said",
+    "s": 7.6,
+    "e": 7.85
+   },
+   {
+    "w": "Peter",
+    "s": 7.85,
+    "e": 8.55
+   },
+   {
+    "w": "but",
+    "s": 8.725,
+    "e": 8.838
+   },
+   {
+    "w": "because",
+    "s": 8.838,
+    "e": 9.2
+   },
+   {
+    "w": "You",
+    "s": 9.2,
+    "e": 9.4
+   },
+   {
+    "w": "say",
+    "s": 9.4,
+    "e": 9.75
+   },
+   {
+    "w": "so",
+    "s": 9.75,
+    "e": 10.075
+   },
+   {
+    "w": "I",
+    "s": 10.15,
+    "e": 10.375
+   },
+   {
+    "w": "will",
+    "s": 10.375,
+    "e": 11.1
+   }
+  ]
+ },
+ "nets-2": {
+  "src": "audio/follow/nets-2.m4a",
+  "text": "Suddenly the nets filled with so many fish that they began to break! They needed another boat just to bring them all in!",
+  "voice": "bm_lewis",
+  "duration": 9.875,
+  "words": [
+   {
+    "w": "Suddenly",
+    "s": 0.75,
+    "e": 1.312
+   },
+   {
+    "w": "the",
+    "s": 1.312,
+    "e": 1.45
+   },
+   {
+    "w": "nets",
+    "s": 1.45,
+    "e": 1.875
+   },
+   {
+    "w": "filled",
+    "s": 1.875,
+    "e": 2.35
+   },
+   {
+    "w": "with",
+    "s": 2.35,
+    "e": 2.55
+   },
+   {
+    "w": "so",
+    "s": 2.55,
+    "e": 2.8
+   },
+   {
+    "w": "many",
+    "s": 2.8,
+    "e": 3.1
+   },
+   {
+    "w": "fish",
+    "s": 3.1,
+    "e": 3.788
+   },
+   {
+    "w": "that",
+    "s": 3.788,
+    "e": 3.95
+   },
+   {
+    "w": "they",
+    "s": 3.95,
+    "e": 4.1
+   },
+   {
+    "w": "began",
+    "s": 4.1,
+    "e": 4.525
+   },
+   {
+    "w": "to",
+    "s": 4.525,
+    "e": 4.662
+   },
+   {
+    "w": "break",
+    "s": 4.662,
+    "e": 5.575
+   },
+   {
+    "w": "They",
+    "s": 5.737,
+    "e": 5.925
+   },
+   {
+    "w": "needed",
+    "s": 5.925,
+    "e": 6.25
+   },
+   {
+    "w": "another",
+    "s": 6.25,
+    "e": 6.612
+   },
+   {
+    "w": "boat",
+    "s": 6.612,
+    "e": 7.3
+   },
+   {
+    "w": "just",
+    "s": 7.3,
+    "e": 7.625
+   },
+   {
+    "w": "to",
+    "s": 7.625,
+    "e": 7.75
+   },
+   {
+    "w": "bring",
+    "s": 7.75,
+    "e": 8.0
+   },
+   {
+    "w": "them",
+    "s": 8.0,
+    "e": 8.2
+   },
+   {
+    "w": "all",
+    "s": 8.2,
+    "e": 8.5
+   },
+   {
+    "w": "in",
+    "s": 8.5,
+    "e": 9.075
+   }
+  ]
+ },
+ "called-title": {
+  "src": "audio/follow/called-title.m4a",
+  "text": "Part Three. Fishers of People.",
+  "voice": "bm_lewis",
+  "duration": 3.7,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.975
+   },
+   {
+    "w": "Three",
+    "s": 0.975,
+    "e": 1.525
+   },
+   {
+    "w": "Fishers",
+    "s": 1.675,
+    "e": 2.2
+   },
+   {
+    "w": "of",
+    "s": 2.2,
+    "e": 2.35
+   },
+   {
+    "w": "People",
+    "s": 2.35,
+    "e": 3.05
+   }
+  ]
+ },
+ "called-0": {
+  "src": "audio/follow/called-0.m4a",
+  "text": "Peter fell at Jesus’ knees, amazed. But Jesus said, “Don’t be afraid. From now on, you will fish for people!”",
+  "voice": "bm_lewis",
+  "duration": 9.525,
+  "words": [
+   {
+    "w": "Peter",
+    "s": 0.675,
+    "e": 0.988
+   },
+   {
+    "w": "fell",
+    "s": 0.988,
+    "e": 1.25
+   },
+   {
+    "w": "at",
+    "s": 1.25,
+    "e": 1.425
+   },
+   {
+    "w": "Jesus'",
+    "s": 1.425,
+    "e": 1.962
+   },
+   {
+    "w": "knees",
+    "s": 1.962,
+    "e": 2.4
+   },
+   {
+    "w": "amazed",
+    "s": 2.45,
+    "e": 3.425
+   },
+   {
+    "w": "But",
+    "s": 3.55,
+    "e": 3.725
+   },
+   {
+    "w": "Jesus",
+    "s": 3.725,
+    "e": 4.188
+   },
+   {
+    "w": "said",
+    "s": 4.188,
+    "e": 4.725
+   },
+   {
+    "w": "Don't",
+    "s": 4.925,
+    "e": 5.125
+   },
+   {
+    "w": "be",
+    "s": 5.125,
+    "e": 5.275
+   },
+   {
+    "w": "afraid",
+    "s": 5.275,
+    "e": 6.2
+   },
+   {
+    "w": "From",
+    "s": 6.362,
+    "e": 6.55
+   },
+   {
+    "w": "now",
+    "s": 6.55,
+    "e": 6.85
+   },
+   {
+    "w": "on",
+    "s": 6.85,
+    "e": 7.175
+   },
+   {
+    "w": "you",
+    "s": 7.25,
+    "e": 7.362
+   },
+   {
+    "w": "will",
+    "s": 7.362,
+    "e": 7.562
+   },
+   {
+    "w": "fish",
+    "s": 7.562,
+    "e": 7.9
+   },
+   {
+    "w": "for",
+    "s": 7.9,
+    "e": 8.025
+   },
+   {
+    "w": "people",
+    "s": 8.025,
+    "e": 8.725
+   }
+  ]
+ },
+ "called-1": {
+  "src": "audio/follow/called-1.m4a",
+  "text": "So they pulled their boats up on the shore, left everything behind, and followed Jesus.",
+  "voice": "bm_lewis",
+  "duration": 7.375,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.838
+   },
+   {
+    "w": "they",
+    "s": 0.838,
+    "e": 0.988
+   },
+   {
+    "w": "pulled",
+    "s": 0.988,
+    "e": 1.275
+   },
+   {
+    "w": "their",
+    "s": 1.275,
+    "e": 1.488
+   },
+   {
+    "w": "boats",
+    "s": 1.488,
+    "e": 1.863
+   },
+   {
+    "w": "up",
+    "s": 1.863,
+    "e": 2.013
+   },
+   {
+    "w": "on",
+    "s": 2.013,
+    "e": 2.112
+   },
+   {
+    "w": "the",
+    "s": 2.112,
+    "e": 2.25
+   },
+   {
+    "w": "shore",
+    "s": 2.25,
+    "e": 2.95
+   },
+   {
+    "w": "left",
+    "s": 3.112,
+    "e": 3.475
+   },
+   {
+    "w": "everything",
+    "s": 3.475,
+    "e": 4.025
+   },
+   {
+    "w": "behind",
+    "s": 4.025,
+    "e": 4.9
+   },
+   {
+    "w": "and",
+    "s": 5.025,
+    "e": 5.213
+   },
+   {
+    "w": "followed",
+    "s": 5.213,
+    "e": 5.763
+   },
+   {
+    "w": "Jesus",
+    "s": 5.763,
+    "e": 6.65
+   }
+  ]
+ },
+ "storm-title": {
+  "src": "audio/follow/storm-title.m4a",
+  "text": "Part Four. A Storm on the Lake.",
+  "voice": "bm_lewis",
+  "duration": 3.9,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Four",
+    "s": 0.963,
+    "e": 1.525
+   },
+   {
+    "w": "A",
+    "s": 1.688,
+    "e": 1.825
+   },
+   {
+    "w": "Storm",
+    "s": 1.825,
+    "e": 2.312
+   },
+   {
+    "w": "on",
+    "s": 2.312,
+    "e": 2.413
+   },
+   {
+    "w": "the",
+    "s": 2.413,
+    "e": 2.525
+   },
+   {
+    "w": "Lake",
+    "s": 2.525,
+    "e": 3.2
+   }
+  ]
+ },
+ "storm-0": {
+  "src": "audio/follow/storm-0.m4a",
+  "text": "One evening, Jesus and His friends set out across the lake in a boat. Jesus was tired, and He fell asleep.",
+  "voice": "bm_lewis",
+  "duration": 9.375,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.725,
+    "e": 0.95
+   },
+   {
+    "w": "evening",
+    "s": 0.95,
+    "e": 1.425
+   },
+   {
+    "w": "Jesus",
+    "s": 1.55,
+    "e": 2.013
+   },
+   {
+    "w": "and",
+    "s": 2.013,
+    "e": 2.112
+   },
+   {
+    "w": "His",
+    "s": 2.112,
+    "e": 2.312
+   },
+   {
+    "w": "friends",
+    "s": 2.312,
+    "e": 3.0
+   },
+   {
+    "w": "set",
+    "s": 3.0,
+    "e": 3.275
+   },
+   {
+    "w": "out",
+    "s": 3.275,
+    "e": 3.5
+   },
+   {
+    "w": "across",
+    "s": 3.5,
+    "e": 3.875
+   },
+   {
+    "w": "the",
+    "s": 3.875,
+    "e": 4.0
+   },
+   {
+    "w": "lake",
+    "s": 4.0,
+    "e": 4.35
+   },
+   {
+    "w": "in",
+    "s": 4.35,
+    "e": 4.463
+   },
+   {
+    "w": "a",
+    "s": 4.463,
+    "e": 4.562
+   },
+   {
+    "w": "boat",
+    "s": 4.562,
+    "e": 5.4
+   },
+   {
+    "w": "Jesus",
+    "s": 5.612,
+    "e": 6.175
+   },
+   {
+    "w": "was",
+    "s": 6.175,
+    "e": 6.375
+   },
+   {
+    "w": "tired",
+    "s": 6.375,
+    "e": 7.15
+   },
+   {
+    "w": "and",
+    "s": 7.275,
+    "e": 7.388
+   },
+   {
+    "w": "He",
+    "s": 7.388,
+    "e": 7.537
+   },
+   {
+    "w": "fell",
+    "s": 7.537,
+    "e": 7.8
+   },
+   {
+    "w": "asleep",
+    "s": 7.8,
+    "e": 8.575
+   }
+  ]
+ },
+ "storm-1": {
+  "src": "audio/follow/storm-1.m4a",
+  "text": "Suddenly a fierce storm crashed over them! The waves poured into the boat. But Jesus was still asleep, on a cushion in the back.",
+  "voice": "bm_lewis",
+  "duration": 10.775,
+  "words": [
+   {
+    "w": "Suddenly",
+    "s": 0.725,
+    "e": 1.212
+   },
+   {
+    "w": "a",
+    "s": 1.212,
+    "e": 1.363
+   },
+   {
+    "w": "fierce",
+    "s": 1.363,
+    "e": 1.788
+   },
+   {
+    "w": "storm",
+    "s": 1.788,
+    "e": 2.275
+   },
+   {
+    "w": "crashed",
+    "s": 2.275,
+    "e": 2.775
+   },
+   {
+    "w": "over",
+    "s": 2.775,
+    "e": 3.075
+   },
+   {
+    "w": "them",
+    "s": 3.075,
+    "e": 3.625
+   },
+   {
+    "w": "The",
+    "s": 3.75,
+    "e": 3.888
+   },
+   {
+    "w": "waves",
+    "s": 3.888,
+    "e": 4.5
+   },
+   {
+    "w": "poured",
+    "s": 4.5,
+    "e": 4.938
+   },
+   {
+    "w": "into",
+    "s": 4.938,
+    "e": 5.138
+   },
+   {
+    "w": "the",
+    "s": 5.138,
+    "e": 5.263
+   },
+   {
+    "w": "boat",
+    "s": 5.263,
+    "e": 6.075
+   },
+   {
+    "w": "But",
+    "s": 6.2,
+    "e": 6.388
+   },
+   {
+    "w": "Jesus",
+    "s": 6.388,
+    "e": 6.975
+   },
+   {
+    "w": "was",
+    "s": 6.975,
+    "e": 7.125
+   },
+   {
+    "w": "still",
+    "s": 7.125,
+    "e": 7.425
+   },
+   {
+    "w": "asleep",
+    "s": 7.425,
+    "e": 8.225
+   },
+   {
+    "w": "on",
+    "s": 8.35,
+    "e": 8.5
+   },
+   {
+    "w": "a",
+    "s": 8.5,
+    "e": 8.625
+   },
+   {
+    "w": "cushion",
+    "s": 8.625,
+    "e": 9.1
+   },
+   {
+    "w": "in",
+    "s": 9.1,
+    "e": 9.213
+   },
+   {
+    "w": "the",
+    "s": 9.213,
+    "e": 9.3
+   },
+   {
+    "w": "back",
+    "s": 9.3,
+    "e": 9.975
+   }
+  ]
+ },
+ "storm-2": {
+  "src": "audio/follow/storm-2.m4a",
+  "text": "“Teacher!” they shouted, shaking Him awake. “Don’t You care that we’re going to drown?”",
+  "voice": "bm_lewis",
+  "duration": 7.075,
+  "words": [
+   {
+    "w": "Teacher",
+    "s": 0.7,
+    "e": 1.325
+   },
+   {
+    "w": "they",
+    "s": 1.5,
+    "e": 1.7
+   },
+   {
+    "w": "shouted",
+    "s": 1.7,
+    "e": 2.35
+   },
+   {
+    "w": "shaking",
+    "s": 2.525,
+    "e": 2.938
+   },
+   {
+    "w": "Him",
+    "s": 2.938,
+    "e": 3.075
+   },
+   {
+    "w": "awake",
+    "s": 3.075,
+    "e": 3.85
+   },
+   {
+    "w": "Don't",
+    "s": 4.075,
+    "e": 4.237
+   },
+   {
+    "w": "You",
+    "s": 4.237,
+    "e": 4.388
+   },
+   {
+    "w": "care",
+    "s": 4.388,
+    "e": 4.7
+   },
+   {
+    "w": "that",
+    "s": 4.7,
+    "e": 4.85
+   },
+   {
+    "w": "we're",
+    "s": 4.85,
+    "e": 5.025
+   },
+   {
+    "w": "going",
+    "s": 5.025,
+    "e": 5.325
+   },
+   {
+    "w": "to",
+    "s": 5.325,
+    "e": 5.475
+   },
+   {
+    "w": "drown",
+    "s": 5.475,
+    "e": 6.3
+   }
+  ]
+ },
+ "still-title": {
+  "src": "audio/follow/still-title.m4a",
+  "text": "Part Five. Peace, Be Still.",
+  "voice": "bm_lewis",
+  "duration": 3.625,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Five",
+    "s": 0.963,
+    "e": 1.5
+   },
+   {
+    "w": "Peace",
+    "s": 1.637,
+    "e": 2.05
+   },
+   {
+    "w": "Be",
+    "s": 2.1,
+    "e": 2.263
+   },
+   {
+    "w": "Still",
+    "s": 2.263,
+    "e": 2.975
+   }
+  ]
+ },
+ "still-0": {
+  "src": "audio/follow/still-0.m4a",
+  "text": "Jesus stood up. He spoke to the wind and the waves: “Peace! Be still!”",
+  "voice": "bm_lewis",
+  "duration": 6.85,
+  "words": [
+   {
+    "w": "Jesus",
+    "s": 0.725,
+    "e": 1.15
+   },
+   {
+    "w": "stood",
+    "s": 1.15,
+    "e": 1.425
+   },
+   {
+    "w": "up",
+    "s": 1.425,
+    "e": 1.925
+   },
+   {
+    "w": "He",
+    "s": 2.05,
+    "e": 2.2
+   },
+   {
+    "w": "spoke",
+    "s": 2.2,
+    "e": 2.55
+   },
+   {
+    "w": "to",
+    "s": 2.55,
+    "e": 2.65
+   },
+   {
+    "w": "the",
+    "s": 2.65,
+    "e": 2.8
+   },
+   {
+    "w": "wind",
+    "s": 2.8,
+    "e": 3.25
+   },
+   {
+    "w": "and",
+    "s": 3.25,
+    "e": 3.362
+   },
+   {
+    "w": "the",
+    "s": 3.362,
+    "e": 3.487
+   },
+   {
+    "w": "waves",
+    "s": 3.487,
+    "e": 4.3
+   },
+   {
+    "w": "Peace",
+    "s": 4.55,
+    "e": 5.075
+   },
+   {
+    "w": "Be",
+    "s": 5.15,
+    "e": 5.325
+   },
+   {
+    "w": "still",
+    "s": 5.325,
+    "e": 6.075
+   }
+  ]
+ },
+ "still-1": {
+  "src": "audio/follow/still-1.m4a",
+  "text": "And at once, the wind stopped, and everything was perfectly calm.",
+  "voice": "bm_lewis",
+  "duration": 6.25,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.812
+   },
+   {
+    "w": "at",
+    "s": 0.812,
+    "e": 0.963
+   },
+   {
+    "w": "once",
+    "s": 0.963,
+    "e": 1.475
+   },
+   {
+    "w": "the",
+    "s": 1.6,
+    "e": 1.75
+   },
+   {
+    "w": "wind",
+    "s": 1.75,
+    "e": 2.25
+   },
+   {
+    "w": "stopped",
+    "s": 2.25,
+    "e": 3.025
+   },
+   {
+    "w": "and",
+    "s": 3.15,
+    "e": 3.325
+   },
+   {
+    "w": "everything",
+    "s": 3.325,
+    "e": 3.85
+   },
+   {
+    "w": "was",
+    "s": 3.85,
+    "e": 4.075
+   },
+   {
+    "w": "perfectly",
+    "s": 4.075,
+    "e": 4.725
+   },
+   {
+    "w": "calm",
+    "s": 4.725,
+    "e": 5.525
+   }
+  ]
+ },
+ "still-2": {
+  "src": "audio/follow/still-2.m4a",
+  "text": "His friends were amazed. “Who is this?” they whispered. “Even the wind and the waves obey Him!”",
+  "voice": "bm_lewis",
+  "duration": 8.3,
+  "words": [
+   {
+    "w": "His",
+    "s": 0.675,
+    "e": 0.863
+   },
+   {
+    "w": "friends",
+    "s": 0.863,
+    "e": 1.325
+   },
+   {
+    "w": "were",
+    "s": 1.325,
+    "e": 1.45
+   },
+   {
+    "w": "amazed",
+    "s": 1.45,
+    "e": 2.325
+   },
+   {
+    "w": "Who",
+    "s": 2.55,
+    "e": 2.763
+   },
+   {
+    "w": "is",
+    "s": 2.763,
+    "e": 2.975
+   },
+   {
+    "w": "this",
+    "s": 2.975,
+    "e": 3.475
+   },
+   {
+    "w": "they",
+    "s": 3.65,
+    "e": 3.8
+   },
+   {
+    "w": "whispered",
+    "s": 3.8,
+    "e": 4.55
+   },
+   {
+    "w": "Even",
+    "s": 4.775,
+    "e": 5.05
+   },
+   {
+    "w": "the",
+    "s": 5.05,
+    "e": 5.2
+   },
+   {
+    "w": "wind",
+    "s": 5.2,
+    "e": 5.675
+   },
+   {
+    "w": "and",
+    "s": 5.675,
+    "e": 5.787
+   },
+   {
+    "w": "the",
+    "s": 5.787,
+    "e": 5.925
+   },
+   {
+    "w": "waves",
+    "s": 5.925,
+    "e": 6.5
+   },
+   {
+    "w": "obey",
+    "s": 6.5,
+    "e": 7.0
+   },
+   {
+    "w": "Him",
+    "s": 7.0,
+    "e": 7.55
+   }
+  ]
+ }
+}

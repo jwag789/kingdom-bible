@@ -1,0 +1,1209 @@
+{
+ "cover": {
+  "src": "audio/abraham/cover.m4a",
+  "text": "Abraham and the Stars.",
+  "voice": "bm_lewis",
+  "duration": 3.55,
+  "words": [
+   {
+    "w": "Abraham",
+    "s": 0.725,
+    "e": 1.637
+   },
+   {
+    "w": "and",
+    "s": 1.637,
+    "e": 1.812
+   },
+   {
+    "w": "the",
+    "s": 1.812,
+    "e": 1.938
+   },
+   {
+    "w": "Stars",
+    "s": 1.938,
+    "e": 2.875
+   }
+  ]
+ },
+ "journey-title": {
+  "src": "audio/abraham/journey-title.m4a",
+  "text": "Part One. Go to a New Land.",
+  "voice": "bm_lewis",
+  "duration": 3.825,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 1.0
+   },
+   {
+    "w": "One",
+    "s": 1.0,
+    "e": 1.45
+   },
+   {
+    "w": "Go",
+    "s": 1.587,
+    "e": 1.913
+   },
+   {
+    "w": "to",
+    "s": 1.913,
+    "e": 2.075
+   },
+   {
+    "w": "a",
+    "s": 2.075,
+    "e": 2.175
+   },
+   {
+    "w": "New",
+    "s": 2.175,
+    "e": 2.4
+   },
+   {
+    "w": "Land",
+    "s": 2.4,
+    "e": 3.15
+   }
+  ]
+ },
+ "journey-0": {
+  "src": "audio/abraham/journey-0.m4a",
+  "text": "Long ago, God spoke to a man named Abraham. “Leave your home and go to a land I will show you. I will bless you, and through you I will bless the whole world.”",
+  "voice": "bm_lewis",
+  "duration": 12.65,
+  "words": [
+   {
+    "w": "Long",
+    "s": 0.725,
+    "e": 0.975
+   },
+   {
+    "w": "ago",
+    "s": 0.975,
+    "e": 1.45
+   },
+   {
+    "w": "God",
+    "s": 1.538,
+    "e": 1.95
+   },
+   {
+    "w": "spoke",
+    "s": 1.95,
+    "e": 2.35
+   },
+   {
+    "w": "to",
+    "s": 2.35,
+    "e": 2.438
+   },
+   {
+    "w": "a",
+    "s": 2.438,
+    "e": 2.525
+   },
+   {
+    "w": "man",
+    "s": 2.525,
+    "e": 2.9
+   },
+   {
+    "w": "named",
+    "s": 2.9,
+    "e": 3.2
+   },
+   {
+    "w": "Abraham",
+    "s": 3.2,
+    "e": 4.3
+   },
+   {
+    "w": "Leave",
+    "s": 4.525,
+    "e": 4.75
+   },
+   {
+    "w": "your",
+    "s": 4.75,
+    "e": 4.963
+   },
+   {
+    "w": "home",
+    "s": 4.963,
+    "e": 5.425
+   },
+   {
+    "w": "and",
+    "s": 5.425,
+    "e": 5.55
+   },
+   {
+    "w": "go",
+    "s": 5.55,
+    "e": 5.775
+   },
+   {
+    "w": "to",
+    "s": 5.775,
+    "e": 5.9
+   },
+   {
+    "w": "a",
+    "s": 5.9,
+    "e": 6.0
+   },
+   {
+    "w": "land",
+    "s": 6.0,
+    "e": 6.425
+   },
+   {
+    "w": "I",
+    "s": 6.425,
+    "e": 6.55
+   },
+   {
+    "w": "will",
+    "s": 6.55,
+    "e": 6.763
+   },
+   {
+    "w": "show",
+    "s": 6.763,
+    "e": 7.088
+   },
+   {
+    "w": "you",
+    "s": 7.088,
+    "e": 7.575
+   },
+   {
+    "w": "I",
+    "s": 7.725,
+    "e": 7.875
+   },
+   {
+    "w": "will",
+    "s": 7.875,
+    "e": 8.062
+   },
+   {
+    "w": "bless",
+    "s": 8.062,
+    "e": 8.45
+   },
+   {
+    "w": "you",
+    "s": 8.45,
+    "e": 8.925
+   },
+   {
+    "w": "and",
+    "s": 9.05,
+    "e": 9.2
+   },
+   {
+    "w": "through",
+    "s": 9.2,
+    "e": 9.488
+   },
+   {
+    "w": "you",
+    "s": 9.488,
+    "e": 9.762
+   },
+   {
+    "w": "I",
+    "s": 9.762,
+    "e": 9.925
+   },
+   {
+    "w": "will",
+    "s": 9.925,
+    "e": 10.113
+   },
+   {
+    "w": "bless",
+    "s": 10.113,
+    "e": 10.5
+   },
+   {
+    "w": "the",
+    "s": 10.5,
+    "e": 10.65
+   },
+   {
+    "w": "whole",
+    "s": 10.65,
+    "e": 11.012
+   },
+   {
+    "w": "world",
+    "s": 11.012,
+    "e": 11.8
+   }
+  ]
+ },
+ "journey-1": {
+  "src": "audio/abraham/journey-1.m4a",
+  "text": "So Abraham packed up everything — his wife Sarah, his flocks, his tents — and set out, trusting God, even though he didn’t know where he was going.",
+  "voice": "bm_lewis",
+  "duration": 11.825,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.925
+   },
+   {
+    "w": "Abraham",
+    "s": 0.925,
+    "e": 1.438
+   },
+   {
+    "w": "packed",
+    "s": 1.438,
+    "e": 1.788
+   },
+   {
+    "w": "up",
+    "s": 1.788,
+    "e": 1.988
+   },
+   {
+    "w": "everything",
+    "s": 1.988,
+    "e": 2.95
+   },
+   {
+    "w": "his",
+    "s": 3.05,
+    "e": 3.25
+   },
+   {
+    "w": "wife",
+    "s": 3.25,
+    "e": 3.6
+   },
+   {
+    "w": "Sarah",
+    "s": 3.6,
+    "e": 4.175
+   },
+   {
+    "w": "his",
+    "s": 4.275,
+    "e": 4.525
+   },
+   {
+    "w": "flocks",
+    "s": 4.525,
+    "e": 5.1
+   },
+   {
+    "w": "his",
+    "s": 5.175,
+    "e": 5.4
+   },
+   {
+    "w": "tents",
+    "s": 5.4,
+    "e": 6.075
+   },
+   {
+    "w": "and",
+    "s": 6.15,
+    "e": 6.3
+   },
+   {
+    "w": "set",
+    "s": 6.3,
+    "e": 6.575
+   },
+   {
+    "w": "out",
+    "s": 6.575,
+    "e": 7.05
+   },
+   {
+    "w": "trusting",
+    "s": 7.188,
+    "e": 7.725
+   },
+   {
+    "w": "God",
+    "s": 7.725,
+    "e": 8.425
+   },
+   {
+    "w": "even",
+    "s": 8.588,
+    "e": 8.9
+   },
+   {
+    "w": "though",
+    "s": 8.9,
+    "e": 9.1
+   },
+   {
+    "w": "he",
+    "s": 9.1,
+    "e": 9.225
+   },
+   {
+    "w": "didn't",
+    "s": 9.225,
+    "e": 9.475
+   },
+   {
+    "w": "know",
+    "s": 9.475,
+    "e": 9.8
+   },
+   {
+    "w": "where",
+    "s": 9.8,
+    "e": 9.975
+   },
+   {
+    "w": "he",
+    "s": 9.975,
+    "e": 10.1
+   },
+   {
+    "w": "was",
+    "s": 10.1,
+    "e": 10.287
+   },
+   {
+    "w": "going",
+    "s": 10.287,
+    "e": 11.075
+   }
+  ]
+ },
+ "stars-title": {
+  "src": "audio/abraham/stars-title.m4a",
+  "text": "Part Two. Count the Stars.",
+  "voice": "bm_lewis",
+  "duration": 3.525,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Two",
+    "s": 0.963,
+    "e": 1.4
+   },
+   {
+    "w": "Count",
+    "s": 1.512,
+    "e": 1.825
+   },
+   {
+    "w": "the",
+    "s": 1.825,
+    "e": 1.962
+   },
+   {
+    "w": "Stars",
+    "s": 1.962,
+    "e": 2.85
+   }
+  ]
+ },
+ "stars-0": {
+  "src": "audio/abraham/stars-0.m4a",
+  "text": "Abraham and Sarah were very old, and they had no children. One night God said, “Look up at the sky and count the stars — if you can!”",
+  "voice": "bm_lewis",
+  "duration": 11.25,
+  "words": [
+   {
+    "w": "Abraham",
+    "s": 0.725,
+    "e": 1.337
+   },
+   {
+    "w": "and",
+    "s": 1.337,
+    "e": 1.475
+   },
+   {
+    "w": "Sarah",
+    "s": 1.475,
+    "e": 1.9
+   },
+   {
+    "w": "were",
+    "s": 1.9,
+    "e": 2.038
+   },
+   {
+    "w": "very",
+    "s": 2.038,
+    "e": 2.388
+   },
+   {
+    "w": "old",
+    "s": 2.388,
+    "e": 3.125
+   },
+   {
+    "w": "and",
+    "s": 3.225,
+    "e": 3.337
+   },
+   {
+    "w": "they",
+    "s": 3.337,
+    "e": 3.475
+   },
+   {
+    "w": "had",
+    "s": 3.475,
+    "e": 3.688
+   },
+   {
+    "w": "no",
+    "s": 3.688,
+    "e": 4.037
+   },
+   {
+    "w": "children",
+    "s": 4.037,
+    "e": 5.0
+   },
+   {
+    "w": "One",
+    "s": 5.2,
+    "e": 5.475
+   },
+   {
+    "w": "night",
+    "s": 5.475,
+    "e": 5.812
+   },
+   {
+    "w": "God",
+    "s": 5.812,
+    "e": 6.188
+   },
+   {
+    "w": "said",
+    "s": 6.188,
+    "e": 6.775
+   },
+   {
+    "w": "Look",
+    "s": 7.0,
+    "e": 7.188
+   },
+   {
+    "w": "up",
+    "s": 7.188,
+    "e": 7.338
+   },
+   {
+    "w": "at",
+    "s": 7.338,
+    "e": 7.412
+   },
+   {
+    "w": "the",
+    "s": 7.412,
+    "e": 7.55
+   },
+   {
+    "w": "sky",
+    "s": 7.55,
+    "e": 8.137
+   },
+   {
+    "w": "and",
+    "s": 8.137,
+    "e": 8.35
+   },
+   {
+    "w": "count",
+    "s": 8.35,
+    "e": 8.675
+   },
+   {
+    "w": "the",
+    "s": 8.675,
+    "e": 8.825
+   },
+   {
+    "w": "stars",
+    "s": 8.825,
+    "e": 9.387
+   },
+   {
+    "w": "if",
+    "s": 9.438,
+    "e": 9.55
+   },
+   {
+    "w": "you",
+    "s": 9.55,
+    "e": 9.688
+   },
+   {
+    "w": "can",
+    "s": 9.688,
+    "e": 10.425
+   }
+  ]
+ },
+ "stars-1": {
+  "src": "audio/abraham/stars-1.m4a",
+  "text": "“That’s how many people will be in your family!” And Abraham believed God.",
+  "voice": "bm_lewis",
+  "duration": 6.425,
+  "words": [
+   {
+    "w": "That's",
+    "s": 0.7,
+    "e": 0.95
+   },
+   {
+    "w": "how",
+    "s": 0.95,
+    "e": 1.1
+   },
+   {
+    "w": "many",
+    "s": 1.1,
+    "e": 1.337
+   },
+   {
+    "w": "people",
+    "s": 1.337,
+    "e": 1.725
+   },
+   {
+    "w": "will",
+    "s": 1.725,
+    "e": 1.9
+   },
+   {
+    "w": "be",
+    "s": 1.9,
+    "e": 2.1
+   },
+   {
+    "w": "in",
+    "s": 2.1,
+    "e": 2.225
+   },
+   {
+    "w": "your",
+    "s": 2.225,
+    "e": 2.45
+   },
+   {
+    "w": "family",
+    "s": 2.45,
+    "e": 3.275
+   },
+   {
+    "w": "And",
+    "s": 3.425,
+    "e": 3.625
+   },
+   {
+    "w": "Abraham",
+    "s": 3.625,
+    "e": 4.338
+   },
+   {
+    "w": "believed",
+    "s": 4.338,
+    "e": 4.975
+   },
+   {
+    "w": "God",
+    "s": 4.975,
+    "e": 5.675
+   }
+  ]
+ },
+ "visitors-title": {
+  "src": "audio/abraham/visitors-title.m4a",
+  "text": "Part Three. Three Visitors.",
+  "voice": "bm_lewis",
+  "duration": 3.675,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.975
+   },
+   {
+    "w": "Three",
+    "s": 0.975,
+    "e": 1.525
+   },
+   {
+    "w": "Three",
+    "s": 1.688,
+    "e": 2.1
+   },
+   {
+    "w": "Visitors",
+    "s": 2.1,
+    "e": 3.025
+   }
+  ]
+ },
+ "visitors-0": {
+  "src": "audio/abraham/visitors-0.m4a",
+  "text": "One hot day, three visitors came to Abraham’s tent. Abraham hurried to give them water to wash with and a delicious meal.",
+  "voice": "bm_lewis",
+  "duration": 10.6,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.725,
+    "e": 0.988
+   },
+   {
+    "w": "hot",
+    "s": 0.988,
+    "e": 1.275
+   },
+   {
+    "w": "day",
+    "s": 1.275,
+    "e": 1.8
+   },
+   {
+    "w": "three",
+    "s": 1.975,
+    "e": 2.3
+   },
+   {
+    "w": "visitors",
+    "s": 2.3,
+    "e": 2.85
+   },
+   {
+    "w": "came",
+    "s": 2.85,
+    "e": 3.125
+   },
+   {
+    "w": "to",
+    "s": 3.125,
+    "e": 3.263
+   },
+   {
+    "w": "Abraham's",
+    "s": 3.263,
+    "e": 4.025
+   },
+   {
+    "w": "tent",
+    "s": 4.025,
+    "e": 4.9
+   },
+   {
+    "w": "Abraham",
+    "s": 5.125,
+    "e": 5.675
+   },
+   {
+    "w": "hurried",
+    "s": 5.675,
+    "e": 6.1
+   },
+   {
+    "w": "to",
+    "s": 6.1,
+    "e": 6.2
+   },
+   {
+    "w": "give",
+    "s": 6.2,
+    "e": 6.388
+   },
+   {
+    "w": "them",
+    "s": 6.388,
+    "e": 6.588
+   },
+   {
+    "w": "water",
+    "s": 6.588,
+    "e": 7.025
+   },
+   {
+    "w": "to",
+    "s": 7.025,
+    "e": 7.162
+   },
+   {
+    "w": "wash",
+    "s": 7.162,
+    "e": 7.588
+   },
+   {
+    "w": "with",
+    "s": 7.588,
+    "e": 8.188
+   },
+   {
+    "w": "and",
+    "s": 8.188,
+    "e": 8.338
+   },
+   {
+    "w": "a",
+    "s": 8.338,
+    "e": 8.425
+   },
+   {
+    "w": "delicious",
+    "s": 8.425,
+    "e": 9.125
+   },
+   {
+    "w": "meal",
+    "s": 9.125,
+    "e": 9.875
+   }
+  ]
+ },
+ "visitors-1": {
+  "src": "audio/abraham/visitors-1.m4a",
+  "text": "“This time next year,” one said, “Sarah will have a son!” Sarah, listening inside the tent, laughed. She was ninety years old!",
+  "voice": "bm_lewis",
+  "duration": 10.7,
+  "words": [
+   {
+    "w": "This",
+    "s": 0.7,
+    "e": 0.912
+   },
+   {
+    "w": "time",
+    "s": 0.912,
+    "e": 1.275
+   },
+   {
+    "w": "next",
+    "s": 1.275,
+    "e": 1.575
+   },
+   {
+    "w": "year",
+    "s": 1.575,
+    "e": 1.95
+   },
+   {
+    "w": "one",
+    "s": 2.075,
+    "e": 2.3
+   },
+   {
+    "w": "said",
+    "s": 2.3,
+    "e": 2.8
+   },
+   {
+    "w": "Sarah",
+    "s": 3.075,
+    "e": 3.45
+   },
+   {
+    "w": "will",
+    "s": 3.45,
+    "e": 3.6
+   },
+   {
+    "w": "have",
+    "s": 3.6,
+    "e": 3.775
+   },
+   {
+    "w": "a",
+    "s": 3.775,
+    "e": 3.913
+   },
+   {
+    "w": "son",
+    "s": 3.913,
+    "e": 4.65
+   },
+   {
+    "w": "Sarah",
+    "s": 4.9,
+    "e": 5.35
+   },
+   {
+    "w": "listening",
+    "s": 5.438,
+    "e": 5.888
+   },
+   {
+    "w": "inside",
+    "s": 5.888,
+    "e": 6.362
+   },
+   {
+    "w": "the",
+    "s": 6.362,
+    "e": 6.487
+   },
+   {
+    "w": "tent",
+    "s": 6.487,
+    "e": 6.9
+   },
+   {
+    "w": "laughed",
+    "s": 7.013,
+    "e": 7.8
+   },
+   {
+    "w": "She",
+    "s": 7.938,
+    "e": 8.088
+   },
+   {
+    "w": "was",
+    "s": 8.088,
+    "e": 8.262
+   },
+   {
+    "w": "ninety",
+    "s": 8.262,
+    "e": 8.775
+   },
+   {
+    "w": "years",
+    "s": 8.775,
+    "e": 9.213
+   },
+   {
+    "w": "old",
+    "s": 9.213,
+    "e": 9.9
+   }
+  ]
+ },
+ "visitors-2": {
+  "src": "audio/abraham/visitors-2.m4a",
+  "text": "“Is anything too hard for the Lord?” the visitor asked.",
+  "voice": "bm_lewis",
+  "duration": 5.2,
+  "words": [
+   {
+    "w": "Is",
+    "s": 0.7,
+    "e": 0.875
+   },
+   {
+    "w": "anything",
+    "s": 0.875,
+    "e": 1.375
+   },
+   {
+    "w": "too",
+    "s": 1.375,
+    "e": 1.637
+   },
+   {
+    "w": "hard",
+    "s": 1.637,
+    "e": 2.025
+   },
+   {
+    "w": "for",
+    "s": 2.025,
+    "e": 2.15
+   },
+   {
+    "w": "the",
+    "s": 2.15,
+    "e": 2.288
+   },
+   {
+    "w": "Lord",
+    "s": 2.288,
+    "e": 2.95
+   },
+   {
+    "w": "the",
+    "s": 3.125,
+    "e": 3.225
+   },
+   {
+    "w": "visitor",
+    "s": 3.225,
+    "e": 3.725
+   },
+   {
+    "w": "asked",
+    "s": 3.725,
+    "e": 4.45
+   }
+  ]
+ },
+ "isaac-title": {
+  "src": "audio/abraham/isaac-title.m4a",
+  "text": "Part Four. A Baby Called Laughter.",
+  "voice": "bm_lewis",
+  "duration": 4.2,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.988
+   },
+   {
+    "w": "Four",
+    "s": 0.988,
+    "e": 1.55
+   },
+   {
+    "w": "A",
+    "s": 1.712,
+    "e": 1.837
+   },
+   {
+    "w": "Baby",
+    "s": 1.837,
+    "e": 2.35
+   },
+   {
+    "w": "Called",
+    "s": 2.35,
+    "e": 2.65
+   },
+   {
+    "w": "Laughter",
+    "s": 2.65,
+    "e": 3.45
+   }
+  ]
+ },
+ "isaac-0": {
+  "src": "audio/abraham/isaac-0.m4a",
+  "text": "And God kept His promise. Sarah had a baby boy, just as God said!",
+  "voice": "bm_lewis",
+  "duration": 6.8,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.9
+   },
+   {
+    "w": "God",
+    "s": 0.9,
+    "e": 1.35
+   },
+   {
+    "w": "kept",
+    "s": 1.35,
+    "e": 1.637
+   },
+   {
+    "w": "His",
+    "s": 1.637,
+    "e": 1.837
+   },
+   {
+    "w": "promise",
+    "s": 1.837,
+    "e": 2.675
+   },
+   {
+    "w": "Sarah",
+    "s": 2.862,
+    "e": 3.3
+   },
+   {
+    "w": "had",
+    "s": 3.3,
+    "e": 3.462
+   },
+   {
+    "w": "a",
+    "s": 3.462,
+    "e": 3.575
+   },
+   {
+    "w": "baby",
+    "s": 3.575,
+    "e": 4.025
+   },
+   {
+    "w": "boy",
+    "s": 4.025,
+    "e": 4.475
+   },
+   {
+    "w": "just",
+    "s": 4.575,
+    "e": 4.85
+   },
+   {
+    "w": "as",
+    "s": 4.85,
+    "e": 5.025
+   },
+   {
+    "w": "God",
+    "s": 5.025,
+    "e": 5.388
+   },
+   {
+    "w": "said",
+    "s": 5.388,
+    "e": 6.0
+   }
+  ]
+ },
+ "isaac-1": {
+  "src": "audio/abraham/isaac-1.m4a",
+  "text": "They named him Isaac, which means “he laughs.” “God has made me laugh,” said Sarah, “and everyone who hears about this will laugh with me!”",
+  "voice": "bm_lewis",
+  "duration": 11.1,
+  "words": [
+   {
+    "w": "They",
+    "s": 0.675,
+    "e": 0.825
+   },
+   {
+    "w": "named",
+    "s": 0.825,
+    "e": 1.087
+   },
+   {
+    "w": "him",
+    "s": 1.087,
+    "e": 1.3
+   },
+   {
+    "w": "Isaac",
+    "s": 1.3,
+    "e": 1.975
+   },
+   {
+    "w": "which",
+    "s": 2.075,
+    "e": 2.312
+   },
+   {
+    "w": "means",
+    "s": 2.312,
+    "e": 2.9
+   },
+   {
+    "w": "he",
+    "s": 2.95,
+    "e": 3.087
+   },
+   {
+    "w": "laughs",
+    "s": 3.087,
+    "e": 4.125
+   },
+   {
+    "w": "God",
+    "s": 4.45,
+    "e": 4.8
+   },
+   {
+    "w": "has",
+    "s": 4.8,
+    "e": 4.975
+   },
+   {
+    "w": "made",
+    "s": 4.975,
+    "e": 5.213
+   },
+   {
+    "w": "me",
+    "s": 5.213,
+    "e": 5.362
+   },
+   {
+    "w": "laugh",
+    "s": 5.362,
+    "e": 6.0
+   },
+   {
+    "w": "said",
+    "s": 6.175,
+    "e": 6.438
+   },
+   {
+    "w": "Sarah",
+    "s": 6.438,
+    "e": 7.125
+   },
+   {
+    "w": "and",
+    "s": 7.3,
+    "e": 7.45
+   },
+   {
+    "w": "everyone",
+    "s": 7.45,
+    "e": 7.925
+   },
+   {
+    "w": "who",
+    "s": 7.925,
+    "e": 8.1
+   },
+   {
+    "w": "hears",
+    "s": 8.1,
+    "e": 8.45
+   },
+   {
+    "w": "about",
+    "s": 8.45,
+    "e": 8.8
+   },
+   {
+    "w": "this",
+    "s": 8.8,
+    "e": 9.05
+   },
+   {
+    "w": "will",
+    "s": 9.05,
+    "e": 9.238
+   },
+   {
+    "w": "laugh",
+    "s": 9.238,
+    "e": 9.625
+   },
+   {
+    "w": "with",
+    "s": 9.625,
+    "e": 9.825
+   },
+   {
+    "w": "me",
+    "s": 9.825,
+    "e": 10.375
+   }
+  ]
+ }
+}

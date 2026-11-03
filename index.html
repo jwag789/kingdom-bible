@@ -84,7 +84,7 @@
   #dots button.on { height: 30px; background: var(--gold); }
   #nav { position: fixed; z-index: 3; right: max(14px, 2.2vw, env(safe-area-inset-right)); bottom: max(16px, 3vh, calc(env(safe-area-inset-bottom) + 8px));
     display: flex; gap: 10px; }
-  #nav button { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.45);
+  #nav button, #nav .navlink { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.45);
     background: var(--glass); color: var(--gold); display: grid; place-items: center;
     backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: opacity 0.4s, background 0.2s; }
   #nav button:hover:not(:disabled) { background: rgba(240,204,138,0.14); }
@@ -143,6 +143,124 @@
   .book .blank { width: 104px; height: 104px; border-radius: 50%; border: 2px dashed rgba(240,204,138,0.4); display: grid; place-items: center;
     color: rgba(240,204,138,0.55); font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; }
 
+  /* ---- Games: open over the story, full screen. */
+  .game { position: fixed; inset: 0; z-index: 9; background-size: cover; background-color: var(--night); opacity: 0; transition: opacity 0.35s;
+    display: flex; flex-direction: column; overflow: hidden;
+    padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+  .game.in { opacity: 1; }
+  .game::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 30%, rgba(4,5,10,0) 45%, rgba(4,5,10,0.55) 100%); }
+  .game > * { position: relative; }
+  .game .top { display: flex; align-items: center; gap: 14px; }
+  .game .title { flex: 1; text-shadow: 0 1px 14px rgba(0,0,0,0.6); }
+  .game h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+  .game .progress { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.5em 1em; border-radius: 999px; background: var(--glass); border: 1px solid rgba(240,204,138,0.4); white-space: nowrap; }
+  .game .close { width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; flex: none;
+    border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .game .say { margin: 0.6rem 0 0; max-width: 34rem; font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.45; text-shadow: 0 1px 14px rgba(0,0,0,0.7); }
+  .game .tray { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(8px, 2vw, 18px); padding-bottom: 6px; }
+  .game .piece { width: clamp(72px, min(12vw, 15vh), 118px); aspect-ratio: 1; border-radius: 22px; border: 3px solid #fbf6ea; background: rgba(251,246,234,0.88);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35); padding: 8px; display: grid; place-items: center; cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.2, 1.4, 0.4, 1), box-shadow 0.25s, opacity 0.6s; }
+  .game .piece img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+  .game .piece:hover { transform: translateY(-3px); }
+  .game .piece.picked { transform: translateY(-10px) scale(1.08); box-shadow: 0 0 0 4px var(--gold), 0 14px 26px rgba(0,0,0,0.4); }
+  .game .piece.nope { animation: nope 0.4s ease; }
+  .game .piece.gone { transform: translate(var(--dx), var(--dy)) scale(0.12); opacity: 0; pointer-events: none;
+    transition: transform 0.7s cubic-bezier(0.5, -0.3, 0.6, 1), opacity 0.7s ease-in; }
+  @keyframes nope { 20%, 60% { transform: translateX(-8px) rotate(-4deg); } 40%, 80% { transform: translateX(8px) rotate(4deg); } }
+  .game .won { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0.8); opacity: 0; text-align: center;
+    width: min(26rem, calc(100% - 32px)); padding: 28px 24px; border-radius: 28px; background: rgba(4,5,10,0.82);
+    border: 1px solid rgba(240,204,138,0.5); transition: transform 0.45s cubic-bezier(0.2, 1.5, 0.4, 1), opacity 0.3s; }
+  .game .won.in { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  .game .won .sticker { margin: 0 auto 14px; }
+  .game .won h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.6rem; margin: 0.2rem 0; }
+  .game .won p { color: var(--soft); line-height: 1.5; }
+  .game .won .starts { justify-content: center; margin-top: 1.4rem; }
+  .sticker.badge { background-color: #f3d38d; background-size: 70%; background-position: 50% 55%; border-color: #fff4d6;
+    box-shadow: 0 0 0 3px #d9a646, 0 8px 20px rgba(0,0,0,0.4); }
+  .sticker.badge.missing { filter: grayscale(1) brightness(0.4); opacity: 0.5; box-shadow: none; }
+  .confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .confetti i { position: absolute; top: 60%; width: 10px; height: 14px; border-radius: 2px; animation: confetti var(--d) cubic-bezier(0.2, 0.6, 0.4, 1) forwards; }
+  @keyframes confetti { 0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+    45% { transform: translate(calc(var(--x) * 0.6), var(--y)) rotate(calc(var(--r) * 0.5)); opacity: 1; }
+    100% { transform: translate(var(--x), 70vh) rotate(var(--r)); opacity: 0; } }
+  .play-game { margin-top: 1.6rem; }
+  .book .games { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: -0.6rem 0 1.4rem; }
+  .book .games span { color: var(--soft); font-size: 0.85rem; }
+
+  /* ---- Your Kingdom: a meadow to decorate with what you've collected. */
+  .kingdom { position: fixed; inset: 0; z-index: 9; display: flex; flex-direction: column; background: var(--night); opacity: 0; transition: opacity 0.35s; }
+  .kingdom.in { opacity: 1; }
+  .kingdom .meadow { position: relative; flex: 1; background-size: cover; background-position: 60% 60%; overflow: hidden; touch-action: none; }
+  .kingdom .top { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: flex-start; gap: 14px; pointer-events: none;
+    padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left));
+    background: linear-gradient(180deg, rgba(4,5,10,0.5), rgba(4,5,10,0)); }
+  .kingdom .title { flex: 1; text-shadow: 0 1px 14px rgba(0,0,0,0.6); }
+  .kingdom h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+  .kingdom .close { pointer-events: auto; width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; flex: none;
+    border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .kingdom .placed { position: absolute; cursor: grab; touch-action: none; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35)); transition: filter 0.2s; }
+  .kingdom .placed .sticker { box-shadow: none; }
+  .kingdom .placed.lifted { cursor: grabbing; filter: drop-shadow(0 16px 18px rgba(0,0,0,0.45)); z-index: 2; }
+  .kingdom .placed.selected { outline: 2px dashed var(--gold); outline-offset: 6px; border-radius: 12px; }
+  .kingdom .cutout { display: block; height: auto; pointer-events: none; }
+  .kingdom .tools { position: absolute; z-index: 3; transform: translate(-50%, 0); display: none; gap: 8px; padding: 6px; border-radius: 999px;
+    background: rgba(4,5,10,0.78); border: 1px solid rgba(240,204,138,0.45); }
+  .kingdom .tools.on { display: flex; }
+  .kingdom .tools button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.35); background: transparent; color: var(--gold); font-size: 1.15rem; }
+  .kingdom .tray { display: flex; gap: 10px; overflow-x: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(240,204,138,0.4) transparent;
+    padding: 12px max(16px, env(safe-area-inset-left)) max(14px, calc(env(safe-area-inset-bottom) + 8px));
+    background: linear-gradient(0deg, #0b0a12, #15121d); border-top: 1px solid rgba(240,204,138,0.3); }
+  .kingdom .slot { flex: none; width: 76px; height: 76px; border-radius: 16px; display: grid; place-items: center; padding: 6px; cursor: grab; touch-action: none;
+    border: 1px solid rgba(240,204,138,0.3); background: rgba(251,246,234,0.06); }
+  .kingdom .slot .cutout { width: 58px; max-height: 62px; object-fit: contain; }
+  .kingdom .slot .sticker { transform: none; border-width: 2px; }
+  .kingdom .empty { color: var(--soft); font-style: italic; margin: 6px 4px; max-width: 40rem; line-height: 1.5; }
+
+  /* ---- The Stories page (home). */
+  html.home, html.home body { overflow-y: auto; overflow-x: hidden; height: auto; min-height: 100%; overscroll-behavior: auto; }
+  body.home { background: radial-gradient(ellipse at 70% -10%, #2c2440 0%, var(--night) 60%) fixed; }
+  body.home #stage, body.home #scrim, body.home #deck, body.home #hint, body.home #dots, body.home #nav { display: none; }
+  #home { max-width: 76rem; margin: 0 auto; padding: max(40px, calc(env(safe-area-inset-top) + 24px)) max(16px, 5vw) max(48px, calc(env(safe-area-inset-bottom) + 32px)); }
+  #home .head h1 { font-size: clamp(3rem, 9vw, 5.6rem); line-height: 1; margin: 0.3rem 0 0.6rem; }
+  #home .head .sub { margin: 0 0 1.4rem; }
+  #home .shelf-title { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--gold); margin: 3rem 0 1.2rem; }
+  #home .shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 26px 20px; }
+  #home a.story, #home .game-card { display: block; color: var(--ink); text-decoration: none; text-align: left; font: inherit; padding: 0;
+    background: none; border: 0; cursor: pointer; transition: transform 0.25s cubic-bezier(0.2, 1.4, 0.4, 1); }
+  #home a.story:hover, #home button.game-card:hover { transform: translateY(-4px) rotate(-0.6deg); }
+  #home .art { position: relative; aspect-ratio: 16 / 10; border-radius: 16px; background-size: cover; background-position: 60% 50%; background-color: #1a1622;
+    box-shadow: 0 2px 0 rgba(255,244,214,0.18) inset, 0 14px 30px rgba(0,0,0,0.45); border: 3px solid #fbf6ea; }
+  #home .num { position: absolute; left: 10px; top: 10px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+    background: rgba(4,5,10,0.65); color: var(--gold); font-weight: 600; font-size: 0.85rem; border: 1px solid rgba(240,204,138,0.5); }
+  #home h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.6rem; margin: 0.8rem 0 0.1rem; line-height: 1.1; }
+  #home .ref { color: var(--soft); font-size: 0.85rem; margin: 0; }
+  #home .progress { display: flex; align-items: center; gap: 12px; margin-top: 0.5rem; color: var(--soft); font-size: 0.82rem; }
+  #home .progress .all { color: var(--gold); }
+  #home .lamb-icon { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background: url("art/lamb.png") center / contain no-repeat; }
+  #home .progress .sticker { border-width: 2px; }
+  #home .continue { display: flex; align-items: center; gap: 18px; margin: 1.6rem 0 0; padding: 12px; border-radius: 20px; text-decoration: none; color: var(--ink);
+    background: rgba(240,204,138,0.1); border: 1px solid rgba(240,204,138,0.45); max-width: 40rem; }
+  #home .continue .art { width: 132px; flex: none; border-width: 2px; }
+  #home .continue h2 { font-size: 1.7rem; margin: 0.15rem 0; }
+  #home .continue .sub { margin: 0; font-size: 0.9rem; }
+  #home .continue .words { flex: 1; min-width: 0; }
+  #home .continue .go { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; padding-right: 8px; }
+  #home .game-card .art { display: grid; place-items: center; }
+  #home .game-card.locked { cursor: default; }
+  #home .game-card.locked .art { filter: grayscale(0.85) brightness(0.55); }
+  #home .credit { margin-top: 4rem; }
+  @media (max-width: 560px) {
+    #home .continue .go { display: none; }
+    #home .continue .art { width: 96px; }
+    #home .shelf { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
+    #home h3 { font-size: 1.25rem; }
+    #home .art { border-width: 2px; border-radius: 12px; }
+    #home .progress { gap: 8px; font-size: 0.75rem; }
+  }
+
   /* Words light up as the narrator reads them. */
   .beat span { transition: color 0.25s, text-shadow 0.25s, opacity 0.4s; }
   .beat.reading span { opacity: 0.6; }
@@ -152,6 +270,9 @@
   .starts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 3rem; }
   .starts .begin { margin-top: 0; }
   .begin.read { background: rgba(240,204,138,0.16); }
+  .all-stories { display: inline-block; margin-top: 2rem; color: var(--soft); font-size: 0.85rem; letter-spacing: 0.08em; text-decoration: none;
+    border-bottom: 1px solid rgba(245,236,218,0.3); pointer-events: auto; }
+  .all-stories:hover { color: var(--gold); border-color: var(--gold); }
   .more { margin-top: 2.2rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.2rem; font-size: 0.95rem; }
   .more span { color: var(--soft); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
   .more a { color: var(--gold); font-style: italic; text-decoration: none; border-bottom: 1px solid rgba(240,204,138,0.4); }
@@ -178,7 +299,7 @@
     .slide { align-items: flex-end; padding-bottom: calc(16vh + env(safe-area-inset-bottom)); padding-right: 44px; }
     .cover, .title { padding-bottom: calc(22vh + env(safe-area-inset-bottom)); }
     #hint { top: 28% !important; left: 50% !important; }
-    #nav button { width: 42px; height: 42px; }
+    #nav button, #nav .navlink { width: 42px; height: 42px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -194,6 +315,7 @@
 <div id="hint"><span class="dot"></span><span class="label"></span></div>
 <div id="dots" aria-label="Days"></div>
 <nav id="nav" aria-label="Pages">
+  <a id="contents" class="navlink" href="./" aria-label="All stories" title="All stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></a>
   <button id="stickers" aria-label="Sticker book" title="Sticker book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg><span class="count"></span></button>
   <button id="read" class="toggle" aria-label="Read it to me" title="Read it to me" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C6.5 4.5 9.5 4.6 12 6.5v13c-2.5-1.9-5.5-2-8-1V5.5z"/><path d="M20 5.5c-2.5-1-5.5-.9-8 1v13c2.5-1.9 5.5-2 8-1V5.5z"/></svg></button>
   <button id="sound" class="toggle" aria-label="Sound" title="Sound" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="on" d="M15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11"/><path class="off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
@@ -201,6 +323,6 @@
   <button id="prev" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
   <button id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
 </nav>
-<script type="module" src="src/reader.js"></script>
+<script type="module" src="src/main.js"></script>
 </body>
 </html>

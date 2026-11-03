@@ -466,7 +466,16 @@ export class Sound {
     const step = Math.round((1 - Math.min(1, Math.max(0, y))) * 9), at = this.ctx.currentTime;
     const midi = KEY + PENTA[step % 5] + 12 * Math.floor(step / 5);
     if (voice === 'choir') { this.voice(midi, at, 0.05); this.voice(midi - 12 + 7, at + 0.05, 0.03); }
+    else if (voice === 'timbrel') this.jingle(at, midi);
     else this.bell(midi + 12, at, 0.08, 2.2, this.sfxBus);
+  }
+
+  jingle(at, midi) {                 // a tambourine: a slap and a shimmer of little cymbals, with a bright note
+    this.noiseBurst({ at, peak: 0.12, attack: 0.002, release: 0.05, from: 1800, to: 900, q: 1, bus: this.sfxBus });
+    for (let i = 0; i < 6; i++) {
+      this.noiseBurst({ at: at + i * 0.035, peak: 0.05 * (1 - i / 7), attack: 0.002, release: 0.12, type: 'highpass', from: 7000, to: 6000, q: 0.8 });
+    }
+    this.pluck(midi, at + 0.02, 0.08);
   }
 
   glory() {                          // the sky fills with angels: a swelling chord of voices and bells
@@ -535,6 +544,59 @@ export class Sound {
     const now = this.ctx.currentTime;
     [0, 2, 4, 7, 9, 12, 14].forEach((s, i) => this.pluck(KEY + s, now + i * 0.09, 0.09));
     [0, 4, 7].forEach(s => this.bell(KEY + 12 + s, now + 0.75, 0.05, 3.5, this.sfxBus));
+  }
+
+  animalName() {                     // Adam names an animal: a cheerful little pluck
+    if (!this.ready) return;
+    const now = this.ctx.currentTime, a = pick([0, 2, 4, 7, 9]);
+    this.pluck(KEY + 12 + a, now, 0.1);
+    this.pluck(KEY + 12 + a + 7, now + 0.1, 0.08);
+  }
+
+  hiss() {                           // the staff becomes a snake: a long hiss and a surprised little drop
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.16, attack: 0.15, release: 1.1, type: 'highpass', from: 5000, to: 3500, q: 0.6 });
+    [7, 4, 0].forEach((s, i) => this.pluck(KEY + 12 + s, now + 0.9 + i * 0.12, 0.08));
+  }
+
+  boop() {                           // not a match: a soft, friendly two-note "uh-uh"
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    [[0, 330], [0.14, 262]].forEach(([d, f]) => {
+      const o = this.osc('triangle', f), g = this.gain(0);
+      o.connect(g).connect(this.sfxBus);
+      this.env(g, now + d, 0.08, 0.01, 0.14);
+      o.start(now + d); o.stop(now + d + 0.18);
+    });
+  }
+
+  ribbit() {                         // a frog
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    [0, 0.12].forEach(d => {
+      const o = this.osc('square', rand(170, 210)), bp = this.filter('bandpass', 900, 3), g = this.gain(0), am = this.osc('sine', 38), ag = this.gain(0.5);
+      am.connect(ag).connect(g.gain);
+      o.connect(bp).connect(g).connect(this.sfxBus);
+      this.env(g, now + d, 0.07, 0.01, 0.1);
+      o.start(now + d); am.start(now + d); o.stop(now + d + 0.14); am.stop(now + d + 0.14);
+    });
+  }
+
+  flame() {                          // the bush catches fire: a soft roar that swells, and warm bells
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.25, attack: 0.6, release: 2.8, type: 'bandpass', from: 300, to: 900, q: 0.5, buffer: this.brown });
+    for (let i = 0; i < 14; i++) this.noiseBurst({ at: now + 0.3 + i * rand(0.08, 0.2), peak: rand(0.03, 0.07), attack: 0.002, release: 0.04, type: 'highpass', from: 2500, to: 1500, q: 0.7 });
+    [0, 4, 7, 11, 12].forEach((s, i) => this.bell(KEY + s, now + 0.4 + i * 0.18, 0.06, 5, this.sfxBus));
+  }
+
+  partSea() {                        // the sea splits: a huge rushing roar from both sides, then a deep, settled hum
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.45, attack: 0.8, release: 2.6, type: 'lowpass', from: 300, to: 2400, q: 0.4, buffer: this.pink });
+    this.noiseBurst({ at: now + 0.15, peak: 0.4, attack: 1.2, release: 3, type: 'lowpass', from: 120, to: 500, q: 0.5, buffer: this.brown });
+    [0, 7, 12, 16, 19, 24].forEach((s, i) => this.bell(KEY - 12 + s, now + 1.2 + i * 0.15, 0.07, 5, this.sfxBus));
   }
 
   // While the narrator speaks, the music and ambience step back.

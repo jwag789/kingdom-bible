@@ -3,22 +3,86 @@
     {
       "id": "genesis-1",
       "title": "In the Beginning",
-      "reference": "Genesis 1–2"
+      "reference": "Genesis 1:1 – 2:3",
+      "coverFrom": "art/beginning/light.jpg",
+      "testament": "old",
+      "cover": "art/covers/genesis-1.jpg"
+    },
+    {
+      "id": "garden",
+      "title": "The Garden",
+      "reference": "Genesis 2–3",
+      "coverFrom": "art/garden/eden/garden.jpg",
+      "testament": "old",
+      "cover": "art/covers/garden.jpg"
     },
     {
       "id": "noah",
       "title": "Noah's Ark",
-      "reference": "Genesis 6–9"
+      "reference": "Genesis 6:9 – 9:17",
+      "coverFrom": "art/noah/animals/parade.jpg",
+      "testament": "old",
+      "cover": "art/covers/noah.jpg"
     },
     {
-      "id": "christmas",
-      "title": "The First Christmas",
-      "reference": "Luke 1–2 · Matthew 2"
+      "id": "abraham",
+      "title": "Abraham and the Stars",
+      "reference": "Genesis 12–21",
+      "coverFrom": "art/abraham/stars/night.jpg",
+      "testament": "old",
+      "cover": "art/covers/abraham.jpg"
+    },
+    {
+      "id": "moses-baby",
+      "title": "Baby Moses",
+      "reference": "Exodus 1–2",
+      "coverFrom": "art/moses/hidden/reeds.jpg",
+      "testament": "old",
+      "cover": "art/covers/moses-baby.jpg",
+      "draft": true
+    },
+    {
+      "id": "moses-plagues",
+      "title": "Let My People Go",
+      "reference": "Exodus 3–12",
+      "coverFrom": "art/moses/bush/fire.jpg",
+      "testament": "old",
+      "cover": "art/covers/moses-plagues.jpg",
+      "draft": true
+    },
+    {
+      "id": "moses-sea",
+      "title": "The Red Sea",
+      "reference": "Exodus 13–15",
+      "coverFrom": "art/moses/sea/shore.jpg",
+      "testament": "old",
+      "cover": "art/covers/moses-sea.jpg",
+      "draft": true
     },
     {
       "id": "jonah",
       "title": "Jonah and the Big Fish",
-      "reference": "Jonah 1–4"
+      "reference": "Jonah 1–4",
+      "coverFrom": "art/jonah/fish/beach.jpg",
+      "testament": "old",
+      "cover": "art/covers/jonah.jpg"
+    },
+    {
+      "id": "christmas",
+      "title": "The First Christmas",
+      "reference": "Luke 1–2 · Matthew 2",
+      "coverFrom": "art/christmas/birth/stable.jpg",
+      "testament": "new",
+      "cover": "art/covers/christmas.jpg"
+    },
+    {
+      "id": "follow",
+      "title": "Follow Me",
+      "reference": "Matthew 3 · Luke 5 · Mark 4",
+      "coverFrom": "art/follow/baptism/heaven.jpg",
+      "testament": "new",
+      "cover": "art/covers/follow.jpg",
+      "draft": true
     }
   ]
 }

@@ -1,0 +1,262 @@
+{
+  "title": "Baby Moses",
+  "reference": "Exodus 1–2",
+  "subtitle": "The story of a baby in a basket and a big sister who watched",
+  "book": "Exodus",
+  "text": "data/moses-baby-text.json",
+  "art": "art/moses",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "moses",
+      "name": "Moses",
+      "prompt": "Moses standing alone, full body, front view: a strong man with fair sun-tanned skin, a full dark-brown beard and long dark hair, wearing a shepherd's robe of brown and sand with a red sash, holding a long wooden staff",
+      "src": "art/moses/cast/moses.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 410038,
+        "at": "2026-11-03T03:05:51.720Z"
+      }
+    },
+    {
+      "id": "miriam",
+      "name": "Miriam",
+      "prompt": "Miriam standing alone, full body, front view: a young woman with fair sun-tanned skin and long dark hair in a braid, wearing a bright yellow-and-orange robe, holding a round tambourine",
+      "src": "art/moses/cast/miriam.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 830440,
+        "at": "2026-11-03T03:14:51.034Z"
+      }
+    },
+    {
+      "id": "pharaoh",
+      "name": "Pharaoh",
+      "prompt": "Pharaoh standing alone, full body, front view: a proud Egyptian king with a stern face, wearing a blue-and-gold striped headdress, a wide golden collar and white linen robes, holding a golden crook",
+      "src": "art/moses/cast/pharaoh.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 684520,
+        "at": "2026-11-03T03:15:03.654Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "slaves",
+      "eyebrow": "Part One",
+      "title": "Slaves in Egypt",
+      "verses": [
+        "1:8",
+        "1:14"
+      ],
+      "beats": [
+        "Long ago, God’s people, the Israelites, lived in Egypt. There were so many of them that the new king, Pharaoh, grew afraid.",
+        "So Pharaoh made them his slaves. They had to work hard all day long, making bricks out of mud and straw under the hot sun."
+      ],
+      "layers": [
+        {
+          "id": "bricks",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bricks",
+          "prompt": "A hot afternoon in ancient Egypt: tired Israelite slaves in simple robes shape mud bricks and carry them in baskets toward a half-built temple, right of center, while a stern Egyptian taskmaster watches; palm trees and the river Nile in the distance",
+          "src": "art/moses/slaves/bricks.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 690179,
+            "at": "2026-11-03T03:15:22.374Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the bricks",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "night"
+      }
+    },
+    {
+      "id": "hidden",
+      "eyebrow": "Part Two",
+      "title": "A Baby in a Basket",
+      "verses": [
+        "2:1",
+        "2:4"
+      ],
+      "beats": [
+        "One Israelite mother had a baby boy. To keep him safe from Pharaoh, she hid him for three whole months.",
+        "When he got too big to hide, she made a little basket, covered it with tar so it would float, and laid him among the reeds by the river Nile. His big sister Miriam stayed to watch."
+      ],
+      "layers": [
+        {
+          "id": "reeds",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "reeds",
+          "prompt": "At dawn among tall reeds at the edge of the river Nile: a mother gently sets a little woven basket with her baby inside onto the water, right of center, as a young girl, Miriam, watches from behind the reeds",
+          "refs": [
+            "miriam"
+          ],
+          "src": "art/moses/hidden/reeds.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 71025,
+            "at": "2026-11-03T03:15:49.957Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.72
+        },
+        {
+          "type": "flutter",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the reeds",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "birds"
+        ],
+        "mood": "rest"
+      }
+    },
+    {
+      "id": "princess",
+      "eyebrow": "Part Three",
+      "title": "The Princess Finds Him",
+      "verses": [
+        "2:5",
+        "2:10"
+      ],
+      "beats": [
+        "Pharaoh’s daughter came down to the river to bathe. She saw the basket, opened it — and there was the baby, crying! She felt sorry for him.",
+        "Miriam ran up. “Shall I find someone to feed the baby for you?” And she brought the baby’s own mother!",
+        "When the boy grew older, the princess adopted him as her son, and she named him Moses."
+      ],
+      "layers": [
+        {
+          "id": "nile",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "nile",
+          "prompt": "Tall green reeds along the river Nile in morning light: a little woven basket with a baby inside floats among the reeds, right of center, as an Egyptian princess in white linen with her maids kneels at the water's edge to lift it out, while a young girl, Miriam, peeks out from the reeds",
+          "refs": [
+            "miriam"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.72
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.6
+        }
+      ],
+      "touch": {
+        "hint": "Tap the river",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "birds"
+        ],
+        "mood": "warm"
+      }
+    },
+    {
+      "id": "runs",
+      "eyebrow": "Part Four",
+      "title": "Moses Runs Away",
+      "verses": [
+        "2:11",
+        "2:22"
+      ],
+      "beats": [
+        "Moses grew up in Pharaoh’s palace. But one day he saw an Egyptian beating one of his own people, and Moses got so angry that he did something terrible.",
+        "Pharaoh was furious, so Moses ran far away into the desert.",
+        "There, by a well, he helped some young shepherd girls water their sheep. He married one of them, Zipporah, and became a shepherd himself."
+      ],
+      "layers": [
+        {
+          "id": "well",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "well",
+          "prompt": "A stone well in the wide desert of Midian at sunset: Moses, a young man, helps seven shepherd girls draw water for their thirsty sheep and goats, right of center",
+          "refs": [
+            "moses"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "warm"
+      }
+    }
+  ],
+  "next": {
+    "story": "moses-plagues",
+    "title": "Let My People Go",
+    "sub": "Exodus 3–12: the story of a burning bush, a stubborn king and a very froggy palace."
+  }
+}

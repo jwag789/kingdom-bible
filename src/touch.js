@@ -533,4 +533,81 @@ export const TOUCH = {
       },
     };
   },
+
+  // Adam names the animals: tap and a name floats up from where you tapped.
+  names() {
+    const NAMES = ['Lion!', 'Elephant!', 'Giraffe!', 'Hippo!', 'Zebra!', 'Peacock!', 'Rabbit!', 'Bear!', 'Camel!', 'Owl!', 'Monkey!',
+      'Tiger!', 'Kangaroo!', 'Turtle!', 'Penguin!', 'Fox!', 'Hedgehog!', 'Parrot!', 'Crocodile!', 'Squirrel!'];
+    const words = [];
+    let next = (Math.random() * NAMES.length) | 0;
+    return {
+      tap(x, y, t) {
+        words.push({ x, y, t, text: NAMES[next++ % NAMES.length], tilt: rand(-0.12, 0.12) });
+        if (words.length > 12) words.shift();
+      },
+      draw(ctx, w, h, t, alpha) {
+        ctx.save();
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        for (let i = words.length - 1; i >= 0; i--) {
+          const wd = words[i], age = t - wd.t;
+          if (age < 0) continue;
+          if (age > 3) { words.splice(i, 1); continue; }
+          const pop = age < 0.3 ? easeOut(age / 0.3) : 1;
+          const size = 30 * unit(w) * (0.6 + 0.4 * pop);
+          ctx.save();
+          ctx.translate(wd.x * w, (wd.y - age * 0.04) * h);
+          ctx.rotate(wd.tilt);
+          ctx.globalAlpha = alpha * clamp01((3 - age) / 0.8);
+          ctx.font = `600 ${size}px 'Cormorant Garamond', Georgia, serif`;
+          ctx.lineWidth = size * 0.18;
+          ctx.strokeStyle = 'rgba(30,22,14,0.7)';
+          ctx.strokeText(wd.text, 0, 0);
+          ctx.fillStyle = '#fff3d6';
+          ctx.fillText(wd.text, 0, 0);
+          ctx.restore();
+        }
+        ctx.restore();
+      },
+    };
+  },
+
+  // The plague of frogs: tap and a little green frog leaps across the floor.
+  frogs() {
+    const frogs = [];
+    return {
+      tap(x, y, t) {
+        for (let i = 0; i < 2; i++) frogs.push({ x0: x + rand(-0.02, 0.02), y0: y, t: t + i * 0.12, dir: Math.random() < 0.5 ? -1 : 1, s: rand(0.8, 1.2) });
+        while (frogs.length > 30) frogs.shift();
+      },
+      draw(ctx, w, h, t, alpha) {
+        ctx.save();
+        for (let i = frogs.length - 1; i >= 0; i--) {
+          const f = frogs[i], age = t - f.t;
+          if (age < 0) continue;
+          if (age > 3.2) { frogs.splice(i, 1); continue; }
+          // Three hops, each a little arc.
+          const hop = Math.min(2, Math.floor(age / 0.55)), p = clamp01((age - hop * 0.55) / 0.45);
+          const x = (f.x0 + f.dir * (hop + Math.min(1, p)) * 0.045) * w;
+          const y = (f.y0 - (p < 1 ? Math.sin(p * Math.PI) * 0.05 : 0)) * h;
+          const s = 12 * unit(w) * f.s;
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.scale(f.dir, 1);
+          ctx.globalAlpha = alpha * clamp01((3.2 - age) / 0.6);
+          ctx.fillStyle = '#5fae3e';
+          ctx.beginPath(); ctx.ellipse(0, 0, s, s * 0.7, -0.2, 0, 6.28); ctx.fill();                 // body
+          ctx.beginPath(); ctx.ellipse(-s * 0.9, s * 0.35, s * 0.55, s * 0.22, 0.4, 0, 6.28); ctx.fill(); // back leg
+          ctx.fillStyle = '#7cc957';
+          ctx.beginPath(); ctx.ellipse(s * 0.2, s * 0.15, s * 0.6, s * 0.35, -0.2, 0, 6.28); ctx.fill(); // belly
+          ctx.fillStyle = '#fff';
+          ctx.beginPath(); ctx.arc(s * 0.55, -s * 0.55, s * 0.28, 0, 6.28); ctx.fill();                 // eye
+          ctx.fillStyle = '#1d1d1d';
+          ctx.beginPath(); ctx.arc(s * 0.62, -s * 0.55, s * 0.13, 0, 6.28); ctx.fill();
+          ctx.restore();
+        }
+        ctx.restore();
+      },
+    };
+  },
 };

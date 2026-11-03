@@ -8,12 +8,23 @@ import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
 import { Collection, stickerSrc, showToast, showLambToast, openBook } from './stickers.js';
 import { buzz, isApp } from './native.js';
+import { openGame } from './games.js';
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
 const asked = new URLSearchParams(location.search).get('story');
 const storyId = /^[a-z0-9-]+$/.test(asked ?? '') ? asked : 'genesis-1';
 const story = await (await fetch(`data/${storyId}.json`)).json();
 const library = await fetch('data/library.json').then(r => r.json(), () => ({ stories: [] }));
+const games = await fetch('data/games.json').then(r => r.json(), () => ({}));
+const game = games[storyId];
+// A button that opens the story's little game (it's always optional).
+const gameButton = cls => {
+  const b = document.createElement('button');
+  b.className = `begin ${cls}`;
+  b.textContent = `Play: ${game.title}`;
+  b.onclick = () => playGame();
+  return b;
+};
 document.title = `${story.title} · Kingdom Bible`;
 
 // Installed from the web, it keeps working offline (see sw.js). The store apps carry everything inside already.
@@ -101,18 +112,10 @@ addSlide('cover', { scene: 0, beat: -1, at: 0, scrim: 0.9, key: 'cover', say: `$
   const buttons = node('div', 'starts', '');
   buttons.append(node('button', 'begin', 'Begin'), node('button', 'begin read', 'Read it to me'));
   col.append(node('div', 'kicker', story.reference), node('h1', '', story.title), node('div', 'sub', story.subtitle), buttons);
-  // The other stories, one tap away.
-  const others = library.stories.filter(s => s.id !== storyId);
-  if (others.length) {
-    const more = node('div', 'more', '');
-    more.append(node('span', '', 'More stories'));
-    for (const other of others) {
-      const link = node('a', '', other.title);
-      link.href = `?story=${other.id}`;
-      more.append(link);
-    }
-    col.append(more);
-  }
+  // Back to the Stories page.
+  const all = node('a', 'all-stories', '← All stories');
+  all.href = './';
+  col.append(all);
 });
 
 let beats = 0;
@@ -127,6 +130,7 @@ story.scenes.forEach((s, si) => {
       const entry = narrator.manifest[slide.key];
       slide.words = { spans, starts, times: entry ? alignWords(spans, entry.words) : null };
       col.append(node('div', 'eyebrow mini', `${s.eyebrow} · ${s.title}`), p);
+      if (bi === s.beats.length - 1 && game?.scene === s.id) col.append(gameButton('play-game'));
       if (bi === s.beats.length - 1) col.append(sourceFor(s));
     });
     beats++;
@@ -140,9 +144,13 @@ addSlide('end', { scene: story.scenes.length - 1, beat: beats - 1, at: 1, scrim:
       const go = node('a', 'begin', `Read ${next.title}`);
       go.href = `?story=${next.story}`;
       const starts = node('div', 'starts', '');
+      if (game) starts.append(gameButton('read'));
       starts.append(go);
       col.append(starts);
     }
+    const all = node('a', 'all-stories', '← All stories');
+    all.href = './';
+    col.append(all);
   } else {
     col.append(node('div', 'eyebrow', 'The End'), node('h2', '', story.title));
   }
@@ -247,13 +255,23 @@ stage.onLamb = si => {
 bookButton.onclick = () => {
   narrator.stop();
   clearTimeout(advanceTimer);
-  openBook({ collection, library, onClose: () => { bookButton.focus(); narrate(); } });
+  openBook({ collection, library, games, onClose: () => { bookButton.focus(); narrate(); } });
 };
+
+function playGame() {
+  sound.unlock();
+  narrator.stop();
+  clearTimeout(advanceTimer);
+  const key = `${storyId}/game:${game.id}`;
+  collection.add(`${storyId}/game-unlocked:${game.id}`);   // from now on it's on the Stories page too
+  openGame({ storyId, game, sound, onWin: () => { const first = collection.add(key); showCount(); return first; }, onClose: () => narrate() });
+}
 
 stage.onEvent = (kind, e) => {
   const si = slides[index].scene;
   if (kind === 'reveal') {
-    ({ promise: () => sound.promise(), choir: () => sound.glory(), gulp: () => sound.gulp(), grow: () => sound.grow() }[e.layer.sfx]
+    ({ promise: () => sound.promise(), choir: () => sound.glory(), gulp: () => sound.gulp(), grow: () => sound.grow(),
+      flame: () => sound.flame(), part: () => sound.partSea(), hiss: () => sound.hiss() }[e.layer.sfx]
       ?? (() => sound.lightBurst()))();
     buzz('HEAVY');
     if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
@@ -273,6 +291,8 @@ stage.onEvent = (kind, e) => {
     dust: () => sound.heehaw(),
     sing: () => sound.sing(e.spec.voice, e.y),
     bubbles: () => sound.bubble(e.y),
+    names: () => sound.animalName(),
+    frogs: () => sound.ribbit(),
   }[e.type];
   play?.();
   buzz(e.type === 'lightning' ? 'HEAVY' : 'LIGHT');
@@ -300,6 +320,9 @@ function go(to) {
   document.body.classList.toggle('at-cover', to === 0);
   changedAt = performance.now();
   history.replaceState(null, '', `#${to}`);
+  // Remembered for the Stories page's "Continue reading".
+  const here = story.scenes[slides[to].scene];
+  try { localStorage.setItem('kb:last', JSON.stringify({ story: storyId, at: to, where: `${here.eyebrow} · ${here.title}` })); } catch {}
 
   sound.turn();
   if (slides[to].kind === 'title') sound.arrive();
@@ -321,7 +344,8 @@ deck.querySelector('.begin.read').onclick = () => { readAloud = true; setReadAlo
 const SETTLE_MS = 650, GESTURE_GAP_MS = 160, NEW_GESTURE_MS = 600;
 let lastWheel = -Infinity, lastSize = 0, wheelSum = 0, spent = false;
 const scrollsInside = (el, dy) => el && (dy > 0 ? el.scrollTop + el.clientHeight < el.scrollHeight - 1 : el.scrollTop > 0);
-const bookOpen = () => document.body.classList.contains('book-open');
+// While the sticker book or a game is open, the page stays put.
+const bookOpen = () => document.body.classList.contains('book-open') || document.body.classList.contains('game-open');
 addEventListener('wheel', e => {
   if (e.ctrlKey || bookOpen()) return;                            // pinch-zoom, or reading the sticker book
   if (scrollsInside(e.target.closest?.('.verses'), e.deltaY)) return; // let the verse list scroll

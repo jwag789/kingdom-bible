@@ -1,0 +1,1518 @@
+{
+ "cover": {
+  "src": "audio/moses-plagues/cover.m4a",
+  "text": "Let My People Go.",
+  "voice": "bm_lewis",
+  "duration": 2.925,
+  "words": [
+   {
+    "w": "Let",
+    "s": 0.725,
+    "e": 0.95
+   },
+   {
+    "w": "My",
+    "s": 0.95,
+    "e": 1.275
+   },
+   {
+    "w": "People",
+    "s": 1.275,
+    "e": 1.675
+   },
+   {
+    "w": "Go",
+    "s": 1.675,
+    "e": 2.225
+   }
+  ]
+ },
+ "bush-title": {
+  "src": "audio/moses-plagues/bush-title.m4a",
+  "text": "Part One. The Burning Bush.",
+  "voice": "bm_lewis",
+  "duration": 3.55,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.975
+   },
+   {
+    "w": "One",
+    "s": 0.975,
+    "e": 1.45
+   },
+   {
+    "w": "The",
+    "s": 1.575,
+    "e": 1.712
+   },
+   {
+    "w": "Burning",
+    "s": 1.712,
+    "e": 2.2
+   },
+   {
+    "w": "Bush",
+    "s": 2.2,
+    "e": 2.875
+   }
+  ]
+ },
+ "bush-0": {
+  "src": "audio/moses-plagues/bush-0.m4a",
+  "text": "Moses grew up and became a shepherd. One day he saw something amazing: a bush on fire — but it didn’t burn up!",
+  "voice": "bm_lewis",
+  "duration": 9.625,
+  "words": [
+   {
+    "w": "Moses",
+    "s": 0.725,
+    "e": 1.225
+   },
+   {
+    "w": "grew",
+    "s": 1.225,
+    "e": 1.45
+   },
+   {
+    "w": "up",
+    "s": 1.45,
+    "e": 1.688
+   },
+   {
+    "w": "and",
+    "s": 1.688,
+    "e": 1.788
+   },
+   {
+    "w": "became",
+    "s": 1.788,
+    "e": 2.175
+   },
+   {
+    "w": "a",
+    "s": 2.175,
+    "e": 2.312
+   },
+   {
+    "w": "shepherd",
+    "s": 2.312,
+    "e": 3.175
+   },
+   {
+    "w": "One",
+    "s": 3.35,
+    "e": 3.625
+   },
+   {
+    "w": "day",
+    "s": 3.625,
+    "e": 3.925
+   },
+   {
+    "w": "he",
+    "s": 3.925,
+    "e": 4.05
+   },
+   {
+    "w": "saw",
+    "s": 4.05,
+    "e": 4.3
+   },
+   {
+    "w": "something",
+    "s": 4.3,
+    "e": 4.7
+   },
+   {
+    "w": "amazing",
+    "s": 4.7,
+    "e": 5.65
+   },
+   {
+    "w": "a",
+    "s": 5.787,
+    "e": 5.925
+   },
+   {
+    "w": "bush",
+    "s": 5.925,
+    "e": 6.3
+   },
+   {
+    "w": "on",
+    "s": 6.3,
+    "e": 6.562
+   },
+   {
+    "w": "fire",
+    "s": 6.562,
+    "e": 7.263
+   },
+   {
+    "w": "but",
+    "s": 7.35,
+    "e": 7.487
+   },
+   {
+    "w": "it",
+    "s": 7.487,
+    "e": 7.575
+   },
+   {
+    "w": "didn't",
+    "s": 7.575,
+    "e": 7.938
+   },
+   {
+    "w": "burn",
+    "s": 7.938,
+    "e": 8.3
+   },
+   {
+    "w": "up",
+    "s": 8.3,
+    "e": 8.825
+   }
+  ]
+ },
+ "bush-1": {
+  "src": "audio/moses-plagues/bush-1.m4a",
+  "text": "God spoke from the bush: “Moses! Take off your sandals — this is holy ground. I have seen My people suffering. Go to Pharaoh, and bring My people out of Egypt.”",
+  "voice": "bm_lewis",
+  "duration": 13.175,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.075
+   },
+   {
+    "w": "spoke",
+    "s": 1.075,
+    "e": 1.5
+   },
+   {
+    "w": "from",
+    "s": 1.5,
+    "e": 1.663
+   },
+   {
+    "w": "the",
+    "s": 1.663,
+    "e": 1.762
+   },
+   {
+    "w": "bush",
+    "s": 1.762,
+    "e": 2.55
+   },
+   {
+    "w": "Moses",
+    "s": 2.8,
+    "e": 3.625
+   },
+   {
+    "w": "Take",
+    "s": 3.763,
+    "e": 3.987
+   },
+   {
+    "w": "off",
+    "s": 3.987,
+    "e": 4.175
+   },
+   {
+    "w": "your",
+    "s": 4.175,
+    "e": 4.4
+   },
+   {
+    "w": "sandals",
+    "s": 4.4,
+    "e": 4.963
+   },
+   {
+    "w": "this",
+    "s": 5.025,
+    "e": 5.25
+   },
+   {
+    "w": "is",
+    "s": 5.25,
+    "e": 5.425
+   },
+   {
+    "w": "holy",
+    "s": 5.425,
+    "e": 5.925
+   },
+   {
+    "w": "ground",
+    "s": 5.925,
+    "e": 6.8
+   },
+   {
+    "w": "I",
+    "s": 6.925,
+    "e": 7.037
+   },
+   {
+    "w": "have",
+    "s": 7.037,
+    "e": 7.2
+   },
+   {
+    "w": "seen",
+    "s": 7.2,
+    "e": 7.5
+   },
+   {
+    "w": "My",
+    "s": 7.5,
+    "e": 7.688
+   },
+   {
+    "w": "people",
+    "s": 7.688,
+    "e": 8.1
+   },
+   {
+    "w": "suffering",
+    "s": 8.1,
+    "e": 8.9
+   },
+   {
+    "w": "Go",
+    "s": 9.037,
+    "e": 9.275
+   },
+   {
+    "w": "to",
+    "s": 9.275,
+    "e": 9.438
+   },
+   {
+    "w": "Pharaoh",
+    "s": 9.438,
+    "e": 10.1
+   },
+   {
+    "w": "and",
+    "s": 10.175,
+    "e": 10.3
+   },
+   {
+    "w": "bring",
+    "s": 10.3,
+    "e": 10.55
+   },
+   {
+    "w": "My",
+    "s": 10.55,
+    "e": 10.762
+   },
+   {
+    "w": "people",
+    "s": 10.762,
+    "e": 11.15
+   },
+   {
+    "w": "out",
+    "s": 11.15,
+    "e": 11.338
+   },
+   {
+    "w": "of",
+    "s": 11.338,
+    "e": 11.5
+   },
+   {
+    "w": "Egypt",
+    "s": 11.5,
+    "e": 12.35
+   }
+  ]
+ },
+ "bush-2": {
+  "src": "audio/moses-plagues/bush-2.m4a",
+  "text": "“But who am I?” said Moses. And God answered, “I will be with you.”",
+  "voice": "bm_lewis",
+  "duration": 6.425,
+  "words": [
+   {
+    "w": "But",
+    "s": 0.675,
+    "e": 0.838
+   },
+   {
+    "w": "who",
+    "s": 0.838,
+    "e": 1.087
+   },
+   {
+    "w": "am",
+    "s": 1.087,
+    "e": 1.288
+   },
+   {
+    "w": "I",
+    "s": 1.288,
+    "e": 1.675
+   },
+   {
+    "w": "said",
+    "s": 1.85,
+    "e": 2.1
+   },
+   {
+    "w": "Moses",
+    "s": 2.1,
+    "e": 2.925
+   },
+   {
+    "w": "And",
+    "s": 3.05,
+    "e": 3.212
+   },
+   {
+    "w": "God",
+    "s": 3.212,
+    "e": 3.5
+   },
+   {
+    "w": "answered",
+    "s": 3.5,
+    "e": 4.15
+   },
+   {
+    "w": "I",
+    "s": 4.35,
+    "e": 4.5
+   },
+   {
+    "w": "will",
+    "s": 4.5,
+    "e": 4.688
+   },
+   {
+    "w": "be",
+    "s": 4.688,
+    "e": 4.95
+   },
+   {
+    "w": "with",
+    "s": 4.95,
+    "e": 5.175
+   },
+   {
+    "w": "you",
+    "s": 5.175,
+    "e": 5.7
+   }
+  ]
+ },
+ "staff-title": {
+  "src": "audio/moses-plagues/staff-title.m4a",
+  "text": "Part Two. The Staff and the Snake.",
+  "voice": "bm_lewis",
+  "duration": 4.1,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Two",
+    "s": 0.963,
+    "e": 1.475
+   },
+   {
+    "w": "The",
+    "s": 1.6,
+    "e": 1.75
+   },
+   {
+    "w": "Staff",
+    "s": 1.75,
+    "e": 2.375
+   },
+   {
+    "w": "and",
+    "s": 2.375,
+    "e": 2.487
+   },
+   {
+    "w": "the",
+    "s": 2.487,
+    "e": 2.625
+   },
+   {
+    "w": "Snake",
+    "s": 2.625,
+    "e": 3.4
+   }
+  ]
+ },
+ "staff-0": {
+  "src": "audio/moses-plagues/staff-0.m4a",
+  "text": "“But what if they don’t believe me?” Moses asked. “What is that in your hand?” said God. “A staff,” said Moses.",
+  "voice": "bm_lewis",
+  "duration": 9.625,
+  "words": [
+   {
+    "w": "But",
+    "s": 0.65,
+    "e": 0.775
+   },
+   {
+    "w": "what",
+    "s": 0.775,
+    "e": 0.95
+   },
+   {
+    "w": "if",
+    "s": 0.95,
+    "e": 1.1
+   },
+   {
+    "w": "they",
+    "s": 1.1,
+    "e": 1.25
+   },
+   {
+    "w": "don't",
+    "s": 1.25,
+    "e": 1.5
+   },
+   {
+    "w": "believe",
+    "s": 1.5,
+    "e": 1.975
+   },
+   {
+    "w": "me",
+    "s": 1.975,
+    "e": 2.3
+   },
+   {
+    "w": "Moses",
+    "s": 2.45,
+    "e": 2.913
+   },
+   {
+    "w": "asked",
+    "s": 2.913,
+    "e": 3.65
+   },
+   {
+    "w": "What",
+    "s": 3.85,
+    "e": 4.025
+   },
+   {
+    "w": "is",
+    "s": 4.025,
+    "e": 4.175
+   },
+   {
+    "w": "that",
+    "s": 4.175,
+    "e": 4.45
+   },
+   {
+    "w": "in",
+    "s": 4.45,
+    "e": 4.575
+   },
+   {
+    "w": "your",
+    "s": 4.575,
+    "e": 4.812
+   },
+   {
+    "w": "hand",
+    "s": 4.812,
+    "e": 5.425
+   },
+   {
+    "w": "said",
+    "s": 5.6,
+    "e": 5.85
+   },
+   {
+    "w": "God",
+    "s": 5.85,
+    "e": 6.525
+   },
+   {
+    "w": "A",
+    "s": 6.8,
+    "e": 6.912
+   },
+   {
+    "w": "staff",
+    "s": 6.912,
+    "e": 7.65
+   },
+   {
+    "w": "said",
+    "s": 7.775,
+    "e": 8.025
+   },
+   {
+    "w": "Moses",
+    "s": 8.025,
+    "e": 8.875
+   }
+  ]
+ },
+ "staff-1": {
+  "src": "audio/moses-plagues/staff-1.m4a",
+  "text": "“Throw it on the ground.” So Moses threw it down — and it turned into a snake! Moses jumped back.",
+  "voice": "bm_lewis",
+  "duration": 8.625,
+  "words": [
+   {
+    "w": "Throw",
+    "s": 0.75,
+    "e": 1.025
+   },
+   {
+    "w": "it",
+    "s": 1.025,
+    "e": 1.137
+   },
+   {
+    "w": "on",
+    "s": 1.137,
+    "e": 1.262
+   },
+   {
+    "w": "the",
+    "s": 1.262,
+    "e": 1.35
+   },
+   {
+    "w": "ground",
+    "s": 1.35,
+    "e": 2.2
+   },
+   {
+    "w": "So",
+    "s": 2.388,
+    "e": 2.612
+   },
+   {
+    "w": "Moses",
+    "s": 2.612,
+    "e": 3.175
+   },
+   {
+    "w": "threw",
+    "s": 3.175,
+    "e": 3.425
+   },
+   {
+    "w": "it",
+    "s": 3.425,
+    "e": 3.587
+   },
+   {
+    "w": "down",
+    "s": 3.587,
+    "e": 4.237
+   },
+   {
+    "w": "and",
+    "s": 4.325,
+    "e": 4.438
+   },
+   {
+    "w": "it",
+    "s": 4.438,
+    "e": 4.537
+   },
+   {
+    "w": "turned",
+    "s": 4.537,
+    "e": 4.888
+   },
+   {
+    "w": "into",
+    "s": 4.888,
+    "e": 5.088
+   },
+   {
+    "w": "a",
+    "s": 5.088,
+    "e": 5.213
+   },
+   {
+    "w": "snake",
+    "s": 5.213,
+    "e": 6.025
+   },
+   {
+    "w": "Moses",
+    "s": 6.225,
+    "e": 6.862
+   },
+   {
+    "w": "jumped",
+    "s": 6.862,
+    "e": 7.25
+   },
+   {
+    "w": "back",
+    "s": 7.25,
+    "e": 7.85
+   }
+  ]
+ },
+ "staff-2": {
+  "src": "audio/moses-plagues/staff-2.m4a",
+  "text": "“Now pick it up by the tail,” said God. Moses did — and it turned back into a staff!",
+  "voice": "bm_lewis",
+  "duration": 7.875,
+  "words": [
+   {
+    "w": "Now",
+    "s": 0.725,
+    "e": 0.988
+   },
+   {
+    "w": "pick",
+    "s": 0.988,
+    "e": 1.188
+   },
+   {
+    "w": "it",
+    "s": 1.188,
+    "e": 1.288
+   },
+   {
+    "w": "up",
+    "s": 1.288,
+    "e": 1.475
+   },
+   {
+    "w": "by",
+    "s": 1.475,
+    "e": 1.65
+   },
+   {
+    "w": "the",
+    "s": 1.65,
+    "e": 1.8
+   },
+   {
+    "w": "tail",
+    "s": 1.8,
+    "e": 2.4
+   },
+   {
+    "w": "said",
+    "s": 2.575,
+    "e": 2.825
+   },
+   {
+    "w": "God",
+    "s": 2.825,
+    "e": 3.5
+   },
+   {
+    "w": "Moses",
+    "s": 3.725,
+    "e": 4.375
+   },
+   {
+    "w": "did",
+    "s": 4.375,
+    "e": 5.037
+   },
+   {
+    "w": "and",
+    "s": 5.175,
+    "e": 5.287
+   },
+   {
+    "w": "it",
+    "s": 5.287,
+    "e": 5.388
+   },
+   {
+    "w": "turned",
+    "s": 5.388,
+    "e": 5.7
+   },
+   {
+    "w": "back",
+    "s": 5.7,
+    "e": 5.938
+   },
+   {
+    "w": "into",
+    "s": 5.938,
+    "e": 6.138
+   },
+   {
+    "w": "a",
+    "s": 6.138,
+    "e": 6.25
+   },
+   {
+    "w": "staff",
+    "s": 6.25,
+    "e": 7.1
+   }
+  ]
+ },
+ "frogs-title": {
+  "src": "audio/moses-plagues/frogs-title.m4a",
+  "text": "Part Three. Let My People Go!.",
+  "voice": "bm_lewis",
+  "duration": 3.925,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.975
+   },
+   {
+    "w": "Three",
+    "s": 0.975,
+    "e": 1.575
+   },
+   {
+    "w": "Let",
+    "s": 1.712,
+    "e": 1.925
+   },
+   {
+    "w": "My",
+    "s": 1.925,
+    "e": 2.188
+   },
+   {
+    "w": "People",
+    "s": 2.188,
+    "e": 2.575
+   },
+   {
+    "w": "Go",
+    "s": 2.575,
+    "e": 3.1
+   }
+  ]
+ },
+ "frogs-0": {
+  "src": "audio/moses-plagues/frogs-0.m4a",
+  "text": "Moses went to Pharaoh. “God says: Let My people go!” But Pharaoh said no.",
+  "voice": "bm_lewis",
+  "duration": 7.275,
+  "words": [
+   {
+    "w": "Moses",
+    "s": 0.725,
+    "e": 1.225
+   },
+   {
+    "w": "went",
+    "s": 1.225,
+    "e": 1.4
+   },
+   {
+    "w": "to",
+    "s": 1.4,
+    "e": 1.538
+   },
+   {
+    "w": "Pharaoh",
+    "s": 1.538,
+    "e": 2.25
+   },
+   {
+    "w": "God",
+    "s": 2.525,
+    "e": 2.888
+   },
+   {
+    "w": "says",
+    "s": 2.888,
+    "e": 3.3
+   },
+   {
+    "w": "Let",
+    "s": 3.375,
+    "e": 3.575
+   },
+   {
+    "w": "My",
+    "s": 3.575,
+    "e": 3.788
+   },
+   {
+    "w": "people",
+    "s": 3.788,
+    "e": 4.188
+   },
+   {
+    "w": "go",
+    "s": 4.188,
+    "e": 4.775
+   },
+   {
+    "w": "But",
+    "s": 4.95,
+    "e": 5.15
+   },
+   {
+    "w": "Pharaoh",
+    "s": 5.15,
+    "e": 5.662
+   },
+   {
+    "w": "said",
+    "s": 5.662,
+    "e": 5.925
+   },
+   {
+    "w": "no",
+    "s": 5.925,
+    "e": 6.55
+   }
+  ]
+ },
+ "frogs-1": {
+  "src": "audio/moses-plagues/frogs-1.m4a",
+  "text": "So God sent plagues on Egypt — like frogs! Frogs in the beds, frogs in the ovens, frogs on Pharaoh’s throne!",
+  "voice": "bm_lewis",
+  "duration": 9.975,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.875
+   },
+   {
+    "w": "God",
+    "s": 0.875,
+    "e": 1.188
+   },
+   {
+    "w": "sent",
+    "s": 1.188,
+    "e": 1.512
+   },
+   {
+    "w": "plagues",
+    "s": 1.512,
+    "e": 2.013
+   },
+   {
+    "w": "on",
+    "s": 2.013,
+    "e": 2.188
+   },
+   {
+    "w": "Egypt",
+    "s": 2.188,
+    "e": 2.675
+   },
+   {
+    "w": "like",
+    "s": 2.75,
+    "e": 3.0
+   },
+   {
+    "w": "frogs",
+    "s": 3.0,
+    "e": 3.925
+   },
+   {
+    "w": "Frogs",
+    "s": 4.138,
+    "e": 4.638
+   },
+   {
+    "w": "in",
+    "s": 4.638,
+    "e": 4.737
+   },
+   {
+    "w": "the",
+    "s": 4.737,
+    "e": 4.838
+   },
+   {
+    "w": "beds",
+    "s": 4.838,
+    "e": 5.4
+   },
+   {
+    "w": "frogs",
+    "s": 5.525,
+    "e": 6.037
+   },
+   {
+    "w": "in",
+    "s": 6.037,
+    "e": 6.112
+   },
+   {
+    "w": "the",
+    "s": 6.112,
+    "e": 6.225
+   },
+   {
+    "w": "ovens",
+    "s": 6.225,
+    "e": 6.875
+   },
+   {
+    "w": "frogs",
+    "s": 7.037,
+    "e": 7.562
+   },
+   {
+    "w": "on",
+    "s": 7.562,
+    "e": 7.775
+   },
+   {
+    "w": "Pharaoh's",
+    "s": 7.775,
+    "e": 8.375
+   },
+   {
+    "w": "throne",
+    "s": 8.375,
+    "e": 9.225
+   }
+  ]
+ },
+ "frogs-2": {
+  "src": "audio/moses-plagues/frogs-2.m4a",
+  "text": "Again and again Pharaoh said no. But at last, he let God’s people go.",
+  "voice": "bm_lewis",
+  "duration": 6.925,
+  "words": [
+   {
+    "w": "Again",
+    "s": 0.7,
+    "e": 1.15
+   },
+   {
+    "w": "and",
+    "s": 1.15,
+    "e": 1.275
+   },
+   {
+    "w": "again",
+    "s": 1.275,
+    "e": 1.788
+   },
+   {
+    "w": "Pharaoh",
+    "s": 1.788,
+    "e": 2.288
+   },
+   {
+    "w": "said",
+    "s": 2.288,
+    "e": 2.55
+   },
+   {
+    "w": "no",
+    "s": 2.55,
+    "e": 3.225
+   },
+   {
+    "w": "But",
+    "s": 3.375,
+    "e": 3.513
+   },
+   {
+    "w": "at",
+    "s": 3.513,
+    "e": 3.6
+   },
+   {
+    "w": "last",
+    "s": 3.6,
+    "e": 4.25
+   },
+   {
+    "w": "he",
+    "s": 4.375,
+    "e": 4.5
+   },
+   {
+    "w": "let",
+    "s": 4.5,
+    "e": 4.75
+   },
+   {
+    "w": "God's",
+    "s": 4.75,
+    "e": 5.2
+   },
+   {
+    "w": "people",
+    "s": 5.2,
+    "e": 5.575
+   },
+   {
+    "w": "go",
+    "s": 5.575,
+    "e": 6.175
+   }
+  ]
+ },
+ "passover-title": {
+  "src": "audio/moses-plagues/passover-title.m4a",
+  "text": "Part Four. The First Passover.",
+  "voice": "bm_lewis",
+  "duration": 3.95,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 1.012
+   },
+   {
+    "w": "Four",
+    "s": 1.012,
+    "e": 1.55
+   },
+   {
+    "w": "The",
+    "s": 1.675,
+    "e": 1.825
+   },
+   {
+    "w": "First",
+    "s": 1.825,
+    "e": 2.237
+   },
+   {
+    "w": "Passover",
+    "s": 2.237,
+    "e": 3.225
+   }
+  ]
+ },
+ "passover-0": {
+  "src": "audio/moses-plagues/passover-0.m4a",
+  "text": "God told His people to get ready. “Eat a special meal tonight, with your sandals on and your bags packed. Mark your doorposts with the blood of a lamb, and death will pass over your homes.”",
+  "voice": "bm_lewis",
+  "duration": 15.05,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "told",
+    "s": 1.062,
+    "e": 1.363
+   },
+   {
+    "w": "His",
+    "s": 1.363,
+    "e": 1.55
+   },
+   {
+    "w": "people",
+    "s": 1.55,
+    "e": 1.925
+   },
+   {
+    "w": "to",
+    "s": 1.925,
+    "e": 2.05
+   },
+   {
+    "w": "get",
+    "s": 2.05,
+    "e": 2.275
+   },
+   {
+    "w": "ready",
+    "s": 2.275,
+    "e": 3.1
+   },
+   {
+    "w": "Eat",
+    "s": 3.35,
+    "e": 3.55
+   },
+   {
+    "w": "a",
+    "s": 3.55,
+    "e": 3.675
+   },
+   {
+    "w": "special",
+    "s": 3.675,
+    "e": 4.213
+   },
+   {
+    "w": "meal",
+    "s": 4.213,
+    "e": 4.562
+   },
+   {
+    "w": "tonight",
+    "s": 4.562,
+    "e": 5.25
+   },
+   {
+    "w": "with",
+    "s": 5.35,
+    "e": 5.5
+   },
+   {
+    "w": "your",
+    "s": 5.5,
+    "e": 5.725
+   },
+   {
+    "w": "sandals",
+    "s": 5.725,
+    "e": 6.287
+   },
+   {
+    "w": "on",
+    "s": 6.287,
+    "e": 6.713
+   },
+   {
+    "w": "and",
+    "s": 6.713,
+    "e": 6.85
+   },
+   {
+    "w": "your",
+    "s": 6.85,
+    "e": 7.075
+   },
+   {
+    "w": "bags",
+    "s": 7.075,
+    "e": 7.625
+   },
+   {
+    "w": "packed",
+    "s": 7.625,
+    "e": 8.475
+   },
+   {
+    "w": "Mark",
+    "s": 8.65,
+    "e": 9.0
+   },
+   {
+    "w": "your",
+    "s": 9.0,
+    "e": 9.225
+   },
+   {
+    "w": "doorposts",
+    "s": 9.225,
+    "e": 10.0
+   },
+   {
+    "w": "with",
+    "s": 10.0,
+    "e": 10.137
+   },
+   {
+    "w": "the",
+    "s": 10.137,
+    "e": 10.262
+   },
+   {
+    "w": "blood",
+    "s": 10.262,
+    "e": 10.537
+   },
+   {
+    "w": "of",
+    "s": 10.537,
+    "e": 10.65
+   },
+   {
+    "w": "a",
+    "s": 10.65,
+    "e": 10.762
+   },
+   {
+    "w": "lamb",
+    "s": 10.762,
+    "e": 11.475
+   },
+   {
+    "w": "and",
+    "s": 11.6,
+    "e": 11.8
+   },
+   {
+    "w": "death",
+    "s": 11.8,
+    "e": 12.2
+   },
+   {
+    "w": "will",
+    "s": 12.2,
+    "e": 12.4
+   },
+   {
+    "w": "pass",
+    "s": 12.4,
+    "e": 12.875
+   },
+   {
+    "w": "over",
+    "s": 12.875,
+    "e": 13.175
+   },
+   {
+    "w": "your",
+    "s": 13.175,
+    "e": 13.375
+   },
+   {
+    "w": "homes",
+    "s": 13.375,
+    "e": 14.225
+   }
+  ]
+ },
+ "passover-1": {
+  "src": "audio/moses-plagues/passover-1.m4a",
+  "text": "That night, God kept His people safe, just as He promised. And at last Pharaoh said, “Go!”",
+  "voice": "bm_lewis",
+  "duration": 8.05,
+  "words": [
+   {
+    "w": "That",
+    "s": 0.7,
+    "e": 0.925
+   },
+   {
+    "w": "night",
+    "s": 0.925,
+    "e": 1.25
+   },
+   {
+    "w": "God",
+    "s": 1.312,
+    "e": 1.637
+   },
+   {
+    "w": "kept",
+    "s": 1.637,
+    "e": 1.913
+   },
+   {
+    "w": "His",
+    "s": 1.913,
+    "e": 2.075
+   },
+   {
+    "w": "people",
+    "s": 2.075,
+    "e": 2.475
+   },
+   {
+    "w": "safe",
+    "s": 2.475,
+    "e": 3.025
+   },
+   {
+    "w": "just",
+    "s": 3.163,
+    "e": 3.438
+   },
+   {
+    "w": "as",
+    "s": 3.438,
+    "e": 3.538
+   },
+   {
+    "w": "He",
+    "s": 3.538,
+    "e": 3.712
+   },
+   {
+    "w": "promised",
+    "s": 3.712,
+    "e": 4.575
+   },
+   {
+    "w": "And",
+    "s": 4.7,
+    "e": 4.838
+   },
+   {
+    "w": "at",
+    "s": 4.838,
+    "e": 4.925
+   },
+   {
+    "w": "last",
+    "s": 4.925,
+    "e": 5.425
+   },
+   {
+    "w": "Pharaoh",
+    "s": 5.425,
+    "e": 5.912
+   },
+   {
+    "w": "said",
+    "s": 5.912,
+    "e": 6.425
+   },
+   {
+    "w": "Go",
+    "s": 6.65,
+    "e": 7.225
+   }
+  ]
+ },
+ "passover-2": {
+  "src": "audio/moses-plagues/passover-2.m4a",
+  "text": "Every year after that, God’s people remembered this night: the Passover. And one day, Jesus would come as God’s own Lamb, to rescue everyone.",
+  "voice": "bm_lewis",
+  "duration": 11.725,
+  "words": [
+   {
+    "w": "Every",
+    "s": 0.7,
+    "e": 1.012
+   },
+   {
+    "w": "year",
+    "s": 1.012,
+    "e": 1.3
+   },
+   {
+    "w": "after",
+    "s": 1.3,
+    "e": 1.625
+   },
+   {
+    "w": "that",
+    "s": 1.625,
+    "e": 2.1
+   },
+   {
+    "w": "God's",
+    "s": 2.237,
+    "e": 2.6
+   },
+   {
+    "w": "people",
+    "s": 2.6,
+    "e": 2.975
+   },
+   {
+    "w": "remembered",
+    "s": 2.975,
+    "e": 3.525
+   },
+   {
+    "w": "this",
+    "s": 3.525,
+    "e": 3.725
+   },
+   {
+    "w": "night",
+    "s": 3.725,
+    "e": 4.275
+   },
+   {
+    "w": "the",
+    "s": 4.4,
+    "e": 4.537
+   },
+   {
+    "w": "Passover",
+    "s": 4.537,
+    "e": 5.75
+   },
+   {
+    "w": "And",
+    "s": 5.9,
+    "e": 6.05
+   },
+   {
+    "w": "one",
+    "s": 6.05,
+    "e": 6.275
+   },
+   {
+    "w": "day",
+    "s": 6.275,
+    "e": 6.7
+   },
+   {
+    "w": "Jesus",
+    "s": 6.825,
+    "e": 7.375
+   },
+   {
+    "w": "would",
+    "s": 7.375,
+    "e": 7.562
+   },
+   {
+    "w": "come",
+    "s": 7.562,
+    "e": 7.825
+   },
+   {
+    "w": "as",
+    "s": 7.825,
+    "e": 8.0
+   },
+   {
+    "w": "God's",
+    "s": 8.0,
+    "e": 8.45
+   },
+   {
+    "w": "own",
+    "s": 8.45,
+    "e": 8.713
+   },
+   {
+    "w": "Lamb",
+    "s": 8.713,
+    "e": 9.35
+   },
+   {
+    "w": "to",
+    "s": 9.475,
+    "e": 9.6
+   },
+   {
+    "w": "rescue",
+    "s": 9.6,
+    "e": 10.062
+   },
+   {
+    "w": "everyone",
+    "s": 10.062,
+    "e": 10.975
+   }
+  ]
+ }
+}

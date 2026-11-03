@@ -1,0 +1,35 @@
+{
+  "noah": {
+    "id": "two-by-two",
+    "title": "Two by Two",
+    "type": "pairs",
+    "scene": "animals",
+    "background": "art/noah/animals/parade.jpg",
+    "frame": [
+      0.62,
+      0.5
+    ],
+    "target": [
+      0.64,
+      0.45
+    ],
+    "pieces": [
+      "lion",
+      "elephant",
+      "giraffe",
+      "zebra",
+      "sheep",
+      "rabbit",
+      "camel",
+      "hippo"
+    ],
+    "count": 6,
+    "badge": "art/props/lion.png",
+    "lines": {
+      "intro": "Help Noah load the ark! Tap two animals that match, and they’ll walk in together.",
+      "win": "You did it! Every animal is safe inside the ark.",
+      "pair": "Two {name}!",
+      "done": "Every animal is safe inside the ark."
+    }
+  }
+}

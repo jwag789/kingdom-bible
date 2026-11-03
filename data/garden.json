@@ -1,0 +1,610 @@
+{
+  "title": "The Garden",
+  "reference": "Genesis 2–3",
+  "subtitle": "The story of the first people, a sneaky snake and a promise",
+  "book": "Genesis",
+  "text": "data/garden-text.json",
+  "art": "art/garden",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "prompt": "Adam standing alone, full body, front view: a young man with lightly tanned skin, warm brown eyes, dark curly hair and a short beard, kind and strong, wearing modest garments of layered green leaves that cover them from shoulders to knees, barefoot",
+      "src": "art/garden/cast/adam.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 2168,
+        "at": "2026-11-03T03:05:48.420Z"
+      }
+    },
+    {
+      "id": "eve",
+      "name": "Eve",
+      "prompt": "Eve standing alone, full body, front view: a young woman with lightly tanned skin, warm brown eyes and long wavy dark hair down her back, a gentle smile, wearing modest garments of layered green leaves that cover them from shoulders to knees, barefoot",
+      "src": "art/garden/cast/eve.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 777611,
+        "at": "2026-11-03T03:06:00.163Z"
+      }
+    },
+    {
+      "id": "snake",
+      "name": "the snake",
+      "prompt": "A snake alone: a long, sly green-and-gold paper snake with a curly tail, shiny scales, half-closed eyes and a sneaky little smile, coiled and raised up, not scary",
+      "src": "art/garden/cast/snake.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 904247,
+        "at": "2026-11-03T03:06:11.649Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "eden",
+      "eyebrow": "Part One",
+      "title": "The Garden of Eden",
+      "verses": [
+        "2:8",
+        "2:17"
+      ],
+      "beats": [
+        "God planted a beautiful garden in a place called Eden, full of trees with delicious fruit, and a sparkling river to water it all.",
+        "He put Adam in the garden to take care of it. Adam could eat from any tree — except one: the tree of the knowledge of good and evil."
+      ],
+      "layers": [
+        {
+          "id": "garden",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "garden",
+          "prompt": "The Garden of Eden: a lush, glowing paradise of fruit trees, flowers and a sparkling river that splits into four streams, with peaceful deer and birds. Adam walks among the trees, right of center, looking around in wonder",
+          "refs": [
+            "adam"
+          ],
+          "src": "art/garden/eden/garden.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 572879,
+            "at": "2026-11-03T03:06:35.361Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "flutter",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the flowers",
+        "at": [
+          0.6,
+          0.62
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "eden",
+          "name": "The Garden of Eden",
+          "earn": "play",
+          "at": [
+            0.5,
+            0.45
+          ],
+          "r": 0.2
+        },
+        {
+          "id": "bird",
+          "name": "The Little Bird",
+          "earn": "secret",
+          "at": [
+            0.68,
+            0.08
+          ],
+          "r": 0.04,
+          "hit": 0.045
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.56,
+          0.6
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "naming",
+      "eyebrow": "Part Two",
+      "title": "Naming the Animals",
+      "verses": [
+        "2:18",
+        "2:20"
+      ],
+      "beats": [
+        "God brought every animal and bird to Adam, to see what he would call them. And whatever Adam called each one — that was its name!",
+        "But none of the animals was just right to be Adam’s partner."
+      ],
+      "layers": [
+        {
+          "id": "animals",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "animals",
+          "prompt": "A sunny meadow in the garden: animals of every kind gather around Adam, right of center — a lion, an elephant, a giraffe, a peacock, a rabbit, a hippo, a zebra and birds — while Adam points and smiles, giving each one a name",
+          "refs": [
+            "adam"
+          ],
+          "src": "art/garden/naming/animals.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 730959,
+            "at": "2026-11-03T03:06:59.486Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "names",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to name an animal",
+        "at": [
+          0.6,
+          0.4
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "naming",
+          "name": "Adam Names the Animals",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.5
+          ],
+          "r": 0.15
+        },
+        {
+          "id": "peacock",
+          "name": "The Peacock",
+          "earn": "secret",
+          "at": [
+            0.47,
+            0.62
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.56,
+          0.6
+        ],
+        "size": 0.035,
+        "flip": true
+      }
+    },
+    {
+      "id": "eve",
+      "eyebrow": "Part Three",
+      "title": "God Makes Eve",
+      "verses": [
+        "2:21",
+        "2:25"
+      ],
+      "beats": [
+        "So God made Adam fall into a deep sleep. And from Adam’s side, God made a woman: Eve.",
+        "When Adam saw her, he was so happy! “At last — someone just like me!” And God brought them together."
+      ],
+      "layers": [
+        {
+          "id": "glade",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "glade",
+          "prompt": "A flowery glade under a great blossoming tree in warm golden light: Adam meets Eve for the first time, right of center, both smiling in amazement",
+          "refs": [
+            "adam",
+            "eve"
+          ],
+          "src": "art/garden/eve/glade.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 309357,
+            "at": "2026-11-03T03:07:31.823Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.68,
+          0.4
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.68,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "adam-eve",
+          "name": "Adam and Eve",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.52
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "blossom",
+          "name": "The Blossom Tree",
+          "earn": "secret",
+          "at": [
+            0.78,
+            0.1
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.8,
+          0.6
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "snake",
+      "eyebrow": "Part Four",
+      "title": "The Sneaky Snake",
+      "verses": [
+        "3:1",
+        "3:7"
+      ],
+      "beats": [
+        "Now the snake was the sneakiest of all the animals. “Did God really say you can’t eat from any tree?” he asked Eve.",
+        "“You won’t die,” the snake lied. “If you eat it, you’ll be like God!”",
+        "So Eve took the fruit and ate it, and gave some to Adam, and he ate it too."
+      ],
+      "layers": [
+        {
+          "id": "tree",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "tree",
+          "prompt": "In the middle of the garden stands a great tree heavy with shining golden fruit; a sly green-and-gold snake curls along a branch, right of center, whispering to Eve, who looks up at the fruit",
+          "refs": [
+            "eve",
+            "snake"
+          ],
+          "src": "art/garden/snake/tree.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 982617,
+            "at": "2026-11-03T03:08:12.648Z"
+          }
+        },
+        {
+          "id": "bite",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bite",
+          "refs": [
+            "adam",
+            "eve",
+            "snake"
+          ],
+          "from": 2,
+          "src": "art/garden/snake/bite.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 982617,
+            "at": "2026-11-03T03:15:18.830Z"
+          },
+          "prompt": "Under the great tree heavy with shining golden fruit: Eve holds out a golden fruit with a bite taken out of it to Adam, who stands beside her reaching for it, right of center, while the sly green-and-gold snake grins from the branch above"
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.35
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "meadow"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "fruit",
+          "name": "The Golden Fruit",
+          "earn": "play",
+          "layer": "tree",
+          "at": [
+            0.6,
+            0.25
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "snake",
+          "name": "The Sneaky Snake",
+          "earn": "secret",
+          "layer": "tree",
+          "until": "bite",
+          "at": [
+            0.85,
+            0.3
+          ],
+          "r": 0.07,
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "hiding",
+      "eyebrow": "Part Five",
+      "title": "Where Are You?",
+      "verses": [
+        "3:8",
+        "3:13"
+      ],
+      "beats": [
+        "That evening, they heard God walking in the garden — and they hid among the trees.",
+        "“Where are you?” God called. Adam said, “I was afraid, so I hid.” Their wrong choice had broken their friendship with God."
+      ],
+      "layers": [
+        {
+          "id": "bushes",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bushes",
+          "prompt": "Evening in the garden as a cool breeze blows: Adam and Eve hide behind big leafy bushes, right of center, peeking out, worried and ashamed, while soft golden light shines through the trees from the left",
+          "refs": [
+            "adam",
+            "eve"
+          ],
+          "src": "art/garden/hiding/bushes.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 76102,
+            "at": "2026-11-03T03:09:20.798Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0,
+          "x": 0.2,
+          "y": 0.2,
+          "soft": true
+        },
+        {
+          "type": "flutter",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the bushes",
+        "at": [
+          0.62,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "hiding",
+          "name": "Hiding in the Bushes",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.5
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "peekaboo",
+          "name": "Peek-a-boo!",
+          "earn": "secret",
+          "at": [
+            0.47,
+            0.42
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.74,
+          0.62
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "promise",
+      "eyebrow": "Part Six",
+      "title": "A Promise",
+      "verses": [
+        "3:14",
+        "3:24"
+      ],
+      "beats": [
+        "Sin had come into the world, and Adam and Eve had to leave the garden. But God still loved them. He even made them warm clothes to wear.",
+        "And God made a promise: one day, a child would be born who would crush the snake’s head and make everything right again. That child would be Jesus."
+      ],
+      "layers": [
+        {
+          "id": "gate",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "gate",
+          "prompt": "Adam and Eve, now dressed in simple warm garments of soft animal skins, walk out of the garden into a wide, rocky land, right of center, while behind them a shining angel guards the glowing garden gate",
+          "refs": [
+            "adam",
+            "eve"
+          ],
+          "src": "art/garden/promise/gate.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 520756,
+            "at": "2026-11-03T03:09:50.520Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 1,
+          "x": 0.72,
+          "y": 0.2,
+          "soft": true
+        },
+        {
+          "type": "starmaker",
+          "from": 1,
+          "sky": 0.25
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky",
+        "at": [
+          0.5,
+          0.15
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "promise",
+          "name": "The Promise",
+          "earn": "play",
+          "at": [
+            0.7,
+            0.3
+          ],
+          "r": 0.12
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.78,
+          0.6
+        ],
+        "size": 0.03
+      }
+    }
+  ],
+  "next": {
+    "story": "noah",
+    "title": "Noah's Ark",
+    "sub": "Genesis 6:9 – 9:17: the story of a flood, a boat and a promise."
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "title": "Abraham and the Stars",
+  "reference": "Genesis 12–21",
+  "subtitle": "The story of a long journey and a promise as big as the sky",
+  "book": "Genesis",
+  "text": "data/abraham-text.json",
+  "art": "art/abraham",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "abraham",
+      "name": "Abraham",
+      "prompt": "Abraham standing alone, full body, front view: an old man with a long grey beard and kind eyes, fair sun-tanned skin, wearing a striped robe of red and cream with a blue head wrap, holding a shepherd's staff",
+      "src": "art/abraham/cast/abraham.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 455995,
+        "at": "2026-11-03T03:05:46.451Z"
+      }
+    },
+    {
+      "id": "sarah",
+      "name": "Sarah",
+      "prompt": "Sarah standing alone, full body, front view: an old woman with silver hair under a soft purple headscarf, a warm smile and fair sun-tanned skin, wearing a long rose-colored robe",
+      "src": "art/abraham/cast/sarah.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 532994,
+        "at": "2026-11-03T03:05:59.252Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "journey",
+      "eyebrow": "Part One",
+      "title": "Go to a New Land",
+      "verses": [
+        "12:1",
+        "12:9"
+      ],
+      "beats": [
+        "Long ago, God spoke to a man named Abraham. “Leave your home and go to a land I will show you. I will bless you, and through you I will bless the whole world.”",
+        "So Abraham packed up everything — his wife Sarah, his flocks, his tents — and set out, trusting God, even though he didn’t know where he was going."
+      ],
+      "layers": [
+        {
+          "id": "caravan",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "caravan",
+          "prompt": "A long caravan crosses golden desert hills in the morning: Abraham leads the way with his staff, right of center, with Sarah riding a camel behind him, servants, rolled tents on donkeys, and flocks of sheep and goats",
+          "refs": [
+            "abraham",
+            "sarah"
+          ],
+          "src": "art/abraham/journey/caravan.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 272985,
+            "at": "2026-11-03T03:06:32.351Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the camel",
+        "at": [
+          0.74,
+          0.62
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.72,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "journey",
+          "name": "The Long Journey",
+          "earn": "play",
+          "at": [
+            0.8,
+            0.6
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "flock",
+          "name": "The Flock",
+          "earn": "secret",
+          "at": [
+            0.75,
+            0.42
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.71,
+          0.43
+        ],
+        "size": 0.02
+      }
+    },
+    {
+      "id": "stars",
+      "eyebrow": "Part Two",
+      "title": "Count the Stars",
+      "verses": [
+        "15:1",
+        "15:6"
+      ],
+      "beats": [
+        "Abraham and Sarah were very old, and they had no children. One night God said, “Look up at the sky and count the stars — if you can!”",
+        "“That’s how many people will be in your family!” And Abraham believed God."
+      ],
+      "layers": [
+        {
+          "id": "night",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "night",
+          "prompt": "Outside a tent on a hillside at night under a vast, glittering sky full of countless stars: old Abraham stands looking up in wonder, right of center, arms open wide",
+          "refs": [
+            "abraham"
+          ],
+          "src": "art/abraham/stars/night.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 161594,
+            "at": "2026-11-03T03:06:59.964Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "starmaker",
+          "from": 0,
+          "sky": 0.55
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky to add a star",
+        "at": [
+          0.55,
+          0.25
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets",
+          "wind"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.68,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "stars",
+          "name": "Count the Stars",
+          "earn": "play",
+          "at": [
+            0.5,
+            0.25
+          ],
+          "r": 0.15
+        },
+        {
+          "id": "tent",
+          "name": "Abraham's Tent",
+          "earn": "secret",
+          "at": [
+            0.88,
+            0.6
+          ],
+          "r": 0.07,
+          "hit": 0.06
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.78,
+          0.69
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "visitors",
+      "eyebrow": "Part Three",
+      "title": "Three Visitors",
+      "verses": [
+        "18:1",
+        "18:15"
+      ],
+      "beats": [
+        "One hot day, three visitors came to Abraham’s tent. Abraham hurried to give them water to wash with and a delicious meal.",
+        "“This time next year,” one said, “Sarah will have a son!” Sarah, listening inside the tent, laughed. She was ninety years old!",
+        "“Is anything too hard for the Lord?” the visitor asked."
+      ],
+      "layers": [
+        {
+          "id": "oak",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "oak",
+          "prompt": "Under a great oak tree beside a big striped tent in the heat of the day, the scene filling the whole picture: Abraham welcomes three kind travelers with gentle smiling faces and uncovered heads, wearing flowing white and cream robes, right of center, offering them bread and milk, while Sarah peeks out from the tent door. No book, no page, no frame",
+          "refs": [
+            "abraham",
+            "sarah"
+          ],
+          "src": "art/abraham/visitors/oak.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 2468,
+            "at": "2026-11-03T03:15:12.352Z"
+          },
+          "seed": 2468
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.64,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "visitors",
+          "name": "Three Visitors",
+          "earn": "play",
+          "at": [
+            0.55,
+            0.55
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "sarah",
+          "name": "Sarah Laughs",
+          "earn": "secret",
+          "at": [
+            0.8,
+            0.55
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.72,
+          0.13
+        ],
+        "size": 0.025
+      }
+    },
+    {
+      "id": "isaac",
+      "eyebrow": "Part Four",
+      "title": "A Baby Called Laughter",
+      "verses": [
+        "21:1",
+        "21:7"
+      ],
+      "beats": [
+        "And God kept His promise. Sarah had a baby boy, just as God said!",
+        "They named him Isaac, which means “he laughs.” “God has made me laugh,” said Sarah, “and everyone who hears about this will laugh with me!”"
+      ],
+      "layers": [
+        {
+          "id": "baby",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "baby",
+          "prompt": "Inside a cozy tent lit by oil lamps: Sarah, overjoyed, holds her newborn baby boy, right of center, while Abraham leans close, laughing with happiness",
+          "refs": [
+            "abraham",
+            "sarah"
+          ],
+          "src": "art/abraham/isaac/baby.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 896050,
+            "at": "2026-11-03T03:08:04.699Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 0,
+          "voice": "musicbox"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to sing to the baby",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.7,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "isaac",
+          "name": "Baby Isaac",
+          "earn": "play",
+          "at": [
+            0.69,
+            0.6
+          ],
+          "r": 0.08
+        }
+      ]
+    }
+  ],
+  "next": {
+    "story": "moses-baby",
+    "title": "Baby Moses",
+    "sub": "Exodus 1–2: the story of a baby in a basket and a big sister who watched."
+  }
+}

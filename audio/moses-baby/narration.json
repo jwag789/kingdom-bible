@@ -1,0 +1,1402 @@
+{
+ "cover": {
+  "src": "audio/moses-baby/cover.m4a",
+  "text": "Baby Moses.",
+  "voice": "bm_lewis",
+  "duration": 2.725,
+  "words": [
+   {
+    "w": "Baby",
+    "s": 0.7,
+    "e": 1.163
+   },
+   {
+    "w": "Moses",
+    "s": 1.163,
+    "e": 2.075
+   }
+  ]
+ },
+ "slaves-title": {
+  "src": "audio/moses-baby/slaves-title.m4a",
+  "text": "Part One. Slaves in Egypt.",
+  "voice": "bm_lewis",
+  "duration": 4.075,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 0.975
+   },
+   {
+    "w": "One",
+    "s": 0.975,
+    "e": 1.475
+   },
+   {
+    "w": "Slaves",
+    "s": 1.663,
+    "e": 2.337
+   },
+   {
+    "w": "in",
+    "s": 2.337,
+    "e": 2.575
+   },
+   {
+    "w": "Egypt",
+    "s": 2.575,
+    "e": 3.425
+   }
+  ]
+ },
+ "slaves-0": {
+  "src": "audio/moses-baby/slaves-0.m4a",
+  "text": "Long ago, God’s people, the Israelites, lived in Egypt. There were so many of them that the new king, Pharaoh, grew afraid.",
+  "voice": "bm_lewis",
+  "duration": 10.275,
+  "words": [
+   {
+    "w": "Long",
+    "s": 0.725,
+    "e": 1.0
+   },
+   {
+    "w": "ago",
+    "s": 1.0,
+    "e": 1.475
+   },
+   {
+    "w": "God's",
+    "s": 1.562,
+    "e": 1.925
+   },
+   {
+    "w": "people",
+    "s": 1.925,
+    "e": 2.375
+   },
+   {
+    "w": "the",
+    "s": 2.45,
+    "e": 2.612
+   },
+   {
+    "w": "Israelites",
+    "s": 2.612,
+    "e": 3.45
+   },
+   {
+    "w": "lived",
+    "s": 3.6,
+    "e": 3.95
+   },
+   {
+    "w": "in",
+    "s": 3.95,
+    "e": 4.112
+   },
+   {
+    "w": "Egypt",
+    "s": 4.112,
+    "e": 5.075
+   },
+   {
+    "w": "There",
+    "s": 5.2,
+    "e": 5.338
+   },
+   {
+    "w": "were",
+    "s": 5.338,
+    "e": 5.475
+   },
+   {
+    "w": "so",
+    "s": 5.475,
+    "e": 5.75
+   },
+   {
+    "w": "many",
+    "s": 5.75,
+    "e": 6.05
+   },
+   {
+    "w": "of",
+    "s": 6.05,
+    "e": 6.175
+   },
+   {
+    "w": "them",
+    "s": 6.175,
+    "e": 6.425
+   },
+   {
+    "w": "that",
+    "s": 6.425,
+    "e": 6.55
+   },
+   {
+    "w": "the",
+    "s": 6.55,
+    "e": 6.675
+   },
+   {
+    "w": "new",
+    "s": 6.675,
+    "e": 6.95
+   },
+   {
+    "w": "king",
+    "s": 6.95,
+    "e": 7.45
+   },
+   {
+    "w": "Pharaoh",
+    "s": 7.6,
+    "e": 8.2
+   },
+   {
+    "w": "grew",
+    "s": 8.338,
+    "e": 8.575
+   },
+   {
+    "w": "afraid",
+    "s": 8.575,
+    "e": 9.475
+   }
+  ]
+ },
+ "slaves-1": {
+  "src": "audio/moses-baby/slaves-1.m4a",
+  "text": "So Pharaoh made them his slaves. They had to work hard all day long, making bricks out of mud and straw under the hot sun.",
+  "voice": "bm_lewis",
+  "duration": 9.7,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.9
+   },
+   {
+    "w": "Pharaoh",
+    "s": 0.9,
+    "e": 1.375
+   },
+   {
+    "w": "made",
+    "s": 1.375,
+    "e": 1.587
+   },
+   {
+    "w": "them",
+    "s": 1.587,
+    "e": 1.775
+   },
+   {
+    "w": "his",
+    "s": 1.775,
+    "e": 2.0
+   },
+   {
+    "w": "slaves",
+    "s": 2.0,
+    "e": 3.0
+   },
+   {
+    "w": "They",
+    "s": 3.125,
+    "e": 3.275
+   },
+   {
+    "w": "had",
+    "s": 3.275,
+    "e": 3.45
+   },
+   {
+    "w": "to",
+    "s": 3.45,
+    "e": 3.575
+   },
+   {
+    "w": "work",
+    "s": 3.575,
+    "e": 3.85
+   },
+   {
+    "w": "hard",
+    "s": 3.85,
+    "e": 4.225
+   },
+   {
+    "w": "all",
+    "s": 4.225,
+    "e": 4.45
+   },
+   {
+    "w": "day",
+    "s": 4.45,
+    "e": 4.725
+   },
+   {
+    "w": "long",
+    "s": 4.725,
+    "e": 5.3
+   },
+   {
+    "w": "making",
+    "s": 5.425,
+    "e": 5.8
+   },
+   {
+    "w": "bricks",
+    "s": 5.8,
+    "e": 6.225
+   },
+   {
+    "w": "out",
+    "s": 6.225,
+    "e": 6.388
+   },
+   {
+    "w": "of",
+    "s": 6.388,
+    "e": 6.55
+   },
+   {
+    "w": "mud",
+    "s": 6.55,
+    "e": 6.975
+   },
+   {
+    "w": "and",
+    "s": 6.975,
+    "e": 7.162
+   },
+   {
+    "w": "straw",
+    "s": 7.162,
+    "e": 7.675
+   },
+   {
+    "w": "under",
+    "s": 7.675,
+    "e": 7.9
+   },
+   {
+    "w": "the",
+    "s": 7.9,
+    "e": 8.0
+   },
+   {
+    "w": "hot",
+    "s": 8.0,
+    "e": 8.287
+   },
+   {
+    "w": "sun",
+    "s": 8.287,
+    "e": 8.925
+   }
+  ]
+ },
+ "hidden-title": {
+  "src": "audio/moses-baby/hidden-title.m4a",
+  "text": "Part Two. A Baby in a Basket.",
+  "voice": "bm_lewis",
+  "duration": 4.05,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Two",
+    "s": 0.963,
+    "e": 1.5
+   },
+   {
+    "w": "A",
+    "s": 1.637,
+    "e": 1.762
+   },
+   {
+    "w": "Baby",
+    "s": 1.762,
+    "e": 2.25
+   },
+   {
+    "w": "in",
+    "s": 2.25,
+    "e": 2.337
+   },
+   {
+    "w": "a",
+    "s": 2.337,
+    "e": 2.425
+   },
+   {
+    "w": "Basket",
+    "s": 2.425,
+    "e": 3.375
+   }
+  ]
+ },
+ "hidden-0": {
+  "src": "audio/moses-baby/hidden-0.m4a",
+  "text": "One Israelite mother had a baby boy. To keep him safe from Pharaoh, she hid him for three whole months.",
+  "voice": "bm_lewis",
+  "duration": 8.8,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.725,
+    "e": 1.15
+   },
+   {
+    "w": "Israelite",
+    "s": 1.15,
+    "e": 1.75
+   },
+   {
+    "w": "mother",
+    "s": 1.75,
+    "e": 2.138
+   },
+   {
+    "w": "had",
+    "s": 2.138,
+    "e": 2.312
+   },
+   {
+    "w": "a",
+    "s": 2.312,
+    "e": 2.425
+   },
+   {
+    "w": "baby",
+    "s": 2.425,
+    "e": 2.9
+   },
+   {
+    "w": "boy",
+    "s": 2.9,
+    "e": 3.625
+   },
+   {
+    "w": "To",
+    "s": 3.812,
+    "e": 3.95
+   },
+   {
+    "w": "keep",
+    "s": 3.95,
+    "e": 4.188
+   },
+   {
+    "w": "him",
+    "s": 4.188,
+    "e": 4.4
+   },
+   {
+    "w": "safe",
+    "s": 4.4,
+    "e": 4.75
+   },
+   {
+    "w": "from",
+    "s": 4.75,
+    "e": 4.975
+   },
+   {
+    "w": "Pharaoh",
+    "s": 4.975,
+    "e": 5.7
+   },
+   {
+    "w": "she",
+    "s": 5.888,
+    "e": 6.05
+   },
+   {
+    "w": "hid",
+    "s": 6.05,
+    "e": 6.237
+   },
+   {
+    "w": "him",
+    "s": 6.237,
+    "e": 6.425
+   },
+   {
+    "w": "for",
+    "s": 6.425,
+    "e": 6.612
+   },
+   {
+    "w": "three",
+    "s": 6.612,
+    "e": 6.975
+   },
+   {
+    "w": "whole",
+    "s": 6.975,
+    "e": 7.325
+   },
+   {
+    "w": "months",
+    "s": 7.325,
+    "e": 8.075
+   }
+  ]
+ },
+ "hidden-1": {
+  "src": "audio/moses-baby/hidden-1.m4a",
+  "text": "When he got too big to hide, she made a little basket, covered it with tar so it would float, and laid him among the reeds by the river Nile. His big sister Miriam stayed to watch.",
+  "voice": "bm_lewis",
+  "duration": 14.025,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "he",
+    "s": 0.787,
+    "e": 0.9
+   },
+   {
+    "w": "got",
+    "s": 0.9,
+    "e": 1.137
+   },
+   {
+    "w": "too",
+    "s": 1.137,
+    "e": 1.325
+   },
+   {
+    "w": "big",
+    "s": 1.325,
+    "e": 1.55
+   },
+   {
+    "w": "to",
+    "s": 1.55,
+    "e": 1.675
+   },
+   {
+    "w": "hide",
+    "s": 1.675,
+    "e": 2.35
+   },
+   {
+    "w": "she",
+    "s": 2.513,
+    "e": 2.65
+   },
+   {
+    "w": "made",
+    "s": 2.65,
+    "e": 2.837
+   },
+   {
+    "w": "a",
+    "s": 2.837,
+    "e": 2.888
+   },
+   {
+    "w": "little",
+    "s": 2.888,
+    "e": 3.175
+   },
+   {
+    "w": "basket",
+    "s": 3.175,
+    "e": 4.125
+   },
+   {
+    "w": "covered",
+    "s": 4.287,
+    "e": 4.625
+   },
+   {
+    "w": "it",
+    "s": 4.625,
+    "e": 4.775
+   },
+   {
+    "w": "with",
+    "s": 4.775,
+    "e": 4.975
+   },
+   {
+    "w": "tar",
+    "s": 4.975,
+    "e": 5.438
+   },
+   {
+    "w": "so",
+    "s": 5.438,
+    "e": 5.65
+   },
+   {
+    "w": "it",
+    "s": 5.65,
+    "e": 5.737
+   },
+   {
+    "w": "would",
+    "s": 5.737,
+    "e": 5.938
+   },
+   {
+    "w": "float",
+    "s": 5.938,
+    "e": 6.675
+   },
+   {
+    "w": "and",
+    "s": 6.8,
+    "e": 6.925
+   },
+   {
+    "w": "laid",
+    "s": 6.925,
+    "e": 7.237
+   },
+   {
+    "w": "him",
+    "s": 7.237,
+    "e": 7.425
+   },
+   {
+    "w": "among",
+    "s": 7.425,
+    "e": 7.725
+   },
+   {
+    "w": "the",
+    "s": 7.725,
+    "e": 7.875
+   },
+   {
+    "w": "reeds",
+    "s": 7.875,
+    "e": 8.425
+   },
+   {
+    "w": "by",
+    "s": 8.425,
+    "e": 8.6
+   },
+   {
+    "w": "the",
+    "s": 8.6,
+    "e": 8.738
+   },
+   {
+    "w": "river",
+    "s": 8.738,
+    "e": 9.037
+   },
+   {
+    "w": "Nile",
+    "s": 9.037,
+    "e": 10.025
+   },
+   {
+    "w": "His",
+    "s": 10.188,
+    "e": 10.425
+   },
+   {
+    "w": "big",
+    "s": 10.425,
+    "e": 10.775
+   },
+   {
+    "w": "sister",
+    "s": 10.775,
+    "e": 11.25
+   },
+   {
+    "w": "Miriam",
+    "s": 11.25,
+    "e": 11.863
+   },
+   {
+    "w": "stayed",
+    "s": 11.863,
+    "e": 12.35
+   },
+   {
+    "w": "to",
+    "s": 12.35,
+    "e": 12.488
+   },
+   {
+    "w": "watch",
+    "s": 12.488,
+    "e": 13.2
+   }
+  ]
+ },
+ "princess-title": {
+  "src": "audio/moses-baby/princess-title.m4a",
+  "text": "Part Three. The Princess Finds Him.",
+  "voice": "bm_lewis",
+  "duration": 4.125,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 0.988
+   },
+   {
+    "w": "Three",
+    "s": 0.988,
+    "e": 1.575
+   },
+   {
+    "w": "The",
+    "s": 1.7,
+    "e": 1.8
+   },
+   {
+    "w": "Princess",
+    "s": 1.8,
+    "e": 2.525
+   },
+   {
+    "w": "Finds",
+    "s": 2.525,
+    "e": 2.962
+   },
+   {
+    "w": "Him",
+    "s": 2.962,
+    "e": 3.475
+   }
+  ]
+ },
+ "princess-0": {
+  "src": "audio/moses-baby/princess-0.m4a",
+  "text": "Pharaoh’s daughter came down to the river to bathe. She saw the basket, opened it — and there was the baby, crying! She felt sorry for him.",
+  "voice": "bm_lewis",
+  "duration": 11.3,
+  "words": [
+   {
+    "w": "Pharaoh's",
+    "s": 0.7,
+    "e": 1.238
+   },
+   {
+    "w": "daughter",
+    "s": 1.238,
+    "e": 1.688
+   },
+   {
+    "w": "came",
+    "s": 1.688,
+    "e": 1.975
+   },
+   {
+    "w": "down",
+    "s": 1.975,
+    "e": 2.275
+   },
+   {
+    "w": "to",
+    "s": 2.275,
+    "e": 2.375
+   },
+   {
+    "w": "the",
+    "s": 2.375,
+    "e": 2.5
+   },
+   {
+    "w": "river",
+    "s": 2.5,
+    "e": 2.775
+   },
+   {
+    "w": "to",
+    "s": 2.775,
+    "e": 2.9
+   },
+   {
+    "w": "bathe",
+    "s": 2.9,
+    "e": 3.75
+   },
+   {
+    "w": "She",
+    "s": 3.938,
+    "e": 4.1
+   },
+   {
+    "w": "saw",
+    "s": 4.1,
+    "e": 4.3
+   },
+   {
+    "w": "the",
+    "s": 4.3,
+    "e": 4.438
+   },
+   {
+    "w": "basket",
+    "s": 4.438,
+    "e": 5.225
+   },
+   {
+    "w": "opened",
+    "s": 5.362,
+    "e": 5.825
+   },
+   {
+    "w": "it",
+    "s": 5.825,
+    "e": 6.237
+   },
+   {
+    "w": "and",
+    "s": 6.325,
+    "e": 6.438
+   },
+   {
+    "w": "there",
+    "s": 6.438,
+    "e": 6.625
+   },
+   {
+    "w": "was",
+    "s": 6.625,
+    "e": 6.825
+   },
+   {
+    "w": "the",
+    "s": 6.825,
+    "e": 6.975
+   },
+   {
+    "w": "baby",
+    "s": 6.975,
+    "e": 7.55
+   },
+   {
+    "w": "crying",
+    "s": 7.7,
+    "e": 8.725
+   },
+   {
+    "w": "She",
+    "s": 8.925,
+    "e": 9.1
+   },
+   {
+    "w": "felt",
+    "s": 9.1,
+    "e": 9.438
+   },
+   {
+    "w": "sorry",
+    "s": 9.438,
+    "e": 9.875
+   },
+   {
+    "w": "for",
+    "s": 9.875,
+    "e": 10.025
+   },
+   {
+    "w": "him",
+    "s": 10.025,
+    "e": 10.55
+   }
+  ]
+ },
+ "princess-1": {
+  "src": "audio/moses-baby/princess-1.m4a",
+  "text": "Miriam ran up. “Shall I find someone to feed the baby for you?” And she brought the baby’s own mother!",
+  "voice": "bm_lewis",
+  "duration": 8.3,
+  "words": [
+   {
+    "w": "Miriam",
+    "s": 0.75,
+    "e": 1.363
+   },
+   {
+    "w": "ran",
+    "s": 1.363,
+    "e": 1.675
+   },
+   {
+    "w": "up",
+    "s": 1.675,
+    "e": 2.25
+   },
+   {
+    "w": "Shall",
+    "s": 2.475,
+    "e": 2.625
+   },
+   {
+    "w": "I",
+    "s": 2.625,
+    "e": 2.8
+   },
+   {
+    "w": "find",
+    "s": 2.8,
+    "e": 3.188
+   },
+   {
+    "w": "someone",
+    "s": 3.188,
+    "e": 3.6
+   },
+   {
+    "w": "to",
+    "s": 3.6,
+    "e": 3.75
+   },
+   {
+    "w": "feed",
+    "s": 3.75,
+    "e": 4.013
+   },
+   {
+    "w": "the",
+    "s": 4.013,
+    "e": 4.112
+   },
+   {
+    "w": "baby",
+    "s": 4.112,
+    "e": 4.562
+   },
+   {
+    "w": "for",
+    "s": 4.562,
+    "e": 4.725
+   },
+   {
+    "w": "you",
+    "s": 4.725,
+    "e": 5.25
+   },
+   {
+    "w": "And",
+    "s": 5.375,
+    "e": 5.525
+   },
+   {
+    "w": "she",
+    "s": 5.525,
+    "e": 5.65
+   },
+   {
+    "w": "brought",
+    "s": 5.65,
+    "e": 5.925
+   },
+   {
+    "w": "the",
+    "s": 5.925,
+    "e": 6.062
+   },
+   {
+    "w": "baby's",
+    "s": 6.062,
+    "e": 6.625
+   },
+   {
+    "w": "own",
+    "s": 6.625,
+    "e": 6.9
+   },
+   {
+    "w": "mother",
+    "s": 6.9,
+    "e": 7.5
+   }
+  ]
+ },
+ "princess-2": {
+  "src": "audio/moses-baby/princess-2.m4a",
+  "text": "When the boy grew older, the princess adopted him as her son, and she named him Moses.",
+  "voice": "bm_lewis",
+  "duration": 7.6,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "the",
+    "s": 0.787,
+    "e": 0.912
+   },
+   {
+    "w": "boy",
+    "s": 0.912,
+    "e": 1.288
+   },
+   {
+    "w": "grew",
+    "s": 1.288,
+    "e": 1.587
+   },
+   {
+    "w": "older",
+    "s": 1.587,
+    "e": 2.3
+   },
+   {
+    "w": "the",
+    "s": 2.45,
+    "e": 2.55
+   },
+   {
+    "w": "princess",
+    "s": 2.55,
+    "e": 3.15
+   },
+   {
+    "w": "adopted",
+    "s": 3.15,
+    "e": 3.638
+   },
+   {
+    "w": "him",
+    "s": 3.638,
+    "e": 3.85
+   },
+   {
+    "w": "as",
+    "s": 3.85,
+    "e": 4.0
+   },
+   {
+    "w": "her",
+    "s": 4.0,
+    "e": 4.213
+   },
+   {
+    "w": "son",
+    "s": 4.213,
+    "e": 4.9
+   },
+   {
+    "w": "and",
+    "s": 5.025,
+    "e": 5.15
+   },
+   {
+    "w": "she",
+    "s": 5.15,
+    "e": 5.3
+   },
+   {
+    "w": "named",
+    "s": 5.3,
+    "e": 5.662
+   },
+   {
+    "w": "him",
+    "s": 5.662,
+    "e": 5.9
+   },
+   {
+    "w": "Moses",
+    "s": 5.9,
+    "e": 6.875
+   }
+  ]
+ },
+ "runs-title": {
+  "src": "audio/moses-baby/runs-title.m4a",
+  "text": "Part Four. Moses Runs Away.",
+  "voice": "bm_lewis",
+  "duration": 4.1,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Four",
+    "s": 0.963,
+    "e": 1.525
+   },
+   {
+    "w": "Moses",
+    "s": 1.725,
+    "e": 2.375
+   },
+   {
+    "w": "Runs",
+    "s": 2.375,
+    "e": 2.75
+   },
+   {
+    "w": "Away",
+    "s": 2.75,
+    "e": 3.425
+   }
+  ]
+ },
+ "runs-0": {
+  "src": "audio/moses-baby/runs-0.m4a",
+  "text": "Moses grew up in Pharaoh’s palace. But one day he saw an Egyptian beating one of his own people, and Moses got so angry that he did something terrible.",
+  "voice": "bm_lewis",
+  "duration": 12.375,
+  "words": [
+   {
+    "w": "Moses",
+    "s": 0.75,
+    "e": 1.238
+   },
+   {
+    "w": "grew",
+    "s": 1.238,
+    "e": 1.475
+   },
+   {
+    "w": "up",
+    "s": 1.475,
+    "e": 1.7
+   },
+   {
+    "w": "in",
+    "s": 1.7,
+    "e": 1.875
+   },
+   {
+    "w": "Pharaoh's",
+    "s": 1.875,
+    "e": 2.462
+   },
+   {
+    "w": "palace",
+    "s": 2.462,
+    "e": 3.375
+   },
+   {
+    "w": "But",
+    "s": 3.5,
+    "e": 3.65
+   },
+   {
+    "w": "one",
+    "s": 3.65,
+    "e": 3.875
+   },
+   {
+    "w": "day",
+    "s": 3.875,
+    "e": 4.225
+   },
+   {
+    "w": "he",
+    "s": 4.225,
+    "e": 4.362
+   },
+   {
+    "w": "saw",
+    "s": 4.362,
+    "e": 4.65
+   },
+   {
+    "w": "an",
+    "s": 4.65,
+    "e": 4.75
+   },
+   {
+    "w": "Egyptian",
+    "s": 4.75,
+    "e": 5.675
+   },
+   {
+    "w": "beating",
+    "s": 5.675,
+    "e": 6.2
+   },
+   {
+    "w": "one",
+    "s": 6.2,
+    "e": 6.362
+   },
+   {
+    "w": "of",
+    "s": 6.362,
+    "e": 6.438
+   },
+   {
+    "w": "his",
+    "s": 6.438,
+    "e": 6.612
+   },
+   {
+    "w": "own",
+    "s": 6.612,
+    "e": 6.963
+   },
+   {
+    "w": "people",
+    "s": 6.963,
+    "e": 7.725
+   },
+   {
+    "w": "and",
+    "s": 7.85,
+    "e": 7.975
+   },
+   {
+    "w": "Moses",
+    "s": 7.975,
+    "e": 8.475
+   },
+   {
+    "w": "got",
+    "s": 8.475,
+    "e": 8.713
+   },
+   {
+    "w": "so",
+    "s": 8.713,
+    "e": 9.075
+   },
+   {
+    "w": "angry",
+    "s": 9.075,
+    "e": 9.688
+   },
+   {
+    "w": "that",
+    "s": 9.688,
+    "e": 9.825
+   },
+   {
+    "w": "he",
+    "s": 9.825,
+    "e": 9.963
+   },
+   {
+    "w": "did",
+    "s": 9.963,
+    "e": 10.213
+   },
+   {
+    "w": "something",
+    "s": 10.213,
+    "e": 10.775
+   },
+   {
+    "w": "terrible",
+    "s": 10.775,
+    "e": 11.625
+   }
+  ]
+ },
+ "runs-1": {
+  "src": "audio/moses-baby/runs-1.m4a",
+  "text": "Pharaoh was furious, so Moses ran far away into the desert.",
+  "voice": "bm_lewis",
+  "duration": 6.15,
+  "words": [
+   {
+    "w": "Pharaoh",
+    "s": 0.725,
+    "e": 1.225
+   },
+   {
+    "w": "was",
+    "s": 1.225,
+    "e": 1.45
+   },
+   {
+    "w": "furious",
+    "s": 1.45,
+    "e": 2.3
+   },
+   {
+    "w": "so",
+    "s": 2.462,
+    "e": 2.663
+   },
+   {
+    "w": "Moses",
+    "s": 2.663,
+    "e": 3.225
+   },
+   {
+    "w": "ran",
+    "s": 3.225,
+    "e": 3.612
+   },
+   {
+    "w": "far",
+    "s": 3.612,
+    "e": 3.95
+   },
+   {
+    "w": "away",
+    "s": 3.95,
+    "e": 4.35
+   },
+   {
+    "w": "into",
+    "s": 4.35,
+    "e": 4.562
+   },
+   {
+    "w": "the",
+    "s": 4.562,
+    "e": 4.675
+   },
+   {
+    "w": "desert",
+    "s": 4.675,
+    "e": 5.4
+   }
+  ]
+ },
+ "runs-2": {
+  "src": "audio/moses-baby/runs-2.m4a",
+  "text": "There, by a well, he helped some young shepherd girls water their sheep. He married one of them, Zipporah, and became a shepherd himself.",
+  "voice": "bm_lewis",
+  "duration": 10.7,
+  "words": [
+   {
+    "w": "There",
+    "s": 0.7,
+    "e": 0.95
+   },
+   {
+    "w": "by",
+    "s": 1.0,
+    "e": 1.2
+   },
+   {
+    "w": "a",
+    "s": 1.2,
+    "e": 1.3
+   },
+   {
+    "w": "well",
+    "s": 1.3,
+    "e": 1.875
+   },
+   {
+    "w": "he",
+    "s": 2.0,
+    "e": 2.125
+   },
+   {
+    "w": "helped",
+    "s": 2.125,
+    "e": 2.425
+   },
+   {
+    "w": "some",
+    "s": 2.425,
+    "e": 2.65
+   },
+   {
+    "w": "young",
+    "s": 2.65,
+    "e": 3.125
+   },
+   {
+    "w": "shepherd",
+    "s": 3.125,
+    "e": 3.562
+   },
+   {
+    "w": "girls",
+    "s": 3.562,
+    "e": 4.037
+   },
+   {
+    "w": "water",
+    "s": 4.037,
+    "e": 4.375
+   },
+   {
+    "w": "their",
+    "s": 4.375,
+    "e": 4.612
+   },
+   {
+    "w": "sheep",
+    "s": 4.612,
+    "e": 5.425
+   },
+   {
+    "w": "He",
+    "s": 5.6,
+    "e": 5.75
+   },
+   {
+    "w": "married",
+    "s": 5.75,
+    "e": 6.15
+   },
+   {
+    "w": "one",
+    "s": 6.15,
+    "e": 6.338
+   },
+   {
+    "w": "of",
+    "s": 6.338,
+    "e": 6.45
+   },
+   {
+    "w": "them",
+    "s": 6.45,
+    "e": 6.75
+   },
+   {
+    "w": "Zipporah",
+    "s": 6.862,
+    "e": 7.725
+   },
+   {
+    "w": "and",
+    "s": 7.85,
+    "e": 7.963
+   },
+   {
+    "w": "became",
+    "s": 7.963,
+    "e": 8.375
+   },
+   {
+    "w": "a",
+    "s": 8.375,
+    "e": 8.525
+   },
+   {
+    "w": "shepherd",
+    "s": 8.525,
+    "e": 8.975
+   },
+   {
+    "w": "himself",
+    "s": 8.975,
+    "e": 9.95
+   }
+  ]
+ }
+}

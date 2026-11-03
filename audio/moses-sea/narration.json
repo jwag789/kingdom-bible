@@ -1,0 +1,1207 @@
+{
+ "cover": {
+  "src": "audio/moses-sea/cover.m4a",
+  "text": "The Red Sea.",
+  "voice": "bm_lewis",
+  "duration": 2.525,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.812
+   },
+   {
+    "w": "Red",
+    "s": 0.812,
+    "e": 1.2
+   },
+   {
+    "w": "Sea",
+    "s": 1.2,
+    "e": 1.9
+   }
+  ]
+ },
+ "pillar-title": {
+  "src": "audio/moses-sea/pillar-title.m4a",
+  "text": "Part One. Out of Egypt.",
+  "voice": "bm_lewis",
+  "duration": 3.475,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 1.0
+   },
+   {
+    "w": "One",
+    "s": 1.0,
+    "e": 1.45
+   },
+   {
+    "w": "Out",
+    "s": 1.613,
+    "e": 1.812
+   },
+   {
+    "w": "of",
+    "s": 1.812,
+    "e": 1.975
+   },
+   {
+    "w": "Egypt",
+    "s": 1.975,
+    "e": 2.825
+   }
+  ]
+ },
+ "pillar-0": {
+  "src": "audio/moses-sea/pillar-0.m4a",
+  "text": "So God’s people left Egypt — men, women, children and all their animals — free at last!",
+  "voice": "bm_lewis",
+  "duration": 7.825,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.875
+   },
+   {
+    "w": "God's",
+    "s": 0.875,
+    "e": 1.175
+   },
+   {
+    "w": "people",
+    "s": 1.175,
+    "e": 1.55
+   },
+   {
+    "w": "left",
+    "s": 1.55,
+    "e": 1.875
+   },
+   {
+    "w": "Egypt",
+    "s": 1.875,
+    "e": 2.5
+   },
+   {
+    "w": "men",
+    "s": 2.575,
+    "e": 3.0
+   },
+   {
+    "w": "women",
+    "s": 3.112,
+    "e": 3.6
+   },
+   {
+    "w": "children",
+    "s": 3.75,
+    "e": 4.35
+   },
+   {
+    "w": "and",
+    "s": 4.35,
+    "e": 4.475
+   },
+   {
+    "w": "all",
+    "s": 4.475,
+    "e": 4.7
+   },
+   {
+    "w": "their",
+    "s": 4.7,
+    "e": 4.912
+   },
+   {
+    "w": "animals",
+    "s": 4.912,
+    "e": 5.675
+   },
+   {
+    "w": "free",
+    "s": 5.825,
+    "e": 6.075
+   },
+   {
+    "w": "at",
+    "s": 6.075,
+    "e": 6.225
+   },
+   {
+    "w": "last",
+    "s": 6.225,
+    "e": 7.0
+   }
+  ]
+ },
+ "pillar-1": {
+  "src": "audio/moses-sea/pillar-1.m4a",
+  "text": "God led them Himself: a tall pillar of cloud by day, and a pillar of fire by night, so they always knew the way.",
+  "voice": "bm_lewis",
+  "duration": 9.85,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.025
+   },
+   {
+    "w": "led",
+    "s": 1.025,
+    "e": 1.212
+   },
+   {
+    "w": "them",
+    "s": 1.212,
+    "e": 1.4
+   },
+   {
+    "w": "Himself",
+    "s": 1.4,
+    "e": 2.425
+   },
+   {
+    "w": "a",
+    "s": 2.562,
+    "e": 2.688
+   },
+   {
+    "w": "tall",
+    "s": 2.688,
+    "e": 3.038
+   },
+   {
+    "w": "pillar",
+    "s": 3.038,
+    "e": 3.35
+   },
+   {
+    "w": "of",
+    "s": 3.35,
+    "e": 3.525
+   },
+   {
+    "w": "cloud",
+    "s": 3.525,
+    "e": 4.025
+   },
+   {
+    "w": "by",
+    "s": 4.025,
+    "e": 4.263
+   },
+   {
+    "w": "day",
+    "s": 4.263,
+    "e": 4.9
+   },
+   {
+    "w": "and",
+    "s": 5.025,
+    "e": 5.138
+   },
+   {
+    "w": "a",
+    "s": 5.138,
+    "e": 5.237
+   },
+   {
+    "w": "pillar",
+    "s": 5.237,
+    "e": 5.55
+   },
+   {
+    "w": "of",
+    "s": 5.55,
+    "e": 5.725
+   },
+   {
+    "w": "fire",
+    "s": 5.725,
+    "e": 6.15
+   },
+   {
+    "w": "by",
+    "s": 6.15,
+    "e": 6.388
+   },
+   {
+    "w": "night",
+    "s": 6.388,
+    "e": 6.975
+   },
+   {
+    "w": "so",
+    "s": 7.112,
+    "e": 7.3
+   },
+   {
+    "w": "they",
+    "s": 7.3,
+    "e": 7.45
+   },
+   {
+    "w": "always",
+    "s": 7.45,
+    "e": 8.0
+   },
+   {
+    "w": "knew",
+    "s": 8.0,
+    "e": 8.275
+   },
+   {
+    "w": "the",
+    "s": 8.275,
+    "e": 8.412
+   },
+   {
+    "w": "way",
+    "s": 8.412,
+    "e": 9.125
+   }
+  ]
+ },
+ "sea-title": {
+  "src": "audio/moses-sea/sea-title.m4a",
+  "text": "Part Two. The Red Sea.",
+  "voice": "bm_lewis",
+  "duration": 3.3,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Two",
+    "s": 0.963,
+    "e": 1.4
+   },
+   {
+    "w": "The",
+    "s": 1.5,
+    "e": 1.625
+   },
+   {
+    "w": "Red",
+    "s": 1.625,
+    "e": 1.975
+   },
+   {
+    "w": "Sea",
+    "s": 1.975,
+    "e": 2.65
+   }
+  ]
+ },
+ "sea-0": {
+  "src": "audio/moses-sea/sea-0.m4a",
+  "text": "But then Pharaoh changed his mind and chased them with his army! God’s people were trapped at the edge of the sea.",
+  "voice": "bm_lewis",
+  "duration": 9.1,
+  "words": [
+   {
+    "w": "But",
+    "s": 0.65,
+    "e": 0.762
+   },
+   {
+    "w": "then",
+    "s": 0.762,
+    "e": 1.038
+   },
+   {
+    "w": "Pharaoh",
+    "s": 1.038,
+    "e": 1.613
+   },
+   {
+    "w": "changed",
+    "s": 1.613,
+    "e": 2.062
+   },
+   {
+    "w": "his",
+    "s": 2.062,
+    "e": 2.225
+   },
+   {
+    "w": "mind",
+    "s": 2.225,
+    "e": 2.987
+   },
+   {
+    "w": "and",
+    "s": 2.987,
+    "e": 3.237
+   },
+   {
+    "w": "chased",
+    "s": 3.237,
+    "e": 3.7
+   },
+   {
+    "w": "them",
+    "s": 3.7,
+    "e": 3.925
+   },
+   {
+    "w": "with",
+    "s": 3.925,
+    "e": 4.088
+   },
+   {
+    "w": "his",
+    "s": 4.088,
+    "e": 4.275
+   },
+   {
+    "w": "army",
+    "s": 4.275,
+    "e": 5.175
+   },
+   {
+    "w": "God's",
+    "s": 5.4,
+    "e": 5.862
+   },
+   {
+    "w": "people",
+    "s": 5.862,
+    "e": 6.25
+   },
+   {
+    "w": "were",
+    "s": 6.25,
+    "e": 6.388
+   },
+   {
+    "w": "trapped",
+    "s": 6.388,
+    "e": 6.787
+   },
+   {
+    "w": "at",
+    "s": 6.787,
+    "e": 6.862
+   },
+   {
+    "w": "the",
+    "s": 6.862,
+    "e": 7.013
+   },
+   {
+    "w": "edge",
+    "s": 7.013,
+    "e": 7.312
+   },
+   {
+    "w": "of",
+    "s": 7.312,
+    "e": 7.45
+   },
+   {
+    "w": "the",
+    "s": 7.45,
+    "e": 7.612
+   },
+   {
+    "w": "sea",
+    "s": 7.612,
+    "e": 8.375
+   }
+  ]
+ },
+ "sea-1": {
+  "src": "audio/moses-sea/sea-1.m4a",
+  "text": "“Don’t be afraid,” said Moses. “God will fight for you.” And he stretched out his staff over the sea —",
+  "voice": "bm_lewis",
+  "duration": 8.6,
+  "words": [
+   {
+    "w": "Don't",
+    "s": 0.7,
+    "e": 0.925
+   },
+   {
+    "w": "be",
+    "s": 0.925,
+    "e": 1.075
+   },
+   {
+    "w": "afraid",
+    "s": 1.075,
+    "e": 1.825
+   },
+   {
+    "w": "said",
+    "s": 2.0,
+    "e": 2.25
+   },
+   {
+    "w": "Moses",
+    "s": 2.25,
+    "e": 3.075
+   },
+   {
+    "w": "God",
+    "s": 3.325,
+    "e": 3.7
+   },
+   {
+    "w": "will",
+    "s": 3.7,
+    "e": 3.913
+   },
+   {
+    "w": "fight",
+    "s": 3.913,
+    "e": 4.275
+   },
+   {
+    "w": "for",
+    "s": 4.275,
+    "e": 4.4
+   },
+   {
+    "w": "you",
+    "s": 4.4,
+    "e": 5.025
+   },
+   {
+    "w": "And",
+    "s": 5.175,
+    "e": 5.312
+   },
+   {
+    "w": "he",
+    "s": 5.312,
+    "e": 5.438
+   },
+   {
+    "w": "stretched",
+    "s": 5.438,
+    "e": 5.925
+   },
+   {
+    "w": "out",
+    "s": 5.925,
+    "e": 6.138
+   },
+   {
+    "w": "his",
+    "s": 6.138,
+    "e": 6.287
+   },
+   {
+    "w": "staff",
+    "s": 6.287,
+    "e": 6.75
+   },
+   {
+    "w": "over",
+    "s": 6.75,
+    "e": 7.0
+   },
+   {
+    "w": "the",
+    "s": 7.0,
+    "e": 7.162
+   },
+   {
+    "w": "sea",
+    "s": 7.162,
+    "e": 7.975
+   }
+  ]
+ },
+ "sea-2": {
+  "src": "audio/moses-sea/sea-2.m4a",
+  "text": "— and God split the sea in two! Walls of water stood up on both sides, and God’s people walked right through on dry ground.",
+  "voice": "bm_lewis",
+  "duration": 10.35,
+  "words": [
+   {
+    "w": "and",
+    "s": 0.725,
+    "e": 0.887
+   },
+   {
+    "w": "God",
+    "s": 0.887,
+    "e": 1.3
+   },
+   {
+    "w": "split",
+    "s": 1.3,
+    "e": 1.625
+   },
+   {
+    "w": "the",
+    "s": 1.625,
+    "e": 1.775
+   },
+   {
+    "w": "sea",
+    "s": 1.775,
+    "e": 2.075
+   },
+   {
+    "w": "in",
+    "s": 2.075,
+    "e": 2.275
+   },
+   {
+    "w": "two",
+    "s": 2.275,
+    "e": 3.025
+   },
+   {
+    "w": "Walls",
+    "s": 3.225,
+    "e": 3.725
+   },
+   {
+    "w": "of",
+    "s": 3.725,
+    "e": 3.888
+   },
+   {
+    "w": "water",
+    "s": 3.888,
+    "e": 4.362
+   },
+   {
+    "w": "stood",
+    "s": 4.362,
+    "e": 4.612
+   },
+   {
+    "w": "up",
+    "s": 4.612,
+    "e": 4.763
+   },
+   {
+    "w": "on",
+    "s": 4.763,
+    "e": 4.925
+   },
+   {
+    "w": "both",
+    "s": 4.925,
+    "e": 5.263
+   },
+   {
+    "w": "sides",
+    "s": 5.263,
+    "e": 6.075
+   },
+   {
+    "w": "and",
+    "s": 6.175,
+    "e": 6.312
+   },
+   {
+    "w": "God's",
+    "s": 6.312,
+    "e": 6.675
+   },
+   {
+    "w": "people",
+    "s": 6.675,
+    "e": 7.05
+   },
+   {
+    "w": "walked",
+    "s": 7.05,
+    "e": 7.362
+   },
+   {
+    "w": "right",
+    "s": 7.362,
+    "e": 7.775
+   },
+   {
+    "w": "through",
+    "s": 7.775,
+    "e": 8.075
+   },
+   {
+    "w": "on",
+    "s": 8.075,
+    "e": 8.3
+   },
+   {
+    "w": "dry",
+    "s": 8.3,
+    "e": 8.713
+   },
+   {
+    "w": "ground",
+    "s": 8.713,
+    "e": 9.55
+   }
+  ]
+ },
+ "safe-title": {
+  "src": "audio/moses-sea/safe-title.m4a",
+  "text": "Part Three. Safe on the Other Side.",
+  "voice": "bm_lewis",
+  "duration": 4.0,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Three",
+    "s": 0.963,
+    "e": 1.525
+   },
+   {
+    "w": "Safe",
+    "s": 1.712,
+    "e": 2.087
+   },
+   {
+    "w": "on",
+    "s": 2.087,
+    "e": 2.188
+   },
+   {
+    "w": "the",
+    "s": 2.188,
+    "e": 2.325
+   },
+   {
+    "w": "Other",
+    "s": 2.325,
+    "e": 2.587
+   },
+   {
+    "w": "Side",
+    "s": 2.587,
+    "e": 3.3
+   }
+  ]
+ },
+ "safe-0": {
+  "src": "audio/moses-sea/safe-0.m4a",
+  "text": "Pharaoh’s army chased them right into the sea. But when God’s people were safe on the other side, Moses stretched out his hand again —",
+  "voice": "bm_lewis",
+  "duration": 10.375,
+  "words": [
+   {
+    "w": "Pharaoh's",
+    "s": 0.7,
+    "e": 1.212
+   },
+   {
+    "w": "army",
+    "s": 1.212,
+    "e": 1.65
+   },
+   {
+    "w": "chased",
+    "s": 1.65,
+    "e": 2.013
+   },
+   {
+    "w": "them",
+    "s": 2.013,
+    "e": 2.25
+   },
+   {
+    "w": "right",
+    "s": 2.25,
+    "e": 2.612
+   },
+   {
+    "w": "into",
+    "s": 2.612,
+    "e": 2.812
+   },
+   {
+    "w": "the",
+    "s": 2.812,
+    "e": 2.95
+   },
+   {
+    "w": "sea",
+    "s": 2.95,
+    "e": 3.775
+   },
+   {
+    "w": "But",
+    "s": 3.9,
+    "e": 4.037
+   },
+   {
+    "w": "when",
+    "s": 4.037,
+    "e": 4.237
+   },
+   {
+    "w": "God's",
+    "s": 4.237,
+    "e": 4.65
+   },
+   {
+    "w": "people",
+    "s": 4.65,
+    "e": 5.025
+   },
+   {
+    "w": "were",
+    "s": 5.025,
+    "e": 5.213
+   },
+   {
+    "w": "safe",
+    "s": 5.213,
+    "e": 5.588
+   },
+   {
+    "w": "on",
+    "s": 5.588,
+    "e": 5.688
+   },
+   {
+    "w": "the",
+    "s": 5.688,
+    "e": 5.8
+   },
+   {
+    "w": "other",
+    "s": 5.8,
+    "e": 6.075
+   },
+   {
+    "w": "side",
+    "s": 6.075,
+    "e": 6.8
+   },
+   {
+    "w": "Moses",
+    "s": 6.975,
+    "e": 7.612
+   },
+   {
+    "w": "stretched",
+    "s": 7.612,
+    "e": 8.125
+   },
+   {
+    "w": "out",
+    "s": 8.125,
+    "e": 8.312
+   },
+   {
+    "w": "his",
+    "s": 8.312,
+    "e": 8.475
+   },
+   {
+    "w": "hand",
+    "s": 8.475,
+    "e": 8.85
+   },
+   {
+    "w": "again",
+    "s": 8.85,
+    "e": 9.738
+   }
+  ]
+ },
+ "safe-1": {
+  "src": "audio/moses-sea/safe-1.m4a",
+  "text": "— and the water came rushing back! Pharaoh’s army could never chase them again.",
+  "voice": "bm_lewis",
+  "duration": 6.775,
+  "words": [
+   {
+    "w": "and",
+    "s": 0.7,
+    "e": 0.812
+   },
+   {
+    "w": "the",
+    "s": 0.812,
+    "e": 0.938
+   },
+   {
+    "w": "water",
+    "s": 0.938,
+    "e": 1.413
+   },
+   {
+    "w": "came",
+    "s": 1.413,
+    "e": 1.85
+   },
+   {
+    "w": "rushing",
+    "s": 1.85,
+    "e": 2.362
+   },
+   {
+    "w": "back",
+    "s": 2.362,
+    "e": 3.025
+   },
+   {
+    "w": "Pharaoh's",
+    "s": 3.225,
+    "e": 3.75
+   },
+   {
+    "w": "army",
+    "s": 3.75,
+    "e": 4.225
+   },
+   {
+    "w": "could",
+    "s": 4.225,
+    "e": 4.425
+   },
+   {
+    "w": "never",
+    "s": 4.425,
+    "e": 4.75
+   },
+   {
+    "w": "chase",
+    "s": 4.75,
+    "e": 5.125
+   },
+   {
+    "w": "them",
+    "s": 5.125,
+    "e": 5.325
+   },
+   {
+    "w": "again",
+    "s": 5.325,
+    "e": 6.05
+   }
+  ]
+ },
+ "safe-2": {
+  "src": "audio/moses-sea/safe-2.m4a",
+  "text": "God’s people saw what He had done for them, and they trusted Him.",
+  "voice": "bm_lewis",
+  "duration": 5.5,
+  "words": [
+   {
+    "w": "God's",
+    "s": 0.725,
+    "e": 1.137
+   },
+   {
+    "w": "people",
+    "s": 1.137,
+    "e": 1.55
+   },
+   {
+    "w": "saw",
+    "s": 1.55,
+    "e": 1.85
+   },
+   {
+    "w": "what",
+    "s": 1.85,
+    "e": 1.988
+   },
+   {
+    "w": "He",
+    "s": 1.988,
+    "e": 2.112
+   },
+   {
+    "w": "had",
+    "s": 2.112,
+    "e": 2.237
+   },
+   {
+    "w": "done",
+    "s": 2.237,
+    "e": 2.575
+   },
+   {
+    "w": "for",
+    "s": 2.575,
+    "e": 2.725
+   },
+   {
+    "w": "them",
+    "s": 2.725,
+    "e": 3.225
+   },
+   {
+    "w": "and",
+    "s": 3.35,
+    "e": 3.475
+   },
+   {
+    "w": "they",
+    "s": 3.475,
+    "e": 3.737
+   },
+   {
+    "w": "trusted",
+    "s": 3.737,
+    "e": 4.263
+   },
+   {
+    "w": "Him",
+    "s": 4.263,
+    "e": 4.825
+   }
+  ]
+ },
+ "song-title": {
+  "src": "audio/moses-sea/song-title.m4a",
+  "text": "Part Four. Free!.",
+  "voice": "bm_lewis",
+  "duration": 3.025,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.988
+   },
+   {
+    "w": "Four",
+    "s": 0.988,
+    "e": 1.4
+   },
+   {
+    "w": "Free",
+    "s": 1.512,
+    "e": 2.3
+   }
+  ]
+ },
+ "song-0": {
+  "src": "audio/moses-sea/song-0.m4a",
+  "text": "When they were safe on the other side, everyone sang to God.",
+  "voice": "bm_lewis",
+  "duration": 5.575,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "they",
+    "s": 0.787,
+    "e": 0.925
+   },
+   {
+    "w": "were",
+    "s": 0.925,
+    "e": 1.1
+   },
+   {
+    "w": "safe",
+    "s": 1.1,
+    "e": 1.462
+   },
+   {
+    "w": "on",
+    "s": 1.462,
+    "e": 1.562
+   },
+   {
+    "w": "the",
+    "s": 1.562,
+    "e": 1.7
+   },
+   {
+    "w": "other",
+    "s": 1.7,
+    "e": 1.962
+   },
+   {
+    "w": "side",
+    "s": 1.962,
+    "e": 2.65
+   },
+   {
+    "w": "everyone",
+    "s": 2.812,
+    "e": 3.5
+   },
+   {
+    "w": "sang",
+    "s": 3.5,
+    "e": 3.975
+   },
+   {
+    "w": "to",
+    "s": 3.975,
+    "e": 4.112
+   },
+   {
+    "w": "God",
+    "s": 4.112,
+    "e": 4.85
+   }
+  ]
+ },
+ "song-1": {
+  "src": "audio/moses-sea/song-1.m4a",
+  "text": "Miriam grabbed her tambourine and danced, and all the women danced with her: “Sing to the Lord, for He has won a great victory!” God’s people were free!",
+  "voice": "bm_lewis",
+  "duration": 12.1,
+  "words": [
+   {
+    "w": "Miriam",
+    "s": 0.725,
+    "e": 1.238
+   },
+   {
+    "w": "grabbed",
+    "s": 1.238,
+    "e": 1.613
+   },
+   {
+    "w": "her",
+    "s": 1.613,
+    "e": 1.775
+   },
+   {
+    "w": "tambourine",
+    "s": 1.775,
+    "e": 2.55
+   },
+   {
+    "w": "and",
+    "s": 2.55,
+    "e": 2.712
+   },
+   {
+    "w": "danced",
+    "s": 2.712,
+    "e": 3.475
+   },
+   {
+    "w": "and",
+    "s": 3.6,
+    "e": 3.725
+   },
+   {
+    "w": "all",
+    "s": 3.725,
+    "e": 3.95
+   },
+   {
+    "w": "the",
+    "s": 3.95,
+    "e": 4.075
+   },
+   {
+    "w": "women",
+    "s": 4.075,
+    "e": 4.5
+   },
+   {
+    "w": "danced",
+    "s": 4.5,
+    "e": 5.05
+   },
+   {
+    "w": "with",
+    "s": 5.05,
+    "e": 5.213
+   },
+   {
+    "w": "her",
+    "s": 5.213,
+    "e": 5.85
+   },
+   {
+    "w": "Sing",
+    "s": 6.2,
+    "e": 6.562
+   },
+   {
+    "w": "to",
+    "s": 6.562,
+    "e": 6.7
+   },
+   {
+    "w": "the",
+    "s": 6.7,
+    "e": 6.838
+   },
+   {
+    "w": "Lord",
+    "s": 6.838,
+    "e": 7.475
+   },
+   {
+    "w": "for",
+    "s": 7.575,
+    "e": 7.7
+   },
+   {
+    "w": "He",
+    "s": 7.7,
+    "e": 7.838
+   },
+   {
+    "w": "has",
+    "s": 7.838,
+    "e": 8.0
+   },
+   {
+    "w": "won",
+    "s": 8.0,
+    "e": 8.225
+   },
+   {
+    "w": "a",
+    "s": 8.225,
+    "e": 8.35
+   },
+   {
+    "w": "great",
+    "s": 8.35,
+    "e": 8.75
+   },
+   {
+    "w": "victory",
+    "s": 8.75,
+    "e": 9.525
+   },
+   {
+    "w": "God's",
+    "s": 9.738,
+    "e": 10.1
+   },
+   {
+    "w": "people",
+    "s": 10.1,
+    "e": 10.475
+   },
+   {
+    "w": "were",
+    "s": 10.475,
+    "e": 10.65
+   },
+   {
+    "w": "free",
+    "s": 10.65,
+    "e": 11.375
+   }
+  ]
+ }
+}

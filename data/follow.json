@@ -1,0 +1,589 @@
+{
+  "title": "Follow Me",
+  "reference": "Matthew 3 · Luke 5 · Mark 4",
+  "subtitle": "The story of Jesus’ baptism, some amazed fishermen and a storm that obeyed",
+  "book": "Matthew",
+  "text": "data/follow-text.json",
+  "art": "art/follow",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "prompt": "Peter standing alone, full body, front view: a big, strong fisherman with fair, ruddy sun-tanned skin, curly reddish-brown hair and a bushy beard, wearing a short brown tunic with rolled-up sleeves, holding a fishing net",
+      "src": "art/follow/cast/peter.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 883651,
+        "at": "2026-11-03T03:05:57.959Z"
+      }
+    },
+    {
+      "id": "boat",
+      "name": "the fishing boat",
+      "prompt": "A small wooden fishing boat alone, seen from the side: one short mast with a cream sail, a pair of oars and a fishing net hanging over the side, warm brown planks",
+      "src": "art/follow/cast/boat.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 42537,
+        "at": "2026-11-03T03:06:09.813Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "baptism",
+      "eyebrow": "Part One",
+      "title": "Jesus Is Baptized",
+      "verses": [
+        "Matthew 3:13",
+        "Matthew 3:17"
+      ],
+      "beats": [
+        "When Jesus was grown up, He came to the river Jordan, where His cousin John was baptizing people.",
+        "As Jesus came up out of the water, heaven opened, and God’s Spirit came down on Him like a dove.",
+        "And a voice from heaven said: “This is My Son, whom I love. I am so pleased with Him!”"
+      ],
+      "layers": [
+        {
+          "id": "river",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "river",
+          "prompt": "The Jordan River in bright morning light, with reeds and palm trees: John the Baptist, a wild-haired man in a rough camel-hair coat, stands waist-deep in the water beside Jesus, right of center, as a crowd watches from the bank",
+          "refs": [
+            "jesus"
+          ],
+          "src": "art/follow/baptism/river.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 807609,
+            "at": "2026-11-03T03:06:43.515Z"
+          }
+        },
+        {
+          "id": "heaven",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "heaven",
+          "editOf": "river",
+          "edit": "The sky above now opens with a wide beam of warm golden light, and a white dove flies down through it toward Jesus.",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap the sky",
+          "origin": [
+            0.56,
+            0.17
+          ],
+          "sfx": "promise",
+          "mood": "dawn",
+          "src": "art/follow/baptism/heaven.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 807609,
+            "at": "2026-11-03T03:07:01.477Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.75
+        },
+        {
+          "type": "rays",
+          "with": "heaven",
+          "x": 0.56,
+          "y": 0.1,
+          "soft": true
+        },
+        {
+          "type": "dove",
+          "with": "heaven"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to send a dove",
+        "at": [
+          0.62,
+          0.25
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "dove",
+          "name": "The Dove",
+          "earn": "reveal",
+          "layer": "heaven",
+          "at": [
+            0.54,
+            0.17
+          ],
+          "r": 0.06
+        },
+        {
+          "id": "baptism",
+          "name": "Jesus Is Baptized",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.5
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "john",
+          "name": "John the Baptist",
+          "earn": "secret",
+          "at": [
+            0.77,
+            0.58
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.72,
+          0.42
+        ],
+        "size": 0.025
+      }
+    },
+    {
+      "id": "nets",
+      "eyebrow": "Part Two",
+      "title": "Nets Full of Fish",
+      "verses": [
+        "Luke 5:1",
+        "Luke 5:7"
+      ],
+      "beats": [
+        "One morning, Jesus got into Peter’s fishing boat. Peter and his friends had fished all night and caught nothing.",
+        "“Go out into the deep water,” Jesus said, “and let down your nets.” “We caught nothing all night,” said Peter, “but because You say so, I will.”",
+        "Suddenly the nets filled with so many fish that they began to break! They needed another boat just to bring them all in!"
+      ],
+      "layers": [
+        {
+          "id": "empty",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "empty",
+          "prompt": "Early morning on the Sea of Galilee: Jesus sits in a small wooden fishing boat with Peter, right of center, on calm water near the shore, as tired fishermen hold up their empty nets",
+          "refs": [
+            "jesus",
+            "peter",
+            "boat"
+          ],
+          "src": "art/follow/nets/empty.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 842429,
+            "at": "2026-11-03T03:07:40.071Z"
+          }
+        },
+        {
+          "id": "full",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "full",
+          "editOf": "empty",
+          "edit": "Now the fishing net in the water is bursting with hundreds of silver fish, so full it is almost breaking, and the boat tips with the weight as Peter and the fishermen pull, amazed.",
+          "from": 2,
+          "src": "art/follow/nets/full.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 842429,
+            "at": "2026-11-03T03:07:57.174Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.68
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.55
+        }
+      ],
+      "touch": {
+        "hint": "Tap the water",
+        "at": [
+          0.62,
+          0.62
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "gulls"
+        ],
+        "mood": "sky"
+      },
+      "frame": [
+        0.7,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "boat",
+          "name": "Peter's Boat",
+          "earn": "play",
+          "layer": "empty",
+          "at": [
+            0.68,
+            0.42
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "fish",
+          "name": "So Many Fish!",
+          "earn": "secret",
+          "layer": "full",
+          "with": "full",
+          "at": [
+            0.33,
+            0.62
+          ],
+          "r": 0.1,
+          "hit": 0.08
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.6,
+          0.39
+        ],
+        "size": 0.025
+      }
+    },
+    {
+      "id": "called",
+      "eyebrow": "Part Three",
+      "title": "Fishers of People",
+      "verses": [
+        "Luke 5:8",
+        "Luke 5:11"
+      ],
+      "beats": [
+        "Peter fell at Jesus’ knees, amazed. But Jesus said, “Don’t be afraid. From now on, you will fish for people!”",
+        "So they pulled their boats up on the shore, left everything behind, and followed Jesus."
+      ],
+      "layers": [
+        {
+          "id": "shore",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "shore",
+          "prompt": "On the pebbly shore of the lake at sunrise: Jesus walks along the water's edge, right of center, smiling and beckoning, as four fishermen leave their boats and nets behind to follow Him",
+          "refs": [
+            "jesus",
+            "peter"
+          ],
+          "src": "art/follow/called/shore.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 783108,
+            "at": "2026-11-03T03:08:31.930Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "birds"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.7,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "called",
+          "name": "Fishers of People",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.5
+          ],
+          "r": 0.15
+        },
+        {
+          "id": "boats",
+          "name": "The Empty Boats",
+          "earn": "secret",
+          "at": [
+            0.28,
+            0.45
+          ],
+          "r": 0.07,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.68,
+          0.62
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "storm",
+      "eyebrow": "Part Four",
+      "title": "A Storm on the Lake",
+      "verses": [
+        "Mark 4:35",
+        "Mark 4:38"
+      ],
+      "beats": [
+        "One evening, Jesus and His friends set out across the lake in a boat. Jesus was tired, and He fell asleep.",
+        "Suddenly a fierce storm crashed over them! The waves poured into the boat. But Jesus was still asleep, on a cushion in the back.",
+        "“Teacher!” they shouted, shaking Him awake. “Don’t You care that we’re going to drown?”"
+      ],
+      "layers": [
+        {
+          "id": "waves",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "waves",
+          "prompt": "A wild storm at night on the Sea of Galilee: the small wooden fishing boat is tossed on huge dark waves, right of center, with rain lashing down and frightened fishermen clinging to the mast and bailing water, while Jesus sleeps peacefully on a cushion in the back of the boat",
+          "refs": [
+            "jesus",
+            "peter",
+            "boat"
+          ],
+          "src": "art/follow/storm/waves.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 175042,
+            "at": "2026-11-03T03:09:12.268Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rain",
+          "from": 0
+        },
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "lightning",
+          "from": 0,
+          "sky": 0.4
+        }
+      ],
+      "touch": {
+        "hint": "Tap the clouds",
+        "at": [
+          0.6,
+          0.15
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "rain",
+          "thunder",
+          "waves"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.68,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "storm",
+          "name": "Storm on the Lake",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.45
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "asleep",
+          "name": "Jesus Sleeps",
+          "earn": "secret",
+          "at": [
+            0.75,
+            0.42
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "still",
+      "eyebrow": "Part Five",
+      "title": "Peace, Be Still",
+      "verses": [
+        "Mark 4:39",
+        "Mark 4:41"
+      ],
+      "beats": [
+        "Jesus stood up. He spoke to the wind and the waves: “Peace! Be still!”",
+        "And at once, the wind stopped, and everything was perfectly calm.",
+        "His friends were amazed. “Who is this?” they whispered. “Even the wind and the waves obey Him!”"
+      ],
+      "layers": [
+        {
+          "id": "stand",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "stand",
+          "prompt": "In a storm at night on the lake: Jesus stands up in the small wooden fishing boat, right of center, one hand raised toward the wild waves, with the frightened fishermen huddled behind Him",
+          "refs": [
+            "jesus",
+            "boat"
+          ],
+          "src": "art/follow/still/stand.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 169089,
+            "at": "2026-11-03T03:09:57.862Z"
+          }
+        },
+        {
+          "id": "calm",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "calm",
+          "prompt": "After the storm at night: the lake is perfectly calm and smooth as glass, with a bright full moon and stars in a clear, cloudless sky and no lightning at all. The small wooden fishing boat rests still on the water, right of center, where Jesus stands peacefully while the fishermen in the boat stare at Him in amazement",
+          "refs": [
+            "jesus",
+            "boat"
+          ],
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap the waves",
+          "origin": [
+            0.6,
+            0.65
+          ],
+          "sfx": "promise",
+          "mood": "rest",
+          "src": "art/follow/still/calm.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 1357,
+            "at": "2026-11-03T03:15:12.616Z"
+          },
+          "seed": 1357
+        }
+      ],
+      "effects": [
+        {
+          "type": "rain",
+          "from": 0,
+          "until": "calm"
+        },
+        {
+          "type": "shimmer",
+          "with": "calm",
+          "y": 0.62
+        },
+        {
+          "type": "stars",
+          "with": "calm"
+        },
+        {
+          "type": "starmaker",
+          "with": "calm",
+          "sky": 0.45
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky",
+        "at": [
+          0.6,
+          0.2
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "calm",
+          "name": "Peace, Be Still!",
+          "earn": "reveal",
+          "layer": "calm",
+          "at": [
+            0.5,
+            0.4
+          ],
+          "r": 0.2
+        }
+      ]
+    }
+  ],
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  }
+}

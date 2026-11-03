@@ -6,6 +6,8 @@
 // — `at` is the middle of the round crop and `r` its radius, as fractions of the painting's
 // width; a secret also has `hit` (how close a tap must be) and may have `with` / `until` a layer.
 
+import { badgeEl } from './games.js';
+
 const STORE = 'kb:stickers';
 const ASPECT = 16 / 9;
 
@@ -107,7 +109,7 @@ function howToFind(sticker, scene) {
 }
 
 // The sticker book: every story's stickers, the ones found and the ones still to find.
-export async function openBook({ collection, library, onClose }) {
+export async function openBook({ collection, library, games = {}, onClose }) {
   if (document.querySelector('.book')) return;   // already open
   const book = document.createElement('div');
   book.className = 'book';
@@ -150,6 +152,16 @@ export async function openBook({ collection, library, onClose }) {
     const count = document.createElement('span');
     title.textContent = story.title;
     title.append(count);
+    const game = games[entry.id];
+    if (game) {
+      const row = document.createElement('div');
+      row.className = 'games';
+      const won = collection.has(`${entry.id}/game:${game.id}`);
+      const label = document.createElement('span');
+      label.textContent = won ? `Game: ${game.title} — done!` : `Game: ${game.title} — at the end of the story`;
+      row.append(badgeEl(game, 44, won), label);
+      section.append(row);
+    }
     const lambScenes = story.scenes.filter(sc => sc.lamb);
     if (lambScenes.length) {
       const row = document.createElement('div');

@@ -4,7 +4,9 @@
 //   node scripts/build.mjs
 //   node scripts/serve.mjs 8141 dist       try the built site
 //
-// Every story in data/library.json goes in: its data, Bible text, narration and art.
+// Every story in data/library.json goes in (except ones marked "draft": true, which aren't
+// finished yet): its data, Bible text, narration and art. A finished story whose "next" is a
+// draft points on to the next finished one instead.
 // Tools, test pages, reference pictures and replaced art (history/) stay out.
 
 import { readFile, writeFile, mkdir, rm, cp, readdir, stat } from 'node:fs/promises';
@@ -30,12 +32,29 @@ const writeJson = async (rel, data) => {
 
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
-for (const rel of ['index.html', 'manifest.webmanifest', 'icons', 'fonts', 'src', 'data/library.json', 'art/lamb.png']) await copy(rel);
+for (const rel of ['index.html', 'manifest.webmanifest', 'icons', 'fonts', 'src', 'data/props.json', 'art/lamb.png', 'art/props']) await copy(rel);
 await writeFile(join(out, '.nojekyll'), '');    // GitHub Pages: serve files as they are
 
-const library = await json('data/library.json');
+const fullLibrary = await json('data/library.json');
+const library = { ...fullLibrary, stories: fullLibrary.stories.filter(s => !s.draft) };
+const published = new Set(library.stories.map(s => s.id));
+const drafts = fullLibrary.stories.filter(s => s.draft).map(s => s.id);
+await writeJson('data/library.json', library);
+for (const { cover } of library.stories) if (cover) await copy(cover);
+const games = await json('data/games.json');
+await writeJson('data/games.json', Object.fromEntries(Object.entries(games).filter(([id]) => published.has(id))));
+
 for (const { id } of library.stories) {
   const story = await json(`data/${id}.json`);
+  // Skip past drafts to the next finished story.
+  if (story.next?.story && !published.has(story.next.story)) {
+    const order = fullLibrary.stories.map(s => s.id);
+    let i = order.indexOf(story.next.story);
+    while (!published.has(order[i % order.length])) i++;
+    const nextId = order[i % order.length], next = await json(`data/${nextId}.json`);
+    story.next = { story: nextId, title: next.title, sub: nextId === 'genesis-1'
+      ? 'Go back to where it all began: the story of creation.' : `${next.reference}: ${next.subtitle[0].toLowerCase()}${next.subtitle.slice(1)}.` };
+  }
   // What only the art generator needs (prompts, references, history) stays behind.
   for (const key of ['style', 'castStyle', 'editKeep', 'cast']) delete story[key];
   for (const scene of story.scenes) {
@@ -56,6 +75,11 @@ for (const { id } of library.stories) {
     for (const entry of Object.values(narration)) await copy(entry.src);
     await writeJson(`audio/${id}/narration.json`, narration);
   }
+}
+
+// Spoken lines for the published stories' games.
+for (const id of Object.keys(games).filter(id => published.has(id))) {
+  await cp(join(root, 'audio/games', id), join(out, 'audio/games', id), { recursive: true }).catch(() => {});
 }
 
 // Stamp the service worker with a hash of everything it serves.
@@ -80,4 +104,5 @@ const sw = (await readFile(join(root, 'sw.js'), 'utf8')).replace("const VERSION 
 if (!sw.includes(version)) throw new Error('Could not stamp the version into sw.js');
 await writeFile(join(out, 'sw.js'), sw);
 
-console.log(`Built dist/ (version ${version}): ${(bytes / 1e6).toFixed(1)} MB across ${library.stories.length} stories.`);
+console.log(`Built dist/ (version ${version}): ${(bytes / 1e6).toFixed(1)} MB across ${library.stories.length} stories.` +
+  (drafts.length ? ` Left out (drafts): ${drafts.join(', ')}.` : ''));

@@ -1,0 +1,1692 @@
+{
+ "cover": {
+  "src": "audio/garden/cover.m4a",
+  "text": "The Garden.",
+  "voice": "bm_lewis",
+  "duration": 2.375,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.85
+   },
+   {
+    "w": "Garden",
+    "s": 0.85,
+    "e": 1.725
+   }
+  ]
+ },
+ "eden-title": {
+  "src": "audio/garden/eden-title.m4a",
+  "text": "Part One. The Garden of Eden.",
+  "voice": "bm_lewis",
+  "duration": 3.85,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 1.0
+   },
+   {
+    "w": "One",
+    "s": 1.0,
+    "e": 1.5
+   },
+   {
+    "w": "The",
+    "s": 1.625,
+    "e": 1.762
+   },
+   {
+    "w": "Garden",
+    "s": 1.762,
+    "e": 2.275
+   },
+   {
+    "w": "of",
+    "s": 2.275,
+    "e": 2.45
+   },
+   {
+    "w": "Eden",
+    "s": 2.45,
+    "e": 3.175
+   }
+  ]
+ },
+ "eden-0": {
+  "src": "audio/garden/eden-0.m4a",
+  "text": "God planted a beautiful garden in a place called Eden, full of trees with delicious fruit, and a sparkling river to water it all.",
+  "voice": "bm_lewis",
+  "duration": 10.625,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "planted",
+    "s": 1.062,
+    "e": 1.475
+   },
+   {
+    "w": "a",
+    "s": 1.475,
+    "e": 1.587
+   },
+   {
+    "w": "beautiful",
+    "s": 1.587,
+    "e": 2.087
+   },
+   {
+    "w": "garden",
+    "s": 2.087,
+    "e": 2.575
+   },
+   {
+    "w": "in",
+    "s": 2.575,
+    "e": 2.688
+   },
+   {
+    "w": "a",
+    "s": 2.688,
+    "e": 2.788
+   },
+   {
+    "w": "place",
+    "s": 2.788,
+    "e": 3.237
+   },
+   {
+    "w": "called",
+    "s": 3.237,
+    "e": 3.625
+   },
+   {
+    "w": "Eden",
+    "s": 3.625,
+    "e": 4.4
+   },
+   {
+    "w": "full",
+    "s": 4.575,
+    "e": 4.825
+   },
+   {
+    "w": "of",
+    "s": 4.825,
+    "e": 5.0
+   },
+   {
+    "w": "trees",
+    "s": 5.0,
+    "e": 5.625
+   },
+   {
+    "w": "with",
+    "s": 5.625,
+    "e": 5.8
+   },
+   {
+    "w": "delicious",
+    "s": 5.8,
+    "e": 6.475
+   },
+   {
+    "w": "fruit",
+    "s": 6.475,
+    "e": 7.175
+   },
+   {
+    "w": "and",
+    "s": 7.3,
+    "e": 7.412
+   },
+   {
+    "w": "a",
+    "s": 7.412,
+    "e": 7.5
+   },
+   {
+    "w": "sparkling",
+    "s": 7.5,
+    "e": 8.15
+   },
+   {
+    "w": "river",
+    "s": 8.15,
+    "e": 8.512
+   },
+   {
+    "w": "to",
+    "s": 8.512,
+    "e": 8.7
+   },
+   {
+    "w": "water",
+    "s": 8.7,
+    "e": 9.1
+   },
+   {
+    "w": "it",
+    "s": 9.1,
+    "e": 9.25
+   },
+   {
+    "w": "all",
+    "s": 9.25,
+    "e": 9.9
+   }
+  ]
+ },
+ "eden-1": {
+  "src": "audio/garden/eden-1.m4a",
+  "text": "He put Adam in the garden to take care of it. Adam could eat from any tree — except one: the tree of the knowledge of good and evil.",
+  "voice": "bm_lewis",
+  "duration": 10.875,
+  "words": [
+   {
+    "w": "He",
+    "s": 0.675,
+    "e": 0.8
+   },
+   {
+    "w": "put",
+    "s": 0.8,
+    "e": 1.038
+   },
+   {
+    "w": "Adam",
+    "s": 1.038,
+    "e": 1.375
+   },
+   {
+    "w": "in",
+    "s": 1.375,
+    "e": 1.462
+   },
+   {
+    "w": "the",
+    "s": 1.462,
+    "e": 1.55
+   },
+   {
+    "w": "garden",
+    "s": 1.55,
+    "e": 2.0
+   },
+   {
+    "w": "to",
+    "s": 2.0,
+    "e": 2.125
+   },
+   {
+    "w": "take",
+    "s": 2.125,
+    "e": 2.45
+   },
+   {
+    "w": "care",
+    "s": 2.45,
+    "e": 2.775
+   },
+   {
+    "w": "of",
+    "s": 2.775,
+    "e": 2.9
+   },
+   {
+    "w": "it",
+    "s": 2.9,
+    "e": 3.475
+   },
+   {
+    "w": "Adam",
+    "s": 3.675,
+    "e": 4.05
+   },
+   {
+    "w": "could",
+    "s": 4.05,
+    "e": 4.263
+   },
+   {
+    "w": "eat",
+    "s": 4.263,
+    "e": 4.525
+   },
+   {
+    "w": "from",
+    "s": 4.525,
+    "e": 4.725
+   },
+   {
+    "w": "any",
+    "s": 4.725,
+    "e": 5.062
+   },
+   {
+    "w": "tree",
+    "s": 5.062,
+    "e": 5.713
+   },
+   {
+    "w": "except",
+    "s": 5.8,
+    "e": 6.237
+   },
+   {
+    "w": "one",
+    "s": 6.237,
+    "e": 6.95
+   },
+   {
+    "w": "the",
+    "s": 7.112,
+    "e": 7.275
+   },
+   {
+    "w": "tree",
+    "s": 7.275,
+    "e": 7.675
+   },
+   {
+    "w": "of",
+    "s": 7.675,
+    "e": 7.825
+   },
+   {
+    "w": "the",
+    "s": 7.825,
+    "e": 7.963
+   },
+   {
+    "w": "knowledge",
+    "s": 7.963,
+    "e": 8.5
+   },
+   {
+    "w": "of",
+    "s": 8.5,
+    "e": 8.688
+   },
+   {
+    "w": "good",
+    "s": 8.688,
+    "e": 9.188
+   },
+   {
+    "w": "and",
+    "s": 9.188,
+    "e": 9.4
+   },
+   {
+    "w": "evil",
+    "s": 9.4,
+    "e": 10.125
+   }
+  ]
+ },
+ "naming-title": {
+  "src": "audio/garden/naming-title.m4a",
+  "text": "Part Two. Naming the Animals.",
+  "voice": "bm_lewis",
+  "duration": 3.8,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 0.988
+   },
+   {
+    "w": "Two",
+    "s": 0.988,
+    "e": 1.5
+   },
+   {
+    "w": "Naming",
+    "s": 1.675,
+    "e": 2.15
+   },
+   {
+    "w": "the",
+    "s": 2.15,
+    "e": 2.312
+   },
+   {
+    "w": "Animals",
+    "s": 2.312,
+    "e": 3.15
+   }
+  ]
+ },
+ "naming-0": {
+  "src": "audio/garden/naming-0.m4a",
+  "text": "God brought every animal and bird to Adam, to see what he would call them. And whatever Adam called each one — that was its name!",
+  "voice": "bm_lewis",
+  "duration": 10.5,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.7,
+    "e": 1.062
+   },
+   {
+    "w": "brought",
+    "s": 1.062,
+    "e": 1.45
+   },
+   {
+    "w": "every",
+    "s": 1.45,
+    "e": 1.85
+   },
+   {
+    "w": "animal",
+    "s": 1.85,
+    "e": 2.325
+   },
+   {
+    "w": "and",
+    "s": 2.325,
+    "e": 2.525
+   },
+   {
+    "w": "bird",
+    "s": 2.525,
+    "e": 2.975
+   },
+   {
+    "w": "to",
+    "s": 2.975,
+    "e": 3.138
+   },
+   {
+    "w": "Adam",
+    "s": 3.138,
+    "e": 3.75
+   },
+   {
+    "w": "to",
+    "s": 3.875,
+    "e": 4.013
+   },
+   {
+    "w": "see",
+    "s": 4.013,
+    "e": 4.25
+   },
+   {
+    "w": "what",
+    "s": 4.25,
+    "e": 4.4
+   },
+   {
+    "w": "he",
+    "s": 4.4,
+    "e": 4.525
+   },
+   {
+    "w": "would",
+    "s": 4.525,
+    "e": 4.725
+   },
+   {
+    "w": "call",
+    "s": 4.725,
+    "e": 5.1
+   },
+   {
+    "w": "them",
+    "s": 5.1,
+    "e": 5.825
+   },
+   {
+    "w": "And",
+    "s": 5.95,
+    "e": 6.1
+   },
+   {
+    "w": "whatever",
+    "s": 6.1,
+    "e": 6.55
+   },
+   {
+    "w": "Adam",
+    "s": 6.55,
+    "e": 7.025
+   },
+   {
+    "w": "called",
+    "s": 7.025,
+    "e": 7.475
+   },
+   {
+    "w": "each",
+    "s": 7.475,
+    "e": 7.825
+   },
+   {
+    "w": "one",
+    "s": 7.825,
+    "e": 8.312
+   },
+   {
+    "w": "that",
+    "s": 8.4,
+    "e": 8.6
+   },
+   {
+    "w": "was",
+    "s": 8.6,
+    "e": 8.8
+   },
+   {
+    "w": "its",
+    "s": 8.8,
+    "e": 9.0
+   },
+   {
+    "w": "name",
+    "s": 9.0,
+    "e": 9.75
+   }
+  ]
+ },
+ "naming-1": {
+  "src": "audio/garden/naming-1.m4a",
+  "text": "But none of the animals was just right to be Adam’s partner.",
+  "voice": "bm_lewis",
+  "duration": 5.525,
+  "words": [
+   {
+    "w": "But",
+    "s": 0.65,
+    "e": 0.787
+   },
+   {
+    "w": "none",
+    "s": 0.787,
+    "e": 1.062
+   },
+   {
+    "w": "of",
+    "s": 1.062,
+    "e": 1.163
+   },
+   {
+    "w": "the",
+    "s": 1.163,
+    "e": 1.312
+   },
+   {
+    "w": "animals",
+    "s": 1.312,
+    "e": 2.15
+   },
+   {
+    "w": "was",
+    "s": 2.15,
+    "e": 2.375
+   },
+   {
+    "w": "just",
+    "s": 2.375,
+    "e": 2.663
+   },
+   {
+    "w": "right",
+    "s": 2.663,
+    "e": 3.112
+   },
+   {
+    "w": "to",
+    "s": 3.112,
+    "e": 3.225
+   },
+   {
+    "w": "be",
+    "s": 3.225,
+    "e": 3.475
+   },
+   {
+    "w": "Adam's",
+    "s": 3.475,
+    "e": 3.962
+   },
+   {
+    "w": "partner",
+    "s": 3.962,
+    "e": 4.775
+   }
+  ]
+ },
+ "eve-title": {
+  "src": "audio/garden/eve-title.m4a",
+  "text": "Part Three. God Makes Eve.",
+  "voice": "bm_lewis",
+  "duration": 3.75,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Three",
+    "s": 0.963,
+    "e": 1.5
+   },
+   {
+    "w": "God",
+    "s": 1.663,
+    "e": 2.05
+   },
+   {
+    "w": "Makes",
+    "s": 2.05,
+    "e": 2.388
+   },
+   {
+    "w": "Eve",
+    "s": 2.388,
+    "e": 3.075
+   }
+  ]
+ },
+ "eve-0": {
+  "src": "audio/garden/eve-0.m4a",
+  "text": "So God made Adam fall into a deep sleep. And from Adam’s side, God made a woman: Eve.",
+  "voice": "bm_lewis",
+  "duration": 8.175,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.887
+   },
+   {
+    "w": "God",
+    "s": 0.887,
+    "e": 1.225
+   },
+   {
+    "w": "made",
+    "s": 1.225,
+    "e": 1.45
+   },
+   {
+    "w": "Adam",
+    "s": 1.45,
+    "e": 1.8
+   },
+   {
+    "w": "fall",
+    "s": 1.8,
+    "e": 2.112
+   },
+   {
+    "w": "into",
+    "s": 2.112,
+    "e": 2.337
+   },
+   {
+    "w": "a",
+    "s": 2.337,
+    "e": 2.45
+   },
+   {
+    "w": "deep",
+    "s": 2.45,
+    "e": 2.763
+   },
+   {
+    "w": "sleep",
+    "s": 2.763,
+    "e": 3.525
+   },
+   {
+    "w": "And",
+    "s": 3.675,
+    "e": 3.825
+   },
+   {
+    "w": "from",
+    "s": 3.825,
+    "e": 4.037
+   },
+   {
+    "w": "Adam's",
+    "s": 4.037,
+    "e": 4.475
+   },
+   {
+    "w": "side",
+    "s": 4.475,
+    "e": 5.1
+   },
+   {
+    "w": "God",
+    "s": 5.237,
+    "e": 5.6
+   },
+   {
+    "w": "made",
+    "s": 5.6,
+    "e": 5.812
+   },
+   {
+    "w": "a",
+    "s": 5.812,
+    "e": 5.912
+   },
+   {
+    "w": "woman",
+    "s": 5.912,
+    "e": 6.475
+   },
+   {
+    "w": "Eve",
+    "s": 6.65,
+    "e": 7.4
+   }
+  ]
+ },
+ "eve-1": {
+  "src": "audio/garden/eve-1.m4a",
+  "text": "When Adam saw her, he was so happy! “At last — someone just like me!” And God brought them together.",
+  "voice": "bm_lewis",
+  "duration": 8.5,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.8
+   },
+   {
+    "w": "Adam",
+    "s": 0.8,
+    "e": 1.15
+   },
+   {
+    "w": "saw",
+    "s": 1.15,
+    "e": 1.475
+   },
+   {
+    "w": "her",
+    "s": 1.475,
+    "e": 1.675
+   },
+   {
+    "w": "he",
+    "s": 1.725,
+    "e": 1.837
+   },
+   {
+    "w": "was",
+    "s": 1.837,
+    "e": 1.975
+   },
+   {
+    "w": "so",
+    "s": 1.975,
+    "e": 2.288
+   },
+   {
+    "w": "happy",
+    "s": 2.288,
+    "e": 3.125
+   },
+   {
+    "w": "At",
+    "s": 3.35,
+    "e": 3.538
+   },
+   {
+    "w": "last",
+    "s": 3.538,
+    "e": 4.162
+   },
+   {
+    "w": "someone",
+    "s": 4.263,
+    "e": 4.688
+   },
+   {
+    "w": "just",
+    "s": 4.688,
+    "e": 4.95
+   },
+   {
+    "w": "like",
+    "s": 4.95,
+    "e": 5.25
+   },
+   {
+    "w": "me",
+    "s": 5.25,
+    "e": 5.775
+   },
+   {
+    "w": "And",
+    "s": 5.925,
+    "e": 6.112
+   },
+   {
+    "w": "God",
+    "s": 6.112,
+    "e": 6.513
+   },
+   {
+    "w": "brought",
+    "s": 6.513,
+    "e": 6.8
+   },
+   {
+    "w": "them",
+    "s": 6.8,
+    "e": 7.0
+   },
+   {
+    "w": "together",
+    "s": 7.0,
+    "e": 7.725
+   }
+  ]
+ },
+ "snake-title": {
+  "src": "audio/garden/snake-title.m4a",
+  "text": "Part Four. The Sneaky Snake.",
+  "voice": "bm_lewis",
+  "duration": 3.775,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Four",
+    "s": 0.963,
+    "e": 1.5
+   },
+   {
+    "w": "The",
+    "s": 1.625,
+    "e": 1.775
+   },
+   {
+    "w": "Sneaky",
+    "s": 1.775,
+    "e": 2.325
+   },
+   {
+    "w": "Snake",
+    "s": 2.325,
+    "e": 3.1
+   }
+  ]
+ },
+ "snake-0": {
+  "src": "audio/garden/snake-0.m4a",
+  "text": "Now the snake was the sneakiest of all the animals. “Did God really say you can’t eat from any tree?” he asked Eve.",
+  "voice": "bm_lewis",
+  "duration": 9.55,
+  "words": [
+   {
+    "w": "Now",
+    "s": 0.725,
+    "e": 1.0
+   },
+   {
+    "w": "the",
+    "s": 1.0,
+    "e": 1.163
+   },
+   {
+    "w": "snake",
+    "s": 1.163,
+    "e": 1.675
+   },
+   {
+    "w": "was",
+    "s": 1.675,
+    "e": 1.85
+   },
+   {
+    "w": "the",
+    "s": 1.85,
+    "e": 2.013
+   },
+   {
+    "w": "sneakiest",
+    "s": 2.013,
+    "e": 2.8
+   },
+   {
+    "w": "of",
+    "s": 2.8,
+    "e": 2.925
+   },
+   {
+    "w": "all",
+    "s": 2.925,
+    "e": 3.112
+   },
+   {
+    "w": "the",
+    "s": 3.112,
+    "e": 3.25
+   },
+   {
+    "w": "animals",
+    "s": 3.25,
+    "e": 4.225
+   },
+   {
+    "w": "Did",
+    "s": 4.425,
+    "e": 4.612
+   },
+   {
+    "w": "God",
+    "s": 4.612,
+    "e": 5.075
+   },
+   {
+    "w": "really",
+    "s": 5.075,
+    "e": 5.487
+   },
+   {
+    "w": "say",
+    "s": 5.487,
+    "e": 5.725
+   },
+   {
+    "w": "you",
+    "s": 5.725,
+    "e": 5.85
+   },
+   {
+    "w": "can't",
+    "s": 5.85,
+    "e": 6.175
+   },
+   {
+    "w": "eat",
+    "s": 6.175,
+    "e": 6.45
+   },
+   {
+    "w": "from",
+    "s": 6.45,
+    "e": 6.588
+   },
+   {
+    "w": "any",
+    "s": 6.588,
+    "e": 6.85
+   },
+   {
+    "w": "tree",
+    "s": 6.85,
+    "e": 7.475
+   },
+   {
+    "w": "he",
+    "s": 7.65,
+    "e": 7.8
+   },
+   {
+    "w": "asked",
+    "s": 7.8,
+    "e": 8.175
+   },
+   {
+    "w": "Eve",
+    "s": 8.175,
+    "e": 8.775
+   }
+  ]
+ },
+ "snake-1": {
+  "src": "audio/garden/snake-1.m4a",
+  "text": "“You won’t die,” the snake lied. “If you eat it, you’ll be like God!”",
+  "voice": "bm_lewis",
+  "duration": 6.075,
+  "words": [
+   {
+    "w": "You",
+    "s": 0.7,
+    "e": 0.825
+   },
+   {
+    "w": "won't",
+    "s": 0.825,
+    "e": 1.137
+   },
+   {
+    "w": "die",
+    "s": 1.137,
+    "e": 1.65
+   },
+   {
+    "w": "the",
+    "s": 1.8,
+    "e": 1.938
+   },
+   {
+    "w": "snake",
+    "s": 1.938,
+    "e": 2.3
+   },
+   {
+    "w": "lied",
+    "s": 2.3,
+    "e": 3.025
+   },
+   {
+    "w": "If",
+    "s": 3.225,
+    "e": 3.375
+   },
+   {
+    "w": "you",
+    "s": 3.375,
+    "e": 3.538
+   },
+   {
+    "w": "eat",
+    "s": 3.538,
+    "e": 3.775
+   },
+   {
+    "w": "it",
+    "s": 3.775,
+    "e": 3.95
+   },
+   {
+    "w": "you'll",
+    "s": 4.0,
+    "e": 4.15
+   },
+   {
+    "w": "be",
+    "s": 4.15,
+    "e": 4.3
+   },
+   {
+    "w": "like",
+    "s": 4.3,
+    "e": 4.575
+   },
+   {
+    "w": "God",
+    "s": 4.575,
+    "e": 5.275
+   }
+  ]
+ },
+ "snake-2": {
+  "src": "audio/garden/snake-2.m4a",
+  "text": "So Eve took the fruit and ate it, and gave some to Adam, and he ate it too.",
+  "voice": "bm_lewis",
+  "duration": 6.875,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.925
+   },
+   {
+    "w": "Eve",
+    "s": 0.925,
+    "e": 1.288
+   },
+   {
+    "w": "took",
+    "s": 1.288,
+    "e": 1.525
+   },
+   {
+    "w": "the",
+    "s": 1.525,
+    "e": 1.688
+   },
+   {
+    "w": "fruit",
+    "s": 1.688,
+    "e": 2.1
+   },
+   {
+    "w": "and",
+    "s": 2.1,
+    "e": 2.237
+   },
+   {
+    "w": "ate",
+    "s": 2.237,
+    "e": 2.525
+   },
+   {
+    "w": "it",
+    "s": 2.525,
+    "e": 2.95
+   },
+   {
+    "w": "and",
+    "s": 3.075,
+    "e": 3.2
+   },
+   {
+    "w": "gave",
+    "s": 3.2,
+    "e": 3.55
+   },
+   {
+    "w": "some",
+    "s": 3.55,
+    "e": 3.75
+   },
+   {
+    "w": "to",
+    "s": 3.75,
+    "e": 3.925
+   },
+   {
+    "w": "Adam",
+    "s": 3.925,
+    "e": 4.575
+   },
+   {
+    "w": "and",
+    "s": 4.7,
+    "e": 4.812
+   },
+   {
+    "w": "he",
+    "s": 4.812,
+    "e": 4.963
+   },
+   {
+    "w": "ate",
+    "s": 4.963,
+    "e": 5.25
+   },
+   {
+    "w": "it",
+    "s": 5.25,
+    "e": 5.463
+   },
+   {
+    "w": "too",
+    "s": 5.463,
+    "e": 6.175
+   }
+  ]
+ },
+ "hiding-title": {
+  "src": "audio/garden/hiding-title.m4a",
+  "text": "Part Five. Where Are You?.",
+  "voice": "bm_lewis",
+  "duration": 3.4,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Five",
+    "s": 0.963,
+    "e": 1.525
+   },
+   {
+    "w": "Where",
+    "s": 1.65,
+    "e": 1.875
+   },
+   {
+    "w": "Are",
+    "s": 1.875,
+    "e": 2.062
+   },
+   {
+    "w": "You",
+    "s": 2.062,
+    "e": 2.65
+   }
+  ]
+ },
+ "hiding-0": {
+  "src": "audio/garden/hiding-0.m4a",
+  "text": "That evening, they heard God walking in the garden — and they hid among the trees.",
+  "voice": "bm_lewis",
+  "duration": 7.025,
+  "words": [
+   {
+    "w": "That",
+    "s": 0.7,
+    "e": 0.95
+   },
+   {
+    "w": "evening",
+    "s": 0.95,
+    "e": 1.475
+   },
+   {
+    "w": "they",
+    "s": 1.55,
+    "e": 1.738
+   },
+   {
+    "w": "heard",
+    "s": 1.738,
+    "e": 2.1
+   },
+   {
+    "w": "God",
+    "s": 2.1,
+    "e": 2.6
+   },
+   {
+    "w": "walking",
+    "s": 2.6,
+    "e": 3.025
+   },
+   {
+    "w": "in",
+    "s": 3.025,
+    "e": 3.138
+   },
+   {
+    "w": "the",
+    "s": 3.138,
+    "e": 3.237
+   },
+   {
+    "w": "garden",
+    "s": 3.237,
+    "e": 4.05
+   },
+   {
+    "w": "and",
+    "s": 4.175,
+    "e": 4.287
+   },
+   {
+    "w": "they",
+    "s": 4.287,
+    "e": 4.475
+   },
+   {
+    "w": "hid",
+    "s": 4.475,
+    "e": 4.912
+   },
+   {
+    "w": "among",
+    "s": 4.912,
+    "e": 5.25
+   },
+   {
+    "w": "the",
+    "s": 5.25,
+    "e": 5.4
+   },
+   {
+    "w": "trees",
+    "s": 5.4,
+    "e": 6.3
+   }
+  ]
+ },
+ "hiding-1": {
+  "src": "audio/garden/hiding-1.m4a",
+  "text": "“Where are you?” God called. Adam said, “I was afraid, so I hid.” Their wrong choice had broken their friendship with God.",
+  "voice": "bm_lewis",
+  "duration": 10.225,
+  "words": [
+   {
+    "w": "Where",
+    "s": 0.725,
+    "e": 1.0
+   },
+   {
+    "w": "are",
+    "s": 1.0,
+    "e": 1.2
+   },
+   {
+    "w": "you",
+    "s": 1.2,
+    "e": 1.575
+   },
+   {
+    "w": "God",
+    "s": 1.725,
+    "e": 2.038
+   },
+   {
+    "w": "called",
+    "s": 2.038,
+    "e": 2.6
+   },
+   {
+    "w": "Adam",
+    "s": 2.75,
+    "e": 3.15
+   },
+   {
+    "w": "said",
+    "s": 3.15,
+    "e": 3.675
+   },
+   {
+    "w": "I",
+    "s": 3.875,
+    "e": 4.0
+   },
+   {
+    "w": "was",
+    "s": 4.0,
+    "e": 4.175
+   },
+   {
+    "w": "afraid",
+    "s": 4.175,
+    "e": 4.8
+   },
+   {
+    "w": "so",
+    "s": 4.85,
+    "e": 5.05
+   },
+   {
+    "w": "I",
+    "s": 5.05,
+    "e": 5.237
+   },
+   {
+    "w": "hid",
+    "s": 5.237,
+    "e": 6.05
+   },
+   {
+    "w": "Their",
+    "s": 6.287,
+    "e": 6.5
+   },
+   {
+    "w": "wrong",
+    "s": 6.5,
+    "e": 6.875
+   },
+   {
+    "w": "choice",
+    "s": 6.875,
+    "e": 7.263
+   },
+   {
+    "w": "had",
+    "s": 7.263,
+    "e": 7.4
+   },
+   {
+    "w": "broken",
+    "s": 7.4,
+    "e": 7.775
+   },
+   {
+    "w": "their",
+    "s": 7.775,
+    "e": 8.0
+   },
+   {
+    "w": "friendship",
+    "s": 8.0,
+    "e": 8.575
+   },
+   {
+    "w": "with",
+    "s": 8.575,
+    "e": 8.762
+   },
+   {
+    "w": "God",
+    "s": 8.762,
+    "e": 9.45
+   }
+  ]
+ },
+ "promise-title": {
+  "src": "audio/garden/promise-title.m4a",
+  "text": "Part Six. A Promise.",
+  "voice": "bm_lewis",
+  "duration": 3.25,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Six",
+    "s": 0.963,
+    "e": 1.475
+   },
+   {
+    "w": "A",
+    "s": 1.613,
+    "e": 1.738
+   },
+   {
+    "w": "Promise",
+    "s": 1.738,
+    "e": 2.6
+   }
+  ]
+ },
+ "promise-0": {
+  "src": "audio/garden/promise-0.m4a",
+  "text": "Sin had come into the world, and Adam and Eve had to leave the garden. But God still loved them. He even made them warm clothes to wear.",
+  "voice": "bm_lewis",
+  "duration": 11.25,
+  "words": [
+   {
+    "w": "Sin",
+    "s": 0.725,
+    "e": 0.975
+   },
+   {
+    "w": "had",
+    "s": 0.975,
+    "e": 1.15
+   },
+   {
+    "w": "come",
+    "s": 1.15,
+    "e": 1.363
+   },
+   {
+    "w": "into",
+    "s": 1.363,
+    "e": 1.562
+   },
+   {
+    "w": "the",
+    "s": 1.562,
+    "e": 1.65
+   },
+   {
+    "w": "world",
+    "s": 1.65,
+    "e": 2.325
+   },
+   {
+    "w": "and",
+    "s": 2.45,
+    "e": 2.625
+   },
+   {
+    "w": "Adam",
+    "s": 2.625,
+    "e": 3.0
+   },
+   {
+    "w": "and",
+    "s": 3.0,
+    "e": 3.175
+   },
+   {
+    "w": "Eve",
+    "s": 3.175,
+    "e": 3.575
+   },
+   {
+    "w": "had",
+    "s": 3.575,
+    "e": 3.775
+   },
+   {
+    "w": "to",
+    "s": 3.775,
+    "e": 3.9
+   },
+   {
+    "w": "leave",
+    "s": 3.9,
+    "e": 4.175
+   },
+   {
+    "w": "the",
+    "s": 4.175,
+    "e": 4.312
+   },
+   {
+    "w": "garden",
+    "s": 4.312,
+    "e": 5.275
+   },
+   {
+    "w": "But",
+    "s": 5.412,
+    "e": 5.625
+   },
+   {
+    "w": "God",
+    "s": 5.625,
+    "e": 6.1
+   },
+   {
+    "w": "still",
+    "s": 6.1,
+    "e": 6.525
+   },
+   {
+    "w": "loved",
+    "s": 6.525,
+    "e": 6.95
+   },
+   {
+    "w": "them",
+    "s": 6.95,
+    "e": 7.4
+   },
+   {
+    "w": "He",
+    "s": 7.525,
+    "e": 7.662
+   },
+   {
+    "w": "even",
+    "s": 7.662,
+    "e": 7.95
+   },
+   {
+    "w": "made",
+    "s": 7.95,
+    "e": 8.213
+   },
+   {
+    "w": "them",
+    "s": 8.213,
+    "e": 8.463
+   },
+   {
+    "w": "warm",
+    "s": 8.463,
+    "e": 9.0
+   },
+   {
+    "w": "clothes",
+    "s": 9.0,
+    "e": 9.65
+   },
+   {
+    "w": "to",
+    "s": 9.65,
+    "e": 9.787
+   },
+   {
+    "w": "wear",
+    "s": 9.787,
+    "e": 10.475
+   }
+  ]
+ },
+ "promise-1": {
+  "src": "audio/garden/promise-1.m4a",
+  "text": "And God made a promise: one day, a child would be born who would crush the snake’s head and make everything right again. That child would be Jesus.",
+  "voice": "bm_lewis",
+  "duration": 11.925,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.675,
+    "e": 0.875
+   },
+   {
+    "w": "God",
+    "s": 0.875,
+    "e": 1.3
+   },
+   {
+    "w": "made",
+    "s": 1.3,
+    "e": 1.488
+   },
+   {
+    "w": "a",
+    "s": 1.488,
+    "e": 1.587
+   },
+   {
+    "w": "promise",
+    "s": 1.587,
+    "e": 2.4
+   },
+   {
+    "w": "one",
+    "s": 2.562,
+    "e": 2.825
+   },
+   {
+    "w": "day",
+    "s": 2.825,
+    "e": 3.275
+   },
+   {
+    "w": "a",
+    "s": 3.388,
+    "e": 3.538
+   },
+   {
+    "w": "child",
+    "s": 3.538,
+    "e": 4.013
+   },
+   {
+    "w": "would",
+    "s": 4.013,
+    "e": 4.125
+   },
+   {
+    "w": "be",
+    "s": 4.125,
+    "e": 4.287
+   },
+   {
+    "w": "born",
+    "s": 4.287,
+    "e": 4.713
+   },
+   {
+    "w": "who",
+    "s": 4.713,
+    "e": 4.838
+   },
+   {
+    "w": "would",
+    "s": 4.838,
+    "e": 5.0
+   },
+   {
+    "w": "crush",
+    "s": 5.0,
+    "e": 5.375
+   },
+   {
+    "w": "the",
+    "s": 5.375,
+    "e": 5.525
+   },
+   {
+    "w": "snake's",
+    "s": 5.525,
+    "e": 6.05
+   },
+   {
+    "w": "head",
+    "s": 6.05,
+    "e": 6.65
+   },
+   {
+    "w": "and",
+    "s": 6.65,
+    "e": 6.787
+   },
+   {
+    "w": "make",
+    "s": 6.787,
+    "e": 7.025
+   },
+   {
+    "w": "everything",
+    "s": 7.025,
+    "e": 7.575
+   },
+   {
+    "w": "right",
+    "s": 7.575,
+    "e": 7.9
+   },
+   {
+    "w": "again",
+    "s": 7.9,
+    "e": 8.825
+   },
+   {
+    "w": "That",
+    "s": 9.012,
+    "e": 9.35
+   },
+   {
+    "w": "child",
+    "s": 9.35,
+    "e": 9.975
+   },
+   {
+    "w": "would",
+    "s": 9.975,
+    "e": 10.1
+   },
+   {
+    "w": "be",
+    "s": 10.1,
+    "e": 10.3
+   },
+   {
+    "w": "Jesus",
+    "s": 10.3,
+    "e": 11.15
+   }
+  ]
+ }
+}

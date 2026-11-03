@@ -1,0 +1,13 @@
+{
+  "style": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single animal alone, full body, seen from the side facing left, centered on a plain pure white background, nothing else in the picture. No text, no border",
+  "props": [
+    { "id": "lion", "name": "lions", "prompt": "a friendly lion with a big fluffy golden-orange mane" },
+    { "id": "elephant", "name": "elephants", "prompt": "a gentle grey elephant with big ears and a curled trunk" },
+    { "id": "giraffe", "name": "giraffes", "prompt": "a tall, sweet giraffe with orange-brown patches and a long neck" },
+    { "id": "zebra", "name": "zebras", "prompt": "a cheerful zebra with bold black and white stripes" },
+    { "id": "sheep", "name": "sheep", "prompt": "a fluffy cream sheep with a dark face and little dark legs" },
+    { "id": "rabbit", "name": "rabbits", "prompt": "a small brown-and-white rabbit with long ears, sitting up" },
+    { "id": "camel", "name": "camels", "prompt": "a sandy-brown camel with one big hump and a happy face" },
+    { "id": "hippo", "name": "hippos", "prompt": "a round, smiling purple-grey hippo" }
+  ]
+}

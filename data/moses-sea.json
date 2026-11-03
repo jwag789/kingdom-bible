@@ -1,0 +1,292 @@
+{
+  "title": "The Red Sea",
+  "reference": "Exodus 13–15",
+  "subtitle": "The story of the day God made a path through the sea",
+  "book": "Exodus",
+  "text": "data/moses-sea-text.json",
+  "art": "art/moses",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "moses",
+      "name": "Moses",
+      "prompt": "Moses standing alone, full body, front view: a strong man with fair sun-tanned skin, a full dark-brown beard and long dark hair, wearing a shepherd's robe of brown and sand with a red sash, holding a long wooden staff",
+      "src": "art/moses/cast/moses.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 410038,
+        "at": "2026-11-03T03:05:51.720Z"
+      }
+    },
+    {
+      "id": "miriam",
+      "name": "Miriam",
+      "prompt": "Miriam standing alone, full body, front view: a young woman with fair sun-tanned skin and long dark hair in a braid, wearing a bright yellow-and-orange robe, holding a round tambourine",
+      "src": "art/moses/cast/miriam.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 830440,
+        "at": "2026-11-03T03:14:51.034Z"
+      }
+    },
+    {
+      "id": "pharaoh",
+      "name": "Pharaoh",
+      "prompt": "Pharaoh standing alone, full body, front view: a proud Egyptian king with a stern face, wearing a blue-and-gold striped headdress, a wide golden collar and white linen robes, holding a golden crook",
+      "src": "art/moses/cast/pharaoh.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 684520,
+        "at": "2026-11-03T03:15:03.654Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "pillar",
+      "eyebrow": "Part One",
+      "title": "Out of Egypt",
+      "verses": [
+        "13:17",
+        "13:22"
+      ],
+      "beats": [
+        "So God’s people left Egypt — men, women, children and all their animals — free at last!",
+        "God led them Himself: a tall pillar of cloud by day, and a pillar of fire by night, so they always knew the way."
+      ],
+      "layers": [
+        {
+          "id": "fire-pillar",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fire-pillar",
+          "prompt": "A huge crowd of Israelite families with donkeys, sheep and carts walks across the desert at dusk, right of center, following a towering pillar of glowing fire that rises high into the sky ahead of them",
+          "src": "art/moses/pillar/fire-pillar.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 350129,
+            "at": "2026-11-03T03:15:21.036Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 0,
+          "x": 0.66,
+          "y": 0.35,
+          "color": "#ffb36b"
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "dawn"
+      }
+    },
+    {
+      "id": "sea",
+      "eyebrow": "Part Two",
+      "title": "The Red Sea",
+      "verses": [
+        "14:10",
+        "14:22"
+      ],
+      "beats": [
+        "But then Pharaoh changed his mind and chased them with his army! God’s people were trapped at the edge of the sea.",
+        "“Don’t be afraid,” said Moses. “God will fight for you.” And he stretched out his staff over the sea —",
+        "— and God split the sea in two! Walls of water stood up on both sides, and God’s people walked right through on dry ground."
+      ],
+      "layers": [
+        {
+          "id": "shore",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "shore",
+          "prompt": "At the edge of the Red Sea at night: Moses stands on a rock at the shore, right of center, raising his staff high over the dark waves, with a crowd of Israelites behind him and the chariots of Egypt far away in the dust",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/moses/sea/shore.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 322280,
+            "at": "2026-11-03T03:15:51.203Z"
+          }
+        },
+        {
+          "id": "parted",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "parted",
+          "editOf": "shore",
+          "edit": "The sea now splits in two: tall walls of blue water rise up on both sides of a dry path straight through the middle, glowing in the moonlight, and the people begin walking through.",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap the sea",
+          "origin": [
+            0.6,
+            0.6
+          ],
+          "sfx": "part",
+          "mood": "glory"
+        }
+      ],
+      "effects": [
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "with": "parted"
+        },
+        {
+          "type": "leap",
+          "with": "parted",
+          "water": 0.5
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "wind"
+        ],
+        "mood": "storm"
+      }
+    },
+    {
+      "id": "safe",
+      "eyebrow": "Part Three",
+      "title": "Safe on the Other Side",
+      "verses": [
+        "14:23",
+        "14:31"
+      ],
+      "beats": [
+        "Pharaoh’s army chased them right into the sea. But when God’s people were safe on the other side, Moses stretched out his hand again —",
+        "— and the water came rushing back! Pharaoh’s army could never chase them again.",
+        "God’s people saw what He had done for them, and they trusted Him."
+      ],
+      "layers": [
+        {
+          "id": "far-shore",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "far-shore",
+          "prompt": "Sunrise on the far shore of the Red Sea: Moses and a crowd of Israelite families stand safe on the sandy beach, right of center, looking back at the calm, closed sea in wonder",
+          "refs": [
+            "moses"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.62
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.55
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "gulls"
+        ],
+        "mood": "sky"
+      }
+    },
+    {
+      "id": "song",
+      "eyebrow": "Part Four",
+      "title": "Free!",
+      "verses": [
+        "15:1",
+        "15:21"
+      ],
+      "beats": [
+        "When they were safe on the other side, everyone sang to God.",
+        "Miriam grabbed her tambourine and danced, and all the women danced with her: “Sing to the Lord, for He has won a great victory!” God’s people were free!"
+      ],
+      "layers": [
+        {
+          "id": "dance",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "dance",
+          "prompt": "On the far shore of the sea in the bright morning sun: Miriam dances joyfully with her tambourine, right of center, as women dance with her and the happy people cheer",
+          "refs": [
+            "miriam"
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 0,
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to play the tambourine",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "crowd"
+        ],
+        "mood": "glory"
+      }
+    }
+  ],
+  "next": {
+    "story": "jonah",
+    "title": "Jonah and the Big Fish",
+    "sub": "Jonah 1–4: the story of a runaway prophet and a God who loves everyone."
+  }
+}

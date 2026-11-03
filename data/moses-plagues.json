@@ -1,0 +1,307 @@
+{
+  "title": "Let My People Go",
+  "reference": "Exodus 3–12",
+  "subtitle": "The story of a burning bush, a stubborn king and a very froggy palace",
+  "book": "Exodus",
+  "text": "data/moses-plagues-text.json",
+  "art": "art/moses",
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "moses",
+      "name": "Moses",
+      "prompt": "Moses standing alone, full body, front view: a strong man with fair sun-tanned skin, a full dark-brown beard and long dark hair, wearing a shepherd's robe of brown and sand with a red sash, holding a long wooden staff",
+      "src": "art/moses/cast/moses.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 410038,
+        "at": "2026-11-03T03:05:51.720Z"
+      }
+    },
+    {
+      "id": "miriam",
+      "name": "Miriam",
+      "prompt": "Miriam standing alone, full body, front view: a young woman with fair sun-tanned skin and long dark hair in a braid, wearing a bright yellow-and-orange robe, holding a round tambourine",
+      "src": "art/moses/cast/miriam.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 830440,
+        "at": "2026-11-03T03:14:51.034Z"
+      }
+    },
+    {
+      "id": "pharaoh",
+      "name": "Pharaoh",
+      "prompt": "Pharaoh standing alone, full body, front view: a proud Egyptian king with a stern face, wearing a blue-and-gold striped headdress, a wide golden collar and white linen robes, holding a golden crook",
+      "src": "art/moses/cast/pharaoh.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 684520,
+        "at": "2026-11-03T03:15:03.654Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "bush",
+      "eyebrow": "Part One",
+      "title": "The Burning Bush",
+      "verses": [
+        "3:1",
+        "3:12"
+      ],
+      "beats": [
+        "Moses grew up and became a shepherd. One day he saw something amazing: a bush on fire — but it didn’t burn up!",
+        "God spoke from the bush: “Moses! Take off your sandals — this is holy ground. I have seen My people suffering. Go to Pharaoh, and bring My people out of Egypt.”",
+        "“But who am I?” said Moses. And God answered, “I will be with you.”"
+      ],
+      "layers": [
+        {
+          "id": "mountain",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "mountain",
+          "prompt": "A rocky mountainside in the wilderness at dusk with a few grazing sheep: Moses, a grown shepherd, stops in wonder before a scraggly green bush, right of center",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/moses/bush/mountain.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 500271,
+            "at": "2026-11-03T03:15:37.211Z"
+          }
+        },
+        {
+          "id": "fire",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fire",
+          "editOf": "mountain",
+          "edit": "The bush now blazes with bright golden fire that does not burn it up, its glow lighting the whole mountainside; Moses has taken off his sandals and kneels, shielding his face.",
+          "from": 0,
+          "trigger": "tap",
+          "hint": "Tap the bush",
+          "origin": [
+            0.62,
+            0.55
+          ],
+          "sfx": "flame",
+          "mood": "dawn",
+          "src": "art/moses/bush/fire.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 500271,
+            "at": "2026-11-03T03:15:55.157Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "glow",
+          "with": "fire",
+          "follow": true,
+          "color": "#ffcf7a"
+        },
+        {
+          "type": "motes",
+          "with": "fire"
+        },
+        {
+          "type": "gather",
+          "with": "fire"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "void"
+      }
+    },
+    {
+      "id": "staff",
+      "eyebrow": "Part Two",
+      "title": "The Staff and the Snake",
+      "verses": [
+        "4:1",
+        "4:5"
+      ],
+      "beats": [
+        "“But what if they don’t believe me?” Moses asked. “What is that in your hand?” said God. “A staff,” said Moses.",
+        "“Throw it on the ground.” So Moses threw it down — and it turned into a snake! Moses jumped back.",
+        "“Now pick it up by the tail,” said God. Moses did — and it turned back into a staff!"
+      ],
+      "layers": [
+        {
+          "id": "thrown",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "thrown",
+          "prompt": "On the rocky mountainside by the glowing bush: Moses stands looking down at his long wooden staff, which he has just thrown on the ground in front of him, right of center",
+          "refs": [
+            "moses"
+          ]
+        },
+        {
+          "id": "snake",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "snake",
+          "editOf": "thrown",
+          "edit": "The wooden staff on the ground has turned into a long, wriggling brown paper snake, and Moses jumps back in surprise.",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap the staff",
+          "origin": [
+            0.62,
+            0.8
+          ],
+          "sfx": "hiss",
+          "editModel": "kontext"
+        }
+      ],
+      "effects": [
+        {
+          "type": "glow",
+          "from": 0,
+          "x": 0.25,
+          "y": 0.4,
+          "color": "#ffcf7a"
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "dawn"
+      }
+    },
+    {
+      "id": "frogs",
+      "eyebrow": "Part Three",
+      "title": "Let My People Go!",
+      "verses": [
+        "8:1",
+        "8:15"
+      ],
+      "beats": [
+        "Moses went to Pharaoh. “God says: Let My people go!” But Pharaoh said no.",
+        "So God sent plagues on Egypt — like frogs! Frogs in the beds, frogs in the ovens, frogs on Pharaoh’s throne!",
+        "Again and again Pharaoh said no. But at last, he let God’s people go."
+      ],
+      "layers": [
+        {
+          "id": "palace",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "palace",
+          "prompt": "Inside Pharaoh's grand palace of tall painted columns: Moses stands with his staff before Pharaoh on his golden throne, right of center",
+          "refs": [
+            "moses",
+            "pharaoh"
+          ]
+        },
+        {
+          "id": "hopping",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hopping",
+          "editOf": "palace",
+          "edit": "Now dozens of little green frogs hop everywhere in the palace — on the throne, on the steps and in Pharaoh's lap — while Pharaoh looks very annoyed.",
+          "from": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "frogs",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap to make the frogs hop",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively"
+      }
+    },
+    {
+      "id": "passover",
+      "eyebrow": "Part Four",
+      "title": "The First Passover",
+      "verses": [
+        "12:21",
+        "12:32"
+      ],
+      "beats": [
+        "God told His people to get ready. “Eat a special meal tonight, with your sandals on and your bags packed. Mark your doorposts with the blood of a lamb, and death will pass over your homes.”",
+        "That night, God kept His people safe, just as He promised. And at last Pharaoh said, “Go!”",
+        "Every year after that, God’s people remembered this night: the Passover. And one day, Jesus would come as God’s own Lamb, to rescue everyone."
+      ],
+      "layers": [
+        {
+          "id": "meal",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "meal",
+          "prompt": "Inside a simple mud-brick house at night, lit by an oil lamp: an Israelite family stands around a table eating a meal of flat bread and herbs, dressed for a journey with sandals on and bags packed, right of center; through the open doorway, red marks show on the doorframe and the moon shines"
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "night"
+      }
+    }
+  ],
+  "next": {
+    "story": "moses-sea",
+    "title": "The Red Sea",
+    "sub": "Exodus 13–15: the story of the day God made a path through the sea."
+  }
+}

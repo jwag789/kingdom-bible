@@ -46,14 +46,25 @@ async function falKey() {
   return env.match(/^\s*FAL_KEY\s*=\s*["']?([^"'\s]+)/m)?.[1];
 }
 
-async function fal(model, input, key) {
-  const res = await fetch(`https://fal.run/${model}`, {
-    method: 'POST',
-    headers: { Authorization: `Key ${key}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify(input),
-  });
-  if (!res.ok) throw new Error(`${model} failed (${res.status}): ${(await res.text()).slice(0, 300)}`);
-  return res.json();
+// fal can be busy (429) or slow to answer; try a few times before giving up.
+async function fal(model, input, key, tries = 4) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(`https://fal.run/${model}`, {
+        method: 'POST',
+        headers: { Authorization: `Key ${key}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(input),
+      });
+      if (res.ok) return res.json();
+      const why = `${model} failed (${res.status}): ${(await res.text()).slice(0, 300)}`;
+      if (res.status !== 429 && res.status < 500) throw Object.assign(new Error(why), { final: true });
+      throw new Error(why);
+    } catch (err) {
+      if (err.final || attempt >= tries) throw err;
+      process.stdout.write(` (retrying: ${err.message.slice(0, 60)})`);
+      await new Promise(r => setTimeout(r, 4000 * attempt));
+    }
+  }
 }
 
 async function dataUri(src) {
