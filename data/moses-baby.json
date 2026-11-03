@@ -258,5 +258,16 @@
     "story": "moses-plagues",
     "title": "Let My People Go",
     "sub": "Exodus 3–12: the story of a burning bush, a stubborn king and a very froggy palace."
+  },
+  "talk": {
+    "questions": [
+      "How do you think Miriam felt, watching her baby brother float down the river?",
+      "God kept baby Moses safe. When have you felt safe and cared for?",
+      "Who are the people God has given to look after you?"
+    ],
+    "verse": {
+      "ref": "Exodus 2:25",
+      "text": "God saw the Israelites and took notice."
+    }
   }
 }

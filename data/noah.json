@@ -793,5 +793,16 @@
         "flip": true
       }
     }
-  ]
+  ],
+  "talk": {
+    "questions": [
+      "Why do you think Noah listened to God, even when building an ark seemed strange?",
+      "What do you think it was like inside the ark with all those animals?",
+      "God put a rainbow in the sky as a promise. What promises has God made to you?"
+    ],
+    "verse": {
+      "ref": "Genesis 9:13",
+      "text": "I have set My rainbow in the clouds, and it will be a sign of the covenant between Me and the earth."
+    }
+  }
 }

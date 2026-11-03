@@ -606,5 +606,16 @@
     "story": "noah",
     "title": "Noah's Ark",
     "sub": "Genesis 6:9 – 9:17: the story of a flood, a boat and a promise."
+  },
+  "talk": {
+    "questions": [
+      "Why do you think Adam and Eve hid from God?",
+      "Have you ever done something wrong and wanted to hide? What helps you say sorry?",
+      "God still loved Adam and Eve, and made them a promise. How does God show us He loves us?"
+    ],
+    "verse": {
+      "ref": "Genesis 3:9",
+      "text": "But the LORD God called out to the man, “Where are you?”"
+    }
   }
 }

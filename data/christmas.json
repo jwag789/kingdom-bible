@@ -743,5 +743,16 @@
         "until": "gifts"
       }
     }
-  ]
+  ],
+  "talk": {
+    "questions": [
+      "Why do you think God sent Jesus as a little baby?",
+      "The angels sang because they were so happy. What makes you happy about Jesus being born?",
+      "The wise men brought gifts to Jesus. What gift could you give to Jesus?"
+    ],
+    "verse": {
+      "ref": "Luke 2:11",
+      "text": "Today in the city of David a Savior has been born to you. He is Christ the Lord!"
+    }
+  }
 }

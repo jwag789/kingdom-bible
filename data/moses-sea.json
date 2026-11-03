@@ -288,5 +288,16 @@
     "story": "jonah",
     "title": "Jonah and the Big Fish",
     "sub": "Jonah 1–4: the story of a runaway prophet and a God who loves everyone."
+  },
+  "talk": {
+    "questions": [
+      "How do you think God’s people felt when they were trapped at the edge of the sea?",
+      "Moses said, “God will fight for you.” When do you need God to help you?",
+      "Miriam danced and sang to thank God. How can we say thank you to God?"
+    ],
+    "verse": {
+      "ref": "Exodus 14:14",
+      "text": "The LORD will fight for you; you need only to be still."
+    }
   }
 }

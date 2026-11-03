@@ -303,5 +303,16 @@
     "story": "moses-sea",
     "title": "The Red Sea",
     "sub": "Exodus 13–15: the story of the day God made a path through the sea."
+  },
+  "talk": {
+    "questions": [
+      "Moses was scared and asked, “Who am I?” What did God promise him?",
+      "Why do you think Pharaoh kept saying no?",
+      "At the first Passover, God kept His people safe. How is Jesus like the Passover lamb?"
+    ],
+    "verse": {
+      "ref": "Exodus 3:12",
+      "text": "“I will surely be with you,” God said."
+    }
   }
 }

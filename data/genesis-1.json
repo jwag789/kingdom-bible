@@ -744,5 +744,16 @@
     "story": "garden",
     "title": "The Garden",
     "sub": "Genesis 2–3: the story of the first people, a sneaky snake and a promise."
+  },
+  "talk": {
+    "questions": [
+      "What’s your favorite thing that God made? Why?",
+      "On the seventh day, God rested. Why do you think resting is good?",
+      "God said everything He made was very good. What is good about you?"
+    ],
+    "verse": {
+      "ref": "Genesis 1:1",
+      "text": "In the beginning God created the heavens and the earth."
+    }
   }
 }

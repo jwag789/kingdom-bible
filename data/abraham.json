@@ -381,5 +381,16 @@
     "story": "moses-baby",
     "title": "Baby Moses",
     "sub": "Exodus 1–2: the story of a baby in a basket and a big sister who watched."
+  },
+  "talk": {
+    "questions": [
+      "God asked Abraham to go somewhere new without knowing where. When have you had to be brave like that?",
+      "Why do you think Sarah laughed?",
+      "Is anything too hard for God? What would you like to ask God to help with?"
+    ],
+    "verse": {
+      "ref": "Genesis 18:14",
+      "text": "Is anything too difficult for the LORD?"
+    }
   }
 }

@@ -585,5 +585,16 @@
     "story": "genesis-1",
     "title": "In the Beginning",
     "sub": "Go back to where it all began: the story of creation."
+  },
+  "talk": {
+    "questions": [
+      "When Jesus said “Follow Me,” the fishermen left everything. What do you think it means to follow Jesus?",
+      "Peter let down his nets just because Jesus said so. Why is it good to trust Jesus?",
+      "Even the wind and the waves obeyed Jesus. What worries can you ask Jesus to calm?"
+    ],
+    "verse": {
+      "ref": "Matthew 4:19",
+      "text": "“Come, follow Me,” Jesus said, “and I will make you fishers of men.”"
+    }
   }
 }

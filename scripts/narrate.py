@@ -46,6 +46,17 @@ for scene in story["scenes"]:
         lines.append((f"{scene['id']}-{i}", beat))
 
 
+def talk_text(talk):
+    """The "Talk about it" page, as read aloud. Must match the reader's text (src/reader.js)."""
+    book, ch, v = re.match(r"^(.+) (\d+):(\d+)$", talk["verse"]["ref"]).groups()
+    return (f"Let’s talk about it. {' '.join(talk['questions'])} Our memory verse is {book} {ch}, verse {v}. "
+            + talk["verse"]["text"].replace("LORD", "Lord"))
+
+
+if story.get("talk"):
+    lines.append(("talk", talk_text(story["talk"])))
+
+
 def speakable(text):
     """Small changes so the voice phrases it naturally; the words themselves stay the same."""
     text = text.replace("—", ", ").replace("“", '"').replace("”", '"').replace("’", "'")

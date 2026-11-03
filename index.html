@@ -304,6 +304,22 @@
   .recorder .summary .note { color: var(--gold); word-break: break-all; }
   .recorder .summary .starts { justify-content: center; margin-top: 1rem; }
 
+  /* ---- "Talk about it": questions for the family and a memory verse. */
+  .talk h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 0.4rem 0 1rem; }
+  .talk .questions { margin: 0 0 1.4rem; padding-left: 1.4em; display: grid; gap: 0.7rem; }
+  .talk .questions li { font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.45; padding-left: 0.3em; }
+  .talk .questions li::marker { color: var(--gold); font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  .talk .memory { margin: 0; padding: 16px 20px 14px; border-radius: 18px; background: rgba(240,204,138,0.08); border: 1px solid rgba(240,204,138,0.45); max-width: 32rem; }
+  .talk .memory blockquote { margin: 0.4rem 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.3; font-style: italic; }
+  .talk .memory .lord { font-variant: small-caps; font-style: normal; letter-spacing: 0.04em; }
+  .talk .memory figcaption { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+  @media (max-width: 760px) {
+    .talk h2 { margin-bottom: 0.6rem; }
+    .talk .questions { gap: 0.45rem; margin-bottom: 1rem; }
+    .talk .questions li { font-size: 1rem; }
+    .talk .col { background: rgba(4,5,10,0.62); border-radius: 20px; padding: 16px 16px 18px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  }
+
   /* ---- Bedtime: calmer pictures, and a goodnight fade at the end. */
   #stage { transition: filter 1.5s ease; }
   body.bedtime #stage { filter: brightness(0.7) saturate(0.8) sepia(0.18); }
@@ -394,7 +410,10 @@
     .slide { align-items: flex-end; padding-bottom: calc(16vh + env(safe-area-inset-bottom)); padding-right: 44px; }
     .cover, .title { padding-bottom: calc(22vh + env(safe-area-inset-bottom)); }
     #hint { top: 28% !important; left: 50% !important; }
-    #nav button, #nav .navlink { width: 42px; height: 42px; }
+    #nav { gap: 6px; }
+    #nav button, #nav .navlink { width: 38px; height: 38px; }
+    #nav svg { width: 16px; height: 16px; }
+    #nav .gap { width: 2px; }
   }
 
   @media (prefers-reduced-motion: reduce) {

@@ -165,6 +165,27 @@ story.scenes.forEach((s, si) => {
     beats++;
   });
 });
+// "Talk about it": a few questions for the family and a memory verse, before the last page.
+// What the narrator says here must match talkText() in scripts/narrate.py.
+if (story.talk) {
+  const { questions, verse } = story.talk;
+  const [, vBook, vCh, vV] = /^(.+) (\d+):(\d+)$/.exec(verse.ref);
+  const say = `Let’s talk about it. ${questions.join(' ')} Our memory verse is ${vBook} ${vCh}, verse ${vV}. ${verse.text.replaceAll('LORD', 'Lord')}`;
+  addSlide('talk', { scene: story.scenes.length - 1, beat: beats - 1, at: 1, scrim: 0.95, key: 'talk', say }, col => {
+    const list = node('ol', 'questions', '');
+    for (const q of questions) list.append(node('li', '', q));
+    const card = node('figure', 'memory', '');
+    const words = node('blockquote', '', '');
+    // "LORD" is printed in small capitals, as Bibles do.
+    for (const [i, part] of verse.text.split('LORD').entries()) {
+      if (i) words.append(node('span', 'lord', 'Lord'));
+      words.append(part);
+    }
+    card.append(node('div', 'eyebrow', 'Memory verse'), words, node('figcaption', '', verse.ref));
+    col.append(node('div', 'eyebrow', 'Talk about it'), node('h2', '', 'Let’s talk about it'), list, card);
+  });
+}
+
 addSlide('end', { scene: story.scenes.length - 1, beat: beats - 1, at: 1, scrim: 0.9 }, col => {
   const next = story.next;
   if (next) {
@@ -290,7 +311,8 @@ function narrate() {
   narrator.play(sl.key, sl.say, () => {
     if (!readAloud || index === slides.length - 1) return;
     const waitingForTap = !!stage.waiting;
-    const pause = sl.kind === 'title' ? 1400 : waitingForTap ? 8000 : 2200;
+    // A title moves on quickly; "Talk about it" leaves time to talk.
+    const pause = sl.kind === 'title' ? 1400 : sl.kind === 'talk' ? 9000 : waitingForTap ? 8000 : 2200;
     advanceIn(bedtime ? pause * 1.8 : pause);
   });
   narrator.preload(slides[index + 1]?.key);
@@ -544,6 +566,7 @@ function frame(now) {
   at += (sl.at - at) * k;                           // the camera drifts gently through each scene
   scrimAlpha += (sl.scrim - scrimAlpha) * (1 - Math.exp(-dt * 2));
   scrim.style.opacity = scrimAlpha.toFixed(3);
+  stage.calm = sl.kind === 'talk' || sl.kind === 'end';
   stage.set(sl.scene, sl.beat, at);
   stage.frame(now / 1000, dt);
 

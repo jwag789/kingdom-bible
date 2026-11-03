@@ -699,5 +699,16 @@
         "until": "plant"
       }
     }
-  ]
+  ],
+  "talk": {
+    "questions": [
+      "Why do you think Jonah ran away from God?",
+      "Jonah didn’t want God to forgive his enemies. Is it hard to forgive someone who was unkind to you?",
+      "God loves everyone. Who could you show God’s love to this week?"
+    ],
+    "verse": {
+      "ref": "Jonah 2:9",
+      "text": "Salvation is from the LORD!"
+    }
+  }
 }

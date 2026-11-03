@@ -65,6 +65,7 @@ export class Stage {
     this.beat = -1;
     this.progress = 0;
     this.waiting = null;               // the tap-triggered layer currently waiting, if any
+    this.calm = false;                 // true on pages after the story (talk, end): no waiting, no tap hints
     this.onEvent = null;               // (kind, detail) for 'reveal' and 'touch', e.g. to play sounds
     this.onSecret = null;              // (sceneIndex, sticker) → true if that find was new
     this.onLamb = null;                // (sceneIndex) when the reader taps the hidden lamb
@@ -278,6 +279,8 @@ export class Stage {
           l.waitStart = null;
           l.reveal = ease(l.reveal, 0, 2, dt);
           if (l.reveal < 0.01) s.focus = null;
+        } else if (!l.wipe && this.calm) {
+          l.reveal = ease(l.reveal, 1, 1.3, dt);   // past the story's pages: just show it
         } else if (!l.wipe) {
           l.waitStart ??= t;
           if (t - l.waitStart > TAP_PATIENCE) this.reveal(l, l.origin?.[0] ?? 0.62, l.origin?.[1] ?? 0.22, false);
@@ -297,7 +300,9 @@ export class Stage {
     this.waiting = waiting;
     // Invite a tap: for a waiting layer, or for a scene's playable effect until it's first used.
     const s = this.scenes[this.active];
-    if (waiting) {
+    if (this.calm) {
+      this.showHint(null);
+    } else if (waiting) {
       this.showHint(waiting.hint ?? 'Tap', waiting.origin ?? [0.62, 0.22]);
     } else if (s.touch && !s.tapped && t - s.since > 1.2 && s.fx.some(f => f.play && f.reveal > 0.3)) {
       this.showHint(s.touch.hint, s.touch.at ?? [0.66, 0.5]);
