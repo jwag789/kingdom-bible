@@ -31,5 +31,62 @@
       "pair": "Two {name}!",
       "done": "Every animal is safe inside the ark."
     }
+  },
+  "abraham": {
+    "id": "count-stars",
+    "title": "Count the Stars",
+    "type": "count",
+    "item": "star",
+    "scene": "stars",
+    "count": 10,
+    "background": "art/abraham/stars/night.jpg",
+    "frame": [
+      0.68,
+      0.5
+    ],
+    "badgeEmoji": "⭐",
+    "lines": {
+      "intro": "God told Abraham to count the stars! Tap each star to make it shine, and let’s count them together.",
+      "win": "You counted ten stars! And God’s promise to Abraham was even bigger than the sky.",
+      "done": "God’s promise to Abraham was even bigger than the sky."
+    }
+  },
+  "jonah": {
+    "id": "bubbles",
+    "title": "Pop the Bubbles",
+    "type": "count",
+    "item": "bubble",
+    "scene": "fish",
+    "count": 10,
+    "background": "art/jonah/fish/deep.jpg",
+    "frame": [
+      0.62,
+      0.5
+    ],
+    "badgeEmoji": "🐟",
+    "lines": {
+      "intro": "Jonah is deep down in the sea! Pop the bubbles as they float up, and let’s count them.",
+      "win": "Ten bubbles! And God sent a great big fish to save Jonah.",
+      "done": "And God sent a great big fish to save Jonah."
+    }
+  },
+  "christmas": {
+    "id": "find-lambs",
+    "title": "Find the Lambs",
+    "type": "count",
+    "item": "lamb",
+    "scene": "shepherds",
+    "count": 10,
+    "background": "art/christmas/shepherds/fields.jpg",
+    "frame": [
+      0.65,
+      0.5
+    ],
+    "badge": "art/lamb.png",
+    "lines": {
+      "intro": "The shepherds’ little lambs are hiding in the fields! Can you find all ten?",
+      "win": "You found every lamb! Now the shepherds can hurry to see baby Jesus.",
+      "done": "Now the shepherds can hurry to see baby Jesus."
+    }
   }
 }

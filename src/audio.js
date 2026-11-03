@@ -603,9 +603,32 @@ export class Sound {
   duck(on) {
     if (!this.ctx || on === this.ducked) return;
     this.ducked = on;
-    const now = this.ctx.currentTime;
-    this.musicBus.gain.setTargetAtTime(on ? 0.4 : 0.9, now, on ? 0.25 : 1.2);
-    this.ambBus.gain.setTargetAtTime(on ? 0.3 : 0.55, now, on ? 0.25 : 1.2);
+    this.levels();
+  }
+
+  // Bedtime: the music and the world around the story play softer.
+  setSoft(on) {
+    this.soft = on;
+    if (this.ctx) this.levels();
+  }
+
+  levels() {
+    const now = this.ctx.currentTime, k = this.soft ? 0.5 : 1, on = this.ducked;
+    this.musicBus.gain.setTargetAtTime((on ? 0.4 : 0.9) * k, now, on ? 0.25 : 1.2);
+    this.ambBus.gain.setTargetAtTime((on ? 0.3 : 0.55) * k, now, on ? 0.25 : 1.2);
+  }
+
+  // Goodnight: everything fades away slowly, then the sound stops.
+  sleep(seconds = 18) {
+    if (!this.ctx) return;
+    this.out.gain.setTargetAtTime(0, this.ctx.currentTime, seconds / 4);
+    setTimeout(() => this.ctx?.suspend(), seconds * 1000);
+  }
+
+  wake() {
+    if (!this.ctx) return;
+    this.ctx.resume();
+    this.out.gain.setTargetAtTime(this.enabled ? 1 : 0, this.ctx.currentTime, 0.3);
   }
 }
 

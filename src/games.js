@@ -4,6 +4,8 @@
 //
 // "pairs" (Two by Two): animals wait in the meadow; tap two that match and they walk up
 // the ramp into the ark together. Bring every pair in to win.
+// "count" (Count the Stars, Pop the Bubbles, Find the Lambs): ten things are hidden around the
+// picture — `item` is "star", "bubble" or "lamb" — and each one tapped is counted out loud.
 //
 // Spoken lines (intro, win, "Two lions!") are recorded by scripts/narrate_games.py into
 // audio/games/<story>/<key>.m4a; without them the game simply plays silently.
@@ -25,7 +27,9 @@ async function propNames() {
 // A game's gold badge, for the win screen and the sticker book.
 export function badgeEl(game, px, found = true) {
   const b = el('div', `sticker badge${found ? '' : ' missing'}`);
-  Object.assign(b.style, { width: `${px}px`, height: `${px}px`, backgroundImage: `url("${game.badge}")` });
+  Object.assign(b.style, { width: `${px}px`, height: `${px}px` });
+  if (game.badge) b.style.backgroundImage = `url("${game.badge}")`;
+  else { b.textContent = game.badgeEmoji ?? '★'; b.style.fontSize = `${px * 0.5}px`; b.classList.add('emoji'); }
   b.setAttribute('role', 'img');
   b.setAttribute('aria-label', found ? `${game.title}: done!` : `${game.title}: not played yet`);
   return b;
@@ -84,7 +88,59 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
     return { x: x0 + game.target[0] * pw, y: y0 + game.target[1] * ph };
   };
 
-  const start = () => {
+  const start = () => (game.type === 'count' ? startCount() : startPairs());
+
+  // ---- Tap and count: ten things around the picture, counted out loud as they're found.
+  const startCount = () => {
+    tray.replaceChildren();
+    root.querySelectorAll('.item').forEach(n => n.remove());
+    const total = game.count ?? 10;
+    let found = 0;
+    progress.textContent = `0 of ${total}`;
+    say.textContent = game.lines.intro;
+    speak('intro');
+    const big = el('div', 'tally', '');
+    root.append(big);
+    const spots = [];
+    const near = (x, y) => spots.some(([a, b]) => Math.hypot(a - x, (b - y) * 0.6) < 0.1);
+    for (let i = 0; i < total; i++) {
+      let x, y, tries = 0;
+      do { x = 0.08 + Math.random() * 0.84; y = 0.26 + Math.random() * 0.56; } while (near(x, y) && ++tries < 40);
+      spots.push([x, y]);
+      const item = el('button', `item ${game.item}`);
+      item.setAttribute('aria-label', `${game.item} ${i + 1}`);
+      if (game.item === 'lamb') {
+        const img = el('img');
+        img.src = 'art/lamb.png';
+        img.alt = '';
+        if (Math.random() < 0.5) img.style.transform = 'scaleX(-1)';
+        item.append(img);
+      }
+      item.style.left = `${x * 100}%`;
+      item.style.top = `${y * 100}%`;
+      item.style.setProperty('--delay', `${-Math.random() * 6}s`);
+      item.style.setProperty('--size', `${0.8 + Math.random() * 0.5}`);
+      item.onclick = () => {
+        if (item.classList.contains('got')) return;
+        item.classList.add('got');
+        found++;
+        progress.textContent = `${found} of ${total}`;
+        big.textContent = found;
+        big.classList.remove('pop');
+        void big.offsetWidth;
+        big.classList.add('pop');
+        speak(`count-${found}`);
+        if (game.item === 'bubble') sound.bubble?.(y);
+        else if (game.item === 'lamb') sound.baa?.();
+        else sound.star?.(y, 1);
+        navigator.vibrate?.(10);
+        if (found === total) setTimeout(() => { big.remove(); win(); }, 900);
+      };
+      root.append(item);
+    }
+  };
+
+  const startPairs = () => {
     tray.replaceChildren();
     const kinds = shuffle([...game.pieces]).slice(0, game.count);
     let left = kinds.length, picked = null, busy = false;

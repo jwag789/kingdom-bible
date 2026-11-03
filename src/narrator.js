@@ -1,6 +1,7 @@
 // The narrator: plays each slide's recording (made by scripts/narrate.py) through the sound
 // mix, and says which word is being spoken. A slide with no recording falls back to the
-// browser's own voice.
+// browser's own voice. When a family member has recorded the story (voices.js), `custom(key)`
+// gives their recording for a slide, and the narrator reads only the pages they skipped.
 
 export class Narrator {
   constructor(sound) {
@@ -9,6 +10,7 @@ export class Narrator {
     this.el.preload = 'auto';
     this.manifest = {};
     this.current = null;
+    this.custom = null;                // (slide key) → URL of a family member's recording, or null
   }
 
   async load(url) {
@@ -29,7 +31,8 @@ export class Narrator {
 
   play(key, text, onEnd) {
     this.stop();
-    const entry = this.manifest[key];
+    const mine = this.custom?.(key);
+    const entry = mine ? { src: mine, estimate: true } : this.manifest[key];
     const current = this.current = { key, text, entry, onEnd, char: -1 };
     this.sound.duck(true);
     if (entry) {
@@ -66,16 +69,18 @@ export class Narrator {
     which.onEnd?.();
   }
 
-  // Where the narration is: { key, time, words } for a recording, or { key, char } for the fallback voice.
+  // Where the narration is: { key, time, words } for a recording; { key, time, duration, estimate }
+  // for a family recording (no word timings, so the reader estimates); { key, char } for the fallback voice.
   where() {
     const c = this.current;
     if (!c) return null;
+    if (c.entry?.estimate) return { key: c.key, time: this.el.currentTime, duration: this.el.duration, estimate: true };
     return c.entry ? { key: c.key, time: this.el.currentTime, words: c.entry.words } : { key: c.key, char: c.char };
   }
 
   // Warm the cache for a slide that's probably next.
   preload(key) {
-    const e = this.manifest[key];
+    const e = this.custom?.(key) ? null : this.manifest[key];
     if (e) fetch(e.src).catch(() => {});
   }
 }

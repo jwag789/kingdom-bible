@@ -9,6 +9,9 @@ import { Narrator, alignWords } from './narrator.js';
 import { Collection, stickerSrc, showToast, showLambToast, openBook } from './stickers.js';
 import { buzz, isApp } from './native.js';
 import { openGame } from './games.js';
+import { voices, voicesFor, chosenVoice, chooseVoice, getClip } from './voices.js';
+import { receiveVoice } from './cloud.js';
+import { openRecorder } from './recorder.js';
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
 const asked = new URLSearchParams(location.search).get('story');
@@ -36,6 +39,28 @@ const order = text.verses.map(v => v.ref);
 const sound = new Sound();
 const narrator = new Narrator(sound);
 await narrator.load(`audio/${storyId}/narration.json`);
+
+// ---- Family voices: a link like ?story=noah&voice=<id> brings a shared recording to this device.
+const sharedVoice = new URLSearchParams(location.search).get('voice');
+const received = sharedVoice ? await receiveVoice(sharedVoice, storyId).catch(() => null) : null;
+if (received) chooseVoice(storyId, sharedVoice);
+let clipUrls = {};
+async function useVoice(voiceId) {
+  chooseVoice(storyId, voiceId);
+  Object.values(clipUrls).forEach(u => u.startsWith('blob:') && URL.revokeObjectURL(u));
+  clipUrls = {};
+  const voice = voices().find(v => v.id === voiceId);
+  if (voice?.remote) clipUrls = { ...(voice.urls?.[storyId] ?? {}) };
+  else if (voice) {
+    for (const key of voice.stories?.[storyId] ?? []) {
+      const blob = await getClip(voice.id, storyId, key).catch(() => null);
+      if (blob) clipUrls[key] = URL.createObjectURL(blob);
+    }
+  }
+  narrator.custom = key => clipUrls[key] ?? null;
+  showVoices();
+}
+await useVoice(chosenVoice(storyId));
 
 // A verse reference: "1:5" (in the story's book) or "Luke 2:7" (a story drawing on more than one book).
 function parseRef(ref) {
@@ -112,6 +137,10 @@ addSlide('cover', { scene: 0, beat: -1, at: 0, scrim: 0.9, key: 'cover', say: `$
   const buttons = node('div', 'starts', '');
   buttons.append(node('button', 'begin', 'Begin'), node('button', 'begin read', 'Read it to me'));
   col.append(node('div', 'kicker', story.reference), node('h1', '', story.title), node('div', 'sub', story.subtitle), buttons);
+  // Who reads it: the narrator, or someone in the family who recorded it; and recording your own.
+  const readBy = node('div', 'read-by', '');
+  readBy.id = 'read-by';
+  col.append(readBy);
   // Back to the Stories page.
   const all = node('a', 'all-stories', '← All stories');
   all.href = './';
@@ -174,6 +203,58 @@ const stage = new Stage($('stage'), story, (si, beat) => firstBeat[si] + beat, $
 let readAloud = (() => { try { return localStorage.getItem('kb:read') === '1'; } catch { return false; } })();
 let advanceTimer = null;
 
+// The "Read by" choices on the cover.
+function showVoices() {
+  const box = document.getElementById('read-by');
+  if (!box) return;
+  box.replaceChildren();
+  if (received) box.append(node('p', 'welcome', `🎧 ${received.name} recorded this story for you!`));
+  const current = chosenVoice(storyId);
+  const choice = (label, id) => {
+    const b = node('button', `chip${(current ?? null) === id ? ' on' : ''}`, label);
+    b.setAttribute('aria-pressed', (current ?? null) === id);
+    b.onclick = async () => { await useVoice(id); if (readAloud) narrate(); };
+    return b;
+  };
+  const mine = voicesFor(storyId);
+  if (mine.length) {
+    box.append(node('span', 'label', 'Read by'), choice('The narrator', null));
+    for (const v of mine) box.append(choice(v.name, v.id));
+  }
+  const record = node('button', 'record', mine.some(v => !v.remote) ? '🎙 Record more' : '🎙 Read it in your own voice');
+  record.onclick = () => {
+    narrator.stop();
+    clearTimeout(advanceTimer);
+    const pages = slides.filter(sl => sl.say).map(sl => ({ key: sl.key, say: sl.say,
+      label: sl.kind === 'cover' ? 'The cover' : `${story.scenes[sl.scene].eyebrow} · ${story.scenes[sl.scene].title}` }));
+    openRecorder({ story, storyId, pages, sound, onClose: async id => { if (id) await useVoice(id); else showVoices(); } });
+  };
+  box.append(record);
+}
+
+// Bedtime: calmer pictures, softer music, read aloud with longer pauses, and at the end of the
+// story the screen and the sound fade away to "Goodnight".
+let bedtime = (() => { try { return localStorage.getItem('kb:bedtime') === '1'; } catch { return false; } })();
+function setBedtime(on) {
+  bedtime = on;
+  try { localStorage.setItem('kb:bedtime', on ? '1' : '0'); } catch {}
+  $('bedtime').setAttribute('aria-pressed', on);
+  document.body.classList.toggle('bedtime', on);
+  sound.setSoft(on);
+  if (on && !readAloud) setReadAloud(true);
+  if (!on) { document.body.classList.remove('goodnight'); sound.wake(); }
+}
+function goodnight() {
+  document.body.classList.add('goodnight');
+  sound.sleep();
+}
+// A tap on the goodnight screen wakes the story back up.
+addEventListener('pointerdown', e => {
+  if (!document.body.classList.contains('goodnight') || e.target !== document.body) return;
+  document.body.classList.remove('goodnight');
+  sound.wake();
+}, true);
+
 function setReadAloud(on) {
   readAloud = on;
   try { localStorage.setItem('kb:read', on ? '1' : '0'); } catch {}
@@ -187,8 +268,12 @@ function setSound(on) {
 }
 $('sound').onclick = () => { sound.unlock(); setSound(!sound.enabled); };
 $('read').onclick = () => { sound.unlock(); setReadAloud(!readAloud); };
+$('bedtime').onclick = () => { sound.unlock(); setBedtime(!bedtime); };
 $('sound').setAttribute('aria-pressed', sound.enabled);
 $('read').setAttribute('aria-pressed', readAloud);
+$('bedtime').setAttribute('aria-pressed', bedtime);
+document.body.classList.toggle('bedtime', bedtime);
+sound.setSoft(bedtime);
 
 // The pending page turn in read-aloud mode, if any (null cancels it).
 function advanceIn(ms) {
@@ -205,7 +290,8 @@ function narrate() {
   narrator.play(sl.key, sl.say, () => {
     if (!readAloud || index === slides.length - 1) return;
     const waitingForTap = !!stage.waiting;
-    advanceIn(sl.kind === 'title' ? 1400 : waitingForTap ? 8000 : 2200);
+    const pause = sl.kind === 'title' ? 1400 : waitingForTap ? 8000 : 2200;
+    advanceIn(bedtime ? pause * 1.8 : pause);
   });
   narrator.preload(slides[index + 1]?.key);
 }
@@ -328,6 +414,9 @@ function go(to) {
   if (slides[to].kind === 'title') sound.arrive();
   if (sceneChanged || !unlocked) applySound();
   narrate();
+  // Bedtime: reaching the end of the story fades everything to "Goodnight".
+  if (document.body.classList.contains('goodnight') && slides[to].kind !== 'end') { document.body.classList.remove('goodnight'); sound.wake(); }
+  if (bedtime && slides[to].kind === 'end') setTimeout(() => { if (slides[index].kind === 'end') goodnight(); }, 2500);
   return true;
 }
 const next = () => go(index + 1);
@@ -389,6 +478,8 @@ addEventListener('touchend', e => {
   if (Math.abs(dy) > 45 && Math.abs(dy) > Math.abs(dx)) dy > 0 ? next() : prev();
 });
 
+showVoices();
+
 // ---- Follow along
 const scrim = $('scrim');
 let scrimAlpha = 1, at = 0;
@@ -413,6 +504,12 @@ function highlight() {
       const t = words.times[i];
       if (t) state = w.time >= t[1] ? 'said' : w.time >= t[0] - 0.05 ? 'saying' : '';
       else state = i > 0 && words.spans[i - 1].className === 'said' ? 'said' : '';
+    } else if (w.estimate && w.duration > 0) {
+      // A family recording has no word timings: move through the words in step with the clip.
+      const total = words.starts.at(-1) + (words.spans.at(-1)?.textContent.length ?? 0);
+      const reached = Math.min(1, Math.max(0, (w.time - 0.3) / Math.max(0.5, w.duration - 0.6))) * total;
+      const end = words.starts[i] + span.textContent.length;
+      state = end <= reached ? 'said' : words.starts[i] <= reached ? 'saying' : '';
     } else if (w.char >= 0) {
       state = words.starts[i] < w.char ? 'said' : words.starts[i] === w.char ? 'saying' : '';
     }

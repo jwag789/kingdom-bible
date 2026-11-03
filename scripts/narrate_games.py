@@ -34,6 +34,10 @@ for story, game in games.items():
     out = ROOT / "audio" / "games" / story
     out.mkdir(parents=True, exist_ok=True)
     lines = {"intro": game["lines"]["intro"], "win": game["lines"]["win"]}
+    if game.get("type") == "count":
+        numbers = "One Two Three Four Five Six Seven Eight Nine Ten".split()
+        for n in range(1, game.get("count", 10) + 1):
+            lines[f"count-{n}"] = numbers[n - 1] + "!"
     for kind in game.get("pieces", []):
         lines[f"pair-{kind}"] = game["lines"]["pair"].replace("{name}", names.get(kind, kind))
     for key, text in lines.items():

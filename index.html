@@ -178,6 +178,27 @@
   .game .won h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.6rem; margin: 0.2rem 0; }
   .game .won p { color: var(--soft); line-height: 1.5; }
   .game .won .starts { justify-content: center; margin-top: 1.4rem; }
+  .game .item { position: absolute; transform: translate(-50%, -50%) scale(var(--size, 1)); border: 0; padding: 0; background: none; cursor: pointer; }
+  .game .item.star { width: 46px; height: 46px; background: #c9cfe6; opacity: 0.55; filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
+    clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%); animation: twinkle 2.6s ease-in-out infinite var(--delay); }
+  .game .item.star.got { background: #fff1b8; opacity: 1; filter: drop-shadow(0 0 14px #ffd770) drop-shadow(0 0 30px rgba(255,215,112,0.7)); animation: shine 0.5s ease-out; }
+  @keyframes twinkle { 50% { opacity: 0.3; } }
+  @keyframes shine { 0% { transform: translate(-50%, -50%) scale(0.6); } 60% { transform: translate(-50%, -50%) scale(1.6); } }
+  .game .item.bubble { width: 54px; height: 54px; border-radius: 50%; border: 2px solid rgba(225,245,255,0.85);
+    background: radial-gradient(circle at 32% 30%, rgba(255,255,255,0.9) 0 12%, rgba(200,235,255,0.15) 13%); animation: bob 5s ease-in-out infinite var(--delay); }
+  .game .item.bubble.got { animation: burst 0.35s ease-out forwards; }
+  @keyframes bob { 50% { margin-top: -26px; margin-left: 10px; } }
+  @keyframes burst { to { transform: translate(-50%, -50%) scale(1.8); opacity: 0; } }
+  .game .item.lamb { width: 64px; opacity: 0.92; animation: peek 3.4s ease-in-out infinite var(--delay); }
+  .game .item.lamb img { width: 100%; display: block; pointer-events: none; }
+  .game .item.lamb.got { opacity: 1; animation: hop 0.6s ease-out; filter: drop-shadow(0 0 14px #ffe7a0); }
+  @keyframes peek { 50% { margin-top: 4px; } }
+  @keyframes hop { 40% { margin-top: -30px; } }
+  .game .tally { position: absolute; left: 50%; bottom: 8%; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 14vw, 7rem);
+    color: #fff3d6; text-shadow: 0 0 30px rgba(255,215,112,0.8), 0 2px 12px rgba(0,0,0,0.6); pointer-events: none; }
+  .game .tally.pop { animation: tally 0.45s cubic-bezier(0.2, 1.6, 0.4, 1); }
+  @keyframes tally { 0% { transform: translateX(-50%) scale(0.4); } 100% { transform: translateX(-50%) scale(1); } }
+  .sticker.badge.emoji { display: grid; place-items: center; background: #f3d38d; line-height: 1; }
   .sticker.badge { background-color: #f3d38d; background-size: 70%; background-position: 50% 55%; border-color: #fff4d6;
     box-shadow: 0 0 0 3px #d9a646, 0 8px 20px rgba(0,0,0,0.4); }
   .sticker.badge.missing { filter: grayscale(1) brightness(0.4); opacity: 0.5; box-shadow: none; }
@@ -218,6 +239,72 @@
   .kingdom .slot .cutout { width: 58px; max-height: 62px; object-fit: contain; }
   .kingdom .slot .sticker { transform: none; border-width: 2px; }
   .kingdom .empty { color: var(--soft); font-style: italic; margin: 6px 4px; max-width: 40rem; line-height: 1.5; }
+
+  /* ---- Family voices: "Read by" on the cover, the grown-up check, and the recorder. */
+  .read-by { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 1.6rem; pointer-events: auto; }
+  .read-by .welcome { flex-basis: 100%; margin: 0 0 0.4rem; color: var(--gold); font-size: 1.05rem; }
+  .read-by .label { color: var(--soft); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin-right: 4px; }
+  .read-by .chip { font-size: 0.9rem; padding: 0.4em 0.9em; border-radius: 999px; border: 1px solid rgba(240,204,138,0.4); background: var(--glass); color: var(--ink); }
+  .read-by .chip.on { background: rgba(240,204,138,0.22); border-color: var(--gold); color: var(--gold); }
+  .read-by .record { flex-basis: 100%; text-align: left; background: none; border: 0; padding: 0.3em 0; color: var(--soft); font-size: 0.9rem;
+    text-decoration: underline; text-decoration-color: rgba(245,236,218,0.3); text-underline-offset: 4px; }
+  .read-by .record:hover { color: var(--gold); }
+  .gate { position: fixed; inset: 0; z-index: 12; display: grid; place-items: center; padding: 16px; background: rgba(4,5,10,0.7);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.25s; }
+  .gate.in { opacity: 1; }
+  .gate .card { width: min(26rem, 100%); padding: 26px 22px; border-radius: 24px; background: #12101a; border: 1px solid rgba(240,204,138,0.45); text-align: center; }
+  .gate h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2rem; margin: 0.3rem 0 1rem; }
+  .gate p { color: var(--soft); line-height: 1.5; margin: 0.4rem 0; }
+  .gate .answers { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0.6rem 0; }
+  .gate .answers .begin { margin: 0; min-width: 5rem; font-size: 0.95rem; }
+  .gate .typed { display: flex; gap: 8px; margin: 0.8rem 0 0.4rem; }
+  .gate .name { flex: 1; min-width: 0; font: inherit; padding: 0.6em 0.9em; border-radius: 999px; border: 1px solid rgba(240,204,138,0.4); background: rgba(255,255,255,0.06); color: var(--ink); }
+  .gate .typed .begin { margin: 0; }
+  .gate .cancel { margin-top: 0.8rem; background: none; border: 0; color: var(--soft); text-decoration: underline; }
+  .recorder { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; overflow-y: auto;
+    padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    background: radial-gradient(ellipse at 50% 0%, #2a2238, var(--night) 70%); opacity: 0; transition: opacity 0.3s; }
+  .recorder.in { opacity: 1; }
+  .recorder .top { align-self: stretch; display: flex; align-items: flex-start; gap: 14px; }
+  .recorder .title { flex: 1; }
+  .recorder h2 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
+  .recorder .close { width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; flex: none;
+    border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .recorder .where { color: var(--gold); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 2vh; text-align: center; }
+  .recorder .prompt { max-width: 38rem; font-size: clamp(1.5rem, 4.2vw, 2.3rem); line-height: 1.45; text-align: center; margin: 0; flex: 1;
+    display: flex; align-items: center; }
+  .recorder .level { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); opacity: 0.35;
+    transform: scale(calc(1 + var(--level, 0) * 4)); transition: transform 0.08s; }
+  .recorder.recording .level { opacity: 0.9; background: #ff6b6b; }
+  .recorder .controls { display: flex; align-items: center; gap: 14px; }
+  .recorder .step { width: 50px; height: 50px; border-radius: 50%; font-size: 1.6rem; border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .recorder .step:disabled, .recorder .begin:disabled { opacity: 0.3; }
+  .recorder .controls .begin { margin: 0; }
+  .recorder .rec { width: 78px; height: 78px; border-radius: 50%; border: 4px solid #fbf6ea; background: #e5484d; box-shadow: 0 8px 24px rgba(229,72,77,0.4); }
+  .recorder .rec.on { border-radius: 24px; background: #b3262b; animation: recpulse 1.2s ease-in-out infinite; }
+  @keyframes recpulse { 50% { box-shadow: 0 0 0 12px rgba(229,72,77,0.15), 0 8px 24px rgba(229,72,77,0.4); } }
+  .recorder .dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 34rem; }
+  .recorder .dots button { width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 1px solid rgba(240,204,138,0.6); background: transparent; }
+  .recorder .dots button.done { background: var(--gold); }
+  .recorder .dots button.on { outline: 2px solid #fbf6ea; outline-offset: 2px; }
+  .recorder .finish { margin-top: 0.4rem; }
+  .recorder .summary { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0.92); opacity: 0; width: min(28rem, calc(100% - 32px));
+    padding: 26px 22px; border-radius: 26px; background: #12101a; border: 1px solid rgba(240,204,138,0.5); text-align: center; transition: transform 0.35s, opacity 0.25s; }
+  .recorder .summary.in { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  .recorder .summary h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.3rem; margin: 0.2rem 0; }
+  .recorder .summary p { color: var(--soft); line-height: 1.5; }
+  .recorder .summary .note { color: var(--gold); word-break: break-all; }
+  .recorder .summary .starts { justify-content: center; margin-top: 1rem; }
+
+  /* ---- Bedtime: calmer pictures, and a goodnight fade at the end. */
+  #stage { transition: filter 1.5s ease; }
+  body.bedtime #stage { filter: brightness(0.7) saturate(0.8) sepia(0.18); }
+  body.bedtime .beat, body.bedtime h1, body.bedtime h2 { color: #e9dcc2; }
+  body.bedtime #nav button:not(#bedtime), body.bedtime #nav .navlink { opacity: 0.6; }
+  body::after { content: 'Goodnight'; position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; pointer-events: none;
+    background: #020205; color: rgba(240,204,138,0.85); font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 10vw, 6rem); font-style: italic;
+    opacity: 0; transition: opacity 6s ease; }
+  body.goodnight::after { opacity: 1; pointer-events: auto; }
 
   /* ---- The Stories page (home). */
   html.home, html.home body { overflow-y: auto; overflow-x: hidden; height: auto; min-height: 100%; overscroll-behavior: auto; }
@@ -317,6 +404,7 @@
 <nav id="nav" aria-label="Pages">
   <a id="contents" class="navlink" href="./" aria-label="All stories" title="All stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></a>
   <button id="stickers" aria-label="Sticker book" title="Sticker book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg><span class="count"></span></button>
+  <button id="bedtime" class="toggle" aria-label="Bedtime" title="Bedtime" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg></button>
   <button id="read" class="toggle" aria-label="Read it to me" title="Read it to me" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C6.5 4.5 9.5 4.6 12 6.5v13c-2.5-1.9-5.5-2-8-1V5.5z"/><path d="M20 5.5c-2.5-1-5.5-.9-8 1v13c2.5-1.9 5.5-2 8-1V5.5z"/></svg></button>
   <button id="sound" class="toggle" aria-label="Sound" title="Sound" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="on" d="M15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11"/><path class="off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
   <span class="gap"></span>
