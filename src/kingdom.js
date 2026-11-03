@@ -1,13 +1,14 @@
-// Your Kingdom: a paper meadow that children decorate with everything they've collected —
-// stickers, the little lambs they found, game badges, and (after winning Two by Two) the paper
-// animals. Drag pieces from the tray onto the meadow, drag them around, and tap one to make it
-// bigger, smaller, flip it or put it away. The kingdom is saved on this device.
+// Your Kingdom: a paper meadow that children fill with the people, animals and things from the
+// stories they've finished — Noah and the ark, Mary and Joseph, Jonah's great fish — like a
+// Sunday-school felt board or a nativity set. Finishing a story unlocks its pieces (cut out by
+// scripts/pieces.py); winning Two by Two brings the animals; finding a lamb brings the lamb.
+// Pieces still to unlock wait in the tray as shadows. Drag a piece onto the meadow (or tap it
+// to drop it in), drag it around, and tap it to make it bigger, smaller, flip it or put it away.
+// The kingdom is saved on this device.
 //
 // Pieces are placed in fractions of the meadow's width and height, so the kingdom keeps its
-// shape on a phone or a laptop (only the scenery behind it is cropped differently).
-
-import { stickerEl, stickerSrc } from './stickers.js';
-import { badgeEl } from './games.js';
+// shape on a phone or a laptop (only the scenery behind it is cropped differently). A piece's
+// size `s` is its height, as a fraction of the meadow's shorter side.
 
 const STORE = 'kb:kingdom';
 const BACKGROUND = 'art/living/meadow.jpg';
@@ -15,56 +16,49 @@ const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls)
 const load = () => { try { return JSON.parse(localStorage.getItem(STORE) ?? '[]'); } catch { return []; } };
 const save = pieces => { try { localStorage.setItem(STORE, JSON.stringify(pieces)); } catch {} };
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const WIDE = /ark|ship|boat|fish|snake/;           // things drawn lying long, not standing tall
+const FIRST_ANIMALS = ['lion', 'sheep', 'rabbit', 'giraffe'];   // made on Day 6, so In the Beginning brings them
 
-// Everything this child has collected, as things that can be placed: { id, kind, make(px) }.
-async function collectedItems({ library, collection, games }) {
+// Every piece there is, and whether it's unlocked: { id, label, src, size, unlocked, hint }.
+export async function kingdomPieces({ library, collection }) {
+  const titles = Object.fromEntries(library.stories.map(s => [s.id, s.title]));
+  const has = key => collection.has(key);
   const items = [];
-  const props = await fetch('data/props.json').then(r => r.json(), () => ({ props: [] }));
-  for (const entry of library.stories) {
-    const story = await fetch(`data/${entry.id}.json`).then(r => r.json());
-    for (const scene of story.scenes) {
-      for (const sticker of scene.stickers ?? []) {
-        if (!collection.has(`${entry.id}/${sticker.id}`)) continue;
-        const src = stickerSrc(scene, sticker);
-        items.push({ id: `sticker:${entry.id}/${sticker.id}`, label: sticker.name, make: px => stickerEl(sticker, src, px) });
-      }
-      if (scene.lamb && collection.has(`${entry.id}/lamb:${scene.id}`)) {
-        items.push({ id: `lamb:${entry.id}/${scene.id}`, label: 'A little lamb', cutout: 'art/lamb.png' });
-      }
-    }
-    const game = games[entry.id];
-    if (game && collection.has(`${entry.id}/game:${game.id}`)) {
-      items.push({ id: `badge:${entry.id}`, label: game.title, make: px => badgeEl(game, px) });
-      // Winning Two by Two brings the animals to your kingdom.
-      if (game.type === 'pairs') {
-        for (const kind of game.pieces) {
-          const prop = props.props.find(p => p.id === kind);
-          items.push({ id: `prop:${kind}`, label: prop?.name ?? kind, cutout: `art/props/${kind}.png` });
-        }
-      }
-    }
+  const lambFound = [...collection.got].some(k => k.includes('/lamb:'));
+  items.push({ id: 'lamb', label: 'A little lamb', src: 'art/lamb.png', size: 0.13, unlocked: lambFound,
+    hint: 'Find a little lamb hiding in a story' });
+  const { pieces = [] } = await fetch('data/pieces.json').then(r => r.json(), () => ({}));
+  for (const p of pieces) {
+    const stories = p.stories.filter(id => titles[id]);
+    if (!stories.length) continue;
+    items.push({ id: `piece:${p.id}`, label: p.name, src: p.src, size: WIDE.test(p.id) ? 0.24 : 0.34,
+      unlocked: stories.some(id => has(`${id}/finished`)), hint: `Finish “${titles[stories[0]]}” to unlock` });
+  }
+  const { props = [] } = await fetch('data/props.json').then(r => r.json(), () => ({}));
+  const twoByTwo = has('noah/game:two-by-two');
+  for (const prop of props) {
+    const early = FIRST_ANIMALS.includes(prop.id) && has('genesis-1/finished');
+    items.push({ id: `prop:${prop.id}`, label: prop.name, src: `art/props/${prop.id}.png`, size: 0.2,
+      unlocked: twoByTwo || early, hint: 'Win Two by Two in “Noah’s Ark” to unlock' });
   }
   return items;
 }
 
-// A placed or tray piece: a round sticker or badge, or a cut-out (lamb, animals) as a picture.
+const cap = t => t[0].toUpperCase() + t.slice(1);
+
 function pieceEl(item, px) {
-  if (item.cutout) {
-    const img = el('img', 'cutout');
-    img.src = item.cutout;
-    img.alt = item.label;
-    img.draggable = false;
-    img.style.width = `${px}px`;
-    return img;
-  }
-  const node = item.make(px);
-  node.style.transform = 'none';
-  return node;
+  const img = el('img', 'cutout');
+  img.src = item.src;
+  img.alt = item.label;
+  img.draggable = false;
+  img.style.height = `${px}px`;
+  return img;
 }
 
-export async function openKingdom({ library, collection, games, sound, onClose }) {
+export async function openKingdom({ library, collection, sound, onClose }) {
   if (document.querySelector('.kingdom')) return;
-  const items = await collectedItems({ library, collection, games });
+  const all = await kingdomPieces({ library, collection });
+  const items = all.filter(i => i.unlocked);
   const byId = new Map(items.map(i => [i.id, i]));
   let pieces = load().filter(p => byId.has(p.item));
 
@@ -76,7 +70,7 @@ export async function openKingdom({ library, collection, games, sound, onClose }
   meadow.style.backgroundImage = `url("${BACKGROUND}")`;
   const top = el('div', 'top');
   const title = el('div', 'title');
-  title.append(el('div', 'eyebrow', `${items.length} treasure${items.length === 1 ? '' : 's'} collected`), el('h2', '', 'Your Kingdom'));
+  title.append(el('div', 'eyebrow', `${items.length} of ${all.length} pieces unlocked`), el('h2', '', 'Your Kingdom'));
   const close = el('button', 'close', '×');
   close.setAttribute('aria-label', 'Close Your Kingdom');
   top.append(title, close);
@@ -138,7 +132,7 @@ export async function openKingdom({ library, collection, games, sound, onClose }
   }
   const commit = () => save(pieces);
   smaller.onclick = () => { selected.s = Math.max(0.06, selected.s * 0.8); draw(selected); placeTools(); commit(); };
-  bigger.onclick = () => { selected.s = Math.min(0.6, selected.s * 1.25); draw(selected); placeTools(); commit(); };
+  bigger.onclick = () => { selected.s = Math.min(0.9, selected.s * 1.25); draw(selected); placeTools(); commit(); };
   flip.onclick = () => { selected.flip = !selected.flip; draw(selected); commit(); };
   remove.onclick = () => { nodes.get(selected)?.remove(); nodes.delete(selected); pieces = pieces.filter(p => p !== selected); select(null); commit(); };
   meadow.addEventListener('pointerdown', e => { if (e.target === meadow) select(null); });
@@ -174,12 +168,22 @@ export async function openKingdom({ library, collection, games, sound, onClose }
 
   // ---- The tray: tap to drop a piece into the meadow, or drag it straight to its spot.
   if (!items.length) {
-    tray.append(el('p', 'empty', 'Read the stories, find stickers and little lambs, and play the games — everything you collect will appear here, ready for your kingdom!'));
+    tray.append(el('p', 'empty', 'Finish a story and its people and things will come to live here — Noah and his ark, Mary and Joseph, Jonah’s great fish!'));
   }
+  // Still to unlock: shadows in the tray, with how to earn them.
+  const hint = el('p', 'hint'), locked = [];
+  for (const item of all.filter(i => !i.unlocked)) {
+    const slot = el('button', 'slot locked');
+    slot.setAttribute('aria-label', `${cap(item.label)}: ${item.hint}`);
+    slot.append(pieceEl(item, 56));
+    slot.onclick = () => { hint.textContent = `${cap(item.label)} — ${item.hint}`; hint.classList.add('on'); setTimeout(() => hint.classList.remove('on'), 2600); };
+    locked.push(slot);
+  }
+  root.append(hint);
   for (const item of items) {
     const slot = el('button', 'slot');
     slot.setAttribute('aria-label', `Add ${item.label}`);
-    slot.append(pieceEl(item, 58));
+    slot.append(pieceEl(item, 56));
     slot.addEventListener('pointerdown', e => {
       e.preventDefault();
       const start = { x: e.clientX, y: e.clientY };
@@ -188,7 +192,7 @@ export async function openKingdom({ library, collection, games, sound, onClose }
         const box = meadow.getBoundingClientRect();
         if (!piece) {
           if (Math.hypot(ev.clientX - start.x, ev.clientY - start.y) < 8) return;
-          piece = { item: item.id, x: 0.5, y: 0.5, s: item.cutout ? 0.22 : 0.16, flip: false };
+          piece = { item: item.id, x: 0.5, y: 0.5, s: item.size, flip: false };
           pieces.push(piece);
           draw(piece);
           nodes.get(piece).classList.add('lifted');
@@ -204,7 +208,7 @@ export async function openKingdom({ library, collection, games, sound, onClose }
         removeEventListener('pointerup', up);
         if (!piece) {
           // A tap: drop it somewhere near the middle.
-          piece = { item: item.id, x: 0.35 + Math.random() * 0.3, y: 0.35 + Math.random() * 0.3, s: item.cutout ? 0.22 : 0.16, flip: false };
+          piece = { item: item.id, x: 0.3 + Math.random() * 0.4, y: 0.45 + Math.random() * 0.3, s: item.size, flip: false };
           pieces.push(piece);
           draw(piece);
         }
@@ -218,6 +222,8 @@ export async function openKingdom({ library, collection, games, sound, onClose }
     });
     tray.append(slot);
   }
+
+  tray.append(...locked);
 
   // Wait a frame so the meadow has its size, then place what was saved.
   requestAnimationFrame(redraw);

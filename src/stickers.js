@@ -63,6 +63,21 @@ export function showToast(sticker, src, target) {
   popUp(stickerEl(sticker, src, toastSize()), 'New sticker', sticker.name, target);
 }
 
+// "New in Your Kingdom: Noah and the Ark" — when finishing a story unlocks its pieces.
+export function showPiecesToast(pieces, target) {
+  const px = toastSize();
+  const art = document.createElement('div');
+  art.className = 'piece-art';
+  Object.assign(art.style, { width: `${px}px`, height: `${px}px` });
+  const img = document.createElement('img');
+  img.src = pieces[0].src;
+  img.alt = '';
+  art.append(img);
+  const names = pieces.map(p => p.name);
+  const title = names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names.at(-1)}` : names[0];
+  popUp(art, 'New in Your Kingdom', title[0].toUpperCase() + title.slice(1), target);
+}
+
 // "You found the little lamb!"
 export function showLambToast(found, total, target) {
   popUp(lambEl(toastSize()), `Little lamb ${found} of ${total}`, found === total ? 'You found every lamb!' : 'You found a little lamb!', target);

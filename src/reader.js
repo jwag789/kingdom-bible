@@ -6,7 +6,7 @@
 import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
-import { Collection, stickerSrc, showToast, showLambToast, openBook } from './stickers.js';
+import { Collection, stickerSrc, showToast, showLambToast, showPiecesToast, openBook } from './stickers.js';
 import { buzz, isApp } from './native.js';
 import { openGame } from './games.js';
 import { voices, voicesFor, chosenVoice, chooseVoice, getClip } from './voices.js';
@@ -344,6 +344,20 @@ bookButton.onclick = () => {
   openBook({ collection, library, games, onClose: () => { bookButton.focus(); narrate(); } });
 };
 
+async function unlockPieces() {
+  const { pieces = [] } = await fetch('data/pieces.json').then(r => r.json(), () => ({}));
+  const mine = pieces.filter(p => p.stories.includes(storyId));
+  if (storyId === 'genesis-1') {
+    const { props = [] } = await fetch('data/props.json').then(r => r.json(), () => ({}));
+    for (const id of ['lion', 'sheep', 'rabbit', 'giraffe']) {
+      const prop = props.find(p => p.id === id);
+      if (prop) mine.push({ name: prop.name, src: `art/props/${id}.png` });
+    }
+  }
+  if (!mine.length) return;
+  setTimeout(() => { sound.sticker(); showPiecesToast(mine, bookButton); }, 1200);
+}
+
 function playGame() {
   sound.unlock();
   narrator.stop();
@@ -414,6 +428,8 @@ function go(to) {
   if (slides[to].kind === 'title') sound.arrive();
   if (sceneChanged || !unlocked) applySound();
   narrate();
+  // Reaching the end finishes the story, which brings its people and things to Your Kingdom.
+  if (slides[to].kind === 'end' && collection.add(`${storyId}/finished`)) unlockPieces();
   // Bedtime: reaching the end of the story fades everything to "Goodnight".
   if (document.body.classList.contains('goodnight') && slides[to].kind !== 'end') { document.body.classList.remove('goodnight'); sound.wake(); }
   if (bedtime && slides[to].kind === 'end') setTimeout(() => { if (slides[index].kind === 'end') goodnight(); }, 2500);

@@ -1,0 +1,162 @@
+{
+  "pieces": [
+    {
+      "id": "garden-adam",
+      "name": "Adam",
+      "src": "art/pieces/garden-adam.png",
+      "stories": [
+        "garden"
+      ]
+    },
+    {
+      "id": "garden-eve",
+      "name": "Eve",
+      "src": "art/pieces/garden-eve.png",
+      "stories": [
+        "garden"
+      ]
+    },
+    {
+      "id": "garden-snake",
+      "name": "the snake",
+      "src": "art/pieces/garden-snake.png",
+      "stories": [
+        "garden"
+      ]
+    },
+    {
+      "id": "noah-noah",
+      "name": "Noah",
+      "src": "art/pieces/noah-noah.png",
+      "stories": [
+        "noah"
+      ]
+    },
+    {
+      "id": "noah-ark",
+      "name": "the ark",
+      "src": "art/pieces/noah-ark.png",
+      "stories": [
+        "noah"
+      ]
+    },
+    {
+      "id": "abraham-abraham",
+      "name": "Abraham",
+      "src": "art/pieces/abraham-abraham.png",
+      "stories": [
+        "abraham"
+      ]
+    },
+    {
+      "id": "abraham-sarah",
+      "name": "Sarah",
+      "src": "art/pieces/abraham-sarah.png",
+      "stories": [
+        "abraham"
+      ]
+    },
+    {
+      "id": "moses-moses",
+      "name": "Moses",
+      "src": "art/pieces/moses-moses.png",
+      "stories": [
+        "moses-baby",
+        "moses-plagues",
+        "moses-sea"
+      ]
+    },
+    {
+      "id": "moses-miriam",
+      "name": "Miriam",
+      "src": "art/pieces/moses-miriam.png",
+      "stories": [
+        "moses-baby",
+        "moses-plagues",
+        "moses-sea"
+      ]
+    },
+    {
+      "id": "moses-pharaoh",
+      "name": "Pharaoh",
+      "src": "art/pieces/moses-pharaoh.png",
+      "stories": [
+        "moses-baby",
+        "moses-plagues",
+        "moses-sea"
+      ]
+    },
+    {
+      "id": "jonah-jonah",
+      "name": "Jonah",
+      "src": "art/pieces/jonah-jonah.png",
+      "stories": [
+        "jonah"
+      ]
+    },
+    {
+      "id": "jonah-fish",
+      "name": "the great fish",
+      "src": "art/pieces/jonah-fish.png",
+      "stories": [
+        "jonah"
+      ]
+    },
+    {
+      "id": "jonah-ship",
+      "name": "the ship",
+      "src": "art/pieces/jonah-ship.png",
+      "stories": [
+        "jonah"
+      ]
+    },
+    {
+      "id": "christmas-mary",
+      "name": "Mary",
+      "src": "art/pieces/christmas-mary.png",
+      "stories": [
+        "christmas"
+      ]
+    },
+    {
+      "id": "christmas-joseph",
+      "name": "Joseph",
+      "src": "art/pieces/christmas-joseph.png",
+      "stories": [
+        "christmas"
+      ]
+    },
+    {
+      "id": "christmas-angel",
+      "name": "the angel",
+      "src": "art/pieces/christmas-angel.png",
+      "stories": [
+        "christmas"
+      ]
+    },
+    {
+      "id": "follow-jesus",
+      "name": "Jesus",
+      "src": "art/pieces/follow-jesus.png",
+      "stories": [
+        "follow"
+      ]
+    },
+    {
+      "id": "follow-peter",
+      "name": "Peter",
+      "src": "art/pieces/follow-peter.png",
+      "stories": [
+        "follow"
+      ]
+    },
+    {
+      "id": "follow-boat",
+      "name": "the fishing boat",
+      "src": "art/pieces/follow-boat.png",
+      "stories": [
+        "follow"
+      ]
+    }
+  ]
+}

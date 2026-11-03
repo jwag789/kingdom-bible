@@ -43,6 +43,11 @@ await writeJson('data/library.json', library);
 for (const { cover } of library.stories) if (cover) await copy(cover);
 const games = await json('data/games.json');
 await writeJson('data/games.json', Object.fromEntries(Object.entries(games).filter(([id]) => published.has(id))));
+// Your Kingdom's pieces: only those of published stories.
+const pieces = (await json('data/pieces.json')).pieces
+  .map(p => ({ ...p, stories: p.stories.filter(id => published.has(id)) })).filter(p => p.stories.length);
+for (const p of pieces) await copy(p.src);
+await writeJson('data/pieces.json', { pieces });
 
 for (const { id } of library.stories) {
   const story = await json(`data/${id}.json`);

@@ -236,7 +236,15 @@
     background: linear-gradient(0deg, #0b0a12, #15121d); border-top: 1px solid rgba(240,204,138,0.3); }
   .kingdom .slot { flex: none; width: 76px; height: 76px; border-radius: 16px; display: grid; place-items: center; padding: 6px; cursor: grab; touch-action: none;
     border: 1px solid rgba(240,204,138,0.3); background: rgba(251,246,234,0.06); }
-  .kingdom .slot .cutout { width: 58px; max-height: 62px; object-fit: contain; }
+  .kingdom .slot .cutout { height: auto !important; max-width: 64px; max-height: 62px; object-fit: contain; }
+  .kingdom .slot.locked { cursor: help; border-style: dashed; }
+  .kingdom .slot.locked .cutout { filter: brightness(0) invert(0.85) sepia(0.4); opacity: 0.25; }
+  .kingdom .hint { position: absolute; left: 50%; bottom: 110px; transform: translate(-50%, 10px); margin: 0; padding: 0.6em 1.1em; border-radius: 999px;
+    background: rgba(4,5,10,0.85); border: 1px solid rgba(240,204,138,0.45); color: var(--ink); font-size: 0.9rem; white-space: nowrap; max-width: calc(100% - 32px);
+    overflow: hidden; text-overflow: ellipsis; opacity: 0; transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
+  .kingdom .hint.on { opacity: 1; transform: translate(-50%, 0); }
+  .toast .piece-art { display: grid; place-items: center; border-radius: 50%; background: #f6efdc; border: 4px solid #fbf6ea; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+  .toast .piece-art img { max-width: 78%; max-height: 82%; }
   .kingdom .slot .sticker { transform: none; border-width: 2px; }
   .kingdom .empty { color: var(--soft); font-style: italic; margin: 6px 4px; max-width: 40rem; line-height: 1.5; }
 
