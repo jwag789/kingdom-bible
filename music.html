@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose the Music · Kingdom Bible</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #f5ecda; --soft: rgba(245,236,218,0.62); --gold: #f0cc8a; --night: #04050a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 70% 20%, #2a2440, var(--night) 70%); color: var(--ink);
+    font-family: 'Literata', Georgia, serif; padding: 48px max(16px, 7vw); }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.4rem, 6vw, 3.6rem); margin: 0 0 0.4rem; }
+  .line { color: var(--soft); max-width: 40rem; margin: 0 0 1.6rem; line-height: 1.6; }
+  label.mix { display: inline-flex; gap: 0.6rem; align-items: center; color: var(--soft); margin-bottom: 1.6rem; cursor: pointer; }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; max-width: 40rem; }
+  li { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid rgba(240,204,138,0.25);
+    border-radius: 14px; background: rgba(4,5,10,0.35); }
+  li.playing { border-color: var(--gold); background: rgba(240,204,138,0.1); }
+  button { font: inherit; width: 44px; height: 44px; flex: none; border-radius: 50%; border: 1px solid rgba(240,204,138,0.5);
+    background: transparent; color: var(--gold); cursor: pointer; }
+  .name { font-weight: 600; }
+  .about { color: var(--soft); font-size: 0.9rem; line-height: 1.45; margin-top: 2px; }
+</style>
+</head>
+<body>
+<h1>Choose the music</h1>
+<p class="line">Each style plays live and never quite repeats. In the stories, each page picks the one that suits it. Try them with the narrator on, since that's how they'll be heard.</p>
+<label class="mix"><input type="checkbox" id="narrator"> Play the narrator over the music</label>
+<ul id="list"></ul>
+<script type="module">
+import { Sound } from './src/audio.js';
+
+// The app's own engine, so what's heard here is exactly what plays in the stories.
+const STYLES = [
+  { id: 'pads', name: 'Lullaby', about: 'Soft pads and a far-off bell. For bedtime mode, nights and quiet pages.' },
+  { id: 'storybook', name: 'Storybook Band', about: 'A gentle flute tune over rippling harp, with a twinkle of glockenspiel. For most pages.' },
+  { id: 'folk', name: 'Campfire Folk', about: 'Strummed guitar, a hand drum and a whistled tune. For busy, happy pages.' },
+  { id: 'adventure', name: 'Little Adventure', about: 'Plucked strings that march along, a bold flute, brass and timpani. For giants and parting seas.' },
+];
+const sound = new Sound();
+
+// The narrator, reading a page of David and Goliath over whatever's playing.
+const lines = ['audio/david/shepherd-0.m4a', 'audio/david/shepherd-1.m4a', 'audio/david/giant-1.m4a', 'audio/david/stones-0.m4a'];
+const reader = new Audio();
+let lineAt = 0, playing = null;
+const narrator = document.getElementById('narrator');
+reader.onended = () => { sound.duck(false); setTimeout(() => { if (playing && narrator.checked) { reader.src = lines[++lineAt % lines.length]; reader.play(); sound.duck(true); } }, 900); };
+const read = () => {
+  if (playing && narrator.checked) { reader.src = lines[lineAt % lines.length]; reader.play(); sound.duck(true); }
+  else { reader.pause(); sound.duck(false); }
+};
+narrator.onchange = read;
+
+for (const style of STYLES) {
+  const li = document.createElement('li');
+  li.innerHTML = `<button aria-label="Play">▶</button><div><div class="name"></div><div class="about"></div></div>`;
+  li.querySelector('.name').textContent = style.name;
+  li.querySelector('.about').textContent = style.about;
+  li.querySelector('button').onclick = () => {
+    sound.unlock();
+    sound.setEnabled(true);
+    sound.setAmbience([]);
+    const was = playing;
+    document.querySelectorAll('li').forEach(x => { x.classList.remove('playing'); x.querySelector('button').textContent = '▶'; });
+    playing = null;
+    if (was === style) { sound.quiet(); reader.pause(); sound.duck(false); return; }
+    playing = style;
+    li.classList.add('playing');
+    li.querySelector('button').textContent = '■';
+    sound.setMood('warm', style.id);
+    read();
+  };
+  document.getElementById('list').append(li);
+}
+</script>
+</body>
+</html>

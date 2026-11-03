@@ -247,7 +247,8 @@
           "wind",
           "crowd"
         ],
-        "mood": "storm"
+        "mood": "storm",
+        "music": "adventure"
       },
       "frame": [
         0.6,
@@ -649,7 +650,8 @@
           "wind",
           "crowd"
         ],
-        "mood": "storm"
+        "mood": "storm",
+        "music": "adventure"
       },
       "frame": [
         0.66,

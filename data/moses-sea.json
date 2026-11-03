@@ -246,7 +246,8 @@
           "waves",
           "wind"
         ],
-        "mood": "storm"
+        "mood": "storm",
+        "music": "adventure"
       },
       "stickers": [
         {
@@ -488,7 +489,8 @@
           "waves",
           "crowd"
         ],
-        "mood": "glory"
+        "mood": "glory",
+        "music": "folk"
       },
       "stickers": [
         {

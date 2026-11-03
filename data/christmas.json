@@ -544,7 +544,8 @@
             "model": "fal-ai/bytedance/seedream/v4.5/edit",
             "seed": 412157,
             "at": "2026-11-03T02:17:47.337Z"
-          }
+          },
+          "music": "pads"
         }
       ],
       "effects": [

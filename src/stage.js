@@ -97,7 +97,7 @@ export class Stage {
     // Presses on the words or controls are for reading, not for the art.
     let press = null;
     addEventListener('pointerdown', e => {
-      press = e.target.closest('p, h1, h2, summary, a, button, nav, .eyebrow, .verses, .kicker, .sub, .book, .toast, .game')
+      press = e.target.closest('p, h1, h2, summary, a, button, nav, .eyebrow, .sheet, .kicker, .sub, .book, .toast, .game')
         ? null : { x: e.clientX, y: e.clientY, at: performance.now() };
     });
     addEventListener('pointerup', e => {

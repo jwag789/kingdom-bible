@@ -58,21 +58,36 @@
 
   .begin { margin-top: 3rem; }
   button { font: inherit; color: var(--ink); cursor: pointer; }
-  .begin, .source summary { display: inline-flex; align-items: center; gap: 0.55em;
+  .begin, .source .toggle { display: inline-flex; align-items: center; gap: 0.55em;
     color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
     padding: 0.7em 1.3em; border: 1px solid rgba(240,204,138,0.45); border-radius: 999px; background: var(--glass);
     transition: background 0.2s, border-color 0.2s; }
-  .begin:hover, .source summary:hover { background: rgba(240,204,138,0.12); border-color: var(--gold); }
+  .begin:hover, .source .toggle:hover { background: rgba(240,204,138,0.12); border-color: var(--gold); }
   a.begin { text-decoration: none; }
   button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
   .source { margin-top: 2.2rem; font-size: 0.95rem; }
-  .source summary { cursor: pointer; list-style: none; padding: 0.55em 1.1em; letter-spacing: 0.14em; }
-  .source summary::-webkit-details-marker { display: none; }
-  .source summary::before { content: '+'; font-size: 1.15em; font-weight: 400; line-height: 1; }
-  .source[open] summary::before { content: '–'; }
-  .verses { margin-top: 1.2rem; padding: 0 0.6rem 0 1.1rem; border-left: 1px solid rgba(240,204,138,0.35);
-    max-height: 36vh; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(240,204,138,0.4) transparent; }
+  .source .toggle { padding: 0.55em 1.1em; letter-spacing: 0.14em; }
+  .source .toggle::before { content: '+'; font-size: 1.15em; font-weight: 400; line-height: 1; }
+  .source.open .toggle::before { content: '–'; }
+  .sheet[hidden] { display: none; }
+  body.verses-open #hint { visibility: hidden; }
+  /* The verses open in their own panel over the picture, so the story's words don't move. */
+  .sheet { position: fixed; z-index: 6; pointer-events: auto; left: max(16px, 7vw, env(safe-area-inset-left)); width: min(36rem, calc(100% - 2 * max(16px, 7vw)));
+    bottom: max(84px, calc(3vh + 64px), calc(env(safe-area-inset-bottom) + 76px)); max-height: min(62vh, calc(100% - 120px));
+    display: flex; flex-direction: column; padding: 16px 18px 6px; border-radius: 20px; border: 1px solid rgba(240,204,138,0.35);
+    background: rgba(10,11,20,0.93); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+    text-shadow: none; animation: sheetin 0.25s ease-out; }
+  @keyframes sheetin { from { opacity: 0; transform: translateY(14px); } }
+  .sheet .sheethead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 0.8rem;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--ink); }
+  .sheet .shut { width: 38px; height: 38px; flex: none; border-radius: 50%; border: 1px solid rgba(240,204,138,0.45); background: transparent;
+    color: var(--gold); display: grid; place-items: center; padding: 0; }
+  .sheet .shut::before, .sheet .shut::after { content: ''; grid-area: 1 / 1; width: 15px; height: 1.6px; border-radius: 1px; background: currentColor; transform: rotate(45deg); }
+  .sheet .shut::after { transform: rotate(-45deg); }
+  .sheet .shut:hover { background: rgba(240,204,138,0.12); }
+  .verses { padding: 0 0.6rem 0 1.1rem; border-left: 1px solid rgba(240,204,138,0.35); min-height: 0;
+    overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(240,204,138,0.4) transparent; }
   .verses p { color: var(--soft); line-height: 1.7; margin: 0 0 0.9em; }
   .verses sup { font-size: 0.7em; font-weight: 600; color: var(--gold); margin-right: 0.35em; }
 

@@ -74,12 +74,16 @@ function refLabel([a, b]) {
   return `${from.book} ${from.ch}:${from.v}–${from.ch === to.ch ? to.v : `${to.ch}:${to.v}`}`;
 }
 
-// The real verses a scene retells, one tap away.
+// The real verses a scene retells, one tap away. They open in a panel of their own over the
+// picture, so the story's words stay put, with a close button (or Escape, or a tap outside).
 function sourceFor(s) {
-  const details = document.createElement('details');
-  details.className = 'source';
-  const summary = document.createElement('summary');
-  summary.textContent = `Read it in the Bible · ${refLabel(s.verses)}`;
+  const source = document.createElement('div');
+  source.className = 'source';
+  const toggle = document.createElement('button');
+  toggle.className = 'toggle';
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.textContent = `Read it in the Bible · ${refLabel(s.verses)}`;
+  toggle.onclick = () => showVerses(source, !source.classList.contains('open'));
   const verses = document.createElement('div');
   verses.className = 'verses';
   for (let i = order.indexOf(s.verses[0]); i <= order.indexOf(s.verses[1]); i++) {
@@ -90,9 +94,35 @@ function sourceFor(s) {
     p.append(sup, verseOf.get(order[i]));
     verses.append(p);
   }
-  details.append(summary, verses);
-  return details;
+  const sheet = document.createElement('div');
+  sheet.className = 'sheet';
+  sheet.hidden = true;
+  source.sheet = sheet;
+  const head = document.createElement('div');
+  head.className = 'sheethead';
+  const ref = document.createElement('span');
+  ref.textContent = refLabel(s.verses);
+  const close = document.createElement('button');
+  close.className = 'shut';
+  close.setAttribute('aria-label', 'Close the Bible verses');
+  close.onclick = () => { showVerses(source, false); toggle.focus(); };
+  head.append(ref, close);
+  sheet.append(head, verses);
+  source.append(toggle);
+  return source;
 }
+function showVerses(source, on) {
+  const { sheet } = source;
+  // The panel sits on the slide itself, over everything on it, rather than among the words.
+  if (on && !sheet.isConnected) source.closest('.slide').append(sheet);
+  source.classList.toggle('open', on);
+  sheet.hidden = !on;
+  document.body.classList.toggle('verses-open', on);
+  source.querySelector('.toggle').setAttribute('aria-expanded', String(on));
+  if (on) sheet.querySelector('.verses').scrollTop = 0;
+}
+const versesOpen = () => slides[index].el.querySelector('.source.open');
+const inVerses = (source, node) => source && (source.contains(node) || source.sheet.contains(node));
 
 // A paragraph whose words are separate spans, so they can light up as they're read.
 function wordsOf(line) {
@@ -444,7 +474,7 @@ function go(to) {
     sl.el.classList.toggle('on', i === to);
     sl.el.classList.toggle('above', i < to);
     sl.el.classList.toggle('below', i > to);
-    if (i !== to) sl.el.querySelector('details')?.removeAttribute('open');
+    if (i !== to) sl.el.querySelectorAll('.source.open').forEach(v => showVerses(v, false));
   });
   [...dots.children].forEach((d, si) => d.classList.toggle('on', si === slides[to].scene && to > 0));
   $('prev').disabled = to === 0;
@@ -485,7 +515,10 @@ const scrollsInside = (el, dy) => el && (dy > 0 ? el.scrollTop + el.clientHeight
 const bookOpen = () => document.body.classList.contains('book-open') || document.body.classList.contains('game-open');
 addEventListener('wheel', e => {
   if (e.ctrlKey || bookOpen()) return;                            // pinch-zoom, or reading the sticker book
-  if (scrollsInside(e.target.closest?.('.verses'), e.deltaY)) return; // let the verse list scroll
+  if (e.target.closest?.('.sheet')) {                              // reading the verses: they scroll, the page stays
+    if (!scrollsInside(e.target.closest('.sheet').querySelector('.verses'), e.deltaY)) e.preventDefault();
+    return;
+  }
   e.preventDefault();
   const now = e.timeStamp, gap = now - lastWheel, size = Math.abs(e.deltaY);
   const fading = spent && size < lastSize;
@@ -502,6 +535,9 @@ addEventListener('wheel', e => {
 
 addEventListener('keydown', e => {
   if (e.altKey || e.metaKey || e.ctrlKey || bookOpen()) return;
+  const open = versesOpen();
+  if (open && e.key === 'Escape') { showVerses(open, false); open.querySelector('.toggle').focus(); e.preventDefault(); return; }
+  if (open?.sheet.contains(e.target) && !['Home', 'End'].includes(e.key)) return;   // arrows scroll the verses
   const onControl = e.target.closest?.('a, button, summary, input, textarea');
   const forward = ['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key) || (e.key === ' ' && !e.shiftKey && !onControl);
   const back = ['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key) || (e.key === ' ' && e.shiftKey && !onControl);
@@ -513,11 +549,17 @@ addEventListener('keydown', e => {
   e.preventDefault();
 });
 
+// A tap outside the open verses closes them.
+addEventListener('pointerdown', e => {
+  const open = versesOpen();
+  if (open && !inVerses(open, e.target)) showVerses(open, false);
+});
+
 // Swipes: up for the next slide, down for the previous one.
 let touchStart = null;
 addEventListener('touchstart', e => {
   const t = e.touches[0];
-  touchStart = e.touches.length === 1 && !bookOpen() && !e.target.closest?.('.verses') ? { x: t.clientX, y: t.clientY } : null;
+  touchStart = e.touches.length === 1 && !bookOpen() && !e.target.closest?.('.sheet') ? { x: t.clientX, y: t.clientY } : null;
 }, { passive: true });
 addEventListener('touchend', e => {
   if (!touchStart) return;
@@ -583,7 +625,7 @@ function frame(now) {
   // The score follows the picture: a layer can carry its own mood (Day 1's light brings the dawn).
   const scene = stage.scenes[sl.scene], data = story.scenes[sl.scene];
   const lifted = scene.layers.find(l => l.mood && l.reveal > 0.5);
-  sound.setMood(lifted?.mood ?? data.sound?.mood);
+  sound.setMood(lifted?.mood ?? data.sound?.mood, lifted ? lifted.music : data.sound?.music);
   highlight();
 }
 requestAnimationFrame(frame);

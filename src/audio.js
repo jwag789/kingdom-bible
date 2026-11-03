@@ -1,9 +1,12 @@
 // Sound for the reader, all made live with the Web Audio API — no recordings, nothing to
-// license: an ambience for each day (sea, wind, birds, crickets…), a gentle generative score
-// in D major, and an effect for every slide turn and tap. Narration plays through the same
+// license: an ambience for each day (sea, wind, birds, crickets…), a score in D major that
+// changes with the pictures (soft pads for calm and bedtime, a little band in band.js for the
+// livelier pages), and an effect for every slide turn and tap. Narration plays through the same
 // mix (see narrator.js) so the music can duck under the voice.
 //
 // Browsers only allow sound after the reader interacts, so nothing starts until `unlock()`.
+
+import { Band } from './band.js';
 
 const midiHz = m => 440 * 2 ** ((m - 69) / 12);
 const rand = (a, b) => a + Math.random() * (b - a);
@@ -25,6 +28,11 @@ const MOODS = {
   glory:    { chords: [[0, 'maj'], [7, 'maj'], [5, 'maj'], [0, 'maj']], bells: [1.8, 3.5], cutoff: 1700, level: 0.05 },
   storm:    { chords: [[9, 'min'], [5, 'maj'], [4, 'min'], [9, 'min']], bells: null, cutoff: 520, level: 0.05 },
 };
+
+// Which music each mood plays: the soft pads above, or one of the band's styles. A scene can
+// choose its own with `"music"` (David facing Goliath is an adventure, though the sky is stormy).
+const MUSIC = { void: 'pads', dawn: 'storybook', sky: 'storybook', growing: 'storybook', warm: 'storybook', lively: 'folk',
+  night: 'pads', rest: 'pads', glory: 'adventure', storm: 'pads' };
 
 function store(key, fallback) {
   try { const v = localStorage.getItem(`kb:${key}`); return v == null ? fallback : v === '1'; } catch { return fallback; }
@@ -71,6 +79,8 @@ export class Sound {
     this.verb.connect(this.gain(0.55)).connect(this.out);
 
     this.musicBus = this.bus(0.9, 0.7);
+    this.bandBus = this.bus(0.9, 0.12);                 // the band has a small room of its own
+    this.band = new Band(ctx, this.bandBus);
     this.ambBus = this.bus(0.55, 0.12);
     this.sfxBus = this.bus(0.7, 0.45);
     // The narrator gets room to resound: warmth underneath, softened esses, and a long hall
@@ -91,7 +101,7 @@ export class Sound {
     // One clock for everything scheduled: score, birds, crickets, waves.
     this.timer = setInterval(() => this.tick(), 200);
     this.setAmbience(this.want.ambience);
-    this.setMood(this.want.mood);
+    this.setMood(this.want.mood, this.want.music);
   }
 
   // ---- small building blocks
@@ -180,11 +190,32 @@ export class Sound {
   }
 
   // ---- the score
-  setMood(name) {
+  // No music at all (the listening page's stop button).
+  quiet() {
+    if (!this.ctx) return;
+    this.band.stop(0.6);
+    this.releaseChord(this.ctx.currentTime, 1);
+    this.mood = this.style = this.want.mood = null;
+  }
+
+  // Called every frame with what the picture wants; only a change does anything.
+  setMood(name, music) {
     this.want.mood = name;
-    if (!this.ctx || !name || name === this.mood) return;
+    this.want.music = music;
+    if (!this.ctx || !name) return;
+    const style = this.soft ? 'pads' : music ?? MUSIC[name] ?? 'pads';
+    if (name === this.mood && style === this.style) return;
+    const now = this.ctx.currentTime, wasPads = this.style === 'pads';
     this.mood = name;
-    const now = this.ctx.currentTime;
+    this.style = style;
+    if (style !== 'pads') {
+      this.releaseChord(now, 2.5);
+      this.band.play(style);
+      return;
+    }
+    this.band.stop();
+    if (wasPads && this.chord && name === this.padMood) return;
+    this.padMood = name;
     this.releaseChord(now, 2.5);
     this.nextChord = now + 0.2;
     this.chordIndex = 0;
@@ -201,6 +232,7 @@ export class Sound {
   }
 
   score(now) {
+    if (this.style !== 'pads') { this.band.tick(now); return; }
     const m = MOODS[this.mood];
     if (!m) return;
     const span = m.slow ? 11 : 8;
@@ -692,12 +724,16 @@ export class Sound {
   // Bedtime: the music and the world around the story play softer.
   setSoft(on) {
     this.soft = on;
-    if (this.ctx) this.levels();
+    if (!this.ctx) return;
+    this.levels();
+    this.style = null;                                  // bedtime: back to the soft pads (and out again)
+    this.setMood(this.want.mood, this.want.music);
   }
 
   levels() {
     const now = this.ctx.currentTime, k = this.soft ? 0.5 : 1, on = this.ducked;
     this.musicBus.gain.setTargetAtTime((on ? 0.4 : 0.9) * k, now, on ? 0.25 : 1.2);
+    this.bandBus.gain.setTargetAtTime((on ? 0.4 : 0.9) * k, now, on ? 0.25 : 1.2);
     this.ambBus.gain.setTargetAtTime((on ? 0.3 : 0.55) * k, now, on ? 0.25 : 1.2);
   }
 
