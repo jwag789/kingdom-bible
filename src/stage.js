@@ -10,6 +10,10 @@
 // and a scene's `touch.hint` invites the first tap. A tap on a hidden secret (a sticker with
 // `earn: "secret"`, see stickers.js) is offered to `onSecret` first.
 //
+// A little paper lamb hides somewhere in a scene (`"lamb": { "at", "size", "flip", "with", "until" }`:
+// `at` is where its hooves stand and `size` its width, as fractions of the picture). Tapping it
+// makes it hop and tells `onLamb`.
+//
 // Positions in the story (effects, tap origins, hints) are fractions of the picture, not the
 // screen. On a tall phone screen only a slice of the wide picture fits, so the picture is
 // centered on the scene's `frame` point and everything drawn on it moves with it.
@@ -40,6 +44,7 @@ export class Stage {
       focus: null,
       touch: s.touch ?? null,
       secrets: (s.stickers ?? []).filter(k => k.earn === 'secret'),
+      lamb: s.lamb ? { ...s.lamb, hop: -Infinity } : null,
       tapped: false,
       since: 0,                        // when this scene last became the active one
       layers: s.layers.map(l => ({
@@ -62,6 +67,12 @@ export class Stage {
     this.waiting = null;               // the tap-triggered layer currently waiting, if any
     this.onEvent = null;               // (kind, detail) for 'reveal' and 'touch', e.g. to play sounds
     this.onSecret = null;              // (sceneIndex, sticker) → true if that find was new
+    this.onLamb = null;                // (sceneIndex) when the reader taps the hidden lamb
+    if (this.scenes.some(s => s.lamb)) {
+      const img = new Image();
+      img.onload = () => { this.lambImg = img; };
+      img.src = 'art/lamb.png';
+    }
     this.bursts = [];
     this.pointer = { x: 0.5, y: 0.5, active: false, moved: -Infinity };
     this.drift = { x: 0, y: 0 };
@@ -156,6 +167,15 @@ export class Stage {
     // Use the animation clock, so a tap never lands "in the future" of the frame drawing it.
     const s = this.scenes[this.active], now = this.t ?? performance.now() / 1000;
     const shown = id => s.layers.find(l => l.id === id)?.reveal ?? 0;
+    if (s.alpha > 0.8 && this.lambVisible(s) && this.lambImg) {
+      const { at, size } = s.lamb, tall = size * (this.lambImg.height / this.lambImg.width) * ASPECT;
+      // Its body, a little bigger than it looks (and never too small), for small fingers.
+      if (Math.abs(x - at[0]) < Math.max(size * 0.7, 0.03) && y > at[1] - Math.max(tall * 1.15, 0.07) && y < at[1] + 0.02) {
+        s.lamb.hop = now;
+        this.onLamb?.(this.active);
+        return;
+      }
+    }
     // Secrets only count once the scene has faded in, so a tap can't find the last scene's.
     for (const secret of s.alpha > 0.8 ? s.secrets : []) {
       if (secret.with && shown(secret.with) < 0.5) continue;
@@ -175,6 +195,33 @@ export class Stage {
       }
     }
     if (played) s.tapped = true;
+  }
+
+  lambVisible(s) {
+    const lamb = s.lamb;
+    if (!lamb) return false;
+    const shown = id => s.layers.find(l => l.id === id)?.reveal ?? 0;
+    return (!lamb.with || shown(lamb.with) > 0.5) && (!lamb.until || shown(lamb.until) < 0.5);
+  }
+
+  // The lamb stands on the picture and moves with it; tapped, it gives a happy little hop.
+  drawLamb(s, alpha, t, ox, oy, zoom, v) {
+    const img = this.lambImg, lamb = s.lamb;
+    if (!img || !this.lambVisible(s)) return;
+    const dw = v.pw * zoom, dh = v.ph * zoom;
+    const x0 = v.x + (v.pw - dw) / 2 + ox, y0 = v.y + (v.ph - dh) / 2 + oy;
+    const lw = lamb.size * dw, lh = lw * (img.height / img.width);
+    const age = t - lamb.hop, hop = age < 0.6 ? Math.sin((age / 0.6) * Math.PI) * lh * 0.35 : 0;
+    const { ctx } = this;
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.translate(x0 + lamb.at[0] * dw, y0 + lamb.at[1] * dh - hop);
+    ctx.scale(lamb.flip ? -1 : 1, 1 + Math.sin(t * 1.6) * 0.012);   // breathing
+    ctx.shadowColor = 'rgba(0,0,0,0.35)';
+    ctx.shadowBlur = lw * 0.08;
+    ctx.shadowOffsetY = lw * 0.03;
+    ctx.drawImage(img, -lw / 2, -lh, lw, lh);
+    ctx.restore();
   }
 
   // `tapped` is false when the layer revealed itself because nobody tapped.
@@ -332,6 +379,10 @@ export class Stage {
       const ox = -this.drift.x * d * w * 0.035;
       const oy = -this.drift.y * d * h * 0.025 + (0.5 - this.progress) * d * h * 0.08;
       this.drawLayer(this.source(l), l, a, ox, oy, zoom, v);
+    }
+    if (s.lamb) {
+      const d = 0.1;   // it stands on the painting, so it drifts with it
+      this.drawLamb(s, alpha, t, -this.drift.x * d * w * 0.035, -this.drift.y * d * h * 0.025 + (0.5 - this.progress) * d * h * 0.08, zoom, v);
     }
     ctx.globalAlpha = 1;
     // Effects draw on the picture, in its own coordinates.

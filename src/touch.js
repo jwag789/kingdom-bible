@@ -452,4 +452,56 @@ export const TOUCH = {
       },
     };
   },
+
+  // The road to Bethlehem: tap and the donkey kicks up a puff of dust (and brays).
+  dust() {
+    const puffs = [];
+    const cloud = glowSprite('214,186,140');
+    return {
+      tap(x, y, t) {
+        puffs.push({ x, y, t, bits: Array.from({ length: 9 }, () => ({ dx: rand(-0.05, 0.05), dy: rand(-0.03, 0), r: rand(0.02, 0.045) })) });
+        if (puffs.length > 8) puffs.shift();
+      },
+      draw(ctx, w, h, t, alpha) {
+        for (let i = puffs.length - 1; i >= 0; i--) {
+          const p = puffs[i], age = t - p.t;
+          if (age < 0) continue;
+          if (age > 2.2) { puffs.splice(i, 1); continue; }
+          const k = easeOut(clamp01(age / 1.4)), fade = clamp01((2.2 - age) / 1.4);
+          for (const b of p.bits) stamp(ctx, cloud, (p.x + b.dx * (0.4 + k)) * w, (p.y + b.dy * (0.5 + k)) * h, b.r * w * (0.6 + k), 0.45 * fade * alpha);
+        }
+      },
+    };
+  },
+
+  // Angels and lullabies: tap and a golden note floats up; the higher you tap, the higher it sings.
+  sing() {
+    const notes = [];
+    const glow = glowSprite('255,232,170');
+    return {
+      tap(x, y, t) {
+        notes.push({ x, y, t, sway: rand(0, 6.28), s: rand(0.8, 1.2) });
+        if (notes.length > 24) notes.shift();
+      },
+      draw(ctx, w, h, t, alpha) {
+        ctx.save();
+        for (let i = notes.length - 1; i >= 0; i--) {
+          const n = notes[i], age = t - n.t;
+          if (age < 0) continue;
+          if (age > 3) { notes.splice(i, 1); continue; }
+          const fade = clamp01(age / 0.2) * clamp01((3 - age) / 1.2);
+          const x = (n.x + Math.sin(age * 2.4 + n.sway) * 0.012) * w, y = (n.y - age * 0.05) * h, s = 9 * unit(w) * n.s;
+          stamp(ctx, glow, x, y, s * 5, 0.5 * fade * alpha);
+          // A little eighth note.
+          ctx.globalAlpha = fade * alpha;
+          ctx.fillStyle = '#fff3d0';
+          ctx.strokeStyle = '#fff3d0';
+          ctx.lineWidth = s * 0.28;
+          ctx.beginPath(); ctx.ellipse(x, y, s * 0.75, s * 0.55, -0.4, 0, 6.28); ctx.fill();
+          ctx.beginPath(); ctx.moveTo(x + s * 0.65, y); ctx.lineTo(x + s * 0.65, y - s * 2.6); ctx.quadraticCurveTo(x + s * 1.6, y - s * 2.1, x + s * 1.4, y - s * 1.3); ctx.stroke();
+        }
+        ctx.restore();
+      },
+    };
+  },
 };

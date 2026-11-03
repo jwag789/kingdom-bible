@@ -22,6 +22,7 @@ const MOODS = {
   lively:   { chords: [[0, 'maj'], [7, 'maj'], [9, 'min'], [5, 'maj']], bells: [1.6, 3.5], cutoff: 1500, level: 0.038 },
   warm:     { chords: [[5, 'maj'], [7, 'maj'], [0, 'maj'], [9, 'min']], bells: [2.5, 5], cutoff: 1200, level: 0.042 },
   rest:     { chords: [[0, 'maj'], [5, 'maj']], bells: [5, 9], cutoff: 800, level: 0.04, slow: true },
+  glory:    { chords: [[0, 'maj'], [7, 'maj'], [5, 'maj'], [0, 'maj']], bells: [1.8, 3.5], cutoff: 1700, level: 0.05 },
   storm:    { chords: [[9, 'min'], [5, 'maj'], [4, 'min'], [9, 'min']], bells: null, cutoff: 520, level: 0.05 },
 };
 
@@ -439,6 +440,69 @@ export class Sound {
     [12, 16, 19, 24].forEach((s, i) => this.bell(KEY + s, now + 0.08 + i * 0.08, 0.07, 3, this.sfxBus));
   }
 
+  // A voice singing "ah": a few saws through vowel-shaped filters, with a little vibrato.
+  voice(midi, at, vel = 0.05, length = 2.2) {
+    const g = this.gain(0), f0 = midiHz(midi);
+    const formants = [[800, 1], [1150, 0.5], [2900, 0.25]].map(([f, k]) => {
+      const bp = this.filter('bandpass', f, 6), fg = this.gain(k);
+      bp.connect(fg).connect(g);
+      return bp;
+    });
+    g.connect(this.sfxBus);            // the effects bus already sends to the hall reverb
+    for (const cents of [-8, 0, 8]) {
+      const o = this.osc('sawtooth', f0), vib = this.osc('sine', 5.2), vg = this.gain(f0 * 0.006);
+      o.detune.value = cents;
+      vib.connect(vg).connect(o.frequency);
+      formants.forEach(bp => o.connect(bp));
+      o.start(at); vib.start(at); o.stop(at + length + 0.2); vib.stop(at + length + 0.2);
+    }
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.linearRampToValueAtTime(vel, at + 0.35);
+    g.gain.setTargetAtTime(0.0001, at + length * 0.6, length * 0.2);
+  }
+
+  sing(voice, y) {                   // a sung note (choir) or a music-box note: higher on the screen, higher the note
+    if (!this.ready) return;
+    const step = Math.round((1 - Math.min(1, Math.max(0, y))) * 9), at = this.ctx.currentTime;
+    const midi = KEY + PENTA[step % 5] + 12 * Math.floor(step / 5);
+    if (voice === 'choir') { this.voice(midi, at, 0.05); this.voice(midi - 12 + 7, at + 0.05, 0.03); }
+    else this.bell(midi + 12, at, 0.08, 2.2, this.sfxBus);
+  }
+
+  glory() {                          // the sky fills with angels: a swelling chord of voices and bells
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    [0, 4, 7, 12, 16].forEach((s, i) => this.voice(KEY - 12 + s, now + i * 0.12, 0.045, 4.5));
+    [12, 16, 19, 24, 28].forEach((s, i) => this.bell(KEY + s, now + 0.6 + i * 0.15, 0.06, 4, this.sfxBus));
+  }
+
+  heehaw() {                         // the little donkey brays, and its hooves scuff the road
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    [[0, 520, 380], [0.32, 300, 260], [0.6, 500, 360], [0.9, 290, 250]].forEach(([d, a, b]) => {
+      const o = this.osc('sawtooth', a), lp = this.filter('lowpass', 1600, 2), g = this.gain(0);
+      o.connect(lp).connect(g).connect(this.sfxBus);
+      o.frequency.setValueAtTime(a, now + d);
+      o.frequency.exponentialRampToValueAtTime(b, now + d + 0.26);
+      this.env(g, now + d, 0.05, 0.03, 0.24);
+      o.start(now + d); o.stop(now + d + 0.32);
+    });
+    this.noiseBurst({ at: now, peak: 0.05, attack: 0.02, release: 0.3, from: 1400, to: 600, q: 0.8, buffer: this.pink });
+  }
+
+  baa() {                            // the little lamb
+    if (!this.ready) return;
+    const now = this.ctx.currentTime, f = rand(560, 640);
+    const o = this.osc('sawtooth', f), vib = this.osc('sine', 9), vg = this.gain(f * 0.04);
+    const bp = this.filter('bandpass', 1300, 2), g = this.gain(0);
+    vib.connect(vg).connect(o.frequency);
+    o.connect(bp).connect(g).connect(this.sfxBus);
+    o.frequency.setValueAtTime(f, now);
+    o.frequency.exponentialRampToValueAtTime(f * 0.86, now + 0.55);
+    this.env(g, now, 0.09, 0.04, 0.55);
+    o.start(now); vib.start(now); o.stop(now + 0.65); vib.stop(now + 0.65);
+  }
+
   // While the narrator speaks, the music and ambience step back.
   duck(on) {
     if (!this.ctx || on === this.ducked) return;
@@ -569,6 +633,24 @@ const AMBIENCE = {
         next = at + rand(9, 18);
       },
     }));
+  },
+
+  // A small campfire: soft crackles and pops.
+  fire(s) {
+    let next = 0;
+    return s.layer(0.8, g => {
+      const bed = s.loop(s.brown), lp = s.filter('lowpass', 300, 0.5), amp = s.gain(0.12);
+      bed.connect(lp).connect(amp).connect(g);
+      return {
+        nodes: [bed],
+        tick(now) {
+          if (now < next) return;
+          const at = Math.max(now, next);
+          s.noiseBurst({ at, peak: rand(0.03, 0.09), attack: 0.002, release: rand(0.02, 0.06), type: 'highpass', from: rand(1500, 3500), to: 1200, q: 0.7, bus: g });
+          next = at + rand(0.08, 0.6);
+        },
+      };
+    });
   },
 
   // A soft hum of insects in warm grass.

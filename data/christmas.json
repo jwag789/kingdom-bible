@@ -1,0 +1,747 @@
+{
+  "title": "The First Christmas",
+  "reference": "Luke 1–2 · Matthew 2",
+  "subtitle": "The story of the night Jesus was born",
+  "book": "Luke",
+  "text": "data/christmas-text.json",
+  "art": "art/christmas",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "mary",
+      "name": "Mary",
+      "prompt": "Mary standing alone, full body, front view: a gentle young woman with fair skin, rosy cheeks and kind brown eyes, long wavy brown hair under a soft pale blue headscarf, wearing a simple cream dress and a deep blue cloak, and sandals",
+      "src": "art/christmas/cast/mary.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 357316,
+        "at": "2026-11-03T02:13:21.381Z"
+      }
+    },
+    {
+      "id": "joseph",
+      "name": "Joseph",
+      "prompt": "Joseph standing alone, full body, front view: a kind, strong young man with fair, lightly tanned skin, warm brown eyes, wavy brown hair and a short brown beard, wearing a simple brown robe with a cream sash and a carpenter's leather belt, holding a wooden staff",
+      "src": "art/christmas/cast/joseph.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 510520,
+        "at": "2026-11-03T02:13:40.869Z"
+      }
+    },
+    {
+      "id": "angel",
+      "name": "the angel",
+      "prompt": "An angel standing alone, full body, front view: a tall, gentle angel with a kind, glowing face, fair skin and short golden hair, wearing flowing white and gold robes, with great white feathered wings spread wide and a soft golden glow all around",
+      "src": "art/christmas/cast/angel.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 286456,
+        "at": "2026-11-03T02:13:55.866Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "annunciation",
+      "eyebrow": "Part One",
+      "title": "An Angel Visits Mary",
+      "verses": [
+        "Luke 1:26",
+        "Luke 1:38"
+      ],
+      "beats": [
+        "In a little town called Nazareth lived a young woman named Mary. She loved God, and she was going to marry a carpenter named Joseph.",
+        "One day, a shining angel named Gabriel came to her. “Don’t be afraid, Mary,” he said. “God is so pleased with you!”",
+        "“You will have a baby boy, and you will name Him Jesus. He will be called the Son of God, and His kingdom will never end!”",
+        "Mary said, “I am the Lord’s servant. Let it happen just as you have said.”"
+      ],
+      "layers": [
+        {
+          "id": "home",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "home",
+          "refs": [
+            "mary"
+          ],
+          "prompt": "Inside a small, simple stone house in Nazareth in the early morning: Mary sits on a low wooden stool by an open window, right of center, quietly praying, with soft dawn light falling across clay jars, a woven rug and a little oil lamp",
+          "src": "art/christmas/annunciation/home.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 20124,
+            "at": "2026-11-03T02:14:26.096Z"
+          }
+        },
+        {
+          "id": "gabriel",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "gabriel",
+          "editOf": "home",
+          "refs": [
+            "angel"
+          ],
+          "edit": "The angel Gabriel now stands in the room before Mary, filling the space by the window with warm golden light, his great white wings spread; Mary looks up at him, surprised and wondering.",
+          "trigger": "tap",
+          "hint": "Tap the light",
+          "origin": [
+            0.66,
+            0.35
+          ],
+          "mood": "dawn",
+          "sfx": "promise",
+          "src": "art/christmas/annunciation/gabriel.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 20124,
+            "at": "2026-11-03T02:14:57.620Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "glow",
+          "with": "gabriel",
+          "follow": true,
+          "color": "#fff0c4"
+        },
+        {
+          "type": "rays",
+          "with": "gabriel",
+          "x": 0.66,
+          "y": 0.3,
+          "soft": true
+        },
+        {
+          "type": "motes",
+          "with": "gabriel"
+        },
+        {
+          "type": "sing",
+          "with": "gabriel",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to hear the angel sing",
+        "at": [
+          0.66,
+          0.42
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.58,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "gabriel",
+          "name": "The Angel Gabriel",
+          "earn": "reveal",
+          "layer": "gabriel",
+          "at": [
+            0.66,
+            0.33
+          ],
+          "r": 0.09
+        },
+        {
+          "id": "mary",
+          "name": "Mary",
+          "earn": "play",
+          "layer": "home",
+          "at": [
+            0.54,
+            0.52
+          ],
+          "r": 0.09
+        },
+        {
+          "id": "lamp",
+          "name": "The Little Lamp",
+          "earn": "secret",
+          "at": [
+            0.73,
+            0.72
+          ],
+          "r": 0.04,
+          "hit": 0.045
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.66,
+          0.52
+        ],
+        "size": 0.035,
+        "flip": true,
+        "until": "gabriel"
+      }
+    },
+    {
+      "id": "journey",
+      "eyebrow": "Part Two",
+      "title": "The Road to Bethlehem",
+      "verses": [
+        "Luke 2:1",
+        "Luke 2:5"
+      ],
+      "beats": [
+        "Before the baby was born, the ruler of the land ordered everyone to go back to their family’s hometown to be counted.",
+        "So Joseph and Mary set out on the long road to Bethlehem — Mary riding on a little donkey, and Joseph walking beside her."
+      ],
+      "layers": [
+        {
+          "id": "road",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "road",
+          "refs": [
+            "mary",
+            "joseph"
+          ],
+          "prompt": "A long dusty road winding through golden hills and olive trees toward a little town on a far hilltop, at sunset: Joseph walks right of center, leading a small grey donkey by its rope, with Mary riding on the donkey",
+          "src": "art/christmas/journey/road.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 272985,
+            "at": "2026-11-03T02:15:31.356Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the donkey",
+        "at": [
+          0.54,
+          0.78
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "donkey",
+          "name": "The Little Donkey",
+          "earn": "play",
+          "at": [
+            0.54,
+            0.72
+          ],
+          "r": 0.09
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.62,
+          0.52
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "birth",
+      "eyebrow": "Part Three",
+      "title": "No Room",
+      "verses": [
+        "Luke 2:6",
+        "Luke 2:7"
+      ],
+      "beats": [
+        "When they reached Bethlehem, the town was full of people. Every room was taken. There was no room for them anywhere.",
+        "So they stayed in a place where the animals slept. And there, that very night, Mary’s baby was born — Jesus, the Son of God!",
+        "Mary wrapped Him snugly in soft cloths and laid Him in a manger, the wooden box where the animals ate their hay."
+      ],
+      "layers": [
+        {
+          "id": "town",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "town",
+          "refs": [
+            "mary",
+            "joseph"
+          ],
+          "prompt": "Bethlehem at night: a crowded little town of stone houses with warm glowing windows under a deep blue starry sky. Joseph knocks at the door of a busy inn, right of center, while Mary waits on the little grey donkey",
+          "src": "art/christmas/birth/town.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 150424,
+            "at": "2026-11-03T02:16:12.937Z"
+          }
+        },
+        {
+          "id": "stable",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "stable",
+          "refs": [
+            "mary",
+            "joseph"
+          ],
+          "prompt": "A warm, humble stable at night, lit by a hanging lantern: Mary and Joseph kneel beside a wooden manger filled with hay, right of center, where a newborn baby wrapped in white cloths sleeps peacefully. An ox, a little grey donkey and a few sheep rest nearby on the straw",
+          "src": "art/christmas/birth/stable.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 150424,
+            "at": "2026-11-03T02:16:56.000Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 1
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "voice": "musicbox"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to sing a lullaby",
+        "at": [
+          0.72,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.68,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "baby-jesus",
+          "name": "Baby Jesus",
+          "earn": "play",
+          "layer": "stable",
+          "at": [
+            0.72,
+            0.7
+          ],
+          "r": 0.07
+        },
+        {
+          "id": "ox",
+          "name": "The Gentle Ox",
+          "earn": "secret",
+          "layer": "stable",
+          "with": "stable",
+          "at": [
+            0.84,
+            0.47
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.6,
+          0.135
+        ],
+        "size": 0.028,
+        "with": "stable"
+      }
+    },
+    {
+      "id": "shepherds",
+      "eyebrow": "Part Four",
+      "title": "Angels in the Sky",
+      "verses": [
+        "Luke 2:8",
+        "Luke 2:14"
+      ],
+      "beats": [
+        "Out in the fields nearby, shepherds were watching over their sheep in the dark of night.",
+        "Suddenly an angel appeared, and God’s glory shone all around them! “Don’t be afraid,” the angel said. “I bring you good news of great joy for everyone!”",
+        "“Today a Savior has been born — Christ the Lord! You will find Him wrapped in cloths and lying in a manger.”",
+        "Then the whole sky filled with angels, singing: “Glory to God in the highest, and peace on earth!”"
+      ],
+      "layers": [
+        {
+          "id": "fields",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fields",
+          "prompt": "Hillside fields at night under a deep blue starry sky: a few shepherds in simple striped robes sit around a small campfire, right of center, with their sheep resting nearby, and the little town of Bethlehem on a far hill",
+          "src": "art/christmas/shepherds/fields.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 412157,
+            "at": "2026-11-03T02:17:15.507Z"
+          }
+        },
+        {
+          "id": "host",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "host",
+          "editOf": "fields",
+          "refs": [
+            "angel"
+          ],
+          "edit": "The night sky above the shepherds now blazes with golden light and is filled with many shining angels in white and gold robes with feathered wings, singing; the shepherds look up in awe and wonder.",
+          "trigger": "tap",
+          "hint": "Tap the sky",
+          "origin": [
+            0.6,
+            0.18
+          ],
+          "mood": "glory",
+          "sfx": "choir",
+          "src": "art/christmas/shepherds/host.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 412157,
+            "at": "2026-11-03T02:17:47.337Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0,
+          "until": "host"
+        },
+        {
+          "type": "rays",
+          "with": "host",
+          "x": 0.55,
+          "y": 0.12,
+          "soft": true
+        },
+        {
+          "type": "motes",
+          "with": "host"
+        },
+        {
+          "type": "sing",
+          "with": "host",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap the angels to sing",
+        "at": [
+          0.55,
+          0.25
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets",
+          "fire"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.65,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "angels",
+          "name": "Glory to God!",
+          "earn": "reveal",
+          "layer": "host",
+          "at": [
+            0.5,
+            0.2
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "shepherds",
+          "name": "The Shepherds",
+          "earn": "play",
+          "layer": "fields",
+          "at": [
+            0.7,
+            0.63
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "campfire",
+          "name": "The Campfire",
+          "earn": "secret",
+          "at": [
+            0.68,
+            0.77
+          ],
+          "r": 0.05,
+          "hit": 0.045
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.6,
+          0.55
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "visit",
+      "eyebrow": "Part Five",
+      "title": "The Shepherds Hurry",
+      "verses": [
+        "Luke 2:15",
+        "Luke 2:20"
+      ],
+      "beats": [
+        "The shepherds hurried off to Bethlehem — and they found Mary and Joseph, and the baby lying in the manger, just as the angel had said!",
+        "They told everyone what they had seen and heard. And Mary kept all these things close in her heart, and thought about them often."
+      ],
+      "layers": [
+        {
+          "id": "kneel",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "kneel",
+          "refs": [
+            "mary",
+            "joseph"
+          ],
+          "prompt": "Inside the warm, lantern-lit stable: three shepherds kneel in wonder before the wooden manger where the newborn baby Jesus lies wrapped in white cloths, right of center, with Mary and Joseph beside Him and sheep crowding at the open door",
+          "src": "art/christmas/visit/kneel.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 621476,
+            "at": "2026-11-03T02:18:25.695Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "manger",
+          "name": "Shepherds at the Manger",
+          "earn": "play",
+          "at": [
+            0.52,
+            0.62
+          ],
+          "r": 0.16
+        },
+        {
+          "id": "lantern",
+          "name": "The Stable Lantern",
+          "earn": "secret",
+          "at": [
+            0.59,
+            0.26
+          ],
+          "r": 0.05,
+          "hit": 0.045
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.67,
+          0.5
+        ],
+        "size": 0.03,
+        "flip": true
+      }
+    },
+    {
+      "id": "magi",
+      "eyebrow": "Part Six",
+      "title": "The Star and the Wise Men",
+      "verses": [
+        "Matthew 2:1",
+        "Matthew 2:11"
+      ],
+      "beats": [
+        "Far away in the east, wise men saw a brand-new star shining in the sky. They knew it meant that a great King had been born.",
+        "They followed the star for many, many miles, until it stopped over the place where the child Jesus was.",
+        "They bowed down and worshiped Him, and gave Him their treasures: gold, frankincense and myrrh. Jesus had come — God’s greatest gift of all."
+      ],
+      "layers": [
+        {
+          "id": "desert",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "desert",
+          "prompt": "Three wise men in rich robes of purple, red and blue ride camels across moonlit desert dunes, right of center, following one great, bright star that shines in the deep blue sky above a little town far away",
+          "src": "art/christmas/magi/desert.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 808381,
+            "at": "2026-11-03T02:18:37.456Z"
+          }
+        },
+        {
+          "id": "gifts",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "gifts",
+          "refs": [
+            "mary",
+            "joseph"
+          ],
+          "prompt": "Inside a simple house lit by warm oil lamps: the three wise men in rich robes kneel before Mary, who holds the little child Jesus on her lap, right of center, with Joseph standing beside them. They offer a golden box, a jar of frankincense and a jar of myrrh, and starlight shines in through the window",
+          "src": "art/christmas/magi/gifts.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 808381,
+            "at": "2026-11-03T02:19:14.061Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 0,
+          "until": "gifts",
+          "x": 0.76,
+          "y": 0.26,
+          "color": "#fff6d8"
+        },
+        {
+          "type": "starmaker",
+          "from": 0,
+          "sky": 0.45
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sky to add a star",
+        "at": [
+          0.7,
+          0.2
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "star",
+          "name": "The Star",
+          "earn": "play",
+          "layer": "desert",
+          "at": [
+            0.76,
+            0.25
+          ],
+          "r": 0.07
+        },
+        {
+          "id": "wise-men",
+          "name": "The Wise Men",
+          "earn": "secret",
+          "layer": "desert",
+          "until": "gifts",
+          "at": [
+            0.53,
+            0.62
+          ],
+          "r": 0.1,
+          "hit": 0.07
+        },
+        {
+          "id": "gold",
+          "name": "Gold for a King",
+          "earn": "secret",
+          "layer": "gifts",
+          "with": "gifts",
+          "at": [
+            0.64,
+            0.63
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.71,
+          0.6
+        ],
+        "size": 0.025,
+        "until": "gifts"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2387 @@
+{
+ "cover": {
+  "src": "audio/christmas/cover.m4a",
+  "text": "The First Christmas.",
+  "voice": "bm_lewis",
+  "duration": 3.0,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.838
+   },
+   {
+    "w": "First",
+    "s": 0.838,
+    "e": 1.425
+   },
+   {
+    "w": "Christmas",
+    "s": 1.425,
+    "e": 2.35
+   }
+  ]
+ },
+ "annunciation-title": {
+  "src": "audio/christmas/annunciation-title.m4a",
+  "text": "Part One. An Angel Visits Mary.",
+  "voice": "bm_lewis",
+  "duration": 4.225,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 1.0
+   },
+   {
+    "w": "One",
+    "s": 1.0,
+    "e": 1.55
+   },
+   {
+    "w": "An",
+    "s": 1.712,
+    "e": 1.9
+   },
+   {
+    "w": "Angel",
+    "s": 1.9,
+    "e": 2.413
+   },
+   {
+    "w": "Visits",
+    "s": 2.413,
+    "e": 2.825
+   },
+   {
+    "w": "Mary",
+    "s": 2.825,
+    "e": 3.575
+   }
+  ]
+ },
+ "annunciation-0": {
+  "src": "audio/christmas/annunciation-0.m4a",
+  "text": "In a little town called Nazareth lived a young woman named Mary. She loved God, and she was going to marry a carpenter named Joseph.",
+  "voice": "bm_lewis",
+  "duration": 11.1,
+  "words": [
+   {
+    "w": "In",
+    "s": 0.725,
+    "e": 0.812
+   },
+   {
+    "w": "a",
+    "s": 0.812,
+    "e": 0.875
+   },
+   {
+    "w": "little",
+    "s": 0.875,
+    "e": 1.188
+   },
+   {
+    "w": "town",
+    "s": 1.188,
+    "e": 1.712
+   },
+   {
+    "w": "called",
+    "s": 1.712,
+    "e": 2.062
+   },
+   {
+    "w": "Nazareth",
+    "s": 2.062,
+    "e": 2.875
+   },
+   {
+    "w": "lived",
+    "s": 2.875,
+    "e": 3.15
+   },
+   {
+    "w": "a",
+    "s": 3.15,
+    "e": 3.263
+   },
+   {
+    "w": "young",
+    "s": 3.263,
+    "e": 3.612
+   },
+   {
+    "w": "woman",
+    "s": 3.612,
+    "e": 4.037
+   },
+   {
+    "w": "named",
+    "s": 4.037,
+    "e": 4.412
+   },
+   {
+    "w": "Mary",
+    "s": 4.412,
+    "e": 5.35
+   },
+   {
+    "w": "She",
+    "s": 5.525,
+    "e": 5.7
+   },
+   {
+    "w": "loved",
+    "s": 5.7,
+    "e": 6.213
+   },
+   {
+    "w": "God",
+    "s": 6.213,
+    "e": 6.925
+   },
+   {
+    "w": "and",
+    "s": 7.05,
+    "e": 7.175
+   },
+   {
+    "w": "she",
+    "s": 7.175,
+    "e": 7.287
+   },
+   {
+    "w": "was",
+    "s": 7.287,
+    "e": 7.4
+   },
+   {
+    "w": "going",
+    "s": 7.4,
+    "e": 7.625
+   },
+   {
+    "w": "to",
+    "s": 7.625,
+    "e": 7.75
+   },
+   {
+    "w": "marry",
+    "s": 7.75,
+    "e": 8.15
+   },
+   {
+    "w": "a",
+    "s": 8.15,
+    "e": 8.275
+   },
+   {
+    "w": "carpenter",
+    "s": 8.275,
+    "e": 9.062
+   },
+   {
+    "w": "named",
+    "s": 9.062,
+    "e": 9.425
+   },
+   {
+    "w": "Joseph",
+    "s": 9.425,
+    "e": 10.3
+   }
+  ]
+ },
+ "annunciation-1": {
+  "src": "audio/christmas/annunciation-1.m4a",
+  "text": "One day, a shining angel named Gabriel came to her. “Don’t be afraid, Mary,” he said. “God is so pleased with you!”",
+  "voice": "bm_lewis",
+  "duration": 10.275,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.725,
+    "e": 0.95
+   },
+   {
+    "w": "day",
+    "s": 0.95,
+    "e": 1.3
+   },
+   {
+    "w": "a",
+    "s": 1.375,
+    "e": 1.525
+   },
+   {
+    "w": "shining",
+    "s": 1.525,
+    "e": 2.038
+   },
+   {
+    "w": "angel",
+    "s": 2.038,
+    "e": 2.45
+   },
+   {
+    "w": "named",
+    "s": 2.45,
+    "e": 2.85
+   },
+   {
+    "w": "Gabriel",
+    "s": 2.85,
+    "e": 3.438
+   },
+   {
+    "w": "came",
+    "s": 3.438,
+    "e": 3.775
+   },
+   {
+    "w": "to",
+    "s": 3.775,
+    "e": 3.9
+   },
+   {
+    "w": "her",
+    "s": 3.9,
+    "e": 4.45
+   },
+   {
+    "w": "Don't",
+    "s": 4.675,
+    "e": 4.875
+   },
+   {
+    "w": "be",
+    "s": 4.875,
+    "e": 5.025
+   },
+   {
+    "w": "afraid",
+    "s": 5.025,
+    "e": 5.6
+   },
+   {
+    "w": "Mary",
+    "s": 5.65,
+    "e": 6.2
+   },
+   {
+    "w": "he",
+    "s": 6.375,
+    "e": 6.525
+   },
+   {
+    "w": "said",
+    "s": 6.525,
+    "e": 7.15
+   },
+   {
+    "w": "God",
+    "s": 7.45,
+    "e": 7.75
+   },
+   {
+    "w": "is",
+    "s": 7.75,
+    "e": 7.925
+   },
+   {
+    "w": "so",
+    "s": 7.925,
+    "e": 8.287
+   },
+   {
+    "w": "pleased",
+    "s": 8.287,
+    "e": 8.8
+   },
+   {
+    "w": "with",
+    "s": 8.8,
+    "e": 9.0
+   },
+   {
+    "w": "you",
+    "s": 9.0,
+    "e": 9.5
+   }
+  ]
+ },
+ "annunciation-2": {
+  "src": "audio/christmas/annunciation-2.m4a",
+  "text": "“You will have a baby boy, and you will name Him Jesus. He will be called the Son of God, and His kingdom will never end!”",
+  "voice": "bm_lewis",
+  "duration": 9.75,
+  "words": [
+   {
+    "w": "You",
+    "s": 0.7,
+    "e": 0.812
+   },
+   {
+    "w": "will",
+    "s": 0.812,
+    "e": 0.95
+   },
+   {
+    "w": "have",
+    "s": 0.95,
+    "e": 1.137
+   },
+   {
+    "w": "a",
+    "s": 1.137,
+    "e": 1.25
+   },
+   {
+    "w": "baby",
+    "s": 1.25,
+    "e": 1.712
+   },
+   {
+    "w": "boy",
+    "s": 1.712,
+    "e": 2.325
+   },
+   {
+    "w": "and",
+    "s": 2.45,
+    "e": 2.575
+   },
+   {
+    "w": "you",
+    "s": 2.575,
+    "e": 2.7
+   },
+   {
+    "w": "will",
+    "s": 2.7,
+    "e": 2.875
+   },
+   {
+    "w": "name",
+    "s": 2.875,
+    "e": 3.225
+   },
+   {
+    "w": "Him",
+    "s": 3.225,
+    "e": 3.487
+   },
+   {
+    "w": "Jesus",
+    "s": 3.487,
+    "e": 4.475
+   },
+   {
+    "w": "He",
+    "s": 4.612,
+    "e": 4.763
+   },
+   {
+    "w": "will",
+    "s": 4.763,
+    "e": 4.875
+   },
+   {
+    "w": "be",
+    "s": 4.875,
+    "e": 5.062
+   },
+   {
+    "w": "called",
+    "s": 5.062,
+    "e": 5.425
+   },
+   {
+    "w": "the",
+    "s": 5.425,
+    "e": 5.575
+   },
+   {
+    "w": "Son",
+    "s": 5.575,
+    "e": 5.85
+   },
+   {
+    "w": "of",
+    "s": 5.85,
+    "e": 6.025
+   },
+   {
+    "w": "God",
+    "s": 6.025,
+    "e": 6.675
+   },
+   {
+    "w": "and",
+    "s": 6.8,
+    "e": 6.912
+   },
+   {
+    "w": "His",
+    "s": 6.912,
+    "e": 7.112
+   },
+   {
+    "w": "kingdom",
+    "s": 7.112,
+    "e": 7.575
+   },
+   {
+    "w": "will",
+    "s": 7.575,
+    "e": 7.775
+   },
+   {
+    "w": "never",
+    "s": 7.775,
+    "e": 8.175
+   },
+   {
+    "w": "end",
+    "s": 8.175,
+    "e": 8.925
+   }
+  ]
+ },
+ "annunciation-3": {
+  "src": "audio/christmas/annunciation-3.m4a",
+  "text": "Mary said, “I am the Lord’s servant. Let it happen just as you have said.”",
+  "voice": "bm_lewis",
+  "duration": 6.9,
+  "words": [
+   {
+    "w": "Mary",
+    "s": 0.725,
+    "e": 1.163
+   },
+   {
+    "w": "said",
+    "s": 1.163,
+    "e": 1.725
+   },
+   {
+    "w": "I",
+    "s": 1.975,
+    "e": 2.138
+   },
+   {
+    "w": "am",
+    "s": 2.138,
+    "e": 2.35
+   },
+   {
+    "w": "the",
+    "s": 2.35,
+    "e": 2.487
+   },
+   {
+    "w": "Lord's",
+    "s": 2.487,
+    "e": 2.975
+   },
+   {
+    "w": "servant",
+    "s": 2.975,
+    "e": 3.725
+   },
+   {
+    "w": "Let",
+    "s": 3.862,
+    "e": 4.062
+   },
+   {
+    "w": "it",
+    "s": 4.062,
+    "e": 4.175
+   },
+   {
+    "w": "happen",
+    "s": 4.175,
+    "e": 4.588
+   },
+   {
+    "w": "just",
+    "s": 4.588,
+    "e": 4.975
+   },
+   {
+    "w": "as",
+    "s": 4.975,
+    "e": 5.125
+   },
+   {
+    "w": "you",
+    "s": 5.125,
+    "e": 5.237
+   },
+   {
+    "w": "have",
+    "s": 5.237,
+    "e": 5.425
+   },
+   {
+    "w": "said",
+    "s": 5.425,
+    "e": 6.05
+   }
+  ]
+ },
+ "journey-title": {
+  "src": "audio/christmas/journey-title.m4a",
+  "text": "Part Two. The Road to Bethlehem.",
+  "voice": "bm_lewis",
+  "duration": 4.025,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.675,
+    "e": 0.988
+   },
+   {
+    "w": "Two",
+    "s": 0.988,
+    "e": 1.525
+   },
+   {
+    "w": "The",
+    "s": 1.65,
+    "e": 1.788
+   },
+   {
+    "w": "Road",
+    "s": 1.788,
+    "e": 2.312
+   },
+   {
+    "w": "to",
+    "s": 2.312,
+    "e": 2.45
+   },
+   {
+    "w": "Bethlehem",
+    "s": 2.45,
+    "e": 3.375
+   }
+  ]
+ },
+ "journey-0": {
+  "src": "audio/christmas/journey-0.m4a",
+  "text": "Before the baby was born, the ruler of the land ordered everyone to go back to their family’s hometown to be counted.",
+  "voice": "bm_lewis",
+  "duration": 9.175,
+  "words": [
+   {
+    "w": "Before",
+    "s": 0.65,
+    "e": 0.975
+   },
+   {
+    "w": "the",
+    "s": 0.975,
+    "e": 1.1
+   },
+   {
+    "w": "baby",
+    "s": 1.1,
+    "e": 1.55
+   },
+   {
+    "w": "was",
+    "s": 1.55,
+    "e": 1.75
+   },
+   {
+    "w": "born",
+    "s": 1.75,
+    "e": 2.525
+   },
+   {
+    "w": "the",
+    "s": 2.65,
+    "e": 2.8
+   },
+   {
+    "w": "ruler",
+    "s": 2.8,
+    "e": 3.175
+   },
+   {
+    "w": "of",
+    "s": 3.175,
+    "e": 3.325
+   },
+   {
+    "w": "the",
+    "s": 3.325,
+    "e": 3.45
+   },
+   {
+    "w": "land",
+    "s": 3.45,
+    "e": 4.138
+   },
+   {
+    "w": "ordered",
+    "s": 4.138,
+    "e": 4.525
+   },
+   {
+    "w": "everyone",
+    "s": 4.525,
+    "e": 5.1
+   },
+   {
+    "w": "to",
+    "s": 5.1,
+    "e": 5.2
+   },
+   {
+    "w": "go",
+    "s": 5.2,
+    "e": 5.375
+   },
+   {
+    "w": "back",
+    "s": 5.375,
+    "e": 5.675
+   },
+   {
+    "w": "to",
+    "s": 5.675,
+    "e": 5.775
+   },
+   {
+    "w": "their",
+    "s": 5.775,
+    "e": 6.0
+   },
+   {
+    "w": "family's",
+    "s": 6.0,
+    "e": 6.625
+   },
+   {
+    "w": "hometown",
+    "s": 6.625,
+    "e": 7.188
+   },
+   {
+    "w": "to",
+    "s": 7.188,
+    "e": 7.287
+   },
+   {
+    "w": "be",
+    "s": 7.287,
+    "e": 7.475
+   },
+   {
+    "w": "counted",
+    "s": 7.475,
+    "e": 8.35
+   }
+  ]
+ },
+ "journey-1": {
+  "src": "audio/christmas/journey-1.m4a",
+  "text": "So Joseph and Mary set out on the long road to Bethlehem — Mary riding on a little donkey, and Joseph walking beside her.",
+  "voice": "bm_lewis",
+  "duration": 10.55,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.9
+   },
+   {
+    "w": "Joseph",
+    "s": 0.9,
+    "e": 1.425
+   },
+   {
+    "w": "and",
+    "s": 1.425,
+    "e": 1.55
+   },
+   {
+    "w": "Mary",
+    "s": 1.55,
+    "e": 2.112
+   },
+   {
+    "w": "set",
+    "s": 2.112,
+    "e": 2.375
+   },
+   {
+    "w": "out",
+    "s": 2.375,
+    "e": 2.612
+   },
+   {
+    "w": "on",
+    "s": 2.612,
+    "e": 2.712
+   },
+   {
+    "w": "the",
+    "s": 2.712,
+    "e": 2.837
+   },
+   {
+    "w": "long",
+    "s": 2.837,
+    "e": 3.225
+   },
+   {
+    "w": "road",
+    "s": 3.225,
+    "e": 3.625
+   },
+   {
+    "w": "to",
+    "s": 3.625,
+    "e": 3.763
+   },
+   {
+    "w": "Bethlehem",
+    "s": 3.763,
+    "e": 4.775
+   },
+   {
+    "w": "Mary",
+    "s": 4.912,
+    "e": 5.45
+   },
+   {
+    "w": "riding",
+    "s": 5.45,
+    "e": 5.912
+   },
+   {
+    "w": "on",
+    "s": 5.912,
+    "e": 6.013
+   },
+   {
+    "w": "a",
+    "s": 6.013,
+    "e": 6.075
+   },
+   {
+    "w": "little",
+    "s": 6.075,
+    "e": 6.388
+   },
+   {
+    "w": "donkey",
+    "s": 6.388,
+    "e": 7.225
+   },
+   {
+    "w": "and",
+    "s": 7.375,
+    "e": 7.525
+   },
+   {
+    "w": "Joseph",
+    "s": 7.525,
+    "e": 8.175
+   },
+   {
+    "w": "walking",
+    "s": 8.175,
+    "e": 8.75
+   },
+   {
+    "w": "beside",
+    "s": 8.75,
+    "e": 9.262
+   },
+   {
+    "w": "her",
+    "s": 9.262,
+    "e": 9.725
+   }
+  ]
+ },
+ "birth-title": {
+  "src": "audio/christmas/birth-title.m4a",
+  "text": "Part Three. No Room.",
+  "voice": "bm_lewis",
+  "duration": 3.3,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Three",
+    "s": 0.963,
+    "e": 1.5
+   },
+   {
+    "w": "No",
+    "s": 1.65,
+    "e": 1.988
+   },
+   {
+    "w": "Room",
+    "s": 1.988,
+    "e": 2.65
+   }
+  ]
+ },
+ "birth-0": {
+  "src": "audio/christmas/birth-0.m4a",
+  "text": "When they reached Bethlehem, the town was full of people. Every room was taken. There was no room for them anywhere.",
+  "voice": "bm_lewis",
+  "duration": 9.375,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.675,
+    "e": 0.787
+   },
+   {
+    "w": "they",
+    "s": 0.787,
+    "e": 0.963
+   },
+   {
+    "w": "reached",
+    "s": 0.963,
+    "e": 1.4
+   },
+   {
+    "w": "Bethlehem",
+    "s": 1.4,
+    "e": 2.25
+   },
+   {
+    "w": "the",
+    "s": 2.375,
+    "e": 2.525
+   },
+   {
+    "w": "town",
+    "s": 2.525,
+    "e": 2.975
+   },
+   {
+    "w": "was",
+    "s": 2.975,
+    "e": 3.2
+   },
+   {
+    "w": "full",
+    "s": 3.2,
+    "e": 3.462
+   },
+   {
+    "w": "of",
+    "s": 3.462,
+    "e": 3.6
+   },
+   {
+    "w": "people",
+    "s": 3.6,
+    "e": 4.3
+   },
+   {
+    "w": "Every",
+    "s": 4.475,
+    "e": 4.875
+   },
+   {
+    "w": "room",
+    "s": 4.875,
+    "e": 5.225
+   },
+   {
+    "w": "was",
+    "s": 5.225,
+    "e": 5.412
+   },
+   {
+    "w": "taken",
+    "s": 5.412,
+    "e": 6.25
+   },
+   {
+    "w": "There",
+    "s": 6.375,
+    "e": 6.513
+   },
+   {
+    "w": "was",
+    "s": 6.513,
+    "e": 6.675
+   },
+   {
+    "w": "no",
+    "s": 6.675,
+    "e": 7.0
+   },
+   {
+    "w": "room",
+    "s": 7.0,
+    "e": 7.35
+   },
+   {
+    "w": "for",
+    "s": 7.35,
+    "e": 7.475
+   },
+   {
+    "w": "them",
+    "s": 7.475,
+    "e": 7.775
+   },
+   {
+    "w": "anywhere",
+    "s": 7.775,
+    "e": 8.75
+   }
+  ]
+ },
+ "birth-1": {
+  "src": "audio/christmas/birth-1.m4a",
+  "text": "So they stayed in a place where the animals slept. And there, that very night, Mary’s baby was born — Jesus, the Son of God!",
+  "voice": "bm_lewis",
+  "duration": 10.4,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.7,
+    "e": 0.85
+   },
+   {
+    "w": "they",
+    "s": 0.85,
+    "e": 1.012
+   },
+   {
+    "w": "stayed",
+    "s": 1.012,
+    "e": 1.462
+   },
+   {
+    "w": "in",
+    "s": 1.462,
+    "e": 1.538
+   },
+   {
+    "w": "a",
+    "s": 1.538,
+    "e": 1.637
+   },
+   {
+    "w": "place",
+    "s": 1.637,
+    "e": 2.038
+   },
+   {
+    "w": "where",
+    "s": 2.038,
+    "e": 2.163
+   },
+   {
+    "w": "the",
+    "s": 2.163,
+    "e": 2.312
+   },
+   {
+    "w": "animals",
+    "s": 2.312,
+    "e": 2.8
+   },
+   {
+    "w": "slept",
+    "s": 2.8,
+    "e": 3.7
+   },
+   {
+    "w": "And",
+    "s": 3.825,
+    "e": 3.975
+   },
+   {
+    "w": "there",
+    "s": 3.975,
+    "e": 4.475
+   },
+   {
+    "w": "that",
+    "s": 4.575,
+    "e": 4.775
+   },
+   {
+    "w": "very",
+    "s": 4.775,
+    "e": 5.05
+   },
+   {
+    "w": "night",
+    "s": 5.05,
+    "e": 5.575
+   },
+   {
+    "w": "Mary's",
+    "s": 5.688,
+    "e": 6.188
+   },
+   {
+    "w": "baby",
+    "s": 6.188,
+    "e": 6.6
+   },
+   {
+    "w": "was",
+    "s": 6.6,
+    "e": 6.8
+   },
+   {
+    "w": "born",
+    "s": 6.8,
+    "e": 7.35
+   },
+   {
+    "w": "Jesus",
+    "s": 7.45,
+    "e": 8.2
+   },
+   {
+    "w": "the",
+    "s": 8.3,
+    "e": 8.45
+   },
+   {
+    "w": "Son",
+    "s": 8.45,
+    "e": 8.725
+   },
+   {
+    "w": "of",
+    "s": 8.725,
+    "e": 8.9
+   },
+   {
+    "w": "God",
+    "s": 8.9,
+    "e": 9.625
+   }
+  ]
+ },
+ "birth-2": {
+  "src": "audio/christmas/birth-2.m4a",
+  "text": "Mary wrapped Him snugly in soft cloths and laid Him in a manger, the wooden box where the animals ate their hay.",
+  "voice": "bm_lewis",
+  "duration": 9.2,
+  "words": [
+   {
+    "w": "Mary",
+    "s": 0.725,
+    "e": 1.125
+   },
+   {
+    "w": "wrapped",
+    "s": 1.125,
+    "e": 1.413
+   },
+   {
+    "w": "Him",
+    "s": 1.413,
+    "e": 1.65
+   },
+   {
+    "w": "snugly",
+    "s": 1.65,
+    "e": 2.25
+   },
+   {
+    "w": "in",
+    "s": 2.25,
+    "e": 2.425
+   },
+   {
+    "w": "soft",
+    "s": 2.425,
+    "e": 2.763
+   },
+   {
+    "w": "cloths",
+    "s": 2.763,
+    "e": 3.625
+   },
+   {
+    "w": "and",
+    "s": 3.625,
+    "e": 3.775
+   },
+   {
+    "w": "laid",
+    "s": 3.775,
+    "e": 4.062
+   },
+   {
+    "w": "Him",
+    "s": 4.062,
+    "e": 4.25
+   },
+   {
+    "w": "in",
+    "s": 4.25,
+    "e": 4.338
+   },
+   {
+    "w": "a",
+    "s": 4.338,
+    "e": 4.425
+   },
+   {
+    "w": "manger",
+    "s": 4.425,
+    "e": 5.275
+   },
+   {
+    "w": "the",
+    "s": 5.425,
+    "e": 5.562
+   },
+   {
+    "w": "wooden",
+    "s": 5.562,
+    "e": 5.95
+   },
+   {
+    "w": "box",
+    "s": 5.95,
+    "e": 6.5
+   },
+   {
+    "w": "where",
+    "s": 6.5,
+    "e": 6.638
+   },
+   {
+    "w": "the",
+    "s": 6.638,
+    "e": 6.787
+   },
+   {
+    "w": "animals",
+    "s": 6.787,
+    "e": 7.25
+   },
+   {
+    "w": "ate",
+    "s": 7.25,
+    "e": 7.525
+   },
+   {
+    "w": "their",
+    "s": 7.525,
+    "e": 7.75
+   },
+   {
+    "w": "hay",
+    "s": 7.75,
+    "e": 8.4
+   }
+  ]
+ },
+ "shepherds-title": {
+  "src": "audio/christmas/shepherds-title.m4a",
+  "text": "Part Four. Angels in the Sky.",
+  "voice": "bm_lewis",
+  "duration": 4.0,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.988
+   },
+   {
+    "w": "Four",
+    "s": 0.988,
+    "e": 1.525
+   },
+   {
+    "w": "Angels",
+    "s": 1.7,
+    "e": 2.275
+   },
+   {
+    "w": "in",
+    "s": 2.275,
+    "e": 2.388
+   },
+   {
+    "w": "the",
+    "s": 2.388,
+    "e": 2.525
+   },
+   {
+    "w": "Sky",
+    "s": 2.525,
+    "e": 3.325
+   }
+  ]
+ },
+ "shepherds-0": {
+  "src": "audio/christmas/shepherds-0.m4a",
+  "text": "Out in the fields nearby, shepherds were watching over their sheep in the dark of night.",
+  "voice": "bm_lewis",
+  "duration": 7.025,
+  "words": [
+   {
+    "w": "Out",
+    "s": 0.725,
+    "e": 1.0
+   },
+   {
+    "w": "in",
+    "s": 1.0,
+    "e": 1.087
+   },
+   {
+    "w": "the",
+    "s": 1.087,
+    "e": 1.2
+   },
+   {
+    "w": "fields",
+    "s": 1.2,
+    "e": 1.712
+   },
+   {
+    "w": "nearby",
+    "s": 1.712,
+    "e": 2.6
+   },
+   {
+    "w": "shepherds",
+    "s": 2.812,
+    "e": 3.3
+   },
+   {
+    "w": "were",
+    "s": 3.3,
+    "e": 3.425
+   },
+   {
+    "w": "watching",
+    "s": 3.425,
+    "e": 3.85
+   },
+   {
+    "w": "over",
+    "s": 3.85,
+    "e": 4.1
+   },
+   {
+    "w": "their",
+    "s": 4.1,
+    "e": 4.35
+   },
+   {
+    "w": "sheep",
+    "s": 4.35,
+    "e": 4.825
+   },
+   {
+    "w": "in",
+    "s": 4.825,
+    "e": 4.963
+   },
+   {
+    "w": "the",
+    "s": 4.963,
+    "e": 5.088
+   },
+   {
+    "w": "dark",
+    "s": 5.088,
+    "e": 5.463
+   },
+   {
+    "w": "of",
+    "s": 5.463,
+    "e": 5.6
+   },
+   {
+    "w": "night",
+    "s": 5.6,
+    "e": 6.275
+   }
+  ]
+ },
+ "shepherds-1": {
+  "src": "audio/christmas/shepherds-1.m4a",
+  "text": "Suddenly an angel appeared, and God’s glory shone all around them! “Don’t be afraid,” the angel said. “I bring you good news of great joy for everyone!”",
+  "voice": "bm_lewis",
+  "duration": 12.625,
+  "words": [
+   {
+    "w": "Suddenly",
+    "s": 0.725,
+    "e": 1.2
+   },
+   {
+    "w": "an",
+    "s": 1.2,
+    "e": 1.375
+   },
+   {
+    "w": "angel",
+    "s": 1.375,
+    "e": 1.825
+   },
+   {
+    "w": "appeared",
+    "s": 1.825,
+    "e": 2.575
+   },
+   {
+    "w": "and",
+    "s": 2.675,
+    "e": 2.85
+   },
+   {
+    "w": "God's",
+    "s": 2.85,
+    "e": 3.35
+   },
+   {
+    "w": "glory",
+    "s": 3.35,
+    "e": 3.925
+   },
+   {
+    "w": "shone",
+    "s": 3.925,
+    "e": 4.388
+   },
+   {
+    "w": "all",
+    "s": 4.388,
+    "e": 4.65
+   },
+   {
+    "w": "around",
+    "s": 4.65,
+    "e": 5.088
+   },
+   {
+    "w": "them",
+    "s": 5.088,
+    "e": 5.725
+   },
+   {
+    "w": "Don't",
+    "s": 5.95,
+    "e": 6.2
+   },
+   {
+    "w": "be",
+    "s": 6.2,
+    "e": 6.35
+   },
+   {
+    "w": "afraid",
+    "s": 6.35,
+    "e": 7.2
+   },
+   {
+    "w": "the",
+    "s": 7.4,
+    "e": 7.55
+   },
+   {
+    "w": "angel",
+    "s": 7.55,
+    "e": 7.938
+   },
+   {
+    "w": "said",
+    "s": 7.938,
+    "e": 8.6
+   },
+   {
+    "w": "I",
+    "s": 8.825,
+    "e": 8.95
+   },
+   {
+    "w": "bring",
+    "s": 8.95,
+    "e": 9.15
+   },
+   {
+    "w": "you",
+    "s": 9.15,
+    "e": 9.275
+   },
+   {
+    "w": "good",
+    "s": 9.275,
+    "e": 9.512
+   },
+   {
+    "w": "news",
+    "s": 9.512,
+    "e": 9.9
+   },
+   {
+    "w": "of",
+    "s": 9.9,
+    "e": 10.062
+   },
+   {
+    "w": "great",
+    "s": 10.062,
+    "e": 10.45
+   },
+   {
+    "w": "joy",
+    "s": 10.45,
+    "e": 10.825
+   },
+   {
+    "w": "for",
+    "s": 10.825,
+    "e": 10.963
+   },
+   {
+    "w": "everyone",
+    "s": 10.963,
+    "e": 11.825
+   }
+  ]
+ },
+ "shepherds-2": {
+  "src": "audio/christmas/shepherds-2.m4a",
+  "text": "“Today a Savior has been born — Christ the Lord! You will find Him wrapped in cloths and lying in a manger.”",
+  "voice": "bm_lewis",
+  "duration": 8.75,
+  "words": [
+   {
+    "w": "Today",
+    "s": 0.675,
+    "e": 0.95
+   },
+   {
+    "w": "a",
+    "s": 0.95,
+    "e": 1.075
+   },
+   {
+    "w": "Savior",
+    "s": 1.075,
+    "e": 1.512
+   },
+   {
+    "w": "has",
+    "s": 1.512,
+    "e": 1.675
+   },
+   {
+    "w": "been",
+    "s": 1.675,
+    "e": 1.913
+   },
+   {
+    "w": "born",
+    "s": 1.913,
+    "e": 2.487
+   },
+   {
+    "w": "Christ",
+    "s": 2.587,
+    "e": 3.0
+   },
+   {
+    "w": "the",
+    "s": 3.0,
+    "e": 3.138
+   },
+   {
+    "w": "Lord",
+    "s": 3.138,
+    "e": 3.95
+   },
+   {
+    "w": "You",
+    "s": 4.1,
+    "e": 4.237
+   },
+   {
+    "w": "will",
+    "s": 4.237,
+    "e": 4.375
+   },
+   {
+    "w": "find",
+    "s": 4.375,
+    "e": 4.662
+   },
+   {
+    "w": "Him",
+    "s": 4.662,
+    "e": 4.838
+   },
+   {
+    "w": "wrapped",
+    "s": 4.838,
+    "e": 5.25
+   },
+   {
+    "w": "in",
+    "s": 5.25,
+    "e": 5.425
+   },
+   {
+    "w": "cloths",
+    "s": 5.425,
+    "e": 6.225
+   },
+   {
+    "w": "and",
+    "s": 6.225,
+    "e": 6.438
+   },
+   {
+    "w": "lying",
+    "s": 6.438,
+    "e": 6.9
+   },
+   {
+    "w": "in",
+    "s": 6.9,
+    "e": 6.987
+   },
+   {
+    "w": "a",
+    "s": 6.987,
+    "e": 7.075
+   },
+   {
+    "w": "manger",
+    "s": 7.075,
+    "e": 7.9
+   }
+  ]
+ },
+ "shepherds-3": {
+  "src": "audio/christmas/shepherds-3.m4a",
+  "text": "Then the whole sky filled with angels, singing: “Glory to God in the highest, and peace on earth!”",
+  "voice": "bm_lewis",
+  "duration": 8.575,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.7,
+    "e": 0.9
+   },
+   {
+    "w": "the",
+    "s": 0.9,
+    "e": 1.0
+   },
+   {
+    "w": "whole",
+    "s": 1.0,
+    "e": 1.275
+   },
+   {
+    "w": "sky",
+    "s": 1.275,
+    "e": 1.788
+   },
+   {
+    "w": "filled",
+    "s": 1.788,
+    "e": 2.163
+   },
+   {
+    "w": "with",
+    "s": 2.163,
+    "e": 2.337
+   },
+   {
+    "w": "angels",
+    "s": 2.337,
+    "e": 3.0
+   },
+   {
+    "w": "singing",
+    "s": 3.15,
+    "e": 4.025
+   },
+   {
+    "w": "Glory",
+    "s": 4.275,
+    "e": 4.775
+   },
+   {
+    "w": "to",
+    "s": 4.775,
+    "e": 4.912
+   },
+   {
+    "w": "God",
+    "s": 4.912,
+    "e": 5.275
+   },
+   {
+    "w": "in",
+    "s": 5.275,
+    "e": 5.362
+   },
+   {
+    "w": "the",
+    "s": 5.362,
+    "e": 5.463
+   },
+   {
+    "w": "highest",
+    "s": 5.463,
+    "e": 6.15
+   },
+   {
+    "w": "and",
+    "s": 6.25,
+    "e": 6.45
+   },
+   {
+    "w": "peace",
+    "s": 6.45,
+    "e": 6.85
+   },
+   {
+    "w": "on",
+    "s": 6.85,
+    "e": 7.062
+   },
+   {
+    "w": "earth",
+    "s": 7.062,
+    "e": 7.725
+   }
+  ]
+ },
+ "visit-title": {
+  "src": "audio/christmas/visit-title.m4a",
+  "text": "Part Five. The Shepherds Hurry.",
+  "voice": "bm_lewis",
+  "duration": 3.775,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Five",
+    "s": 0.963,
+    "e": 1.625
+   },
+   {
+    "w": "The",
+    "s": 1.75,
+    "e": 1.9
+   },
+   {
+    "w": "Shepherds",
+    "s": 1.9,
+    "e": 2.4
+   },
+   {
+    "w": "Hurry",
+    "s": 2.4,
+    "e": 3.075
+   }
+  ]
+ },
+ "visit-0": {
+  "src": "audio/christmas/visit-0.m4a",
+  "text": "The shepherds hurried off to Bethlehem — and they found Mary and Joseph, and the baby lying in the manger, just as the angel had said!",
+  "voice": "bm_lewis",
+  "duration": 10.85,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.675,
+    "e": 0.8
+   },
+   {
+    "w": "shepherds",
+    "s": 0.8,
+    "e": 1.35
+   },
+   {
+    "w": "hurried",
+    "s": 1.35,
+    "e": 1.75
+   },
+   {
+    "w": "off",
+    "s": 1.75,
+    "e": 2.0
+   },
+   {
+    "w": "to",
+    "s": 2.0,
+    "e": 2.138
+   },
+   {
+    "w": "Bethlehem",
+    "s": 2.138,
+    "e": 3.175
+   },
+   {
+    "w": "and",
+    "s": 3.3,
+    "e": 3.413
+   },
+   {
+    "w": "they",
+    "s": 3.413,
+    "e": 3.575
+   },
+   {
+    "w": "found",
+    "s": 3.575,
+    "e": 4.025
+   },
+   {
+    "w": "Mary",
+    "s": 4.025,
+    "e": 4.525
+   },
+   {
+    "w": "and",
+    "s": 4.525,
+    "e": 4.7
+   },
+   {
+    "w": "Joseph",
+    "s": 4.7,
+    "e": 5.575
+   },
+   {
+    "w": "and",
+    "s": 5.7,
+    "e": 5.812
+   },
+   {
+    "w": "the",
+    "s": 5.812,
+    "e": 5.912
+   },
+   {
+    "w": "baby",
+    "s": 5.912,
+    "e": 6.45
+   },
+   {
+    "w": "lying",
+    "s": 6.45,
+    "e": 6.9
+   },
+   {
+    "w": "in",
+    "s": 6.9,
+    "e": 6.987
+   },
+   {
+    "w": "the",
+    "s": 6.987,
+    "e": 7.075
+   },
+   {
+    "w": "manger",
+    "s": 7.075,
+    "e": 7.825
+   },
+   {
+    "w": "just",
+    "s": 7.987,
+    "e": 8.325
+   },
+   {
+    "w": "as",
+    "s": 8.325,
+    "e": 8.475
+   },
+   {
+    "w": "the",
+    "s": 8.475,
+    "e": 8.675
+   },
+   {
+    "w": "angel",
+    "s": 8.675,
+    "e": 9.175
+   },
+   {
+    "w": "had",
+    "s": 9.175,
+    "e": 9.387
+   },
+   {
+    "w": "said",
+    "s": 9.387,
+    "e": 10.0
+   }
+  ]
+ },
+ "visit-1": {
+  "src": "audio/christmas/visit-1.m4a",
+  "text": "They told everyone what they had seen and heard. And Mary kept all these things close in her heart, and thought about them often.",
+  "voice": "bm_lewis",
+  "duration": 9.875,
+  "words": [
+   {
+    "w": "They",
+    "s": 0.675,
+    "e": 0.838
+   },
+   {
+    "w": "told",
+    "s": 0.838,
+    "e": 1.225
+   },
+   {
+    "w": "everyone",
+    "s": 1.225,
+    "e": 1.825
+   },
+   {
+    "w": "what",
+    "s": 1.825,
+    "e": 1.975
+   },
+   {
+    "w": "they",
+    "s": 1.975,
+    "e": 2.125
+   },
+   {
+    "w": "had",
+    "s": 2.125,
+    "e": 2.337
+   },
+   {
+    "w": "seen",
+    "s": 2.337,
+    "e": 2.8
+   },
+   {
+    "w": "and",
+    "s": 2.8,
+    "e": 2.975
+   },
+   {
+    "w": "heard",
+    "s": 2.975,
+    "e": 3.85
+   },
+   {
+    "w": "And",
+    "s": 4.0,
+    "e": 4.15
+   },
+   {
+    "w": "Mary",
+    "s": 4.15,
+    "e": 4.588
+   },
+   {
+    "w": "kept",
+    "s": 4.588,
+    "e": 4.9
+   },
+   {
+    "w": "all",
+    "s": 4.9,
+    "e": 5.125
+   },
+   {
+    "w": "these",
+    "s": 5.125,
+    "e": 5.375
+   },
+   {
+    "w": "things",
+    "s": 5.375,
+    "e": 5.775
+   },
+   {
+    "w": "close",
+    "s": 5.775,
+    "e": 6.25
+   },
+   {
+    "w": "in",
+    "s": 6.25,
+    "e": 6.375
+   },
+   {
+    "w": "her",
+    "s": 6.375,
+    "e": 6.575
+   },
+   {
+    "w": "heart",
+    "s": 6.575,
+    "e": 7.25
+   },
+   {
+    "w": "and",
+    "s": 7.375,
+    "e": 7.525
+   },
+   {
+    "w": "thought",
+    "s": 7.525,
+    "e": 7.8
+   },
+   {
+    "w": "about",
+    "s": 7.8,
+    "e": 8.125
+   },
+   {
+    "w": "them",
+    "s": 8.125,
+    "e": 8.338
+   },
+   {
+    "w": "often",
+    "s": 8.338,
+    "e": 9.1
+   }
+  ]
+ },
+ "magi-title": {
+  "src": "audio/christmas/magi-title.m4a",
+  "text": "Part Six. The Star and the Wise Men.",
+  "voice": "bm_lewis",
+  "duration": 4.3,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.65,
+    "e": 0.963
+   },
+   {
+    "w": "Six",
+    "s": 0.963,
+    "e": 1.55
+   },
+   {
+    "w": "The",
+    "s": 1.675,
+    "e": 1.825
+   },
+   {
+    "w": "Star",
+    "s": 1.825,
+    "e": 2.375
+   },
+   {
+    "w": "and",
+    "s": 2.375,
+    "e": 2.487
+   },
+   {
+    "w": "the",
+    "s": 2.487,
+    "e": 2.575
+   },
+   {
+    "w": "Wise",
+    "s": 2.575,
+    "e": 2.975
+   },
+   {
+    "w": "Men",
+    "s": 2.975,
+    "e": 3.625
+   }
+  ]
+ },
+ "magi-0": {
+  "src": "audio/christmas/magi-0.m4a",
+  "text": "Far away in the east, wise men saw a brand-new star shining in the sky. They knew it meant that a great King had been born.",
+  "voice": "bm_lewis",
+  "duration": 10.375,
+  "words": [
+   {
+    "w": "Far",
+    "s": 0.725,
+    "e": 1.0
+   },
+   {
+    "w": "away",
+    "s": 1.0,
+    "e": 1.325
+   },
+   {
+    "w": "in",
+    "s": 1.325,
+    "e": 1.413
+   },
+   {
+    "w": "the",
+    "s": 1.413,
+    "e": 1.538
+   },
+   {
+    "w": "east",
+    "s": 1.538,
+    "e": 2.125
+   },
+   {
+    "w": "wise",
+    "s": 2.288,
+    "e": 2.675
+   },
+   {
+    "w": "men",
+    "s": 2.675,
+    "e": 3.062
+   },
+   {
+    "w": "saw",
+    "s": 3.062,
+    "e": 3.275
+   },
+   {
+    "w": "a",
+    "s": 3.275,
+    "e": 3.4
+   },
+   {
+    "w": "brand-new",
+    "s": 3.4,
+    "e": 4.0
+   },
+   {
+    "w": "star",
+    "s": 4.0,
+    "e": 4.575
+   },
+   {
+    "w": "shining",
+    "s": 4.575,
+    "e": 5.075
+   },
+   {
+    "w": "in",
+    "s": 5.075,
+    "e": 5.188
+   },
+   {
+    "w": "the",
+    "s": 5.188,
+    "e": 5.3
+   },
+   {
+    "w": "sky",
+    "s": 5.3,
+    "e": 6.275
+   },
+   {
+    "w": "They",
+    "s": 6.463,
+    "e": 6.662
+   },
+   {
+    "w": "knew",
+    "s": 6.662,
+    "e": 6.9
+   },
+   {
+    "w": "it",
+    "s": 6.9,
+    "e": 7.05
+   },
+   {
+    "w": "meant",
+    "s": 7.05,
+    "e": 7.438
+   },
+   {
+    "w": "that",
+    "s": 7.438,
+    "e": 7.562
+   },
+   {
+    "w": "a",
+    "s": 7.562,
+    "e": 7.662
+   },
+   {
+    "w": "great",
+    "s": 7.662,
+    "e": 8.075
+   },
+   {
+    "w": "King",
+    "s": 8.075,
+    "e": 8.45
+   },
+   {
+    "w": "had",
+    "s": 8.45,
+    "e": 8.6
+   },
+   {
+    "w": "been",
+    "s": 8.6,
+    "e": 8.838
+   },
+   {
+    "w": "born",
+    "s": 8.838,
+    "e": 9.6
+   }
+  ]
+ },
+ "magi-1": {
+  "src": "audio/christmas/magi-1.m4a",
+  "text": "They followed the star for many, many miles, until it stopped over the place where the child Jesus was.",
+  "voice": "bm_lewis",
+  "duration": 8.225,
+  "words": [
+   {
+    "w": "They",
+    "s": 0.675,
+    "e": 0.85
+   },
+   {
+    "w": "followed",
+    "s": 0.85,
+    "e": 1.275
+   },
+   {
+    "w": "the",
+    "s": 1.275,
+    "e": 1.375
+   },
+   {
+    "w": "star",
+    "s": 1.375,
+    "e": 1.775
+   },
+   {
+    "w": "for",
+    "s": 1.775,
+    "e": 1.9
+   },
+   {
+    "w": "many",
+    "s": 1.9,
+    "e": 2.375
+   },
+   {
+    "w": "many",
+    "s": 2.45,
+    "e": 2.675
+   },
+   {
+    "w": "miles",
+    "s": 2.675,
+    "e": 3.525
+   },
+   {
+    "w": "until",
+    "s": 3.65,
+    "e": 3.938
+   },
+   {
+    "w": "it",
+    "s": 3.938,
+    "e": 4.075
+   },
+   {
+    "w": "stopped",
+    "s": 4.075,
+    "e": 4.425
+   },
+   {
+    "w": "over",
+    "s": 4.425,
+    "e": 4.675
+   },
+   {
+    "w": "the",
+    "s": 4.675,
+    "e": 4.812
+   },
+   {
+    "w": "place",
+    "s": 4.812,
+    "e": 5.35
+   },
+   {
+    "w": "where",
+    "s": 5.35,
+    "e": 5.487
+   },
+   {
+    "w": "the",
+    "s": 5.487,
+    "e": 5.638
+   },
+   {
+    "w": "child",
+    "s": 5.638,
+    "e": 6.188
+   },
+   {
+    "w": "Jesus",
+    "s": 6.188,
+    "e": 6.763
+   },
+   {
+    "w": "was",
+    "s": 6.763,
+    "e": 7.475
+   }
+  ]
+ },
+ "magi-2": {
+  "src": "audio/christmas/magi-2.m4a",
+  "text": "They bowed down and worshiped Him, and gave Him their treasures: gold, frankincense and myrrh. Jesus had come — God’s greatest gift of all.",
+  "voice": "bm_lewis",
+  "duration": 11.825,
+  "words": [
+   {
+    "w": "They",
+    "s": 0.675,
+    "e": 0.838
+   },
+   {
+    "w": "bowed",
+    "s": 0.838,
+    "e": 1.15
+   },
+   {
+    "w": "down",
+    "s": 1.15,
+    "e": 1.488
+   },
+   {
+    "w": "and",
+    "s": 1.488,
+    "e": 1.613
+   },
+   {
+    "w": "worshiped",
+    "s": 1.613,
+    "e": 2.087
+   },
+   {
+    "w": "Him",
+    "s": 2.087,
+    "e": 2.475
+   },
+   {
+    "w": "and",
+    "s": 2.575,
+    "e": 2.7
+   },
+   {
+    "w": "gave",
+    "s": 2.7,
+    "e": 2.962
+   },
+   {
+    "w": "Him",
+    "s": 2.962,
+    "e": 3.1
+   },
+   {
+    "w": "their",
+    "s": 3.1,
+    "e": 3.312
+   },
+   {
+    "w": "treasures",
+    "s": 3.312,
+    "e": 4.2
+   },
+   {
+    "w": "gold",
+    "s": 4.375,
+    "e": 5.0
+   },
+   {
+    "w": "frankincense",
+    "s": 5.125,
+    "e": 6.0
+   },
+   {
+    "w": "and",
+    "s": 6.0,
+    "e": 6.15
+   },
+   {
+    "w": "myrrh",
+    "s": 6.15,
+    "e": 7.075
+   },
+   {
+    "w": "Jesus",
+    "s": 7.287,
+    "e": 7.825
+   },
+   {
+    "w": "had",
+    "s": 7.825,
+    "e": 8.025
+   },
+   {
+    "w": "come",
+    "s": 8.025,
+    "e": 8.675
+   },
+   {
+    "w": "God's",
+    "s": 8.812,
+    "e": 9.3
+   },
+   {
+    "w": "greatest",
+    "s": 9.3,
+    "e": 9.963
+   },
+   {
+    "w": "gift",
+    "s": 9.963,
+    "e": 10.325
+   },
+   {
+    "w": "of",
+    "s": 10.325,
+    "e": 10.45
+   },
+   {
+    "w": "all",
+    "s": 10.45,
+    "e": 11.1
+   }
+  ]
+ }
+}

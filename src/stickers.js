@@ -46,18 +46,38 @@ export function stickerEl(sticker, src, px) {
   return el;
 }
 
+// The little lamb hidden in every scene, as a round badge.
+export function lambEl(px, found = true) {
+  const el = document.createElement('div');
+  el.className = `sticker lamb${found ? '' : ' missing'}`;
+  Object.assign(el.style, { width: `${px}px`, height: `${px}px`, backgroundImage: 'url("art/lamb.png")' });
+  el.setAttribute('role', 'img');
+  el.setAttribute('aria-label', found ? 'A little lamb you found' : 'A little lamb still hiding');
+  return el;
+}
+
 // "New sticker!" — it pops up, then flies into the sticker book button.
 export function showToast(sticker, src, target) {
+  popUp(stickerEl(sticker, src, 120), 'New sticker', sticker.name, target);
+}
+
+// "You found the little lamb!"
+export function showLambToast(found, total, target) {
+  popUp(lambEl(120), `Little lamb ${found} of ${total}`, found === total ? 'You found every lamb!' : 'You found a little lamb!', target);
+}
+
+function popUp(art, eyebrow, title, target) {
   const toast = document.createElement('div');
   toast.className = 'toast';
-  const art = stickerEl(sticker, src, 120);
   const words = document.createElement('div');
   words.className = 'words';
-  words.innerHTML = '<div class="eyebrow">New sticker</div>';
+  const kicker = document.createElement('div');
+  kicker.className = 'eyebrow';
+  kicker.textContent = eyebrow;
   const name = document.createElement('div');
   name.className = 'name';
-  name.textContent = sticker.name;
-  words.append(name);
+  name.textContent = title;
+  words.append(kicker, name);
   toast.append(art, words);
   document.body.append(toast);
   setTimeout(() => toast.classList.add('in'), 30);     // after it's on the page, so it animates in
@@ -128,6 +148,17 @@ export async function openBook({ collection, library, onClose }) {
     const count = document.createElement('span');
     title.textContent = story.title;
     title.append(count);
+    const lambScenes = story.scenes.filter(sc => sc.lamb);
+    if (lambScenes.length) {
+      const row = document.createElement('div');
+      row.className = 'lambs';
+      const got = lambScenes.filter(sc => collection.has(`${entry.id}/lamb:${sc.id}`)).length;
+      const label = document.createElement('span');
+      label.textContent = `Little lambs found: ${got} of ${lambScenes.length}`;
+      row.append(label);
+      lambScenes.forEach((sc, i) => row.append(lambEl(40, i < got)));
+      section.append(row);
+    }
     const grid = document.createElement('div');
     grid.className = 'grid';
     let have = 0, all = 0;
@@ -155,7 +186,8 @@ export async function openBook({ collection, library, onClose }) {
     }
     count.textContent = ` · ${have} of ${all}`;
     total += all; found += have;
-    section.append(title, grid);
+    section.prepend(title);
+    section.append(grid);
     page.append(section);
   }
   head.querySelector('.eyebrow').textContent = `Your collection · ${found} of ${total}`;

@@ -297,7 +297,15 @@
           "hit": 0.07,
           "with": "trees"
         }
-      ]
+      ],
+      "lamb": {
+        "at": [
+          0.58,
+          0.6
+        ],
+        "size": 0.026,
+        "with": "trees"
+      }
     },
     {
       "id": "lights",
@@ -385,7 +393,14 @@
           "r": 0.06,
           "hit": 0.05
         }
-      ]
+      ],
+      "lamb": {
+        "at": [
+          0.58,
+          0.63
+        ],
+        "size": 0.03
+      }
     },
     {
       "id": "creatures",
@@ -621,7 +636,14 @@
           "hit": 0.07,
           "with": "people"
         }
-      ]
+      ],
+      "lamb": {
+        "at": [
+          0.66,
+          0.48
+        ],
+        "size": 0.03
+      }
     },
     {
       "id": "rest",
@@ -707,7 +729,14 @@
           "r": 0.06,
           "hit": 0.05
         }
-      ]
+      ],
+      "lamb": {
+        "at": [
+          0.62,
+          0.5
+        ],
+        "size": 0.03
+      }
     }
   ],
   "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",

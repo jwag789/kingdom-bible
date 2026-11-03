@@ -6,7 +6,7 @@
 import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
-import { Collection, stickerSrc, showToast, openBook } from './stickers.js';
+import { Collection, stickerSrc, showToast, showLambToast, openBook } from './stickers.js';
 import { buzz, isApp } from './native.js';
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
@@ -26,10 +26,16 @@ const sound = new Sound();
 const narrator = new Narrator(sound);
 await narrator.load(`audio/${storyId}/narration.json`);
 
-// "1:1"–"1:5" → "Genesis 1:1–5"; "2:1"–"2:3" → "Genesis 2:1–3"
+// A verse reference: "1:5" (in the story's book) or "Luke 2:7" (a story drawing on more than one book).
+function parseRef(ref) {
+  const [, book, ch, v] = /^(?:(.+) )?(\d+):(\d+)$/.exec(ref);
+  return { book: book ?? story.book, ch, v };
+}
+
+// "1:1"–"1:5" → "Genesis 1:1–5"; "2:1"–"2:3" → "Genesis 2:1–3"; "Luke 2:8"–"Luke 2:14" → "Luke 2:8–14"
 function refLabel([a, b]) {
-  const [ca] = a.split(':'), [cb, vb] = b.split(':');
-  return `${story.book} ${a}–${ca === cb ? vb : `${cb}:${vb}`}`;
+  const from = parseRef(a), to = parseRef(b);
+  return `${from.book} ${from.ch}:${from.v}–${from.ch === to.ch ? to.v : `${to.ch}:${to.v}`}`;
 }
 
 // The real verses a scene retells, one tap away.
@@ -41,10 +47,10 @@ function sourceFor(s) {
   const verses = document.createElement('div');
   verses.className = 'verses';
   for (let i = order.indexOf(s.verses[0]); i <= order.indexOf(s.verses[1]); i++) {
-    const [ch, v] = order[i].split(':');
+    const { ch, v } = parseRef(order[i]);
     const p = document.createElement('p');
     const sup = document.createElement('sup');
-    sup.textContent = ch !== '1' && v === '1' ? order[i] : v;
+    sup.textContent = ch !== '1' && v === '1' ? `${ch}:${v}` : v;
     p.append(sup, verseOf.get(order[i]));
     verses.append(p);
   }
@@ -227,6 +233,17 @@ function earn(si, sticker) {
 }
 const stickersOf = (si, earnBy) => (story.scenes[si].stickers ?? []).filter(k => k.earn === earnBy);
 stage.onSecret = (si, secret) => earn(si, secret);
+// The little lamb: every tap gets a "baa"; the first in each scene counts toward finding them all.
+const lambScenes = story.scenes.filter(sc => sc.lamb);
+stage.onLamb = si => {
+  sound.baa();
+  buzz('LIGHT');
+  if (!collection.add(`${storyId}/lamb:${story.scenes[si].id}`)) return;
+  const found = lambScenes.filter(sc => collection.has(`${storyId}/lamb:${sc.id}`)).length;
+  setTimeout(() => sound.sticker(), 350);
+  showLambToast(found, lambScenes.length, bookButton);
+  setTimeout(showCount, 3100);
+};
 bookButton.onclick = () => {
   narrator.stop();
   clearTimeout(advanceTimer);
@@ -236,7 +253,7 @@ bookButton.onclick = () => {
 stage.onEvent = (kind, e) => {
   const si = slides[index].scene;
   if (kind === 'reveal') {
-    e.layer.sfx === 'promise' ? sound.promise() : sound.lightBurst();
+    ({ promise: () => sound.promise(), choir: () => sound.glory() }[e.layer.sfx] ?? (() => sound.lightBurst()))();
     buzz('HEAVY');
     if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
     return;
@@ -252,6 +269,8 @@ stage.onEvent = (kind, e) => {
     hammer: () => sound.hammer(),
     lightning: () => sound.thunder(),
     dove: () => sound.dove(),
+    dust: () => sound.heehaw(),
+    sing: () => sound.sing(e.spec.voice, e.y),
   }[e.type];
   play?.();
   buzz(e.type === 'lightning' ? 'HEAVY' : 'LIGHT');
