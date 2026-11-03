@@ -10,6 +10,10 @@
 // and a scene's `touch.hint` invites the first tap. A tap on a hidden secret (a sticker with
 // `earn: "secret"`, see stickers.js) is offered to `onSecret` first.
 //
+// Small objects in a picture (a lamp, a star, a sheep) answer every tap with a little effect:
+// a scene's `spots`, drawn by spots.js. They come after the lamb and secrets, so the first tap on
+// a hidden sticker still finds it, and every tap after that plays the spot.
+//
 // A little paper lamb hides somewhere in a scene (`"lamb": { "at", "size", "flip", "with", "until" }`:
 // `at` is where its hooves stand and `size` its width, as fractions of the picture). Tapping it
 // makes it hop and tells `onLamb`.
@@ -21,6 +25,7 @@
 import { PAINTERS } from './placeholders.js';
 import { makeEffect } from './effects.js';
 import { glowSprite, stamp } from './sprites.js';
+import { makePing, drawPing } from './spots.js';
 
 const OVERSCAN = 1.12;     // layers are drawn larger than the screen so they can drift
 const ASPECT = 16 / 9;     // the shape of the paintings
@@ -45,6 +50,8 @@ export class Stage {
       touch: s.touch ?? null,
       secrets: (s.stickers ?? []).filter(k => k.earn === 'secret'),
       lamb: s.lamb ? { ...s.lamb, hop: -Infinity } : null,
+      spots: s.spots ?? [],
+      pings: [],
       tapped: false,
       since: 0,                        // when this scene last became the active one
       layers: s.layers.map(l => ({
@@ -184,6 +191,15 @@ export class Stage {
       const near = Math.hypot(x - secret.at[0], (y - secret.at[1]) / ASPECT) < (secret.hit ?? 0.05);
       if (near && this.onSecret?.(this.active, secret)) {
         this.burst(secret.at[0], secret.at[1], 0.45);
+        return;
+      }
+    }
+    for (const spot of s.alpha > 0.8 ? s.spots : []) {
+      if (spot.with && shown(spot.with) < 0.5) continue;
+      if (spot.until && shown(spot.until) > 0.5) continue;
+      if (Math.hypot(x - spot.at[0], (y - spot.at[1]) / ASPECT) < (spot.hit ?? 0.04)) {
+        s.pings.push(makePing(spot, now));
+        this.onEvent?.('spot', { spot, x, y });
         return;
       }
     }
@@ -385,9 +401,12 @@ export class Stage {
       const oy = -this.drift.y * d * h * 0.025 + (0.5 - this.progress) * d * h * 0.08;
       this.drawLayer(this.source(l), l, a, ox, oy, zoom, v);
     }
-    if (s.lamb) {
-      const d = 0.1;   // it stands on the painting, so it drifts with it
-      this.drawLamb(s, alpha, t, -this.drift.x * d * w * 0.035, -this.drift.y * d * h * 0.025 + (0.5 - this.progress) * d * h * 0.08, zoom, v);
+    // The lamb and the spots' effects sit on the painting, so they drift and zoom with it.
+    const d = 0.1, pox = -this.drift.x * d * w * 0.035, poy = -this.drift.y * d * h * 0.025 + (0.5 - this.progress) * d * h * 0.08;
+    if (s.lamb) this.drawLamb(s, alpha, t, pox, poy, zoom, v);
+    if (s.pings.length) {
+      const dw = v.pw * zoom, dh = v.ph * zoom, x0 = v.x + (v.pw - dw) / 2 + pox, y0 = v.y + (v.ph - dh) / 2 + poy;
+      s.pings = s.pings.filter(p => drawPing(ctx, p, x0 + p.at[0] * dw, y0 + p.at[1] * dh, dw, t, alpha));
     }
     ctx.globalAlpha = 1;
     // Effects draw on the picture, in its own coordinates.

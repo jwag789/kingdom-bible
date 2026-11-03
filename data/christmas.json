@@ -191,7 +191,18 @@
         "size": 0.035,
         "flip": true,
         "until": "gabriel"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.735,
+            0.695
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "size": 0.8
+        }
+      ]
     },
     {
       "id": "journey",
@@ -269,7 +280,37 @@
           0.52
         ],
         "size": 0.03
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.335,
+            0.2
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.07,
+            0.52
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.57
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        }
+      ]
     },
     {
       "id": "birth",
@@ -382,7 +423,56 @@
         ],
         "size": 0.028,
         "with": "stable"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.672,
+            0.255
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "with": "stable"
+        },
+        {
+          "at": [
+            0.93,
+            0.075
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "with": "stable",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.89,
+            0.8
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.045,
+          "with": "stable"
+        },
+        {
+          "at": [
+            0.93,
+            0.72
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "with": "stable"
+        },
+        {
+          "at": [
+            0.87,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "heehaw",
+          "with": "stable"
+        }
+      ]
     },
     {
       "id": "shepherds",
@@ -521,7 +611,52 @@
           0.55
         ],
         "size": 0.03
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.685,
+            0.74
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "size": 1.3,
+          "hit": 0.045
+        },
+        {
+          "at": [
+            0.53,
+            0.71
+          ],
+          "fx": "notes",
+          "sound": "baa"
+        },
+        {
+          "at": [
+            0.89,
+            0.67
+          ],
+          "fx": "notes",
+          "sound": "baa"
+        },
+        {
+          "at": [
+            0.84,
+            0.79
+          ],
+          "fx": "notes",
+          "sound": "baa"
+        },
+        {
+          "at": [
+            0.79,
+            0.3
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        }
+      ]
     },
     {
       "id": "visit",
@@ -611,7 +746,34 @@
         ],
         "size": 0.03,
         "flip": true
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.592,
+            0.27
+          ],
+          "fx": "flame",
+          "sound": "crackle"
+        },
+        {
+          "at": [
+            0.88,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.93,
+            0.68
+          ],
+          "fx": "notes",
+          "sound": "baa"
+        }
+      ]
     },
     {
       "id": "magi",
@@ -741,7 +903,54 @@
         ],
         "size": 0.025,
         "until": "gifts"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.585,
+            0.28
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "with": "gifts"
+        },
+        {
+          "at": [
+            0.92,
+            0.28
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "with": "gifts"
+        },
+        {
+          "at": [
+            0.935,
+            0.845
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "with": "gifts"
+        },
+        {
+          "at": [
+            0.645,
+            0.26
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "with": "gifts"
+        },
+        {
+          "at": [
+            0.635,
+            0.63
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "with": "gifts"
+        }
+      ]
     }
   ],
   "talk": {

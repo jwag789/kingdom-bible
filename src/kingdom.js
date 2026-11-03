@@ -6,15 +6,26 @@
 // to drop it in), drag it around, and tap it to make it bigger, smaller, flip it or put it away.
 // The kingdom is saved on this device.
 //
+// Each story also brings a place (data/places.json, made by scripts/places.py): the meadow to
+// start with, then Under the Stars, Under the Sea, Bethlehem Hills… Every place keeps its own
+// pieces, so moving to another one never sweeps away what was set up in the last.
+//
 // Pieces are placed in fractions of the meadow's width and height, so the kingdom keeps its
 // shape on a phone or a laptop (only the scenery behind it is cropped differently). A piece's
 // size `s` is its height, as a fraction of the meadow's shorter side.
 
 const STORE = 'kb:kingdom';
-const BACKGROUND = 'art/living/meadow.jpg';
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
-const load = () => { try { return JSON.parse(localStorage.getItem(STORE) ?? '[]'); } catch { return []; } };
-const save = pieces => { try { localStorage.setItem(STORE, JSON.stringify(pieces)); } catch {} };
+// Saved as { place, places: { <place id>: [pieces] } }. Before there were places it was one list (the meadow's).
+const load = () => {
+  let saved;
+  try { saved = JSON.parse(localStorage.getItem(STORE) ?? 'null'); } catch {}
+  if (Array.isArray(saved)) return { place: 'meadow', places: { meadow: saved } };
+  return saved?.places ? saved : { place: 'meadow', places: {} };
+};
+const save = store => { try { localStorage.setItem(STORE, JSON.stringify(store)); } catch {} };
+// Round buttons get drawn icons: text symbols (−, +, ‹) sit below the middle of a circle.
+const icon = d => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const WIDE = /ark|ship|boat|fish|snake/;           // things drawn lying long, not standing tall
 const FIRST_ANIMALS = ['lion', 'sheep', 'rabbit', 'giraffe'];   // made on Day 6, so In the Beginning brings them
@@ -44,6 +55,16 @@ export async function kingdomPieces({ library, collection }) {
   return items;
 }
 
+// Every place there is, and whether it's unlocked: { id, name, src, thumb, unlocked, hint }.
+export async function kingdomPlaces({ library, collection }) {
+  const titles = Object.fromEntries(library.stories.map(s => [s.id, s.title]));
+  const { places = [] } = await fetch('data/places.json').then(r => r.json(), () => ({}));
+  return places.filter(p => !p.story || titles[p.story]).map(p => ({
+    id: p.id, name: p.name, src: `art/places/${p.id}.jpg`, thumb: `art/places/${p.id}-thumb.jpg`, position: p.position ?? '50% 60%',
+    unlocked: !p.story || collection.has(`${p.story}/finished`), hint: p.story ? `Finish “${titles[p.story]}” to unlock` : '',
+  }));
+}
+
 const cap = t => t[0].toUpperCase() + t.slice(1);
 
 function pieceEl(item, px) {
@@ -57,26 +78,35 @@ function pieceEl(item, px) {
 
 export async function openKingdom({ library, collection, sound, onClose }) {
   if (document.querySelector('.kingdom')) return;
-  const all = await kingdomPieces({ library, collection });
+  const [all, places] = await Promise.all([kingdomPieces({ library, collection }), kingdomPlaces({ library, collection })]);
   const items = all.filter(i => i.unlocked);
   const byId = new Map(items.map(i => [i.id, i]));
-  let pieces = load().filter(p => byId.has(p.item));
+  const store = load();
+  let place = places.find(p => p.id === store.place && p.unlocked) ?? places[0];
+  let pieces = (store.places[place.id] ?? []).filter(p => byId.has(p.item));
 
   const root = el('div', 'kingdom');
   root.setAttribute('role', 'dialog');
   root.setAttribute('aria-modal', 'true');
   root.setAttribute('aria-label', 'Your Kingdom');
   const meadow = el('div', 'meadow');
-  meadow.style.backgroundImage = `url("${BACKGROUND}")`;
   const top = el('div', 'top');
   const title = el('div', 'title');
-  title.append(el('div', 'eyebrow', `${items.length} of ${all.length} pieces unlocked`), el('h2', '', 'Your Kingdom'));
-  const close = el('button', 'close', '×');
+  const eyebrow = el('div', 'eyebrow');
+  title.append(eyebrow, el('h2', '', 'Your Kingdom'));
+  const where = el('button', 'where');
+  where.setAttribute('aria-haspopup', 'true');
+  const whereThumb = el('img');
+  whereThumb.alt = '';
+  const whereName = el('span');
+  where.append(whereThumb, whereName);
+  const close = el('button', 'close');
   close.setAttribute('aria-label', 'Close Your Kingdom');
-  top.append(title, close);
+  top.append(title, where, close);
   const tray = el('div', 'tray');
   const tools = el('div', 'tools');
-  const [smaller, bigger, flip, remove] = ['−', '+', '⇋', '🗑'].map(t => el('button', '', t));
+  const [smaller, bigger, flip, remove] = ['M6 12h12', 'M12 6v12M6 12h12', 'M9 7l-5 5 5 5M15 7l5 5-5 5M4 12h16', 'M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12M10 11v5M14 11v5']
+    .map(d => { const b = el('button'); b.innerHTML = icon(d); return b; });
   smaller.setAttribute('aria-label', 'Smaller'); bigger.setAttribute('aria-label', 'Bigger');
   flip.setAttribute('aria-label', 'Flip'); remove.setAttribute('aria-label', 'Put it away');
   tools.append(smaller, bigger, flip, remove);
@@ -130,7 +160,7 @@ export async function openKingdom({ library, collection, sound, onClose }) {
     tools.style.left = `${clamp(selected.x, 0.12, 0.88) * 100}%`;
     tools.style.top = `${clamp(selected.y + selected.s * unit() / meadow.clientHeight / 2 + 0.06, 0.1, 0.92) * 100}%`;
   }
-  const commit = () => save(pieces);
+  const commit = () => { store.place = place.id; store.places[place.id] = pieces; save(store); };
   smaller.onclick = () => { selected.s = Math.max(0.06, selected.s * 0.8); draw(selected); placeTools(); commit(); };
   bigger.onclick = () => { selected.s = Math.min(0.9, selected.s * 1.25); draw(selected); placeTools(); commit(); };
   flip.onclick = () => { selected.flip = !selected.flip; draw(selected); commit(); };
@@ -224,6 +254,60 @@ export async function openKingdom({ library, collection, sound, onClose }) {
   }
 
   tray.append(...locked);
+
+  // ---- Places: a row of cards to pick where the kingdom is. Each keeps its own pieces.
+  const picker = el('div', 'places');
+  picker.setAttribute('role', 'menu');
+  const cards = new Map();
+  for (const p of places) {
+    const card = el('button', p.unlocked ? 'place' : 'place locked');
+    card.setAttribute('role', 'menuitem');
+    card.setAttribute('aria-label', p.unlocked ? p.name : `${p.name}: ${p.hint}`);
+    const img = el('img');
+    img.src = p.thumb;
+    img.alt = '';
+    card.append(img, el('span', '', p.name));
+    card.onclick = () => {
+      if (!p.unlocked) { hint.textContent = `${p.name} — ${p.hint}`; hint.classList.add('on'); setTimeout(() => hint.classList.remove('on'), 2600); return; }
+      togglePicker(false);
+      if (p !== place) goTo(p);
+    };
+    cards.set(p, card);
+    picker.append(card);
+  }
+  root.append(picker);
+  const togglePicker = on => { picker.classList.toggle('on', on); where.setAttribute('aria-expanded', on); };
+  where.onclick = () => togglePicker(!picker.classList.contains('on'));
+  meadow.addEventListener('pointerdown', () => togglePicker(false));
+
+  function showPlace() {
+    meadow.style.backgroundImage = `url("${place.src}")`;
+    meadow.style.backgroundPosition = place.position;
+    whereThumb.src = place.thumb;
+    whereName.textContent = place.name;
+    where.setAttribute('aria-label', `Place: ${place.name}. Choose another place`);
+    for (const [p, card] of cards) card.classList.toggle('on', p === place);
+    const open = places.filter(p => p.unlocked).length;
+    eyebrow.textContent = `${items.length} of ${all.length} pieces · ${open} of ${places.length} places`;
+  }
+  // Moving to another place: fade out, swap the scenery and its pieces, fade back in.
+  function goTo(p) {
+    select(null);
+    meadow.classList.add('moving');
+    setTimeout(() => {
+      for (const n of nodes.values()) n.remove();
+      nodes.clear();
+      place = p;
+      pieces = (store.places[place.id] ?? []).filter(x => byId.has(x.item));
+      store.place = place.id;
+      save(store);
+      showPlace();
+      redraw();
+      meadow.classList.remove('moving');
+      pop();
+    }, 280);
+  }
+  showPlace();
 
   // Wait a frame so the meadow has its size, then place what was saved.
   requestAnimationFrame(redraw);

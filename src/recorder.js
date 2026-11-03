@@ -7,6 +7,8 @@ import { grownUpCheck } from './gate.js';
 import { saveClip, getClip, voices, saveVoice, newVoiceId, chooseVoice } from './voices.js';
 import { cloudReady, shareVoice } from './cloud.js';
 
+// Round buttons get drawn icons: text symbols (−, +, ‹) sit below the middle of a circle.
+const icon = d => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 // AAC in MP4 first: every phone and browser can play it back (Opus-in-MP4 isn't safe on older iPhones).
 const TYPES = ['audio/mp4;codecs=mp4a.40.2', 'audio/mp4', 'audio/webm;codecs=opus', 'audio/webm'];
@@ -36,14 +38,16 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
   const top = el('div', 'top');
   const title = el('div', 'title');
   title.append(el('div', 'eyebrow', 'Your voice'), el('h2', '', `${voice.name} reads ${story.title}`));
-  const close = el('button', 'close', '×');
+  const close = el('button', 'close');
   close.setAttribute('aria-label', 'Stop recording and close');
   top.append(title, close);
   const where = el('div', 'where');
   const prompt = el('p', 'prompt');
   const level = el('div', 'level');
   const controls = el('div', 'controls');
-  const prev = el('button', 'step', '‹'), next = el('button', 'step', '›');
+  const prev = el('button', 'step'), next = el('button', 'step');
+  prev.innerHTML = icon('M14 6l-6 6 6 6');
+  next.innerHTML = icon('M10 6l6 6-6 6');
   prev.setAttribute('aria-label', 'Previous page'); next.setAttribute('aria-label', 'Next page');
   const rec = el('button', 'rec'), listen = el('button', 'begin', 'Listen');
   rec.setAttribute('aria-label', 'Record this page');

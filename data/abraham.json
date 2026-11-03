@@ -120,7 +120,37 @@
           0.43
         ],
         "size": 0.02
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.52,
+            0.13
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.75,
+            0.42
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.88,
+            0.68
+          ],
+          "fx": "notes",
+          "sound": "heehaw",
+          "hit": 0.045
+        }
+      ]
     },
     {
       "id": "stars",
@@ -210,7 +240,55 @@
           0.69
         ],
         "size": 0.03
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.57,
+            0.06
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.035
+        },
+        {
+          "at": [
+            0.11,
+            0.19
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.035
+        },
+        {
+          "at": [
+            0.705,
+            0.155
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.035
+        },
+        {
+          "at": [
+            0.435,
+            0.24
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.035
+        },
+        {
+          "at": [
+            0.87,
+            0.7
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "size": 1.3,
+          "hit": 0.06
+        }
+      ]
     },
     {
       "id": "visitors",
@@ -302,7 +380,45 @@
           0.13
         ],
         "size": 0.025
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.1
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.55,
+            0.08
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.49,
+            0.64
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.595,
+            0.62
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.03
+        }
+      ]
     },
     {
       "id": "isaac",
@@ -373,6 +489,42 @@
             0.6
           ],
           "r": 0.08
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.49,
+            0.71
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.045
+        },
+        {
+          "at": [
+            0.945,
+            0.78
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.045
+        },
+        {
+          "at": [
+            0.57,
+            0.45
+          ],
+          "fx": "flame",
+          "sound": "crackle"
+        },
+        {
+          "at": [
+            0.925,
+            0.33
+          ],
+          "fx": "flame",
+          "sound": "crackle"
         }
       ]
     }

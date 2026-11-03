@@ -78,6 +78,19 @@ export function showPiecesToast(pieces, target) {
   popUp(art, 'New in Your Kingdom', title[0].toUpperCase() + title.slice(1), target);
 }
 
+// "New in Your Kingdom: Under the Stars", a place
+export function showPlaceToast(place, target) {
+  const px = toastSize();
+  const art = document.createElement('div');
+  art.className = 'place-art';
+  Object.assign(art.style, { width: `${Math.round(px * 1.3)}px`, height: `${Math.round(px * 0.8)}px` });
+  const img = document.createElement('img');
+  img.src = `art/places/${place.id}-thumb.jpg`;
+  img.alt = '';
+  art.append(img);
+  popUp(art, 'New in Your Kingdom', place.name, target);
+}
+
 // "You found the little lamb!"
 export function showLambToast(found, total, target) {
   popUp(lambEl(toastSize()), `Little lamb ${found} of ${total}`, found === total ? 'You found every lamb!' : 'You found a little lamb!', target);
@@ -136,7 +149,6 @@ export async function openBook({ collection, library, games = {}, onClose }) {
   const close = document.createElement('button');
   close.className = 'close';
   close.setAttribute('aria-label', 'Close the sticker book');
-  close.textContent = '×';
   const head = document.createElement('div');
   head.className = 'head';
   head.innerHTML = '<div class="eyebrow">Your collection</div><h2>Sticker Book</h2>';

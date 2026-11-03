@@ -534,15 +534,17 @@ export const TOUCH = {
     };
   },
 
-  // Adam names the animals: tap and a name floats up from where you tapped.
-  names() {
+  // Adam names the animals: tap and a name floats up from where you tapped. A tap on one of
+  // the picture's own animals (`animals: [{ at, name, hit }]`) says its name; anywhere else, any animal's.
+  names(o) {
     const NAMES = ['Lion!', 'Elephant!', 'Giraffe!', 'Hippo!', 'Zebra!', 'Peacock!', 'Rabbit!', 'Bear!', 'Camel!', 'Owl!', 'Monkey!',
       'Tiger!', 'Kangaroo!', 'Turtle!', 'Penguin!', 'Fox!', 'Hedgehog!', 'Parrot!', 'Crocodile!', 'Squirrel!'];
     const words = [];
     let next = (Math.random() * NAMES.length) | 0;
     return {
       tap(x, y, t) {
-        words.push({ x, y, t, text: NAMES[next++ % NAMES.length], tilt: rand(-0.12, 0.12) });
+        const near = (o.animals ?? []).find(a => Math.hypot(x - a.at[0], (y - a.at[1]) * 9 / 16) < (a.hit ?? 0.06));
+        words.push({ x, y, t, text: near ? `${near.name}!` : NAMES[next++ % NAMES.length], tilt: rand(-0.12, 0.12) });
         if (words.length > 12) words.shift();
       },
       draw(ctx, w, h, t, alpha) {

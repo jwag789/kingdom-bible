@@ -6,7 +6,7 @@
 import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
-import { Collection, stickerSrc, showToast, showLambToast, showPiecesToast, openBook } from './stickers.js';
+import { Collection, stickerSrc, showToast, showLambToast, showPiecesToast, showPlaceToast, openBook } from './stickers.js';
 import { buzz, isApp } from './native.js';
 import { openGame } from './games.js';
 import { voices, voicesFor, chosenVoice, chooseVoice, getClip } from './voices.js';
@@ -367,7 +367,8 @@ bookButton.onclick = () => {
 };
 
 async function unlockPieces() {
-  const { pieces = [] } = await fetch('data/pieces.json').then(r => r.json(), () => ({}));
+  const [{ pieces = [] }, { places = [] }] = await Promise.all(['data/pieces.json', 'data/places.json'].map(f => fetch(f).then(r => r.json(), () => ({}))));
+  const place = places.find(p => p.story === storyId);
   const mine = pieces.filter(p => p.stories.includes(storyId));
   if (storyId === 'genesis-1') {
     const { props = [] } = await fetch('data/props.json').then(r => r.json(), () => ({}));
@@ -376,8 +377,8 @@ async function unlockPieces() {
       if (prop) mine.push({ name: prop.name, src: `art/props/${id}.png` });
     }
   }
-  if (!mine.length) return;
-  setTimeout(() => { sound.sticker(); showPiecesToast(mine, bookButton); }, 1200);
+  if (mine.length) setTimeout(() => { sound.sticker(); showPiecesToast(mine, bookButton); }, 1200);
+  if (place) setTimeout(() => { sound.sticker(); showPlaceToast(place, bookButton); }, mine.length ? 4600 : 1200);
 }
 
 function playGame() {
@@ -397,6 +398,15 @@ stage.onEvent = (kind, e) => {
       ?? (() => sound.lightBurst()))();
     buzz('HEAVY');
     if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
+    return;
+  }
+  if (kind === 'spot') {
+    ({ crackle: () => sound.crackle(), twinkle: () => sound.twinkle(), rustle: () => sound.rustle(), baa: () => sound.baa(),
+      heehaw: () => sound.heehaw(), chime: () => sound.sprout(e.x), roar: () => sound.roar(), trumpet: () => sound.trumpet(),
+      moo: () => sound.moo(), chirp: () => sound.ready && sound.chirp(sound.ctx.currentTime), splash: () => sound.splash(),
+      bubble: () => sound.bubble(e.y) }[e.spot.sound])?.();
+    buzz('LIGHT');
+    if (readAloud && advanceTimer) advanceIn(4000);
     return;
   }
   setTimeout(() => earn(si, stickersOf(si, 'play')[0]), 900);

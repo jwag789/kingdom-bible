@@ -112,6 +112,9 @@
     padding: 14px 26px 14px 14px; border-radius: 999px; background: rgba(4,5,10,0.72); border: 1px solid rgba(240,204,138,0.45);
     backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); pointer-events: none;
     transform: translate(-50%, -20px) scale(0.9); opacity: 0; transition: transform 0.45s cubic-bezier(0.2, 1.4, 0.3, 1), opacity 0.3s; }
+  .toast .place-art { flex: none; border-radius: 14px; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    transition: transform 0.7s cubic-bezier(0.5, 0, 0.7, 0.4); animation: pop 0.6s cubic-bezier(0.2, 1.6, 0.4, 1); }
+  .toast .place-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .toast.in { transform: translate(-50%, 0) scale(1); opacity: 1; }
   .toast .sticker { transition: transform 0.7s cubic-bezier(0.5, 0, 0.7, 0.4); animation: pop 0.6s cubic-bezier(0.2, 1.6, 0.4, 1); }
   .toast.out { background: transparent; border-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
@@ -135,6 +138,11 @@
   .book h3 span { color: var(--soft); font-family: 'Literata', serif; font-size: 0.9rem; }
   .book .close { position: absolute; top: 0; right: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1;
     border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  /* The close buttons' × is drawn, not typed: the font's × sits below the middle of the circle. */
+  :is(.book, .game, .kingdom, .recorder) .close { display: grid; place-items: center; padding: 0; }
+  :is(.book, .game, .kingdom, .recorder) .close::before, :is(.book, .game, .kingdom, .recorder) .close::after {
+    content: ''; grid-area: 1 / 1; width: 18px; height: 1.6px; border-radius: 1px; background: currentColor; transform: rotate(45deg); }
+  :is(.book, .game, .kingdom, .recorder) .close::after { transform: rotate(-45deg); }
   .book .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 22px 14px; }
   .book figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
   .book figure:nth-child(even) .sticker { transform: rotate(5deg); }
@@ -222,6 +230,31 @@
   .kingdom h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
   .kingdom .close { pointer-events: auto; width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; flex: none;
     border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .kingdom .meadow { transition: opacity 0.28s; }
+  .kingdom .meadow.moving { opacity: 0; }
+  .kingdom .where { pointer-events: auto; flex: none; display: flex; align-items: center; gap: 10px; height: 46px; padding: 4px 16px 4px 4px; border-radius: 999px;
+    border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); font: inherit; font-size: 0.95rem; white-space: nowrap; }
+  .kingdom .where img { width: 64px; height: 36px; border-radius: 999px; object-fit: cover; }
+  .kingdom .where::after { content: ''; width: 7px; height: 7px; margin: -4px 0 0 2px; border: solid currentColor; border-width: 0 1.6px 1.6px 0; transform: rotate(45deg); }
+  .kingdom .places { position: absolute; z-index: 4; right: max(16px, env(safe-area-inset-right)); top: calc(max(16px, env(safe-area-inset-top)) + 58px);
+    width: min(36rem, calc(100vw - 32px)); max-height: calc(100% - 220px); overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px;
+    padding: 14px; border-radius: 22px; background: rgba(8,9,16,0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(240,204,138,0.3); box-shadow: 0 18px 50px rgba(0,0,0,0.5);
+    opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+  .kingdom .places.on { opacity: 1; transform: none; pointer-events: auto; }
+  .kingdom .place { display: flex; flex-direction: column; gap: 7px; padding: 0; border: 0; background: none; color: var(--ink); font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer; }
+  .kingdom .place img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; border: 2px solid transparent; }
+  .kingdom .place.on img { border-color: var(--gold); }
+  .kingdom .place.on span { color: var(--gold); }
+  .kingdom .place.locked { cursor: help; }
+  .kingdom .place.locked img { filter: grayscale(1) brightness(0.35); }
+  .kingdom .place.locked span { color: var(--soft); font-style: italic; }
+  .kingdom .place.locked span::before { content: '🔒 '; font-style: normal; }
+  @media (max-width: 560px) {
+    .kingdom .where { padding-right: 4px; }
+    .kingdom .where span, .kingdom .where::after { display: none; }
+    .kingdom .places { grid-template-columns: repeat(2, 1fr); }
+  }
   .kingdom .placed { position: absolute; cursor: grab; touch-action: none; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35)); transition: filter 0.2s; }
   .kingdom .placed .sticker { box-shadow: none; }
   .kingdom .placed.lifted { cursor: grabbing; filter: drop-shadow(0 16px 18px rgba(0,0,0,0.45)); z-index: 2; }
@@ -230,7 +263,8 @@
   .kingdom .tools { position: absolute; z-index: 3; transform: translate(-50%, 0); display: none; gap: 8px; padding: 6px; border-radius: 999px;
     background: rgba(4,5,10,0.78); border: 1px solid rgba(240,204,138,0.45); }
   .kingdom .tools.on { display: flex; }
-  .kingdom .tools button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.35); background: transparent; color: var(--gold); font-size: 1.15rem; }
+  .kingdom .tools button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.35); background: transparent; color: var(--gold); display: grid; place-items: center; padding: 0; }
+  .kingdom .tools svg { width: 20px; height: 20px; }
   .kingdom .tray { display: flex; gap: 10px; overflow-x: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(240,204,138,0.4) transparent;
     padding: 12px max(16px, env(safe-area-inset-left)) max(14px, calc(env(safe-area-inset-bottom) + 8px));
     background: linear-gradient(0deg, #0b0a12, #15121d); border-top: 1px solid rgba(240,204,138,0.3); }
@@ -239,7 +273,7 @@
   .kingdom .slot .cutout { height: auto !important; max-width: 64px; max-height: 62px; object-fit: contain; }
   .kingdom .slot.locked { cursor: help; border-style: dashed; }
   .kingdom .slot.locked .cutout { filter: brightness(0) invert(0.85) sepia(0.4); opacity: 0.25; }
-  .kingdom .hint { position: absolute; left: 50%; bottom: 110px; transform: translate(-50%, 10px); margin: 0; padding: 0.6em 1.1em; border-radius: 999px;
+  .kingdom .hint { position: absolute; z-index: 5; left: 50%; bottom: 110px; transform: translate(-50%, 10px); margin: 0; padding: 0.6em 1.1em; border-radius: 999px;
     background: rgba(4,5,10,0.85); border: 1px solid rgba(240,204,138,0.45); color: var(--ink); font-size: 0.9rem; white-space: nowrap; max-width: calc(100% - 32px);
     overflow: hidden; text-overflow: ellipsis; opacity: 0; transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
   .kingdom .hint.on { opacity: 1; transform: translate(-50%, 0); }
@@ -285,7 +319,8 @@
     transform: scale(calc(1 + var(--level, 0) * 4)); transition: transform 0.08s; }
   .recorder.recording .level { opacity: 0.9; background: #ff6b6b; }
   .recorder .controls { display: flex; align-items: center; gap: 14px; }
-  .recorder .step { width: 50px; height: 50px; border-radius: 50%; font-size: 1.6rem; border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
+  .recorder .step { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); display: grid; place-items: center; padding: 0; }
+  .recorder .step svg { width: 24px; height: 24px; }
   .recorder .step:disabled, .recorder .begin:disabled { opacity: 0.3; }
   .recorder .controls .begin { margin: 0; }
   .recorder .rec { width: 78px; height: 78px; border-radius: 50%; border: 4px solid #fbf6ea; background: #e5484d; box-shadow: 0 8px 24px rgba(229,72,77,0.4); }

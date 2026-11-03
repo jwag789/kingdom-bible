@@ -50,7 +50,7 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
   const title = el('div', 'title');
   title.append(el('div', 'eyebrow', 'Game'), el('h2', '', game.title));
   const progress = el('div', 'progress');
-  const close = el('button', 'close', '×');
+  const close = el('button', 'close');
   close.setAttribute('aria-label', 'Back to the story');
   top.append(title, progress, close);
   const say = el('p', 'say', game.lines.intro);

@@ -591,6 +591,73 @@ export class Sound {
     [0, 4, 7, 11, 12].forEach((s, i) => this.bell(KEY + s, now + 0.4 + i * 0.18, 0.06, 5, this.sfxBus));
   }
 
+  crackle() {                        // a lamp or a campfire flares: a soft puff and a few pops
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.1, attack: 0.08, release: 0.5, type: 'bandpass', from: 400, to: 900, q: 0.6, buffer: this.brown });
+    for (let i = 0; i < 6; i++) this.noiseBurst({ at: now + 0.05 + i * rand(0.05, 0.14), peak: rand(0.03, 0.06), attack: 0.002, release: 0.03, type: 'highpass', from: 2800, to: 1800, q: 0.7 });
+  }
+
+  twinkle() {                        // a star or a window light twinkles: two high bells
+    if (!this.ready) return;
+    const now = this.ctx.currentTime, step = (Math.random() * 5) | 0;
+    this.bell(KEY + 24 + PENTA[step], now, 0.07, 3, this.sfxBus);
+    this.bell(KEY + 31 + PENTA[(step + 2) % 5], now + 0.12, 0.04, 3, this.sfxBus);
+  }
+
+  rustle() {                         // a tree shaken: leaves hissing softly
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    for (let i = 0; i < 3; i++) this.noiseBurst({ at: now + i * 0.11, peak: 0.05, attack: 0.04, release: 0.25, type: 'bandpass', from: 4500, to: 2500, q: 0.8 });
+  }
+
+  roar() {                           // a friendly lion: a low, rumbly "rrrowr" that rises and falls
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    const o = this.osc('sawtooth', 110), wob = this.osc('sine', 24), wg = this.gain(14);
+    const lp = this.filter('lowpass', 700, 3), g = this.gain(0);
+    wob.connect(wg).connect(o.frequency);
+    o.connect(lp).connect(g).connect(this.sfxBus);
+    o.frequency.setValueAtTime(95, now);
+    o.frequency.exponentialRampToValueAtTime(150, now + 0.25);
+    o.frequency.exponentialRampToValueAtTime(80, now + 0.8);
+    lp.frequency.setValueAtTime(400, now);
+    lp.frequency.exponentialRampToValueAtTime(1100, now + 0.25);
+    lp.frequency.exponentialRampToValueAtTime(350, now + 0.8);
+    this.env(g, now, 0.11, 0.08, 0.75);
+    o.start(now); wob.start(now); o.stop(now + 0.9); wob.stop(now + 0.9);
+    this.noiseBurst({ at: now, peak: 0.04, attack: 0.08, release: 0.6, from: 600, to: 300, q: 0.7, buffer: this.brown });
+  }
+
+  trumpet() {                        // an elephant: a bright, wobbly toot that bends up
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    const o = this.osc('sawtooth', 380), vib = this.osc('sine', 7), vg = this.gain(18);
+    const bp = this.filter('bandpass', 1500, 1.5), g = this.gain(0);
+    vib.connect(vg).connect(o.frequency);
+    o.connect(bp).connect(g).connect(this.sfxBus);
+    o.frequency.setValueAtTime(380, now);
+    o.frequency.exponentialRampToValueAtTime(620, now + 0.2);
+    o.frequency.exponentialRampToValueAtTime(540, now + 0.6);
+    this.env(g, now, 0.07, 0.04, 0.6);
+    o.start(now); vib.start(now); o.stop(now + 0.7); vib.stop(now + 0.7);
+  }
+
+  moo() {                            // a cow: a long, low "mooo" that sinks at the end
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    const o = this.osc('sawtooth', 150), lp = this.filter('lowpass', 500, 4), g = this.gain(0);
+    o.connect(lp).connect(g).connect(this.sfxBus);
+    o.frequency.setValueAtTime(140, now);
+    o.frequency.linearRampToValueAtTime(165, now + 0.3);
+    o.frequency.exponentialRampToValueAtTime(110, now + 0.9);
+    lp.frequency.setValueAtTime(300, now);
+    lp.frequency.exponentialRampToValueAtTime(900, now + 0.35);
+    lp.frequency.exponentialRampToValueAtTime(350, now + 0.9);
+    this.env(g, now, 0.1, 0.12, 0.8);
+    o.start(now); o.stop(now + 1);
+  }
+
   partSea() {                        // the sea splits: a huge rushing roar from both sides, then a deep, settled hum
     if (!this.ready) return;
     const now = this.ctx.currentTime;

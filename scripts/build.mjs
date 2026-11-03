@@ -48,6 +48,10 @@ const pieces = (await json('data/pieces.json')).pieces
   .map(p => ({ ...p, stories: p.stories.filter(id => published.has(id)) })).filter(p => p.stories.length);
 for (const p of pieces) await copy(p.src);
 await writeJson('data/pieces.json', { pieces });
+// Your Kingdom's places: the meadow, and those of published stories.
+const places = (await json('data/places.json')).places.filter(p => !p.story || published.has(p.story));
+for (const p of places) { await copy(`art/places/${p.id}.jpg`); await copy(`art/places/${p.id}-thumb.jpg`); }
+await writeJson('data/places.json', { places: places.map(({ from, crop, ...p }) => p) });
 
 for (const { id } of library.stories) {
   const story = await json(`data/${id}.json`);

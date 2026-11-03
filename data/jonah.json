@@ -143,7 +143,37 @@
           0.56
         ],
         "size": 0.03
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.49,
+            0.39
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.81,
+            0.15
+          ],
+          "fx": "notes",
+          "sound": "chirp",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.88,
+            0.21
+          ],
+          "fx": "notes",
+          "sound": "chirp",
+          "hit": 0.04
+        }
+      ]
     },
     {
       "id": "storm",
@@ -269,7 +299,39 @@
         ],
         "size": 0.025,
         "until": "still"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.58,
+            0.22
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "until": "still"
+        },
+        {
+          "at": [
+            0.45,
+            0.6
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "until": "still"
+        },
+        {
+          "at": [
+            0.92,
+            0.42
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "until": "still"
+        }
+      ]
     },
     {
       "id": "fish",
@@ -430,7 +492,38 @@
         ],
         "size": 0.03,
         "with": "beach"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.9,
+            0.57
+          ],
+          "fx": "bubbles",
+          "sound": "bubble",
+          "until": "gulp"
+        },
+        {
+          "at": [
+            0.85,
+            0.71
+          ],
+          "fx": "bubbles",
+          "sound": "bubble",
+          "until": "gulp"
+        },
+        {
+          "at": [
+            0.72,
+            0.22
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.07,
+          "size": 1.4,
+          "with": "beach"
+        }
+      ]
     },
     {
       "id": "nineveh",
@@ -549,7 +642,36 @@
           0.36
         ],
         "size": 0.022
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.07,
+            0.22
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.935,
+            0.27
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.71,
+            0.91
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "with": "sorry"
+        }
+      ]
     },
     {
       "id": "vine",
@@ -697,7 +819,30 @@
         "size": 0.03,
         "flip": true,
         "until": "plant"
-      }
+      },
+      "spots": [
+        {
+          "at": [
+            0.18,
+            0.21
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "size": 1.6
+        },
+        {
+          "at": [
+            0.65,
+            0.2
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.08,
+          "with": "plant",
+          "until": "withered"
+        }
+      ]
     }
   ],
   "talk": {

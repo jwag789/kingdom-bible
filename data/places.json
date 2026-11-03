@@ -1,0 +1,11 @@
+{
+  "places": [
+    { "id": "meadow", "name": "The Meadow", "from": "art/living/meadow.jpg" },
+    { "id": "hills", "name": "Moonlit Hills", "story": "genesis-1", "from": "art/lights/twilight.jpg" },
+    { "id": "garden", "name": "The Garden", "story": "garden", "from": "art/rest/rest.jpg" },
+    { "id": "shore", "name": "By the Sea", "story": "noah", "from": "art/land/trees.jpg" },
+    { "id": "stars", "name": "Under the Stars", "story": "abraham", "from": "art/abraham/stars/night.jpg", "crop": [0, 0.52] },
+    { "id": "deep", "name": "Under the Sea", "story": "jonah", "from": "art/jonah/fish/deep.jpg", "crop": [0, 0.56] },
+    { "id": "bethlehem", "name": "Bethlehem Hills", "story": "christmas", "from": "art/christmas/shepherds/fields.jpg", "crop": [0, 0.47] }
+  ]
+}
