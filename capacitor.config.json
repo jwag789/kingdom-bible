@@ -1,0 +1,14 @@
+{
+  "appId": "com.kingdomwebbuilders.kingdombible",
+  "appName": "Kingdom Bible",
+  "webDir": "dist",
+  "backgroundColor": "#04050a",
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": false,
+    "backgroundColor": "#04050a"
+  },
+  "android": {
+    "backgroundColor": "#04050a"
+  }
+}

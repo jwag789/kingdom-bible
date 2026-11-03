@@ -7,3 +7,11 @@ __pycache__/
 dist/
 art/style-test/
 art/**/history/
+node_modules/
+ios/App/App/public/
+android/app/src/main/assets/public/
+ios/App/build/
+.gradle/
+android/build/
+android/app/build/
+android/local.properties

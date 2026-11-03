@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kingdom-bible",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.mjs", "8140"],
+      "port": 8140
+    },
+    {
+      "name": "kingdom-bible-dist",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.mjs", "8141", "dist"],
+      "port": 8141
+    }
+  ]
+}

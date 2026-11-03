@@ -7,6 +7,7 @@ import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
 import { Collection, stickerSrc, showToast, openBook } from './stickers.js';
+import { buzz, isApp } from './native.js';
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
 const asked = new URLSearchParams(location.search).get('story');
@@ -15,8 +16,8 @@ const story = await (await fetch(`data/${storyId}.json`)).json();
 const library = await fetch('data/library.json').then(r => r.json(), () => ({ stories: [] }));
 document.title = `${story.title} · Kingdom Bible`;
 
-// Installed as an app, it keeps working offline (see sw.js).
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+// Installed from the web, it keeps working offline (see sw.js). The store apps carry everything inside already.
+if ('serviceWorker' in navigator && !isApp()) navigator.serviceWorker.register('sw.js').catch(() => {});
 const text = await (await fetch(story.text)).json();
 const verseOf = new Map(text.verses.map(v => [v.ref, v.text]));
 const order = text.verses.map(v => v.ref);
@@ -219,7 +220,7 @@ showCount();
 function earn(si, sticker) {
   if (!sticker || !collection.add(`${storyId}/${sticker.id}`)) return false;
   sound.sticker();
-  navigator.vibrate?.(18);
+  buzz('MEDIUM');
   showToast(sticker, stickerSrc(story.scenes[si], sticker), bookButton);
   setTimeout(showCount, 3100);
   return true;
@@ -236,6 +237,7 @@ stage.onEvent = (kind, e) => {
   const si = slides[index].scene;
   if (kind === 'reveal') {
     e.layer.sfx === 'promise' ? sound.promise() : sound.lightBurst();
+    buzz('HEAVY');
     if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
     return;
   }
@@ -252,6 +254,7 @@ stage.onEvent = (kind, e) => {
     dove: () => sound.dove(),
   }[e.type];
   play?.();
+  buzz(e.type === 'lightning' ? 'HEAVY' : 'LIGHT');
   if (readAloud && advanceTimer) advanceIn(4000);  // they're playing after the reading ended: wait
 };
 

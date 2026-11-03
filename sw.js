@@ -10,7 +10,7 @@ const VERSION = 'dev';
 const CACHE = `kingdom-bible-${VERSION}`;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'fonts/fonts.css',
   'src/reader.js', 'src/stage.js', 'src/effects.js', 'src/touch.js', 'src/sprites.js', 'src/placeholders.js',
-  'src/audio.js', 'src/narrator.js', 'src/stickers.js', 'data/library.json'];
+  'src/audio.js', 'src/narrator.js', 'src/stickers.js', 'src/native.js', 'data/library.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
