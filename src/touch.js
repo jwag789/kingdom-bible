@@ -504,4 +504,33 @@ export const TOUCH = {
       },
     };
   },
+
+  // Under the sea: tap and a stream of bubbles wobbles up toward the light.
+  bubbles() {
+    const bubbles = [];
+    return {
+      tap(x, y, t) {
+        for (let i = 0; i < 9; i++) bubbles.push({ x: x + rand(-0.015, 0.015), y, t: t + i * 0.07, r: rand(0.004, 0.012), speed: rand(0.08, 0.14), ph: rand(0, 6.28) });
+        while (bubbles.length > 90) bubbles.shift();
+      },
+      draw(ctx, w, h, t, alpha) {
+        ctx.save();
+        ctx.lineWidth = Math.max(1, w / 1100);
+        for (let i = bubbles.length - 1; i >= 0; i--) {
+          const b = bubbles[i], age = t - b.t;
+          if (age < 0) continue;
+          const y = b.y - age * b.speed;
+          if (y < -0.05 || age > 7) { bubbles.splice(i, 1); continue; }
+          const x = (b.x + Math.sin(age * 3 + b.ph) * 0.008) * w, r = b.r * w * (1 + age * 0.08);
+          const a = alpha * clamp01(age / 0.15) * clamp01((7 - age) / 2);
+          ctx.strokeStyle = `rgba(220,245,255,${0.75 * a})`;
+          ctx.fillStyle = `rgba(200,235,255,${0.12 * a})`;
+          ctx.beginPath(); ctx.arc(x, y * h, r, 0, 6.28); ctx.fill(); ctx.stroke();
+          ctx.fillStyle = `rgba(255,255,255,${0.8 * a})`;
+          ctx.beginPath(); ctx.arc(x - r * 0.35, y * h - r * 0.35, r * 0.22, 0, 6.28); ctx.fill();
+        }
+        ctx.restore();
+      },
+    };
+  },
 };

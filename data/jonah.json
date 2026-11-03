@@ -1,0 +1,703 @@
+{
+  "title": "Jonah and the Big Fish",
+  "reference": "Jonah 1–4",
+  "subtitle": "The story of a runaway prophet and a God who loves everyone",
+  "book": "Jonah",
+  "text": "data/jonah-text.json",
+  "art": "art/jonah",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jonah",
+      "name": "Jonah",
+      "prompt": "Jonah standing alone, full body, front view: a man of about thirty with fair, sun-tanned skin, dark brown curly hair and a short dark beard, a worried frown, wearing a sea-blue robe with a brown cloak and a leather satchel, and sandals",
+      "src": "art/jonah/cast/jonah.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 634535,
+        "at": "2026-11-03T02:46:22.615Z"
+      }
+    },
+    {
+      "id": "fish",
+      "name": "the great fish",
+      "prompt": "A huge, gentle great fish alone, seen from the side: a big, round, friendly whale-like fish of deep teal and blue paper with a pale cream belly, small kind eyes, a wide smiling mouth, curved fins and a big tail",
+      "src": "art/jonah/cast/fish.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 156481,
+        "at": "2026-11-03T02:46:36.079Z"
+      }
+    },
+    {
+      "id": "ship",
+      "name": "the ship",
+      "prompt": "A wooden sailing ship alone, seen from the side: an old wooden merchant ship with a single tall mast, one big red-and-cream striped square sail, ropes, and a curved hull of warm brown planks",
+      "src": "art/jonah/cast/ship.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 542501,
+        "at": "2026-11-03T02:46:49.596Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "call",
+      "eyebrow": "Part One",
+      "title": "Jonah Runs Away",
+      "verses": [
+        "1:1",
+        "1:3"
+      ],
+      "beats": [
+        "There was once a prophet named Jonah. One day God told him, “Go to the great city of Nineveh, and tell the people to stop doing wrong.”",
+        "But Jonah didn’t want to go. The people of Nineveh were enemies of his people! So he ran the other way, and got on a ship sailing far across the sea."
+      ],
+      "layers": [
+        {
+          "id": "harbor",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "harbor",
+          "refs": [
+            "jonah",
+            "ship"
+          ],
+          "prompt": "The busy harbor of Joppa at sunset: Jonah hurries up a wooden gangplank onto a sailing ship, right of center, looking back over his shoulder. Fishing boats, crates, coiled ropes and nets on the stone dock, and gulls over the calm water",
+          "src": "art/jonah/call/harbor.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 510629,
+            "at": "2026-11-03T02:47:26.956Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.7
+        },
+        {
+          "type": "leap",
+          "from": 0,
+          "water": 0.55
+        }
+      ],
+      "touch": {
+        "hint": "Tap the sea or the sky",
+        "at": [
+          0.7,
+          0.3
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "gulls"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "runaway",
+          "name": "Jonah Runs Away",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.5
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "sail",
+          "name": "The Striped Sail",
+          "earn": "secret",
+          "at": [
+            0.6,
+            0.25
+          ],
+          "r": 0.06,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.78,
+          0.56
+        ],
+        "size": 0.03
+      }
+    },
+    {
+      "id": "storm",
+      "eyebrow": "Part Two",
+      "title": "The Great Storm",
+      "verses": [
+        "1:4",
+        "1:16"
+      ],
+      "beats": [
+        "But no one can run away from God. He sent a great wind, and a terrible storm crashed over the ship. The sailors were terrified!",
+        "Jonah was fast asleep down below. “Wake up!” the captain cried. “Pray to your God, so we won’t drown!”",
+        "Jonah told them, “This storm is my fault. I ran away from God. Throw me into the sea, and it will be calm.”",
+        "So they did. And at once, the wind stopped, and the sea grew still."
+      ],
+      "layers": [
+        {
+          "id": "tossed",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "tossed",
+          "refs": [
+            "ship"
+          ],
+          "prompt": "A great storm at sea: the wooden sailing ship with its striped sail is tossed on huge waves of deep blue and slate-grey paper, right of center, under dark clouds and pouring rain, with frightened sailors clinging to the ropes",
+          "src": "art/jonah/storm/tossed.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 175042,
+            "at": "2026-11-03T02:47:55.107Z"
+          }
+        },
+        {
+          "id": "still",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 3,
+          "paint": "still",
+          "src": "art/jonah/storm/still.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 175042,
+            "at": "2026-11-03T02:57:28.178Z"
+          },
+          "refs": [
+            "ship"
+          ],
+          "prompt": "After the storm: a calm, flat sea of smooth blue and gold paper stretching to the horizon under a soft golden evening sky, the last grey clouds drifting apart. The wooden sailing ship with its striped sail rests upright and peaceful on the still water, right of center, its sailors resting on deck"
+        }
+      ],
+      "effects": [
+        {
+          "type": "rain",
+          "from": 0,
+          "until": "still"
+        },
+        {
+          "type": "mist",
+          "from": 0,
+          "until": "still"
+        },
+        {
+          "type": "lightning",
+          "from": 0,
+          "sky": 0.4,
+          "until": "still"
+        },
+        {
+          "type": "shimmer",
+          "with": "still",
+          "y": 0.62
+        }
+      ],
+      "touch": {
+        "hint": "Tap the clouds",
+        "at": [
+          0.72,
+          0.18
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "rain",
+          "thunder",
+          "waves"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.64,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "storm",
+          "name": "The Great Storm",
+          "earn": "play",
+          "layer": "tossed",
+          "at": [
+            0.66,
+            0.55
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "sailor",
+          "name": "The Brave Sailor",
+          "earn": "secret",
+          "layer": "tossed",
+          "until": "still",
+          "at": [
+            0.79,
+            0.22
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.62,
+          0.69
+        ],
+        "size": 0.025,
+        "until": "still"
+      }
+    },
+    {
+      "id": "fish",
+      "eyebrow": "Part Three",
+      "title": "The Big Fish",
+      "verses": [
+        "1:17",
+        "2:10"
+      ],
+      "beats": [
+        "Down, down Jonah sank into the deep, dark sea — until God sent a huge fish to swallow him up!",
+        "For three days and three nights, Jonah sat inside the fish. And there in the dark, he prayed: “I’m sorry, God. Thank You for saving me!”",
+        "Then God spoke to the fish — and it spat Jonah out, right onto dry land!"
+      ],
+      "layers": [
+        {
+          "id": "deep",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "deep",
+          "refs": [
+            "jonah"
+          ],
+          "prompt": "Deep under the sea in soft blue-green light: Jonah sinks gently down through the water, right of center, with seaweed tangled around him, bubbles rising and a few little fish swimming by, and rays of light from far above",
+          "src": "art/jonah/fish/deep.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607903,
+            "at": "2026-11-03T02:48:45.521Z"
+          }
+        },
+        {
+          "id": "gulp",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 0,
+          "paint": "gulp",
+          "editOf": "deep",
+          "refs": [
+            "fish"
+          ],
+          "edit": "A huge, gentle great fish swims up out of the deep, its big soft rounded mouth wide open around Jonah, about to swallow him whole. It looks exactly like the friendly great fish in the reference: smooth teal paper, a pale cream belly, small kind eyes, a smiling toothless mouth with no teeth at all. Not scary.",
+          "trigger": "tap",
+          "hint": "Tap the deep sea",
+          "origin": [
+            0.62,
+            0.55
+          ],
+          "sfx": "gulp",
+          "src": "art/jonah/fish/gulp.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607903,
+            "at": "2026-11-03T02:54:10.848Z"
+          }
+        },
+        {
+          "id": "inside",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "inside",
+          "refs": [
+            "jonah"
+          ],
+          "prompt": "Inside the belly of the great fish: a dark, cozy cave of curved paper ribs lit by a soft warm glow, with a little seaweed and water on the floor. Jonah kneels and prays with folded hands, right of center",
+          "src": "art/jonah/fish/inside.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607903,
+            "at": "2026-11-03T02:50:01.106Z"
+          }
+        },
+        {
+          "id": "beach",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "beach",
+          "refs": [
+            "jonah",
+            "fish"
+          ],
+          "prompt": "A sandy beach in bright morning light: the great fish in the shallow water at the right has just spat Jonah out onto the sand, right of center. Jonah sits up, soaked and amazed, with seaweed on his head",
+          "src": "art/jonah/fish/beach.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607903,
+            "at": "2026-11-03T02:50:35.652Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "bubbles",
+          "from": 0,
+          "until": "beach"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to blow bubbles",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "underwater"
+        ],
+        "mood": "void"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "great-fish",
+          "name": "The Great Fish",
+          "earn": "reveal",
+          "layer": "gulp",
+          "at": [
+            0.32,
+            0.5
+          ],
+          "r": 0.15
+        },
+        {
+          "id": "deep",
+          "name": "Jonah in the Deep",
+          "earn": "play",
+          "layer": "deep",
+          "at": [
+            0.7,
+            0.48
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "seaweed",
+          "name": "The Seaweed Hat",
+          "earn": "secret",
+          "layer": "beach",
+          "with": "beach",
+          "at": [
+            0.66,
+            0.56
+          ],
+          "r": 0.05,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.52,
+          0.62
+        ],
+        "size": 0.03,
+        "with": "beach"
+      }
+    },
+    {
+      "id": "nineveh",
+      "eyebrow": "Part Four",
+      "title": "Jonah Goes to Nineveh",
+      "verses": [
+        "3:1",
+        "3:10"
+      ],
+      "beats": [
+        "Again God said, “Go to Nineveh.” And this time, Jonah went.",
+        "“In forty days, Nineveh will be destroyed!” he called out through the streets. And the people listened.",
+        "Everyone, even the king, said sorry to God and stopped doing wrong. And God forgave them all."
+      ],
+      "layers": [
+        {
+          "id": "city",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "city",
+          "refs": [
+            "jonah"
+          ],
+          "prompt": "Inside the gates of the great city of Nineveh, with tall walls, towers and palm trees in afternoon light: Jonah stands on a stone step, right of center, calling out to a crowd of people in colorful robes",
+          "src": "art/jonah/nineveh/city.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 701248,
+            "at": "2026-11-03T02:51:18.441Z"
+          }
+        },
+        {
+          "id": "sorry",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "sorry",
+          "editOf": "city",
+          "edit": "Now everyone in the crowd kneels with bowed heads, wearing rough brown sackcloth, and a king in sackcloth kneels at the front with his golden crown set down beside him.",
+          "src": "art/jonah/nineveh/sorry.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 701248,
+            "at": "2026-11-03T02:51:49.648Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "gather",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "wind"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "preaching",
+          "name": "Jonah Speaks",
+          "earn": "play",
+          "layer": "city",
+          "at": [
+            0.78,
+            0.3
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "gate",
+          "name": "The Great Gate",
+          "earn": "secret",
+          "at": [
+            0.55,
+            0.38
+          ],
+          "r": 0.07,
+          "hit": 0.05
+        },
+        {
+          "id": "crown",
+          "name": "The King's Crown",
+          "earn": "secret",
+          "layer": "sorry",
+          "with": "sorry",
+          "at": [
+            0.71,
+            0.91
+          ],
+          "r": 0.04,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.66,
+          0.36
+        ],
+        "size": 0.022
+      }
+    },
+    {
+      "id": "vine",
+      "eyebrow": "Part Five",
+      "title": "Jonah’s Plant",
+      "verses": [
+        "4:1",
+        "4:11"
+      ],
+      "beats": [
+        "But Jonah was angry. He didn’t want God to forgive his enemies! So he sat outside the city to sulk in the hot sun.",
+        "So God made a leafy plant grow up over Jonah to give him shade. Jonah was very happy about the plant.",
+        "But the next morning, God sent a little worm to chew the plant, and it withered away. Jonah was angry all over again.",
+        "God said, “You cared about one little plant. Shouldn’t I care about a great city full of people?” God loves everyone, even the people we find hardest to love."
+      ],
+      "layers": [
+        {
+          "id": "hill",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hill",
+          "refs": [
+            "jonah"
+          ],
+          "prompt": "A dry, rocky desert hillside under a blazing sun, filling the whole picture edge to edge: Jonah sits grumpily on a flat rock, right of center, arms crossed, and the walls and towers of a great city lie far below in the hazy distance. Just the landscape: no decorative border, no ornament frame, no writing or letters anywhere",
+          "src": "art/jonah/vine/hill.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 9090,
+            "at": "2026-11-03T02:54:54.919Z"
+          },
+          "seed": 9090
+        },
+        {
+          "id": "plant",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 1,
+          "paint": "plant",
+          "editOf": "hill",
+          "edit": "A big leafy green vine has grown up over Jonah like a shady roof, with broad leaves and curling tendrils; Jonah relaxes happily in its cool shade.",
+          "trigger": "tap",
+          "hint": "Tap the ground",
+          "origin": [
+            0.62,
+            0.78
+          ],
+          "sfx": "grow",
+          "src": "art/jonah/vine/plant.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 84401,
+            "at": "2026-11-03T02:56:16.850Z"
+          },
+          "editModel": "kontext"
+        },
+        {
+          "id": "withered",
+          "kind": "plate",
+          "depth": 0.1,
+          "from": 2,
+          "paint": "withered",
+          "editOf": "plant",
+          "edit": "The vine has withered and dried to brown, its leaves curled and fallen, with one tiny green worm on its stem; Jonah sits in the hot sun again, cross and sweaty.",
+          "src": "art/jonah/vine/withered.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 84401,
+            "at": "2026-11-03T02:56:26.457Z"
+          },
+          "editModel": "kontext"
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sprout",
+          "with": "plant",
+          "ground": 0.72
+        }
+      ],
+      "touch": {
+        "hint": "Tap the ground to plant",
+        "at": [
+          0.7,
+          0.85
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.68,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "plant",
+          "name": "The Shady Plant",
+          "earn": "reveal",
+          "layer": "plant",
+          "at": [
+            0.71,
+            0.25
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "grumpy",
+          "name": "Grumpy Jonah",
+          "earn": "play",
+          "layer": "hill",
+          "at": [
+            0.72,
+            0.55
+          ],
+          "r": 0.09
+        },
+        {
+          "id": "worm",
+          "name": "The Little Worm",
+          "earn": "secret",
+          "layer": "withered",
+          "with": "withered",
+          "at": [
+            0.63,
+            0.14
+          ],
+          "r": 0.04,
+          "hit": 0.05
+        }
+      ],
+      "lamb": {
+        "at": [
+          0.8,
+          0.58
+        ],
+        "size": 0.03,
+        "flip": true,
+        "until": "plant"
+      }
+    }
+  ]
+}

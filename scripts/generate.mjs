@@ -16,6 +16,8 @@
 // A story can have a `cast`: characters and things (Noah, the ark) painted once as reference
 // pictures (in <art>/cast). A layer that lists them in `refs` is painted with those pictures
 // as references, so Noah looks like the same Noah in every scene. `--only cast` remakes them.
+// An edit can set `"editModel": "kontext"` to use FLUX Kontext, which keeps the picture's
+// composition more exactly (no reference pictures, though) — for "the same scene, but…".
 
 import { readFile, writeFile, mkdir, rename, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -34,6 +36,7 @@ const storyFile = args.find(a => a.endsWith('.json')) ?? 'data/genesis-1.json';
 
 const IMAGE_MODEL = 'fal-ai/bytedance/seedream/v4.5/text-to-image';
 const EDIT_MODEL = 'fal-ai/bytedance/seedream/v4.5/edit';
+const KONTEXT_MODEL = 'fal-ai/flux-pro/kontext';
 const CUTOUT_MODEL = 'fal-ai/birefnet';
 const SIZE = { width: 2048, height: 1152 };
 
@@ -158,9 +161,16 @@ for (const job of jobs) {
     process.stdout.write(`${name}: editing ${base.src}…`);
     const lead = refs.length ? ' Image 1 is the picture to change.' : '';
     const prompt = [instruction, story.editKeep].filter(Boolean).join(' ') + lead + refNote(layer.refs, 2);
-    const made = await fal(EDIT_MODEL, { prompt, image_urls: [await dataUri(base.src), ...refs], image_size: SIZE, num_images: 1, seed, enable_safety_checker: true }, key);
-    url = made.images?.[0]?.url ?? made.image?.url;
-    model = EDIT_MODEL;
+    if (layer.editModel === 'kontext') {
+      if (refs.length) throw new Error(`${name}: Kontext edits can't use reference pictures`);
+      const made = await fal(KONTEXT_MODEL, { prompt, image_url: await dataUri(base.src), aspect_ratio: '16:9', seed }, key);
+      url = made.images?.[0]?.url;
+      model = KONTEXT_MODEL;
+    } else {
+      const made = await fal(EDIT_MODEL, { prompt, image_urls: [await dataUri(base.src), ...refs], image_size: SIZE, num_images: 1, seed, enable_safety_checker: true }, key);
+      url = made.images?.[0]?.url ?? made.image?.url;
+      model = EDIT_MODEL;
+    }
     if (how === 'edit-self') note = instruction;
   }
   if (!url) throw new Error(`${name}: fal returned no image`);

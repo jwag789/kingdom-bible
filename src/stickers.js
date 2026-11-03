@@ -58,13 +58,15 @@ export function lambEl(px, found = true) {
 
 // "New sticker!" — it pops up, then flies into the sticker book button.
 export function showToast(sticker, src, target) {
-  popUp(stickerEl(sticker, src, 120), 'New sticker', sticker.name, target);
+  popUp(stickerEl(sticker, src, toastSize()), 'New sticker', sticker.name, target);
 }
 
 // "You found the little lamb!"
 export function showLambToast(found, total, target) {
-  popUp(lambEl(120), `Little lamb ${found} of ${total}`, found === total ? 'You found every lamb!' : 'You found a little lamb!', target);
+  popUp(lambEl(toastSize()), `Little lamb ${found} of ${total}`, found === total ? 'You found every lamb!' : 'You found a little lamb!', target);
 }
+
+const toastSize = () => (innerWidth < 560 ? 76 : 120);   // smaller on phones
 
 function popUp(art, eyebrow, title, target) {
   const toast = document.createElement('div');

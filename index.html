@@ -119,6 +119,11 @@
   .toast .words { transition: opacity 0.3s; }
   .toast .name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; line-height: 1.1; }
   @keyframes pop { 0% { transform: scale(0.2) rotate(-30deg); } 100% { transform: scale(1) rotate(-4deg); } }
+  @media (max-width: 560px) {
+    .toast { gap: 12px; padding: 10px 20px 10px 10px; max-width: calc(100vw - 24px); }
+    .toast .sticker { border-width: 3px; }
+    .toast .name { font-size: 1.3rem; }
+  }
 
   .book { position: fixed; inset: 0; z-index: 9; overflow-y: auto; overscroll-behavior: contain; background: rgba(4,5,10,0.78);
     backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); opacity: 0; transition: opacity 0.3s;

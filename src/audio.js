@@ -503,6 +503,40 @@ export class Sound {
     o.start(now); vib.start(now); o.stop(now + 0.65); vib.stop(now + 0.65);
   }
 
+  bubble(y) {                        // a quick run of bloops, higher near the surface
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    for (let i = 0; i < 5; i++) {
+      const at = now + i * rand(0.05, 0.1), f = rand(500, 900) * (1.4 - Math.min(1, Math.max(0, y)) * 0.6);
+      const o = this.osc('sine', f), g = this.gain(0);
+      o.connect(g).connect(this.sfxBus);
+      o.frequency.setValueAtTime(f, at);
+      o.frequency.exponentialRampToValueAtTime(f * 2.2, at + 0.06);
+      this.env(g, at, 0.05, 0.005, 0.07);
+      o.start(at); o.stop(at + 0.1);
+    }
+  }
+
+  gulp() {                           // the great fish swallows: a deep whoosh and a big, low gulp
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    this.noiseBurst({ at: now, peak: 0.35, attack: 0.25, release: 1.2, type: 'lowpass', from: 900, to: 120, q: 0.6, buffer: this.brown });
+    const o = this.osc('sine', 140), g = this.gain(0);
+    o.connect(g).connect(this.sfxBus);
+    o.frequency.setValueAtTime(140, now + 0.5);
+    o.frequency.exponentialRampToValueAtTime(45, now + 0.9);
+    this.env(g, now + 0.5, 0.45, 0.02, 0.5);
+    o.start(now + 0.5); o.stop(now + 1.1);
+    [0, 3, 7].forEach((s, i) => this.bell(KEY - 12 + s, now + 1.1 + i * 0.12, 0.05, 3, this.sfxBus));
+  }
+
+  grow() {                           // a vine climbing up: rising plucks that settle into a chord
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    [0, 2, 4, 7, 9, 12, 14].forEach((s, i) => this.pluck(KEY + s, now + i * 0.09, 0.09));
+    [0, 4, 7].forEach(s => this.bell(KEY + 12 + s, now + 0.75, 0.05, 3.5, this.sfxBus));
+  }
+
   // While the narrator speaks, the music and ambience step back.
   duck(on) {
     if (!this.ctx || on === this.ducked) return;
@@ -633,6 +667,40 @@ const AMBIENCE = {
         next = at + rand(9, 18);
       },
     }));
+  },
+
+  // Under the sea: a deep, muffled hush, with now and then a far-off bubble.
+  underwater(s) {
+    let next = 0;
+    return s.layer(0.9, g => {
+      const src = s.loop(s.brown), lp = s.filter('lowpass', 220, 0.7), amp = s.gain(0.7);
+      src.connect(lp).connect(amp).connect(g);
+      const l = s.lfo(lp.frequency, 220, 80, 0.07);
+      return {
+        nodes: [src, l],
+        tick(now) {
+          if (now < next) return;
+          const at = Math.max(now, next), f = rand(300, 600), o = s.osc('sine', f), bg = s.gain(0);
+          o.connect(bg).connect(g);
+          o.frequency.setValueAtTime(f, at);
+          o.frequency.exponentialRampToValueAtTime(f * 1.8, at + 0.08);
+          s.env(bg, at, 0.025, 0.01, 0.1);
+          o.start(at); o.stop(at + 0.15);
+          next = at + rand(0.8, 3);
+        },
+      };
+    });
+  },
+
+  // A busy city: the murmur of many voices, rising and falling.
+  crowd(s) {
+    return s.layer(0.45, g => {
+      const src = s.loop(s.pink), bp = s.filter('bandpass', 450, 1.2), bp2 = s.filter('bandpass', 1100, 2), amp = s.gain(0.35);
+      src.connect(bp).connect(amp).connect(g);
+      src.connect(bp2).connect(amp);
+      const a = s.lfo(amp.gain, 0.35, 0.15, 0.23), b = s.lfo(bp.frequency, 450, 120, 0.4);
+      return { nodes: [src, a, b] };
+    });
   },
 
   // A small campfire: soft crackles and pops.

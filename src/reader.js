@@ -253,7 +253,8 @@ bookButton.onclick = () => {
 stage.onEvent = (kind, e) => {
   const si = slides[index].scene;
   if (kind === 'reveal') {
-    ({ promise: () => sound.promise(), choir: () => sound.glory() }[e.layer.sfx] ?? (() => sound.lightBurst()))();
+    ({ promise: () => sound.promise(), choir: () => sound.glory(), gulp: () => sound.gulp(), grow: () => sound.grow() }[e.layer.sfx]
+      ?? (() => sound.lightBurst()))();
     buzz('HEAVY');
     if (e.tapped) setTimeout(() => earn(si, stickersOf(si, 'reveal').find(k => k.layer === e.layer.id)), 1600);
     return;
@@ -271,6 +272,7 @@ stage.onEvent = (kind, e) => {
     dove: () => sound.dove(),
     dust: () => sound.heehaw(),
     sing: () => sound.sing(e.spec.voice, e.y),
+    bubbles: () => sound.bubble(e.y),
   }[e.type];
   play?.();
   buzz(e.type === 'lightning' ? 'HEAVY' : 'LIGHT');
