@@ -581,46 +581,94 @@
     opacity: 0; transition: opacity 6s ease; }
   body.goodnight::after { opacity: 1; pointer-events: auto; }
 
-  /* ---- The Stories page (home). */
+  /* ---- The Stories page (home): Stories and Games tabs, a bar along the bottom. */
   html.home, html.home body { overflow-y: auto; overflow-x: hidden; height: auto; min-height: 100%; overscroll-behavior: auto; }
   body.home { background: radial-gradient(ellipse at 70% -10%, #2c2440 0%, var(--night) 60%) fixed; }
   body.home #stage, body.home #scrim, body.home #deck, body.home #hint, body.home #dots, body.home #nav { display: none; }
-  #home { max-width: 76rem; margin: 0 auto; padding: max(40px, calc(env(safe-area-inset-top) + 24px)) max(16px, 5vw) max(48px, calc(env(safe-area-inset-bottom) + 32px)); }
-  #home .head h1 { font-size: clamp(3rem, 9vw, 5.6rem); line-height: 1; margin: 0.3rem 0 0.6rem; }
-  #home .head .sub { margin: 0 0 1.4rem; }
-  #home .shelf-title { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--gold); margin: 3rem 0 1.2rem; }
-  #home .shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 26px 20px; }
+  body:not(.home) .tabbar { display: none; }
+  #home { --pad: max(16px, 5vw); max-width: 80rem; margin: 0 auto; padding: max(28px, calc(env(safe-area-inset-top) + 16px)) var(--pad) calc(96px + env(safe-area-inset-bottom)); }
+  #home .head h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 1; margin: 0.25rem 0 0.4rem; }
+  #home .head .sub { margin: 0.2rem 0 0; }
+
+  /* Up next */
+  #home .hero { position: relative; display: block; margin: 1.4rem 0 0.4rem; border-radius: 24px; overflow: hidden; text-decoration: none; color: var(--ink);
+    height: clamp(260px, 34vw, 400px); border: 3px solid #fbf6ea; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
+  #home .hero-art { position: absolute; inset: 0; background-size: cover; background-position: 62% 50%; transition: transform 6s ease-out; }
+  #home .hero:hover .hero-art { transform: scale(1.04); }
+  #home .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,5,10,0.82) 0%, rgba(4,5,10,0.5) 42%, rgba(4,5,10,0) 70%); }
+  #home .hero-words { position: absolute; z-index: 1; left: 0; bottom: 0; top: 0; display: flex; flex-direction: column; justify-content: center;
+    padding: 24px clamp(18px, 4vw, 44px); max-width: min(30rem, 62%); }
+  #home .hero h2 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.02; margin: 0.3rem 0 0.4rem; text-shadow: 0 2px 18px rgba(0,0,0,0.6); }
+  #home .hero .sub { margin: 0 0 1.2rem; color: var(--ink); opacity: 0.85; text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
+  #home .hero .begin { align-self: flex-start; margin: 0; }
+
+  /* Rows that scroll sideways */
+  #home .row { margin-top: 2.2rem; }
+  #home .row-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 0.9rem; }
+  #home .shelf-title { font-size: clamp(1.6rem, 3.6vw, 2.3rem); color: var(--gold); margin: 0; }
+  #home .row-count { color: var(--soft); font-size: 0.8rem; flex: 1; }
+  #home .arrow { display: none; align-self: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(240,204,138,0.45); background: var(--glass);
+    color: var(--gold); place-items: center; padding: 0; }
+  #home .arrow svg { width: 18px; height: 18px; }
+  #home .arrow:hover { background: rgba(240,204,138,0.14); border-color: var(--gold); }
+  @media (hover: hover) and (pointer: fine) { #home .arrow { display: grid; } }
+  #home .arrow[hidden] { display: none; }
+  #home .track { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(220px, 23%, 300px); gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 calc(-1 * var(--pad)); padding: 6px var(--pad) 16px; scroll-padding: 0 var(--pad); scrollbar-width: none; overscroll-behavior-x: contain; }
+  #home .track::-webkit-scrollbar { display: none; }
+  #home .track > * { scroll-snap-align: start; }
+
   #home a.story, #home .game-card { display: block; color: var(--ink); text-decoration: none; text-align: left; font: inherit; padding: 0;
     background: none; border: 0; cursor: pointer; transition: transform 0.25s cubic-bezier(0.2, 1.4, 0.4, 1); }
   #home a.story:hover, #home button.game-card:hover { transform: translateY(-4px) rotate(-0.6deg); }
+  #home a.story:active, #home button.game-card:active { transform: scale(0.97); }
   #home .art { position: relative; aspect-ratio: 16 / 10; border-radius: 16px; background-size: cover; background-position: 60% 50%; background-color: #1a1622;
     box-shadow: 0 2px 0 rgba(255,244,214,0.18) inset, 0 14px 30px rgba(0,0,0,0.45); border: 3px solid #fbf6ea; }
   #home .num { position: absolute; left: 10px; top: 10px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
     background: rgba(4,5,10,0.65); color: var(--gold); font-weight: 600; font-size: 0.85rem; border: 1px solid rgba(240,204,138,0.5); }
-  #home h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.6rem; margin: 0.8rem 0 0.1rem; line-height: 1.1; }
+  #home .ribbon { position: absolute; right: 10px; top: 10px; padding: 0.3em 0.75em; border-radius: 999px; background: rgba(240,204,138,0.95); color: #2a1a06;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; box-shadow: 0 3px 8px rgba(0,0,0,0.35); }
+  #home h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.5rem; margin: 0.75rem 0 0.1rem; line-height: 1.1; }
   #home .ref { color: var(--soft); font-size: 0.85rem; margin: 0; }
-  #home .progress { display: flex; align-items: center; gap: 12px; margin-top: 0.5rem; color: var(--soft); font-size: 0.82rem; }
-  #home .progress .all { color: var(--gold); }
-  #home .lamb-icon { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background: url("art/lamb.png") center / contain no-repeat; }
-  #home .progress .sticker { border-width: 2px; }
-  #home .continue { display: flex; align-items: center; gap: 18px; margin: 1.6rem 0 0; padding: 12px; border-radius: 20px; text-decoration: none; color: var(--ink);
-    background: rgba(240,204,138,0.1); border: 1px solid rgba(240,204,138,0.45); max-width: 40rem; }
-  #home .continue .art { width: 132px; flex: none; border-width: 2px; }
-  #home .continue h2 { font-size: 1.7rem; margin: 0.15rem 0; }
-  #home .continue .sub { margin: 0; font-size: 0.9rem; }
-  #home .continue .words { flex: 1; min-width: 0; }
-  #home .continue .go { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; padding-right: 8px; }
+  #home .foot { display: flex; align-items: center; gap: 10px; margin-top: 0.45rem; min-height: 22px; }
+  #home .stars { display: flex; gap: 3px; }
+  #home .stars i { width: 15px; height: 15px; background: rgba(245,236,218,0.22);
+    clip-path: polygon(50% 0, 62% 35%, 100% 38%, 70% 60%, 80% 100%, 50% 77%, 20% 100%, 30% 60%, 0 38%, 38% 35%); }
+  #home .stars i.lit { background: var(--gold); filter: drop-shadow(0 0 3px rgba(255,215,112,0.7)); }
+  #home .foot .sticker { border-width: 2px; }
+
+  /* Games */
+  #home .shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 24px 18px; margin-top: 1.6rem; }
   #home .game-card .art { display: grid; place-items: center; }
-  #home .game-card.locked { cursor: default; }
-  #home .game-card.locked .art { filter: grayscale(0.85) brightness(0.55); }
-  #home .credit { margin-top: 4rem; }
+  #home .game-card .badge:not(.missing) { filter: drop-shadow(0 0 10px rgba(255,215,112,0.9)); }
+  #home .game-card .badge.missing { filter: grayscale(0.9) brightness(0.95); opacity: 0.8; box-shadow: 0 0 0 2px rgba(255,244,214,0.5), 0 6px 14px rgba(0,0,0,0.4); }
+  #home .game-card .play { position: absolute; right: 10px; bottom: 10px; padding: 0.35em 0.9em; border-radius: 999px; background: rgba(4,5,10,0.6);
+    border: 1px solid rgba(240,204,138,0.6); color: var(--gold); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  #home .credit { margin-top: 3.5rem; }
+
+  /* The bar along the bottom */
+  .tabbar { position: fixed; z-index: 30; left: 50%; bottom: max(12px, env(safe-area-inset-bottom)); transform: translateX(-50%);
+    display: flex; gap: 4px; padding: 6px; border-radius: 999px; background: rgba(12,12,22,0.82); border: 1px solid rgba(240,204,138,0.3);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+  .tabbar .tab { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 72px; padding: 8px 12px 6px; border: 0; border-radius: 999px;
+    background: none; color: var(--soft); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; transition: background 0.2s, color 0.2s; }
+  .tabbar .tab svg { width: 24px; height: 24px; }
+  .tabbar .tab:hover { color: var(--ink); }
+  .tabbar .tab.on { background: rgba(240,204,138,0.18); color: var(--gold); }
+  body.game-open .tabbar, body:has(.kingdom) .tabbar, body:has(.book) .tabbar { display: none; }
+
   @media (max-width: 560px) {
-    #home .continue .go { display: none; }
-    #home .continue .art { width: 96px; }
-    #home .shelf { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
-    #home h3 { font-size: 1.25rem; }
+    #home .hero { aspect-ratio: auto; min-height: 0; height: 64vw; max-height: 330px; }
+    #home .hero::after { background: linear-gradient(0deg, rgba(4,5,10,0.86) 0%, rgba(4,5,10,0.45) 55%, rgba(4,5,10,0) 80%); }
+    #home .hero-words { top: auto; max-width: none; padding: 16px 18px; }
+    #home .hero .sub { display: none; }
+    #home .hero h2 { font-size: 2rem; margin-bottom: 0.7rem; }
+    #home .track { grid-auto-columns: 66%; gap: 12px; }
+    #home h3 { font-size: 1.3rem; }
     #home .art { border-width: 2px; border-radius: 12px; }
-    #home .progress { gap: 8px; font-size: 0.75rem; }
+    #home .shelf { grid-template-columns: 1fr 1fr; gap: 18px 12px; }
+    #home .shelf h3 { font-size: 1.15rem; }
+    .tabbar .tab { min-width: 66px; padding: 8px 8px 6px; }
   }
 
   /* Words light up as the narrator reads them. */

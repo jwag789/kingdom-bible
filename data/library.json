@@ -144,5 +144,49 @@
       "testament": "new",
       "cover": "art/covers/easter.jpg"
     }
+  ],
+  "shelves": [
+    {
+      "id": "beginning",
+      "title": "In the Beginning",
+      "stories": [
+        "genesis-1",
+        "garden",
+        "noah",
+        "abraham"
+      ]
+    },
+    {
+      "id": "moses",
+      "title": "Joseph and Moses",
+      "stories": [
+        "joseph",
+        "moses-baby",
+        "moses-plagues",
+        "moses-sea"
+      ]
+    },
+    {
+      "id": "heroes",
+      "title": "Heroes and Prophets",
+      "stories": [
+        "jericho",
+        "david",
+        "jonah",
+        "daniel"
+      ]
+    },
+    {
+      "id": "jesus",
+      "title": "The Life of Jesus",
+      "stories": [
+        "christmas",
+        "follow",
+        "feeding",
+        "lost-sheep",
+        "zacchaeus",
+        "easter"
+      ]
+    }
   ]
 }
