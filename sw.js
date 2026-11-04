@@ -6,7 +6,7 @@
 // byte ranges (Safari always does this), so cached audio is sliced to the range requested.
 // scripts/build.mjs stamps VERSION with a hash of the site, so each release gets a fresh cache.
 
-const VERSION = '055ef526f4';
+const VERSION = 'ffc4d942ff';
 const CACHE = `kingdom-bible-${VERSION}`;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'fonts/fonts.css',
   'src/main.js', 'src/home.js', 'src/kingdom.js', 'src/voices.js', 'src/gate.js', 'src/recorder.js', 'src/cloud.js', 'src/config.js', 'src/reader.js', 'src/stage.js', 'src/effects.js', 'src/touch.js', 'src/sprites.js', 'src/placeholders.js',

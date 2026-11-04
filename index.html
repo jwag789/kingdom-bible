@@ -324,6 +324,11 @@
   .game .crumb { filter: drop-shadow(0 5px 6px rgba(0,0,0,0.35)); animation: popup 0.3s ease-out; transition: left 0.4s ease-in, top 0.4s ease-in, scale 0.4s; }
   .game .crumb img { width: 100%; }
   .game .crumb.taken { scale: 0.5; pointer-events: none; z-index: 3; }
+  .game .shelf.sheaves i.full { background-image: url("art/props/sheaf.png"); }
+  .game .stalk:not(.purpose) { filter: drop-shadow(0 0 5px rgba(255,248,215,0.95)) drop-shadow(0 4px 5px rgba(0,0,0,0.4)); }
+  .game .stalk.purpose { filter: drop-shadow(0 0 14px rgba(255,222,140,0.95)) drop-shadow(0 5px 6px rgba(0,0,0,0.35)); }
+  .game .stalk.purpose:not(.taken) img { animation: pulse 1.2s ease-in-out infinite; }
+  .game .stalk.gone { opacity: 0; transition: opacity 0.4s; }
 
   /* Find the Lamb */
   .game .field > .dark { inset: 0; transform: none; pointer-events: none; z-index: 2; transition: opacity 0.8s;
