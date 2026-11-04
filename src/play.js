@@ -12,6 +12,10 @@
 // "puzzle"  Stable Puzzle        put the picture of the night Jesus was born back together
 // "net"     Fill the Nets        sweep the net through the water to catch the jumping fish
 // "sling"   Five Smooth Stones   choose five smooth stones, then sling one at Goliath's helmet
+// "hush"    Hush the Lions       stroke the roaring lions until they curl up asleep
+// "coat"    Color the Coat       pick a paint pot and color each stripe of Joseph's coat
+// "give"    Pay It Back          drag coins from Zacchaeus' purse, four to each person
+// "palms"   Hosanna Road         lay palms and cloaks on the road for the little donkey
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -664,4 +668,339 @@ function sling(k) {
   };
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling };
+// ---- Hush the Lions: the lions roar and roar; stroke each one (or tap it) until it curls up asleep.
+function hush(k) {
+  const { field, game, sound } = k;
+  const total = game.count ?? 5;
+  const SPOTS = [[0.2, 0.67], [0.5, 0.65], [0.8, 0.67], [0.33, 0.86], [0.67, 0.86]];   // all on the sandy floor
+  let asleep = 0, lastRoar = 0, nextRoar = 1.2;
+  k.progress(`0 of ${total} lions asleep`);
+  k.line('intro');
+  const lions = [];
+  const layout = () => {
+    const W = field.clientWidth, H = field.clientHeight;
+    const s = Math.min(W * 0.27, H * 0.3);
+    for (const l of lions) {
+      l.node.style.width = `${s}px`;
+      put(l.node, W * l.at[0], Math.max(k.head() + s * 0.35, H * l.at[1]));
+    }
+    return s;
+  };
+  for (let i = 0; i < total; i++) {
+    const node = el('button', 'lion');
+    node.setAttribute('aria-label', 'A roaring lion');
+    const face = img(prop('lion'));
+    const sleep = img(prop('lion-asleep'), 'sleep');
+    if (i % 2) { face.style.transform = sleep.style.transform = 'scaleX(-1)'; }
+    node.append(face, sleep);
+    field.append(node);
+    const l = { node, at: SPOTS[i % SPOTS.length], calm: 0, asleep: false, hearts: 0 };
+    lions.push(l);
+    let last = null;
+    const soothe = amount => {
+      if (l.asleep) return;
+      l.calm = Math.min(1, l.calm + amount);
+      node.style.setProperty('--calm', l.calm);
+      // A little heart for every bit calmer.
+      while (l.hearts < Math.floor(l.calm * 5)) {
+        l.hearts++;
+        const heart = el('i', 'heart', '♥');
+        const r = node.getBoundingClientRect(), box = field.getBoundingClientRect();
+        put(heart, r.left - box.left + r.width * rand(0.3, 0.7), r.top - box.top + r.height * 0.3);
+        field.append(heart);
+        setTimeout(() => heart.remove(), 1000);
+        if (sound.ready) sound.pluck(67 + l.hearts * 2, sound.ctx.currentTime, 0.06);
+      }
+      if (l.calm < 1) return;
+      l.asleep = true;
+      node.classList.remove('roar');
+      node.classList.add('asleep');
+      node.setAttribute('aria-label', 'A sleeping lion');
+      const z = el('i', 'zzz', 'z z z');
+      node.append(z);
+      sound.sing?.('musicbox', 0.4);
+      navigator.vibrate?.(15);
+      k.progress(`${++asleep} of ${total} lions asleep`);
+      if (asleep === total) {
+        k.backdrop(game.reveal);
+        setTimeout(() => k.alive() && k.win(), 1600);
+      } else if (asleep === 1) k.line('first');
+    };
+    drag(node, {
+      down: e => { if (l.asleep) return false; last = { x: e.clientX, y: e.clientY, at: performance.now() }; },
+      move: e => {
+        const d = Math.hypot(e.clientX - last.x, e.clientY - last.y);
+        last = { x: e.clientX, y: e.clientY, at: last.at };
+        soothe(d / (node.offsetWidth * 3));
+      },
+      up: () => { if (performance.now() - last.at < 300) soothe(0.34); },   // a tap helps too
+    });
+  }
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  k.loop(t => {
+    if (asleep >= total || t < nextRoar) return;
+    const awake = lions.filter(l => !l.asleep);
+    const l = awake[(Math.random() * awake.length) | 0];
+    l.node.classList.remove('roar'); void l.node.offsetWidth; l.node.classList.add('roar');
+    if (t - lastRoar > 1.6) { sound.roar?.(); lastRoar = t; }
+    nextRoar = t + rand(1.4, 2.6);
+  });
+}
+
+// ---- Color the Coat: choose a paint pot, then tap each stripe of Joseph's coat to color it.
+function coat(k) {
+  const { field, game, sound } = k;
+  const COLORS = game.colors;
+  const NS = 'http://www.w3.org/2000/svg';
+  const svgEl = (tag, attrs) => { const n = document.createElementNS(NS, tag); for (const [a, v] of Object.entries(attrs)) n.setAttribute(a, v); return n; };
+  const ROBE = 'M72 18 Q100 44 128 18 L162 30 Q186 80 197 150 L167 160 L148 78 L172 250 Q100 262 28 250 L52 78 L33 160 L3 150 Q14 80 38 30 Z';   // a long robe with long, wide sleeves
+  const svg = svgEl('svg', { viewBox: '0 0 200 264', class: 'robe' });
+  const defs = svgEl('defs', {});
+  const clip = svgEl('clipPath', { id: 'robe-clip' });
+  clip.append(svgEl('path', { d: ROBE }));
+  // A paper grain over every color, so it looks cut from paper like the rest of the book.
+  const grain = svgEl('filter', { id: 'grain' });
+  grain.append(svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: '0.9', numOctaves: '2', result: 'n' }),
+    svgEl('feColorMatrix', { in: 'n', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.16 0', result: 'g' }),
+    svgEl('feComposite', { in: 'g', in2: 'SourceGraphic', operator: 'in', result: 'gg' }),
+    svgEl('feMerge', {}));
+  grain.lastChild.append(svgEl('feMergeNode', { in: 'SourceGraphic' }), svgEl('feMergeNode', { in: 'gg' }));
+  defs.append(clip, grain);
+  svg.append(defs);
+  const bands = svgEl('g', { 'clip-path': 'url(#robe-clip)', filter: 'url(#grain)' });
+  const n = COLORS.length, y0 = 16, h = (254 - y0) / n;
+  const stripes = [];
+  for (let i = 0; i < n; i++) {
+    const r = svgEl('rect', { x: 0, y: y0 + i * h, width: 200, height: h + 0.6, fill: i % 2 ? '#efe4cc' : '#f6eedb', class: 'stripe' });
+    r.setAttribute('aria-label', `Stripe ${i + 1}`);
+    bands.append(r);
+    stripes.push({ node: r, color: null });
+    if (i) bands.append(svgEl('line', { x1: 0, x2: 200, y1: y0 + i * h, y2: y0 + i * h, class: 'seam' }));
+  }
+  svg.append(bands, svgEl('path', { d: ROBE, class: 'edge' }));
+  const box = el('div', 'coatbox');
+  box.append(svg);
+  const pots = el('div', 'pots');
+  let chosen = null, painted = 0;
+  for (const c of COLORS) {
+    const pot = el('button', 'pot');
+    pot.style.setProperty('--c', c.hex);
+    pot.setAttribute('aria-label', c.name);
+    pot.onclick = () => {
+      chosen = c;
+      pots.querySelectorAll('.pot').forEach(p => p.classList.toggle('on', p === pot));
+      if (sound.ready) sound.pluck(64 + COLORS.indexOf(c) * 2, sound.ctx.currentTime, 0.09);
+      k.say(`${c.name}!`, `color-${c.id}`);
+    };
+    pots.append(pot);
+  }
+  field.append(box, pots);
+  stripes.forEach((s, i) => {
+    s.node.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      if (!chosen) { pots.classList.remove('nudge'); void pots.offsetWidth; pots.classList.add('nudge'); k.line('pick'); return; }
+      const fresh = !s.color;
+      s.color = chosen;
+      s.node.setAttribute('fill', chosen.hex);
+      s.node.classList.remove('wet'); void s.node.getBBox(); s.node.classList.add('wet');
+      sound.splash?.(undefined, 0.25);
+      if (sound.ready) sound.pluck(72 + i * 2, sound.ctx.currentTime + 0.04, 0.08);
+      navigator.vibrate?.(8);
+      if (!fresh) return;
+      k.progress(`${++painted} of ${n} stripes`);
+      if (painted === n) {
+        box.classList.add('twirl');
+        sound.sticker?.();
+        setTimeout(() => k.alive() && k.win(), 1500);
+      }
+    });
+  });
+  const layout = () => {
+    const W = field.clientWidth, top = k.head(), room = field.clientHeight - top;
+    const wide = W > room * 1.3;
+    const p = Math.min(wide ? room / (n + 1.2) : W / (n + 1.5), 74);
+    field.style.setProperty('--pot', `${p}px`);
+    pots.classList.toggle('column', wide);
+    const coatH = Math.min(wide ? room * 0.94 : room - p - 30, (wide ? W * 0.6 : W * 0.9) * 264 / 200);
+    svg.style.height = `${coatH}px`;
+    svg.style.width = `${coatH * 200 / 264}px`;
+    if (wide) { put(box, W * 0.46, top + room / 2); put(pots, W * 0.46 + coatH * 0.38 + p + 24, top + room / 2); }
+    else { put(box, W / 2, top + coatH / 2 + 4); put(pots, W / 2, top + coatH + 18 + p / 2); }
+  };
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  k.progress(`0 of ${n} stripes`);
+  k.line('intro');
+}
+
+// ---- Pay It Back: drag coins from Zacchaeus' purse to each person, four coins each, counting as you go.
+function give(k) {
+  const { field, game, sound } = k;
+  const each = game.each ?? 4, people = game.people;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let given = 0, lastFull = 0;
+  const total = each * people.length;
+  k.progress(`0 of ${total} coins`);
+  k.line('intro');
+  const folks = people.map((id, i) => {
+    const node = el('div', 'person');
+    node.append(img(prop(id)));
+    const dots = el('div', 'dots');
+    for (let j = 0; j < each; j++) dots.append(el('i'));
+    node.append(dots);
+    field.append(node);
+    return { node, dots, got: 0, i };
+  });
+  const purse = el('button', 'purse');
+  purse.setAttribute('aria-label', 'Zacchaeus’ coin purse');
+  purse.append(img(prop('purse')));
+  field.append(purse);
+  const layout = () => {
+    const top = k.head(), room = H() - top;
+    const s = Math.min(W() / (people.length + 0.3), room * 0.34);
+    // Everyone the same height, standing on one line, with their coins beneath their feet.
+    folks.forEach(f => { f.node.style.setProperty('--ph', `${Math.min((W() / people.length) * 1.75, room * 0.46)}px`); put(f.node, W() * ((f.i + 0.5) / people.length), top + room * 0.6); });
+    const ps = Math.min(W() * 0.32, room * 0.24);
+    purse.style.width = `${ps}px`;
+    put(purse, W() / 2, top + room * 0.8);
+  };
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  const pay = (f, coin) => {
+    if (f.got >= each) {
+      coin.remove();
+      f.node.classList.remove('nope'); void f.node.offsetWidth; f.node.classList.add('nope');
+      sound.boop?.();
+      if (performance.now() - lastFull > 4000) { lastFull = performance.now(); k.line('full'); }
+      return;
+    }
+    const dot = f.dots.children[f.got++];
+    const r = dot.getBoundingClientRect(), b = field.getBoundingClientRect();
+    coin.classList.add('landing');
+    put(coin, r.left - b.left + r.width / 2, r.top - b.top + r.height / 2);
+    setTimeout(() => { coin.remove(); dot.classList.add('got'); }, 350);
+    given++;
+    k.progress(`${given} of ${total} coins`);
+    k.say(game.lines[`count-${f.got}`], `count-${f.got}`);
+    sound.jingle?.(sound.ctx?.currentTime, 76 + f.got * 2);
+    navigator.vibrate?.(10);
+    if (f.got === each) {
+      f.node.classList.add('happy');
+      setTimeout(() => { if (k.alive() && given < total) k.line('thanks'); }, 700);
+    }
+    if (given === total) { k.backdrop(game.reveal); setTimeout(() => k.alive() && k.win(), 1600); }
+  };
+  // Press the purse and a coin comes out under your finger; let go of it on someone.
+  let coin = null;
+  const near = (x, y) => folks.find(f => { const r = f.node.getBoundingClientRect(); return x > r.left - 20 && x < r.right + 20 && y > r.top - 20 && y < r.bottom + 20; });
+  const at = e => { const b = field.getBoundingClientRect(); return { x: e.clientX - b.left, y: e.clientY - b.top }; };
+  let pressAt = 0;
+  drag(purse, {
+    down: e => {
+      if (given >= total) return false;
+      pressAt = performance.now();
+      coin = img(prop('coin'), 'coin');
+      coin.style.width = `${Math.min(W(), H()) * 0.08}px`;
+      const p = at(e);
+      put(coin, p.x, p.y);
+      field.append(coin);
+      if (sound.ready) sound.pluck(84, sound.ctx.currentTime, 0.06);
+      folks.forEach(f => f.node.classList.toggle('want', f.got < each));
+    },
+    move: e => { const p = at(e); put(coin, p.x, p.y); const f = near(e.clientX, e.clientY); folks.forEach(g => g.node.classList.toggle('over', g === f)); },
+    up: e => {
+      folks.forEach(f => f.node.classList.remove('want', 'over'));
+      const f = near(e.clientX, e.clientY);
+      // A quick tap sends the coin to the next person who still needs one.
+      const to = f ?? (performance.now() - pressAt < 300 ? folks.find(g => g.got < each) : null);
+      if (to) pay(to, coin);
+      else { coin.classList.add('drop'); const c = coin; setTimeout(() => c.remove(), 400); }
+      coin = null;
+    },
+  });
+}
+
+// ---- Hosanna Road: lay a palm branch or a cloak on the glowing spot, and the little donkey steps onto it, all the way to the city gate.
+function palms(k) {
+  const { field, game, sound } = k;
+  const path = game.path, steps = path.length - 1;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let at = 0, busy = false;
+  k.progress(`0 of ${steps}`);
+  k.line('intro');
+  const laid = el('div', 'laid');
+  const rider = el('div', 'rider');
+  rider.append(img(prop('rider')));
+  const glow = el('div', 'spot');
+  field.append(laid, glow, rider);
+  const pile = el('div', 'pile');
+  const KINDS = ['palm', 'cloak', 'palm', 'palm', 'cloak'];
+  // The road runs away from us toward the gate, so everything on it gets smaller as it goes (path: [x, y, size]).
+  const size = () => Math.min(W() * 0.38, H() * 0.3);
+  const scaleAt = i => path[i][2] ?? 1;
+  const place = () => {
+    const s = size();
+    const p = k.screen(path[at][0], path[at][1]);
+    rider.style.width = `${s * scaleAt(at)}px`;
+    put(rider, p.x, p.y - s * scaleAt(at) * 0.32);
+    if (at < steps) { const q = k.screen(path[at + 1][0], path[at + 1][1]); put(glow, q.x, q.y); glow.style.width = `${s * 0.7 * scaleAt(at + 1)}px`; }
+    laid.querySelectorAll('img').forEach(n => { const i = +n.dataset.at, q = k.screen(path[i][0], path[i][1]); put(n, q.x, q.y); n.style.width = `${s * 0.75 * scaleAt(i)}px`; });
+  };
+  const lay = kind => {
+    if (busy || at >= steps) return;
+    busy = true;
+    const q = k.screen(path[at + 1][0], path[at + 1][1]);
+    const leaf = img(prop(kind), 'leaf');
+    leaf.dataset.at = at + 1;
+    leaf.style.rotate = `${rand(-14, 14)}deg`;
+    leaf.style.width = `${size() * 0.75 * scaleAt(at + 1)}px`;
+    put(leaf, q.x, q.y);
+    laid.append(leaf);
+    sound.rustle?.();
+    if (sound.ready) sound.pluck(65 + at * 2, sound.ctx.currentTime + 0.1, 0.1);
+    navigator.vibrate?.(10);
+    at++;
+    k.progress(`${at} of ${steps}`);
+    glow.classList.add('gone');
+    // Clip-clop onto it.
+    rider.classList.add('walk');
+    setTimeout(() => {
+      if (!k.alive()) return;
+      rider.classList.remove('walk');
+      place();
+      glow.classList.remove('gone');
+      if (at % 3 === 0 && at < steps) { k.line('hosanna'); sound.sing?.('choir', 0.3); }
+      if (at === 1) sound.heehaw?.();
+      busy = false;
+      if (at === steps) {
+        glow.remove();
+        sound.glory?.();
+        setTimeout(() => k.alive() && k.win(), 1200);
+      }
+    }, 650);
+  };
+  for (const kind of KINDS) {
+    const b = el('button', 'piece');
+    b.setAttribute('aria-label', kind === 'palm' ? 'A palm branch' : 'A cloak');
+    b.append(img(prop(kind)));
+    let from = null, moved = false;
+    drag(b, {
+      down: e => { from = { x: e.clientX, y: e.clientY }; moved = false; b.classList.add('held'); },
+      move: e => { const dx = e.clientX - from.x, dy = e.clientY - from.y; if (Math.hypot(dx, dy) > 8) moved = true; b.style.translate = `${dx}px ${dy}px`; },
+      up: e => {
+        b.classList.remove('held');
+        b.style.translate = '';
+        const r = glow.getBoundingClientRect();
+        const over = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2)) < Math.max(70, r.width);
+        if (!moved || over) lay(kind);       // a tap lays it too
+      },
+    });
+    pile.append(b);
+  }
+  field.append(pile);
+  place();
+  addEventListener('resize', () => k.alive() && place());
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms };

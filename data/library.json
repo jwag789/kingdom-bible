@@ -33,6 +33,14 @@
       "cover": "art/covers/abraham.jpg"
     },
     {
+      "id": "joseph",
+      "title": "Joseph’s Colorful Coat",
+      "reference": "Genesis 37–45",
+      "coverFrom": "art/joseph/coat/tents.jpg",
+      "testament": "old",
+      "cover": "art/covers/joseph.jpg"
+    },
+    {
       "id": "moses-baby",
       "title": "Baby Moses",
       "reference": "Exodus 1–2",
@@ -73,6 +81,14 @@
       "cover": "art/covers/jonah.jpg"
     },
     {
+      "id": "daniel",
+      "title": "Daniel and the Lions",
+      "reference": "Daniel 6",
+      "coverFrom": "art/daniel/den/asleep.jpg",
+      "testament": "old",
+      "cover": "art/covers/daniel.jpg"
+    },
+    {
       "id": "christmas",
       "title": "The First Christmas",
       "reference": "Luke 1–2 · Matthew 2",
@@ -87,6 +103,22 @@
       "coverFrom": "art/follow/baptism/heaven.jpg",
       "testament": "new",
       "cover": "art/covers/follow.jpg"
+    },
+    {
+      "id": "zacchaeus",
+      "title": "Zacchaeus",
+      "reference": "Luke 19",
+      "coverFrom": "art/zacchaeus/tree/look.jpg",
+      "testament": "new",
+      "cover": "art/covers/zacchaeus.jpg"
+    },
+    {
+      "id": "easter",
+      "title": "The First Easter",
+      "reference": "Matthew 21 · Luke 22–23 · Matthew 28 · John 20",
+      "coverFrom": "art/easter/alive/garden.jpg",
+      "testament": "new",
+      "cover": "art/covers/easter.jpg"
     }
   ]
 }

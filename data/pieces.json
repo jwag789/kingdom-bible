@@ -57,6 +57,30 @@
       ]
     },
     {
+      "id": "joseph-joseph",
+      "name": "Joseph",
+      "src": "art/pieces/joseph-joseph.png",
+      "stories": [
+        "joseph"
+      ]
+    },
+    {
+      "id": "joseph-jacob",
+      "name": "Jacob",
+      "src": "art/pieces/joseph-jacob.png",
+      "stories": [
+        "joseph"
+      ]
+    },
+    {
+      "id": "joseph-brothers",
+      "name": "Joseph’s brothers",
+      "src": "art/pieces/joseph-brothers.png",
+      "stories": [
+        "joseph"
+      ]
+    },
+    {
       "id": "moses-moses",
       "name": "Moses",
       "src": "art/pieces/moses-moses.png",
@@ -135,6 +159,30 @@
       ]
     },
     {
+      "id": "daniel-daniel",
+      "name": "Daniel",
+      "src": "art/pieces/daniel-daniel.png",
+      "stories": [
+        "daniel"
+      ]
+    },
+    {
+      "id": "daniel-darius",
+      "name": "King Darius",
+      "src": "art/pieces/daniel-darius.png",
+      "stories": [
+        "daniel"
+      ]
+    },
+    {
+      "id": "daniel-lion",
+      "name": "the lion",
+      "src": "art/pieces/daniel-lion.png",
+      "stories": [
+        "daniel"
+      ]
+    },
+    {
       "id": "christmas-mary",
       "name": "Mary",
       "src": "art/pieces/christmas-mary.png",
@@ -171,7 +219,9 @@
       "name": "Jesus",
       "src": "art/pieces/follow-jesus.png",
       "stories": [
-        "follow"
+        "follow",
+        "zacchaeus",
+        "easter"
       ]
     },
     {
@@ -179,7 +229,8 @@
       "name": "Peter",
       "src": "art/pieces/follow-peter.png",
       "stories": [
-        "follow"
+        "follow",
+        "easter"
       ]
     },
     {
@@ -188,6 +239,22 @@
       "src": "art/pieces/follow-boat.png",
       "stories": [
         "follow"
+      ]
+    },
+    {
+      "id": "zacchaeus-zacchaeus",
+      "name": "Zacchaeus",
+      "src": "art/pieces/zacchaeus-zacchaeus.png",
+      "stories": [
+        "zacchaeus"
+      ]
+    },
+    {
+      "id": "easter-mary",
+      "name": "Mary Magdalene",
+      "src": "art/pieces/easter-mary.png",
+      "stories": [
+        "easter"
       ]
     }
   ]

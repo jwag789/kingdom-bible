@@ -40,6 +40,75 @@
           }
         }
       ]
+    },
+    {
+      "id": "road",
+      "layers": [
+        {
+          "id": "jerusalem",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "jerusalem",
+          "prompt": "A sunny spring morning outside Jerusalem: a wide, smooth, pale dusty road runs straight across the lower part of the picture from the left edge all the way to the big open stone gate of the city at the right edge, with white stone city walls and towers above the gate, green hills and palm trees, and happy crowds of people waving palm branches standing along the far side of the road; the road itself is completely empty, no donkey, no Jesus, nothing on the road",
+          "src": "art/games/road/jerusalem.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 970599,
+            "at": "2026-11-04T00:34:30.866Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "den",
+      "layers": [
+        {
+          "id": "empty",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "empty",
+          "prompt": "The floor of a deep, rocky lions’ den at night, seen from inside, filling the whole picture edge to edge with no border, no frame and no paper margin: a wide, flat sandy floor fills the lower two thirds of the picture, rough cave walls of warm brown and grey stone rise behind it, and a soft beam of silver moonlight falls from a round opening high above; completely empty: no people, no lions, no animals of any kind",
+          "src": "art/games/den/empty.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 7171,
+            "at": "2026-11-04T00:36:15.136Z"
+          },
+          "seed": 7171
+        },
+        {
+          "id": "sleepy",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "sleepy",
+          "editOf": "empty",
+          "edit": "The den is now filled with warm, soft golden light glowing down from the opening above, as if an angel had just been there, with tiny golden sparkles floating in the air. Still empty: no people, no lions.",
+          "src": "art/games/den/sleepy.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 307878,
+            "at": "2026-11-04T00:36:30.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jericho",
+      "layers": [
+        {
+          "id": "square",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "square",
+          "prompt": "A quiet, sunny town square in Jericho in warm golden afternoon light, filling the whole picture edge to edge with no border: pale stone paving across the lower half, a low stone well, a few palm trees and pale stone houses with arched doorways and striped awnings around the edges, soft blue sky; calm and simple, completely empty: no people, no animals",
+          "src": "art/games/jericho/square.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 932305,
+            "at": "2026-11-04T01:17:59.705Z"
+          }
+        }
+      ]
     }
   ]
 }

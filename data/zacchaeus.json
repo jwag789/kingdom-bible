@@ -1,0 +1,528 @@
+{
+  "title": "Zacchaeus",
+  "reference": "Luke 19",
+  "subtitle": "The story of a short man, a tall tree, and the Friend who came looking for him",
+  "book": "Luke",
+  "text": "data/zacchaeus-text.json",
+  "art": "art/zacchaeus",
+  "next": {
+    "story": "easter",
+    "title": "The First Easter",
+    "sub": "Matthew 21–28: the story of the saddest day and the happiest morning ever."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "zacchaeus",
+      "name": "Zacchaeus",
+      "prompt": "Zacchaeus standing alone, full body, front view: a very short, round little man with fair skin, rosy cheeks, a big curly brown beard and a shiny bald spot, wearing a fancy, rich green robe with gold trim and a fat coin purse on his belt, and pointy sandals",
+      "src": "art/zacchaeus/cast/zacchaeus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 66490,
+        "at": "2026-11-04T00:30:46.047Z"
+      }
+    },
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "jericho",
+      "eyebrow": "Part One",
+      "title": "A Very Short Man",
+      "verses": [
+        "19:1",
+        "19:2"
+      ],
+      "beats": [
+        "In the city of Jericho lived a man named Zacchaeus. He was a tax collector, and he was very, very rich.",
+        "But he got rich by taking too much money from people. Nobody liked Zacchaeus one bit."
+      ],
+      "layers": [
+        {
+          "id": "street",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "street",
+          "prompt": "On a busy, sunny street in Jericho with palm trees, market stalls and pale stone houses: the very short Zacchaeus sits behind a table piled high with gold and silver coins, right of center, counting his money with a sly grin, while people walking past frown and grumble at him",
+          "refs": [
+            "zacchaeus"
+          ],
+          "src": "art/zacchaeus/jericho/street.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 932305,
+            "at": "2026-11-04T00:31:10.541Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the coins",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "coins",
+          "name": "A Pile of Coins",
+          "earn": "play",
+          "at": [
+            0.63,
+            0.73
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "grumpy-neighbors",
+          "name": "Grumpy Neighbors",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.12,
+            0.6
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.55,
+            0.72
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.26,
+            0.18
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.86,
+            0.15
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "crowd",
+      "eyebrow": "Part Two",
+      "title": "Too Short to See",
+      "verses": [
+        "19:2",
+        "19:3"
+      ],
+      "beats": [
+        "One day, everyone was talking about it: “Jesus is coming!” Zacchaeus wanted to see Jesus too.",
+        "But the crowd was so big, and Zacchaeus was so short! He jumped and stretched and stood on his tiptoes, but all he could see were backs and elbows."
+      ],
+      "layers": [
+        {
+          "id": "backs",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "backs",
+          "prompt": "A big, excited crowd lines a dusty road in Jericho, seen from behind; at the back, right of center, the very short Zacchaeus stands on his tiptoes, stretching and hopping to try to see over the tall people’s shoulders, looking funny and frustrated, with a big leafy sycamore-fig tree further down the road",
+          "refs": [
+            "zacchaeus"
+          ],
+          "src": "art/zacchaeus/crowd/backs.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 339270,
+            "at": "2026-11-04T00:31:44.438Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap to help him jump",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "tiptoes",
+          "name": "On Tiptoes",
+          "earn": "play",
+          "at": [
+            0.71,
+            0.3
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "far-tree",
+          "name": "The Faraway Tree",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.5,
+            0.22
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.25,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.85,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        }
+      ]
+    },
+    {
+      "id": "tree",
+      "eyebrow": "Part Three",
+      "title": "Up a Tree!",
+      "verses": [
+        "19:4",
+        "19:6"
+      ],
+      "beats": [
+        "So Zacchaeus ran ahead and climbed up a sycamore tree. Now he could see everything!",
+        "Jesus came walking along the road. Right under the tree, He stopped. And He looked up.",
+        "“Zacchaeus, hurry down! I’m going to stay at your house today!” Zacchaeus scrambled down as fast as he could. He was so happy!"
+      ],
+      "layers": [
+        {
+          "id": "branches",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "branches",
+          "prompt": "One single continuous landscape under one unbroken sky, with no fold, seam, book page or blank margin anywhere: a big, leafy sycamore-fig tree stands beside a dusty road outside Jericho on a bright sunny day, its branches spreading across the right half of the picture; the very short Zacchaeus perches high up in the branches, clinging on and peering eagerly down the road, where a large crowd is coming along with Jesus walking at the front, still far away; desert hills and palm trees stretch to the left edge of the picture",
+          "refs": [
+            "zacchaeus",
+            "jesus"
+          ],
+          "src": "art/zacchaeus/tree/branches.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 8484,
+            "at": "2026-11-04T00:37:44.634Z"
+          },
+          "seed": 8484
+        },
+        {
+          "id": "look",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "look",
+          "editOf": "branches",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see who stops",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Jesus now stands right underneath the tree, looking up at Zacchaeus with a big warm smile and reaching up a welcoming hand, while the crowd behind Him has stopped in surprise; Zacchaeus clings to his branch, amazed and delighted.",
+          "refs": [
+            "jesus",
+            "zacchaeus"
+          ],
+          "src": "art/zacchaeus/tree/look.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 33189,
+            "at": "2026-11-04T00:38:22.051Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "with": "look"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "up-tree",
+          "name": "Up a Tree!",
+          "earn": "play",
+          "at": [
+            0.75,
+            0.3
+          ],
+          "r": 0.1,
+          "layer": "branches"
+        },
+        {
+          "id": "come-down",
+          "name": "Come Down!",
+          "earn": "reveal",
+          "layer": "look",
+          "at": [
+            0.48,
+            0.65
+          ],
+          "r": 0.12
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.6,
+            0.1
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.9,
+            0.12
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.66,
+            0.18
+          ],
+          "fx": "leaves",
+          "sound": "chirp",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "dinner",
+      "eyebrow": "Part Four",
+      "title": "A Brand-New Heart",
+      "verses": [
+        "19:7",
+        "19:10"
+      ],
+      "beats": [
+        "The people grumbled. “Why is Jesus going to that man’s house? He’s a cheater!”",
+        "But being with Jesus changed Zacchaeus’ heart. “I will give half of everything I have to the poor,” he said. “And if I cheated anyone, I’ll pay them back four times as much!”",
+        "Jesus smiled. “Today God’s rescue has come to this house. I came to look for the lost, and to save them.”"
+      ],
+      "layers": [
+        {
+          "id": "share",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "share",
+          "prompt": "In the courtyard of Zacchaeus’ fine house in warm golden evening light, with a table set with bread, fruit and lamps: the very short Zacchaeus joyfully pours coins from his purse into the hands of poor families and smiling children, right of center, while Jesus sits at the table watching him with a happy smile",
+          "refs": [
+            "zacchaeus",
+            "jesus"
+          ],
+          "src": "art/zacchaeus/dinner/share.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 861945,
+            "at": "2026-11-04T00:33:34.970Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 2
+        },
+        {
+          "type": "sing",
+          "from": 2,
+          "voice": "harp"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to share the coins",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "crickets"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "sharing",
+          "name": "Sharing Coins",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.5
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "fruit",
+          "name": "A Bowl of Fruit",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.6,
+            0.7
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.49,
+            0.69
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.68,
+            0.74
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.69,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Nobody liked Zacchaeus. Why do you think Jesus wanted to go to his house?",
+      "How did Zacchaeus change after he met Jesus?",
+      "Is there someone who feels left out that you could be kind to?"
+    ],
+    "verse": {
+      "ref": "Luke 19:10",
+      "text": "For the Son of Man came to seek and to save the lost."
+    }
+  }
+}

@@ -1,0 +1,680 @@
+{
+  "title": "Daniel and the Lions",
+  "reference": "Daniel 6",
+  "subtitle": "The story of a man who kept on praying, and the God who shut the lions’ mouths",
+  "book": "Daniel",
+  "text": "data/daniel-text.json",
+  "art": "art/daniel",
+  "next": {
+    "story": "christmas",
+    "title": "The First Christmas",
+    "sub": "Luke 1–2 · Matthew 2: the story of the night Jesus was born."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "daniel",
+      "name": "Daniel",
+      "prompt": "Daniel standing alone, full body, front view: a kind, wise man with warm olive skin, dark eyes, short dark curly hair and a neat dark beard, wearing a long deep-blue robe with a gold-trimmed sash and a cream head wrap, and sandals",
+      "src": "art/daniel/cast/daniel.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 660872,
+        "at": "2026-11-04T00:30:45.981Z"
+      }
+    },
+    {
+      "id": "darius",
+      "name": "King Darius",
+      "prompt": "King Darius standing alone, full body, front view: a friendly older king with olive skin and a long curled grey beard, wearing a tall gold crown and a rich purple robe with gold patterned trim, holding a gold scepter, and sandals",
+      "src": "art/daniel/cast/darius.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 780539,
+        "at": "2026-11-04T00:31:12.022Z"
+      }
+    },
+    {
+      "id": "lion",
+      "name": "the lion",
+      "prompt": "A big lion standing alone, full body, side view: a large, friendly-looking lion with a shaggy golden-brown mane, big soft paws, a long tufted tail and a gentle face",
+      "wide": true,
+      "src": "art/daniel/cast/lion.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 335109,
+        "at": "2026-11-04T00:31:25.057Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "city",
+      "eyebrow": "Part One",
+      "title": "Far from Home",
+      "verses": [
+        "6:1",
+        "6:3"
+      ],
+      "beats": [
+        "Long ago, Daniel lived far from home in the great city of Babylon. Daniel loved God, and he prayed to Him every single day.",
+        "King Darius liked Daniel very much. Daniel was wise and honest and good, so the king made him one of the most important leaders in the whole land."
+      ],
+      "layers": [
+        {
+          "id": "palace",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "palace",
+          "prompt": "In the sunny courtyard of a grand Babylonian palace with tall blue-tiled walls decorated with golden lions, palm trees and hanging gardens: King Darius stands right of center, smiling and handing an important scroll to Daniel, who bows his head politely, with palace guards and other leaders standing nearby",
+          "refs": [
+            "daniel",
+            "darius"
+          ],
+          "src": "art/daniel/city/palace.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 518578,
+            "at": "2026-11-04T00:32:12.019Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "crowd"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "scroll",
+          "name": "The King’s Scroll",
+          "earn": "play",
+          "at": [
+            0.48,
+            0.6
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "wall-lions",
+          "name": "Lions on the Wall",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.12,
+            0.47
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.88,
+            0.45
+          ],
+          "fx": "sparkle",
+          "sound": "roar",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.3,
+            0.33
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.7,
+            0.33
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "rule",
+      "eyebrow": "Part Two",
+      "title": "A Sneaky Plan",
+      "verses": [
+        "6:4",
+        "6:9"
+      ],
+      "beats": [
+        "But the other leaders were jealous. “Let’s get Daniel in trouble!” they whispered. They looked and looked, but Daniel never did anything wrong.",
+        "So they tricked the king. “O King, make a new rule! For thirty days, everyone must pray only to you. Anyone who prays to God will be thrown to the lions!”",
+        "The king liked the sound of that. He pressed his royal ring into the clay and signed the rule. And in Babylon, a king’s rule could never, ever be changed."
+      ],
+      "layers": [
+        {
+          "id": "throne",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "throne",
+          "prompt": "In a grand throne room with blue tiled walls and tall columns: King Darius sits on his golden throne, right of center, pressing his royal seal ring onto a scroll, looking pleased, while a huddle of sly, sneaky-looking officials with pointy beards and fancy robes lean in close, whispering and grinning behind their hands; funny rather than scary",
+          "refs": [
+            "darius"
+          ],
+          "src": "art/daniel/rule/throne.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 976707,
+            "at": "2026-11-04T00:32:44.912Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to seal the rule",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "seal",
+          "name": "The Royal Rule",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.58
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "sneaky",
+          "name": "The Sneaky Leaders",
+          "earn": "secret",
+          "hit": 0.07,
+          "at": [
+            0.25,
+            0.5
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.63,
+            0.27
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "prays",
+      "eyebrow": "Part Three",
+      "title": "Daniel Prays Anyway",
+      "verses": [
+        "6:10",
+        "6:11"
+      ],
+      "beats": [
+        "Daniel heard about the new rule. But he went home, opened his window toward Jerusalem, and knelt down to pray, just like always.",
+        "Three times a day, Daniel thanked God and talked to Him. And the sneaky leaders were watching…"
+      ],
+      "layers": [
+        {
+          "id": "window",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "window",
+          "prompt": "In the evening, in Daniel’s upstairs room lit by a warm oil lamp: Daniel kneels in prayer by a wide-open window, right of center, his hands folded and eyes closed, with the first stars and a deep blue sky outside and faraway hills; down below outside the window, two sneaky officials peek over a wall, watching him",
+          "refs": [
+            "daniel"
+          ],
+          "src": "art/daniel/prays/window.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 331666,
+            "at": "2026-11-04T00:33:21.444Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to pray with Daniel",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "praying",
+          "name": "Daniel Prays",
+          "earn": "play",
+          "at": [
+            0.52,
+            0.55
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "peekers",
+          "name": "Who’s Peeking?",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.83,
+            0.7
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.39,
+            0.36
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.91,
+            0.15
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.75,
+            0.3
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "den",
+      "eyebrow": "Part Four",
+      "title": "Into the Lions’ Den",
+      "verses": [
+        "6:14",
+        "6:22"
+      ],
+      "beats": [
+        "The leaders ran to tell the king. King Darius was very upset, because he loved Daniel. But the rule could not be changed.",
+        "So Daniel was put into a deep den full of hungry lions, and a big stone was rolled over the top. “May your God save you, Daniel!” the king called.",
+        "ROAR! The lions came closer… But God sent His angel! The angel shut the lions’ mouths, and they curled up like big, sleepy kittens."
+      ],
+      "layers": [
+        {
+          "id": "lions",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "lions",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: inside a deep, rocky lions’ den lit by a beam of moonlight from the opening high above, the rough cave walls and sandy floor continuing all the way to the left edge of the picture: Daniel stands calmly right of center with his hands folded in prayer, while several big lions with shaggy manes prowl around him with their mouths open, roaring; dramatic but not gory or too frightening, a picture book for small children",
+          "refs": [
+            "daniel",
+            "lion"
+          ],
+          "src": "art/daniel/den/lions.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 5150,
+            "at": "2026-11-04T00:40:09.175Z",
+            "edits": [
+              "Fill the blank, plain paper strip on the left side so the picture continues: more rough, rocky cave wall and sandy cave floor in the same moonlit light, reaching all the way to the left edge. Keep Daniel and the lions exactly as they are."
+            ]
+          },
+          "seed": 5150
+        },
+        {
+          "id": "asleep",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "asleep",
+          "editOf": "lions",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to send the angel",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "A gentle shining angel in white robes, glowing with warm golden light, now stands beside Daniel, and all the lions have closed their mouths and lie curled up fast asleep around Daniel’s feet like big gentle cats, one resting its chin on its paws; Daniel smiles peacefully, and the whole den glows with soft golden light.",
+          "refs": [
+            "daniel",
+            "lion"
+          ],
+          "mood": "rest",
+          "music": "pads",
+          "src": "art/daniel/den/asleep.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 307878,
+            "at": "2026-11-04T00:41:26.635Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "dust",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "with": "asleep"
+        },
+        {
+          "type": "sing",
+          "with": "asleep",
+          "voice": "musicbox"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to hear the lions roar",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "roar",
+          "name": "Roaring Lions",
+          "earn": "play",
+          "at": [
+            0.47,
+            0.7
+          ],
+          "r": 0.12,
+          "layer": "lions"
+        },
+        {
+          "id": "sleepy-lions",
+          "name": "Sleepy Lions",
+          "earn": "reveal",
+          "layer": "asleep",
+          "at": [
+            0.38,
+            0.78
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "moon",
+          "name": "The Moon",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.73,
+            0.1
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.47,
+            0.65
+          ],
+          "fx": "sparkle",
+          "sound": "roar",
+          "hit": 0.06,
+          "until": "asleep"
+        },
+        {
+          "at": [
+            0.84,
+            0.7
+          ],
+          "fx": "sparkle",
+          "sound": "roar",
+          "hit": 0.06,
+          "until": "asleep"
+        },
+        {
+          "at": [
+            0.38,
+            0.78
+          ],
+          "fx": "notes",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "with": "asleep"
+        },
+        {
+          "at": [
+            0.84,
+            0.82
+          ],
+          "fx": "notes",
+          "sound": "twinkle",
+          "hit": 0.06,
+          "with": "asleep"
+        },
+        {
+          "at": [
+            0.67,
+            0.5
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "asleep"
+        }
+      ]
+    },
+    {
+      "id": "morning",
+      "eyebrow": "Part Five",
+      "title": "Safe!",
+      "verses": [
+        "6:19",
+        "6:23"
+      ],
+      "beats": [
+        "The king couldn’t sleep all night. At sunrise he ran to the den. “Daniel! Has your God saved you?”",
+        "“My God sent His angel and shut the mouths of the lions!” Daniel called. “They haven’t hurt me one bit!” The king was so happy!",
+        "Daniel came out without a single scratch, because he trusted God. And King Darius told the whole land, “Daniel’s God is the living God. He rescues and He saves!”"
+      ],
+      "layers": [
+        {
+          "id": "sunrise",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "sunrise",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: at sunrise outside the lions’ den, the big stone rolled aside: overjoyed King Darius kneels at the edge of the opening, right of center, reaching down to help Daniel climb out, both smiling, while below them the lions lie peacefully with their mouths closed, one yawning sleepily and one resting its chin on its paws; golden morning sunlight floods the scene and the palace towers of Babylon glow in the distance",
+          "refs": [
+            "daniel",
+            "darius",
+            "lion"
+          ],
+          "src": "art/daniel/morning/sunrise.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 6262,
+            "at": "2026-11-04T00:39:04.031Z"
+          },
+          "seed": 6262
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap to cheer",
+        "at": [
+          0.35,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "wind"
+        ],
+        "mood": "glory"
+      },
+      "frame": [
+        0.4,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "rescued",
+          "name": "Safe!",
+          "earn": "play",
+          "at": [
+            0.3,
+            0.4
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "yawn",
+          "name": "The Yawning Lion",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.12,
+            0.78
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.78,
+            0.36
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.33,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "roar",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.8,
+            0.15
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Daniel kept praying even when there was a rule against it. Why do you think he did?",
+      "How do you think Daniel felt down in the den with the lions?",
+      "When and where can you talk to God?"
+    ],
+    "verse": {
+      "ref": "Daniel 6:22",
+      "text": "My God sent His angel and shut the mouths of the lions."
+    }
+  }
+}

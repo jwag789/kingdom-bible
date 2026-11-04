@@ -1,0 +1,661 @@
+{
+  "title": "Joseph’s Colorful Coat",
+  "reference": "Genesis 37–45",
+  "subtitle": "The story of a coat, some jealous brothers, and a God who turns bad into good",
+  "book": "Genesis",
+  "text": "data/joseph-text.json",
+  "art": "art/joseph",
+  "next": {
+    "story": "moses-baby",
+    "title": "Baby Moses",
+    "sub": "Exodus 1–2: the story of a baby in a basket and a big sister who watched."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "joseph",
+      "name": "Joseph",
+      "prompt": "Joseph standing alone, full body, front view: a cheerful young man of about seventeen with fair, sun-kissed skin, curly dark brown hair and bright eyes, wearing a long, beautiful robe of many colors with long sleeves, in bold stripes of red, orange, yellow, green, blue and purple, and sandals",
+      "src": "art/joseph/cast/joseph.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 510520,
+        "at": "2026-11-04T00:30:46.088Z"
+      }
+    },
+    {
+      "id": "jacob",
+      "name": "Jacob",
+      "prompt": "Jacob standing alone, full body, front view: a loving old father with fair, weathered skin, kind eyes and a long white beard, wearing a brown and cream striped robe and a cream head covering, leaning on a wooden walking staff, and sandals",
+      "src": "art/joseph/cast/jacob.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 207318,
+        "at": "2026-11-04T00:31:00.138Z"
+      }
+    },
+    {
+      "id": "brothers",
+      "name": "Joseph’s brothers",
+      "prompt": "Ten grown brothers standing side by side in a row, full body, front view: shepherds of different heights and ages with fair, sun-tanned skin and dark beards, wearing plain brown, tan, olive and rust robes and head wraps, two of them holding shepherd’s staffs, and sandals",
+      "wide": true,
+      "src": "art/joseph/cast/brothers.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 420828,
+        "at": "2026-11-04T00:31:12.374Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "coat",
+      "eyebrow": "Part One",
+      "title": "A Coat of Many Colors",
+      "verses": [
+        "37:3",
+        "37:4"
+      ],
+      "beats": [
+        "Long ago, a man named Jacob had twelve sons. Joseph was one of the youngest, and his father loved him very much.",
+        "One day, Jacob gave Joseph a beautiful coat of many colors: red and orange, yellow and green, blue and purple!",
+        "But Joseph’s big brothers were jealous. “Why does he get a special coat?” they grumbled. They wouldn’t even say a kind word to him."
+      ],
+      "layers": [
+        {
+          "id": "tents",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "tents",
+          "prompt": "Outside the family’s tents on green hills in warm afternoon light, with sheep grazing nearby: Joseph twirls happily in his colorful striped coat, right of center, while his old father Jacob watches with a proud smile; further back, his ten big brothers stand together with their arms folded, frowning and grumbling",
+          "refs": [
+            "joseph",
+            "jacob",
+            "brothers"
+          ],
+          "src": "art/joseph/coat/tents.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 523750,
+            "at": "2026-11-04T00:32:05.756Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to twirl Joseph’s coat",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "coat",
+          "name": "The Colorful Coat",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.6
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "grumpy",
+          "name": "Grumpy Brothers",
+          "earn": "secret",
+          "hit": 0.06,
+          "at": [
+            0.22,
+            0.65
+          ],
+          "r": 0.08
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.78,
+            0.73
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.93,
+            0.69
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.2,
+            0.33
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "dreams",
+      "eyebrow": "Part Two",
+      "title": "Joseph’s Dreams",
+      "verses": [
+        "37:5",
+        "37:9"
+      ],
+      "beats": [
+        "One night Joseph had a dream. The sun, the moon and eleven stars all bowed down to him!",
+        "“Listen to my dream!” Joseph told his family. His brothers got even angrier. “Do you think you’ll be the boss of us?”"
+      ],
+      "layers": [
+        {
+          "id": "night",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "night",
+          "prompt": "At night under a deep blue sky: Joseph lies fast asleep on a woven mat outside the family tent, right of center, wrapped in his colorful striped coat, and above him in a soft, glowing dream-cloud in the sky, a smiling golden sun, a silver crescent moon and eleven bright stars all bow down toward him",
+          "refs": [
+            "joseph"
+          ],
+          "src": "art/joseph/dreams/night.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 893271,
+            "at": "2026-11-04T00:32:38.344Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the stars",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "dream",
+          "name": "Joseph’s Dream",
+          "earn": "play",
+          "at": [
+            0.23,
+            0.2
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "dream-moon",
+          "name": "The Dream Moon",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.33,
+            0.2
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.42
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.32,
+            0.44
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.42,
+            0.42
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.5,
+            0.42
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "sold",
+      "eyebrow": "Part Three",
+      "title": "Far Away to Egypt",
+      "verses": [
+        "37:23",
+        "37:28"
+      ],
+      "beats": [
+        "One day, the brothers saw Joseph coming in his coat. They took the coat away and put Joseph down into an empty well.",
+        "Then some traders came by with their camels, on their way to Egypt. The brothers sold Joseph to them, and the traders took him far, far away.",
+        "Joseph was all alone. But he wasn’t really alone at all. God was with him."
+      ],
+      "layers": [
+        {
+          "id": "caravan",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "caravan",
+          "prompt": "In dry, golden desert hills under a wide sky: a long caravan of traders with camels carrying bundles heads toward the far horizon, and young Joseph, without his colorful coat and wearing only a plain cream tunic, walks sadly among them, right of center, looking back over his shoulder; far behind on a hill, his ten brothers stand beside an old stone well, holding the colorful coat; gentle and calm, not frightening",
+          "refs": [
+            "joseph",
+            "brothers"
+          ],
+          "src": "art/joseph/sold/caravan.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 731,
+            "at": "2026-11-04T00:33:12.602Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "dust",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "storm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "caravan",
+          "name": "The Camel Caravan",
+          "earn": "play",
+          "at": [
+            0.52,
+            0.55
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "coat-hill",
+          "name": "The Coat on the Hill",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.7,
+            0.26
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.45,
+            0.5
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.86,
+            0.27
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "egypt",
+      "eyebrow": "Part Four",
+      "title": "God Was With Joseph",
+      "verses": [
+        "41:38",
+        "41:43"
+      ],
+      "beats": [
+        "In Egypt, hard things kept happening to Joseph. He was even put in prison when he hadn’t done anything wrong. But God was with him the whole time.",
+        "One night, Pharaoh, the king of Egypt, dreamed about seven fat cows and seven skinny cows. Nobody knew what it meant, except Joseph! God showed him.",
+        "“Seven years of plenty are coming, then seven hungry years,” Joseph said. So Pharaoh put Joseph in charge of all Egypt, to save up food for everyone!"
+      ],
+      "layers": [
+        {
+          "id": "grain",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "grain",
+          "prompt": "In sunny Egypt beside the river Nile, with palm trees and pyramids far in the distance: Joseph, now a grown young man with a short beard, dressed as a ruler of Egypt in a white linen robe, a broad gold collar and a gold chain, stands proudly on the steps right of center beside Pharaoh in his striped royal headdress, both pointing at enormous storehouses overflowing with golden grain, while workers carry baskets of wheat",
+          "refs": [
+            "joseph"
+          ],
+          "src": "art/joseph/egypt/grain.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 868020,
+            "at": "2026-11-04T00:33:37.941Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 2
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the grain",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "wind"
+        ],
+        "mood": "warm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "grain",
+          "name": "Storehouses of Grain",
+          "earn": "play",
+          "at": [
+            0.41,
+            0.5
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "pyramids",
+          "name": "The Pyramids",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.8,
+            0.12
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.9,
+            0.83
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.62,
+            0.25
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.2,
+            0.35
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "forgive",
+      "eyebrow": "Part Five",
+      "title": "“I Am Joseph!”",
+      "verses": [
+        "45:1",
+        "45:15"
+      ],
+      "beats": [
+        "Then the hungry years came. Joseph’s brothers had no food, so they came all the way to Egypt to buy some. They bowed down low to the ruler, just like in Joseph’s dream. They didn’t know it was him!",
+        "Joseph couldn’t keep it in any longer. He cried and cried. “I am Joseph, your brother!” His brothers were so scared!",
+        "But Joseph hugged every one of them. “Don’t be afraid,” he said. “You meant to hurt me, but God meant it for good.” And the whole family was together again."
+      ],
+      "layers": [
+        {
+          "id": "bow",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bow",
+          "prompt": "In a grand Egyptian palace hall with painted columns and warm light: Joseph, a grown young man with a short beard dressed as a ruler of Egypt in a white linen robe and a broad gold collar, stands right of center looking down with tears in his eyes, while his ten brothers in plain shepherd robes kneel and bow low in a row before him, their faces to the floor",
+          "refs": [
+            "joseph",
+            "brothers"
+          ],
+          "src": "art/joseph/forgive/bow.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 122995,
+            "at": "2026-11-04T00:34:11.282Z"
+          }
+        },
+        {
+          "id": "hug",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hug",
+          "editOf": "bow",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to say “I am Joseph!”",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Joseph has come down to his brothers and is hugging them with happy tears, his arms around two of them, while the other brothers have stood up and gather around, amazed and joyful, some wiping their eyes and smiling; the hall glows with warm golden light.",
+          "refs": [
+            "joseph",
+            "brothers"
+          ],
+          "mood": "glory",
+          "music": "storybook",
+          "src": "art/joseph/forgive/hug.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 122995,
+            "at": "2026-11-04T00:34:46.522Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "with": "hug"
+        },
+        {
+          "type": "sing",
+          "with": "hug",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "bow",
+          "name": "Bowing Low",
+          "earn": "play",
+          "at": [
+            0.55,
+            0.68
+          ],
+          "r": 0.12,
+          "layer": "bow"
+        },
+        {
+          "id": "together",
+          "name": "Together Again",
+          "earn": "reveal",
+          "layer": "hug",
+          "at": [
+            0.54,
+            0.5
+          ],
+          "r": 0.13
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "hug"
+        },
+        {
+          "at": [
+            0.85,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "hug"
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "How do you think Joseph felt when his brothers were mean to him?",
+      "Joseph forgave his brothers. Why is it hard to forgive sometimes?",
+      "Even when bad things happened, God was with Joseph. When do you need to remember that God is with you?"
+    ],
+    "verse": {
+      "ref": "Genesis 50:20",
+      "text": "What you intended against me for evil, God intended for good."
+    }
+  }
+}

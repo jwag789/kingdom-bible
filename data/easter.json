@@ -1,0 +1,701 @@
+{
+  "title": "The First Easter",
+  "reference": "Matthew 21 · Luke 22–23 · Matthew 28 · John 20",
+  "subtitle": "The story of a King on a donkey, the saddest day, and the happiest morning ever",
+  "book": "Matthew",
+  "text": "data/easter-text.json",
+  "art": "art/easter",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with calm, simple space in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "prompt": "Peter standing alone, full body, front view: a big, strong fisherman with fair, ruddy sun-tanned skin, curly reddish-brown hair and a bushy beard, wearing a short brown tunic with rolled-up sleeves, holding a fishing net",
+      "src": "art/follow/cast/peter.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 883651,
+        "at": "2026-11-03T03:05:57.959Z"
+      }
+    },
+    {
+      "id": "mary",
+      "name": "Mary Magdalene",
+      "prompt": "Mary Magdalene standing alone, full body, front view: a kind young woman with fair olive skin, dark brown eyes and long dark hair under a soft rose-pink head covering, wearing a simple lavender robe with a cream sash, and sandals, holding a small clay jar of spices",
+      "src": "art/easter/cast/mary.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 357316,
+        "at": "2026-11-04T00:30:45.061Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "palms",
+      "eyebrow": "Part One",
+      "title": "Hosanna!",
+      "verses": [
+        "Matthew 21:7",
+        "Matthew 21:9"
+      ],
+      "beats": [
+        "Jesus and His friends were on their way to the big city of Jerusalem. Jesus climbed onto a little donkey and rode in through the city gate.",
+        "Crowds of people came running! They waved palm branches and laid their coats on the road to make a path for Him.",
+        "“Hosanna!” they shouted. “Blessed is He who comes in the name of the Lord!” Everyone was so happy to see Jesus, their King."
+      ],
+      "layers": [
+        {
+          "id": "road",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "road",
+          "prompt": "One single continuous scene under one sky: an ancient dirt road of soft, pale, dusty earth, with no lines, no markings and no curbs, winds toward the big old stone gate of Jerusalem: Jesus rides a small grey donkey along it, right of center, smiling and waving, while joyful crowds of men, women and children in simple robes line both sides of the road waving green palm branches, and colorful cloaks are spread on the dusty road in front of the donkey; warm sandstone city walls and towers, olive trees and palm trees, in Bible times",
+          "refs": [
+            "jesus"
+          ],
+          "src": "art/easter/palms/road.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 835418,
+            "at": "2026-11-04T00:35:47.939Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 2,
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to wave the palm branches",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "donkey",
+          "name": "The Little Donkey",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.66
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "cloaks",
+          "name": "Cloaks on the Road",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.45,
+            0.92
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.62,
+            0.72
+          ],
+          "fx": "notes",
+          "sound": "heehaw",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.1,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.9,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.8,
+            0.32
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.5,
+            0.38
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "supper",
+      "eyebrow": "Part Two",
+      "title": "The Last Supper",
+      "verses": [
+        "Luke 22:14",
+        "Luke 22:20"
+      ],
+      "beats": [
+        "A few nights later, Jesus shared a special supper with His twelve friends, the disciples.",
+        "Jesus took the bread, thanked God, and broke it. “This is My body, given for you,” He said. Then He shared a cup with them. “Remember Me when you do this.”",
+        "Jesus knew that something very hard was coming. But He did not run away. He loved His friends, and He loved the whole world, so very much."
+      ],
+      "layers": [
+        {
+          "id": "table",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "table",
+          "prompt": "In a cozy upstairs room in the evening, lit by warm clay oil lamps: Jesus sits at a long low wooden table, right of center, gently breaking a round loaf of bread, with His twelve disciples gathered around the table on cushions, Peter close beside Him, cups and bowls of food on the table, and a window showing the dark blue night sky",
+          "refs": [
+            "jesus",
+            "peter"
+          ],
+          "src": "art/easter/supper/table.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 442966,
+            "at": "2026-11-04T00:31:53.039Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap to light the lamps",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "fire",
+          "crickets"
+        ],
+        "mood": "rest"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "bread",
+          "name": "The Bread",
+          "earn": "play",
+          "at": [
+            0.64,
+            0.6
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "lamp",
+          "name": "The Little Lamp",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.84,
+            0.2
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.61,
+            0.2
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.84,
+            0.2
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.06,
+            0.62
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.4,
+            0.3
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "cross",
+      "eyebrow": "Part Three",
+      "title": "The Saddest Day",
+      "verses": [
+        "Luke 23:33",
+        "Luke 23:46"
+      ],
+      "beats": [
+        "But some leaders did not want Jesus to be king. Soldiers came in the night and took Him away, and His friends ran off, afraid.",
+        "They put Jesus on a cross on a hill. Even then, Jesus prayed, “Father, forgive them.” The sky grew dark, and Jesus died.",
+        "Jesus had never done anything wrong. He was giving His life so that all the wrong things we do could be forgiven. It was the saddest day ever. But it was not the end."
+      ],
+      "layers": [
+        {
+          "id": "hill",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hill",
+          "prompt": "A quiet, gentle, sad scene in the early evening under a dark, cloudy sky with a soft glow low on the horizon: far, far away on top of a distant hill, right of center, stand three small, plain wooden crosses, seen only as small dark silhouettes with no figures shown on them. In the foreground, seen from behind, a few of Jesus’ friends, including Mary Magdalene in her lavender robe and rose-pink head covering, stand close together and hold each other in sorrow. Calm and tender, not frightening",
+          "refs": [
+            "mary"
+          ],
+          "src": "art/easter/cross/hill.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 339161,
+            "at": "2026-11-04T00:32:24.616Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "three-crosses",
+          "name": "Three Crosses",
+          "earn": "play",
+          "at": [
+            0.8,
+            0.6
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.25,
+            0.15
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "tomb",
+      "eyebrow": "Part Four",
+      "title": "The Stone Rolled Away",
+      "verses": [
+        "Matthew 28:1",
+        "Matthew 28:6"
+      ],
+      "beats": [
+        "Jesus’ friends gently laid Him in a tomb, a cave cut into the rock, and a huge round stone was rolled across the door. Everyone was so very sad.",
+        "Very early on Sunday morning, Mary Magdalene and her friend came to the tomb as the sun was coming up. But who would roll away that heavy stone?",
+        "Suddenly the ground shook! A shining angel had rolled the stone away. “Don’t be afraid,” said the angel. “Jesus is not here. He has risen, just as He said!”"
+      ],
+      "layers": [
+        {
+          "id": "closed",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "closed",
+          "prompt": "In a quiet garden at dawn, with the first pink and gold light of sunrise in the sky: a tomb cut into a rocky hillside, right of center, its round doorway completely sealed by a huge, round, flat stone like a millstone rolled across it, with olive trees and spring flowers around it; along the garden path, two small women in simple robes and head coverings, one in lavender and one in blue, walk slowly toward the tomb carrying little jars of spices, seen small in the middle distance",
+          "refs": [],
+          "src": "art/easter/tomb/closed.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 30551,
+            "at": "2026-11-04T00:36:01.390Z"
+          }
+        },
+        {
+          "id": "open",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "open",
+          "editOf": "closed",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to see the stone",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "The huge round stone has been rolled away to one side, so the doorway of the tomb stands wide open and empty, dark inside. A shining angel in dazzling white, glowing with soft golden light, sits on top of the rolled-away stone. The two women on the path stop and raise their hands in wonder, and the sunrise behind is brighter and more golden.",
+          "refs": [],
+          "mood": "glory",
+          "src": "art/easter/tomb/open.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 30551,
+            "at": "2026-11-04T00:36:19.848Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 1
+        },
+        {
+          "type": "rays",
+          "with": "open"
+        },
+        {
+          "type": "sing",
+          "with": "open",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "wind"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "stone",
+          "name": "The Big Stone",
+          "earn": "play",
+          "at": [
+            0.69,
+            0.44
+          ],
+          "r": 0.1,
+          "layer": "closed"
+        },
+        {
+          "id": "angel",
+          "name": "The Shining Angel",
+          "earn": "reveal",
+          "layer": "open",
+          "at": [
+            0.7,
+            0.32
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "spices",
+          "name": "Jars of Spices",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.56,
+            0.8
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.85,
+            0.78
+          ],
+          "fx": "petals",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.1,
+            0.82
+          ],
+          "fx": "petals",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.16,
+            0.37
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.7,
+            0.3
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "open"
+        }
+      ]
+    },
+    {
+      "id": "alive",
+      "eyebrow": "Part Five",
+      "title": "Jesus Is Alive!",
+      "verses": [
+        "John 20:14",
+        "John 20:18"
+      ],
+      "beats": [
+        "Mary stood crying in the garden. A man asked her, “Why are you crying?” She thought he was the gardener.",
+        "Then He said her name: “Mary.” She knew that voice! It was Jesus! He was alive!",
+        "Mary ran to tell everyone, “I have seen the Lord!” Jesus is alive, and He is alive forever. And everyone who loves and trusts Him will live with Him forever too!"
+      ],
+      "layers": [
+        {
+          "id": "garden",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "garden",
+          "prompt": "In a beautiful garden full of spring flowers at sunrise, with golden light streaming across the grass: Jesus stands right of center, smiling warmly, and Mary Magdalene kneels before Him with her hands clasped and her face full of joy and surprise; the empty tomb with its stone rolled away is small in the background",
+          "refs": [
+            "jesus",
+            "mary"
+          ],
+          "src": "art/easter/alive/garden.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 307686,
+            "at": "2026-11-04T00:34:06.530Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 1
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "birds",
+          "meadow"
+        ],
+        "mood": "glory",
+        "music": "storybook"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "risen",
+          "name": "He Is Risen!",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.45
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "empty-tomb",
+          "name": "The Empty Tomb",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.24,
+            0.6
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.88,
+            0.7
+          ],
+          "fx": "petals",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.08,
+            0.82
+          ],
+          "fx": "petals",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.17,
+            0.22
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.06,
+            0.12
+          ],
+          "fx": "leaves",
+          "sound": "chirp",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "How do you think Mary felt when she heard Jesus say her name?",
+      "Jesus prayed, “Father, forgive them.” Is there someone you can forgive?",
+      "Jesus is alive! What would you like to say to Him?"
+    ],
+    "verse": {
+      "ref": "Matthew 28:6",
+      "text": "He is not here; He has risen, just as He said!"
+    }
+  }
+}

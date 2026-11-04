@@ -162,6 +162,12 @@ function addSlide(kind, info, fill) {
   slides.push(slide);
 }
 const node = (tag, cls, txt) => { const n = document.createElement(tag); n.className = cls; n.textContent = txt; return n; };
+// A small round-cornered button with a line icon in front of its words.
+const ICONS = {
+  mic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>',
+  shelf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>',
+};
+const iconButton = (tag, cls, icon, txt) => { const n = node(tag, `soft ${cls}`, ''); n.innerHTML = ICONS[icon]; n.append(node('span', '', txt)); return n; };
 
 addSlide('cover', { scene: 0, beat: -1, at: 0, scrim: 0.9, key: 'cover', say: `${story.title}.` }, col => {
   const buttons = node('div', 'starts', '');
@@ -172,7 +178,7 @@ addSlide('cover', { scene: 0, beat: -1, at: 0, scrim: 0.9, key: 'cover', say: `$
   readBy.id = 'read-by';
   col.append(readBy);
   // Back to the Stories page.
-  const all = node('a', 'all-stories', '← All stories');
+  const all = iconButton('a', 'all-stories', 'shelf', 'All stories');
   all.href = './';
   col.append(all);
 });
@@ -228,7 +234,7 @@ addSlide('end', { scene: story.scenes.length - 1, beat: beats - 1, at: 1, scrim:
       starts.append(go);
       col.append(starts);
     }
-    const all = node('a', 'all-stories', '← All stories');
+    const all = iconButton('a', 'all-stories', 'shelf', 'All stories');
     all.href = './';
     col.append(all);
   } else {
@@ -272,7 +278,7 @@ function showVoices() {
     box.append(node('span', 'label', 'Read by'), choice('The narrator', null));
     for (const v of mine) box.append(choice(v.name, v.id));
   }
-  const record = node('button', 'record', mine.some(v => !v.remote) ? '🎙 Record more' : '🎙 Read it in your own voice');
+  const record = iconButton('button', 'record', 'mic', mine.some(v => !v.remote) ? 'Record more' : 'Read it in your own voice');
   record.onclick = () => {
     narrator.stop();
     clearTimeout(advanceTimer);
