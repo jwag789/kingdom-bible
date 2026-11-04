@@ -438,7 +438,7 @@ stage.onEvent = (kind, e) => {
   }
   if (kind === 'spot') {
     ({ crackle: () => sound.crackle(), twinkle: () => sound.twinkle(), rustle: () => sound.rustle(), baa: () => sound.baa(),
-      heehaw: () => sound.heehaw(), chime: () => sound.sprout(e.x), roar: () => sound.roar(), trumpet: () => sound.trumpet(),
+      heehaw: () => sound.heehaw(), chime: () => sound.sprout(e.x), roar: () => sound.roar(), trumpet: () => sound.trumpet(), horn: () => sound.horn(),
       moo: () => sound.moo(), chirp: () => sound.ready && sound.chirp(sound.ctx.currentTime), splash: () => sound.splash(),
       bubble: () => sound.bubble(e.y) }[e.spot.sound])?.();
     buzz('LIGHT');

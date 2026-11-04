@@ -111,6 +111,22 @@
       ]
     },
     {
+      "id": "jericho-joshua",
+      "name": "Joshua",
+      "src": "art/pieces/jericho-joshua.png",
+      "stories": [
+        "jericho"
+      ]
+    },
+    {
+      "id": "jericho-priest",
+      "name": "a priest with a horn",
+      "src": "art/pieces/jericho-priest.png",
+      "stories": [
+        "jericho"
+      ]
+    },
+    {
       "id": "david-david",
       "name": "David",
       "src": "art/pieces/david-david.png",
@@ -220,6 +236,8 @@
       "src": "art/pieces/follow-jesus.png",
       "stories": [
         "follow",
+        "feeding",
+        "lost-sheep",
         "zacchaeus",
         "easter"
       ]
@@ -239,6 +257,30 @@
       "src": "art/pieces/follow-boat.png",
       "stories": [
         "follow"
+      ]
+    },
+    {
+      "id": "feeding-boy",
+      "name": "the boy with the lunch",
+      "src": "art/pieces/feeding-boy.png",
+      "stories": [
+        "feeding"
+      ]
+    },
+    {
+      "id": "lost-sheep-shepherd",
+      "name": "the shepherd",
+      "src": "art/pieces/lost-sheep-shepherd.png",
+      "stories": [
+        "lost-sheep"
+      ]
+    },
+    {
+      "id": "lost-sheep-lamb",
+      "name": "the little lost lamb",
+      "src": "art/pieces/lost-sheep-lamb.png",
+      "stories": [
+        "lost-sheep"
       ]
     },
     {

@@ -1,0 +1,1806 @@
+{
+ "cover": {
+  "src": "audio/lost-sheep/cover.m4a",
+  "text": "The Lost Sheep.",
+  "voice": "af_heart,af_bella",
+  "duration": 2.375,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.65,
+    "e": 0.75
+   },
+   {
+    "w": "Lost",
+    "s": 0.75,
+    "e": 1.137
+   },
+   {
+    "w": "Sheep",
+    "s": 1.137,
+    "e": 1.775
+   }
+  ]
+ },
+ "told-title": {
+  "src": "audio/lost-sheep/told-title.m4a",
+  "text": "Part One. A Story Jesus Told.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.7,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "One",
+    "s": 0.85,
+    "e": 1.3
+   },
+   {
+    "w": "A",
+    "s": 1.438,
+    "e": 1.55
+   },
+   {
+    "w": "Story",
+    "s": 1.55,
+    "e": 1.925
+   },
+   {
+    "w": "Jesus",
+    "s": 1.925,
+    "e": 2.35
+   },
+   {
+    "w": "Told",
+    "s": 2.35,
+    "e": 3.1
+   }
+  ]
+ },
+ "told-0": {
+  "src": "audio/lost-sheep/told-0.m4a",
+  "text": "Jesus was always making friends with people that nobody else liked. Some people grumbled about it. “Why does He eat with people like that?”",
+  "voice": "af_heart,af_bella",
+  "duration": 9.65,
+  "words": [
+   {
+    "w": "Jesus",
+    "s": 0.65,
+    "e": 1.15
+   },
+   {
+    "w": "was",
+    "s": 1.15,
+    "e": 1.337
+   },
+   {
+    "w": "always",
+    "s": 1.337,
+    "e": 1.725
+   },
+   {
+    "w": "making",
+    "s": 1.725,
+    "e": 2.1
+   },
+   {
+    "w": "friends",
+    "s": 2.1,
+    "e": 2.562
+   },
+   {
+    "w": "with",
+    "s": 2.562,
+    "e": 2.725
+   },
+   {
+    "w": "people",
+    "s": 2.725,
+    "e": 3.1
+   },
+   {
+    "w": "that",
+    "s": 3.1,
+    "e": 3.312
+   },
+   {
+    "w": "nobody",
+    "s": 3.312,
+    "e": 3.7
+   },
+   {
+    "w": "else",
+    "s": 3.7,
+    "e": 4.0
+   },
+   {
+    "w": "liked",
+    "s": 4.0,
+    "e": 4.7
+   },
+   {
+    "w": "Some",
+    "s": 4.85,
+    "e": 5.125
+   },
+   {
+    "w": "people",
+    "s": 5.125,
+    "e": 5.513
+   },
+   {
+    "w": "grumbled",
+    "s": 5.513,
+    "e": 5.963
+   },
+   {
+    "w": "about",
+    "s": 5.963,
+    "e": 6.263
+   },
+   {
+    "w": "it",
+    "s": 6.263,
+    "e": 6.775
+   },
+   {
+    "w": "Why",
+    "s": 6.975,
+    "e": 7.112
+   },
+   {
+    "w": "does",
+    "s": 7.112,
+    "e": 7.263
+   },
+   {
+    "w": "He",
+    "s": 7.263,
+    "e": 7.438
+   },
+   {
+    "w": "eat",
+    "s": 7.438,
+    "e": 7.688
+   },
+   {
+    "w": "with",
+    "s": 7.688,
+    "e": 7.85
+   },
+   {
+    "w": "people",
+    "s": 7.85,
+    "e": 8.175
+   },
+   {
+    "w": "like",
+    "s": 8.175,
+    "e": 8.4
+   },
+   {
+    "w": "that",
+    "s": 8.4,
+    "e": 9.05
+   }
+  ]
+ },
+ "told-1": {
+  "src": "audio/lost-sheep/told-1.m4a",
+  "text": "So Jesus told them a story.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.05,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.625,
+    "e": 0.787
+   },
+   {
+    "w": "Jesus",
+    "s": 0.787,
+    "e": 1.225
+   },
+   {
+    "w": "told",
+    "s": 1.225,
+    "e": 1.462
+   },
+   {
+    "w": "them",
+    "s": 1.462,
+    "e": 1.587
+   },
+   {
+    "w": "a",
+    "s": 1.587,
+    "e": 1.65
+   },
+   {
+    "w": "story",
+    "s": 1.65,
+    "e": 2.45
+   }
+  ]
+ },
+ "hundred-title": {
+  "src": "audio/lost-sheep/hundred-title.m4a",
+  "text": "Part Two. One Hundred Sheep.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.15,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.887
+   },
+   {
+    "w": "Two",
+    "s": 0.887,
+    "e": 1.275
+   },
+   {
+    "w": "One",
+    "s": 1.413,
+    "e": 1.562
+   },
+   {
+    "w": "Hundred",
+    "s": 1.562,
+    "e": 1.913
+   },
+   {
+    "w": "Sheep",
+    "s": 1.913,
+    "e": 2.55
+   }
+  ]
+ },
+ "hundred-0": {
+  "src": "audio/lost-sheep/hundred-0.m4a",
+  "text": "“Once there was a shepherd who had one hundred sheep,” Jesus said. “He loved every single one of them.”",
+  "voice": "af_heart,af_bella",
+  "duration": 7.4,
+  "words": [
+   {
+    "w": "Once",
+    "s": 0.65,
+    "e": 0.925
+   },
+   {
+    "w": "there",
+    "s": 0.925,
+    "e": 1.087
+   },
+   {
+    "w": "was",
+    "s": 1.087,
+    "e": 1.225
+   },
+   {
+    "w": "a",
+    "s": 1.225,
+    "e": 1.35
+   },
+   {
+    "w": "shepherd",
+    "s": 1.35,
+    "e": 1.738
+   },
+   {
+    "w": "who",
+    "s": 1.738,
+    "e": 1.85
+   },
+   {
+    "w": "had",
+    "s": 1.85,
+    "e": 2.05
+   },
+   {
+    "w": "one",
+    "s": 2.05,
+    "e": 2.3
+   },
+   {
+    "w": "hundred",
+    "s": 2.3,
+    "e": 2.737
+   },
+   {
+    "w": "sheep",
+    "s": 2.737,
+    "e": 3.275
+   },
+   {
+    "w": "Jesus",
+    "s": 3.45,
+    "e": 3.862
+   },
+   {
+    "w": "said",
+    "s": 3.862,
+    "e": 4.45
+   },
+   {
+    "w": "He",
+    "s": 4.675,
+    "e": 4.8
+   },
+   {
+    "w": "loved",
+    "s": 4.8,
+    "e": 5.162
+   },
+   {
+    "w": "every",
+    "s": 5.162,
+    "e": 5.562
+   },
+   {
+    "w": "single",
+    "s": 5.562,
+    "e": 6.0
+   },
+   {
+    "w": "one",
+    "s": 6.0,
+    "e": 6.15
+   },
+   {
+    "w": "of",
+    "s": 6.15,
+    "e": 6.275
+   },
+   {
+    "w": "them",
+    "s": 6.275,
+    "e": 6.85
+   }
+  ]
+ },
+ "hundred-1": {
+  "src": "audio/lost-sheep/hundred-1.m4a",
+  "text": "Every evening, the shepherd counted his sheep as they went into the pen. “Ninety-seven, ninety-eight, ninety-nine…” Wait! One little lamb was missing!",
+  "voice": "af_heart,af_bella",
+  "duration": 10.425,
+  "words": [
+   {
+    "w": "Every",
+    "s": 0.625,
+    "e": 0.9
+   },
+   {
+    "w": "evening",
+    "s": 0.9,
+    "e": 1.35
+   },
+   {
+    "w": "the",
+    "s": 1.425,
+    "e": 1.562
+   },
+   {
+    "w": "shepherd",
+    "s": 1.562,
+    "e": 1.988
+   },
+   {
+    "w": "counted",
+    "s": 1.988,
+    "e": 2.388
+   },
+   {
+    "w": "his",
+    "s": 2.388,
+    "e": 2.562
+   },
+   {
+    "w": "sheep",
+    "s": 2.562,
+    "e": 2.875
+   },
+   {
+    "w": "as",
+    "s": 2.875,
+    "e": 3.0
+   },
+   {
+    "w": "they",
+    "s": 3.0,
+    "e": 3.15
+   },
+   {
+    "w": "went",
+    "s": 3.15,
+    "e": 3.337
+   },
+   {
+    "w": "into",
+    "s": 3.337,
+    "e": 3.513
+   },
+   {
+    "w": "the",
+    "s": 3.513,
+    "e": 3.6
+   },
+   {
+    "w": "pen",
+    "s": 3.6,
+    "e": 4.4
+   },
+   {
+    "w": "Ninety-seven",
+    "s": 4.675,
+    "e": 5.475
+   },
+   {
+    "w": "ninety-eight",
+    "s": 5.55,
+    "e": 6.125
+   },
+   {
+    "w": "ninety-nine",
+    "s": 6.2,
+    "e": 7.15
+   },
+   {
+    "w": "Wait",
+    "s": 7.338,
+    "e": 7.9
+   },
+   {
+    "w": "One",
+    "s": 8.05,
+    "e": 8.325
+   },
+   {
+    "w": "little",
+    "s": 8.325,
+    "e": 8.575
+   },
+   {
+    "w": "lamb",
+    "s": 8.575,
+    "e": 8.9
+   },
+   {
+    "w": "was",
+    "s": 8.9,
+    "e": 9.075
+   },
+   {
+    "w": "missing",
+    "s": 9.075,
+    "e": 9.85
+   }
+  ]
+ },
+ "search-title": {
+  "src": "audio/lost-sheep/search-title.m4a",
+  "text": "Part Three. Looking Everywhere.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.225,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Three",
+    "s": 0.875,
+    "e": 1.3
+   },
+   {
+    "w": "Looking",
+    "s": 1.438,
+    "e": 1.75
+   },
+   {
+    "w": "Everywhere",
+    "s": 1.75,
+    "e": 2.625
+   }
+  ]
+ },
+ "search-0": {
+  "src": "audio/lost-sheep/search-0.m4a",
+  "text": "The shepherd left the ninety-nine sheep safe in the pen, and off he went to look for the one that was lost.",
+  "voice": "af_heart,af_bella",
+  "duration": 7.075,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.6,
+    "e": 0.713
+   },
+   {
+    "w": "shepherd",
+    "s": 0.713,
+    "e": 1.125
+   },
+   {
+    "w": "left",
+    "s": 1.125,
+    "e": 1.4
+   },
+   {
+    "w": "the",
+    "s": 1.4,
+    "e": 1.538
+   },
+   {
+    "w": "ninety-nine",
+    "s": 1.538,
+    "e": 2.25
+   },
+   {
+    "w": "sheep",
+    "s": 2.25,
+    "e": 2.587
+   },
+   {
+    "w": "safe",
+    "s": 2.587,
+    "e": 2.888
+   },
+   {
+    "w": "in",
+    "s": 2.888,
+    "e": 2.962
+   },
+   {
+    "w": "the",
+    "s": 2.962,
+    "e": 3.05
+   },
+   {
+    "w": "pen",
+    "s": 3.05,
+    "e": 3.75
+   },
+   {
+    "w": "and",
+    "s": 3.875,
+    "e": 4.0
+   },
+   {
+    "w": "off",
+    "s": 4.0,
+    "e": 4.275
+   },
+   {
+    "w": "he",
+    "s": 4.275,
+    "e": 4.4
+   },
+   {
+    "w": "went",
+    "s": 4.4,
+    "e": 4.562
+   },
+   {
+    "w": "to",
+    "s": 4.562,
+    "e": 4.65
+   },
+   {
+    "w": "look",
+    "s": 4.65,
+    "e": 4.875
+   },
+   {
+    "w": "for",
+    "s": 4.875,
+    "e": 4.987
+   },
+   {
+    "w": "the",
+    "s": 4.987,
+    "e": 5.1
+   },
+   {
+    "w": "one",
+    "s": 5.1,
+    "e": 5.35
+   },
+   {
+    "w": "that",
+    "s": 5.35,
+    "e": 5.487
+   },
+   {
+    "w": "was",
+    "s": 5.487,
+    "e": 5.662
+   },
+   {
+    "w": "lost",
+    "s": 5.662,
+    "e": 6.475
+   }
+  ]
+ },
+ "search-1": {
+  "src": "audio/lost-sheep/search-1.m4a",
+  "text": "He looked over the hills and down in the valleys. He looked behind rocks and through prickly bushes. It was getting dark, but he kept on calling, “Little lamb! Where are you?”",
+  "voice": "af_heart,af_bella",
+  "duration": 11.825,
+  "words": [
+   {
+    "w": "He",
+    "s": 0.575,
+    "e": 0.7
+   },
+   {
+    "w": "looked",
+    "s": 0.7,
+    "e": 0.912
+   },
+   {
+    "w": "over",
+    "s": 0.912,
+    "e": 1.113
+   },
+   {
+    "w": "the",
+    "s": 1.113,
+    "e": 1.2
+   },
+   {
+    "w": "hills",
+    "s": 1.2,
+    "e": 1.675
+   },
+   {
+    "w": "and",
+    "s": 1.675,
+    "e": 1.837
+   },
+   {
+    "w": "down",
+    "s": 1.837,
+    "e": 2.188
+   },
+   {
+    "w": "in",
+    "s": 2.188,
+    "e": 2.263
+   },
+   {
+    "w": "the",
+    "s": 2.263,
+    "e": 2.35
+   },
+   {
+    "w": "valleys",
+    "s": 2.35,
+    "e": 3.3
+   },
+   {
+    "w": "He",
+    "s": 3.4,
+    "e": 3.55
+   },
+   {
+    "w": "looked",
+    "s": 3.55,
+    "e": 3.775
+   },
+   {
+    "w": "behind",
+    "s": 3.775,
+    "e": 4.287
+   },
+   {
+    "w": "rocks",
+    "s": 4.287,
+    "e": 4.75
+   },
+   {
+    "w": "and",
+    "s": 4.75,
+    "e": 4.875
+   },
+   {
+    "w": "through",
+    "s": 4.875,
+    "e": 5.112
+   },
+   {
+    "w": "prickly",
+    "s": 5.112,
+    "e": 5.525
+   },
+   {
+    "w": "bushes",
+    "s": 5.525,
+    "e": 6.45
+   },
+   {
+    "w": "It",
+    "s": 6.575,
+    "e": 6.713
+   },
+   {
+    "w": "was",
+    "s": 6.713,
+    "e": 6.875
+   },
+   {
+    "w": "getting",
+    "s": 6.875,
+    "e": 7.2
+   },
+   {
+    "w": "dark",
+    "s": 7.2,
+    "e": 7.675
+   },
+   {
+    "w": "but",
+    "s": 7.75,
+    "e": 7.888
+   },
+   {
+    "w": "he",
+    "s": 7.888,
+    "e": 8.012
+   },
+   {
+    "w": "kept",
+    "s": 8.012,
+    "e": 8.287
+   },
+   {
+    "w": "on",
+    "s": 8.287,
+    "e": 8.488
+   },
+   {
+    "w": "calling",
+    "s": 8.488,
+    "e": 9.125
+   },
+   {
+    "w": "Little",
+    "s": 9.3,
+    "e": 9.55
+   },
+   {
+    "w": "lamb",
+    "s": 9.55,
+    "e": 10.175
+   },
+   {
+    "w": "Where",
+    "s": 10.312,
+    "e": 10.525
+   },
+   {
+    "w": "are",
+    "s": 10.525,
+    "e": 10.688
+   },
+   {
+    "w": "you",
+    "s": 10.688,
+    "e": 11.2
+   }
+  ]
+ },
+ "found-title": {
+  "src": "audio/lost-sheep/found-title.m4a",
+  "text": "Part Four. Found!.",
+  "voice": "af_heart,af_bella",
+  "duration": 2.7,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Four",
+    "s": 0.875,
+    "e": 1.175
+   },
+   {
+    "w": "Found",
+    "s": 1.262,
+    "e": 2.025
+   }
+  ]
+ },
+ "found-0": {
+  "src": "audio/lost-sheep/found-0.m4a",
+  "text": "Then he heard it: a tiny little “Baa!” There was the lamb, stuck in a thorny bush, cold and scared.",
+  "voice": "af_heart,af_bella",
+  "duration": 7.175,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.6,
+    "e": 0.713
+   },
+   {
+    "w": "he",
+    "s": 0.713,
+    "e": 0.825
+   },
+   {
+    "w": "heard",
+    "s": 0.825,
+    "e": 1.075
+   },
+   {
+    "w": "it",
+    "s": 1.075,
+    "e": 1.25
+   },
+   {
+    "w": "a",
+    "s": 1.325,
+    "e": 1.425
+   },
+   {
+    "w": "tiny",
+    "s": 1.425,
+    "e": 1.775
+   },
+   {
+    "w": "little",
+    "s": 1.775,
+    "e": 2.013
+   },
+   {
+    "w": "Baa",
+    "s": 2.075,
+    "e": 2.675
+   },
+   {
+    "w": "There",
+    "s": 2.9,
+    "e": 3.038
+   },
+   {
+    "w": "was",
+    "s": 3.038,
+    "e": 3.2
+   },
+   {
+    "w": "the",
+    "s": 3.2,
+    "e": 3.3
+   },
+   {
+    "w": "lamb",
+    "s": 3.3,
+    "e": 3.75
+   },
+   {
+    "w": "stuck",
+    "s": 3.837,
+    "e": 4.088
+   },
+   {
+    "w": "in",
+    "s": 4.088,
+    "e": 4.162
+   },
+   {
+    "w": "a",
+    "s": 4.162,
+    "e": 4.263
+   },
+   {
+    "w": "thorny",
+    "s": 4.263,
+    "e": 4.65
+   },
+   {
+    "w": "bush",
+    "s": 4.65,
+    "e": 5.05
+   },
+   {
+    "w": "cold",
+    "s": 5.138,
+    "e": 5.625
+   },
+   {
+    "w": "and",
+    "s": 5.625,
+    "e": 5.763
+   },
+   {
+    "w": "scared",
+    "s": 5.763,
+    "e": 6.6
+   }
+  ]
+ },
+ "found-1": {
+  "src": "audio/lost-sheep/found-1.m4a",
+  "text": "The shepherd gently lifted the little lamb out and put it up on his shoulders. He wasn’t cross at all. He was so happy! And he carried it all the way home.",
+  "voice": "af_heart,af_bella",
+  "duration": 10.3,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.6,
+    "e": 0.725
+   },
+   {
+    "w": "shepherd",
+    "s": 0.725,
+    "e": 1.175
+   },
+   {
+    "w": "gently",
+    "s": 1.175,
+    "e": 1.575
+   },
+   {
+    "w": "lifted",
+    "s": 1.575,
+    "e": 1.938
+   },
+   {
+    "w": "the",
+    "s": 1.938,
+    "e": 2.025
+   },
+   {
+    "w": "little",
+    "s": 2.025,
+    "e": 2.288
+   },
+   {
+    "w": "lamb",
+    "s": 2.288,
+    "e": 2.65
+   },
+   {
+    "w": "out",
+    "s": 2.65,
+    "e": 2.95
+   },
+   {
+    "w": "and",
+    "s": 2.95,
+    "e": 3.075
+   },
+   {
+    "w": "put",
+    "s": 3.075,
+    "e": 3.212
+   },
+   {
+    "w": "it",
+    "s": 3.212,
+    "e": 3.288
+   },
+   {
+    "w": "up",
+    "s": 3.288,
+    "e": 3.438
+   },
+   {
+    "w": "on",
+    "s": 3.438,
+    "e": 3.562
+   },
+   {
+    "w": "his",
+    "s": 3.562,
+    "e": 3.712
+   },
+   {
+    "w": "shoulders",
+    "s": 3.712,
+    "e": 4.7
+   },
+   {
+    "w": "He",
+    "s": 4.825,
+    "e": 4.95
+   },
+   {
+    "w": "wasn't",
+    "s": 4.95,
+    "e": 5.25
+   },
+   {
+    "w": "cross",
+    "s": 5.25,
+    "e": 5.6
+   },
+   {
+    "w": "at",
+    "s": 5.6,
+    "e": 5.7
+   },
+   {
+    "w": "all",
+    "s": 5.7,
+    "e": 6.225
+   },
+   {
+    "w": "He",
+    "s": 6.325,
+    "e": 6.438
+   },
+   {
+    "w": "was",
+    "s": 6.438,
+    "e": 6.588
+   },
+   {
+    "w": "so",
+    "s": 6.588,
+    "e": 6.8
+   },
+   {
+    "w": "happy",
+    "s": 6.8,
+    "e": 7.5
+   },
+   {
+    "w": "And",
+    "s": 7.625,
+    "e": 7.763
+   },
+   {
+    "w": "he",
+    "s": 7.763,
+    "e": 7.888
+   },
+   {
+    "w": "carried",
+    "s": 7.888,
+    "e": 8.25
+   },
+   {
+    "w": "it",
+    "s": 8.25,
+    "e": 8.412
+   },
+   {
+    "w": "all",
+    "s": 8.412,
+    "e": 8.662
+   },
+   {
+    "w": "the",
+    "s": 8.662,
+    "e": 8.75
+   },
+   {
+    "w": "way",
+    "s": 8.75,
+    "e": 9.0
+   },
+   {
+    "w": "home",
+    "s": 9.0,
+    "e": 9.725
+   }
+  ]
+ },
+ "rejoice-title": {
+  "src": "audio/lost-sheep/rejoice-title.m4a",
+  "text": "Part Five. Rejoice With Me!.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.3,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Five",
+    "s": 0.875,
+    "e": 1.35
+   },
+   {
+    "w": "Rejoice",
+    "s": 1.45,
+    "e": 1.925
+   },
+   {
+    "w": "With",
+    "s": 1.925,
+    "e": 2.125
+   },
+   {
+    "w": "Me",
+    "s": 2.125,
+    "e": 2.675
+   }
+  ]
+ },
+ "rejoice-0": {
+  "src": "audio/lost-sheep/rejoice-0.m4a",
+  "text": "When he got home, the shepherd called all his friends and neighbors. “Come and celebrate with me! I found my lost sheep!”",
+  "voice": "af_heart,af_bella",
+  "duration": 8.125,
+  "words": [
+   {
+    "w": "When",
+    "s": 0.575,
+    "e": 0.688
+   },
+   {
+    "w": "he",
+    "s": 0.688,
+    "e": 0.775
+   },
+   {
+    "w": "got",
+    "s": 0.775,
+    "e": 0.975
+   },
+   {
+    "w": "home",
+    "s": 0.975,
+    "e": 1.45
+   },
+   {
+    "w": "the",
+    "s": 1.525,
+    "e": 1.663
+   },
+   {
+    "w": "shepherd",
+    "s": 1.663,
+    "e": 2.075
+   },
+   {
+    "w": "called",
+    "s": 2.075,
+    "e": 2.438
+   },
+   {
+    "w": "all",
+    "s": 2.438,
+    "e": 2.663
+   },
+   {
+    "w": "his",
+    "s": 2.663,
+    "e": 2.825
+   },
+   {
+    "w": "friends",
+    "s": 2.825,
+    "e": 3.188
+   },
+   {
+    "w": "and",
+    "s": 3.188,
+    "e": 3.3
+   },
+   {
+    "w": "neighbors",
+    "s": 3.3,
+    "e": 4.2
+   },
+   {
+    "w": "Come",
+    "s": 4.425,
+    "e": 4.65
+   },
+   {
+    "w": "and",
+    "s": 4.65,
+    "e": 4.8
+   },
+   {
+    "w": "celebrate",
+    "s": 4.8,
+    "e": 5.312
+   },
+   {
+    "w": "with",
+    "s": 5.312,
+    "e": 5.475
+   },
+   {
+    "w": "me",
+    "s": 5.475,
+    "e": 5.875
+   },
+   {
+    "w": "I",
+    "s": 6.0,
+    "e": 6.15
+   },
+   {
+    "w": "found",
+    "s": 6.15,
+    "e": 6.412
+   },
+   {
+    "w": "my",
+    "s": 6.412,
+    "e": 6.55
+   },
+   {
+    "w": "lost",
+    "s": 6.55,
+    "e": 6.912
+   },
+   {
+    "w": "sheep",
+    "s": 6.912,
+    "e": 7.525
+   }
+  ]
+ },
+ "rejoice-1": {
+  "src": "audio/lost-sheep/rejoice-1.m4a",
+  "text": "Then Jesus said, “That is how God feels. All of heaven has a party whenever one lost person comes home to God.”",
+  "voice": "af_heart,af_bella",
+  "duration": 8.55,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.6,
+    "e": 0.812
+   },
+   {
+    "w": "Jesus",
+    "s": 0.812,
+    "e": 1.288
+   },
+   {
+    "w": "said",
+    "s": 1.288,
+    "e": 1.9
+   },
+   {
+    "w": "That",
+    "s": 2.1,
+    "e": 2.275
+   },
+   {
+    "w": "is",
+    "s": 2.275,
+    "e": 2.425
+   },
+   {
+    "w": "how",
+    "s": 2.425,
+    "e": 2.638
+   },
+   {
+    "w": "God",
+    "s": 2.638,
+    "e": 3.013
+   },
+   {
+    "w": "feels",
+    "s": 3.013,
+    "e": 3.85
+   },
+   {
+    "w": "All",
+    "s": 3.987,
+    "e": 4.188
+   },
+   {
+    "w": "of",
+    "s": 4.188,
+    "e": 4.275
+   },
+   {
+    "w": "heaven",
+    "s": 4.275,
+    "e": 4.6
+   },
+   {
+    "w": "has",
+    "s": 4.6,
+    "e": 4.763
+   },
+   {
+    "w": "a",
+    "s": 4.763,
+    "e": 4.838
+   },
+   {
+    "w": "party",
+    "s": 4.838,
+    "e": 5.25
+   },
+   {
+    "w": "whenever",
+    "s": 5.25,
+    "e": 5.6
+   },
+   {
+    "w": "one",
+    "s": 5.6,
+    "e": 5.825
+   },
+   {
+    "w": "lost",
+    "s": 5.825,
+    "e": 6.15
+   },
+   {
+    "w": "person",
+    "s": 6.15,
+    "e": 6.6
+   },
+   {
+    "w": "comes",
+    "s": 6.6,
+    "e": 6.875
+   },
+   {
+    "w": "home",
+    "s": 6.875,
+    "e": 7.1
+   },
+   {
+    "w": "to",
+    "s": 7.1,
+    "e": 7.225
+   },
+   {
+    "w": "God",
+    "s": 7.225,
+    "e": 7.95
+   }
+  ]
+ },
+ "rejoice-2": {
+  "src": "audio/lost-sheep/rejoice-2.m4a",
+  "text": "You are like that little lamb. God loves you so much, He will always come looking for you.",
+  "voice": "af_heart,af_bella",
+  "duration": 6.35,
+  "words": [
+   {
+    "w": "You",
+    "s": 0.625,
+    "e": 0.75
+   },
+   {
+    "w": "are",
+    "s": 0.75,
+    "e": 0.85
+   },
+   {
+    "w": "like",
+    "s": 0.85,
+    "e": 1.075
+   },
+   {
+    "w": "that",
+    "s": 1.075,
+    "e": 1.262
+   },
+   {
+    "w": "little",
+    "s": 1.262,
+    "e": 1.5
+   },
+   {
+    "w": "lamb",
+    "s": 1.5,
+    "e": 2.225
+   },
+   {
+    "w": "God",
+    "s": 2.4,
+    "e": 2.725
+   },
+   {
+    "w": "loves",
+    "s": 2.725,
+    "e": 2.975
+   },
+   {
+    "w": "you",
+    "s": 2.975,
+    "e": 3.138
+   },
+   {
+    "w": "so",
+    "s": 3.138,
+    "e": 3.35
+   },
+   {
+    "w": "much",
+    "s": 3.35,
+    "e": 3.8
+   },
+   {
+    "w": "He",
+    "s": 3.9,
+    "e": 4.013
+   },
+   {
+    "w": "will",
+    "s": 4.013,
+    "e": 4.15
+   },
+   {
+    "w": "always",
+    "s": 4.15,
+    "e": 4.525
+   },
+   {
+    "w": "come",
+    "s": 4.525,
+    "e": 4.75
+   },
+   {
+    "w": "looking",
+    "s": 4.75,
+    "e": 5.075
+   },
+   {
+    "w": "for",
+    "s": 5.075,
+    "e": 5.213
+   },
+   {
+    "w": "you",
+    "s": 5.213,
+    "e": 5.75
+   }
+  ]
+ },
+ "talk": {
+  "src": "audio/lost-sheep/talk.m4a",
+  "text": "Let’s talk about it. Why didn’t the shepherd just stay home with his ninety-nine other sheep? How do you think the little lamb felt when the shepherd found it? Jesus said God is like that shepherd. How does it feel to know God will always come looking for you? Our memory verse is Luke 15, verse 6. Rejoice with me, for I have found my lost sheep!",
+  "voice": "af_heart,af_bella",
+  "duration": 21.4,
+  "words": [
+   {
+    "w": "Let's",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "talk",
+    "s": 0.85,
+    "e": 1.087
+   },
+   {
+    "w": "about",
+    "s": 1.087,
+    "e": 1.375
+   },
+   {
+    "w": "it",
+    "s": 1.375,
+    "e": 1.85
+   },
+   {
+    "w": "Why",
+    "s": 1.962,
+    "e": 2.112
+   },
+   {
+    "w": "didn't",
+    "s": 2.112,
+    "e": 2.312
+   },
+   {
+    "w": "the",
+    "s": 2.312,
+    "e": 2.413
+   },
+   {
+    "w": "shepherd",
+    "s": 2.413,
+    "e": 2.8
+   },
+   {
+    "w": "just",
+    "s": 2.8,
+    "e": 3.0
+   },
+   {
+    "w": "stay",
+    "s": 3.0,
+    "e": 3.288
+   },
+   {
+    "w": "home",
+    "s": 3.288,
+    "e": 3.65
+   },
+   {
+    "w": "with",
+    "s": 3.65,
+    "e": 3.788
+   },
+   {
+    "w": "his",
+    "s": 3.788,
+    "e": 3.962
+   },
+   {
+    "w": "ninety-nine",
+    "s": 3.962,
+    "e": 4.562
+   },
+   {
+    "w": "other",
+    "s": 4.562,
+    "e": 4.812
+   },
+   {
+    "w": "sheep",
+    "s": 4.812,
+    "e": 5.5
+   },
+   {
+    "w": "How",
+    "s": 5.638,
+    "e": 5.787
+   },
+   {
+    "w": "do",
+    "s": 5.787,
+    "e": 5.888
+   },
+   {
+    "w": "you",
+    "s": 5.888,
+    "e": 5.975
+   },
+   {
+    "w": "think",
+    "s": 5.975,
+    "e": 6.175
+   },
+   {
+    "w": "the",
+    "s": 6.175,
+    "e": 6.275
+   },
+   {
+    "w": "little",
+    "s": 6.275,
+    "e": 6.525
+   },
+   {
+    "w": "lamb",
+    "s": 6.525,
+    "e": 6.888
+   },
+   {
+    "w": "felt",
+    "s": 6.888,
+    "e": 7.138
+   },
+   {
+    "w": "when",
+    "s": 7.138,
+    "e": 7.263
+   },
+   {
+    "w": "the",
+    "s": 7.263,
+    "e": 7.362
+   },
+   {
+    "w": "shepherd",
+    "s": 7.362,
+    "e": 7.775
+   },
+   {
+    "w": "found",
+    "s": 7.775,
+    "e": 8.1
+   },
+   {
+    "w": "it",
+    "s": 8.1,
+    "e": 8.575
+   },
+   {
+    "w": "Jesus",
+    "s": 8.725,
+    "e": 9.15
+   },
+   {
+    "w": "said",
+    "s": 9.15,
+    "e": 9.4
+   },
+   {
+    "w": "God",
+    "s": 9.4,
+    "e": 9.8
+   },
+   {
+    "w": "is",
+    "s": 9.8,
+    "e": 9.912
+   },
+   {
+    "w": "like",
+    "s": 9.912,
+    "e": 10.125
+   },
+   {
+    "w": "that",
+    "s": 10.125,
+    "e": 10.387
+   },
+   {
+    "w": "shepherd",
+    "s": 10.387,
+    "e": 11.2
+   },
+   {
+    "w": "How",
+    "s": 11.338,
+    "e": 11.488
+   },
+   {
+    "w": "does",
+    "s": 11.488,
+    "e": 11.613
+   },
+   {
+    "w": "it",
+    "s": 11.613,
+    "e": 11.725
+   },
+   {
+    "w": "feel",
+    "s": 11.725,
+    "e": 11.975
+   },
+   {
+    "w": "to",
+    "s": 11.975,
+    "e": 12.075
+   },
+   {
+    "w": "know",
+    "s": 12.075,
+    "e": 12.312
+   },
+   {
+    "w": "God",
+    "s": 12.312,
+    "e": 12.7
+   },
+   {
+    "w": "will",
+    "s": 12.7,
+    "e": 12.887
+   },
+   {
+    "w": "always",
+    "s": 12.887,
+    "e": 13.275
+   },
+   {
+    "w": "come",
+    "s": 13.275,
+    "e": 13.45
+   },
+   {
+    "w": "looking",
+    "s": 13.45,
+    "e": 13.75
+   },
+   {
+    "w": "for",
+    "s": 13.75,
+    "e": 13.875
+   },
+   {
+    "w": "you",
+    "s": 13.875,
+    "e": 14.3
+   },
+   {
+    "w": "Our",
+    "s": 14.475,
+    "e": 14.662
+   },
+   {
+    "w": "memory",
+    "s": 14.662,
+    "e": 15.05
+   },
+   {
+    "w": "verse",
+    "s": 15.05,
+    "e": 15.375
+   },
+   {
+    "w": "is",
+    "s": 15.375,
+    "e": 15.525
+   },
+   {
+    "w": "Luke",
+    "s": 15.525,
+    "e": 15.762
+   },
+   {
+    "w": "15",
+    "s": 15.762,
+    "e": 16.45
+   },
+   {
+    "w": "verse",
+    "s": 16.525,
+    "e": 16.837
+   },
+   {
+    "w": "6",
+    "s": 16.837,
+    "e": 17.65
+   },
+   {
+    "w": "Rejoice",
+    "s": 17.8,
+    "e": 18.325
+   },
+   {
+    "w": "with",
+    "s": 18.325,
+    "e": 18.5
+   },
+   {
+    "w": "me",
+    "s": 18.5,
+    "e": 18.875
+   },
+   {
+    "w": "for",
+    "s": 18.975,
+    "e": 19.1
+   },
+   {
+    "w": "I",
+    "s": 19.1,
+    "e": 19.238
+   },
+   {
+    "w": "have",
+    "s": 19.238,
+    "e": 19.35
+   },
+   {
+    "w": "found",
+    "s": 19.35,
+    "e": 19.613
+   },
+   {
+    "w": "my",
+    "s": 19.613,
+    "e": 19.75
+   },
+   {
+    "w": "lost",
+    "s": 19.75,
+    "e": 20.15
+   },
+   {
+    "w": "sheep",
+    "s": 20.15,
+    "e": 20.8
+   }
+  ]
+ }
+}

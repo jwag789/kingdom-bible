@@ -691,6 +691,32 @@ export class Sound {
     o.start(now); vib.start(now); o.stop(now + 0.7); vib.stop(now + 0.7);
   }
 
+  horn(long = false) {               // a ram's horn (shofar): a reedy, brassy call that leaps up a fifth
+    if (!this.ready) return;
+    const now = this.ctx.currentTime, len = long ? 1.6 : 0.55;
+    const o = this.osc('sawtooth', 233), o2 = this.osc('square', 233), vib = this.osc('sine', 5.5), vg = this.gain(5);
+    const bp = this.filter('bandpass', 1100, 1.2), lp = this.filter('lowpass', 2600, 0.7), g = this.gain(0), g2 = this.gain(0.35);
+    vib.connect(vg); vg.connect(o.frequency); vg.connect(o2.frequency);
+    o.connect(bp); o2.connect(g2).connect(bp); bp.connect(lp).connect(g).connect(this.sfxBus);
+    for (const x of [o, o2]) {
+      x.frequency.setValueAtTime(205, now);
+      x.frequency.exponentialRampToValueAtTime(233, now + 0.06);
+      x.frequency.setValueAtTime(233, now + len * 0.35);
+      x.frequency.exponentialRampToValueAtTime(349, now + len * 0.35 + 0.08);
+    }
+    this.env(g, now, 0.09, 0.05, len);
+    for (const x of [o, o2, vib]) { x.start(now); x.stop(now + len + 0.2); }
+  }
+
+  shout() {                          // everyone shouts at once, and a great wall rumbles down
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    for (let i = 0; i < 5; i++) this.noiseBurst({ at: now + i * 0.03, peak: 0.08, attack: 0.05, release: 0.7, type: 'bandpass', from: rand(500, 900), to: rand(300, 600), q: 1.4 });
+    setTimeout(() => this.thud(), 450);
+    setTimeout(() => this.thud(), 800);
+    this.noiseBurst({ at: now + 0.4, peak: 0.2, attack: 0.2, release: 2.2, type: 'lowpass', from: 700, to: 120, q: 0.5, buffer: this.brown });
+  }
+
   moo() {                            // a cow: a long, low "mooo" that sinks at the end
     if (!this.ready) return;
     const now = this.ctx.currentTime;

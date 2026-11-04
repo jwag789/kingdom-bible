@@ -198,6 +198,36 @@
       "name": "a coat of many colors",
       "prompt": "a single beautiful long robe with long sleeves, laid out flat, in bold stripes of red, orange, yellow, green, blue and purple",
       "thing": true
+    },
+    {
+      "id": "marcher",
+      "name": "a priest with a horn",
+      "prompt": "a priest in a long white robe with a blue sash and a white head covering, marching toward the right, full body, blowing a long curly ram’s horn trumpet held up high",
+      "thing": true
+    },
+    {
+      "id": "loaf",
+      "name": "a loaf of bread",
+      "prompt": "a single small round golden-brown loaf of barley bread with a cracked top",
+      "thing": true
+    },
+    {
+      "id": "breadbasket",
+      "name": "a basket",
+      "prompt": "a single empty round woven wicker basket with two little handles, seen from the front, slightly from above",
+      "thing": true
+    },
+    {
+      "id": "fullbasket",
+      "name": "a basket of bread",
+      "prompt": "a single round woven wicker basket heaped high with small round golden loaves of bread and two little fish on top, seen from the front",
+      "thing": true
+    },
+    {
+      "id": "smallfish",
+      "name": "a little fish",
+      "prompt": "a single small plain silvery-grey fish with a soft golden belly, like a little sardine, lying on its side",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

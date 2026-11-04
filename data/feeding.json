@@ -1,0 +1,570 @@
+{
+  "title": "Jesus Feeds 5,000",
+  "reference": "John 6",
+  "subtitle": "The story of a hungry crowd, a little boy’s lunch, and a lot of leftovers",
+  "book": "John",
+  "text": "data/feeding-text.json",
+  "art": "art/feeding",
+  "next": {
+    "story": "lost-sheep",
+    "title": "The Lost Sheep",
+    "sub": "Luke 15: a story Jesus told about a shepherd who never stopped looking."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third that is still part of the same painted scene, never blank paper; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    },
+    {
+      "id": "boy",
+      "name": "the boy with the lunch",
+      "prompt": "A boy of about eight standing alone, full body, front view: cheerful, with fair, sun-kissed skin, curly black hair and big bright eyes, wearing a simple short sky-blue tunic with a rope belt and sandals, holding a small woven basket with five little round loaves of bread and two small fish in it",
+      "src": "art/feeding/cast/boy.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 774531,
+        "at": "2026-11-04T02:14:12.974Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "crowd",
+      "eyebrow": "Part One",
+      "title": "A Hungry Crowd",
+      "verses": [
+        "6:1",
+        "6:5"
+      ],
+      "beats": [
+        "Everywhere Jesus went, crowds of people followed Him. One day, more than five thousand people came to hear Him on a grassy hill by the sea.",
+        "Jesus taught them about God and made sick people well, all day long. But when evening came, everyone was very, very hungry.",
+        "“Where can we buy bread for all these people?” Jesus asked His friend Philip. Philip shook his head. “Even if we worked for months, it wouldn’t be enough!”"
+      ],
+      "layers": [
+        {
+          "id": "hill",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hill",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: A huge crowd of men, women and children sits and stands all over a wide, green grassy hillside beside the sparkling Sea of Galilee in warm late-afternoon light; Jesus stands on a little rise right of center, teaching with open, welcoming arms, with a few of His disciples near Him, little fishing boats on the water behind",
+          "refs": [
+            "jesus"
+          ],
+          "src": "art/feeding/crowd/hill.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 339270,
+            "at": "2026-11-04T02:14:43.850Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.4
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "waves",
+          "birds"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "teacher",
+          "name": "Jesus Teaching",
+          "earn": "play",
+          "at": [
+            0.67,
+            0.45
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "boats",
+          "name": "Little Boats",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.84,
+            0.53
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.6,
+            0.52
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.4,
+            0.3
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.2,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.85,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.07
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "eyebrow": "Part Two",
+      "title": "A Boy’s Lunch",
+      "verses": [
+        "6:8",
+        "6:9"
+      ],
+      "beats": [
+        "Then Andrew came up with a little boy. The boy had brought his lunch: five small loaves of bread and two little fish.",
+        "“Here is a boy with five loaves and two fish,” Andrew said. “But what good is that for so many people?” The boy held out his basket anyway. He wanted to give it to Jesus."
+      ],
+      "layers": [
+        {
+          "id": "basket",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "basket",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: On the green grassy hillside in golden evening light, with the big crowd sitting in the background: the little boy holds up his small woven basket with five round loaves and two small fish, right of center, smiling shyly up at Jesus, who kneels down to the boy’s height and smiles back warmly, while the disciple Andrew stands beside them with his hand on the boy’s shoulder",
+          "refs": [
+            "jesus",
+            "boy"
+          ],
+          "src": "art/feeding/lunch/basket.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 738755,
+            "at": "2026-11-04T02:15:14.306Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap the basket",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "lunch",
+          "name": "Five Loaves and Two Fish",
+          "earn": "play",
+          "at": [
+            0.5,
+            0.64
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "andrew",
+          "name": "Andrew",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.72,
+            0.4
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.5,
+            0.64
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.12,
+            0.3
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "thanks",
+      "eyebrow": "Part Three",
+      "title": "Jesus Gives Thanks",
+      "verses": [
+        "6:10",
+        "6:11"
+      ],
+      "beats": [
+        "“Have everyone sit down,” Jesus said. So all the people sat down in groups on the soft green grass.",
+        "Jesus took the five loaves and the two fish. He looked up to heaven and thanked God for the food.",
+        "Then Jesus began to break the bread and give it out… and it didn’t run out! There was more, and more, and MORE, enough for every single person."
+      ],
+      "layers": [
+        {
+          "id": "bless",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bless",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: On the green grassy hillside at golden sunset, with families sitting in neat groups on the grass all around: Jesus stands right of center holding up the five round loaves and two fish toward heaven, giving thanks with His eyes lifted up, and the little boy stands beside Him watching with wonder, his empty basket in his hands",
+          "refs": [
+            "jesus",
+            "boy"
+          ],
+          "src": "art/feeding/thanks/bless.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 617744,
+            "at": "2026-11-04T02:15:53.225Z"
+          }
+        },
+        {
+          "id": "share",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "share",
+          "editOf": "bless",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to share the food",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Now the disciples are walking among the families carrying big baskets overflowing with bread and fish, handing food to everyone; people all over the hillside are happily eating and smiling, children holding up bread, and Jesus breaks more bread with a joyful smile while the little boy laughs with delight.",
+          "refs": [
+            "jesus",
+            "boy"
+          ],
+          "mood": "glory",
+          "music": "storybook",
+          "src": "art/feeding/thanks/share.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 617744,
+            "at": "2026-11-04T02:16:28.139Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 1
+        },
+        {
+          "type": "sing",
+          "with": "share",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "dawn"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "thank-you",
+          "name": "Thank You, God",
+          "earn": "play",
+          "at": [
+            0.75,
+            0.15
+          ],
+          "r": 0.08,
+          "layer": "bless"
+        },
+        {
+          "id": "enough",
+          "name": "Enough for Everyone",
+          "earn": "reveal",
+          "layer": "share",
+          "at": [
+            0.36,
+            0.52
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.75,
+            0.13
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "share"
+        },
+        {
+          "at": [
+            0.35,
+            0.5
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "share"
+        },
+        {
+          "at": [
+            0.15,
+            0.65
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "share"
+        }
+      ]
+    },
+    {
+      "id": "leftovers",
+      "eyebrow": "Part Four",
+      "title": "Twelve Baskets",
+      "verses": [
+        "6:12",
+        "6:14"
+      ],
+      "beats": [
+        "Everyone ate until they were full. Then Jesus said, “Gather up the pieces that are left over, so nothing is wasted.”",
+        "The disciples went around with baskets. They filled one… two… three… all the way to twelve baskets of leftovers!",
+        "A little boy’s lunch, in Jesus’ hands, became more than enough for everyone. Jesus can do so much with whatever we give Him."
+      ],
+      "layers": [
+        {
+          "id": "baskets",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "baskets",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: On the grassy hillside at dusk with a warm pink and gold sky, the crowd resting happily and full in the background: twelve big woven baskets piled high with leftover bread stand in a row on the grass, right of center, with smiling disciples setting down the last ones, and the little boy sitting on top of the grass beside them laughing, while Jesus watches with a smile",
+          "refs": [
+            "jesus",
+            "boy"
+          ],
+          "src": "art/feeding/leftovers/baskets.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 207121,
+            "at": "2026-11-04T02:17:04.866Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "stars",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap to count the baskets",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets",
+          "waves"
+        ],
+        "mood": "warm",
+        "music": "storybook"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "twelve",
+          "name": "Twelve Baskets",
+          "earn": "play",
+          "at": [
+            0.55,
+            0.62
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "happy-boy",
+          "name": "The Happy Boy",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.2,
+            0.72
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.48,
+            0.65
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.7,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.85,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.8,
+            0.12
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "The boy gave Jesus his whole lunch. How do you think he felt when he saw what Jesus did with it?",
+      "What is something you could give or share with someone?",
+      "Jesus took a little and made it a lot. What little thing could you give to Jesus?"
+    ],
+    "verse": {
+      "ref": "John 6:35",
+      "text": "I am the bread of life."
+    }
+  }
+}

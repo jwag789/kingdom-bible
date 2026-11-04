@@ -16,6 +16,9 @@
 // "coat"    Color the Coat       pick a paint pot and color each stripe of Joseph's coat
 // "give"    Pay It Back          drag coins from Zacchaeus' purse, four to each person
 // "palms"   Hosanna Road         lay palms and cloaks on the road for the little donkey
+// "march"   March and Shout      hold to march the trumpets round Jericho seven times, then shout
+// "gather"  Fill the Baskets     tap the leftover bread and fish to fill twelve baskets
+// "lantern" Find the Lamb        shine the lantern over the dark hills to find the little lamb
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1003,4 +1006,222 @@ function palms(k) {
   addEventListener('resize', () => k.alive() && place());
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms };
+// ---- March and Shout: press and hold to march the trumpets around Jericho, seven times round; then SHOUT!
+function march(k) {
+  const { field, game, sound } = k;
+  const laps = game.laps ?? 7, [cx, cy] = game.city, [rx, ry] = game.ring;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let a = Math.PI / 2, went = 0, lap = 0, holding = false, marching = true, lastHorn = -1;
+  k.progress(`0 of ${laps} times around`);
+  k.line('intro');
+  const band = [0, 1, 2, 3].map(() => { const n = el('div', 'marcher'); n.append(img(prop('marcher'))); field.append(n); return n; });
+  const hint = el('div', 'holdhint', 'Press and hold to march');
+  field.append(hint);
+  const shout = el('button', 'shout', 'Shout!');
+  shout.hidden = true;
+  field.append(shout);
+  drag(field, {
+    down: e => { if (!marching || e.target === shout) return false; holding = true; hint.classList.add('gone'); },
+    up: () => { holding = false; },
+  });
+  const draw = () => {
+    const s0 = Math.min(W() * 0.12, H() * 0.2);
+    band.forEach((n, i) => {
+      const t = a - i * 0.26, sin = Math.sin(t);
+      // Around the walls; on a narrow phone the ring is pulled in so the band stays on screen.
+      const c = k.screen(cx, cy), o = k.screen(0, 0), e = k.screen(1, 1);
+      const rxp = Math.min(rx * (e.x - o.x), W() * 0.42), ryp = ry * (e.y - o.y);
+      const p = { x: c.x + rxp * Math.cos(t), y: c.y + ryp * sin };
+      const depth = 0.72 + 0.36 * (sin + 1) / 2;            // smaller at the back, bigger at the front
+      n.style.width = `${s0 * depth}px`;
+      put(n, p.x, p.y - s0 * depth * 0.4);
+      n.style.zIndex = sin > 0 ? 3 : 1;
+      n.style.opacity = sin < -0.25 ? 0.35 : 1;              // behind the city, the walls hide them
+      n.firstChild.style.transform = sin > 0 ? 'scaleX(-1)' : '';   // along the front they march left
+      n.classList.toggle('step', holding && marching);
+    });
+  };
+  k.loop((t, dt) => {
+    if (holding && marching) {
+      const d = dt * (Math.PI * 2 / 3.2);                    // about three seconds a lap
+      a += d; went += d;
+      if (t - lastHorn > 0.9) { sound.horn?.(); lastHorn = t; }
+      if (went >= Math.PI * 2 * (lap + 1)) {
+        lap++;
+        k.progress(`${lap} of ${laps} times around`);
+        k.say(game.lines[`lap-${lap}`], `lap-${lap}`);
+        navigator.vibrate?.(15);
+        if (lap === laps) {
+          marching = false; holding = false;
+          setTimeout(() => { if (!k.alive()) return; k.line('ready'); shout.hidden = false; }, 900);
+        }
+      }
+    }
+    draw();
+  });
+  shout.onclick = () => {
+    if (shout.disabled) return;
+    shout.disabled = true;
+    shout.classList.add('gone');
+    sound.horn?.(true);
+    setTimeout(() => {
+      if (!k.alive()) return;
+      sound.shout?.();
+      navigator.vibrate?.([30, 40, 60]);
+      field.classList.remove('shake'); void field.offsetWidth; field.classList.add('shake');
+      k.backdrop(game.reveal);
+      band.forEach(n => n.classList.add('cheer'));
+      setTimeout(() => k.alive() && k.win(), 2000);
+    }, 900);
+  };
+}
+
+// ---- Fill the Baskets: tap the leftover bread and fish on the grass; two pieces fill a basket, twelve baskets in all.
+function gather(k) {
+  const { field, game, sound } = k;
+  const total = game.count ?? 12, per = game.per ?? 2;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let filled = 0, inBasket = 0, busy = false;
+  k.progress(`0 of ${total} baskets`);
+  k.line('intro');
+  const shelf = el('div', 'shelf');
+  for (let i = 0; i < total; i++) shelf.append(el('i'));
+  const basket = el('div', 'catcher');
+  basket.append(img(prop('breadbasket')));
+  field.append(shelf, basket);
+  const pieces = [];
+  const layout = () => {
+    const top = k.head();
+    put(shelf, W() / 2, top + 22);
+    const bs = Math.min(W() * 0.24, H() * 0.2);
+    basket.style.width = `${bs}px`;
+    put(basket, W() / 2, H() - bs * 0.55);
+  };
+  const area = () => ({ x0: W() * 0.08, x1: W() * 0.92, y0: k.head() + 70, y1: H() - Math.min(W() * 0.24, H() * 0.2) * 1.2 });
+  const spawn = () => {
+    const r = area(), kind = Math.random() < 0.7 ? 'loaf' : 'smallfish';
+    let x, y, tries = 0;
+    do { x = rand(r.x0, r.x1); y = rand(r.y0, r.y1); } while (pieces.some(p => Math.hypot(p.x - x, p.y - y) < W() * 0.1) && ++tries < 30);
+    const n = el('button', 'crumb');
+    n.setAttribute('aria-label', kind === 'loaf' ? 'A loaf of bread' : 'A little fish');
+    const pic = img(prop(kind));
+    pic.style.rotate = `${rand(-25, 25)}deg`;
+    if (Math.random() < 0.5) pic.style.transform = 'scaleX(-1)';
+    n.append(pic);
+    n.style.width = `${Math.min(W() * 0.12, H() * 0.12) * (kind === 'loaf' ? 0.9 : 1.1)}px`;
+    put(n, x, y);
+    field.append(n);
+    const p = { n, x, y };
+    pieces.push(p);
+    n.onpointerdown = e => {
+      e.preventDefault();
+      if (busy || n.classList.contains('taken')) return;
+      n.classList.add('taken');
+      pieces.splice(pieces.indexOf(p), 1);
+      const b = basket.getBoundingClientRect(), f = field.getBoundingClientRect();
+      put(n, b.left - f.left + b.width / 2, b.top - f.top + b.height * 0.3);
+      if (sound.ready) sound.pluck(70 + inBasket * 4 + (filled % 4) * 2, sound.ctx.currentTime, 0.09);
+      navigator.vibrate?.(8);
+      setTimeout(() => n.remove(), 450);
+      setTimeout(() => k.alive() && filled + 1 <= total && spawn(), 500);
+      if (++inBasket < per) { basket.classList.remove('bump'); void basket.offsetWidth; basket.classList.add('bump'); return; }
+      // Full! Up it goes onto the shelf, and a fresh basket comes.
+      inBasket = 0; busy = true;
+      filled++;
+      setTimeout(() => {
+        if (!k.alive()) return;
+        shelf.children[filled - 1].classList.add('full');
+        sound.sticker?.();
+        k.progress(`${filled} of ${total} baskets`);
+        k.say(game.lines[`count-${filled}`], `count-${filled}`);
+        busy = false;
+        if (filled === total) {
+          field.querySelectorAll('.crumb').forEach(c => c.remove());
+          k.backdrop(game.reveal);
+          setTimeout(() => k.alive() && k.win(), 1600);
+        }
+      }, 420);
+    };
+  };
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  for (let i = 0; i < 7; i++) spawn();
+}
+
+// ---- Find the Lamb: it's dark on the hills; move the lantern about and tap the little lamb when you find it.
+function lantern(k) {
+  const { field, game, sound } = k;
+  const rounds = game.rounds ?? 3;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let round = 0, lx = 0.5, ly = 0.6, lastNope = 0, near = false;
+  const dark = el('div', 'dark');
+  field.append(dark);
+  const R = () => Math.min(W(), H()) * 0.2;
+  const shine = () => {
+    dark.style.setProperty('--x', `${lx * W()}px`);
+    dark.style.setProperty('--y', `${ly * H()}px`);
+    dark.style.setProperty('--r', `${R()}px`);
+  };
+  const aim = e => { const b = field.getBoundingClientRect(); lx = (e.clientX - b.left) / W(); ly = (e.clientY - b.top) / H(); shine(); };
+  field.addEventListener('pointermove', aim);
+  drag(field, { down: aim, move: aim });
+  let things = [], lamb = null;
+  const hide = () => {
+    things.forEach(t => t.remove());
+    things = [];
+    const top = k.head() + 20, spots = [];
+    const kinds = shuffle(['lamb', 'rabbit', 'bird', 'frog', 'rock', 'rabbit']);
+    for (const kind of kinds) {
+      let x, y, tries = 0;
+      do { x = rand(0.1, 0.9) * W(); y = rand(Math.max(top, H() * 0.4), H() * 0.9); } while (spots.some(([a, b]) => Math.hypot(a - x, b - y) < Math.min(W(), H()) * 0.22) && ++tries < 40);
+      spots.push([x, y]);
+      const n = el('button', `hider ${kind}`);
+      n.setAttribute('aria-label', kind === 'lamb' ? 'The little lamb' : 'Something in the dark');
+      n.append(img(kind === 'lamb' ? 'art/lamb.png' : prop(kind)));
+      n.style.width = `${Math.min(W() * 0.13, H() * 0.15) * (kind === 'bird' ? 0.7 : 1)}px`;
+      if (Math.random() < 0.5) n.firstChild.style.transform = 'scaleX(-1)';
+      put(n, x, y);
+      field.insertBefore(n, dark);
+      things.push(n);
+      if (kind === 'lamb') lamb = { n, x, y };
+      n.onpointerdown = e => {
+        e.stopPropagation();
+        aim(e);
+        if (kind === 'lamb') return found();
+        n.classList.remove('hop'); void n.offsetWidth; n.classList.add('hop');
+        if (kind === 'rabbit' || kind === 'frog') sound.ribbit?.(); else if (kind === 'bird') sound.chirp?.(sound.ctx?.currentTime); else sound.boop?.();
+        if (performance.now() - lastNope > 4000) { lastNope = performance.now(); k.line('nope'); }
+      };
+    }
+  };
+  const found = () => {
+    if (!lamb || lamb.n.classList.contains('found')) return;
+    lamb.n.classList.add('found');
+    sound.baa?.();
+    navigator.vibrate?.([20, 30, 20]);
+    round++;
+    k.progress(`Found ${round} of ${rounds}`);
+    dark.classList.add('lit');
+    if (round === rounds) {
+      k.backdrop(game.reveal);
+      things.filter(t => t !== lamb.n).forEach(t => t.remove());
+      setTimeout(() => k.alive() && k.win(), 1600);
+      return;
+    }
+    k.line('found');
+    setTimeout(() => { if (!k.alive()) return; dark.classList.remove('lit'); hide(); k.line('again'); }, 2600);
+  };
+  // A little "baa" when the lantern comes near, so there's something to listen for.
+  k.loop(() => {
+    if (!lamb || lamb.n.classList.contains('found')) return;
+    const close = Math.hypot(lamb.x - lx * W(), lamb.y - ly * H()) < R() * 1.1;
+    if (close && !near) { sound.baa?.(); lamb.n.classList.remove('peek'); void lamb.n.offsetWidth; lamb.n.classList.add('peek'); }
+    near = close;
+  });
+  shine();
+  hide();
+  k.progress(`Found 0 of ${rounds}`);
+  k.line('intro');
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern };

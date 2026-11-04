@@ -1,0 +1,715 @@
+{
+  "title": "The Lost Sheep",
+  "reference": "Luke 15",
+  "subtitle": "A story Jesus told about a shepherd who never stopped looking",
+  "book": "Luke",
+  "text": "data/lost-sheep-text.json",
+  "art": "art/lost-sheep",
+  "next": {
+    "story": "zacchaeus",
+    "title": "Zacchaeus",
+    "sub": "Luke 19: the story of a short man, a tall tree, and the Friend who came looking for him."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third that is still part of the same painted scene, never blank paper; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    },
+    {
+      "id": "shepherd",
+      "name": "the shepherd",
+      "prompt": "A kind shepherd standing alone, full body, front view: a gentle grown man with warm olive skin, a short dark beard and laughing eyes, wearing a simple brown robe with a cream head covering, a woolly sheepskin over one shoulder, holding a curved wooden shepherd’s staff, and sandals",
+      "src": "art/lost-sheep/cast/shepherd.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 304920,
+        "at": "2026-11-04T02:14:10.165Z"
+      }
+    },
+    {
+      "id": "lamb",
+      "name": "the little lost lamb",
+      "prompt": "A single little lamb standing alone, full body, side view: a small, fluffy white lamb with soft wool, a sweet face, little pink ears and a tiny tail",
+      "wide": true,
+      "src": "art/lost-sheep/cast/lamb.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 327347,
+        "at": "2026-11-04T02:14:22.014Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "told",
+      "eyebrow": "Part One",
+      "title": "A Story Jesus Told",
+      "verses": [
+        "15:1",
+        "15:3"
+      ],
+      "beats": [
+        "Jesus was always making friends with people that nobody else liked. Some people grumbled about it. “Why does He eat with people like that?”",
+        "So Jesus told them a story."
+      ],
+      "layers": [
+        {
+          "id": "listen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "listen",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: On a sunny hillside dotted with olive trees: Jesus sits on a big rock, right of center, telling a story with His hand raised, while a mixed group of people sit on the grass around Him listening closely, children leaning in, and two stern, grumbling religious teachers in tall hats and fancy robes stand off to one side with their arms crossed",
+          "refs": [
+            "jesus"
+          ],
+          "src": "art/lost-sheep/told/listen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 30522,
+            "at": "2026-11-04T02:21:17.251Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "warm"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "storyteller",
+          "name": "Jesus Tells a Story",
+          "earn": "play",
+          "at": [
+            0.77,
+            0.45
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "grumblers",
+          "name": "The Grumblers",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.2,
+            0.5
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.1,
+            0.12
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.92,
+            0.25
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.42,
+            0.7
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "hundred",
+      "eyebrow": "Part Two",
+      "title": "One Hundred Sheep",
+      "verses": [
+        "15:3",
+        "15:4"
+      ],
+      "beats": [
+        "“Once there was a shepherd who had one hundred sheep,” Jesus said. “He loved every single one of them.”",
+        "Every evening, the shepherd counted his sheep as they went into the pen. “Ninety-seven, ninety-eight, ninety-nine…” Wait! One little lamb was missing!"
+      ],
+      "layers": [
+        {
+          "id": "pen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "pen",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: In the golden evening light on rolling green hills: the shepherd stands at the gate of a round stone sheep pen, right of center, counting a long line of fluffy white sheep as they trot in, his staff raised and a worried look on his face as he notices one is missing; the pen is full of sheep",
+          "refs": [
+            "shepherd"
+          ],
+          "src": "art/lost-sheep/hundred/pen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 162631,
+            "at": "2026-11-04T02:15:22.763Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to count the sheep",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "counting",
+          "name": "Counting Sheep",
+          "earn": "play",
+          "at": [
+            0.68,
+            0.4
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "last-sheep",
+          "name": "The Last Sheep in Line",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.07,
+            0.8
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.4,
+            0.72
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.58,
+            0.62
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.8,
+            0.25
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "eyebrow": "Part Three",
+      "title": "Looking Everywhere",
+      "verses": [
+        "15:4",
+        "15:4"
+      ],
+      "beats": [
+        "The shepherd left the ninety-nine sheep safe in the pen, and off he went to look for the one that was lost.",
+        "He looked over the hills and down in the valleys. He looked behind rocks and through prickly bushes. It was getting dark, but he kept on calling, “Little lamb! Where are you?”"
+      ],
+      "layers": [
+        {
+          "id": "dusk",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "dusk",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: Rocky hills at dusk under a deep blue sky with the first stars: the shepherd climbs a steep, rocky path, right of center, holding up a glowing clay oil lamp and calling out with his hand cupped to his mouth, his staff in his other hand, searching among the boulders and thorny bushes",
+          "refs": [
+            "shepherd"
+          ],
+          "src": "art/lost-sheep/search/dusk.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 221615,
+            "at": "2026-11-04T02:20:45.816Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "mist",
+          "from": 1
+        },
+        {
+          "type": "glow",
+          "from": 0,
+          "follow": true
+        }
+      ],
+      "touch": {
+        "hint": "Tap to help him look",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "lamp",
+          "name": "The Shepherd’s Lamp",
+          "earn": "play",
+          "at": [
+            0.42,
+            0.62
+          ],
+          "r": 0.06
+        },
+        {
+          "id": "evening-star",
+          "name": "The Evening Star",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.27,
+            0.12
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.42,
+            0.62
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.2,
+            0.85
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.85,
+            0.4
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.68,
+            0.13
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "found",
+      "eyebrow": "Part Four",
+      "title": "Found!",
+      "verses": [
+        "15:5",
+        "15:5"
+      ],
+      "beats": [
+        "Then he heard it: a tiny little “Baa!” There was the lamb, stuck in a thorny bush, cold and scared.",
+        "The shepherd gently lifted the little lamb out and put it up on his shoulders. He wasn’t cross at all. He was so happy! And he carried it all the way home."
+      ],
+      "layers": [
+        {
+          "id": "bush",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "bush",
+          "prompt": "One single continuous moonlit scene that fills the whole picture from edge to edge, with no panels, no blank paper, no book page, no fold and no seam: a rocky hillside at night under a starry sky with a big moon; a small, frightened fluffy white lamb is stuck in a tangled thorny bush on a little ledge a bit left of center, looking up hopefully, while on the right the shepherd comes around the boulders toward it, holding up his warm glowing lamp; boulders, grass tufts and night sky continue all the way to the left and right edges",
+          "refs": [
+            "lamb",
+            "shepherd"
+          ],
+          "src": "art/lost-sheep/found/bush.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 24680,
+            "at": "2026-11-04T02:23:49.007Z"
+          },
+          "seed": 24680
+        },
+        {
+          "id": "shoulders",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "shoulders",
+          "editOf": "bush",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to rescue the lamb",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "The shepherd now carries the little lamb safely across his shoulders, holding its legs gently, smiling with joy, and the lamb snuggles its face against his head; the thorny bush is behind them, and soft golden light glows around them.",
+          "refs": [
+            "shepherd",
+            "lamb"
+          ],
+          "mood": "warm",
+          "music": "storybook",
+          "src": "art/lost-sheep/found/shoulders.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 25947,
+            "at": "2026-11-04T02:24:33.509Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "with": "shoulders"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.35,
+          0.6
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.4,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "stuck",
+          "name": "Stuck in a Bush",
+          "earn": "play",
+          "at": [
+            0.26,
+            0.67
+          ],
+          "r": 0.08,
+          "layer": "bush"
+        },
+        {
+          "id": "carried",
+          "name": "Carried Home",
+          "earn": "reveal",
+          "layer": "shoulders",
+          "at": [
+            0.57,
+            0.4
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "big-moon",
+          "name": "The Big Moon",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.27,
+            0.18
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.26,
+            0.67
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05,
+          "until": "shoulders"
+        },
+        {
+          "at": [
+            0.63,
+            0.47
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04,
+          "until": "shoulders"
+        },
+        {
+          "at": [
+            0.57,
+            0.37
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05,
+          "with": "shoulders"
+        },
+        {
+          "at": [
+            0.75,
+            0.1
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "with": "shoulders"
+        }
+      ]
+    },
+    {
+      "id": "rejoice",
+      "eyebrow": "Part Five",
+      "title": "Rejoice With Me!",
+      "verses": [
+        "15:6",
+        "15:7"
+      ],
+      "beats": [
+        "When he got home, the shepherd called all his friends and neighbors. “Come and celebrate with me! I found my lost sheep!”",
+        "Then Jesus said, “That is how God feels. All of heaven has a party whenever one lost person comes home to God.”",
+        "You are like that little lamb. God loves you so much, He will always come looking for you."
+      ],
+      "layers": [
+        {
+          "id": "party",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "party",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: In a lantern-lit village courtyard in the evening: the shepherd dances happily with the little lamb still on his shoulders, right of center, while friends and neighbors laugh, clap, play a tambourine and a little flute, and children dance around them, with strings of lanterns, food on a table and a starry sky above",
+          "refs": [
+            "shepherd",
+            "lamb"
+          ],
+          "src": "art/lost-sheep/rejoice/party.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 823340,
+            "at": "2026-11-04T02:17:53.009Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "stars",
+          "from": 1
+        },
+        {
+          "type": "sing",
+          "from": 0,
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap to celebrate",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "crickets"
+        ],
+        "mood": "glory",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "party",
+          "name": "Rejoice With Me!",
+          "earn": "play",
+          "at": [
+            0.55,
+            0.45
+          ],
+          "r": 0.14
+        },
+        {
+          "id": "tambourine",
+          "name": "The Tambourine",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.33,
+            0.42
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.12,
+            0.2
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.42,
+            0.08
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.86,
+            0.47
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.68,
+            0.62
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Why didn’t the shepherd just stay home with his ninety-nine other sheep?",
+      "How do you think the little lamb felt when the shepherd found it?",
+      "Jesus said God is like that shepherd. How does it feel to know God will always come looking for you?"
+    ],
+    "verse": {
+      "ref": "Luke 15:6",
+      "text": "Rejoice with me, for I have found my lost sheep!"
+    }
+  }
+}

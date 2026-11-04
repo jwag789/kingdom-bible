@@ -483,5 +483,94 @@
       "win": "Jesus has come to Jerusalem! Hosanna in the highest!",
       "done": "Hosanna to the King!"
     }
+  },
+  "jericho": {
+    "id": "march-shout",
+    "title": "March and Shout",
+    "type": "march",
+    "scene": "shout",
+    "background": "art/games/jericho-walls/standing.jpg",
+    "reveal": "art/games/jericho-walls/rubble.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "laps": 7,
+    "city": [
+      0.52,
+      0.5
+    ],
+    "ring": [
+      0.27,
+      0.2
+    ],
+    "badge": "art/props/marcher.png",
+    "lines": {
+      "intro": "God told Joshua to march around Jericho seven times. Press and hold to march the trumpets around the city!",
+      "lap-1": "One!",
+      "lap-2": "Two!",
+      "lap-3": "Three!",
+      "lap-4": "Four!",
+      "lap-5": "Five!",
+      "lap-6": "Six!",
+      "lap-7": "Seven!",
+      "ready": "Seven times around! Now, everybody… SHOUT!",
+      "win": "The walls came tumbling down! God did just what He promised.",
+      "done": "The Lord has given you the city!"
+    }
+  },
+  "feeding": {
+    "id": "fill-baskets",
+    "title": "Fill the Baskets",
+    "type": "gather",
+    "scene": "leftovers",
+    "background": "art/games/galilee/grass.jpg",
+    "reveal": "art/feeding/leftovers/baskets.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "count": 12,
+    "per": 2,
+    "badge": "art/props/fullbasket.png",
+    "lines": {
+      "intro": "Everyone ate until they were full! Tap the leftover bread and fish to gather them up. Let’s fill twelve baskets!",
+      "count-1": "One basket!",
+      "count-2": "Two baskets!",
+      "count-3": "Three baskets!",
+      "count-4": "Four baskets!",
+      "count-5": "Five baskets!",
+      "count-6": "Six baskets!",
+      "count-7": "Seven baskets!",
+      "count-8": "Eight baskets!",
+      "count-9": "Nine baskets!",
+      "count-10": "Ten baskets!",
+      "count-11": "Eleven baskets!",
+      "count-12": "Twelve baskets!",
+      "win": "Twelve baskets of leftovers! A little lunch in Jesus’ hands was more than enough.",
+      "done": "Jesus is the bread of life."
+    }
+  },
+  "lost-sheep": {
+    "id": "find-lamb",
+    "title": "Find the Lamb",
+    "type": "lantern",
+    "scene": "search",
+    "background": "art/games/hills/night.jpg",
+    "reveal": "art/lost-sheep/found/shoulders.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "rounds": 3,
+    "badge": "art/lamb.png",
+    "lines": {
+      "intro": "It’s dark on the hills, and the little lamb is lost! Move the lantern around, listen for a “baa,” and tap the lamb when you find it.",
+      "nope": "That’s not the lamb! Keep looking.",
+      "found": "You found the lamb!",
+      "again": "Oh no, that silly lamb wandered off again! Can you find it?",
+      "win": "Found! The shepherd carried the little lamb home on his shoulders.",
+      "done": "Rejoice with me, for I have found my lost sheep!"
+    }
   }
 }

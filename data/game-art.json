@@ -109,6 +109,78 @@
           }
         }
       ]
+    },
+    {
+      "id": "jericho-walls",
+      "layers": [
+        {
+          "id": "standing",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "standing",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no border, no blank paper and no fold: seen from a hill far away on a sunny day, a small round walled city of Jericho sits right in the middle of a huge, flat, open sandy plain, the city taking up only the middle third of the picture: a ring of tall, thick stone walls with little houses on top, palm trees inside; lots of wide, empty, flat sandy ground all around the city on every side, with hills along the far horizon; no people anywhere",
+          "src": "art/games/jericho-walls/standing.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 2468,
+            "at": "2026-11-04T02:17:58.865Z"
+          },
+          "seed": 2468
+        },
+        {
+          "id": "rubble",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "rubble",
+          "editOf": "standing",
+          "edit": "Knock down the whole ring of city walls: the tall stone walls and their towers are completely gone, replaced by low, scattered heaps of broken stone blocks lying flat on the ground all the way around the city, with a pale, soft cloud of sandy dust drifting over them. The houses and palm trees inside the city stay exactly as they are. No fire, no smoke, no explosion, no people.",
+          "src": "art/games/jericho-walls/rubble.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 1357,
+            "at": "2026-11-04T02:28:13.496Z"
+          },
+          "seed": 1357,
+          "editModel": "kontext",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "id": "galilee",
+      "layers": [
+        {
+          "id": "grass",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "grass",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no border, no blank paper and no fold: a wide, soft green grassy hillside beside the Sea of Galilee in warm golden evening light: the lower two thirds of the picture is open green grass with little wildflowers, and far in the background a happy crowd of people sits resting on the hill, with the blue sea and little boats beyond; the foreground grass is empty",
+          "src": "art/games/galilee/grass.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 339374,
+            "at": "2026-11-04T02:17:02.304Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hills",
+      "layers": [
+        {
+          "id": "night",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "night",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no border, no blank paper and no fold: rocky hills at night under a deep blue sky full of stars and a crescent moon: big boulders, thorny bushes, little caves and tufts of grass spread across the whole lower two thirds of the picture, with soft moonlight; quiet and calm, not scary; no people, no animals",
+          "src": "art/games/hills/night.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 685547,
+            "at": "2026-11-04T02:17:18.435Z"
+          }
+        }
+      ]
     }
   ]
 }

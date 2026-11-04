@@ -1,0 +1,557 @@
+{
+  "title": "The Walls of Jericho",
+  "reference": "Joshua 6",
+  "subtitle": "The story of a great big wall, a lot of marching, and one very loud shout",
+  "book": "Joshua",
+  "text": "data/jericho-text.json",
+  "art": "art/jericho",
+  "next": {
+    "story": "david",
+    "title": "David and Goliath",
+    "sub": "1 Samuel 16–17: the story of a shepherd boy, a giant, and a God who is bigger than both."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third that is still part of the same painted scene, never blank paper; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "joshua",
+      "name": "Joshua",
+      "prompt": "Joshua standing alone, full body, front view: a strong, brave leader with fair, sun-tanned skin, a short dark beard and a determined, kind face, wearing a red tunic with a bronze breastplate and a brown cloak, a sword in his belt, and sandals",
+      "src": "art/jericho/cast/joshua.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 513551,
+        "at": "2026-11-04T02:14:10.539Z"
+      }
+    },
+    {
+      "id": "priest",
+      "name": "a priest with a horn",
+      "prompt": "A priest standing alone, full body, front view: a friendly man with olive skin and a grey beard, wearing a long white robe with a blue sash and a white head covering, holding a long curly ram’s horn trumpet up to his lips",
+      "src": "art/jericho/cast/priest.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 758184,
+        "at": "2026-11-04T02:14:24.706Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "city",
+      "eyebrow": "Part One",
+      "title": "The City with Big Walls",
+      "verses": [
+        "6:1",
+        "6:2"
+      ],
+      "beats": [
+        "After Moses, God gave His people a new leader named Joshua. Joshua led them into the land God had promised them.",
+        "But in the way stood the city of Jericho. Its walls were so tall and so thick, people built houses right on top of them! And the gates were shut tight."
+      ],
+      "layers": [
+        {
+          "id": "walls",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "walls",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: A wide sunny plain with palm trees: the great city of Jericho rises right of center, surrounded by enormously tall, thick stone walls with little houses built right on top of them, its huge wooden gates shut tight; in the foreground Joshua stands looking up at the walls, with the tents of God’s people far away on the left",
+          "refs": [
+            "joshua"
+          ],
+          "src": "art/jericho/city/walls.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 518578,
+            "at": "2026-11-04T02:14:57.478Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap the walls",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds"
+        ],
+        "mood": "warm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "big-gate",
+          "name": "The Big Gate",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.45
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "wall-houses",
+          "name": "Houses on the Wall",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.7,
+            0.18
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.1,
+            0.15
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.12,
+            0.65
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.85,
+            0.4
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "eyebrow": "Part Two",
+      "title": "God’s Plan",
+      "verses": [
+        "6:2",
+        "6:5"
+      ],
+      "beats": [
+        "God said to Joshua, “I have given you this city. Here is what to do.”",
+        "“March around the city once a day for six days. Have seven priests blow their trumpets made from rams’ horns. Then on the seventh day, march around seven times, and everyone SHOUT!”",
+        "March and shout? It was a very strange plan! But Joshua trusted God."
+      ],
+      "layers": [
+        {
+          "id": "listen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "listen",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: At night outside the camp under a sky full of bright stars: Joshua kneels on the ground, right of center, looking up and listening carefully, as a soft, warm golden light shines down on him from the heavens; the tall walls of Jericho are dark in the distance",
+          "refs": [
+            "joshua"
+          ],
+          "src": "art/jericho/plan/listen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 908144,
+            "at": "2026-11-04T02:19:28.830Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "night"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "listening",
+          "name": "Joshua Listens",
+          "earn": "play",
+          "at": [
+            0.69,
+            0.45
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "bright-star",
+          "name": "The Bright Star",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.87,
+            0.15
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.12
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.55,
+            0.2
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.15,
+            0.68
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "march",
+      "eyebrow": "Part Three",
+      "title": "Round and Round",
+      "verses": [
+        "6:8",
+        "6:14"
+      ],
+      "beats": [
+        "So the next morning, God’s people began to march. First the soldiers, then the priests with their trumpets, then the golden ark of God.",
+        "Toot! Toot! went the trumpets. But nobody else made a sound, not one word! Round the city they went, and back to camp.",
+        "Day two, day three, day four, day five, day six. March, march, march. And the people of Jericho watched from their walls and wondered."
+      ],
+      "layers": [
+        {
+          "id": "parade",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "parade",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: A long, colorful parade marches around the foot of Jericho’s enormous walls on a sunny day: soldiers in front, then seven priests in white robes blowing long curly rams’ horn trumpets, right of center, then other priests carrying the golden ark of the covenant on long poles, and many people following quietly behind; on top of the walls, people of Jericho peek over, puzzled",
+          "refs": [
+            "priest",
+            "joshua"
+          ],
+          "src": "art/jericho/march/parade.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 70300,
+            "at": "2026-11-04T02:16:02.114Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to blow the trumpets",
+        "at": [
+          0.5,
+          0.55
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "lively",
+        "music": "adventure"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "ark",
+          "name": "The Golden Ark",
+          "earn": "play",
+          "at": [
+            0.58,
+            0.53
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "peekers",
+          "name": "Peeking Over the Wall",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.21,
+            0.1
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.47,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "horn",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.78,
+            0.58
+          ],
+          "fx": "notes",
+          "sound": "horn",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.9,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "shout",
+      "eyebrow": "Part Four",
+      "title": "Shout!",
+      "verses": [
+        "6:15",
+        "6:20"
+      ],
+      "beats": [
+        "On the seventh day, they marched around the city one, two, three, four, five, six, SEVEN times!",
+        "The priests blew one long blast on their trumpets, and Joshua called out, “Shout! The Lord has given you the city!” Everyone shouted as loud as they could!",
+        "And with a great rumble… the walls of Jericho came tumbling DOWN! God did just what He promised."
+      ],
+      "layers": [
+        {
+          "id": "ready",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "ready",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, with no blank paper, no book page, no fold and no seam: On the seventh day in bright morning sunlight, in front of the enormous, tall stone walls of Jericho, which fill the right side and the back of the picture: all of God’s people stand ready in a huge crowd, right of center, the seven priests lifting their long curly rams’ horn trumpets high, Joshua at the front with his arm raised, everyone taking a big breath to shout",
+          "refs": [
+            "joshua",
+            "priest"
+          ],
+          "src": "art/jericho/shout/ready.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 9753,
+            "at": "2026-11-04T02:22:25.281Z"
+          },
+          "seed": 9753
+        },
+        {
+          "id": "fallen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fallen",
+          "editOf": "ready",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to shout!",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "The enormous stone walls of Jericho have come tumbling down: they have collapsed flat into big heaps of broken stones with a soft cloud of sandy dust (no fire, no flames, no explosion), and God’s people cheer with their arms in the air, the priests still blowing their trumpets and Joshua raising his arm in joy; no one is hurt.",
+          "refs": [],
+          "mood": "glory",
+          "src": "art/jericho/shout/fallen.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 817650,
+            "at": "2026-11-04T02:22:36.097Z"
+          },
+          "editModel": "kontext"
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "with": "fallen"
+        },
+        {
+          "type": "rays",
+          "with": "fallen"
+        },
+        {
+          "type": "sing",
+          "with": "fallen",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.55,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "horns",
+          "name": "Seven Trumpets",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.55
+          ],
+          "r": 0.12,
+          "layer": "ready"
+        },
+        {
+          "id": "tumble",
+          "name": "Tumbling Walls",
+          "earn": "reveal",
+          "layer": "fallen",
+          "at": [
+            0.55,
+            0.25
+          ],
+          "r": 0.12
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.55,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "horn",
+          "hit": 0.05,
+          "until": "fallen"
+        },
+        {
+          "at": [
+            0.8,
+            0.5
+          ],
+          "fx": "notes",
+          "sound": "horn",
+          "hit": 0.05,
+          "until": "fallen"
+        },
+        {
+          "at": [
+            0.55,
+            0.2
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "fallen"
+        },
+        {
+          "at": [
+            0.2,
+            0.5
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "fallen"
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "God’s plan was to march and shout. Why do you think Joshua did it, even though it seemed strange?",
+      "Can you march around the room seven times, and then shout “Hallelujah!”?",
+      "What is something big that only God can do?"
+    ],
+    "verse": {
+      "ref": "Joshua 6:16",
+      "text": "Shout! For the LORD has given you the city!"
+    }
+  }
+}

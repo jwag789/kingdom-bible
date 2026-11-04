@@ -1,0 +1,1788 @@
+{
+ "cover": {
+  "src": "audio/jericho/cover.m4a",
+  "text": "The Walls of Jericho.",
+  "voice": "af_heart,af_bella",
+  "duration": 2.7,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.6,
+    "e": 0.738
+   },
+   {
+    "w": "Walls",
+    "s": 0.738,
+    "e": 1.113
+   },
+   {
+    "w": "of",
+    "s": 1.113,
+    "e": 1.2
+   },
+   {
+    "w": "Jericho",
+    "s": 1.2,
+    "e": 2.1
+   }
+  ]
+ },
+ "city-title": {
+  "src": "audio/jericho/city-title.m4a",
+  "text": "Part One. The City with Big Walls.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.65,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "One",
+    "s": 0.85,
+    "e": 1.3
+   },
+   {
+    "w": "The",
+    "s": 1.425,
+    "e": 1.562
+   },
+   {
+    "w": "City",
+    "s": 1.562,
+    "e": 1.863
+   },
+   {
+    "w": "with",
+    "s": 1.863,
+    "e": 2.025
+   },
+   {
+    "w": "Big",
+    "s": 2.025,
+    "e": 2.25
+   },
+   {
+    "w": "Walls",
+    "s": 2.25,
+    "e": 3.05
+   }
+  ]
+ },
+ "city-0": {
+  "src": "audio/jericho/city-0.m4a",
+  "text": "After Moses, God gave His people a new leader named Joshua. Joshua led them into the land God had promised them.",
+  "voice": "af_heart,af_bella",
+  "duration": 8.775,
+  "words": [
+   {
+    "w": "After",
+    "s": 0.625,
+    "e": 0.925
+   },
+   {
+    "w": "Moses",
+    "s": 0.925,
+    "e": 1.7
+   },
+   {
+    "w": "God",
+    "s": 1.837,
+    "e": 2.175
+   },
+   {
+    "w": "gave",
+    "s": 2.175,
+    "e": 2.388
+   },
+   {
+    "w": "His",
+    "s": 2.388,
+    "e": 2.575
+   },
+   {
+    "w": "people",
+    "s": 2.575,
+    "e": 2.95
+   },
+   {
+    "w": "a",
+    "s": 2.95,
+    "e": 3.062
+   },
+   {
+    "w": "new",
+    "s": 3.062,
+    "e": 3.275
+   },
+   {
+    "w": "leader",
+    "s": 3.275,
+    "e": 3.6
+   },
+   {
+    "w": "named",
+    "s": 3.6,
+    "e": 3.888
+   },
+   {
+    "w": "Joshua",
+    "s": 3.888,
+    "e": 4.925
+   },
+   {
+    "w": "Joshua",
+    "s": 5.15,
+    "e": 5.625
+   },
+   {
+    "w": "led",
+    "s": 5.625,
+    "e": 5.812
+   },
+   {
+    "w": "them",
+    "s": 5.812,
+    "e": 5.938
+   },
+   {
+    "w": "into",
+    "s": 5.938,
+    "e": 6.15
+   },
+   {
+    "w": "the",
+    "s": 6.15,
+    "e": 6.275
+   },
+   {
+    "w": "land",
+    "s": 6.275,
+    "e": 6.713
+   },
+   {
+    "w": "God",
+    "s": 6.713,
+    "e": 7.062
+   },
+   {
+    "w": "had",
+    "s": 7.062,
+    "e": 7.2
+   },
+   {
+    "w": "promised",
+    "s": 7.2,
+    "e": 7.65
+   },
+   {
+    "w": "them",
+    "s": 7.65,
+    "e": 8.225
+   }
+  ]
+ },
+ "city-1": {
+  "src": "audio/jericho/city-1.m4a",
+  "text": "But in the way stood the city of Jericho. Its walls were so tall and so thick, people built houses right on top of them! And the gates were shut tight.",
+  "voice": "af_heart,af_bella",
+  "duration": 11.1,
+  "words": [
+   {
+    "w": "But",
+    "s": 0.575,
+    "e": 0.688
+   },
+   {
+    "w": "in",
+    "s": 0.688,
+    "e": 0.762
+   },
+   {
+    "w": "the",
+    "s": 0.762,
+    "e": 0.85
+   },
+   {
+    "w": "way",
+    "s": 0.85,
+    "e": 1.137
+   },
+   {
+    "w": "stood",
+    "s": 1.137,
+    "e": 1.413
+   },
+   {
+    "w": "the",
+    "s": 1.413,
+    "e": 1.538
+   },
+   {
+    "w": "city",
+    "s": 1.538,
+    "e": 1.837
+   },
+   {
+    "w": "of",
+    "s": 1.837,
+    "e": 1.962
+   },
+   {
+    "w": "Jericho",
+    "s": 1.962,
+    "e": 2.95
+   },
+   {
+    "w": "Its",
+    "s": 3.1,
+    "e": 3.362
+   },
+   {
+    "w": "walls",
+    "s": 3.362,
+    "e": 3.763
+   },
+   {
+    "w": "were",
+    "s": 3.763,
+    "e": 3.925
+   },
+   {
+    "w": "so",
+    "s": 3.925,
+    "e": 4.225
+   },
+   {
+    "w": "tall",
+    "s": 4.225,
+    "e": 4.7
+   },
+   {
+    "w": "and",
+    "s": 4.7,
+    "e": 4.875
+   },
+   {
+    "w": "so",
+    "s": 4.875,
+    "e": 5.213
+   },
+   {
+    "w": "thick",
+    "s": 5.213,
+    "e": 5.775
+   },
+   {
+    "w": "people",
+    "s": 5.875,
+    "e": 6.225
+   },
+   {
+    "w": "built",
+    "s": 6.225,
+    "e": 6.5
+   },
+   {
+    "w": "houses",
+    "s": 6.5,
+    "e": 7.025
+   },
+   {
+    "w": "right",
+    "s": 7.025,
+    "e": 7.312
+   },
+   {
+    "w": "on",
+    "s": 7.312,
+    "e": 7.5
+   },
+   {
+    "w": "top",
+    "s": 7.5,
+    "e": 7.787
+   },
+   {
+    "w": "of",
+    "s": 7.787,
+    "e": 7.925
+   },
+   {
+    "w": "them",
+    "s": 7.925,
+    "e": 8.625
+   },
+   {
+    "w": "And",
+    "s": 8.75,
+    "e": 8.887
+   },
+   {
+    "w": "the",
+    "s": 8.887,
+    "e": 8.975
+   },
+   {
+    "w": "gates",
+    "s": 8.975,
+    "e": 9.325
+   },
+   {
+    "w": "were",
+    "s": 9.325,
+    "e": 9.5
+   },
+   {
+    "w": "shut",
+    "s": 9.5,
+    "e": 9.812
+   },
+   {
+    "w": "tight",
+    "s": 9.812,
+    "e": 10.525
+   }
+  ]
+ },
+ "plan-title": {
+  "src": "audio/jericho/plan-title.m4a",
+  "text": "Part Two. God’s Plan.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.075,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.887
+   },
+   {
+    "w": "Two",
+    "s": 0.887,
+    "e": 1.275
+   },
+   {
+    "w": "God's",
+    "s": 1.4,
+    "e": 1.75
+   },
+   {
+    "w": "Plan",
+    "s": 1.75,
+    "e": 2.475
+   }
+  ]
+ },
+ "plan-0": {
+  "src": "audio/jericho/plan-0.m4a",
+  "text": "God said to Joshua, “I have given you this city. Here is what to do.”",
+  "voice": "af_heart,af_bella",
+  "duration": 5.65,
+  "words": [
+   {
+    "w": "God",
+    "s": 0.625,
+    "e": 0.925
+   },
+   {
+    "w": "said",
+    "s": 0.925,
+    "e": 1.1
+   },
+   {
+    "w": "to",
+    "s": 1.1,
+    "e": 1.225
+   },
+   {
+    "w": "Joshua",
+    "s": 1.225,
+    "e": 1.975
+   },
+   {
+    "w": "I",
+    "s": 2.2,
+    "e": 2.288
+   },
+   {
+    "w": "have",
+    "s": 2.288,
+    "e": 2.45
+   },
+   {
+    "w": "given",
+    "s": 2.45,
+    "e": 2.7
+   },
+   {
+    "w": "you",
+    "s": 2.7,
+    "e": 2.85
+   },
+   {
+    "w": "this",
+    "s": 2.85,
+    "e": 3.038
+   },
+   {
+    "w": "city",
+    "s": 3.038,
+    "e": 3.55
+   },
+   {
+    "w": "Here",
+    "s": 3.7,
+    "e": 3.975
+   },
+   {
+    "w": "is",
+    "s": 3.975,
+    "e": 4.125
+   },
+   {
+    "w": "what",
+    "s": 4.125,
+    "e": 4.3
+   },
+   {
+    "w": "to",
+    "s": 4.3,
+    "e": 4.425
+   },
+   {
+    "w": "do",
+    "s": 4.425,
+    "e": 5.0
+   }
+  ]
+ },
+ "plan-1": {
+  "src": "audio/jericho/plan-1.m4a",
+  "text": "“March around the city once a day for six days. Have seven priests blow their trumpets made from rams’ horns. Then on the seventh day, march around seven times, and everyone SHOUT!”",
+  "voice": "af_heart,af_bella",
+  "duration": 13.175,
+  "words": [
+   {
+    "w": "March",
+    "s": 0.675,
+    "e": 0.95
+   },
+   {
+    "w": "around",
+    "s": 0.95,
+    "e": 1.262
+   },
+   {
+    "w": "the",
+    "s": 1.262,
+    "e": 1.363
+   },
+   {
+    "w": "city",
+    "s": 1.363,
+    "e": 1.725
+   },
+   {
+    "w": "once",
+    "s": 1.725,
+    "e": 1.988
+   },
+   {
+    "w": "a",
+    "s": 1.988,
+    "e": 2.05
+   },
+   {
+    "w": "day",
+    "s": 2.05,
+    "e": 2.35
+   },
+   {
+    "w": "for",
+    "s": 2.35,
+    "e": 2.513
+   },
+   {
+    "w": "six",
+    "s": 2.513,
+    "e": 2.825
+   },
+   {
+    "w": "days",
+    "s": 2.825,
+    "e": 3.65
+   },
+   {
+    "w": "Have",
+    "s": 3.775,
+    "e": 4.025
+   },
+   {
+    "w": "seven",
+    "s": 4.025,
+    "e": 4.412
+   },
+   {
+    "w": "priests",
+    "s": 4.412,
+    "e": 4.85
+   },
+   {
+    "w": "blow",
+    "s": 4.85,
+    "e": 5.1
+   },
+   {
+    "w": "their",
+    "s": 5.1,
+    "e": 5.25
+   },
+   {
+    "w": "trumpets",
+    "s": 5.25,
+    "e": 5.725
+   },
+   {
+    "w": "made",
+    "s": 5.725,
+    "e": 5.95
+   },
+   {
+    "w": "from",
+    "s": 5.95,
+    "e": 6.15
+   },
+   {
+    "w": "rams'",
+    "s": 6.15,
+    "e": 6.55
+   },
+   {
+    "w": "horns",
+    "s": 6.55,
+    "e": 7.475
+   },
+   {
+    "w": "Then",
+    "s": 7.625,
+    "e": 7.925
+   },
+   {
+    "w": "on",
+    "s": 7.925,
+    "e": 8.037
+   },
+   {
+    "w": "the",
+    "s": 8.037,
+    "e": 8.15
+   },
+   {
+    "w": "seventh",
+    "s": 8.15,
+    "e": 8.575
+   },
+   {
+    "w": "day",
+    "s": 8.575,
+    "e": 9.1
+   },
+   {
+    "w": "march",
+    "s": 9.238,
+    "e": 9.55
+   },
+   {
+    "w": "around",
+    "s": 9.55,
+    "e": 10.0
+   },
+   {
+    "w": "seven",
+    "s": 10.0,
+    "e": 10.375
+   },
+   {
+    "w": "times",
+    "s": 10.375,
+    "e": 11.125
+   },
+   {
+    "w": "and",
+    "s": 11.225,
+    "e": 11.35
+   },
+   {
+    "w": "everyone",
+    "s": 11.35,
+    "e": 11.85
+   },
+   {
+    "w": "SHOUT",
+    "s": 11.85,
+    "e": 12.575
+   }
+  ]
+ },
+ "plan-2": {
+  "src": "audio/jericho/plan-2.m4a",
+  "text": "March and shout? It was a very strange plan! But Joshua trusted God.",
+  "voice": "af_heart,af_bella",
+  "duration": 5.85,
+  "words": [
+   {
+    "w": "March",
+    "s": 0.675,
+    "e": 0.963
+   },
+   {
+    "w": "and",
+    "s": 0.963,
+    "e": 1.1
+   },
+   {
+    "w": "shout",
+    "s": 1.1,
+    "e": 1.675
+   },
+   {
+    "w": "It",
+    "s": 1.75,
+    "e": 1.863
+   },
+   {
+    "w": "was",
+    "s": 1.863,
+    "e": 1.962
+   },
+   {
+    "w": "a",
+    "s": 1.962,
+    "e": 2.025
+   },
+   {
+    "w": "very",
+    "s": 2.025,
+    "e": 2.3
+   },
+   {
+    "w": "strange",
+    "s": 2.3,
+    "e": 2.725
+   },
+   {
+    "w": "plan",
+    "s": 2.725,
+    "e": 3.375
+   },
+   {
+    "w": "But",
+    "s": 3.5,
+    "e": 3.663
+   },
+   {
+    "w": "Joshua",
+    "s": 3.663,
+    "e": 4.125
+   },
+   {
+    "w": "trusted",
+    "s": 4.125,
+    "e": 4.55
+   },
+   {
+    "w": "God",
+    "s": 4.55,
+    "e": 5.25
+   }
+  ]
+ },
+ "march-title": {
+  "src": "audio/jericho/march-title.m4a",
+  "text": "Part Three. Round and Round.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.275,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Three",
+    "s": 0.875,
+    "e": 1.325
+   },
+   {
+    "w": "Round",
+    "s": 1.488,
+    "e": 1.812
+   },
+   {
+    "w": "and",
+    "s": 1.812,
+    "e": 1.925
+   },
+   {
+    "w": "Round",
+    "s": 1.925,
+    "e": 2.675
+   }
+  ]
+ },
+ "march-0": {
+  "src": "audio/jericho/march-0.m4a",
+  "text": "So the next morning, God’s people began to march. First the soldiers, then the priests with their trumpets, then the golden ark of God.",
+  "voice": "af_heart,af_bella",
+  "duration": 9.6,
+  "words": [
+   {
+    "w": "So",
+    "s": 0.6,
+    "e": 0.688
+   },
+   {
+    "w": "the",
+    "s": 0.688,
+    "e": 0.775
+   },
+   {
+    "w": "next",
+    "s": 0.775,
+    "e": 1.075
+   },
+   {
+    "w": "morning",
+    "s": 1.075,
+    "e": 1.6
+   },
+   {
+    "w": "God's",
+    "s": 1.712,
+    "e": 2.1
+   },
+   {
+    "w": "people",
+    "s": 2.1,
+    "e": 2.475
+   },
+   {
+    "w": "began",
+    "s": 2.475,
+    "e": 2.825
+   },
+   {
+    "w": "to",
+    "s": 2.825,
+    "e": 2.95
+   },
+   {
+    "w": "march",
+    "s": 2.95,
+    "e": 3.775
+   },
+   {
+    "w": "First",
+    "s": 3.975,
+    "e": 4.325
+   },
+   {
+    "w": "the",
+    "s": 4.325,
+    "e": 4.463
+   },
+   {
+    "w": "soldiers",
+    "s": 4.463,
+    "e": 5.25
+   },
+   {
+    "w": "then",
+    "s": 5.325,
+    "e": 5.463
+   },
+   {
+    "w": "the",
+    "s": 5.463,
+    "e": 5.562
+   },
+   {
+    "w": "priests",
+    "s": 5.562,
+    "e": 5.987
+   },
+   {
+    "w": "with",
+    "s": 5.987,
+    "e": 6.112
+   },
+   {
+    "w": "their",
+    "s": 6.112,
+    "e": 6.287
+   },
+   {
+    "w": "trumpets",
+    "s": 6.287,
+    "e": 7.0
+   },
+   {
+    "w": "then",
+    "s": 7.075,
+    "e": 7.25
+   },
+   {
+    "w": "the",
+    "s": 7.25,
+    "e": 7.388
+   },
+   {
+    "w": "golden",
+    "s": 7.388,
+    "e": 7.862
+   },
+   {
+    "w": "ark",
+    "s": 7.862,
+    "e": 8.137
+   },
+   {
+    "w": "of",
+    "s": 8.137,
+    "e": 8.262
+   },
+   {
+    "w": "God",
+    "s": 8.262,
+    "e": 9.025
+   }
+  ]
+ },
+ "march-1": {
+  "src": "audio/jericho/march-1.m4a",
+  "text": "Toot! Toot! went the trumpets. But nobody else made a sound, not one word! Round the city they went, and back to camp.",
+  "voice": "af_heart,af_bella",
+  "duration": 8.575,
+  "words": [
+   {
+    "w": "Toot",
+    "s": 0.625,
+    "e": 1.0
+   },
+   {
+    "w": "Toot",
+    "s": 1.087,
+    "e": 1.45
+   },
+   {
+    "w": "went",
+    "s": 1.5,
+    "e": 1.663
+   },
+   {
+    "w": "the",
+    "s": 1.663,
+    "e": 1.75
+   },
+   {
+    "w": "trumpets",
+    "s": 1.75,
+    "e": 2.675
+   },
+   {
+    "w": "But",
+    "s": 2.75,
+    "e": 2.9
+   },
+   {
+    "w": "nobody",
+    "s": 2.9,
+    "e": 3.25
+   },
+   {
+    "w": "else",
+    "s": 3.25,
+    "e": 3.5
+   },
+   {
+    "w": "made",
+    "s": 3.5,
+    "e": 3.688
+   },
+   {
+    "w": "a",
+    "s": 3.688,
+    "e": 3.788
+   },
+   {
+    "w": "sound",
+    "s": 3.788,
+    "e": 4.25
+   },
+   {
+    "w": "not",
+    "s": 4.3,
+    "e": 4.5
+   },
+   {
+    "w": "one",
+    "s": 4.5,
+    "e": 4.725
+   },
+   {
+    "w": "word",
+    "s": 4.725,
+    "e": 5.375
+   },
+   {
+    "w": "Round",
+    "s": 5.537,
+    "e": 5.812
+   },
+   {
+    "w": "the",
+    "s": 5.812,
+    "e": 5.912
+   },
+   {
+    "w": "city",
+    "s": 5.912,
+    "e": 6.15
+   },
+   {
+    "w": "they",
+    "s": 6.15,
+    "e": 6.312
+   },
+   {
+    "w": "went",
+    "s": 6.312,
+    "e": 6.675
+   },
+   {
+    "w": "and",
+    "s": 6.75,
+    "e": 6.875
+   },
+   {
+    "w": "back",
+    "s": 6.875,
+    "e": 7.15
+   },
+   {
+    "w": "to",
+    "s": 7.15,
+    "e": 7.275
+   },
+   {
+    "w": "camp",
+    "s": 7.275,
+    "e": 7.975
+   }
+  ]
+ },
+ "march-2": {
+  "src": "audio/jericho/march-2.m4a",
+  "text": "Day two, day three, day four, day five, day six. March, march, march. And the people of Jericho watched from their walls and wondered.",
+  "voice": "af_heart,af_bella",
+  "duration": 10.25,
+  "words": [
+   {
+    "w": "Day",
+    "s": 0.625,
+    "e": 0.875
+   },
+   {
+    "w": "two",
+    "s": 0.875,
+    "e": 1.25
+   },
+   {
+    "w": "day",
+    "s": 1.325,
+    "e": 1.587
+   },
+   {
+    "w": "three",
+    "s": 1.587,
+    "e": 2.05
+   },
+   {
+    "w": "day",
+    "s": 2.15,
+    "e": 2.388
+   },
+   {
+    "w": "four",
+    "s": 2.388,
+    "e": 2.75
+   },
+   {
+    "w": "day",
+    "s": 2.825,
+    "e": 3.062
+   },
+   {
+    "w": "five",
+    "s": 3.062,
+    "e": 3.5
+   },
+   {
+    "w": "day",
+    "s": 3.575,
+    "e": 3.85
+   },
+   {
+    "w": "six",
+    "s": 3.85,
+    "e": 4.65
+   },
+   {
+    "w": "March",
+    "s": 4.825,
+    "e": 5.25
+   },
+   {
+    "w": "march",
+    "s": 5.3,
+    "e": 5.575
+   },
+   {
+    "w": "march",
+    "s": 5.625,
+    "e": 6.3
+   },
+   {
+    "w": "And",
+    "s": 6.425,
+    "e": 6.562
+   },
+   {
+    "w": "the",
+    "s": 6.562,
+    "e": 6.65
+   },
+   {
+    "w": "people",
+    "s": 6.65,
+    "e": 6.987
+   },
+   {
+    "w": "of",
+    "s": 6.987,
+    "e": 7.075
+   },
+   {
+    "w": "Jericho",
+    "s": 7.075,
+    "e": 7.612
+   },
+   {
+    "w": "watched",
+    "s": 7.612,
+    "e": 7.975
+   },
+   {
+    "w": "from",
+    "s": 7.975,
+    "e": 8.113
+   },
+   {
+    "w": "their",
+    "s": 8.113,
+    "e": 8.287
+   },
+   {
+    "w": "walls",
+    "s": 8.287,
+    "e": 8.775
+   },
+   {
+    "w": "and",
+    "s": 8.775,
+    "e": 8.9
+   },
+   {
+    "w": "wondered",
+    "s": 8.9,
+    "e": 9.675
+   }
+  ]
+ },
+ "shout-title": {
+  "src": "audio/jericho/shout-title.m4a",
+  "text": "Part Four. Shout!.",
+  "voice": "af_heart,af_bella",
+  "duration": 2.475,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "Four",
+    "s": 0.85,
+    "e": 1.075
+   },
+   {
+    "w": "Shout",
+    "s": 1.175,
+    "e": 1.85
+   }
+  ]
+ },
+ "shout-0": {
+  "src": "audio/jericho/shout-0.m4a",
+  "text": "On the seventh day, they marched around the city one, two, three, four, five, six, SEVEN times!",
+  "voice": "af_heart,af_bella",
+  "duration": 7.125,
+  "words": [
+   {
+    "w": "On",
+    "s": 0.6,
+    "e": 0.713
+   },
+   {
+    "w": "the",
+    "s": 0.713,
+    "e": 0.812
+   },
+   {
+    "w": "seventh",
+    "s": 0.812,
+    "e": 1.225
+   },
+   {
+    "w": "day",
+    "s": 1.225,
+    "e": 1.65
+   },
+   {
+    "w": "they",
+    "s": 1.75,
+    "e": 1.9
+   },
+   {
+    "w": "marched",
+    "s": 1.9,
+    "e": 2.225
+   },
+   {
+    "w": "around",
+    "s": 2.225,
+    "e": 2.513
+   },
+   {
+    "w": "the",
+    "s": 2.513,
+    "e": 2.612
+   },
+   {
+    "w": "city",
+    "s": 2.612,
+    "e": 2.875
+   },
+   {
+    "w": "one",
+    "s": 2.875,
+    "e": 3.2
+   },
+   {
+    "w": "two",
+    "s": 3.288,
+    "e": 3.675
+   },
+   {
+    "w": "three",
+    "s": 3.788,
+    "e": 4.075
+   },
+   {
+    "w": "four",
+    "s": 4.138,
+    "e": 4.4
+   },
+   {
+    "w": "five",
+    "s": 4.45,
+    "e": 4.775
+   },
+   {
+    "w": "six",
+    "s": 4.825,
+    "e": 5.275
+   },
+   {
+    "w": "SEVEN",
+    "s": 5.388,
+    "e": 5.75
+   },
+   {
+    "w": "times",
+    "s": 5.75,
+    "e": 6.55
+   }
+  ]
+ },
+ "shout-1": {
+  "src": "audio/jericho/shout-1.m4a",
+  "text": "The priests blew one long blast on their trumpets, and Joshua called out, “Shout! The Lord has given you the city!” Everyone shouted as loud as they could!",
+  "voice": "af_heart,af_bella",
+  "duration": 11.0,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.575,
+    "e": 0.65
+   },
+   {
+    "w": "priests",
+    "s": 0.65,
+    "e": 1.087
+   },
+   {
+    "w": "blew",
+    "s": 1.087,
+    "e": 1.387
+   },
+   {
+    "w": "one",
+    "s": 1.387,
+    "e": 1.625
+   },
+   {
+    "w": "long",
+    "s": 1.625,
+    "e": 1.925
+   },
+   {
+    "w": "blast",
+    "s": 1.925,
+    "e": 2.337
+   },
+   {
+    "w": "on",
+    "s": 2.337,
+    "e": 2.438
+   },
+   {
+    "w": "their",
+    "s": 2.438,
+    "e": 2.55
+   },
+   {
+    "w": "trumpets",
+    "s": 2.55,
+    "e": 3.375
+   },
+   {
+    "w": "and",
+    "s": 3.475,
+    "e": 3.612
+   },
+   {
+    "w": "Joshua",
+    "s": 3.612,
+    "e": 4.075
+   },
+   {
+    "w": "called",
+    "s": 4.075,
+    "e": 4.35
+   },
+   {
+    "w": "out",
+    "s": 4.35,
+    "e": 4.825
+   },
+   {
+    "w": "Shout",
+    "s": 5.1,
+    "e": 5.675
+   },
+   {
+    "w": "The",
+    "s": 5.775,
+    "e": 5.912
+   },
+   {
+    "w": "Lord",
+    "s": 5.912,
+    "e": 6.237
+   },
+   {
+    "w": "has",
+    "s": 6.237,
+    "e": 6.4
+   },
+   {
+    "w": "given",
+    "s": 6.4,
+    "e": 6.675
+   },
+   {
+    "w": "you",
+    "s": 6.675,
+    "e": 6.825
+   },
+   {
+    "w": "the",
+    "s": 6.825,
+    "e": 6.963
+   },
+   {
+    "w": "city",
+    "s": 6.963,
+    "e": 7.775
+   },
+   {
+    "w": "Everyone",
+    "s": 8.012,
+    "e": 8.525
+   },
+   {
+    "w": "shouted",
+    "s": 8.525,
+    "e": 8.925
+   },
+   {
+    "w": "as",
+    "s": 8.925,
+    "e": 9.088
+   },
+   {
+    "w": "loud",
+    "s": 9.088,
+    "e": 9.412
+   },
+   {
+    "w": "as",
+    "s": 9.412,
+    "e": 9.55
+   },
+   {
+    "w": "they",
+    "s": 9.55,
+    "e": 9.713
+   },
+   {
+    "w": "could",
+    "s": 9.713,
+    "e": 10.4
+   }
+  ]
+ },
+ "shout-2": {
+  "src": "audio/jericho/shout-2.m4a",
+  "text": "And with a great rumble… the walls of Jericho came tumbling DOWN! God did just what He promised.",
+  "voice": "af_heart,af_bella",
+  "duration": 7.55,
+  "words": [
+   {
+    "w": "And",
+    "s": 0.6,
+    "e": 0.738
+   },
+   {
+    "w": "with",
+    "s": 0.738,
+    "e": 0.863
+   },
+   {
+    "w": "a",
+    "s": 0.863,
+    "e": 0.963
+   },
+   {
+    "w": "great",
+    "s": 0.963,
+    "e": 1.325
+   },
+   {
+    "w": "rumble",
+    "s": 1.325,
+    "e": 1.975
+   },
+   {
+    "w": "the",
+    "s": 2.075,
+    "e": 2.212
+   },
+   {
+    "w": "walls",
+    "s": 2.212,
+    "e": 2.638
+   },
+   {
+    "w": "of",
+    "s": 2.638,
+    "e": 2.763
+   },
+   {
+    "w": "Jericho",
+    "s": 2.763,
+    "e": 3.325
+   },
+   {
+    "w": "came",
+    "s": 3.325,
+    "e": 3.612
+   },
+   {
+    "w": "tumbling",
+    "s": 3.612,
+    "e": 4.075
+   },
+   {
+    "w": "DOWN",
+    "s": 4.075,
+    "e": 4.85
+   },
+   {
+    "w": "God",
+    "s": 5.05,
+    "e": 5.475
+   },
+   {
+    "w": "did",
+    "s": 5.475,
+    "e": 5.65
+   },
+   {
+    "w": "just",
+    "s": 5.65,
+    "e": 5.862
+   },
+   {
+    "w": "what",
+    "s": 5.862,
+    "e": 5.987
+   },
+   {
+    "w": "He",
+    "s": 5.987,
+    "e": 6.1
+   },
+   {
+    "w": "promised",
+    "s": 6.1,
+    "e": 6.95
+   }
+  ]
+ },
+ "talk": {
+  "src": "audio/jericho/talk.m4a",
+  "text": "Let’s talk about it. God’s plan was to march and shout. Why do you think Joshua did it, even though it seemed strange? Can you march around the room seven times, and then shout “Hallelujah!”? What is something big that only God can do? Our memory verse is Joshua 6, verse 16. Shout! For the Lord has given you the city!",
+  "voice": "af_heart,af_bella",
+  "duration": 21.725,
+  "words": [
+   {
+    "w": "Let's",
+    "s": 0.625,
+    "e": 0.875
+   },
+   {
+    "w": "talk",
+    "s": 0.875,
+    "e": 1.113
+   },
+   {
+    "w": "about",
+    "s": 1.113,
+    "e": 1.4
+   },
+   {
+    "w": "it",
+    "s": 1.4,
+    "e": 1.875
+   },
+   {
+    "w": "God's",
+    "s": 2.025,
+    "e": 2.438
+   },
+   {
+    "w": "plan",
+    "s": 2.438,
+    "e": 2.825
+   },
+   {
+    "w": "was",
+    "s": 2.825,
+    "e": 3.0
+   },
+   {
+    "w": "to",
+    "s": 3.0,
+    "e": 3.138
+   },
+   {
+    "w": "march",
+    "s": 3.138,
+    "e": 3.5
+   },
+   {
+    "w": "and",
+    "s": 3.5,
+    "e": 3.675
+   },
+   {
+    "w": "shout",
+    "s": 3.675,
+    "e": 4.425
+   },
+   {
+    "w": "Why",
+    "s": 4.562,
+    "e": 4.713
+   },
+   {
+    "w": "do",
+    "s": 4.713,
+    "e": 4.812
+   },
+   {
+    "w": "you",
+    "s": 4.812,
+    "e": 4.9
+   },
+   {
+    "w": "think",
+    "s": 4.9,
+    "e": 5.138
+   },
+   {
+    "w": "Joshua",
+    "s": 5.138,
+    "e": 5.6
+   },
+   {
+    "w": "did",
+    "s": 5.6,
+    "e": 5.8
+   },
+   {
+    "w": "it",
+    "s": 5.8,
+    "e": 5.975
+   },
+   {
+    "w": "even",
+    "s": 6.05,
+    "e": 6.325
+   },
+   {
+    "w": "though",
+    "s": 6.325,
+    "e": 6.5
+   },
+   {
+    "w": "it",
+    "s": 6.5,
+    "e": 6.662
+   },
+   {
+    "w": "seemed",
+    "s": 6.662,
+    "e": 7.013
+   },
+   {
+    "w": "strange",
+    "s": 7.013,
+    "e": 7.9
+   },
+   {
+    "w": "Can",
+    "s": 8.05,
+    "e": 8.2
+   },
+   {
+    "w": "you",
+    "s": 8.2,
+    "e": 8.325
+   },
+   {
+    "w": "march",
+    "s": 8.325,
+    "e": 8.625
+   },
+   {
+    "w": "around",
+    "s": 8.625,
+    "e": 8.912
+   },
+   {
+    "w": "the",
+    "s": 8.912,
+    "e": 9.0
+   },
+   {
+    "w": "room",
+    "s": 9.0,
+    "e": 9.375
+   },
+   {
+    "w": "seven",
+    "s": 9.375,
+    "e": 9.75
+   },
+   {
+    "w": "times",
+    "s": 9.75,
+    "e": 10.275
+   },
+   {
+    "w": "and",
+    "s": 10.325,
+    "e": 10.438
+   },
+   {
+    "w": "then",
+    "s": 10.438,
+    "e": 10.662
+   },
+   {
+    "w": "shout",
+    "s": 10.662,
+    "e": 11.1
+   },
+   {
+    "w": "Hallelujah",
+    "s": 11.175,
+    "e": 12.175
+   },
+   {
+    "w": "What",
+    "s": 12.35,
+    "e": 12.488
+   },
+   {
+    "w": "is",
+    "s": 12.488,
+    "e": 12.6
+   },
+   {
+    "w": "something",
+    "s": 12.6,
+    "e": 13.0
+   },
+   {
+    "w": "big",
+    "s": 13.0,
+    "e": 13.3
+   },
+   {
+    "w": "that",
+    "s": 13.3,
+    "e": 13.45
+   },
+   {
+    "w": "only",
+    "s": 13.45,
+    "e": 13.762
+   },
+   {
+    "w": "God",
+    "s": 13.762,
+    "e": 14.1
+   },
+   {
+    "w": "can",
+    "s": 14.1,
+    "e": 14.3
+   },
+   {
+    "w": "do",
+    "s": 14.3,
+    "e": 14.725
+   },
+   {
+    "w": "Our",
+    "s": 14.9,
+    "e": 15.062
+   },
+   {
+    "w": "memory",
+    "s": 15.062,
+    "e": 15.45
+   },
+   {
+    "w": "verse",
+    "s": 15.45,
+    "e": 15.775
+   },
+   {
+    "w": "is",
+    "s": 15.775,
+    "e": 15.938
+   },
+   {
+    "w": "Joshua",
+    "s": 15.938,
+    "e": 16.438
+   },
+   {
+    "w": "6",
+    "s": 16.438,
+    "e": 16.85
+   },
+   {
+    "w": "verse",
+    "s": 16.9,
+    "e": 17.137
+   },
+   {
+    "w": "16",
+    "s": 17.137,
+    "e": 18.15
+   },
+   {
+    "w": "Shout",
+    "s": 18.35,
+    "e": 19.0
+   },
+   {
+    "w": "For",
+    "s": 19.1,
+    "e": 19.238
+   },
+   {
+    "w": "the",
+    "s": 19.238,
+    "e": 19.363
+   },
+   {
+    "w": "Lord",
+    "s": 19.363,
+    "e": 19.688
+   },
+   {
+    "w": "has",
+    "s": 19.688,
+    "e": 19.85
+   },
+   {
+    "w": "given",
+    "s": 19.85,
+    "e": 20.125
+   },
+   {
+    "w": "you",
+    "s": 20.125,
+    "e": 20.225
+   },
+   {
+    "w": "the",
+    "s": 20.225,
+    "e": 20.363
+   },
+   {
+    "w": "city",
+    "s": 20.363,
+    "e": 21.15
+   }
+  ]
+ }
+}
