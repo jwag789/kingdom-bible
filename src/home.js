@@ -24,8 +24,8 @@ const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
 
 export async function showHome() {
   const [library, games] = await Promise.all([
-    fetch('data/library.json').then(r => r.json()),
-    fetch('data/games.json').then(r => r.json(), () => ({})),
+    fetch('data/library.json', { cache: 'no-cache' }).then(r => r.json()),
+    fetch('data/games.json', { cache: 'no-cache' }).then(r => r.json(), () => ({})),
   ]);
   const stories = Object.fromEntries(await Promise.all(library.stories.map(async s => [s.id, await fetch(`data/${s.id}.json`).then(r => r.json())])));
   const entries = Object.fromEntries(library.stories.map(s => [s.id, s]));
@@ -129,7 +129,10 @@ export async function showHome() {
     // The rows.
     let number = 0;
     const numbers = Object.fromEntries(order.map(id => [id, ++number]));
-    const shelves = (library.shelves ?? [{ id: 'all', title: 'Stories', stories: order }])
+    // Rows from library.json; without them, one row for each testament.
+    const byTestament = [['old', 'The Old Testament'], ['new', 'The New Testament']]
+      .map(([t, title]) => ({ id: t, title, stories: library.stories.filter(s => (s.testament ?? 'old') === t).map(s => s.id) }));
+    const shelves = (library.shelves ?? byTestament)
       .map(s => ({ ...s, stories: s.stories.filter(id => stories[id]) }))
       .filter(s => s.stories.length);
     const placed = new Set(shelves.flatMap(s => s.stories));

@@ -35,7 +35,9 @@ self.addEventListener('fetch', e => {
 async function networkFirst(req) {
   const cache = await caches.open(CACHE);
   try {
-    const res = await fetch(req);
+    // "no-cache" still uses the browser's copy, but only after checking with the server that it's current
+    // (GitHub Pages lets browsers keep files for ten minutes, which could pair new code with old data).
+    const res = await fetch(req, { cache: 'no-cache' });
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch {
