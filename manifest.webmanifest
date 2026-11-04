@@ -1,0 +1,17 @@
+{
+  "name": "Kingdom Bible",
+  "short_name": "Kingdom Bible",
+  "description": "Bible stories for kids and beginners, told in cut-paper pictures you can touch, with narration and music.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "any",
+  "background_color": "#04050a",
+  "theme_color": "#04050a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
