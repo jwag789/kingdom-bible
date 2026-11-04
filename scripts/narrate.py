@@ -3,7 +3,7 @@ this machine (free; the model downloads from Hugging Face on first use), and sav
 timing of every word so the reader can light words up as they're spoken.
 
     .narration/bin/python scripts/narrate.py                  # data/genesis-1.json
-    .narration/bin/python scripts/narrate.py data/x.json --voice af_heart --speed 0.92 --force
+    .narration/bin/python scripts/narrate.py data/x.json --voice af_heart,af_bella --speed 0.92 --force
 
 Writes audio/<story>/<slide>.m4a and audio/<story>/narration.json. Slides whose text
 hasn't changed are skipped unless --force is given.
@@ -25,7 +25,7 @@ RATE = 24000
 
 parser = argparse.ArgumentParser()
 parser.add_argument("story", nargs="?", default="data/genesis-1.json")
-parser.add_argument("--voice", default="af_heart")
+parser.add_argument("--voice", default="af_heart,af_bella")   # Heart and Bella blended: warm and bright
 parser.add_argument("--speed", type=float, default=0.92)
 parser.add_argument("--force", action="store_true")
 args = parser.parse_args()

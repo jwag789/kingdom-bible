@@ -1,7 +1,7 @@
 """Records the games' spoken lines (the intro, "Day Four…", "Two lions!", "You did it!") with the same
 narrator as the stories.
 
-    .narration/bin/python scripts/narrate_games.py [--voice bm_lewis] [--speed 0.9] [--force]
+    .narration/bin/python scripts/narrate_games.py [--voice af_heart,af_bella] [--speed 0.9] [--force]
 
 Reads data/games.json (and data/props.json for the animals' names) and writes
 audio/games/<story>/<key>.m4a. Lines already recorded are skipped unless --force is given.
@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RATE = 24000
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--voice", default="bm_lewis")
+parser.add_argument("--voice", default="af_heart,af_bella")
 parser.add_argument("--speed", type=float, default=0.9)
 parser.add_argument("--force", action="store_true")
 args = parser.parse_args()

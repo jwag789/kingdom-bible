@@ -1,4 +1,4 @@
-"""Records the same lines with several Kokoro voices so you can pick the narrator by ear.
+"""Records the same line with several Kokoro voices so you can pick the narrator by ear.
 
     .narration/bin/python scripts/voice_samples.py
 
@@ -19,22 +19,21 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "audio" / "voices"
 OUT.mkdir(parents=True, exist_ok=True)
 RATE = 24000
-SPEED = 0.85
+SPEED = 0.92                             # the speed the stories are read at
 
-LINE = ('In the very beginning, before there was anything at all, there was God. '
-        'Then God spoke: "Let there be light!" And light burst into being.')
+LINE = ('Long ago in Bethlehem lived a boy named David. Out in the hills, he played his harp and sang songs to God. '
+        '"Send someone to fight me!" Goliath roared. But David wasn\'t afraid.')
 
 VOICES = [
-    ("bm_george", "George — British, mature storyteller"),
-    ("bm_fable", "Fable — British, warm and grand"),
-    ("bm_lewis", "Lewis — British, deep"),
-    ("bm_daniel", "Daniel — British, calm"),
-    ("am_onyx", "Onyx — American, very deep"),
-    ("am_fenrir", "Fenrir — American, strong"),
-    ("am_michael", "Michael — American, warm"),
-    ("am_adam", "Adam — American, low"),
-    ("bm_george,am_onyx", "George + Onyx blend — British gravitas, deeper"),
-    ("bm_fable,bm_lewis", "Fable + Lewis blend — grand and deep"),
+    ("bm_lewis", "Lewis — British, deep (the narrator now)"),
+    ("af_heart", "Heart — American, warm and natural"),
+    ("af_bella", "Bella — American, bright and friendly"),
+    ("af_nicole", "Nicole — American, soft and hushed (bedtime)"),
+    ("af_sarah", "Sarah — American, clear and gentle"),
+    ("af_kore", "Kore — American, calm"),
+    ("bf_emma", "Emma — British, warm"),
+    ("bf_isabella", "Isabella — British, bright"),
+    ("af_heart,af_bella", "Heart + Bella blend — warm and bright"),
 ]
 
 pipelines = {"a": KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M"),
