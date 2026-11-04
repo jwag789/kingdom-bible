@@ -7,6 +7,9 @@ export class Narrator {
   constructor(sound) {
     this.sound = sound;
     this.el = new Audio();
+    // A family voice shared by link plays from Supabase, another site: without asking for it with CORS,
+    // the browser lets it through the sound mix (createMediaElementSource) only as silence.
+    this.el.crossOrigin = 'anonymous';
     this.el.preload = 'auto';
     this.manifest = {};
     this.current = null;
