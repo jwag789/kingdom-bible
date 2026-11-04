@@ -41,9 +41,14 @@ const narrator = new Narrator(sound);
 await narrator.load(`audio/${storyId}/narration.json`);
 
 // ---- Family voices: a link like ?story=noah&voice=<id> brings a shared recording to this device.
-const sharedVoice = new URLSearchParams(location.search).get('voice');
+// Only the id itself: a share sheet's "Copy" can glue the message ("Dad reads “Noah's Ark” 🎧") onto the end.
+const sharedVoice = (new URLSearchParams(location.search).get('voice') ?? '').match(/^[a-z0-9]{8,40}/i)?.[0].toLowerCase() ?? null;
 const received = sharedVoice ? await receiveVoice(sharedVoice, storyId).catch(() => null) : null;
-if (received) chooseVoice(storyId, sharedVoice);
+if (received) {
+  chooseVoice(storyId, sharedVoice);
+  // Tidy the address bar, so copying it from here passes on a clean link.
+  try { history.replaceState(null, '', `?story=${storyId}&voice=${sharedVoice}${location.hash}`); } catch {}
+}
 let clipUrls = {};
 async function useVoice(voiceId) {
   chooseVoice(storyId, voiceId);

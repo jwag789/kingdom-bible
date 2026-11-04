@@ -178,7 +178,8 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
         const link = await shareVoice({ name: voice.name, storyId, clips, onProgress: f => { note.textContent = `Sending… ${Math.round(f * 100)}%`; } });
         const text = `${voice.name} reads “${story.title}” 🎧`;
         if (navigator.share) {
-          await navigator.share({ title: text, text, url: link }).catch(() => {});
+          // The message goes on its own line, so even when it's copied together with the link, the link stays clean.
+          await navigator.share({ title: text, text: `${text}\n`, url: link }).catch(() => {});
           note.textContent = 'Sent! Anyone you shared the link with can listen.';
         } else {
           await navigator.clipboard?.writeText(link).catch(() => {});
