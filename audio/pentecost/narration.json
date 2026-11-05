@@ -1,0 +1,2382 @@
+{
+ "cover": {
+  "src": "audio/pentecost/cover.m4a",
+  "text": "The Spirit Comes.",
+  "voice": "af_heart,af_bella",
+  "duration": 2.475,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.625,
+    "e": 0.725
+   },
+   {
+    "w": "Spirit",
+    "s": 0.725,
+    "e": 1.125
+   },
+   {
+    "w": "Comes",
+    "s": 1.125,
+    "e": 1.875
+   }
+  ]
+ },
+ "forty-title": {
+  "src": "audio/pentecost/forty-title.m4a",
+  "text": "Part One. Forty Wonderful Days.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.55,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "One",
+    "s": 0.85,
+    "e": 1.275
+   },
+   {
+    "w": "Forty",
+    "s": 1.425,
+    "e": 1.775
+   },
+   {
+    "w": "Wonderful",
+    "s": 1.775,
+    "e": 2.175
+   },
+   {
+    "w": "Days",
+    "s": 2.175,
+    "e": 2.95
+   }
+  ]
+ },
+ "forty-0": {
+  "src": "audio/pentecost/forty-0.m4a",
+  "text": "After Jesus came back to life, He stayed with His friends for forty days. He ate with them, talked with them, and showed them again and again that He was really alive!",
+  "voice": "af_heart,af_bella",
+  "duration": 11.575,
+  "words": [
+   {
+    "w": "After",
+    "s": 0.625,
+    "e": 0.963
+   },
+   {
+    "w": "Jesus",
+    "s": 0.963,
+    "e": 1.425
+   },
+   {
+    "w": "came",
+    "s": 1.425,
+    "e": 1.65
+   },
+   {
+    "w": "back",
+    "s": 1.65,
+    "e": 1.925
+   },
+   {
+    "w": "to",
+    "s": 1.925,
+    "e": 2.05
+   },
+   {
+    "w": "life",
+    "s": 2.05,
+    "e": 2.675
+   },
+   {
+    "w": "He",
+    "s": 2.775,
+    "e": 2.925
+   },
+   {
+    "w": "stayed",
+    "s": 2.925,
+    "e": 3.263
+   },
+   {
+    "w": "with",
+    "s": 3.263,
+    "e": 3.388
+   },
+   {
+    "w": "His",
+    "s": 3.388,
+    "e": 3.575
+   },
+   {
+    "w": "friends",
+    "s": 3.575,
+    "e": 4.0
+   },
+   {
+    "w": "for",
+    "s": 4.0,
+    "e": 4.175
+   },
+   {
+    "w": "forty",
+    "s": 4.175,
+    "e": 4.55
+   },
+   {
+    "w": "days",
+    "s": 4.55,
+    "e": 5.475
+   },
+   {
+    "w": "He",
+    "s": 5.612,
+    "e": 5.8
+   },
+   {
+    "w": "ate",
+    "s": 5.8,
+    "e": 6.013
+   },
+   {
+    "w": "with",
+    "s": 6.013,
+    "e": 6.175
+   },
+   {
+    "w": "them",
+    "s": 6.175,
+    "e": 6.55
+   },
+   {
+    "w": "talked",
+    "s": 6.662,
+    "e": 7.013
+   },
+   {
+    "w": "with",
+    "s": 7.013,
+    "e": 7.175
+   },
+   {
+    "w": "them",
+    "s": 7.175,
+    "e": 7.675
+   },
+   {
+    "w": "and",
+    "s": 7.775,
+    "e": 7.925
+   },
+   {
+    "w": "showed",
+    "s": 7.925,
+    "e": 8.188
+   },
+   {
+    "w": "them",
+    "s": 8.188,
+    "e": 8.325
+   },
+   {
+    "w": "again",
+    "s": 8.325,
+    "e": 8.725
+   },
+   {
+    "w": "and",
+    "s": 8.725,
+    "e": 8.838
+   },
+   {
+    "w": "again",
+    "s": 8.838,
+    "e": 9.275
+   },
+   {
+    "w": "that",
+    "s": 9.275,
+    "e": 9.425
+   },
+   {
+    "w": "He",
+    "s": 9.425,
+    "e": 9.6
+   },
+   {
+    "w": "was",
+    "s": 9.6,
+    "e": 9.8
+   },
+   {
+    "w": "really",
+    "s": 9.8,
+    "e": 10.175
+   },
+   {
+    "w": "alive",
+    "s": 10.175,
+    "e": 11.0
+   }
+  ]
+ },
+ "forty-1": {
+  "src": "audio/pentecost/forty-1.m4a",
+  "text": "“Stay in Jerusalem and wait,” Jesus told them. “Soon God will send you the Holy Spirit, the Helper I promised.”",
+  "voice": "af_heart,af_bella",
+  "duration": 8.5,
+  "words": [
+   {
+    "w": "Stay",
+    "s": 0.65,
+    "e": 0.95
+   },
+   {
+    "w": "in",
+    "s": 0.95,
+    "e": 1.075
+   },
+   {
+    "w": "Jerusalem",
+    "s": 1.075,
+    "e": 1.725
+   },
+   {
+    "w": "and",
+    "s": 1.725,
+    "e": 1.863
+   },
+   {
+    "w": "wait",
+    "s": 1.863,
+    "e": 2.45
+   },
+   {
+    "w": "Jesus",
+    "s": 2.625,
+    "e": 3.05
+   },
+   {
+    "w": "told",
+    "s": 3.05,
+    "e": 3.312
+   },
+   {
+    "w": "them",
+    "s": 3.312,
+    "e": 3.95
+   },
+   {
+    "w": "Soon",
+    "s": 4.25,
+    "e": 4.537
+   },
+   {
+    "w": "God",
+    "s": 4.537,
+    "e": 4.888
+   },
+   {
+    "w": "will",
+    "s": 4.888,
+    "e": 5.037
+   },
+   {
+    "w": "send",
+    "s": 5.037,
+    "e": 5.287
+   },
+   {
+    "w": "you",
+    "s": 5.287,
+    "e": 5.362
+   },
+   {
+    "w": "the",
+    "s": 5.362,
+    "e": 5.45
+   },
+   {
+    "w": "Holy",
+    "s": 5.45,
+    "e": 5.787
+   },
+   {
+    "w": "Spirit",
+    "s": 5.787,
+    "e": 6.35
+   },
+   {
+    "w": "the",
+    "s": 6.425,
+    "e": 6.525
+   },
+   {
+    "w": "Helper",
+    "s": 6.525,
+    "e": 6.925
+   },
+   {
+    "w": "I",
+    "s": 6.925,
+    "e": 7.075
+   },
+   {
+    "w": "promised",
+    "s": 7.075,
+    "e": 7.9
+   }
+  ]
+ },
+ "up-title": {
+  "src": "audio/pentecost/up-title.m4a",
+  "text": "Part Two. Up to Heaven.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.025,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.887
+   },
+   {
+    "w": "Two",
+    "s": 0.887,
+    "e": 1.275
+   },
+   {
+    "w": "Up",
+    "s": 1.4,
+    "e": 1.6
+   },
+   {
+    "w": "to",
+    "s": 1.6,
+    "e": 1.725
+   },
+   {
+    "w": "Heaven",
+    "s": 1.725,
+    "e": 2.425
+   }
+  ]
+ },
+ "up-0": {
+  "src": "audio/pentecost/up-0.m4a",
+  "text": "One day, on a hill outside the city, Jesus said, “You will tell everyone about Me, here in Jerusalem, and all the way to the ends of the earth!”",
+  "voice": "af_heart,af_bella",
+  "duration": 10.075,
+  "words": [
+   {
+    "w": "One",
+    "s": 0.65,
+    "e": 0.875
+   },
+   {
+    "w": "day",
+    "s": 0.875,
+    "e": 1.225
+   },
+   {
+    "w": "on",
+    "s": 1.3,
+    "e": 1.45
+   },
+   {
+    "w": "a",
+    "s": 1.45,
+    "e": 1.562
+   },
+   {
+    "w": "hill",
+    "s": 1.562,
+    "e": 1.825
+   },
+   {
+    "w": "outside",
+    "s": 1.825,
+    "e": 2.237
+   },
+   {
+    "w": "the",
+    "s": 2.237,
+    "e": 2.337
+   },
+   {
+    "w": "city",
+    "s": 2.337,
+    "e": 2.8
+   },
+   {
+    "w": "Jesus",
+    "s": 2.913,
+    "e": 3.337
+   },
+   {
+    "w": "said",
+    "s": 3.337,
+    "e": 4.05
+   },
+   {
+    "w": "You",
+    "s": 4.275,
+    "e": 4.362
+   },
+   {
+    "w": "will",
+    "s": 4.362,
+    "e": 4.525
+   },
+   {
+    "w": "tell",
+    "s": 4.525,
+    "e": 4.812
+   },
+   {
+    "w": "everyone",
+    "s": 4.812,
+    "e": 5.275
+   },
+   {
+    "w": "about",
+    "s": 5.275,
+    "e": 5.575
+   },
+   {
+    "w": "Me",
+    "s": 5.575,
+    "e": 6.0
+   },
+   {
+    "w": "here",
+    "s": 6.138,
+    "e": 6.4
+   },
+   {
+    "w": "in",
+    "s": 6.4,
+    "e": 6.525
+   },
+   {
+    "w": "Jerusalem",
+    "s": 6.525,
+    "e": 7.35
+   },
+   {
+    "w": "and",
+    "s": 7.425,
+    "e": 7.562
+   },
+   {
+    "w": "all",
+    "s": 7.562,
+    "e": 7.787
+   },
+   {
+    "w": "the",
+    "s": 7.787,
+    "e": 7.875
+   },
+   {
+    "w": "way",
+    "s": 7.875,
+    "e": 8.1
+   },
+   {
+    "w": "to",
+    "s": 8.1,
+    "e": 8.188
+   },
+   {
+    "w": "the",
+    "s": 8.188,
+    "e": 8.338
+   },
+   {
+    "w": "ends",
+    "s": 8.338,
+    "e": 8.637
+   },
+   {
+    "w": "of",
+    "s": 8.637,
+    "e": 8.713
+   },
+   {
+    "w": "the",
+    "s": 8.713,
+    "e": 8.85
+   },
+   {
+    "w": "earth",
+    "s": 8.85,
+    "e": 9.475
+   }
+  ]
+ },
+ "up-1": {
+  "src": "audio/pentecost/up-1.m4a",
+  "text": "Then, while they watched, Jesus was lifted up into the sky, higher and higher, until a cloud hid Him from sight.",
+  "voice": "af_heart,af_bella",
+  "duration": 8.425,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.625,
+    "e": 0.925
+   },
+   {
+    "w": "while",
+    "s": 0.975,
+    "e": 1.175
+   },
+   {
+    "w": "they",
+    "s": 1.175,
+    "e": 1.363
+   },
+   {
+    "w": "watched",
+    "s": 1.363,
+    "e": 2.05
+   },
+   {
+    "w": "Jesus",
+    "s": 2.2,
+    "e": 2.65
+   },
+   {
+    "w": "was",
+    "s": 2.65,
+    "e": 2.825
+   },
+   {
+    "w": "lifted",
+    "s": 2.825,
+    "e": 3.138
+   },
+   {
+    "w": "up",
+    "s": 3.138,
+    "e": 3.288
+   },
+   {
+    "w": "into",
+    "s": 3.288,
+    "e": 3.462
+   },
+   {
+    "w": "the",
+    "s": 3.462,
+    "e": 3.587
+   },
+   {
+    "w": "sky",
+    "s": 3.587,
+    "e": 4.225
+   },
+   {
+    "w": "higher",
+    "s": 4.362,
+    "e": 4.825
+   },
+   {
+    "w": "and",
+    "s": 4.825,
+    "e": 4.95
+   },
+   {
+    "w": "higher",
+    "s": 4.95,
+    "e": 5.65
+   },
+   {
+    "w": "until",
+    "s": 5.775,
+    "e": 6.037
+   },
+   {
+    "w": "a",
+    "s": 6.037,
+    "e": 6.138
+   },
+   {
+    "w": "cloud",
+    "s": 6.138,
+    "e": 6.6
+   },
+   {
+    "w": "hid",
+    "s": 6.6,
+    "e": 6.763
+   },
+   {
+    "w": "Him",
+    "s": 6.763,
+    "e": 6.925
+   },
+   {
+    "w": "from",
+    "s": 6.925,
+    "e": 7.138
+   },
+   {
+    "w": "sight",
+    "s": 7.138,
+    "e": 7.85
+   }
+  ]
+ },
+ "up-2": {
+  "src": "audio/pentecost/up-2.m4a",
+  "text": "Suddenly two angels in white stood beside them. “Why are you looking up at the sky? Jesus will come back the same way you saw Him go!”",
+  "voice": "af_heart,af_bella",
+  "duration": 9.525,
+  "words": [
+   {
+    "w": "Suddenly",
+    "s": 0.625,
+    "e": 1.075
+   },
+   {
+    "w": "two",
+    "s": 1.075,
+    "e": 1.387
+   },
+   {
+    "w": "angels",
+    "s": 1.387,
+    "e": 1.85
+   },
+   {
+    "w": "in",
+    "s": 1.85,
+    "e": 2.013
+   },
+   {
+    "w": "white",
+    "s": 2.013,
+    "e": 2.413
+   },
+   {
+    "w": "stood",
+    "s": 2.413,
+    "e": 2.7
+   },
+   {
+    "w": "beside",
+    "s": 2.7,
+    "e": 3.1
+   },
+   {
+    "w": "them",
+    "s": 3.1,
+    "e": 3.775
+   },
+   {
+    "w": "Why",
+    "s": 4.0,
+    "e": 4.162
+   },
+   {
+    "w": "are",
+    "s": 4.162,
+    "e": 4.25
+   },
+   {
+    "w": "you",
+    "s": 4.25,
+    "e": 4.375
+   },
+   {
+    "w": "looking",
+    "s": 4.375,
+    "e": 4.638
+   },
+   {
+    "w": "up",
+    "s": 4.638,
+    "e": 4.787
+   },
+   {
+    "w": "at",
+    "s": 4.787,
+    "e": 4.862
+   },
+   {
+    "w": "the",
+    "s": 4.862,
+    "e": 4.963
+   },
+   {
+    "w": "sky",
+    "s": 4.963,
+    "e": 5.7
+   },
+   {
+    "w": "Jesus",
+    "s": 5.9,
+    "e": 6.375
+   },
+   {
+    "w": "will",
+    "s": 6.375,
+    "e": 6.525
+   },
+   {
+    "w": "come",
+    "s": 6.525,
+    "e": 6.75
+   },
+   {
+    "w": "back",
+    "s": 6.75,
+    "e": 7.05
+   },
+   {
+    "w": "the",
+    "s": 7.05,
+    "e": 7.2
+   },
+   {
+    "w": "same",
+    "s": 7.2,
+    "e": 7.55
+   },
+   {
+    "w": "way",
+    "s": 7.55,
+    "e": 7.725
+   },
+   {
+    "w": "you",
+    "s": 7.725,
+    "e": 7.862
+   },
+   {
+    "w": "saw",
+    "s": 7.862,
+    "e": 8.088
+   },
+   {
+    "w": "Him",
+    "s": 8.088,
+    "e": 8.275
+   },
+   {
+    "w": "go",
+    "s": 8.275,
+    "e": 8.9
+   }
+  ]
+ },
+ "wind-title": {
+  "src": "audio/pentecost/wind-title.m4a",
+  "text": "Part Three. Wind and Fire.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.2,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Three",
+    "s": 0.875,
+    "e": 1.325
+   },
+   {
+    "w": "Wind",
+    "s": 1.462,
+    "e": 1.738
+   },
+   {
+    "w": "and",
+    "s": 1.738,
+    "e": 1.863
+   },
+   {
+    "w": "Fire",
+    "s": 1.863,
+    "e": 2.6
+   }
+  ]
+ },
+ "wind-0": {
+  "src": "audio/pentecost/wind-0.m4a",
+  "text": "Jesus’ friends waited and prayed together in a room in Jerusalem, just as He had said.",
+  "voice": "af_heart,af_bella",
+  "duration": 6.725,
+  "words": [
+   {
+    "w": "Jesus'",
+    "s": 0.65,
+    "e": 1.087
+   },
+   {
+    "w": "friends",
+    "s": 1.087,
+    "e": 1.637
+   },
+   {
+    "w": "waited",
+    "s": 1.637,
+    "e": 2.125
+   },
+   {
+    "w": "and",
+    "s": 2.125,
+    "e": 2.263
+   },
+   {
+    "w": "prayed",
+    "s": 2.263,
+    "e": 2.6
+   },
+   {
+    "w": "together",
+    "s": 2.6,
+    "e": 3.025
+   },
+   {
+    "w": "in",
+    "s": 3.025,
+    "e": 3.112
+   },
+   {
+    "w": "a",
+    "s": 3.112,
+    "e": 3.212
+   },
+   {
+    "w": "room",
+    "s": 3.212,
+    "e": 3.513
+   },
+   {
+    "w": "in",
+    "s": 3.513,
+    "e": 3.625
+   },
+   {
+    "w": "Jerusalem",
+    "s": 3.625,
+    "e": 4.625
+   },
+   {
+    "w": "just",
+    "s": 4.763,
+    "e": 5.05
+   },
+   {
+    "w": "as",
+    "s": 5.05,
+    "e": 5.175
+   },
+   {
+    "w": "He",
+    "s": 5.175,
+    "e": 5.287
+   },
+   {
+    "w": "had",
+    "s": 5.287,
+    "e": 5.463
+   },
+   {
+    "w": "said",
+    "s": 5.463,
+    "e": 6.125
+   }
+  ]
+ },
+ "wind-1": {
+  "src": "audio/pentecost/wind-1.m4a",
+  "text": "Then, on the day of a big feast called Pentecost, there came a sound from heaven like a mighty, rushing wind! It filled the whole house. Whoosh!",
+  "voice": "af_heart,af_bella",
+  "duration": 10.25,
+  "words": [
+   {
+    "w": "Then",
+    "s": 0.65,
+    "e": 0.925
+   },
+   {
+    "w": "on",
+    "s": 0.963,
+    "e": 1.062
+   },
+   {
+    "w": "the",
+    "s": 1.062,
+    "e": 1.15
+   },
+   {
+    "w": "day",
+    "s": 1.15,
+    "e": 1.375
+   },
+   {
+    "w": "of",
+    "s": 1.375,
+    "e": 1.462
+   },
+   {
+    "w": "a",
+    "s": 1.462,
+    "e": 1.538
+   },
+   {
+    "w": "big",
+    "s": 1.538,
+    "e": 1.812
+   },
+   {
+    "w": "feast",
+    "s": 1.812,
+    "e": 2.175
+   },
+   {
+    "w": "called",
+    "s": 2.175,
+    "e": 2.45
+   },
+   {
+    "w": "Pentecost",
+    "s": 2.45,
+    "e": 3.45
+   },
+   {
+    "w": "there",
+    "s": 3.55,
+    "e": 3.675
+   },
+   {
+    "w": "came",
+    "s": 3.675,
+    "e": 3.862
+   },
+   {
+    "w": "a",
+    "s": 3.862,
+    "e": 3.962
+   },
+   {
+    "w": "sound",
+    "s": 3.962,
+    "e": 4.3
+   },
+   {
+    "w": "from",
+    "s": 4.3,
+    "e": 4.513
+   },
+   {
+    "w": "heaven",
+    "s": 4.513,
+    "e": 4.875
+   },
+   {
+    "w": "like",
+    "s": 4.875,
+    "e": 5.037
+   },
+   {
+    "w": "a",
+    "s": 5.037,
+    "e": 5.15
+   },
+   {
+    "w": "mighty",
+    "s": 5.15,
+    "e": 5.625
+   },
+   {
+    "w": "rushing",
+    "s": 5.713,
+    "e": 6.125
+   },
+   {
+    "w": "wind",
+    "s": 6.125,
+    "e": 6.875
+   },
+   {
+    "w": "It",
+    "s": 7.025,
+    "e": 7.237
+   },
+   {
+    "w": "filled",
+    "s": 7.237,
+    "e": 7.5
+   },
+   {
+    "w": "the",
+    "s": 7.5,
+    "e": 7.6
+   },
+   {
+    "w": "whole",
+    "s": 7.6,
+    "e": 7.85
+   },
+   {
+    "w": "house",
+    "s": 7.85,
+    "e": 8.65
+   },
+   {
+    "w": "Whoosh",
+    "s": 8.838,
+    "e": 9.65
+   }
+  ]
+ },
+ "wind-2": {
+  "src": "audio/pentecost/wind-2.m4a",
+  "text": "Little flames, like fire, came and rested over each one of them. They were all filled with the Holy Spirit, and they began to speak in other languages!",
+  "voice": "af_heart,af_bella",
+  "duration": 10.625,
+  "words": [
+   {
+    "w": "Little",
+    "s": 0.625,
+    "e": 0.9
+   },
+   {
+    "w": "flames",
+    "s": 0.9,
+    "e": 1.525
+   },
+   {
+    "w": "like",
+    "s": 1.562,
+    "e": 1.788
+   },
+   {
+    "w": "fire",
+    "s": 1.788,
+    "e": 2.4
+   },
+   {
+    "w": "came",
+    "s": 2.538,
+    "e": 2.875
+   },
+   {
+    "w": "and",
+    "s": 2.875,
+    "e": 3.0
+   },
+   {
+    "w": "rested",
+    "s": 3.0,
+    "e": 3.425
+   },
+   {
+    "w": "over",
+    "s": 3.425,
+    "e": 3.725
+   },
+   {
+    "w": "each",
+    "s": 3.725,
+    "e": 3.975
+   },
+   {
+    "w": "one",
+    "s": 3.975,
+    "e": 4.112
+   },
+   {
+    "w": "of",
+    "s": 4.112,
+    "e": 4.225
+   },
+   {
+    "w": "them",
+    "s": 4.225,
+    "e": 4.975
+   },
+   {
+    "w": "They",
+    "s": 5.138,
+    "e": 5.287
+   },
+   {
+    "w": "were",
+    "s": 5.287,
+    "e": 5.438
+   },
+   {
+    "w": "all",
+    "s": 5.438,
+    "e": 5.775
+   },
+   {
+    "w": "filled",
+    "s": 5.775,
+    "e": 6.138
+   },
+   {
+    "w": "with",
+    "s": 6.138,
+    "e": 6.263
+   },
+   {
+    "w": "the",
+    "s": 6.263,
+    "e": 6.362
+   },
+   {
+    "w": "Holy",
+    "s": 6.362,
+    "e": 6.763
+   },
+   {
+    "w": "Spirit",
+    "s": 6.763,
+    "e": 7.475
+   },
+   {
+    "w": "and",
+    "s": 7.575,
+    "e": 7.688
+   },
+   {
+    "w": "they",
+    "s": 7.688,
+    "e": 7.825
+   },
+   {
+    "w": "began",
+    "s": 7.825,
+    "e": 8.162
+   },
+   {
+    "w": "to",
+    "s": 8.162,
+    "e": 8.287
+   },
+   {
+    "w": "speak",
+    "s": 8.287,
+    "e": 8.637
+   },
+   {
+    "w": "in",
+    "s": 8.637,
+    "e": 8.775
+   },
+   {
+    "w": "other",
+    "s": 8.775,
+    "e": 9.075
+   },
+   {
+    "w": "languages",
+    "s": 9.075,
+    "e": 10.05
+   }
+  ]
+ },
+ "crowd-title": {
+  "src": "audio/pentecost/crowd-title.m4a",
+  "text": "Part Four. Everyone Understood.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.375,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "Four",
+    "s": 0.85,
+    "e": 1.325
+   },
+   {
+    "w": "Everyone",
+    "s": 1.462,
+    "e": 1.887
+   },
+   {
+    "w": "Understood",
+    "s": 1.887,
+    "e": 2.775
+   }
+  ]
+ },
+ "crowd-0": {
+  "src": "audio/pentecost/crowd-0.m4a",
+  "text": "Jerusalem was full of visitors from many different countries. When they heard the noise, a big crowd came running to see what was happening.",
+  "voice": "af_heart,af_bella",
+  "duration": 9.35,
+  "words": [
+   {
+    "w": "Jerusalem",
+    "s": 0.6,
+    "e": 1.275
+   },
+   {
+    "w": "was",
+    "s": 1.275,
+    "e": 1.488
+   },
+   {
+    "w": "full",
+    "s": 1.488,
+    "e": 1.712
+   },
+   {
+    "w": "of",
+    "s": 1.712,
+    "e": 1.8
+   },
+   {
+    "w": "visitors",
+    "s": 1.8,
+    "e": 2.3
+   },
+   {
+    "w": "from",
+    "s": 2.3,
+    "e": 2.5
+   },
+   {
+    "w": "many",
+    "s": 2.5,
+    "e": 2.75
+   },
+   {
+    "w": "different",
+    "s": 2.75,
+    "e": 3.075
+   },
+   {
+    "w": "countries",
+    "s": 3.075,
+    "e": 4.175
+   },
+   {
+    "w": "When",
+    "s": 4.3,
+    "e": 4.438
+   },
+   {
+    "w": "they",
+    "s": 4.438,
+    "e": 4.575
+   },
+   {
+    "w": "heard",
+    "s": 4.575,
+    "e": 4.812
+   },
+   {
+    "w": "the",
+    "s": 4.812,
+    "e": 4.9
+   },
+   {
+    "w": "noise",
+    "s": 4.9,
+    "e": 5.65
+   },
+   {
+    "w": "a",
+    "s": 5.787,
+    "e": 5.925
+   },
+   {
+    "w": "big",
+    "s": 5.925,
+    "e": 6.25
+   },
+   {
+    "w": "crowd",
+    "s": 6.25,
+    "e": 6.75
+   },
+   {
+    "w": "came",
+    "s": 6.75,
+    "e": 7.025
+   },
+   {
+    "w": "running",
+    "s": 7.025,
+    "e": 7.375
+   },
+   {
+    "w": "to",
+    "s": 7.375,
+    "e": 7.513
+   },
+   {
+    "w": "see",
+    "s": 7.513,
+    "e": 7.713
+   },
+   {
+    "w": "what",
+    "s": 7.713,
+    "e": 7.838
+   },
+   {
+    "w": "was",
+    "s": 7.838,
+    "e": 7.95
+   },
+   {
+    "w": "happening",
+    "s": 7.95,
+    "e": 8.775
+   }
+  ]
+ },
+ "crowd-1": {
+  "src": "audio/pentecost/crowd-1.m4a",
+  "text": "Jesus’ friends were telling everyone about the wonderful things God had done, and every single person heard it in their very own language! “How can this be?” they said. “They’re all from Galilee!”",
+  "voice": "af_heart,af_bella",
+  "duration": 13.25,
+  "words": [
+   {
+    "w": "Jesus'",
+    "s": 0.675,
+    "e": 1.137
+   },
+   {
+    "w": "friends",
+    "s": 1.137,
+    "e": 1.6
+   },
+   {
+    "w": "were",
+    "s": 1.6,
+    "e": 1.762
+   },
+   {
+    "w": "telling",
+    "s": 1.762,
+    "e": 2.188
+   },
+   {
+    "w": "everyone",
+    "s": 2.188,
+    "e": 2.7
+   },
+   {
+    "w": "about",
+    "s": 2.7,
+    "e": 2.975
+   },
+   {
+    "w": "the",
+    "s": 2.975,
+    "e": 3.112
+   },
+   {
+    "w": "wonderful",
+    "s": 3.112,
+    "e": 3.638
+   },
+   {
+    "w": "things",
+    "s": 3.638,
+    "e": 4.013
+   },
+   {
+    "w": "God",
+    "s": 4.013,
+    "e": 4.312
+   },
+   {
+    "w": "had",
+    "s": 4.312,
+    "e": 4.475
+   },
+   {
+    "w": "done",
+    "s": 4.475,
+    "e": 5.1
+   },
+   {
+    "w": "and",
+    "s": 5.2,
+    "e": 5.362
+   },
+   {
+    "w": "every",
+    "s": 5.362,
+    "e": 5.75
+   },
+   {
+    "w": "single",
+    "s": 5.75,
+    "e": 6.125
+   },
+   {
+    "w": "person",
+    "s": 6.125,
+    "e": 6.588
+   },
+   {
+    "w": "heard",
+    "s": 6.588,
+    "e": 6.85
+   },
+   {
+    "w": "it",
+    "s": 6.85,
+    "e": 7.0
+   },
+   {
+    "w": "in",
+    "s": 7.0,
+    "e": 7.112
+   },
+   {
+    "w": "their",
+    "s": 7.112,
+    "e": 7.287
+   },
+   {
+    "w": "very",
+    "s": 7.287,
+    "e": 7.638
+   },
+   {
+    "w": "own",
+    "s": 7.638,
+    "e": 7.9
+   },
+   {
+    "w": "language",
+    "s": 7.9,
+    "e": 8.75
+   },
+   {
+    "w": "How",
+    "s": 9.0,
+    "e": 9.188
+   },
+   {
+    "w": "can",
+    "s": 9.188,
+    "e": 9.425
+   },
+   {
+    "w": "this",
+    "s": 9.425,
+    "e": 9.65
+   },
+   {
+    "w": "be",
+    "s": 9.65,
+    "e": 10.1
+   },
+   {
+    "w": "they",
+    "s": 10.275,
+    "e": 10.438
+   },
+   {
+    "w": "said",
+    "s": 10.438,
+    "e": 11.025
+   },
+   {
+    "w": "They're",
+    "s": 11.25,
+    "e": 11.4
+   },
+   {
+    "w": "all",
+    "s": 11.4,
+    "e": 11.6
+   },
+   {
+    "w": "from",
+    "s": 11.6,
+    "e": 11.8
+   },
+   {
+    "w": "Galilee",
+    "s": 11.8,
+    "e": 12.65
+   }
+  ]
+ },
+ "church-title": {
+  "src": "audio/pentecost/church-title.m4a",
+  "text": "Part Five. The First Church.",
+  "voice": "af_heart,af_bella",
+  "duration": 3.175,
+  "words": [
+   {
+    "w": "Part",
+    "s": 0.6,
+    "e": 0.875
+   },
+   {
+    "w": "Five",
+    "s": 0.875,
+    "e": 1.375
+   },
+   {
+    "w": "The",
+    "s": 1.475,
+    "e": 1.575
+   },
+   {
+    "w": "First",
+    "s": 1.575,
+    "e": 1.875
+   },
+   {
+    "w": "Church",
+    "s": 1.875,
+    "e": 2.575
+   }
+  ]
+ },
+ "church-0": {
+  "src": "audio/pentecost/church-0.m4a",
+  "text": "Peter told the crowd all about Jesus, and how He died and rose again so everyone could be forgiven. That very day, about three thousand people believed and were baptized!",
+  "voice": "af_heart,af_bella",
+  "duration": 12.625,
+  "words": [
+   {
+    "w": "Peter",
+    "s": 0.575,
+    "e": 0.925
+   },
+   {
+    "w": "told",
+    "s": 0.925,
+    "e": 1.188
+   },
+   {
+    "w": "the",
+    "s": 1.188,
+    "e": 1.275
+   },
+   {
+    "w": "crowd",
+    "s": 1.275,
+    "e": 1.7
+   },
+   {
+    "w": "all",
+    "s": 1.7,
+    "e": 1.863
+   },
+   {
+    "w": "about",
+    "s": 1.863,
+    "e": 2.188
+   },
+   {
+    "w": "Jesus",
+    "s": 2.188,
+    "e": 3.1
+   },
+   {
+    "w": "and",
+    "s": 3.2,
+    "e": 3.325
+   },
+   {
+    "w": "how",
+    "s": 3.325,
+    "e": 3.525
+   },
+   {
+    "w": "He",
+    "s": 3.525,
+    "e": 3.688
+   },
+   {
+    "w": "died",
+    "s": 3.688,
+    "e": 4.125
+   },
+   {
+    "w": "and",
+    "s": 4.125,
+    "e": 4.25
+   },
+   {
+    "w": "rose",
+    "s": 4.25,
+    "e": 4.625
+   },
+   {
+    "w": "again",
+    "s": 4.625,
+    "e": 5.275
+   },
+   {
+    "w": "so",
+    "s": 5.275,
+    "e": 5.513
+   },
+   {
+    "w": "everyone",
+    "s": 5.513,
+    "e": 6.025
+   },
+   {
+    "w": "could",
+    "s": 6.025,
+    "e": 6.138
+   },
+   {
+    "w": "be",
+    "s": 6.138,
+    "e": 6.287
+   },
+   {
+    "w": "forgiven",
+    "s": 6.287,
+    "e": 7.275
+   },
+   {
+    "w": "That",
+    "s": 7.475,
+    "e": 7.763
+   },
+   {
+    "w": "very",
+    "s": 7.763,
+    "e": 8.075
+   },
+   {
+    "w": "day",
+    "s": 8.075,
+    "e": 8.575
+   },
+   {
+    "w": "about",
+    "s": 8.675,
+    "e": 9.025
+   },
+   {
+    "w": "three",
+    "s": 9.025,
+    "e": 9.363
+   },
+   {
+    "w": "thousand",
+    "s": 9.363,
+    "e": 9.825
+   },
+   {
+    "w": "people",
+    "s": 9.825,
+    "e": 10.2
+   },
+   {
+    "w": "believed",
+    "s": 10.2,
+    "e": 10.775
+   },
+   {
+    "w": "and",
+    "s": 10.775,
+    "e": 10.887
+   },
+   {
+    "w": "were",
+    "s": 10.887,
+    "e": 11.0
+   },
+   {
+    "w": "baptized",
+    "s": 11.0,
+    "e": 12.05
+   }
+  ]
+ },
+ "church-1": {
+  "src": "audio/pentecost/church-1.m4a",
+  "text": "The new believers met together every day. They prayed, they learned about Jesus, they shared their food and everything they had, and they praised God with glad hearts.",
+  "voice": "af_heart,af_bella",
+  "duration": 11.6,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.6,
+    "e": 0.7
+   },
+   {
+    "w": "new",
+    "s": 0.7,
+    "e": 0.875
+   },
+   {
+    "w": "believers",
+    "s": 0.875,
+    "e": 1.488
+   },
+   {
+    "w": "met",
+    "s": 1.488,
+    "e": 1.7
+   },
+   {
+    "w": "together",
+    "s": 1.7,
+    "e": 2.138
+   },
+   {
+    "w": "every",
+    "s": 2.138,
+    "e": 2.475
+   },
+   {
+    "w": "day",
+    "s": 2.475,
+    "e": 3.225
+   },
+   {
+    "w": "They",
+    "s": 3.413,
+    "e": 3.612
+   },
+   {
+    "w": "prayed",
+    "s": 3.612,
+    "e": 4.25
+   },
+   {
+    "w": "they",
+    "s": 4.35,
+    "e": 4.5
+   },
+   {
+    "w": "learned",
+    "s": 4.5,
+    "e": 4.787
+   },
+   {
+    "w": "about",
+    "s": 4.787,
+    "e": 5.088
+   },
+   {
+    "w": "Jesus",
+    "s": 5.088,
+    "e": 5.875
+   },
+   {
+    "w": "they",
+    "s": 5.975,
+    "e": 6.15
+   },
+   {
+    "w": "shared",
+    "s": 6.15,
+    "e": 6.438
+   },
+   {
+    "w": "their",
+    "s": 6.438,
+    "e": 6.625
+   },
+   {
+    "w": "food",
+    "s": 6.625,
+    "e": 7.075
+   },
+   {
+    "w": "and",
+    "s": 7.075,
+    "e": 7.237
+   },
+   {
+    "w": "everything",
+    "s": 7.237,
+    "e": 7.7
+   },
+   {
+    "w": "they",
+    "s": 7.7,
+    "e": 7.85
+   },
+   {
+    "w": "had",
+    "s": 7.85,
+    "e": 8.5
+   },
+   {
+    "w": "and",
+    "s": 8.6,
+    "e": 8.713
+   },
+   {
+    "w": "they",
+    "s": 8.713,
+    "e": 8.863
+   },
+   {
+    "w": "praised",
+    "s": 8.863,
+    "e": 9.312
+   },
+   {
+    "w": "God",
+    "s": 9.312,
+    "e": 9.725
+   },
+   {
+    "w": "with",
+    "s": 9.725,
+    "e": 9.912
+   },
+   {
+    "w": "glad",
+    "s": 9.912,
+    "e": 10.3
+   },
+   {
+    "w": "hearts",
+    "s": 10.3,
+    "e": 11.025
+   }
+  ]
+ },
+ "church-2": {
+  "src": "audio/pentecost/church-2.m4a",
+  "text": "This was the very first church! And every day, more and more people came to know Jesus. The good news was beginning to spread all over the world.",
+  "voice": "af_heart,af_bella",
+  "duration": 10.3,
+  "words": [
+   {
+    "w": "This",
+    "s": 0.6,
+    "e": 0.85
+   },
+   {
+    "w": "was",
+    "s": 0.85,
+    "e": 1.05
+   },
+   {
+    "w": "the",
+    "s": 1.05,
+    "e": 1.188
+   },
+   {
+    "w": "very",
+    "s": 1.188,
+    "e": 1.538
+   },
+   {
+    "w": "first",
+    "s": 1.538,
+    "e": 1.887
+   },
+   {
+    "w": "church",
+    "s": 1.887,
+    "e": 2.625
+   },
+   {
+    "w": "And",
+    "s": 2.75,
+    "e": 2.9
+   },
+   {
+    "w": "every",
+    "s": 2.9,
+    "e": 3.225
+   },
+   {
+    "w": "day",
+    "s": 3.225,
+    "e": 3.65
+   },
+   {
+    "w": "more",
+    "s": 3.763,
+    "e": 4.037
+   },
+   {
+    "w": "and",
+    "s": 4.037,
+    "e": 4.15
+   },
+   {
+    "w": "more",
+    "s": 4.15,
+    "e": 4.375
+   },
+   {
+    "w": "people",
+    "s": 4.375,
+    "e": 4.75
+   },
+   {
+    "w": "came",
+    "s": 4.75,
+    "e": 5.025
+   },
+   {
+    "w": "to",
+    "s": 5.025,
+    "e": 5.125
+   },
+   {
+    "w": "know",
+    "s": 5.125,
+    "e": 5.312
+   },
+   {
+    "w": "Jesus",
+    "s": 5.312,
+    "e": 6.3
+   },
+   {
+    "w": "The",
+    "s": 6.438,
+    "e": 6.588
+   },
+   {
+    "w": "good",
+    "s": 6.588,
+    "e": 6.862
+   },
+   {
+    "w": "news",
+    "s": 6.862,
+    "e": 7.275
+   },
+   {
+    "w": "was",
+    "s": 7.275,
+    "e": 7.45
+   },
+   {
+    "w": "beginning",
+    "s": 7.45,
+    "e": 7.825
+   },
+   {
+    "w": "to",
+    "s": 7.825,
+    "e": 7.963
+   },
+   {
+    "w": "spread",
+    "s": 7.963,
+    "e": 8.387
+   },
+   {
+    "w": "all",
+    "s": 8.387,
+    "e": 8.7
+   },
+   {
+    "w": "over",
+    "s": 8.7,
+    "e": 8.912
+   },
+   {
+    "w": "the",
+    "s": 8.912,
+    "e": 9.0
+   },
+   {
+    "w": "world",
+    "s": 9.0,
+    "e": 9.725
+   }
+  ]
+ },
+ "talk": {
+  "src": "audio/pentecost/talk.m4a",
+  "text": "Let’s talk about it. The Holy Spirit came like a rushing wind and little flames of fire. What do you think that was like? Jesus’ friends told everyone about Him. Who could you tell about Jesus? The first church shared everything they had. What is something you could share? Our memory verse is Acts 1, verse 8. You will receive power when the Holy Spirit comes upon you, and you will be My witnesses.",
+  "voice": "af_heart,af_bella",
+  "duration": 25.075,
+  "words": [
+   {
+    "w": "Let's",
+    "s": 0.625,
+    "e": 0.875
+   },
+   {
+    "w": "talk",
+    "s": 0.875,
+    "e": 1.113
+   },
+   {
+    "w": "about",
+    "s": 1.113,
+    "e": 1.4
+   },
+   {
+    "w": "it",
+    "s": 1.4,
+    "e": 1.85
+   },
+   {
+    "w": "The",
+    "s": 1.95,
+    "e": 2.05
+   },
+   {
+    "w": "Holy",
+    "s": 2.05,
+    "e": 2.438
+   },
+   {
+    "w": "Spirit",
+    "s": 2.438,
+    "e": 2.875
+   },
+   {
+    "w": "came",
+    "s": 2.875,
+    "e": 3.112
+   },
+   {
+    "w": "like",
+    "s": 3.112,
+    "e": 3.263
+   },
+   {
+    "w": "a",
+    "s": 3.263,
+    "e": 3.362
+   },
+   {
+    "w": "rushing",
+    "s": 3.362,
+    "e": 3.788
+   },
+   {
+    "w": "wind",
+    "s": 3.788,
+    "e": 4.2
+   },
+   {
+    "w": "and",
+    "s": 4.2,
+    "e": 4.325
+   },
+   {
+    "w": "little",
+    "s": 4.325,
+    "e": 4.588
+   },
+   {
+    "w": "flames",
+    "s": 4.588,
+    "e": 4.963
+   },
+   {
+    "w": "of",
+    "s": 4.963,
+    "e": 5.088
+   },
+   {
+    "w": "fire",
+    "s": 5.088,
+    "e": 5.9
+   },
+   {
+    "w": "What",
+    "s": 6.025,
+    "e": 6.162
+   },
+   {
+    "w": "do",
+    "s": 6.162,
+    "e": 6.263
+   },
+   {
+    "w": "you",
+    "s": 6.263,
+    "e": 6.362
+   },
+   {
+    "w": "think",
+    "s": 6.362,
+    "e": 6.55
+   },
+   {
+    "w": "that",
+    "s": 6.55,
+    "e": 6.713
+   },
+   {
+    "w": "was",
+    "s": 6.713,
+    "e": 6.875
+   },
+   {
+    "w": "like",
+    "s": 6.875,
+    "e": 7.5
+   },
+   {
+    "w": "Jesus'",
+    "s": 7.65,
+    "e": 8.137
+   },
+   {
+    "w": "friends",
+    "s": 8.137,
+    "e": 8.55
+   },
+   {
+    "w": "told",
+    "s": 8.55,
+    "e": 8.875
+   },
+   {
+    "w": "everyone",
+    "s": 8.875,
+    "e": 9.3
+   },
+   {
+    "w": "about",
+    "s": 9.3,
+    "e": 9.6
+   },
+   {
+    "w": "Him",
+    "s": 9.6,
+    "e": 10.1
+   },
+   {
+    "w": "Who",
+    "s": 10.2,
+    "e": 10.325
+   },
+   {
+    "w": "could",
+    "s": 10.325,
+    "e": 10.475
+   },
+   {
+    "w": "you",
+    "s": 10.475,
+    "e": 10.613
+   },
+   {
+    "w": "tell",
+    "s": 10.613,
+    "e": 10.838
+   },
+   {
+    "w": "about",
+    "s": 10.838,
+    "e": 11.137
+   },
+   {
+    "w": "Jesus",
+    "s": 11.137,
+    "e": 12.1
+   },
+   {
+    "w": "The",
+    "s": 12.225,
+    "e": 12.363
+   },
+   {
+    "w": "first",
+    "s": 12.363,
+    "e": 12.738
+   },
+   {
+    "w": "church",
+    "s": 12.738,
+    "e": 13.1
+   },
+   {
+    "w": "shared",
+    "s": 13.1,
+    "e": 13.45
+   },
+   {
+    "w": "everything",
+    "s": 13.45,
+    "e": 13.9
+   },
+   {
+    "w": "they",
+    "s": 13.9,
+    "e": 14.05
+   },
+   {
+    "w": "had",
+    "s": 14.05,
+    "e": 14.725
+   },
+   {
+    "w": "What",
+    "s": 14.863,
+    "e": 15.012
+   },
+   {
+    "w": "is",
+    "s": 15.012,
+    "e": 15.1
+   },
+   {
+    "w": "something",
+    "s": 15.1,
+    "e": 15.4
+   },
+   {
+    "w": "you",
+    "s": 15.4,
+    "e": 15.5
+   },
+   {
+    "w": "could",
+    "s": 15.5,
+    "e": 15.7
+   },
+   {
+    "w": "share",
+    "s": 15.7,
+    "e": 16.3
+   },
+   {
+    "w": "Our",
+    "s": 16.425,
+    "e": 16.587
+   },
+   {
+    "w": "memory",
+    "s": 16.587,
+    "e": 17.025
+   },
+   {
+    "w": "verse",
+    "s": 17.025,
+    "e": 17.35
+   },
+   {
+    "w": "is",
+    "s": 17.35,
+    "e": 17.512
+   },
+   {
+    "w": "Acts",
+    "s": 17.512,
+    "e": 17.863
+   },
+   {
+    "w": "1",
+    "s": 17.863,
+    "e": 18.325
+   },
+   {
+    "w": "verse",
+    "s": 18.438,
+    "e": 18.775
+   },
+   {
+    "w": "8",
+    "s": 18.775,
+    "e": 19.475
+   },
+   {
+    "w": "You",
+    "s": 19.613,
+    "e": 19.738
+   },
+   {
+    "w": "will",
+    "s": 19.738,
+    "e": 19.85
+   },
+   {
+    "w": "receive",
+    "s": 19.85,
+    "e": 20.212
+   },
+   {
+    "w": "power",
+    "s": 20.212,
+    "e": 20.637
+   },
+   {
+    "w": "when",
+    "s": 20.637,
+    "e": 20.762
+   },
+   {
+    "w": "the",
+    "s": 20.762,
+    "e": 20.863
+   },
+   {
+    "w": "Holy",
+    "s": 20.863,
+    "e": 21.262
+   },
+   {
+    "w": "Spirit",
+    "s": 21.262,
+    "e": 21.7
+   },
+   {
+    "w": "comes",
+    "s": 21.7,
+    "e": 21.938
+   },
+   {
+    "w": "upon",
+    "s": 21.938,
+    "e": 22.275
+   },
+   {
+    "w": "you",
+    "s": 22.275,
+    "e": 22.65
+   },
+   {
+    "w": "and",
+    "s": 22.775,
+    "e": 22.9
+   },
+   {
+    "w": "you",
+    "s": 22.9,
+    "e": 23.0
+   },
+   {
+    "w": "will",
+    "s": 23.0,
+    "e": 23.125
+   },
+   {
+    "w": "be",
+    "s": 23.125,
+    "e": 23.275
+   },
+   {
+    "w": "My",
+    "s": 23.275,
+    "e": 23.462
+   },
+   {
+    "w": "witnesses",
+    "s": 23.462,
+    "e": 24.5
+   }
+  ]
+ }
+}

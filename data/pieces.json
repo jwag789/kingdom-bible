@@ -264,7 +264,8 @@
         "feeding",
         "lost-sheep",
         "zacchaeus",
-        "easter"
+        "easter",
+        "pentecost"
       ]
     },
     {
@@ -273,7 +274,8 @@
       "src": "art/pieces/follow-peter.png",
       "stories": [
         "follow",
-        "easter"
+        "easter",
+        "pentecost"
       ]
     },
     {

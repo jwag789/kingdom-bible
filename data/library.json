@@ -159,6 +159,14 @@
       "coverFrom": "art/easter/alive/garden.jpg",
       "testament": "new",
       "cover": "art/covers/easter.jpg"
+    },
+    {
+      "id": "pentecost",
+      "title": "The Spirit Comes",
+      "reference": "Acts 1–2",
+      "coverFrom": "art/pentecost/wind/fire.jpg",
+      "testament": "new",
+      "cover": "art/covers/pentecost.jpg"
     }
   ],
   "shelves": [
@@ -204,6 +212,13 @@
         "lost-sheep",
         "zacchaeus",
         "easter"
+      ]
+    },
+    {
+      "id": "church",
+      "title": "The Church Begins",
+      "stories": [
+        "pentecost"
       ]
     }
   ]

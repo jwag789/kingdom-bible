@@ -21,6 +21,7 @@
 // "lantern" Find the Lamb        shine the lantern over the dark hills to find the little lamb
 // "glean"   Glean the Barley     sweep a finger across the field to gather the stalks Ruth gleans
 // "echo"    Listen and Follow    four stone tablets sing a pattern; tap it back in the same order
+// "wind"    Wind and Fire        swipe like a rushing wind to bring a little flame over each person
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1427,4 +1428,66 @@ function echo(k) {
   begin();
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo };
+// ---- Wind and Fire: swipe across the room like a rushing wind, and a little flame comes to rest
+// over each of Jesus' friends the wind passes. When every one has a flame, the room fills with light.
+function wind(k) {
+  const { field, game, sound } = k;
+  const heads = game.heads;                            // where each person's head is (fractions of the picture)
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let lit = 0, lastWhoosh = 0;
+  k.progress(`0 of ${heads.length} flames`);
+  k.line('intro');
+  const spots = heads.map(([px, py]) => {
+    const glow = el('div', 'headglow');
+    const flame = img(prop('flame'), 'flame');
+    field.append(glow, flame);
+    return { px, py, glow, flame, on: false };
+  });
+  const size = () => Math.min(W(), H()) * 0.075;
+  const place = () => spots.forEach(s => {
+    const p = k.screen(s.px, s.py), f = size();
+    // On the narrowest phones the ends of the circle sit right at the edge; keep every flame on screen.
+    p.x = clamp(p.x, f * 0.9, W() - f * 0.9);
+    s.x = p.x; s.y = p.y;
+    s.glow.style.width = s.glow.style.height = `${f * 1.8}px`;
+    put(s.glow, p.x, p.y);
+    s.flame.style.width = `${f * 0.7}px`;
+    put(s.flame, p.x, p.y - f * 0.55);
+  });
+  const light = s => {
+    if (s.on) return;
+    s.on = true;
+    s.flame.classList.add('on');
+    s.glow.classList.add('on');
+    if (sound.ready) sound.bell?.(67 + lit * 2, sound.ctx.currentTime, 0.07, 2.4, sound.sfxBus);
+    navigator.vibrate?.(10);
+    k.progress(`${++lit} of ${heads.length} flames`);
+    if (lit === Math.ceil(heads.length / 2)) k.line('half');
+    if (lit === heads.length) {
+      sound.promise?.();
+      k.backdrop(game.reveal);
+      spots.forEach(t => t.glow.classList.add('gone'));
+      setTimeout(() => k.alive() && k.win(), 1800);
+    }
+  };
+  let last = null;
+  const blow = e => {
+    const b = field.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top;
+    if (last && Math.hypot(x - last.x, y - last.y) > 6) {
+      const gust = el('i', 'gust');
+      put(gust, x, y);
+      gust.style.rotate = `${Math.atan2(y - last.y, x - last.x)}rad`;
+      field.append(gust);
+      setTimeout(() => gust.remove(), 800);
+      const now = performance.now();
+      if (now - lastWhoosh > 450) { sound.whoosh?.(0.7); lastWhoosh = now; }
+    }
+    last = { x, y };
+    for (const s of spots) if (!s.on && Math.hypot(s.x - x, s.y - y) < size() * 1.3) light(s);
+  };
+  drag(field, { down: e => { last = null; blow(e); }, move: blow, up: () => { last = null; } });
+  place();
+  addEventListener('resize', () => k.alive() && place());
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind };

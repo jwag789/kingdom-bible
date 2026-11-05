@@ -347,6 +347,19 @@
   .game .tablet.nope { animation: wiggle 0.45s; }
   .game .field.watching .tablet:not(.lit) { filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)) brightness(0.8); }
 
+  /* Wind and Fire */
+  .game .headglow { border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(255,240,190,0.55), rgba(255,220,140,0.15) 60%, transparent);
+    animation: pulse 1.6s ease-in-out infinite; transition: opacity 0.6s; }
+  .game .headglow.on { animation: none; background: radial-gradient(closest-side, rgba(255,200,90,0.75), rgba(255,170,60,0.2) 60%, transparent); }
+  .game .headglow.gone { opacity: 0; }
+  .game .flame { pointer-events: none; opacity: 0; scale: 0.2; transition: opacity 0.4s, scale 0.5s cubic-bezier(0.2, 1.6, 0.4, 1);
+    filter: drop-shadow(0 0 8px #ffd27a) drop-shadow(0 0 18px rgba(255,170,60,0.8)); }
+  .game .flame.on { opacity: 1; scale: 1; animation: flicker 0.9s ease-in-out infinite 0.5s; }
+  @keyframes flicker { 50% { scale: 1.08 0.94; } }
+  .game .gust { width: 46px; height: 10px; border-radius: 999px; pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(255,250,225,0.85), transparent); animation: gust 0.8s ease-out forwards; }
+  @keyframes gust { to { opacity: 0; scale: 2.2 0.6; } }
+
   /* Hush the Lions */
   .game .lion { --calm: 0; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); touch-action: none; animation: popup 0.3s ease-out; }
   .game .lion img { width: 100%; transition: opacity 0.6s; }

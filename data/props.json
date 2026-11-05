@@ -246,6 +246,12 @@
       "name": "a stone tablet",
       "prompt": "a single smooth grey stone tablet with a rounded top, standing upright, its face carved with a few simple rows of short engraved lines (no letters or words)",
       "thing": true
+    },
+    {
+      "id": "flame",
+      "name": "a little flame",
+      "prompt": "a single small, gentle flame of warm golden-orange fire shaped like a teardrop, glowing softly, standing upright",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

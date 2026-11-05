@@ -628,5 +628,66 @@
       "win": "You listened so well! God’s words are good, and they help us know how to love.",
       "done": "Listen to God, and follow His ways."
     }
+  },
+  "pentecost": {
+    "id": "wind-fire",
+    "title": "Wind and Fire",
+    "type": "wind",
+    "scene": "wind",
+    "background": "art/pentecost/wind/praying.jpg",
+    "reveal": "art/pentecost/wind/fire.jpg",
+    "frame": [
+      0.75,
+      0.62
+    ],
+    "heads": [
+      [
+        0.578,
+        0.618
+      ],
+      [
+        0.617,
+        0.59
+      ],
+      [
+        0.666,
+        0.578
+      ],
+      [
+        0.722,
+        0.582
+      ],
+      [
+        0.772,
+        0.606
+      ],
+      [
+        0.817,
+        0.65
+      ],
+      [
+        0.551,
+        0.674
+      ],
+      [
+        0.61,
+        0.69
+      ],
+      [
+        0.711,
+        0.742
+      ],
+      [
+        0.788,
+        0.714
+      ]
+    ],
+    "badge": "art/props/flame.png",
+    "lines": {
+      "intro": "Jesus’ friends are praying, waiting for the Holy Spirit. Swipe across the room like a mighty rushing wind, and bring a little flame to each of them!",
+      "half": "Whoosh! Keep blowing like the wind!",
+      "win": "Wind and fire! They were all filled with the Holy Spirit, just as Jesus promised.",
+      "done": "You will receive power when the Holy Spirit comes upon you."
+    }
   }
 }

@@ -1,0 +1,726 @@
+{
+  "title": "The Spirit Comes",
+  "reference": "Acts 1–2",
+  "subtitle": "The story of Jesus going up to heaven, a rushing wind, and the very first church",
+  "book": "Acts",
+  "text": "data/pentecost-text.json",
+  "art": "art/pentecost",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "prompt": "Jesus standing alone, full body, front view: a kind, gentle man of about thirty with fair skin, warm brown eyes, shoulder-length wavy brown hair and a short brown beard, a warm smile, wearing a simple cream robe with a blue sash and a brown cloak, and sandals",
+      "src": "art/follow/cast/jesus.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 342061,
+        "at": "2026-11-03T03:05:45.661Z"
+      }
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "prompt": "Peter standing alone, full body, front view: a big, strong fisherman with fair, ruddy sun-tanned skin, curly reddish-brown hair and a bushy beard, wearing a short brown tunic with rolled-up sleeves, holding a fishing net",
+      "src": "art/follow/cast/peter.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 883651,
+        "at": "2026-11-03T03:05:57.959Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "forty",
+      "eyebrow": "Part One",
+      "title": "Forty Wonderful Days",
+      "verses": [
+        "1:3",
+        "1:5"
+      ],
+      "beats": [
+        "After Jesus came back to life, He stayed with His friends for forty days. He ate with them, talked with them, and showed them again and again that He was really alive!",
+        "“Stay in Jerusalem and wait,” Jesus told them. “Soon God will send you the Holy Spirit, the Helper I promised.”"
+      ],
+      "layers": [
+        {
+          "id": "beach",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "beach",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: early morning by the Sea of Galilee, soft pink and gold light on the water: Jesus sits by a small crackling campfire on the shore, right of center, sharing bread and grilled fish with His smiling disciples, including Peter, with a fishing boat pulled up on the sand behind them",
+          "refs": [
+            "jesus",
+            "peter"
+          ],
+          "src": "art/pentecost/forty/beach.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 23271,
+            "at": "2026-11-05T12:36:24.695Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.55
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the campfire",
+        "at": [
+          0.7,
+          0.75
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "fire",
+          "birds"
+        ],
+        "mood": "dawn",
+        "music": "storybook"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "breakfast",
+          "name": "Breakfast with Jesus",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.6
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "boat",
+          "name": "The Fishing Boat",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.48,
+            0.6
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.72,
+            0.85
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.2,
+            0.6
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.35,
+            0.48
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "up",
+      "eyebrow": "Part Two",
+      "title": "Up to Heaven",
+      "verses": [
+        "1:8",
+        "1:11"
+      ],
+      "beats": [
+        "One day, on a hill outside the city, Jesus said, “You will tell everyone about Me, here in Jerusalem, and all the way to the ends of the earth!”",
+        "Then, while they watched, Jesus was lifted up into the sky, higher and higher, until a cloud hid Him from sight.",
+        "Suddenly two angels in white stood beside them. “Why are you looking up at the sky? Jesus will come back the same way you saw Him go!”"
+      ],
+      "layers": [
+        {
+          "id": "hill",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hill",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on a green hillside with olive trees outside Jerusalem, the city walls in the distance, in bright clear daylight: Jesus stands right of center with His arms raised in blessing over His disciples, including Peter, who gather around Him listening",
+          "refs": [
+            "jesus",
+            "peter"
+          ],
+          "src": "art/pentecost/up/hill.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 10466,
+            "at": "2026-11-05T12:37:11.126Z"
+          }
+        },
+        {
+          "id": "cloud",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "cloud",
+          "editOf": "hill",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see Jesus go up",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Jesus is now rising up into the sky above the hill, His arms still raised in blessing, going up into a soft glowing white cloud with golden light; the disciples on the hill below look up in wonder, shading their eyes, and two angels in shining white robes now stand among them.",
+          "refs": [
+            "jesus",
+            "peter"
+          ],
+          "mood": "glory",
+          "music": "storybook",
+          "src": "art/pentecost/up/cloud.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 10466,
+            "at": "2026-11-05T12:37:46.393Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "cloud"
+        },
+        {
+          "type": "sing",
+          "with": "cloud",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.62,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds"
+        ],
+        "mood": "sky",
+        "music": "storybook"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "blessing",
+          "name": "Jesus Blesses Them",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.45
+          ],
+          "r": 0.1,
+          "layer": "hill"
+        },
+        {
+          "id": "into-cloud",
+          "name": "Into the Cloud",
+          "earn": "reveal",
+          "layer": "cloud",
+          "at": [
+            0.63,
+            0.2
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "city",
+          "name": "Jerusalem",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.7,
+            0.12
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.9,
+            0.25
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.08,
+            0.75
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.6,
+            0.66
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "cloud"
+        }
+      ]
+    },
+    {
+      "id": "wind",
+      "eyebrow": "Part Three",
+      "title": "Wind and Fire",
+      "verses": [
+        "2:1",
+        "2:4"
+      ],
+      "beats": [
+        "Jesus’ friends waited and prayed together in a room in Jerusalem, just as He had said.",
+        "Then, on the day of a big feast called Pentecost, there came a sound from heaven like a mighty, rushing wind! It filled the whole house. Whoosh!",
+        "Little flames, like fire, came and rested over each one of them. They were all filled with the Holy Spirit, and they began to speak in other languages!"
+      ],
+      "layers": [
+        {
+          "id": "praying",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "praying",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: inside a large upstairs room in Jerusalem, seen from inside, its warm stone walls, windows and arches continuing all the way to the left and right edges of the picture, with warm morning light: Jesus’ friends, men and women together, including Peter and Mary the mother of Jesus, sit and kneel in a circle on cushions and rugs, right of center, praying quietly with bowed heads",
+          "refs": [
+            "peter"
+          ],
+          "src": "art/pentecost/wind/praying.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 5501,
+            "at": "2026-11-05T12:41:40.091Z"
+          },
+          "seed": 5501
+        },
+        {
+          "id": "fire",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fire",
+          "editOf": "praying",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to send the wind",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "A great rushing wind now swirls through the room in glowing golden curls, the curtains and robes blowing, and a small, gentle, glowing flame of warm golden fire rests just above the head of each person; their faces are lifted up, full of joy and wonder.",
+          "refs": [
+            "peter"
+          ],
+          "mood": "glory",
+          "music": "adventure",
+          "src": "art/pentecost/wind/fire.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 114191,
+            "at": "2026-11-05T12:42:14.592Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "spirit",
+          "with": "fire"
+        },
+        {
+          "type": "glow",
+          "with": "fire"
+        },
+        {
+          "type": "sing",
+          "with": "fire",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.68,
+          0.62
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "rest",
+        "music": "pads"
+      },
+      "frame": [
+        0.7,
+        0.55
+      ],
+      "stickers": [
+        {
+          "id": "praying",
+          "name": "Praying Together",
+          "earn": "play",
+          "at": [
+            0.66,
+            0.62
+          ],
+          "r": 0.12,
+          "layer": "praying"
+        },
+        {
+          "id": "flames",
+          "name": "Little Flames",
+          "earn": "reveal",
+          "layer": "fire",
+          "at": [
+            0.68,
+            0.55
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.37,
+            0.15
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.72,
+            0.2
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.3,
+            0.45
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.06,
+          "with": "fire"
+        }
+      ]
+    },
+    {
+      "id": "crowd",
+      "eyebrow": "Part Four",
+      "title": "Everyone Understood",
+      "verses": [
+        "2:5",
+        "2:12"
+      ],
+      "beats": [
+        "Jerusalem was full of visitors from many different countries. When they heard the noise, a big crowd came running to see what was happening.",
+        "Jesus’ friends were telling everyone about the wonderful things God had done, and every single person heard it in their very own language! “How can this be?” they said. “They’re all from Galilee!”"
+      ],
+      "layers": [
+        {
+          "id": "nations",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "nations",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in a busy, sunny square in Jerusalem: Peter stands on a stone step right of center, speaking joyfully with his arms open, the other disciples beside him, while a huge crowd of visitors from many different lands, in many styles of colorful clothing, turbans, headscarves and robes, listen in amazement and point and smile",
+          "refs": [
+            "peter"
+          ],
+          "src": "art/pentecost/crowd/nations.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 339270,
+            "at": "2026-11-05T12:39:23.387Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "every-language",
+          "name": "Every Language",
+          "earn": "play",
+          "at": [
+            0.3,
+            0.7
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "temple-gate",
+          "name": "The Temple Gate",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.3,
+            0.1
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.5,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.85,
+            0.9
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.72,
+            0.4
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "church",
+      "eyebrow": "Part Five",
+      "title": "The First Church",
+      "verses": [
+        "2:38",
+        "2:47"
+      ],
+      "beats": [
+        "Peter told the crowd all about Jesus, and how He died and rose again so everyone could be forgiven. That very day, about three thousand people believed and were baptized!",
+        "The new believers met together every day. They prayed, they learned about Jesus, they shared their food and everything they had, and they praised God with glad hearts.",
+        "This was the very first church! And every day, more and more people came to know Jesus. The good news was beginning to spread all over the world."
+      ],
+      "layers": [
+        {
+          "id": "sharing",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "sharing",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in a sunny courtyard of a home in Jerusalem in the golden evening: a big, happy group of new believers of all ages and from many lands sit together at long low tables, breaking bread, sharing bowls of food and fruit, laughing and singing, children running between them, Peter right of center lifting a loaf of bread and giving thanks",
+          "refs": [
+            "peter"
+          ],
+          "src": "art/pentecost/church/sharing.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 521582,
+            "at": "2026-11-05T12:40:03.743Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "from": 2
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.58,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "birds"
+        ],
+        "mood": "warm",
+        "music": "folk"
+      },
+      "frame": [
+        0.55,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "first-church",
+          "name": "The First Church",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.4
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "children",
+          "name": "Children Playing",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.5,
+            0.6
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.85
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.85,
+            0.85
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.55,
+            0.13
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "The Holy Spirit came like a rushing wind and little flames of fire. What do you think that was like?",
+      "Jesus’ friends told everyone about Him. Who could you tell about Jesus?",
+      "The first church shared everything they had. What is something you could share?"
+    ],
+    "verse": {
+      "ref": "Acts 1:8",
+      "text": "You will receive power when the Holy Spirit comes upon you, and you will be My witnesses."
+    }
+  }
+}
