@@ -228,6 +228,24 @@
       "name": "a little fish",
       "prompt": "a single small plain silvery-grey fish with a soft golden belly, like a little sardine, lying on its side",
       "thing": true
+    },
+    {
+      "id": "barley",
+      "name": "a stalk of barley",
+      "prompt": "a single long stalk of golden barley with a full, bearded ear of grain at the top, lying flat",
+      "thing": true
+    },
+    {
+      "id": "sheaf",
+      "name": "a sheaf of barley",
+      "prompt": "a single bundle of golden barley stalks tied around the middle with a twist of straw, standing upright, the bearded ears fanning out at the top",
+      "thing": true
+    },
+    {
+      "id": "tablet",
+      "name": "a stone tablet",
+      "prompt": "a single smooth grey stone tablet with a rounded top, standing upright, its face carved with a few simple rows of short engraved lines (no letters or words)",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

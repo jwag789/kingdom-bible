@@ -572,5 +572,61 @@
       "win": "Found! The shepherd carried the little lamb home on his shoulders.",
       "done": "Rejoice with me, for I have found my lost sheep!"
     }
+  },
+  "ruth": {
+    "id": "glean-barley",
+    "title": "Glean the Barley",
+    "type": "glean",
+    "scene": "handfuls",
+    "background": "art/games/barley/field.jpg",
+    "reveal": "art/ruth/handfuls/home.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "count": 7,
+    "per": 3,
+    "purposeEvery": 2,
+    "badge": "art/props/sheaf.png",
+    "lines": {
+      "intro": "Ruth is gleaning in Boaz’s field! Sweep your finger across the field to gather the barley. Let’s tie seven bundles!",
+      "purpose": "Look! The workers dropped a handful on purpose, just for Ruth. Catch it!",
+      "count-1": "One bundle!",
+      "count-2": "Two bundles!",
+      "count-3": "Three bundles!",
+      "count-4": "Four bundles!",
+      "count-5": "Five bundles!",
+      "count-6": "Six bundles!",
+      "count-7": "Seven bundles!",
+      "win": "Seven bundles of barley! Ruth and Naomi will have plenty to eat. God took care of them through kind Boaz.",
+      "done": "God took care of Ruth and Naomi."
+    }
+  },
+  "commandments": {
+    "id": "listen-follow",
+    "title": "Listen and Follow",
+    "type": "echo",
+    "scene": "tablets",
+    "background": "art/games/sinai/peak.jpg",
+    "reveal": "art/commandments/again/shining.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "rounds": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "badge": "art/props/tablet.png",
+    "lines": {
+      "intro": "On the mountain, God spoke and Moses listened. Watch and listen as the stones light up, then tap them in the same order!",
+      "you": "Your turn!",
+      "again": "Oops! Listen again.",
+      "more": "Well done! Now a longer one.",
+      "win": "You listened so well! God’s words are good, and they help us know how to love.",
+      "done": "Listen to God, and follow His ways."
+    }
   }
 }

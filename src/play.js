@@ -19,6 +19,8 @@
 // "march"   March and Shout      hold to march the trumpets round Jericho seven times, then shout
 // "gather"  Fill the Baskets     tap the leftover bread and fish to fill twelve baskets
 // "lantern" Find the Lamb        shine the lantern over the dark hills to find the little lamb
+// "glean"   Glean the Barley     sweep a finger across the field to gather the stalks Ruth gleans
+// "echo"    Listen and Follow    four stone tablets sing a pattern; tap it back in the same order
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1224,4 +1226,205 @@ function lantern(k) {
   k.line('intro');
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern };
+// ---- Glean the Barley: stalks lie where the harvesters dropped them; sweep a finger across the
+// field to gather them into Ruth's bundle. Every few sheaves the workers drop a glowing
+// handful "on purpose" (Ruth 2:16): catch it and it ties a whole sheaf at once.
+function glean(k) {
+  const { field, game, sound } = k;
+  const total = game.count ?? 7, per = game.per ?? 3, every = game.purposeEvery ?? 3;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let tied = 0, inBundle = 0, busy = false, lastPurpose = 0, handful = null;
+  k.progress(`0 of ${total} sheaves`);
+  k.line('intro');
+  const shelf = el('div', 'shelf sheaves');
+  for (let i = 0; i < total; i++) shelf.append(el('i'));
+  const bundle = el('div', 'catcher');
+  bundle.append(img(prop('sheaf')));
+  field.append(shelf, bundle);
+  const stalks = [];
+  const size = () => Math.min(W() * 0.15, H() * 0.19);
+  const bs = () => Math.min(W() * 0.22, H() * 0.2);
+  const layout = () => {
+    put(shelf, W() / 2, k.head() + 22);
+    bundle.style.width = `${bs()}px`;
+    put(bundle, W() / 2, H() - bs() * 0.6);
+  };
+  const area = () => ({ x0: W() * 0.08, x1: W() * 0.92, y0: k.head() + 70, y1: H() - bs() * 1.3 });
+  const into = n => { const b = bundle.getBoundingClientRect(), f = field.getBoundingClientRect(); put(n, b.left - f.left + b.width / 2, b.top - f.top + b.height * 0.35); };
+  const bump = () => { bundle.classList.remove('bump'); void bundle.offsetWidth; bundle.classList.add('bump'); };
+
+  const spawn = () => {
+    if (!k.alive() || tied >= total) return;
+    const r = area();
+    let x, y, tries = 0;
+    do { x = rand(r.x0, r.x1); y = rand(r.y0, r.y1); } while (stalks.some(p => Math.hypot(p.x - x, p.y - y) < W() * 0.11) && ++tries < 30);
+    const n = el('button', 'crumb stalk');
+    n.setAttribute('aria-label', 'A stalk of barley');
+    const pic = img(prop('barley'));
+    pic.style.rotate = `${rand(-70, 70)}deg`;
+    n.append(pic);
+    n.style.width = `${size()}px`;
+    put(n, x, y);
+    field.append(n);
+    const p = { n, x, y };
+    stalks.push(p);
+    n.onpointerdown = () => take(p);   // a plain tap works too
+  };
+
+  const tie = () => {
+    inBundle = 0; busy = true;
+    tied++;
+    setTimeout(() => {
+      if (!k.alive()) return;
+      shelf.children[tied - 1].classList.add('full');
+      sound.sticker?.();
+      k.progress(`${tied} of ${total} sheaves`);
+      k.say(game.lines[`count-${tied}`], `count-${tied}`);
+      busy = false;
+      if (tied === total) {
+        handful?.n.remove();
+        field.querySelectorAll('.crumb').forEach(c => c.remove());
+        k.backdrop(game.reveal);
+        setTimeout(() => k.alive() && k.win(), 1600);
+      } else if (tied - lastPurpose >= every && !handful) setTimeout(drop, 1800);
+    }, 420);
+  };
+
+  const take = p => {
+    if (busy || p.n.classList.contains('taken')) return;
+    p.n.classList.add('taken');
+    stalks.splice(stalks.indexOf(p), 1);
+    into(p.n);
+    if (sound.ready) sound.pluck(66 + inBundle * 5 + (tied % 3) * 2, sound.ctx.currentTime, 0.08);
+    navigator.vibrate?.(8);
+    setTimeout(() => p.n.remove(), 450);
+    setTimeout(spawn, 600);
+    if (++inBundle < per) return bump();
+    tie();
+  };
+
+  // A glowing handful, dropped on purpose, drifting down the field: catch it before it lands.
+  const drop = () => {
+    if (!k.alive() || tied >= total || handful) return;
+    lastPurpose = tied;
+    k.line('purpose');
+    const n = el('button', 'crumb stalk purpose');
+    n.setAttribute('aria-label', 'A handful of barley, dropped on purpose');
+    n.append(img(prop('sheaf')));
+    n.style.width = `${size() * 1.15}px`;
+    field.append(n);
+    handful = { n, x: rand(0.2, 0.8) * W(), y: k.head() + 40, sway: rand(0, 6) };
+    put(n, handful.x, handful.y);
+    n.onpointerdown = () => catchIt();
+  };
+  const catchIt = () => {
+    const h = handful;
+    if (!h || busy) return;
+    handful = null;
+    h.n.classList.add('taken');
+    into(h.n);
+    sound.twinkle?.();
+    navigator.vibrate?.([15, 30, 15]);
+    setTimeout(() => h.n.remove(), 450);
+    bump();
+    tie();
+  };
+  k.loop((t, dt) => {
+    if (!handful) return;
+    const h = handful;
+    h.y += H() * 0.06 * dt;
+    put(h.n, h.x + Math.sin(t * 1.6 + h.sway) * W() * 0.03, h.y);
+    if (h.y > area().y1) { h.n.classList.add('gone'); setTimeout(() => h.n.remove(), 400); handful = null; lastPurpose = tied - every + 1; setTimeout(drop, 2500); }
+  });
+
+  // Sweeping: anything the finger passes near is gathered.
+  const sweep = e => {
+    const b = field.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top, reach = size() * 0.6;
+    for (const p of [...stalks]) if (Math.hypot(p.x - x, p.y - y) < reach) take(p);
+    if (handful) { const r = handful.n.getBoundingClientRect(); if (Math.hypot(r.left - b.left + r.width / 2 - x, r.top - b.top + r.height / 2 - y) < reach * 1.3) catchIt(); }
+  };
+  drag(field, { down: sweep, move: sweep });
+
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  for (let i = 0; i < 8; i++) spawn();
+}
+
+// ---- Listen and Follow: on the mountain God spoke and Moses listened. Four stone tablets light up
+// and sing in a pattern; tap them back in the same order. The patterns grow a little each round,
+// and a wrong tap just plays the pattern again: there's no losing.
+function echo(k) {
+  const { field, game, sound } = k;
+  const lengths = game.rounds ?? [2, 3, 4, 5];
+  const NOTES = [60, 64, 67, 72], COLORS = ['#f0cc8a', '#8fd0ff', '#b8f0a0', '#ffb3c8'];
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let round = 0, pattern = [], at = 0, listening = false;
+  const stones = NOTES.map((note, i) => {
+    const b = el('button', 'tablet');
+    b.style.setProperty('--glow', COLORS[i]);
+    b.setAttribute('aria-label', `Stone ${i + 1}`);
+    b.append(img(prop('tablet')));
+    field.append(b);
+    b.onpointerdown = e => { e.preventDefault(); press(i); };
+    return b;
+  });
+  const layout = () => {
+    const top = k.head(), room = H() - top, s = Math.min(W() * 0.3, room * 0.3);
+    const cx = W() / 2, cy = top + room * 0.5, dx = Math.min(W() * 0.24, s * 1.05), dy = Math.min(room * 0.24, s * 0.85);
+    [[cx, cy - dy], [cx + dx, cy], [cx, cy + dy], [cx - dx, cy]].forEach(([x, y], i) => { stones[i].style.width = `${s * 0.78}px`; put(stones[i], x, y); });
+  };
+  const light = (i, ms = 420) => {
+    const b = stones[i];
+    b.classList.add('lit');
+    if (sound.ready) { sound.bell?.(NOTES[i] + 12, sound.ctx.currentTime, 0.09, 1.6, sound.sfxBus); sound.pluck(NOTES[i], sound.ctx.currentTime, 0.1); }
+    setTimeout(() => b.classList.remove('lit'), ms);
+  };
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const play = async () => {
+    listening = false;
+    field.classList.add('watching');
+    await wait(700);
+    for (const i of pattern) { if (!k.alive()) return; light(i); await wait(650); }
+    field.classList.remove('watching');
+    at = 0;
+    listening = true;
+    k.line('you');
+  };
+  const begin = async () => {
+    const n = lengths[round];
+    while (pattern.length < n) pattern.push((Math.random() * 4) | 0);
+    k.progress(`Round ${round + 1} of ${lengths.length}`);
+    if (round) k.line('more'); else k.line('intro');
+    await wait(round ? 1400 : 3800);
+    if (k.alive()) play();
+  };
+  const press = i => {
+    if (!listening) return;
+    light(i, 260);
+    navigator.vibrate?.(8);
+    if (i !== pattern[at]) {
+      listening = false;
+      stones[i].classList.remove('nope'); void stones[i].offsetWidth; stones[i].classList.add('nope');
+      sound.boop?.();
+      k.line('again');
+      setTimeout(() => k.alive() && play(), 1600);
+      return;
+    }
+    if (++at < pattern.length) return;
+    listening = false;
+    sound.sticker?.();
+    if (++round === lengths.length) {
+      stones.forEach((b, j) => setTimeout(() => light(j, 900), j * 120));
+      k.backdrop(game.reveal);
+      setTimeout(() => k.alive() && k.win(), 1500);
+      return;
+    }
+    k.progress(`Round ${round} done!`);
+    setTimeout(() => k.alive() && begin(), 700);
+  };
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  begin();
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo };

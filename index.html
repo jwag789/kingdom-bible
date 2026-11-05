@@ -324,6 +324,11 @@
   .game .crumb { filter: drop-shadow(0 5px 6px rgba(0,0,0,0.35)); animation: popup 0.3s ease-out; transition: left 0.4s ease-in, top 0.4s ease-in, scale 0.4s; }
   .game .crumb img { width: 100%; }
   .game .crumb.taken { scale: 0.5; pointer-events: none; z-index: 3; }
+  .game .shelf.sheaves i.full { background-image: url("art/props/sheaf.png"); }
+  .game .stalk:not(.purpose) { filter: drop-shadow(0 0 5px rgba(255,248,215,0.95)) drop-shadow(0 4px 5px rgba(0,0,0,0.4)); }
+  .game .stalk.purpose { filter: drop-shadow(0 0 14px rgba(255,222,140,0.95)) drop-shadow(0 5px 6px rgba(0,0,0,0.35)); }
+  .game .stalk.purpose:not(.taken) img { animation: pulse 1.2s ease-in-out infinite; }
+  .game .stalk.gone { opacity: 0; transition: opacity 0.4s; }
 
   /* Find the Lamb */
   .game .field > .dark { inset: 0; transform: none; pointer-events: none; z-index: 2; transition: opacity 0.8s;
@@ -334,6 +339,13 @@
   .game .hider.hop { animation: hop 0.5s ease-out; }
   .game .hider.peek img { animation: wiggle 0.6s ease-in-out; }
   .game .hider.found { z-index: 4; animation: pulse 0.8s ease-in-out 2; filter: drop-shadow(0 0 14px #fff3c4) drop-shadow(0 0 30px rgba(255,215,112,0.9)); }
+
+  /* Listen and Follow */
+  .game .tablet { filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); transition: filter 0.15s, scale 0.15s; touch-action: none; }
+  .game .tablet img { width: 100%; }
+  .game .tablet.lit { scale: 1.1; filter: drop-shadow(0 0 10px var(--glow)) drop-shadow(0 0 28px var(--glow)) brightness(1.25); }
+  .game .tablet.nope { animation: wiggle 0.45s; }
+  .game .field.watching .tablet:not(.lit) { filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)) brightness(0.8); }
 
   /* Hush the Lions */
   .game .lion { --calm: 0; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); touch-action: none; animation: popup 0.3s ease-out; }

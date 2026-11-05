@@ -1,0 +1,708 @@
+{
+  "title": "The Ten Commandments",
+  "reference": "Exodus 19–34",
+  "subtitle": "The story of a smoking mountain, ten good rules, and a God who gives second chances",
+  "book": "Exodus",
+  "text": "data/commandments-text.json",
+  "art": "art/commandments",
+  "next": {
+    "story": "jericho",
+    "title": "The Walls of Jericho",
+    "sub": "Joshua 6: the story of a great big wall, a lot of marching, and one very loud shout."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "moses",
+      "name": "Moses",
+      "prompt": "Moses standing alone, full body, front view: a strong man with fair sun-tanned skin, a full dark-brown beard and long dark hair, wearing a shepherd's robe of brown and sand with a red sash, holding a long wooden staff",
+      "src": "art/moses/cast/moses.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 410038,
+        "at": "2026-11-03T03:05:51.720Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "camp",
+      "eyebrow": "Part One",
+      "title": "At the Holy Mountain",
+      "verses": [
+        "19:1",
+        "19:6"
+      ],
+      "beats": [
+        "After God brought His people safely through the Red Sea, they walked across the desert until they came to a great big mountain called Mount Sinai. There they set up their tents.",
+        "God told Moses, “Tell the people: I carried you the way an eagle carries its babies on its wings. You are My very own special people.”"
+      ],
+      "layers": [
+        {
+          "id": "tents",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "tents",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in the desert at sunrise, a huge camp of tents spreads across the sandy plain at the foot of an enormous, towering rocky mountain; Moses stands on a big rock right of center, looking up at the mountain, his staff in his hand, with families and goats among the tents and a golden eagle soaring in the sky",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/commandments/camp/tents.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 510664,
+            "at": "2026-11-05T05:23:34.775Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.77,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds"
+        ],
+        "mood": "dawn",
+        "music": "storybook"
+      },
+      "frame": [
+        0.7,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "mount-sinai",
+          "name": "Mount Sinai",
+          "earn": "play",
+          "at": [
+            0.3,
+            0.3
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "eagle",
+          "name": "The Eagle",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.79,
+            0.12
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.6,
+            0.9
+          ],
+          "fx": "notes",
+          "sound": "baa",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.79,
+            0.12
+          ],
+          "fx": "notes",
+          "sound": "chirp",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.15,
+            0.85
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "thunder",
+      "eyebrow": "Part Two",
+      "title": "God Comes Down",
+      "verses": [
+        "19:16",
+        "19:20"
+      ],
+      "beats": [
+        "Three days later, the whole mountain began to shake! There was thunder and lightning, a thick dark cloud, and the sound of a trumpet that grew louder and LOUDER.",
+        "God came down on the mountain in fire, and it smoked like a giant oven. The people trembled. But Moses climbed up the mountain to meet with God."
+      ],
+      "layers": [
+        {
+          "id": "cloud",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "cloud",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: the enormous rocky Mount Sinai is wrapped in a thick, dark, swirling cloud with flashes of lightning, right of center, while the people of God stand far back at the foot of the mountain beside their tents, holding each other and looking up in awe; dramatic but not frightening, a picture book for small children",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/commandments/thunder/cloud.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 4401,
+            "at": "2026-11-05T05:27:25.055Z"
+          },
+          "seed": 4401
+        },
+        {
+          "id": "fire",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "fire",
+          "editOf": "cloud",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see God come down",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "flame",
+          "edit": "The top of the mountain now glows with bright, warm fire and golden light shining through the cloud, smoke rising like from a great oven, and a tiny Moses with his staff climbs the winding path up the mountain toward the light, while the people below watch in wonder.",
+          "refs": [
+            "moses"
+          ],
+          "mood": "glory",
+          "music": "adventure",
+          "src": "art/commandments/thunder/fire.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 842365,
+            "at": "2026-11-05T05:27:55.796Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "lightning",
+          "from": 0
+        },
+        {
+          "type": "mist",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "fire"
+        },
+        {
+          "type": "glow",
+          "with": "fire"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.3
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "thunder"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.55,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "thunder",
+          "name": "Thunder and Lightning",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.25
+          ],
+          "r": 0.1,
+          "layer": "cloud"
+        },
+        {
+          "id": "fire",
+          "name": "Fire on the Mountain",
+          "earn": "reveal",
+          "layer": "fire",
+          "at": [
+            0.6,
+            0.17
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.65,
+            0.2
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "fire"
+        },
+        {
+          "at": [
+            0.57,
+            0.42
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "fire"
+        },
+        {
+          "at": [
+            0.8,
+            0.78
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "tablets",
+      "eyebrow": "Part Three",
+      "title": "Ten Good Rules",
+      "verses": [
+        "20:1",
+        "20:17"
+      ],
+      "beats": [
+        "Up on the mountain, God gave Moses ten good rules, called the Ten Commandments. God wrote them with His own finger, on two tablets of stone!",
+        "Love God more than anything. Don’t make idols to bow down to. Say God’s name with love and respect. And keep one day each week special, for resting and for God.",
+        "Honor your mom and dad. Don’t hurt anyone. Husbands and wives, stay true to each other. Don’t steal. Don’t lie. And don’t wish you had what belongs to someone else.",
+        "God gave these rules because He loved His people. They show us how to love God, and how to love each other."
+      ],
+      "layers": [
+        {
+          "id": "stone",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "stone",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: high on top of the mountain among soft glowing clouds, bathed in brilliant warm golden light from above: Moses stands right of center, gazing in wonder at the two rounded stone tablets he holds in his arms, their surfaces carved with rows of simple glowing golden marks and lines (no readable letters or words)",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/commandments/tablets/stone.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 833254,
+            "at": "2026-11-05T05:25:11.318Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 3,
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap the tablets",
+        "at": [
+          0.84,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "sky",
+        "music": "pads"
+      },
+      "frame": [
+        0.8,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "tablets",
+          "name": "Two Stone Tablets",
+          "earn": "play",
+          "at": [
+            0.84,
+            0.4
+          ],
+          "r": 0.08
+        },
+        {
+          "id": "cloud-peak",
+          "name": "The Peak in the Clouds",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.33,
+            0.65
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.6,
+            0.75
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.55,
+            0.1
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "calf",
+      "eyebrow": "Part Four",
+      "title": "The Golden Calf",
+      "verses": [
+        "32:1",
+        "32:19"
+      ],
+      "beats": [
+        "Moses was up on the mountain for forty days. Down below, the people got tired of waiting. “Make us a god we can see!” they said to Aaron, Moses’ brother.",
+        "So Aaron melted down their gold earrings and made a golden calf. The people danced around it and said, “This is our god!” They had already forgotten God’s very first rule.",
+        "When Moses came down and saw it, he was so upset that he threw down the stone tablets, and they broke into pieces."
+      ],
+      "layers": [
+        {
+          "id": "party",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "party",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in the desert camp at the foot of the great mountain: a shiny golden calf statue stands on a stone pedestal, right of center, while people dance and clap around it with tambourines, and Aaron in a white robe stands beside it; the mountain looms in the background with clouds on its top",
+          "refs": [],
+          "src": "art/commandments/calf/party.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 4402,
+            "at": "2026-11-05T05:29:45.845Z",
+            "edits": [
+              "Smooth away the faint vertical crease line running down through the sky and the ground on the left, so the sky and desert are one smooth, continuous scene. Keep everything else exactly the same."
+            ]
+          },
+          "seed": 4402
+        },
+        {
+          "id": "broken",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "broken",
+          "editOf": "party",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to see Moses come down",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Moses now stands at the front of the camp, right beside the golden calf, looking very sad and upset, with the two stone tablets lying broken in big pieces on the ground at his feet. Every person has stopped dancing: they stand still with their tambourines lowered, looking ashamed and sorry.",
+          "refs": [
+            "moses"
+          ],
+          "mood": "storm",
+          "music": "pads",
+          "src": "art/commandments/calf/broken.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 510623,
+            "at": "2026-11-05T05:31:03.622Z",
+            "edits": [
+              "Change Moses's face so he looks sad and upset, with a frown and worried eyebrows, not smiling. Change the people around the golden calf so they have stopped dancing: they stand still with their arms down, looking ashamed and sorry. Keep everything else exactly the same, including the broken stone tablets on the ground."
+            ]
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "with": "broken"
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "until": "broken",
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.55
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd",
+          "wind"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "golden-calf",
+          "name": "The Golden Calf",
+          "earn": "play",
+          "at": [
+            0.72,
+            0.43
+          ],
+          "r": 0.08,
+          "layer": "party"
+        },
+        {
+          "id": "broken-tablets",
+          "name": "Broken Tablets",
+          "earn": "reveal",
+          "layer": "broken",
+          "at": [
+            0.5,
+            0.9
+          ],
+          "r": 0.07
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.6,
+            0.7
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "until": "broken"
+        },
+        {
+          "at": [
+            0.88,
+            0.75
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "until": "broken"
+        },
+        {
+          "at": [
+            0.45,
+            0.12
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "again",
+      "eyebrow": "Part Five",
+      "title": "A Second Chance",
+      "verses": [
+        "34:1",
+        "34:29"
+      ],
+      "beats": [
+        "Moses prayed for the people, and God forgave them. “Cut two new stone tablets,” God said, “and I will write My words on them again.”",
+        "God showed Moses how good He is. “I am the Lord, kind and full of mercy, slow to get angry, and full of love that never gives up!”",
+        "When Moses came back down the mountain with the new tablets, his face was shining so brightly from being with God that everyone could see it glow!"
+      ],
+      "layers": [
+        {
+          "id": "shining",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "shining",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: at sunrise on the winding path down the side of the great mountain: Moses walks down right of center carrying two new stone tablets, his face shining with a bright, soft golden glow, while the people at the foot of the mountain look up at him amazed, shading their eyes and smiling",
+          "refs": [
+            "moses"
+          ],
+          "src": "art/commandments/again/shining.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 4403,
+            "at": "2026-11-05T05:29:02.126Z"
+          },
+          "seed": 4403
+        }
+      ],
+      "effects": [
+        {
+          "type": "rays",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 2
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap to see Moses shine",
+        "at": [
+          0.5,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "birds"
+        ],
+        "mood": "glory",
+        "music": "storybook"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "shining",
+          "name": "A Shining Face",
+          "earn": "play",
+          "at": [
+            0.5,
+            0.4
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "sunrise",
+          "name": "Sunrise",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.15,
+            0.5
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.3,
+            0.88
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.15,
+            0.5
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.55,
+            0.08
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Which of God’s ten rules do you think is the hardest to keep?",
+      "The people broke God’s very first rule, but God gave them a second chance. How does it feel when someone forgives you?",
+      "God’s rules show us how to love God and love each other. What is one way you can love someone today?"
+    ],
+    "verse": {
+      "ref": "Exodus 34:6",
+      "text": "The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion."
+    }
+  }
+}

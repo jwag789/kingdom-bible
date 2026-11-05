@@ -65,12 +65,28 @@
       "cover": "art/covers/moses-sea.jpg"
     },
     {
+      "id": "commandments",
+      "title": "The Ten Commandments",
+      "reference": "Exodus 19–34",
+      "coverFrom": "art/commandments/again/shining.jpg",
+      "testament": "old",
+      "cover": "art/covers/commandments.jpg"
+    },
+    {
       "id": "jericho",
       "title": "The Walls of Jericho",
       "reference": "Joshua 6",
       "coverFrom": "art/jericho/shout/fallen.jpg",
       "testament": "old",
       "cover": "art/covers/jericho.jpg"
+    },
+    {
+      "id": "ruth",
+      "title": "Ruth",
+      "reference": "Ruth 1–4",
+      "coverFrom": "art/ruth/road/cling.jpg",
+      "testament": "old",
+      "cover": "art/covers/ruth.jpg"
     },
     {
       "id": "david",
@@ -163,7 +179,8 @@
         "joseph",
         "moses-baby",
         "moses-plagues",
-        "moses-sea"
+        "moses-sea",
+        "commandments"
       ]
     },
     {
@@ -171,6 +188,7 @@
       "title": "Heroes and Prophets",
       "stories": [
         "jericho",
+        "ruth",
         "david",
         "jonah",
         "daniel"

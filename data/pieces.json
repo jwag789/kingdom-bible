@@ -87,7 +87,8 @@
       "stories": [
         "moses-baby",
         "moses-plagues",
-        "moses-sea"
+        "moses-sea",
+        "commandments"
       ]
     },
     {
@@ -124,6 +125,30 @@
       "src": "art/pieces/jericho-priest.png",
       "stories": [
         "jericho"
+      ]
+    },
+    {
+      "id": "ruth-ruth",
+      "name": "Ruth",
+      "src": "art/pieces/ruth-ruth.png",
+      "stories": [
+        "ruth"
+      ]
+    },
+    {
+      "id": "ruth-naomi",
+      "name": "Naomi",
+      "src": "art/pieces/ruth-naomi.png",
+      "stories": [
+        "ruth"
+      ]
+    },
+    {
+      "id": "ruth-boaz",
+      "name": "Boaz",
+      "src": "art/pieces/ruth-boaz.png",
+      "stories": [
+        "ruth"
       ]
     },
     {

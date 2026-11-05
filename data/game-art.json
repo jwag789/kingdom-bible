@@ -181,6 +181,44 @@
           }
         }
       ]
+    },
+    {
+      "id": "barley",
+      "layers": [
+        {
+          "id": "field",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "field",
+          "prompt": "One single continuous scene that fills the whole picture from edge to edge, not a book, with no border, no page edges, no blank paper, no fold and no seam down the middle: a wide barley field near Bethlehem in warm golden morning light, the near part already harvested into short golden stubble across the lower two thirds of the picture, with tall standing barley and a few small reapers far in the back, rolling hills and the little hill town of Bethlehem on the horizon; no people in the foreground",
+          "src": "art/games/barley/field.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 27182,
+            "at": "2026-11-05T05:17:57.876Z"
+          },
+          "seed": 27182
+        }
+      ]
+    },
+    {
+      "id": "sinai",
+      "layers": [
+        {
+          "id": "peak",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "peak",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: the wide, flat rocky top of a high mountain above the clouds, glowing with soft warm golden light from above, a sea of fluffy clouds stretching out to the horizon all around, a few smooth boulders at the sides; calm, quiet and holy; no people",
+          "src": "art/games/sinai/peak.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 4404,
+            "at": "2026-11-05T05:27:02.800Z"
+          },
+          "seed": 4404
+        }
+      ]
     }
   ]
 }
