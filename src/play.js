@@ -22,6 +22,7 @@
 // "glean"   Glean the Barley     sweep a finger across the field to gather the stalks Ruth gleans
 // "echo"    Listen and Follow    four stone tablets sing a pattern; tap it back in the same order
 // "wind"    Wind and Fire        swipe like a rushing wind to bring a little flame over each person
+// "altar"   Build the Altar      stack twelve stones, pour on water three times, pray, and fire falls
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1490,4 +1491,118 @@ function wind(k) {
   addEventListener('resize', () => k.alive() && place());
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind };
+// ---- Build the Altar: stack Elijah's twelve stones, pour on the water three times, then pray,
+// and fire falls from heaven (1 Kings 18:30-38).
+function altar(k) {
+  const { field, game, sound } = k;
+  const ROWS = [5, 4, 3];                               // twelve stones, widest at the bottom
+  const total = ROWS.reduce((a, b) => a + b, 0);
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let placed = 0, pours = 0, stage = 'build';
+  k.progress(`0 of ${total} stones`);
+  k.line('intro');
+  const ditch = el('div', 'ditch');
+  const water = el('div', 'water');
+  ditch.append(water);
+  const slots = [], stones = [];
+  field.append(ditch);
+  for (let r = 0; r < ROWS.length; r++) for (let c = 0; c < ROWS[r]; c++) { const s = el('div', 'slot'); s.dataset.r = r; s.dataset.c = c; field.append(s); slots.push(s); }
+  const wood = img(prop('sheaf'), 'wood');                // a bundle on top, like Elijah's wood
+  wood.style.opacity = 0;
+  field.append(wood);
+  const pile = el('div', 'stonepile');
+  for (let i = 0; i < total; i++) {
+    const b = el('button', 'piece');
+    b.setAttribute('aria-label', 'A stone');
+    b.append(img(prop('altarstone')));
+    b.onclick = () => lay(b);
+    pile.append(b);
+    stones.push(b);
+  }
+  field.append(pile);
+  const jar = el('button', 'jar');
+  jar.setAttribute('aria-label', 'Pour the water');
+  jar.append(img(prop('waterjar')));
+  jar.hidden = true;
+  const pray = el('button', 'begin read praybtn', 'Pray');
+  pray.hidden = true;
+  field.append(jar, pray);
+
+  const size = () => Math.min(W() * 0.15, (H() - k.head()) * 0.13);
+  const layout = () => {
+    const top = k.head(), room = H() - top, s = size(), cx = W() / 2, base = top + room * 0.62;
+    slots.forEach(sl => {
+      const r = +sl.dataset.r, c = +sl.dataset.c, n = ROWS[r];
+      sl.style.width = `${s}px`; sl.style.height = `${s * 0.78}px`;
+      put(sl, cx + (c - (n - 1) / 2) * s * 1.02, base - r * s * 0.8);
+    });
+    ditch.style.width = `${s * 7.2}px`; ditch.style.height = `${s * 1.3}px`;
+    put(ditch, cx, base + s * 0.55);
+    wood.style.width = `${s * 1.6}px`;
+    put(wood, cx, base - ROWS.length * s * 0.8 + s * 0.1);
+    jar.style.width = `${s * 1.7}px`;
+    put(jar, cx + s * 3.6, base - s * 1.6);
+    put(pray, cx, top + room * 0.12 + 20);
+    // Stones already on the altar stay in their slots.
+    stones.forEach(b => { if (b.dataset.slot) { const sl = slots[+b.dataset.slot]; b.style.width = sl.style.width; b.style.left = sl.style.left; b.style.top = sl.style.top; } });
+  };
+  const lay = b => {
+    if (stage !== 'build' || b.dataset.slot) return;
+    const sl = slots[placed];
+    b.dataset.slot = placed;
+    b.classList.add('laid');
+    field.append(b);                                      // off the pile, onto the altar
+    b.style.width = sl.style.width;
+    put(b, parseFloat(sl.style.left), parseFloat(sl.style.top));
+    sl.classList.add('filled');
+    sound.thud?.();
+    navigator.vibrate?.(12);
+    placed++;
+    k.progress(`${placed} of ${total} stones`);
+    k.say(game.lines[`count-${placed}`], `count-${placed}`);
+    if (placed < total) return;
+    stage = 'water';
+    setTimeout(() => {
+      if (!k.alive()) return;
+      pile.remove();
+      wood.style.opacity = 1;
+      jar.hidden = false;
+      k.progress('Pour the water');
+      k.line('water');
+    }, 900);
+  };
+  jar.onclick = () => {
+    if (stage !== 'water' || jar.classList.contains('pouring')) return;
+    jar.classList.add('pouring');
+    sound.splash?.(undefined, 1.2);
+    navigator.vibrate?.(20);
+    pours++;
+    water.style.setProperty('--fill', pours / 3);
+    stones.forEach(b => b.classList.add('wet'));
+    setTimeout(() => {
+      jar.classList.remove('pouring');
+      if (!k.alive()) return;
+      if (pours < 3) { k.line(pours === 1 ? 'again' : 'third'); return; }
+      stage = 'pray';
+      jar.hidden = true;
+      pray.hidden = false;
+      k.progress('Now pray');
+      k.line('pray');
+    }, 900);
+  };
+  pray.onclick = () => {
+    if (stage !== 'pray') return;
+    stage = 'done';
+    pray.hidden = true;
+    sound.flame?.();
+    navigator.vibrate?.([30, 40, 80]);
+    const fire = el('div', 'skyfire');
+    field.append(fire);
+    setTimeout(() => { if (!k.alive()) return; sound.promise?.(); k.backdrop(game.reveal); field.querySelectorAll('.slot, .piece, .ditch, .wood').forEach(n => n.classList.add('burn')); }, 700);
+    setTimeout(() => k.alive() && k.win(), 2600);
+  };
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar };

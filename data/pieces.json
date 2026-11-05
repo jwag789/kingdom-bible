@@ -176,6 +176,22 @@
       ]
     },
     {
+      "id": "elijah-elijah",
+      "name": "Elijah",
+      "src": "art/pieces/elijah-elijah.png",
+      "stories": [
+        "elijah"
+      ]
+    },
+    {
+      "id": "elijah-elisha",
+      "name": "Elisha",
+      "src": "art/pieces/elijah-elisha.png",
+      "stories": [
+        "elijah"
+      ]
+    },
+    {
       "id": "jonah-jonah",
       "name": "Jonah",
       "src": "art/pieces/jonah-jonah.png",

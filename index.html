@@ -360,6 +360,31 @@
     background: linear-gradient(90deg, transparent, rgba(255,250,225,0.85), transparent); animation: gust 0.8s ease-out forwards; }
   @keyframes gust { to { opacity: 0; scale: 2.2 0.6; } }
 
+  /* Build the Altar */
+  .game .slot { border: 2px dashed rgba(255,243,214,0.75); border-radius: 8px; background: rgba(10,12,20,0.25); pointer-events: none; }
+  .game .slot.filled { border-color: transparent; background: none; }
+  .game .field > .piece.laid { position: absolute; padding: 0; background: none; border: 0; box-shadow: none; pointer-events: none; z-index: 2;
+    transition: left 0.35s ease-in, top 0.35s ease-in; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4)); }
+  .game .field > .piece.laid img { width: 100%; }
+  .game .piece.laid.wet img { filter: brightness(0.8) saturate(1.2) hue-rotate(-8deg); }
+  .game .field > .stonepile { left: 50%; top: auto; bottom: 10px; transform: translateX(-50%); display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; width: min(96%, 560px); }
+  .game .stonepile .piece { position: relative; width: clamp(46px, 13vmin, 70px); height: clamp(46px, 13vmin, 70px); padding: 4px; }
+  .game .ditch { border-radius: 50%; background: rgba(60,40,20,0.35); border: 2px solid rgba(80,55,30,0.5); overflow: hidden; pointer-events: none; z-index: 1; }
+  .game .water { --fill: 0; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, #8fd0ff, #3f7fd0);
+    opacity: calc(var(--fill) * 0.9); transition: opacity 0.8s; }
+  .game .wood { pointer-events: none; z-index: 3; transition: opacity 0.6s; filter: sepia(0.6) brightness(0.8) drop-shadow(0 4px 4px rgba(0,0,0,0.4)); }
+  .game .field button.jar { z-index: 4; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); animation: pulse 1.4s ease-in-out infinite; transform-origin: 50% 70%; }
+  .game .field button.jar img { width: 100%; }
+  .game .field button.jar.pouring { animation: pour 0.9s ease-in-out; }
+  .game .field button.jar[hidden], .game .field .praybtn[hidden] { display: none; }
+  @keyframes pour { 40%, 70% { rotate: -50deg; translate: -30px 10px; } }
+  .game .field .praybtn { z-index: 5; font-size: 1.1rem; padding: 0.8em 2.2em; animation: popup 0.4s ease-out, pulse 1.4s ease-in-out infinite 0.4s; }
+  .game .field > .skyfire { left: 50%; top: 0; width: 34%; height: 70%; transform: translateX(-50%); pointer-events: none; z-index: 6; transform-origin: top;
+    background: linear-gradient(180deg, rgba(255,250,220,0), #ffe9a8 30%, #ffb347 70%, rgba(255,120,40,0)); filter: blur(6px);
+    animation: skyfire 1.6s ease-in forwards; }
+  @keyframes skyfire { 0% { scale: 1 0; opacity: 0; } 35% { scale: 1 1; opacity: 1; } 100% { scale: 1.6 1.1; opacity: 0; } }
+  .game .burn { transition: opacity 0.8s; opacity: 0; }
+
   /* Hush the Lions */
   .game .lion { --calm: 0; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); touch-action: none; animation: popup 0.3s ease-out; }
   .game .lion img { width: 100%; transition: opacity 0.6s; }

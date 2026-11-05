@@ -1,0 +1,732 @@
+{
+  "title": "Elijah and the Fire",
+  "reference": "1 Kings 17–18 · 2 Kings 2",
+  "subtitle": "The story of hungry ravens, a jar that never ran out, fire from heaven, and a chariot in the sky",
+  "book": "1 Kings",
+  "text": "data/elijah-text.json",
+  "art": "art/elijah",
+  "next": {
+    "story": "jonah",
+    "title": "Jonah and the Big Fish",
+    "sub": "Jonah 1–4: the story of a runaway prophet and a God who loves everyone."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "elijah",
+      "name": "Elijah",
+      "prompt": "Elijah standing alone, full body, front view: a bold, kind prophet with sun-weathered olive skin, wild curly dark hair and a big bushy beard streaked with grey, wearing a rough brown camel-hair cloak over a cream tunic with a leather belt, holding a wooden staff, and sandals",
+      "src": "art/elijah/cast/elijah.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 300632,
+        "at": "2026-11-05T13:38:39.336Z"
+      }
+    },
+    {
+      "id": "elisha",
+      "name": "Elisha",
+      "prompt": "Elisha standing alone, full body, front view: a friendly young man with olive skin, short dark hair and a short beard, wearing a simple blue-grey robe with a rope belt, and sandals",
+      "src": "art/elijah/cast/elisha.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 309491,
+        "at": "2026-11-05T13:38:58.951Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "ravens",
+      "eyebrow": "Part One",
+      "title": "Bread from the Ravens",
+      "verses": [
+        "1 Kings 17:1",
+        "1 Kings 17:6"
+      ],
+      "beats": [
+        "Long ago, a king named Ahab and his people stopped loving God. They prayed to a pretend god called Baal instead.",
+        "So God’s prophet Elijah told the king, “Because of this, no rain will fall, not one drop, until I say so!”",
+        "Then God sent Elijah to hide by a little stream. And every morning and every evening, big black ravens flew down and brought him bread and meat!"
+      ],
+      "layers": [
+        {
+          "id": "brook",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "brook",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: beside a small, clear stream in a quiet rocky valley with a few trees, in soft golden morning light: Elijah sits on a rock by the water, right of center, smiling up in surprise as two big black ravens swoop down to him, one carrying a round loaf of bread and one carrying a piece of meat in its beak",
+          "refs": [
+            "elijah"
+          ],
+          "src": "art/elijah/ravens/brook.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 511850,
+            "at": "2026-11-05T13:39:30.674Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 2,
+          "y": 0.75
+        },
+        {
+          "type": "birds",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap the ravens",
+        "at": [
+          0.5,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "dawn",
+        "music": "storybook"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "ravens",
+          "name": "Ravens Bring Bread",
+          "earn": "play",
+          "at": [
+            0.3,
+            0.27
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "cave",
+          "name": "Elijah’s Cave",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.83,
+            0.48
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.35,
+            0.88
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.55,
+            0.82
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.17,
+            0.61
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.42,
+            0.2
+          ],
+          "fx": "notes",
+          "sound": "chirp",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "widow",
+      "eyebrow": "Part Two",
+      "title": "The Jar That Never Ran Out",
+      "verses": [
+        "1 Kings 17:8",
+        "1 Kings 17:16"
+      ],
+      "beats": [
+        "After a while the stream dried up. So God sent Elijah to a town where a poor widow lived with her little boy.",
+        "“I only have a handful of flour and a little oil left,” she said. “Make me a small loaf first,” said Elijah, “and God won’t let your flour and oil run out.”",
+        "And it was true! Every day she reached into her jar, and there was always more flour, and always more oil. God took care of them all."
+      ],
+      "layers": [
+        {
+          "id": "kitchen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "kitchen",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: inside a small, simple clay-brick home with a little window and warm light: a kind widow in a faded rose robe pours golden oil from a small jug into a bowl of flour, right of center, while her little boy watches beside her and Elijah sits at the low table smiling; a clay jar of flour glows softly with warm light, full to the top",
+          "refs": [
+            "elijah"
+          ],
+          "src": "art/elijah/widow/kitchen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 530771,
+            "at": "2026-11-05T13:40:20.884Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap the jar",
+        "at": [
+          0.7,
+          0.6
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "fire"
+        ],
+        "mood": "warm",
+        "music": "storybook"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "never-empty",
+          "name": "The Jar That Never Ran Out",
+          "earn": "play",
+          "at": [
+            0.88,
+            0.76
+          ],
+          "r": 0.07
+        },
+        {
+          "id": "oil",
+          "name": "A Little Oil",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.55,
+            0.58
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.72,
+            0.22
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.88,
+            0.76
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.82,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "carmel",
+      "eyebrow": "Part Three",
+      "title": "Who Is the Real God?",
+      "verses": [
+        "1 Kings 18:20",
+        "1 Kings 18:29"
+      ],
+      "beats": [
+        "Three years later, Elijah called all the people to the top of Mount Carmel, along with 450 prophets of Baal. “Let’s find out who the real God is!” he said.",
+        "“We will each build an altar and pray. The God who answers with fire is the real God!” Everyone agreed.",
+        "The prophets of Baal shouted and danced around their altar from morning until afternoon. “O Baal, answer us!” But nothing happened. Not a sound. Not one spark."
+      ],
+      "layers": [
+        {
+          "id": "baal",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "baal",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on the wide, rocky top of Mount Carmel under a hazy sky: a big crowd of Baal’s prophets in fancy red and purple robes shout and dance and wave their arms around a stone altar piled with wood, left of center, but nothing happens; Elijah stands calmly right of center with his arms folded and a little smile, and crowds of people watch from the rocks",
+          "refs": [
+            "elijah"
+          ],
+          "src": "art/elijah/carmel/baal.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 962823,
+            "at": "2026-11-05T13:40:53.590Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.5,
+          0.55
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "calm-elijah",
+          "name": "Calm Elijah",
+          "earn": "play",
+          "at": [
+            0.63,
+            0.5
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "baal-altar",
+          "name": "Baal’s Altar",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.3,
+            0.74
+          ],
+          "r": 0.06
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.15,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.4,
+            0.62
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.32
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "eyebrow": "Part Four",
+      "title": "Fire from Heaven",
+      "verses": [
+        "1 Kings 18:30",
+        "1 Kings 18:45"
+      ],
+      "beats": [
+        "Then it was Elijah’s turn. He built an altar with twelve stones, put wood on top, and dug a ditch all around it.",
+        "“Pour water on it,” Elijah said. “Again! Again!” Splash, splash, splash! The altar was soaking wet, and the ditch was full of water.",
+        "Elijah prayed, “Lord, show everyone that You are God!” And WHOOSH! Fire fell from heaven and burned up everything, the wood, the stones, and even the water!",
+        "All the people fell to their knees. “The Lord, He is God!” they shouted. And then, at last, the rain came pouring down."
+      ],
+      "layers": [
+        {
+          "id": "altar",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "altar",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on the rocky top of Mount Carmel in the late afternoon: a simple altar of twelve big stones piled with wood, soaked with water and surrounded by a ditch full of water, stands right of center, and Elijah kneels in front of it with his arms raised to heaven in prayer, while a big crowd of people watches quietly from the rocks behind",
+          "refs": [
+            "elijah"
+          ],
+          "src": "art/elijah/fire/altar.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607869,
+            "at": "2026-11-05T13:41:51.986Z"
+          }
+        },
+        {
+          "id": "blaze",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "blaze",
+          "editOf": "altar",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to see God answer",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "flame",
+          "edit": "A great column of bright, glowing fire now falls from the sky onto the altar, burning up the wood and stones in a blaze of golden and orange light, the water in the ditch turning to steam; Elijah kneels with his arms raised, and all the people have fallen to their knees in amazement.",
+          "refs": [
+            "elijah"
+          ],
+          "mood": "glory",
+          "music": "adventure",
+          "src": "art/elijah/fire/blaze.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 607869,
+            "at": "2026-11-05T13:42:22.343Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "blaze"
+        },
+        {
+          "type": "glow",
+          "with": "blaze"
+        },
+        {
+          "type": "rain",
+          "from": 3
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.45,
+          0.6
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "crowd"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.45,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "twelve-stones",
+          "name": "Twelve Stones",
+          "earn": "play",
+          "at": [
+            0.32,
+            0.68
+          ],
+          "r": 0.1,
+          "layer": "altar"
+        },
+        {
+          "id": "fire-from-heaven",
+          "name": "Fire from Heaven",
+          "earn": "reveal",
+          "layer": "blaze",
+          "at": [
+            0.38,
+            0.4
+          ],
+          "r": 0.12
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.85,
+            0.78
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05,
+          "until": "blaze"
+        },
+        {
+          "at": [
+            0.12,
+            0.42
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.42
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.33,
+            0.62
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.05,
+          "with": "blaze"
+        }
+      ]
+    },
+    {
+      "id": "chariot",
+      "eyebrow": "Part Five",
+      "title": "A Chariot of Fire",
+      "verses": [
+        "2 Kings 2:9",
+        "2 Kings 2:13"
+      ],
+      "beats": [
+        "When Elijah was old, he had a helper and friend named Elisha. They walked together everywhere, and Elisha would not leave his side.",
+        "One day, as they were walking and talking, a chariot of fire pulled by horses of fire swept down between them! And Elijah went up to heaven in a whirlwind.",
+        "Elijah’s cloak fell to the ground. Elisha picked it up, and God was with Elisha, just as He had been with Elijah."
+      ],
+      "layers": [
+        {
+          "id": "walk",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "walk",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: beside the river Jordan in warm golden evening light, with reeds and palm trees along the bank and hills beyond: old Elijah and young Elisha walk side by side along the riverbank, right of center, talking together like good friends",
+          "refs": [
+            "elijah",
+            "elisha"
+          ],
+          "src": "art/elijah/chariot/walk.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 835537,
+            "at": "2026-11-05T13:49:18.561Z"
+          }
+        },
+        {
+          "id": "whirlwind",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "whirlwind",
+          "editOf": "walk",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see the chariot",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "A glowing chariot made of bright fire, pulled by two leaping horses of fire, now sweeps up into the sky in a swirling golden whirlwind, carrying Elijah up toward the clouds; Elijah’s brown cloak floats down toward young Elisha, who stands on the riverbank looking up in wonder.",
+          "refs": [
+            "elijah",
+            "elisha"
+          ],
+          "mood": "glory",
+          "music": "adventure",
+          "src": "art/elijah/chariot/whirlwind.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 835537,
+            "at": "2026-11-05T13:50:05.568Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.75
+        },
+        {
+          "type": "rays",
+          "with": "whirlwind"
+        },
+        {
+          "type": "sing",
+          "with": "whirlwind",
+          "voice": "choir"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.65,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind",
+          "waves"
+        ],
+        "mood": "warm",
+        "music": "storybook"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "friends",
+          "name": "Elijah and Elisha",
+          "earn": "play",
+          "at": [
+            0.74,
+            0.53
+          ],
+          "r": 0.1,
+          "layer": "walk"
+        },
+        {
+          "id": "chariot",
+          "name": "The Chariot of Fire",
+          "earn": "reveal",
+          "layer": "whirlwind",
+          "at": [
+            0.46,
+            0.2
+          ],
+          "r": 0.12
+        },
+        {
+          "id": "cloak",
+          "name": "Elijah’s Cloak",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.53,
+            0.58
+          ],
+          "r": 0.05,
+          "layer": "whirlwind",
+          "with": "whirlwind"
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.4,
+            0.7
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.1,
+            0.5
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.9,
+            0.22
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "God sent ravens to bring Elijah food. How does God take care of you?",
+      "The prophets of Baal shouted all day and nothing happened. Why do you think Elijah was so sure God would answer?",
+      "Elijah prayed, and God answered. What would you like to talk to God about today?"
+    ],
+    "verse": {
+      "ref": "1 Kings 18:39",
+      "text": "The LORD, He is God! The LORD, He is God!"
+    }
+  }
+}

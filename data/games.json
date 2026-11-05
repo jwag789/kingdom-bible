@@ -689,5 +689,39 @@
       "win": "Wind and fire! They were all filled with the Holy Spirit, just as Jesus promised.",
       "done": "You will receive power when the Holy Spirit comes upon you."
     }
+  },
+  "elijah": {
+    "id": "build-altar",
+    "title": "Build the Altar",
+    "type": "altar",
+    "scene": "fire",
+    "background": "art/games/carmel/top.jpg",
+    "reveal": "art/elijah/fire/blaze.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "badge": "art/props/altarstone.png",
+    "lines": {
+      "intro": "Help Elijah build an altar with twelve stones, one for each family of God’s people. Tap the stones to stack them up!",
+      "count-1": "One!",
+      "count-2": "Two!",
+      "count-3": "Three!",
+      "count-4": "Four!",
+      "count-5": "Five!",
+      "count-6": "Six!",
+      "count-7": "Seven!",
+      "count-8": "Eight!",
+      "count-9": "Nine!",
+      "count-10": "Ten!",
+      "count-11": "Eleven!",
+      "count-12": "Twelve!",
+      "water": "Twelve stones! Now tap the jar to pour water all over it.",
+      "again": "Again!",
+      "third": "One more time!",
+      "pray": "It’s soaking wet! Now tap “Pray” and ask God to show everyone that He is God.",
+      "win": "Fire from heaven! “The Lord, He is God! The Lord, He is God!”",
+      "done": "The Lord, He is God!"
+    }
   }
 }

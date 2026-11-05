@@ -219,6 +219,24 @@
           "seed": 4404
         }
       ]
+    },
+    {
+      "id": "carmel",
+      "layers": [
+        {
+          "id": "top",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "top",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: the wide, flat, rocky top of Mount Carmel in the late afternoon, with a big open patch of bare flat ground in the middle and a shallow ditch dug in a ring around it, a pile of firewood to one side, and crowds of tiny people watching from the rocks far behind, the sea glinting in the distance; nothing built in the middle yet",
+          "src": "art/games/carmel/top.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 962823,
+            "at": "2026-11-05T13:38:46.660Z"
+          }
+        }
+      ]
     }
   ]
 }

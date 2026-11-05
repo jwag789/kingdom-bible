@@ -252,6 +252,18 @@
       "name": "a little flame",
       "prompt": "a single small, gentle flame of warm golden-orange fire shaped like a teardrop, glowing softly, standing upright",
       "thing": true
+    },
+    {
+      "id": "altarstone",
+      "name": "a big stone",
+      "prompt": "a single big, chunky, roughly square grey stone block with chipped edges, seen from the front",
+      "thing": true
+    },
+    {
+      "id": "waterjar",
+      "name": "a water jar",
+      "prompt": "a single big round clay water jar with two handles, tipped over, pouring a stream of clear blue water out of its mouth",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

@@ -97,6 +97,14 @@
       "cover": "art/covers/david.jpg"
     },
     {
+      "id": "elijah",
+      "title": "Elijah and the Fire",
+      "reference": "1 Kings 17–18 · 2 Kings 2",
+      "coverFrom": "art/elijah/fire/blaze.jpg",
+      "testament": "old",
+      "cover": "art/covers/elijah.jpg"
+    },
+    {
       "id": "jonah",
       "title": "Jonah and the Big Fish",
       "reference": "Jonah 1–4",
@@ -198,6 +206,7 @@
         "jericho",
         "ruth",
         "david",
+        "elijah",
         "jonah",
         "daniel"
       ]
