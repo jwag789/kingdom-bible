@@ -1,0 +1,318 @@
+{
+  "style": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single animal alone, full body, seen from the side facing left, centered on a plain pure white background, nothing else in the picture. No text, no border",
+  "props": [
+    {
+      "id": "lion",
+      "name": "lions",
+      "prompt": "a friendly lion with a big fluffy golden-orange mane"
+    },
+    {
+      "id": "elephant",
+      "name": "elephants",
+      "prompt": "a gentle grey elephant with big ears and a curled trunk"
+    },
+    {
+      "id": "giraffe",
+      "name": "giraffes",
+      "prompt": "a tall, sweet giraffe with orange-brown patches and a long neck"
+    },
+    {
+      "id": "zebra",
+      "name": "zebras",
+      "prompt": "a cheerful zebra with bold black and white stripes"
+    },
+    {
+      "id": "sheep",
+      "name": "sheep",
+      "prompt": "a fluffy cream sheep with a dark face and little dark legs"
+    },
+    {
+      "id": "rabbit",
+      "name": "rabbits",
+      "prompt": "a small brown-and-white rabbit with long ears, sitting up"
+    },
+    {
+      "id": "camel",
+      "name": "camels",
+      "prompt": "a sandy-brown camel with one big hump and a happy face"
+    },
+    {
+      "id": "hippo",
+      "name": "hippos",
+      "prompt": "a round, smiling purple-grey hippo"
+    },
+    {
+      "id": "sun",
+      "name": "the sun",
+      "prompt": "a big, bright, friendly golden sun with wavy paper rays",
+      "thing": true
+    },
+    {
+      "id": "moon",
+      "name": "the moon",
+      "prompt": "a glowing pale-gold crescent moon",
+      "thing": true
+    },
+    {
+      "id": "star",
+      "name": "a star",
+      "prompt": "a shining five-pointed golden star",
+      "thing": true
+    },
+    {
+      "id": "tree",
+      "name": "a tree",
+      "prompt": "a leafy green fruit tree with round red fruit and a brown trunk",
+      "thing": true
+    },
+    {
+      "id": "flower",
+      "name": "a flower",
+      "prompt": "a bright cheerful flower with pink and yellow petals and two green leaves",
+      "thing": true
+    },
+    {
+      "id": "fish",
+      "name": "fish",
+      "prompt": "a cheerful little striped orange and blue fish, seen from the side facing left"
+    },
+    {
+      "id": "bird",
+      "name": "birds",
+      "prompt": "a little bluebird flying with wings spread, seen from the side facing left"
+    },
+    {
+      "id": "frog",
+      "name": "frogs",
+      "prompt": "a cheerful bright green frog sitting, seen from the side facing left"
+    },
+    {
+      "id": "basket",
+      "name": "a basket",
+      "prompt": "a woven reed baby basket floating, with a sleeping baby wrapped in a cream blanket peeking out, seen from the side",
+      "thing": true
+    },
+    {
+      "id": "rock",
+      "name": "a rock",
+      "prompt": "a rounded grey river boulder with a little moss",
+      "thing": true
+    },
+    {
+      "id": "reeds",
+      "name": "reeds",
+      "prompt": "a clump of tall green papyrus reeds growing out of a little patch of water",
+      "thing": true
+    },
+    {
+      "id": "lotus",
+      "name": "a lotus flower",
+      "prompt": "a pink water lily flower on a round green lily pad",
+      "thing": true
+    },
+    {
+      "id": "family",
+      "name": "a family",
+      "prompt": "a small family of travelers walking to the left: a father with a staff, a mother carrying a bundle and a small child holding her hand, in simple colorful robes",
+      "thing": true
+    },
+    {
+      "id": "family2",
+      "name": "a family",
+      "prompt": "a grandmother and two children walking to the left, the older child leading a little white goat, in simple colorful robes",
+      "thing": true
+    },
+    {
+      "id": "smooth",
+      "name": "a smooth stone",
+      "prompt": "a single smooth, round, polished grey river stone",
+      "thing": true
+    },
+    {
+      "id": "rough",
+      "name": "a rough rock",
+      "prompt": "a single jagged, rough, pointy brown rock with sharp corners",
+      "thing": true
+    },
+    {
+      "id": "bag",
+      "name": "a shepherd's bag",
+      "prompt": "a small brown leather shepherd's bag with a strap, its flap open",
+      "thing": true
+    },
+    {
+      "id": "lion-asleep",
+      "name": "a sleeping lion",
+      "prompt": "a big, friendly cartoon lion with a shaggy golden-brown mane, lying down curled up fast asleep with its eyes closed and a peaceful little smile, its tail curled around its paws"
+    },
+    {
+      "id": "coin",
+      "name": "a coin",
+      "prompt": "a single shiny round gold coin with a simple stamped star pattern, seen from the front",
+      "thing": true
+    },
+    {
+      "id": "purse",
+      "name": "a coin purse",
+      "prompt": "a fat, bulging brown leather coin purse tied at the top with a cord, a few shiny gold coins spilling out of it",
+      "thing": true
+    },
+    {
+      "id": "widow",
+      "name": "a grandmother",
+      "prompt": "a kind old grandmother with a wrinkled smiling face in a simple faded blue robe and cream head covering, standing, full body, holding out an empty clay bowl with both hands",
+      "thing": true
+    },
+    {
+      "id": "farmer",
+      "name": "a farmer",
+      "prompt": "a thin farmer with a brown beard in a patched tan robe and sandals, standing, full body, holding out an empty clay bowl with both hands, hopeful face",
+      "thing": true
+    },
+    {
+      "id": "girl",
+      "name": "a little girl",
+      "prompt": "a little girl with dark braids in a simple patched pink robe and bare feet, standing, full body, holding out an empty clay bowl with both hands, big hopeful eyes",
+      "thing": true
+    },
+    {
+      "id": "rider",
+      "name": "Jesus on a donkey",
+      "prompt": "Jesus riding a small grey donkey that walks toward the right: Jesus is a kind man with shoulder-length wavy brown hair and a short brown beard, smiling and waving, wearing a cream robe with a blue sash and a brown cloak; full body of both, the donkey with long ears and a little tuft of tail",
+      "thing": true
+    },
+    {
+      "id": "palm",
+      "name": "a palm branch",
+      "prompt": "a single long, leafy green palm branch, lying flat",
+      "thing": true
+    },
+    {
+      "id": "cloak",
+      "name": "a cloak",
+      "prompt": "a single colorful striped woven cloak spread out flat, in red, gold and blue stripes",
+      "thing": true
+    },
+    {
+      "id": "coat",
+      "name": "a coat of many colors",
+      "prompt": "a single beautiful long robe with long sleeves, laid out flat, in bold stripes of red, orange, yellow, green, blue and purple",
+      "thing": true
+    },
+    {
+      "id": "marcher",
+      "name": "a priest with a horn",
+      "prompt": "a priest in a long white robe with a blue sash and a white head covering, marching toward the right, full body, blowing a long curly ram’s horn trumpet held up high",
+      "thing": true
+    },
+    {
+      "id": "loaf",
+      "name": "a loaf of bread",
+      "prompt": "a single small round golden-brown loaf of barley bread with a cracked top",
+      "thing": true
+    },
+    {
+      "id": "breadbasket",
+      "name": "a basket",
+      "prompt": "a single empty round woven wicker basket with two little handles, seen from the front, slightly from above",
+      "thing": true
+    },
+    {
+      "id": "fullbasket",
+      "name": "a basket of bread",
+      "prompt": "a single round woven wicker basket heaped high with small round golden loaves of bread and two little fish on top, seen from the front",
+      "thing": true
+    },
+    {
+      "id": "smallfish",
+      "name": "a little fish",
+      "prompt": "a single small plain silvery-grey fish with a soft golden belly, like a little sardine, lying on its side",
+      "thing": true
+    },
+    {
+      "id": "barley",
+      "name": "a stalk of barley",
+      "prompt": "a single long stalk of golden barley with a full, bearded ear of grain at the top, lying flat",
+      "thing": true
+    },
+    {
+      "id": "sheaf",
+      "name": "a sheaf of barley",
+      "prompt": "a single bundle of golden barley stalks tied around the middle with a twist of straw, standing upright, the bearded ears fanning out at the top",
+      "thing": true
+    },
+    {
+      "id": "tablet",
+      "name": "a stone tablet",
+      "prompt": "a single smooth grey stone tablet with a rounded top, standing upright, its face carved with a few simple rows of short engraved lines (no letters or words)",
+      "thing": true
+    },
+    {
+      "id": "flame",
+      "name": "a little flame",
+      "prompt": "a single small, gentle flame of warm golden-orange fire shaped like a teardrop, glowing softly, standing upright",
+      "thing": true
+    },
+    {
+      "id": "altarstone",
+      "name": "a big stone",
+      "prompt": "a single big, chunky, roughly square grey stone block with chipped edges, seen from the front",
+      "thing": true
+    },
+    {
+      "id": "waterjar",
+      "name": "a water jar",
+      "prompt": "a single big round clay water jar with two handles, tipped over, pouring a stream of clear blue water out of its mouth",
+      "thing": true
+    },
+    {
+      "id": "basketpaul",
+      "name": "Paul in a basket",
+      "prompt": "a big round woven basket hanging from four ropes that meet at the top, with a smiling man with a short dark beard and a deep-blue cloak sitting inside it, peeking over the edge and holding on",
+      "thing": true
+    },
+    {
+      "id": "guard",
+      "name": "a guard with a lantern",
+      "prompt": "a city guard in a bronze helmet and red tunic walking to the right, full body, holding up a glowing clay lantern in front of him and looking around",
+      "thing": true
+    },
+    {
+      "id": "gragger",
+      "name": "a Purim noisemaker",
+      "prompt": "a single wooden Purim noisemaker (a gragger): a short round wooden handle with a small rectangular wooden ratchet box on top that spins around it, painted with bright blue, gold and red stripes and little stars",
+      "thing": true
+    },
+    {
+      "id": "sonrags",
+      "name": "the lost son in rags",
+      "prompt": "a thin young man of about nineteen with tan skin, messy curly brown hair and a thin face, standing full body facing front with a shy, hopeful smile, barefoot, wearing a torn, patched, dirty old brown tunic with ragged edges",
+      "thing": true
+    },
+    {
+      "id": "sonrobe",
+      "name": "the son in the best robe",
+      "prompt": "a thin young man of about nineteen with tan skin, messy curly brown hair and a thin face, standing full body facing front with a huge happy smile and his arms open wide, wearing a splendid long red robe with gold trim over a clean cream tunic, a shiny gold ring on his finger and new brown leather sandals",
+      "thing": true
+    },
+    {
+      "id": "robe",
+      "name": "the best robe",
+      "prompt": "a splendid long red robe with wide sleeves and shining gold trim, folded neatly over a wooden hanger",
+      "thing": true
+    },
+    {
+      "id": "ring",
+      "name": "a gold ring",
+      "prompt": "a single shiny gold signet ring with a red jewel, seen from a little above",
+      "thing": true
+    },
+    {
+      "id": "sandals",
+      "name": "new sandals",
+      "prompt": "a pair of new brown leather sandals with straps, side by side",
+      "thing": true
+    }
+  ],
+  "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"
+}

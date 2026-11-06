@@ -1,0 +1,18 @@
+/* Literata and Cormorant Garamond (SIL Open Font License, see the LICENSE files), served from
+   here so the app works offline and nothing is fetched from a third party. */
+@font-face { font-family: 'Literata'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('literata-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Literata'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('literata-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Literata'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('literata-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Literata'; font-style: italic; font-weight: 600; font-display: swap;
+  src: url('literata-latin-600-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 500; font-display: swap;
+  src: url('cormorant-garamond-latin-500-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('cormorant-garamond-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 600; font-display: swap;
+  src: url('cormorant-garamond-latin-600-italic.woff2') format('woff2'); }
