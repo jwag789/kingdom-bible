@@ -398,6 +398,30 @@
     background: linear-gradient(180deg, rgba(255,226,150,0.55), rgba(255,226,150,0.12) 70%, transparent); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); }
   .game .field > .beam.on { opacity: 1; }
 
+  /* Drown Out Haman */
+  .game .field > .megillah { left: 0; right: 0; transform: translateY(-50%); pointer-events: none; z-index: 1;
+    background: linear-gradient(180deg, #d9bf8c, #f6e7c4 14%, #fbf1d8 50%, #f2e0b8 86%, #cfb27a);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.35), inset 0 0 30px rgba(150,110,50,0.25); }
+  .game .field > .listen { border-radius: 50%; pointer-events: none; z-index: 3; border: 5px solid #e2b347;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.7), 0 0 26px rgba(255,205,90,0.9); animation: pulse 1.6s ease-in-out infinite; }
+  .game .field > .face { width: var(--s); pointer-events: none; z-index: 2; }
+  .game .face img { width: 100%; display: block; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35)); }
+  .game .face .name { position: absolute; left: 50%; top: 100%; translate: -50% 2px; white-space: nowrap; font-weight: 700;
+    font-size: clamp(0.7rem, calc(var(--s) * 0.14), 1rem); color: #5a3d17; }
+  .game .face.shh img { animation: nope 0.5s; }
+  .game .face.drowned { transition: opacity 0.6s 0.4s, scale 0.6s 0.4s; opacity: 0; scale: 0.4; }
+  .game .face.drowned img { animation: wiggle 0.4s 2; }
+  .game .face.drowned::after { content: '✦ ✦ ✦'; position: absolute; left: 50%; top: -20%; translate: -50% 0; color: #e2b347;
+    font-size: calc(var(--s) * 0.3); letter-spacing: 0.2em; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+  .game .face.snuck { transition: opacity 0.6s; opacity: 0.45; }
+  .game .face.fade { transition: opacity 0.6s; opacity: 0; }
+  .game .field button.gragger { background: none; border: 0; padding: 0; z-index: 4; cursor: pointer; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4)); }
+  .game .gragger img { width: 100%; display: block; transform-origin: 60% 80%; }
+  .game .gragger.spin img { animation: rattle 0.45s ease-out; }
+  .game .gragger.resting { filter: grayscale(0.7) drop-shadow(0 8px 12px rgba(0,0,0,0.4)); opacity: 0.7; }
+  .game .gragger.tired img { animation: nope 0.4s; }
+  @keyframes rattle { 15% { rotate: -22deg; } 35% { rotate: 18deg; } 55% { rotate: -14deg; } 75% { rotate: 8deg; } }
+
   /* Hush the Lions */
   .game .lion { --calm: 0; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); touch-action: none; animation: popup 0.3s ease-out; }
   .game .lion img { width: 100%; transition: opacity 0.6s; }

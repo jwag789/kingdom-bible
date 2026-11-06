@@ -121,6 +121,14 @@
       "cover": "art/covers/daniel.jpg"
     },
     {
+      "id": "esther",
+      "title": "Queen Esther",
+      "reference": "Esther 2–9",
+      "coverFrom": "art/esther/scepter/scepter.jpg",
+      "testament": "old",
+      "cover": "art/covers/esther.jpg"
+    },
+    {
       "id": "christmas",
       "title": "The First Christmas",
       "reference": "Luke 1–2 · Matthew 2",
@@ -216,7 +224,8 @@
         "david",
         "elijah",
         "jonah",
-        "daniel"
+        "daniel",
+        "esther"
       ]
     },
     {

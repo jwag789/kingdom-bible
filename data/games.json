@@ -744,5 +744,26 @@
       "win": "You did it! Paul got away safely, and he went on to tell the whole world about Jesus.",
       "done": "God kept Paul safe."
     }
+  },
+  "esther": {
+    "id": "drown-out-haman",
+    "title": "Drown Out Haman",
+    "type": "gragger",
+    "scene": "joy",
+    "background": "art/esther/joy/party.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "goal": 12,
+    "badge": "art/props/gragger.png",
+    "lines": {
+      "intro": "On Purim, God’s people read the story of Esther out loud. Every time they hear the name Haman, they shake their noisemakers to drown it out! Shake the noisemaker when Haman comes to the golden ring. But keep quiet for Esther, Mordecai and the king!",
+      "nope": "Shh! That’s not Haman. Wait for Haman!",
+      "missed": "Oops, Haman snuck by! Get the next one.",
+      "faster": "Louder! Here comes more of the story!",
+      "win": "Hooray! You drowned out Haman! God turned His people’s sadness into joy.",
+      "done": "Their sorrow turned to joy."
+    }
   }
 }

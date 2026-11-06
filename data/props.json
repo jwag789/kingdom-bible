@@ -276,6 +276,12 @@
       "name": "a guard with a lantern",
       "prompt": "a city guard in a bronze helmet and red tunic walking to the right, full body, holding up a glowing clay lantern in front of him and looking around",
       "thing": true
+    },
+    {
+      "id": "gragger",
+      "name": "a Purim noisemaker",
+      "prompt": "a single wooden Purim noisemaker (a gragger): a short round wooden handle with a small rectangular wooden ratchet box on top that spins around it, painted with bright blue, gold and red stripes and little stars",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

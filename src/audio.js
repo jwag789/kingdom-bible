@@ -708,6 +708,13 @@ export class Sound {
     for (const x of [o, o2, vib]) { x.start(now); x.stop(now + len + 0.2); }
   }
 
+  rattle() {                         // a Purim noisemaker: a quick, clattering run of wooden clicks as it whirls
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    for (let i = 0; i < 16; i++) this.noiseBurst({ at: now + i * 0.026 + Math.random() * 0.006, peak: 0.16 * (1 - i / 20), attack: 0.002, release: 0.03, type: 'bandpass', from: rand(1900, 2700), to: 1400, q: 2.5 });
+    for (let i = 0; i < 8; i++) this.noiseBurst({ at: now + i * 0.052, peak: 0.08, attack: 0.002, release: 0.05, type: 'bandpass', from: 700, to: 500, q: 2 });
+  }
+
   shout() {                          // everyone shouts at once, and a great wall rumbles down
     if (!this.ready) return;
     const now = this.ctx.currentTime;

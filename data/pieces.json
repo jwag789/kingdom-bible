@@ -240,6 +240,38 @@
       ]
     },
     {
+      "id": "esther-esther",
+      "name": "Esther",
+      "src": "art/pieces/esther-esther.png",
+      "stories": [
+        "esther"
+      ]
+    },
+    {
+      "id": "esther-mordecai",
+      "name": "Mordecai",
+      "src": "art/pieces/esther-mordecai.png",
+      "stories": [
+        "esther"
+      ]
+    },
+    {
+      "id": "esther-king",
+      "name": "King Xerxes",
+      "src": "art/pieces/esther-king.png",
+      "stories": [
+        "esther"
+      ]
+    },
+    {
+      "id": "esther-haman",
+      "name": "Haman",
+      "src": "art/pieces/esther-haman.png",
+      "stories": [
+        "esther"
+      ]
+    },
+    {
       "id": "christmas-mary",
       "name": "Mary",
       "src": "art/pieces/christmas-mary.png",

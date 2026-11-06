@@ -24,6 +24,7 @@
 // "wind"    Wind and Fire        swipe like a rushing wind to bring a little flame over each person
 // "altar"   Build the Altar      stack twelve stones, pour on water three times, pray, and fire falls
 // "basket"  Down the Wall        hold to lower Paul's basket, and keep still when the guard's lantern passes
+// "gragger" Drown Out Haman      faces roll along the scroll; shake the noisemaker only when Haman reaches the ring
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1673,4 +1674,109 @@ function basket(k) {
   });
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar, basket };
+// ---- Drown Out Haman: on Purim the story of Esther is read out loud, and every time Haman's
+// name comes, everyone shakes their noisemakers to drown it out. Faces roll along the scroll;
+// shake the noisemaker when Haman reaches the golden ring, and keep quiet for everyone else.
+// Shaking at the wrong face makes the noisemaker rest a moment, so tapping nonstop doesn't win.
+function gragger(k) {
+  const { field, game, sound } = k;
+  const goal = game.goal ?? 12;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  const NAMES = { haman: 'Haman', esther: 'Queen Esther', mordecai: 'Mordecai', king: 'The King' };
+  const scroll = el('div', 'megillah');
+  const ring = el('div', 'listen');
+  const noisy = el('button', 'gragger');
+  noisy.setAttribute('aria-label', 'Shake the noisemaker');
+  noisy.append(img(prop('gragger')));
+  field.append(scroll, ring, noisy);
+  let drowned = 0, done = false, lastNope = 0, lastMiss = 0, restUntil = 0, now = 0, hamans = 0, others = 0;
+  const faces = [];
+  // From the bottom up: the noisemaker, then the scroll just above it, clear of the words at the top.
+  const geo = () => {
+    const b = clamp(Math.min(W() * 0.3, H() * 0.2), 80, 190);
+    const s = clamp(Math.min(W() * 0.2, H() * 0.17), 56, 150);
+    const by = H() - b * 0.6 - 10;
+    return { s, b, by, y: by - b * 0.5 - s * 1.15, rx: W() * 0.3 };
+  };
+  // Haman a little under half the time, never three of anyone in a row.
+  const pick = () => {
+    const haman = others >= 2 ? true : hamans >= 2 ? false : Math.random() < 0.45;
+    if (haman) { hamans++; others = 0; return 'haman'; }
+    others++; hamans = 0;
+    return ['esther', 'mordecai', 'king'][(Math.random() * 3) | 0];
+  };
+  const spawn = g => {
+    const kind = pick();
+    const n = el('div', `face ${kind}`);
+    n.append(img(prop(`face-${kind}`)), el('span', 'name', NAMES[kind]));
+    field.insertBefore(n, ring);
+    faces.push({ n, kind, x: W() + g.s, gap: g.s * (1.25 + Math.random() * 0.9), hit: false, gone: false });
+  };
+  const layout = () => {
+    const g = geo();
+    field.style.setProperty('--s', `${g.s}px`);
+    scroll.style.top = `${g.y}px`; scroll.style.height = `${g.s * 1.5}px`;
+    ring.style.width = ring.style.height = `${g.s * 1.22}px`;
+    put(ring, g.rx, g.y);
+    noisy.style.width = `${g.b}px`;
+    put(noisy, W() / 2, g.by);
+  };
+  const shake = () => {
+    if (done) return;
+    if (now < restUntil) { noisy.classList.remove('tired'); void noisy.offsetWidth; noisy.classList.add('tired'); return; }
+    noisy.classList.remove('spin'); void noisy.offsetWidth; noisy.classList.add('spin');
+    sound.rattle?.();
+    navigator.vibrate?.([8, 16, 8, 16, 8]);
+    const g = geo();
+    const f = faces.filter(f => !f.hit && !f.gone && Math.abs(f.x - g.rx) < g.s * 0.62)
+      .sort((a, b) => Math.abs(a.x - g.rx) - Math.abs(b.x - g.rx))[0];
+    if (!f) return;
+    if (f.kind !== 'haman') {
+      restUntil = now + 0.9;
+      noisy.classList.add('resting');
+      f.n.classList.remove('shh'); void f.n.offsetWidth; f.n.classList.add('shh');
+      sound.boop?.();
+      if (performance.now() - lastNope > 4000) { lastNope = performance.now(); k.line('nope'); }
+      return;
+    }
+    f.hit = true;
+    f.n.classList.add('drowned');
+    drowned++;
+    k.progress(`${drowned} of ${goal} drowned out`);
+    if (sound.ready) sound.pluck(67 + (drowned % 6) * 2, sound.ctx.currentTime + 0.05, 0.08);
+    if (drowned === Math.ceil(goal / 2)) k.line('faster');
+    if (drowned >= goal) {
+      done = true;
+      faces.forEach(o => o.n.classList.add('fade'));
+      sound.sticker?.();
+      setTimeout(() => k.alive() && k.win(), 1500);
+    }
+  };
+  noisy.onpointerdown = e => { e.stopPropagation(); e.preventDefault(); shake(); };
+  drag(field, { down: () => { if (done) return false; shake(); } });
+  k.loop((t, dt) => {
+    now = t;
+    if (now >= restUntil) noisy.classList.remove('resting');
+    const g = geo();
+    if (t < 2.5 || done) return faces.forEach(f => put(f.n, f.x, g.y));
+    const speed = W() * (0.16 + Math.min(drowned, goal) * 0.008);
+    const last = faces[faces.length - 1];
+    if (!last || last.x < W() + g.s - last.gap) spawn(g);
+    for (const f of faces) {
+      f.x -= speed * dt;
+      put(f.n, f.x, g.y);
+      if (f.kind === 'haman' && !f.hit && !f.gone && f.x < g.rx - g.s * 0.62) {
+        f.gone = true;
+        f.n.classList.add('snuck');
+        if (performance.now() - lastMiss > 5000) { lastMiss = performance.now(); k.line('missed'); }
+      }
+    }
+    while (faces.length && faces[0].x < -g.s) faces.shift().n.remove();
+  });
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  k.progress(`0 of ${goal} drowned out`);
+  k.line('intro');
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar, basket, gragger };
