@@ -341,6 +341,22 @@
       "stories": [
         "easter"
       ]
+    },
+    {
+      "id": "paul-paul",
+      "name": "Paul",
+      "src": "art/pieces/paul-paul.png",
+      "stories": [
+        "paul"
+      ]
+    },
+    {
+      "id": "paul-silas",
+      "name": "Silas",
+      "src": "art/pieces/paul-silas.png",
+      "stories": [
+        "paul"
+      ]
     }
   ]
 }

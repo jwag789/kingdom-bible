@@ -237,6 +237,25 @@
           }
         }
       ]
+    },
+    {
+      "id": "damascus",
+      "layers": [
+        {
+          "id": "wall",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "wall",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: at night under a deep blue starry sky with a crescent moon, the enormous, tall stone wall of the city of Damascus rises straight up in the middle of the picture, from the sandy ground at the bottom to a walkway with battlements along the very top; a small dark window opening near the top of the wall in the center; quiet palm trees and a few friends with a small lamp waiting on the ground at the foot of the wall; no basket, no ropes",
+          "src": "art/games/damascus/wall.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 6602,
+            "at": "2026-11-05T23:22:35.188Z"
+          },
+          "seed": 6602
+        }
+      ]
     }
   ]
 }

@@ -723,5 +723,26 @@
       "win": "Fire from heaven! “The Lord, He is God! The Lord, He is God!”",
       "done": "The Lord, He is God!"
     }
+  },
+  "paul": {
+    "id": "down-the-wall",
+    "title": "Down the Wall",
+    "type": "basket",
+    "scene": "see",
+    "background": "art/games/damascus/wall.jpg",
+    "frame": [
+      0.5,
+      0.5
+    ],
+    "badge": "art/props/basketpaul.png",
+    "lines": {
+      "intro": "Paul’s friends are lowering him over the city wall in a basket! Press and hold to lower him down. But when the guard comes, let go and keep still!",
+      "guard": "Shh! A guard is coming! Let go and keep still.",
+      "still": "Oops! The guard almost saw you. Keep still until he passes!",
+      "go": "He’s gone! Keep lowering.",
+      "safe": "Paul is safe on the ground!",
+      "win": "You did it! Paul got away safely, and he went on to tell the whole world about Jesus.",
+      "done": "God kept Paul safe."
+    }
   }
 }

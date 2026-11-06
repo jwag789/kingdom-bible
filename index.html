@@ -385,6 +385,19 @@
   @keyframes skyfire { 0% { scale: 1 0; opacity: 0; } 35% { scale: 1 1; opacity: 1; } 100% { scale: 1.6 1.1; opacity: 0; } }
   .game .burn { transition: opacity 0.8s; opacity: 0; }
 
+  /* Down the Wall */
+  .game .field > .rope { transform: translateX(-50%); width: 3px; background: linear-gradient(90deg, #8a6a3e, #d8b77c, #8a6a3e); pointer-events: none; z-index: 2; }
+  .game .hanging { pointer-events: none; z-index: 3; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5)); transform-origin: 50% 0; }
+  .game .hanging img { width: 100%; }
+  .game .hanging.swing img { animation: wiggle 1.4s ease-in-out infinite; }
+  .game .hanging.spotted img { animation: nope 0.5s; }
+  .game .guardwalk { pointer-events: none; z-index: 4; opacity: 0; transition: opacity 0.4s; filter: drop-shadow(0 0 12px rgba(255,210,120,0.8)); }
+  .game .guardwalk.on { opacity: 1; }
+  .game .guardwalk img { width: 100%; }
+  .game .field > .beam { transform: translateX(-50%); pointer-events: none; z-index: 1; opacity: 0; transition: opacity 0.3s;
+    background: linear-gradient(180deg, rgba(255,226,150,0.55), rgba(255,226,150,0.12) 70%, transparent); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); }
+  .game .field > .beam.on { opacity: 1; }
+
   /* Hush the Lions */
   .game .lion { --calm: 0; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.4)); touch-action: none; animation: popup 0.3s ease-out; }
   .game .lion img { width: 100%; transition: opacity 0.6s; }

@@ -6,9 +6,9 @@
   "text": "data/pentecost-text.json",
   "art": "art/pentecost",
   "next": {
-    "story": "genesis-1",
-    "title": "In the Beginning",
-    "sub": "Go back to where it all began: the story of creation."
+    "story": "paul",
+    "title": "Paul: A Brand-New Man",
+    "sub": "Acts 9–28: the story of an angry man, a light from heaven, an earthquake, and a shipwreck."
   },
   "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
   "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",

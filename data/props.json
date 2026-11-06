@@ -264,6 +264,18 @@
       "name": "a water jar",
       "prompt": "a single big round clay water jar with two handles, tipped over, pouring a stream of clear blue water out of its mouth",
       "thing": true
+    },
+    {
+      "id": "basketpaul",
+      "name": "Paul in a basket",
+      "prompt": "a big round woven basket hanging from four ropes that meet at the top, with a smiling man with a short dark beard and a deep-blue cloak sitting inside it, peeking over the edge and holding on",
+      "thing": true
+    },
+    {
+      "id": "guard",
+      "name": "a guard with a lantern",
+      "prompt": "a city guard in a bronze helmet and red tunic walking to the right, full body, holding up a glowing clay lantern in front of him and looking around",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

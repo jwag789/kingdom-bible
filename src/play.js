@@ -23,6 +23,7 @@
 // "echo"    Listen and Follow    four stone tablets sing a pattern; tap it back in the same order
 // "wind"    Wind and Fire        swipe like a rushing wind to bring a little flame over each person
 // "altar"   Build the Altar      stack twelve stones, pour on water three times, pray, and fire falls
+// "basket"  Down the Wall        hold to lower Paul's basket, and keep still when the guard's lantern passes
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1605,4 +1606,71 @@ function altar(k) {
   addEventListener('resize', () => k.alive() && layout());
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar };
+// ---- Down the Wall: hold to lower Paul's basket down the Damascus wall (Acts 9:25), but when the
+// guard's lantern comes along the top, let go and keep still until it passes. Moving in the
+// light only pulls the basket up a little; there's no getting caught.
+function basket(k) {
+  const { field, game, sound } = k;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  let down = 0, holding = false, nextGuard = 3.5, guard = null, done = false;
+  k.progress('Hold to lower the basket');
+  k.line('intro');
+  const rope = el('div', 'rope');
+  const box = el('div', 'hanging');
+  box.append(img(prop('basketpaul')));
+  const keeper = el('div', 'guardwalk');
+  keeper.append(img(prop('guard')));
+  const beam = el('div', 'beam');
+  const hint = el('div', 'holdhint', 'Press and hold to lower');
+  field.append(rope, box, beam, keeper, hint);
+  drag(field, { down: () => { if (done) return false; holding = true; hint.classList.add('gone'); }, up: () => { holding = false; } });
+  const geo = () => {
+    const top = k.head() + 10, bottom = H() * 0.9, s = Math.min(W() * 0.26, (H() - top) * 0.2);
+    return { top, bottom, s, x: W() / 2, y: top + s * 0.6 + (bottom - top - s * 1.2) * down };
+  };
+  k.loop((t, dt) => {
+    const g = geo();
+    // The guard: a warning glow first, then a slow walk along the top of the wall.
+    if (!guard && !done && t > nextGuard) { guard = { start: t, warn: 1.4, walk: 3.2, dir: Math.random() < 0.5 ? 1 : -1 }; k.line('guard'); }
+    let lit = false;
+    if (guard) {
+      const u = (t - guard.start - guard.warn) / guard.walk;     // 0..1 across the wall
+      const gx = guard.dir > 0 ? -0.15 + u * 1.3 : 1.15 - u * 1.3;
+      const gs = g.s * 0.9;
+      keeper.style.width = `${gs}px`;
+      keeper.firstChild.style.transform = guard.dir > 0 ? '' : 'scaleX(-1)';
+      put(keeper, gx * W(), g.top - gs * 0.05);
+      keeper.classList.toggle('on', u > -0.4 && u < 1.1);
+      beam.classList.toggle('on', u > 0 && u < 1);
+      beam.style.left = `${gx * W()}px`; beam.style.top = `${g.top}px`; beam.style.height = `${H() - g.top}px`; beam.style.width = `${g.s * 1.6}px`;
+      lit = u > 0 && u < 1 && Math.abs(gx * W() - g.x) < g.s * 1.1;
+      if (u >= 1.15) { guard = null; nextGuard = t + 2.5 + Math.random() * 2.5; keeper.classList.remove('on'); beam.classList.remove('on'); if (!done) k.line('go'); }
+    }
+    if (holding && !done) {
+      if (lit) {
+        down = Math.max(0, down - 0.12);
+        holding = false;
+        box.classList.remove('spotted'); void box.offsetWidth; box.classList.add('spotted');
+        sound.boop?.();
+        navigator.vibrate?.(30);
+        k.line('still');
+      } else {
+        down = Math.min(1, down + dt * 0.085);
+        box.classList.add('swing');
+      }
+    } else box.classList.remove('swing');
+    k.progress(`${Math.round(down * 100)}% of the way down`);
+    rope.style.left = `${g.x}px`; rope.style.top = `${g.top}px`; rope.style.height = `${Math.max(0, g.y - g.top)}px`;
+    box.style.width = `${g.s}px`;
+    put(box, g.x, g.y);
+    if (down >= 1 && !done) {
+      done = true; holding = false;
+      sound.thud?.();
+      sound.sticker?.();
+      k.line('safe');
+      setTimeout(() => k.alive() && k.win(), 1600);
+    }
+  });
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar, basket };

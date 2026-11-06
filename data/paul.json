@@ -1,0 +1,724 @@
+{
+  "title": "Paul: A Brand-New Man",
+  "reference": "Acts 9 · 16 · 27–28",
+  "subtitle": "The story of an angry man, a light from heaven, a basket, an earthquake, and a shipwreck",
+  "book": "Acts",
+  "text": "data/paul-text.json",
+  "art": "art/paul",
+  "next": {
+    "story": "genesis-1",
+    "title": "In the Beginning",
+    "sub": "Go back to where it all began: the story of creation."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "paul",
+      "name": "Paul",
+      "prompt": "Paul standing alone, full body, front view: a determined, warm-hearted man of about thirty with olive skin, short dark curly hair, a neat dark beard and bright eyes, wearing a cream tunic under a deep-blue cloak with a brown leather belt and a small travel bag, and sandals",
+      "src": "art/paul/cast/paul.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 446769,
+        "at": "2026-11-05T23:17:45.436Z"
+      }
+    },
+    {
+      "id": "silas",
+      "name": "Silas",
+      "prompt": "Silas standing alone, full body, front view: a cheerful, strong man with warm brown skin, short black hair and a short beard, wearing a rust-red tunic with a cream sash, and sandals",
+      "src": "art/paul/cast/silas.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 765567,
+        "at": "2026-11-05T23:18:08.507Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "saul",
+      "eyebrow": "Part One",
+      "title": "Angry Saul",
+      "verses": [
+        "8:3",
+        "9:2"
+      ],
+      "beats": [
+        "After Jesus went back to heaven, more and more people followed Him. But a man named Saul did not like that one bit.",
+        "Saul was angry at Jesus’ followers. He went from house to house and dragged them off to prison! Then he set off for the city of Damascus to catch even more."
+      ],
+      "layers": [
+        {
+          "id": "road",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "road",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on a dusty road through the hot desert toward the walled city of Damascus in the far distance: Saul, right of center, strides along with a stern, angry frown, holding a rolled-up official scroll with a red seal, with a few soldiers marching behind him",
+          "refs": [
+            "paul"
+          ],
+          "src": "art/paul/saul/road.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 987564,
+            "at": "2026-11-05T23:18:37.330Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "dust",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.57,
+          0.55
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "angry-saul",
+          "name": "Angry Saul",
+          "earn": "play",
+          "at": [
+            0.57,
+            0.5
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "scroll",
+          "name": "The Sealed Scroll",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.5,
+            0.7
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.65,
+            0.25
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.9,
+            0.73
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.38,
+            0.55
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "light",
+      "eyebrow": "Part Two",
+      "title": "A Light from Heaven",
+      "verses": [
+        "9:3",
+        "9:9"
+      ],
+      "beats": [
+        "As Saul came near to Damascus, suddenly a light from heaven, brighter than the sun, flashed all around him! Saul fell to the ground.",
+        "A voice said, “Saul, Saul, why are you hurting Me?” “Who are You, Lord?” Saul asked. “I am Jesus,” said the voice.",
+        "When Saul got up, he couldn’t see a thing! His friends had to lead him by the hand into the city."
+      ],
+      "layers": [
+        {
+          "id": "dust",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "dust",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous open view with no frame, no arch around it and no writing anywhere: on a dusty desert road near the walled city of Damascus in the bright midday sun, Saul walks along right of center, followed by a few ancient Roman soldiers in bronze helmets and red tunics carrying spears and round shields, with sand dunes and the distant city behind them",
+          "refs": [
+            "paul"
+          ],
+          "src": "art/paul/light/dust.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 6601,
+            "at": "2026-11-05T23:22:48.062Z"
+          },
+          "seed": 6601
+        },
+        {
+          "id": "flash",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "flash",
+          "editOf": "dust",
+          "from": 0,
+          "trigger": "tap",
+          "hint": "Tap to see the light",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "A dazzling beam of pure white and golden light now pours down from heaven onto the road, so bright it fills the scene; Saul has fallen to his knees on the ground, shielding his eyes with his arm, and the Roman soldiers behind him stagger back in surprise with their spears and shields.",
+          "refs": [
+            "paul"
+          ],
+          "mood": "glory",
+          "music": "adventure",
+          "src": "art/paul/light/flash.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 374703,
+            "at": "2026-11-05T23:23:30.494Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "flash"
+        },
+        {
+          "type": "glow",
+          "with": "flash"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.55,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "wind"
+        ],
+        "mood": "warm",
+        "music": "storybook"
+      },
+      "frame": [
+        0.55,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "road-damascus",
+          "name": "The Road to Damascus",
+          "earn": "play",
+          "at": [
+            0.58,
+            0.55
+          ],
+          "r": 0.1,
+          "layer": "dust"
+        },
+        {
+          "id": "light",
+          "name": "A Light from Heaven",
+          "earn": "reveal",
+          "layer": "flash",
+          "at": [
+            0.47,
+            0.3
+          ],
+          "r": 0.1
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.3,
+            0.55
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.25,
+            0.25
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.57,
+            0.68
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "flash"
+        }
+      ]
+    },
+    {
+      "id": "see",
+      "eyebrow": "Part Three",
+      "title": "Saul Can See!",
+      "verses": [
+        "9:17",
+        "9:25"
+      ],
+      "beats": [
+        "God sent a man named Ananias to help Saul. Ananias was scared of Saul, but he went anyway. He put his hands on Saul and said, “Brother Saul, Jesus sent me so you can see again.”",
+        "Right away, something like fish scales fell from Saul’s eyes, and he could see! Saul was baptized, and he began telling everyone, “Jesus is the Son of God!”",
+        "Some people were so angry that they wanted to stop him. So one night his new friends lowered him over the city wall in a big basket, and he got away!"
+      ],
+      "layers": [
+        {
+          "id": "basket",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "basket",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: at night under a starry sky beside the tall stone wall of Damascus: Saul sits inside a big round woven basket being lowered on ropes from a high window in the wall, right of center, holding on and smiling, while his friends lean out of the window above holding the ropes, and a guard with a lantern walks along the top of the wall far away, not noticing",
+          "refs": [
+            "paul"
+          ],
+          "src": "art/paul/see/basket.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 322284,
+            "at": "2026-11-05T23:20:03.454Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "motes",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap the basket",
+        "at": [
+          0.65,
+          0.6
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets",
+          "wind"
+        ],
+        "mood": "night",
+        "music": "adventure"
+      },
+      "frame": [
+        0.62,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "over-the-wall",
+          "name": "Over the Wall",
+          "earn": "play",
+          "at": [
+            0.65,
+            0.62
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "guard",
+          "name": "The Guard Who Didn’t See",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.33,
+            0.46
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.15
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.42,
+            0.08
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.7,
+            0.12
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.31,
+            0.43
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "jail",
+      "eyebrow": "Part Four",
+      "title": "Singing in Jail",
+      "verses": [
+        "16:22",
+        "16:34"
+      ],
+      "beats": [
+        "Saul was now called Paul, and he traveled far and wide telling people about Jesus. One day, Paul and his friend Silas were thrown into jail, with their feet locked in wooden blocks.",
+        "But at midnight, Paul and Silas were praying and singing songs to God! All the other prisoners were listening.",
+        "Suddenly there was a great earthquake! The doors flew open and everyone’s chains fell off! The jailer asked, “What must I do to be saved?” “Believe in the Lord Jesus,” said Paul."
+      ],
+      "layers": [
+        {
+          "id": "cell",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "cell",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: inside a dark stone jail cell at midnight, lit only by a little moonlight through a high barred window: Paul and Silas sit side by side on the floor with their feet locked in a big wooden block, right of center, singing joyfully with their faces lifted up, while other prisoners in the shadows lean in to listen",
+          "refs": [
+            "paul",
+            "silas"
+          ],
+          "src": "art/paul/jail/cell.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 719073,
+            "at": "2026-11-05T23:20:33.109Z"
+          }
+        },
+        {
+          "id": "quake",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "quake",
+          "editOf": "cell",
+          "from": 2,
+          "trigger": "tap",
+          "hint": "Tap to shake the jail",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "A great earthquake has shaken the jail: the heavy door has burst open with warm light pouring in, the wooden block has cracked apart, the chains lie broken on the floor, dust and little stones fall, and Paul and Silas look up in joyful surprise while the jailer stands amazed in the doorway holding a torch.",
+          "refs": [
+            "paul",
+            "silas"
+          ],
+          "mood": "glory",
+          "music": "folk",
+          "src": "art/paul/jail/quake.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 719073,
+            "at": "2026-11-05T23:21:21.110Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "voice": "harp"
+        },
+        {
+          "type": "dust",
+          "with": "quake"
+        },
+        {
+          "type": "rays",
+          "with": "quake"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.6,
+          0.45
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "night",
+        "music": "pads"
+      },
+      "frame": [
+        0.6,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "midnight-songs",
+          "name": "Midnight Songs",
+          "earn": "play",
+          "at": [
+            0.62,
+            0.38
+          ],
+          "r": 0.1,
+          "layer": "cell"
+        },
+        {
+          "id": "open-door",
+          "name": "The Open Door",
+          "earn": "reveal",
+          "layer": "quake",
+          "at": [
+            0.49,
+            0.38
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "moon",
+          "name": "Moon in the Window",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.33,
+            0.22
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.88,
+            0.6
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.42,
+            0.82
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "quake"
+        },
+        {
+          "at": [
+            0.47,
+            0.22
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04,
+          "with": "quake"
+        }
+      ]
+    },
+    {
+      "id": "shipwreck",
+      "eyebrow": "Part Five",
+      "title": "Shipwrecked!",
+      "verses": [
+        "27:41",
+        "28:6"
+      ],
+      "beats": [
+        "Later, Paul sailed on a big ship toward Rome. A terrible storm tossed the ship for fourteen days! But an angel told Paul, “Don’t be afraid. God will keep everyone safe.”",
+        "The ship crashed on the rocks and broke apart. But everyone swam or floated on planks of wood to an island, and every single person reached the beach safely!",
+        "Paul built a fire to warm up, and a snake bit his hand! But Paul just shook it off into the fire, and he was fine. God was with Paul wherever he went."
+      ],
+      "layers": [
+        {
+          "id": "beach",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "beach",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on a rainy, windswept island beach just after a storm, with the broken wooden ship stuck on the rocks out at sea: soaked, tired but happy people climb out of the waves holding onto planks, and Paul, right of center, kneels by a crackling campfire on the sand, calmly shaking a small snake off his hand into the fire, while islanders watch amazed",
+          "refs": [
+            "paul"
+          ],
+          "src": "art/paul/shipwreck/beach.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 654447,
+            "at": "2026-11-05T23:21:53.575Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "rain",
+          "from": 0
+        },
+        {
+          "type": "shimmer",
+          "from": 0,
+          "y": 0.6
+        },
+        {
+          "type": "glow",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap the campfire",
+        "at": [
+          0.55,
+          0.75
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "waves",
+          "rain",
+          "fire"
+        ],
+        "mood": "storm",
+        "music": "adventure"
+      },
+      "frame": [
+        0.5,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "shipwrecked",
+          "name": "Shipwrecked!",
+          "earn": "play",
+          "at": [
+            0.26,
+            0.15
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "snake",
+          "name": "The Snake",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.52,
+            0.62
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.5,
+            0.82
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.12,
+            0.45
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.4,
+            0.5
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.88,
+            0.1
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "Saul was angry at Jesus’ followers, but Jesus changed his heart. Can anyone be too bad for Jesus to love?",
+      "Paul and Silas sang to God even in jail. When could you sing or pray, even on a hard day?",
+      "God kept Paul safe in the storm. What makes you feel brave when you are scared?"
+    ],
+    "verse": {
+      "ref": "Acts 16:31",
+      "text": "Believe in the Lord Jesus and you will be saved."
+    }
+  }
+}

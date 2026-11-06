@@ -175,6 +175,14 @@
       "coverFrom": "art/pentecost/wind/fire.jpg",
       "testament": "new",
       "cover": "art/covers/pentecost.jpg"
+    },
+    {
+      "id": "paul",
+      "title": "Paul: A Brand-New Man",
+      "reference": "Acts 9 · 16 · 27–28",
+      "coverFrom": "art/paul/light/flash.jpg",
+      "testament": "new",
+      "cover": "art/covers/paul.jpg"
     }
   ],
   "shelves": [
@@ -227,7 +235,8 @@
       "id": "church",
       "title": "The Church Begins",
       "stories": [
-        "pentecost"
+        "pentecost",
+        "paul"
       ]
     }
   ]
