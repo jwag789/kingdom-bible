@@ -359,6 +359,30 @@
       ]
     },
     {
+      "id": "prodigal-father",
+      "name": "The Father",
+      "src": "art/pieces/prodigal-father.png",
+      "stories": [
+        "prodigal"
+      ]
+    },
+    {
+      "id": "prodigal-son",
+      "name": "The Younger Son",
+      "src": "art/pieces/prodigal-son.png",
+      "stories": [
+        "prodigal"
+      ]
+    },
+    {
+      "id": "prodigal-brother",
+      "name": "The Older Brother",
+      "src": "art/pieces/prodigal-brother.png",
+      "stories": [
+        "prodigal"
+      ]
+    },
+    {
       "id": "zacchaeus-zacchaeus",
       "name": "Zacchaeus",
       "src": "art/pieces/zacchaeus-zacchaeus.png",

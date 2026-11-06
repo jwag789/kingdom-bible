@@ -282,6 +282,36 @@
       "name": "a Purim noisemaker",
       "prompt": "a single wooden Purim noisemaker (a gragger): a short round wooden handle with a small rectangular wooden ratchet box on top that spins around it, painted with bright blue, gold and red stripes and little stars",
       "thing": true
+    },
+    {
+      "id": "sonrags",
+      "name": "the lost son in rags",
+      "prompt": "a thin young man of about nineteen with tan skin, messy curly brown hair and a thin face, standing full body facing front with a shy, hopeful smile, barefoot, wearing a torn, patched, dirty old brown tunic with ragged edges",
+      "thing": true
+    },
+    {
+      "id": "sonrobe",
+      "name": "the son in the best robe",
+      "prompt": "a thin young man of about nineteen with tan skin, messy curly brown hair and a thin face, standing full body facing front with a huge happy smile and his arms open wide, wearing a splendid long red robe with gold trim over a clean cream tunic, a shiny gold ring on his finger and new brown leather sandals",
+      "thing": true
+    },
+    {
+      "id": "robe",
+      "name": "the best robe",
+      "prompt": "a splendid long red robe with wide sleeves and shining gold trim, folded neatly over a wooden hanger",
+      "thing": true
+    },
+    {
+      "id": "ring",
+      "name": "a gold ring",
+      "prompt": "a single shiny gold signet ring with a red jewel, seen from a little above",
+      "thing": true
+    },
+    {
+      "id": "sandals",
+      "name": "new sandals",
+      "prompt": "a pair of new brown leather sandals with straps, side by side",
+      "thing": true
     }
   ],
   "thing": "Children's picture book illustration piece made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, warm light, rich harmonious colors. A single object alone, whole and complete, centered on a plain pure white background, nothing else in the picture. No text, no border"

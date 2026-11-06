@@ -25,6 +25,7 @@
 // "altar"   Build the Altar      stack twelve stones, pour on water three times, pray, and fire falls
 // "basket"  Down the Wall        hold to lower Paul's basket, and keep still when the guard's lantern passes
 // "gragger" Drown Out Haman      faces roll along the scroll; shake the noisemaker only when Haman reaches the ring
+// "wash"    Welcome Home         rub the pig-pen mud off the lost son, then bring the robe, the ring and the sandals
 
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1779,4 +1780,135 @@ function gragger(k) {
   k.line('intro');
 }
 
-export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar, basket, gragger };
+// ---- Welcome Home: the lost son is back, muddy from the pig pen (Luke 15:22). Rub the mud off,
+// then bring the best robe, a ring and sandals: drag each one to him, or just tap it.
+function wash(k) {
+  const { field, game, sound } = k;
+  const W = () => field.clientWidth, H = () => field.clientHeight;
+  const SPOTS = [[0.5, 0.3], [0.32, 0.42], [0.66, 0.47], [0.46, 0.6], [0.36, 0.8], [0.62, 0.84], [0.56, 0.2], [0.42, 0.1]];
+  const ITEMS = ['robe', 'ring', 'sandals'];
+  let stage = 'wash', cleaned = 0, dressed = 0, last = null, rubbed = 0, lastBubble = 0;
+  const kid = el('div', 'kid');
+  const body = img(prop('sonrags'));
+  kid.append(body);
+  const mud = SPOTS.map(([x, y], i) => {
+    const m = el('i', 'mud');
+    m.style.left = `${x * 100}%`; m.style.top = `${y * 100}%`;
+    m.style.rotate = `${(i * 47) % 180}deg`;
+    m.style.setProperty('--sz', i === 7 ? 0.7 : 1);
+    kid.append(m);
+    return { m, dirt: 1 };
+  });
+  const gifts = ITEMS.map(id => {
+    const b = el('button', 'gift');
+    b.setAttribute('aria-label', `The ${id === 'robe' ? 'best robe' : id}`);
+    b.append(img(prop(id)));
+    b.hidden = true;
+    field.append(b);
+    return { id, b, home: [0, 0] };
+  });
+  field.append(kid);
+  const layout = () => {
+    const is = clamp(Math.min(W() * 0.24, H() * 0.15), 64, 150);
+    const bottom = H() - is * 1.55, kh = Math.min(H() * 0.42, bottom - k.head() - 12);
+    kid.style.setProperty('--kh', `${kh}px`);
+    put(kid, W() / 2, bottom);
+    gifts.forEach((g, i) => {
+      g.b.style.width = `${is}px`;
+      g.home = [W() * (0.5 + (i - 1) * Math.min(0.3, (is * 1.3) / W())), H() - is * 0.72];
+      if (!g.b.classList.contains('landing')) put(g.b, ...g.home);
+    });
+  };
+  const at = e => { const b = field.getBoundingClientRect(); return { x: e.clientX - b.left, y: e.clientY - b.top }; };
+  const sparkle = (x, y, text = '✦') => { const t = el('div', 'twinkle', text); put(t, x, y); field.append(t); setTimeout(() => t.remove(), 900); };
+  const center = n => { const r = n.getBoundingClientRect(), b = field.getBoundingClientRect(); return [r.left - b.left + r.width / 2, r.top - b.top + r.height / 2, r.width]; };
+
+  // Rubbing: every bit of finger travel over a spot of mud wipes some of it away.
+  const rub = e => {
+    if (stage !== 'wash') return;
+    const p = at(e);
+    const moved = last ? Math.hypot(p.x - last.x, p.y - last.y) : 0;
+    last = p;
+    if (!moved) return;
+    rubbed += moved;
+    if (rubbed > 45) {
+      rubbed = 0;
+      const s = el('div', 'suds');
+      put(s, p.x + rand(-14, 14), p.y + rand(-14, 14));
+      field.append(s);
+      setTimeout(() => s.remove(), 900);
+    }
+    for (const spot of mud) {
+      if (spot.dirt <= 0) continue;
+      const [cx, cy, w] = center(spot.m);
+      if (Math.hypot(p.x - cx, p.y - cy) > w * 0.75) continue;
+      spot.dirt -= moved / (w * 3);
+      spot.m.style.opacity = Math.max(0, spot.dirt);
+      if (performance.now() - lastBubble > 220) { lastBubble = performance.now(); sound.bubble?.(0.6); }
+      if (spot.dirt <= 0) {
+        spot.m.remove();
+        cleaned++;
+        sparkle(cx, cy);
+        if (sound.ready) sound.pluck(72 + cleaned * 2, sound.ctx.currentTime, 0.08);
+        navigator.vibrate?.(10);
+        k.progress(`${cleaned} of ${mud.length} muddy spots`);
+        if (cleaned === mud.length) clean();
+      }
+    }
+  };
+  drag(field, { down: e => { if (stage !== 'wash') return false; last = at(e); }, move: rub, up: () => { last = null; } });
+
+  const clean = () => {
+    stage = 'dress';
+    kid.classList.add('hop');
+    sound.sticker?.();
+    k.progress('Bring the robe, the ring and the sandals');
+    k.line('washed');
+    setTimeout(() => { if (!k.alive()) return; gifts.forEach(g => { g.b.hidden = false; g.b.classList.add('want'); }); }, 900);
+  };
+  const near = (x, y) => { const r = kid.getBoundingClientRect(); return x > r.left - 30 && x < r.right + 30 && y > r.top - 30 && y < r.bottom + 30; };
+  const give = g => {
+    g.b.classList.remove('lift', 'want');
+    g.b.classList.add('landing');
+    const [cx, cy] = center(body);
+    put(g.b, cx, cy);
+    setTimeout(() => { g.b.remove(); sparkle(cx, cy - 20, '✦ ✦'); }, 350);
+    dressed++;
+    sound.jingle?.(sound.ctx?.currentTime, 76 + dressed * 3);
+    navigator.vibrate?.(15);
+    k.progress(`${dressed} of 3 gifts`);
+    if (dressed < ITEMS.length) { k.line(g.id); return; }
+    stage = 'done';
+    setTimeout(() => {
+      if (!k.alive()) return;
+      body.src = prop('sonrobe');
+      kid.classList.remove('hop'); void kid.offsetWidth; kid.classList.add('dressed');
+      sound.promise?.();
+      const [x, y] = center(body);
+      sparkle(x - 40, y - 30); sparkle(x + 40, y); sparkle(x, y + 50);
+    }, 450);
+    setTimeout(() => { if (k.alive()) k.backdrop(game.reveal); }, 1800);
+    setTimeout(() => k.alive() && k.win(), 3200);
+  };
+  for (const g of gifts) {
+    let start = null;
+    drag(g.b, {
+      down: e => { if (stage !== 'dress' || g.b.classList.contains('landing')) return false; start = at(e); g.b.classList.add('lift'); e.stopPropagation(); },
+      move: e => { const p = at(e); put(g.b, p.x, p.y); kid.classList.toggle('over', near(e.clientX, e.clientY)); },
+      up: e => {
+        kid.classList.remove('over');
+        const p = at(e);
+        const tap = start && Math.hypot(p.x - start.x, p.y - start.y) < 10;
+        if (tap || near(e.clientX, e.clientY)) return give(g);
+        g.b.classList.remove('lift');
+        put(g.b, ...g.home);
+      },
+    });
+  }
+  layout();
+  addEventListener('resize', () => k.alive() && layout());
+  k.progress(`0 of ${mud.length} muddy spots`);
+  k.line('intro');
+}
+
+export const PLAY = { sort, memory, float, frogs, part, trace, puzzle, net, sling, hush, coat, give, palms, march, gather, lantern, glean, echo, wind, altar, basket, gragger, wash };

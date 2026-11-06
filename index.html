@@ -420,6 +420,27 @@
   .game .gragger.spin img { animation: rattle 0.45s ease-out; }
   .game .gragger.resting { filter: grayscale(0.7) drop-shadow(0 8px 12px rgba(0,0,0,0.4)); opacity: 0.7; }
   .game .gragger.tired img { animation: nope 0.4s; }
+  /* Welcome Home */
+  .game .field > .kid { transform: translate(-50%, -100%); pointer-events: none; z-index: 2; filter: drop-shadow(0 10px 12px rgba(0,0,0,0.4)); transition: scale 0.2s; }
+  .game .kid img { height: var(--kh); width: auto; display: block; }
+  .game .kid .mud { position: absolute; width: calc(var(--kh) * 0.16 * var(--sz)); aspect-ratio: 1.25; translate: -50% -50%; pointer-events: none;
+    border-radius: 45% 55% 50% 40% / 55% 45% 55% 45%;
+    background: radial-gradient(circle at 40% 40%, #75502c, #573a1f 55%, rgba(87,58,31,0.85) 66%, rgba(87,58,31,0) 74%); }
+  .game .kid.over { scale: 1.06; }
+  .game .kid.hop img { animation: hop 0.6s ease-out; }
+  .game .kid.dressed img { animation: dressup 0.6s ease-out; }
+  @keyframes dressup { 0% { scale: 0.6; opacity: 0.3; } 70% { scale: 1.08; } 100% { scale: 1; opacity: 1; } }
+  .game .field > .suds { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.95); background: rgba(205,232,255,0.4);
+    pointer-events: none; z-index: 3; animation: suds 0.9s ease-out forwards; }
+  .game .field > .twinkle { color: #ffe08a; font-size: 30px; pointer-events: none; z-index: 5; text-shadow: 0 0 10px rgba(255,220,120,0.9); white-space: nowrap; animation: suds 0.9s ease-out forwards; }
+  @keyframes suds { to { translate: 0 -44px; scale: 1.6; opacity: 0; } }
+  .game .field button.gift { background: rgba(255,248,230,0.92); border: 3px solid #e2b347; border-radius: 22px; padding: 8px; z-index: 4; cursor: grab;
+    touch-action: none; box-shadow: 0 8px 18px rgba(0,0,0,0.35); transition: scale 0.15s; }
+  .game .field button.gift[hidden] { display: none; }
+  .game .gift img { width: 100%; display: block; pointer-events: none; aspect-ratio: 1; object-fit: contain; }
+  .game .gift.want { animation: popup 0.4s ease-out, pulse 1.4s ease-in-out infinite 0.4s; }
+  .game .gift.lift { scale: 1.12; z-index: 6; animation: none; }
+  .game .gift.landing { transition: left 0.35s, top 0.35s, scale 0.35s, opacity 0.35s; scale: 0.3; opacity: 0.6; animation: none; }
   @keyframes rattle { 15% { rotate: -22deg; } 35% { rotate: 18deg; } 55% { rotate: -14deg; } 75% { rotate: 8deg; } }
 
   /* Hush the Lions */

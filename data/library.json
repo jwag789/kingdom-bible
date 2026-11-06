@@ -161,6 +161,14 @@
       "cover": "art/covers/lost-sheep.jpg"
     },
     {
+      "id": "prodigal",
+      "title": "The Lost Son",
+      "reference": "Luke 15",
+      "coverFrom": "art/prodigal/home/hug.jpg",
+      "testament": "new",
+      "cover": "art/covers/prodigal.jpg"
+    },
+    {
       "id": "zacchaeus",
       "title": "Zacchaeus",
       "reference": "Luke 19",
@@ -236,6 +244,7 @@
         "follow",
         "feeding",
         "lost-sheep",
+        "prodigal",
         "zacchaeus",
         "easter"
       ]

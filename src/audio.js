@@ -724,6 +724,23 @@ export class Sound {
     this.noiseBurst({ at: now + 0.4, peak: 0.2, attack: 0.2, release: 2.2, type: 'lowpass', from: 700, to: 120, q: 0.5, buffer: this.brown });
   }
 
+  oink() {                           // a pig: two quick, snuffly grunts
+    if (!this.ready) return;
+    const now = this.ctx.currentTime;
+    for (const [d, f] of [[0, 190], [0.2, 230]]) {
+      const at = now + d;
+      const o = this.osc('sawtooth', f), wob = this.osc('square', 38), wg = this.gain(30);
+      const bp = this.filter('bandpass', 700, 3), g = this.gain(0);
+      wob.connect(wg).connect(o.frequency);
+      o.connect(bp).connect(g).connect(this.sfxBus);
+      o.frequency.setValueAtTime(f, at);
+      o.frequency.exponentialRampToValueAtTime(f * 0.7, at + 0.14);
+      this.env(g, at, 0.12, 0.015, 0.14);
+      o.start(at); wob.start(at); o.stop(at + 0.2); wob.stop(at + 0.2);
+      this.noiseBurst({ at, peak: 0.05, attack: 0.01, release: 0.1, type: 'bandpass', from: 900, to: 500, q: 2 });
+    }
+  }
+
   moo() {                            // a cow: a long, low "mooo" that sinks at the end
     if (!this.ready) return;
     const now = this.ctx.currentTime;

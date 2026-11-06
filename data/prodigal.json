@@ -1,0 +1,975 @@
+{
+  "title": "The Lost Son",
+  "reference": "Luke 15",
+  "subtitle": "A story Jesus told about a son who ran away, and a father who ran to meet him",
+  "book": "Luke",
+  "text": "data/prodigal-text.json",
+  "art": "art/prodigal",
+  "next": {
+    "story": "zacchaeus",
+    "title": "Zacchaeus",
+    "sub": "Luke 19: the story of a short man, a tall tree, and the Friend who came looking for him."
+  },
+  "style": "Children's picture book illustration made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A wide, open panoramic view that extends past every edge of the image, with quieter, softly lit scenery (sky, hills, ground) in the left third; no arch, no cave, no surrounding frame. No text, no lettering, no border",
+  "castStyle": "Children's picture book character made of cut paper, photographed flat: textured hand-cut paper shapes with soft drop shadows, gentle depth, warm glowing light, rich harmonious colors. A single clear reference picture on a plain warm cream paper background, nothing else in the picture. No text, no lettering, no border",
+  "editKeep": "Keep everything else exactly the same: the same composition, camera, horizon, layers, colors and handcrafted cut-paper style.",
+  "cast": [
+    {
+      "id": "father",
+      "name": "The Father",
+      "prompt": "The father standing alone, full body, front view: a warm, gentle older man with tan skin, kind crinkly eyes, a big smile, short white hair and a full white beard, wearing a rich brown robe over a cream tunic with a woven striped sash, and sandals",
+      "src": "art/prodigal/cast/father.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 96965,
+        "at": "2026-11-06T04:12:59.730Z"
+      }
+    },
+    {
+      "id": "son",
+      "name": "The Younger Son",
+      "prompt": "The younger son standing alone, full body, front view: a lively young man of about nineteen with tan skin, messy curly brown hair, a thin face and a cheeky grin, wearing a short sky-blue tunic with a brown belt, and sandals",
+      "src": "art/prodigal/cast/son.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 790857,
+        "at": "2026-11-06T04:13:13.965Z"
+      }
+    },
+    {
+      "id": "brother",
+      "name": "The Older Brother",
+      "prompt": "The older brother standing alone, full body, front view: a strong, hard-working young man of about twenty-five with tan skin, short straight black hair and a short black beard, wearing a sturdy olive-green work tunic with rolled-up sleeves and a leather belt, holding a wooden farm rake, and sandals",
+      "src": "art/prodigal/cast/brother.jpg",
+      "generated": {
+        "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+        "seed": 821687,
+        "at": "2026-11-06T04:13:27.919Z"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "leave",
+      "eyebrow": "Part One",
+      "title": "Give Me My Share!",
+      "verses": [
+        "15:11",
+        "15:13"
+      ],
+      "beats": [
+        "One day Jesus told a story. “There once was a father who had two sons, and he loved them both very much.",
+        "The younger son said, “Father, give me my share of the money now!” So the father sadly gave it to him.",
+        "A few days later, the younger son packed up everything and went far, far away.”"
+      ],
+      "layers": [
+        {
+          "id": "farm",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "farm",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: on a green family farm with olive trees, a stone farmhouse and fields of wheat in the soft morning light: the younger son walks away down a dirt road, right of center, with a bundle on his back and a jingling bag of coins in his hand, waving back cheerfully, while his father stands at the farm gate watching him go with a sad face, and the older brother works in the field with a rake",
+          "refs": [
+            "son",
+            "father",
+            "brother"
+          ],
+          "src": "art/prodigal/leave/farm.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 40653,
+            "at": "2026-11-06T04:23:17.081Z"
+          },
+          "seed": 40653
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "dawn",
+        "music": "storybook"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "off-he-goes",
+          "name": "Off He Goes",
+          "earn": "play",
+          "at": [
+            0.72,
+            0.65
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "coin-bag",
+          "name": "The Bag of Coins",
+          "earn": "secret",
+          "hit": 0.04,
+          "at": [
+            0.79,
+            0.76
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.55,
+            0.2
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.25,
+            0.75
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.9,
+            0.35
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.12,
+            0.4
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.58,
+            0.45
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "eyebrow": "Part Two",
+      "title": "All Gone!",
+      "verses": [
+        "15:13",
+        "15:14"
+      ],
+      "beats": [
+        "In the faraway city, the son spent his money on fancy clothes and big parties. He had lots of new friends!",
+        "But one day, all his money was gone. And then his new friends were gone too!",
+        "Then there was no rain, and no food grew anywhere. The son was hungry and all alone."
+      ],
+      "layers": [
+        {
+          "id": "party",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "party",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: at night in a busy, glittering faraway city with colorful lamps and banners: the younger son, now in a fancy, flashy purple-and-gold outfit, stands on a cushion at a big noisy party right of center, laughing and tossing gold coins into the air, while a crowd of new friends cheers and grabs the coins, with tables of food all around",
+          "refs": [
+            "son"
+          ],
+          "src": "art/prodigal/city/party.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 518578,
+            "at": "2026-11-06T04:14:45.404Z"
+          }
+        },
+        {
+          "id": "empty",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "empty",
+          "editOf": "party",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see what happened",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "Remove every person from the picture except the young man in purple and gold, and remove all the flying coins. Turn off all the lamps and lanterns so it is a dim, grey, cloudy morning. The young man now sits down on the cushion with his head in his hands, sad and all alone, an empty coin bag on the ground beside him. The tables are empty.",
+          "refs": [],
+          "mood": "storm",
+          "music": "pads",
+          "src": "art/prodigal/city/empty.jpg",
+          "generated": {
+            "model": "fal-ai/flux-pro/kontext",
+            "seed": 5304,
+            "at": "2026-11-06T04:25:02.383Z",
+            "edits": [
+              "Remove all the people in the background and the coins floating in the air, so the young man sits completely alone in the dark, empty square with the empty tables."
+            ]
+          },
+          "editModel": "kontext",
+          "seed": 5304
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 0,
+          "until": "empty",
+          "voice": "timbrel"
+        },
+        {
+          "type": "dust",
+          "with": "empty"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "big-party",
+          "name": "The Big Party",
+          "earn": "play",
+          "layer": "party",
+          "at": [
+            0.6,
+            0.45
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "all-alone",
+          "name": "All Alone",
+          "earn": "reveal",
+          "layer": "empty",
+          "at": [
+            0.58,
+            0.6
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "empty-bag",
+          "name": "The Empty Bag",
+          "earn": "secret",
+          "layer": "empty",
+          "with": "empty",
+          "hit": 0.04,
+          "at": [
+            0.37,
+            0.82
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.64,
+            0.08
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "empty"
+        },
+        {
+          "at": [
+            0.12,
+            0.25
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04,
+          "until": "empty"
+        },
+        {
+          "at": [
+            0.85,
+            0.2
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04,
+          "until": "empty"
+        },
+        {
+          "at": [
+            0.3,
+            0.62
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.06,
+          "until": "empty"
+        },
+        {
+          "at": [
+            0.75,
+            0.08
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "with": "empty"
+        }
+      ]
+    },
+    {
+      "id": "pigs",
+      "eyebrow": "Part Three",
+      "title": "Feeding the Pigs",
+      "verses": [
+        "15:15",
+        "15:19"
+      ],
+      "beats": [
+        "The son got a job feeding pigs in a muddy pig pen. He was so hungry that even the pigs’ food looked yummy!",
+        "Then he thought, “Even the workers at my father’s house have plenty to eat! I will go home and say, ‘Father, I was wrong. I’m sorry. Please let me be one of your workers.’”"
+      ],
+      "layers": [
+        {
+          "id": "pen",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "pen",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in a muddy pig pen on a farm in a dry, dusty land under a hazy sky: the younger son, thin and tired, in torn and patched old clothes, sits on the wooden fence right of center with his chin in his hands, thinking about home, while lots of happy, muddy pink pigs snort and munch pods from a trough around him",
+          "refs": [
+            "son"
+          ],
+          "src": "art/prodigal/pigs/pen.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 905452,
+            "at": "2026-11-06T04:15:48.427Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "dust",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 1
+        }
+      ],
+      "touch": {
+        "hint": "Tap the pigs",
+        "at": [
+          0.12,
+          0.72
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "wind"
+        ],
+        "mood": "rest",
+        "music": "pads"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "pig-pen",
+          "name": "In the Pig Pen",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.38
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "muddy-pig",
+          "name": "A Muddy Pig",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.3,
+            0.52
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.12,
+            0.72
+          ],
+          "fx": "splash",
+          "sound": "oink",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.9,
+            0.72
+          ],
+          "fx": "splash",
+          "sound": "oink",
+          "hit": 0.07
+        },
+        {
+          "at": [
+            0.55,
+            0.88
+          ],
+          "fx": "splash",
+          "sound": "oink",
+          "hit": 0.06
+        },
+        {
+          "at": [
+            0.85,
+            0.45
+          ],
+          "fx": "splash",
+          "sound": "splash",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.3,
+            0.15
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.06
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "eyebrow": "Part Four",
+      "title": "The Father Runs",
+      "verses": [
+        "15:20",
+        "15:21"
+      ],
+      "beats": [
+        "So the son set off for home. He was still far away when his father saw him coming!",
+        "The father was so happy that he ran down the road, threw his arms around his son, and kissed him!",
+        "“Father, I was wrong,” said the son. “I don’t deserve to be your son anymore.”"
+      ],
+      "layers": [
+        {
+          "id": "road",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "road",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: at golden evening, a long winding dirt road through green hills leads to the family farm with its stone farmhouse and olive trees: far down the road, the younger son trudges toward home, small and thin in his torn clothes, while up by the farm gate his father stands with his hand shading his eyes, spotting him",
+          "refs": [
+            "son",
+            "father"
+          ],
+          "src": "art/prodigal/home/road.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 16367,
+            "at": "2026-11-06T04:23:57.684Z"
+          },
+          "seed": 16367
+        },
+        {
+          "id": "hug",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "hug",
+          "editOf": "road",
+          "from": 1,
+          "trigger": "tap",
+          "hint": "Tap to see the father run",
+          "origin": [
+            0.66,
+            0.5
+          ],
+          "sfx": "promise",
+          "edit": "The father has run down the road to meet his son: now the old father in the brown robe and the thin boy in the blue tunic hold each other in a big, happy hug together on the dirt road in the middle of the picture, both smiling with happy tears. There is only one father in the picture: no one is left standing at the gate. Keep the same hills, farmhouse, road and golden evening light.",
+          "refs": [
+            "son",
+            "father"
+          ],
+          "mood": "glory",
+          "music": "storybook",
+          "src": "art/prodigal/home/hug.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 673062,
+            "at": "2026-11-06T04:24:32.835Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "birds",
+          "from": 0
+        },
+        {
+          "type": "rays",
+          "with": "hug"
+        },
+        {
+          "type": "glow",
+          "with": "hug"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "meadow",
+          "birds"
+        ],
+        "mood": "warm",
+        "music": "storybook"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "watching",
+          "name": "Watching the Road",
+          "earn": "play",
+          "layer": "road",
+          "at": [
+            0.68,
+            0.5
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "big-hug",
+          "name": "The Big Hug",
+          "earn": "reveal",
+          "layer": "hug",
+          "at": [
+            0.37,
+            0.42
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "coming-home",
+          "name": "Coming Home",
+          "earn": "secret",
+          "until": "hug",
+          "hit": 0.04,
+          "at": [
+            0.36,
+            0.58
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.5,
+            0.37
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "until": "hug"
+        },
+        {
+          "at": [
+            0.86,
+            0.27
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05,
+          "until": "hug"
+        },
+        {
+          "at": [
+            0.1,
+            0.25
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "until": "hug"
+        },
+        {
+          "at": [
+            0.93,
+            0.12
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05,
+          "with": "hug"
+        },
+        {
+          "at": [
+            0.82,
+            0.38
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05,
+          "with": "hug"
+        },
+        {
+          "at": [
+            0.08,
+            0.45
+          ],
+          "fx": "leaves",
+          "sound": "rustle",
+          "hit": 0.05,
+          "with": "hug"
+        }
+      ]
+    },
+    {
+      "id": "feast",
+      "eyebrow": "Part Five",
+      "title": "Lost and Found!",
+      "verses": [
+        "15:22",
+        "15:24"
+      ],
+      "beats": [
+        "But the father called to his servants, “Quick! Bring the best robe for my son, a ring for his finger, and sandals for his feet!",
+        "“Let’s have a party! My son was lost, and now he is found!” And they began to celebrate with music and dancing."
+      ],
+      "layers": [
+        {
+          "id": "party",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "party",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: in the lantern-lit courtyard of the family farmhouse in the evening: a joyful welcome-home party with music, dancing and a long table full of food; the younger son, washed and smiling, wears a splendid red-and-gold robe, a gold ring and new sandals, and the father hugs him with one arm, right of center, while servants play flutes and drums and neighbors dance",
+          "refs": [
+            "son",
+            "father"
+          ],
+          "src": "art/prodigal/feast/party.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 708988,
+            "at": "2026-11-06T04:17:53.507Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 0
+        },
+        {
+          "type": "sing",
+          "from": 1,
+          "voice": "timbrel"
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crowd"
+        ],
+        "mood": "lively",
+        "music": "folk"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "lost-and-found",
+          "name": "Lost and Found",
+          "earn": "play",
+          "at": [
+            0.45,
+            0.58
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "gold-ring",
+          "name": "The Gold Ring",
+          "earn": "secret",
+          "hit": 0.035,
+          "at": [
+            0.41,
+            0.72
+          ],
+          "r": 0.04
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.2,
+            0.46
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.94,
+            0.82
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.9,
+            0.27
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.61,
+            0.25
+          ],
+          "fx": "flame",
+          "sound": "crackle",
+          "hit": 0.04
+        },
+        {
+          "at": [
+            0.78,
+            0.6
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.05
+        }
+      ]
+    },
+    {
+      "id": "brother",
+      "eyebrow": "Part Six",
+      "title": "The Grumpy Brother",
+      "verses": [
+        "15:25",
+        "15:32"
+      ],
+      "beats": [
+        "The older brother came in from the field and heard the music. When he found out the party was for his little brother, he was angry and would not go in!",
+        "“I’ve worked hard for you all these years,” he said, “and you never threw a party for me!”",
+        "The father said, “My son, you are always with me, and everything I have is yours. But we had to celebrate! Your brother was lost, and now he is found!” And that is how much God loves us, too."
+      ],
+      "layers": [
+        {
+          "id": "door",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "door",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: outside the family farmhouse at dusk, with warm light, music and dancing shadows spilling out of the open door: the older brother stands right of center with his arms folded and a grumpy frown, his rake leaning on the wall, and the father has come outside to him, gently resting a hand on his shoulder and pleading with him lovingly",
+          "refs": [
+            "brother",
+            "father"
+          ],
+          "src": "art/prodigal/brother/door.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/edit",
+            "seed": 578265,
+            "at": "2026-11-06T04:18:35.975Z"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "motes",
+          "from": 0
+        },
+        {
+          "type": "stars",
+          "from": 0
+        },
+        {
+          "type": "glow",
+          "from": 2
+        }
+      ],
+      "touch": {
+        "hint": "Tap anywhere",
+        "at": [
+          0.66,
+          0.5
+        ]
+      },
+      "sound": {
+        "ambience": [
+          "crickets"
+        ],
+        "mood": "night",
+        "music": "pads"
+      },
+      "frame": [
+        0.66,
+        0.5
+      ],
+      "stickers": [
+        {
+          "id": "come-in",
+          "name": "Come to the Party",
+          "earn": "play",
+          "at": [
+            0.6,
+            0.55
+          ],
+          "r": 0.1
+        },
+        {
+          "id": "dancing-shadow",
+          "name": "A Dancing Shadow",
+          "earn": "secret",
+          "hit": 0.05,
+          "at": [
+            0.89,
+            0.45
+          ],
+          "r": 0.05
+        }
+      ],
+      "spots": [
+        {
+          "at": [
+            0.88,
+            0.33
+          ],
+          "fx": "notes",
+          "sound": "chime",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.15,
+            0.15
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.4,
+            0.12
+          ],
+          "fx": "twinkle",
+          "sound": "twinkle",
+          "hit": 0.05
+        },
+        {
+          "at": [
+            0.82,
+            0.76
+          ],
+          "fx": "sparkle",
+          "sound": "chime",
+          "hit": 0.04
+        }
+      ]
+    }
+  ],
+  "talk": {
+    "questions": [
+      "The son came home and said sorry. Is there anyone you need to say sorry to?",
+      "The father ran to hug his son. How does it feel to know God loves you that much?",
+      "The big brother was grumpy about the party. How can we be glad when someone else gets a second chance?"
+    ],
+    "verse": {
+      "ref": "Luke 15:24",
+      "text": "For this son of mine was dead and is alive again! He was lost and is found!"
+    }
+  }
+}

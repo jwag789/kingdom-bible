@@ -256,6 +256,24 @@
           "seed": 6602
         }
       ]
+    },
+    {
+      "id": "farm",
+      "layers": [
+        {
+          "id": "courtyard",
+          "kind": "plate",
+          "depth": 0.1,
+          "paint": "courtyard",
+          "prompt": "A full-bleed painting: the scene itself reaches all four edges of the picture, one continuous view: the quiet, sunny stone courtyard of a family farmhouse in the warm late afternoon, with a stone well on the left, an olive tree, clay water jars and a wooden bench by the house wall, and green hills beyond; the middle of the courtyard is open and empty, with nobody in the picture",
+          "src": "art/games/farm/courtyard.jpg",
+          "generated": {
+            "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+            "seed": 600189,
+            "at": "2026-11-06T04:18:53.610Z"
+          }
+        }
+      ]
     }
   ]
 }
