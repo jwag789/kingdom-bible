@@ -829,7 +829,7 @@ function coat(k) {
   const layout = () => {
     const W = field.clientWidth, top = k.head(), room = field.clientHeight - top;
     const wide = W > room * 1.3;
-    const p = Math.min(wide ? room / (n + 1.2) : W / (n + 1.5), 74);
+    const p = Math.min(wide ? (room - (n - 1) * 10 - 24) / n : (W - (n - 1) * 10 - 40) / n, 74);   // the pots and the gaps between them fit
     field.style.setProperty('--pot', `${p}px`);
     pots.classList.toggle('column', wide);
     const coatH = Math.min(wide ? room * 0.94 : room - p - 30, (wide ? W * 0.6 : W * 0.9) * 264 / 200);
@@ -1533,7 +1533,12 @@ function altar(k) {
 
   const size = () => Math.min(W() * 0.15, (H() - k.head()) * 0.13);
   const layout = () => {
-    const top = k.head(), room = H() - top, s = size(), cx = W() / 2, base = top + room * 0.62;
+    const top = k.head(), room = H() - top, s = size();
+    // A phone on its side: the pile of stones waits on the left, the altar is built to the right of it.
+    const side = W() > room * 1.9 && pile.isConnected;
+    pile.classList.toggle('side', side);
+    if (side) pile.style.top = `${top + 6}px`;
+    const cx = side ? W() * 0.6 : W() / 2, base = top + room * (side ? 0.68 : 0.62);
     slots.forEach(sl => {
       const r = +sl.dataset.r, c = +sl.dataset.c, n = ROWS[r];
       sl.style.width = `${s}px`; sl.style.height = `${s * 0.78}px`;
@@ -1694,10 +1699,12 @@ function gragger(k) {
   const faces = [];
   // From the bottom up: the noisemaker, then the scroll just above it, clear of the words at the top.
   const geo = () => {
-    const b = clamp(Math.min(W() * 0.3, H() * 0.2), 80, 190);
-    const s = clamp(Math.min(W() * 0.2, H() * 0.17), 56, 150);
+    const b = clamp(Math.min(W() * 0.3, H() * 0.2), 70, 190);
     const by = H() - b * 0.6 - 10;
-    return { s, b, by, y: by - b * 0.5 - s * 1.15, rx: W() * 0.3 };
+    // The scroll sits between the words at the top and the noisemaker, shrinking to fit if it must.
+    const top = k.head() + 8, bottom = by - b * 0.5 - 8;
+    const s = clamp(Math.min(W() * 0.2, H() * 0.17, (bottom - top) / 1.6), 40, 150);
+    return { s, b, by, y: Math.max(top + s * 0.75, bottom - s * 0.8), rx: W() * 0.3 };
   };
   // Haman a little under half the time, never three of anyone in a row.
   const pick = () => {

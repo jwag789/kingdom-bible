@@ -153,10 +153,12 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
     const big = el('div', 'tally', '');
     root.append(big);
     const spots = [];
+    // Below the words at the top, which can run long on a small phone.
+    const top = Math.max(0.26, (say.offsetTop + say.offsetHeight + 24) / root.clientHeight + 0.04);
     const near = (x, y) => spots.some(([a, b]) => Math.hypot(a - x, (b - y) * 0.6) < 0.1);
     for (let i = 0; i < total; i++) {
       let x, y, tries = 0;
-      do { x = 0.08 + Math.random() * 0.84; y = 0.26 + Math.random() * 0.56; } while (near(x, y) && ++tries < 40);
+      do { x = 0.08 + Math.random() * 0.84; y = top + Math.random() * (0.86 - top); } while (near(x, y) && ++tries < 40);
       spots.push([x, y]);
       const item = el('button', `item ${game.item}`);
       item.setAttribute('aria-label', `${game.item} ${i + 1}`);

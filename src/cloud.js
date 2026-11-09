@@ -5,7 +5,8 @@
 //   <bucket>/<share id>/<story>/<slide key>.<ext>     one recording per page
 //   <bucket>/<share id>/<story>/voice.json            { name, story, files: { key: file } }
 
-import { SUPABASE } from './config.js';
+import { SUPABASE, SITE } from './config.js';
+import { isApp } from './native.js';
 import { saveVoice } from './voices.js';
 
 export const cloudReady = () => !!(SUPABASE.url && SUPABASE.key);
@@ -36,7 +37,7 @@ export async function shareVoice({ name, storyId, clips, onProgress }) {
   }
   await upload(`${id}/${storyId}/voice.json`, JSON.stringify({ name, story: storyId, files }), 'application/json');
   onProgress?.(1);
-  const link = new URL(location.href);
+  const link = new URL(isApp() ? SITE : location.href);
   link.search = `?story=${storyId}&voice=${id}`;
   link.hash = '';
   return link.toString();

@@ -28,6 +28,11 @@
   body { margin: 0; color: var(--ink); background: var(--night); font-family: 'Literata', Georgia, serif;
     -webkit-font-smoothing: antialiased; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
   #stage { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  /* Little hands press and hold: no link previews, picture menus or text selection popping up.
+     The Bible verses stay selectable, for grown-ups who want to copy them. */
+  body { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+  .sheet, .sheet * { -webkit-user-select: text; user-select: text; }
+  input, textarea { -webkit-user-select: text; user-select: text; -webkit-touch-callout: default; }
 
   #stage { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
   #scrim { position: fixed; inset: 0; pointer-events: none; z-index: 1;
@@ -137,6 +142,14 @@
   .toast .words { transition: opacity 0.3s; }
   .toast .name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; line-height: 1.1; }
   @keyframes pop { 0% { transform: scale(0.2) rotate(-30deg); } 100% { transform: scale(1) rotate(-4deg); } }
+  /* A phone on its side: a smaller title and a shorter "Start here" card, so it clears the tab bar. */
+  @media (max-height: 500px) and (min-width: 561px) {
+    #home .head h1 { font-size: 2.3rem; }
+    #home .hero { margin-top: 0.9rem; height: max(150px, calc(100vh - 225px)); }
+    #home .hero .sub { display: none; }
+    #home .hero h2 { font-size: 2rem; margin-bottom: 0.7rem; }
+  }
+  @media (max-width: 600px) { .kingdom .top .eyebrow { font-size: 0.66rem; letter-spacing: 0.18em; } }
   @media (max-width: 560px) {
     .toast { gap: 12px; padding: 10px 20px 10px 10px; max-width: calc(100vw - 24px); }
     .toast .sticker { border-width: 3px; }
@@ -172,16 +185,25 @@
     padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
   .game.in { opacity: 1; }
   .game::before { content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 30%, rgba(4,5,10,0) 45%, rgba(4,5,10,0.55) 100%); }
+    background: linear-gradient(180deg, rgba(4,5,10,0.8) 0%, rgba(4,5,10,0.6) 16%, rgba(4,5,10,0.25) 30%, rgba(4,5,10,0) 42%, rgba(4,5,10,0) 55%, rgba(4,5,10,0.55) 100%); }
   .game > * { position: relative; }
   .game .top { display: flex; align-items: center; gap: 14px; }
-  .game .title { flex: 1; text-shadow: 0 1px 14px rgba(0,0,0,0.6); }
+  .game .title { flex: 1; min-width: 0; text-shadow: 0 1px 14px rgba(0,0,0,0.6); }
+  /* Narrow phones: the count goes on its own line under the title, so the title has room. */
+  @media (max-width: 600px) {
+    .game .top { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; row-gap: 8px; align-items: start; }
+    .game .top .title { grid-column: 1; grid-row: 1; }
+    .game .top .close { grid-column: 2; grid-row: 1; }
+    .game .top .progress { grid-column: 1 / -1; grid-row: 2; justify-self: start; font-size: 0.72rem; padding: 0.45em 0.9em; }
+    .game h2 { font-size: 1.75rem; }
+  }
   .game h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
   .game .progress { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
     padding: 0.5em 1em; border-radius: 999px; background: var(--glass); border: 1px solid rgba(240,204,138,0.4); white-space: nowrap; }
   .game .close { width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; flex: none;
     border: 1px solid rgba(240,204,138,0.45); background: var(--glass); color: var(--gold); }
-  .game .say { margin: 0.6rem 0 0; max-width: 34rem; font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.45; text-shadow: 0 1px 14px rgba(0,0,0,0.7); }
+  .game .say { margin: 0.6rem 0 0; max-width: 34rem; font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.45;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 1px 14px rgba(0,0,0,0.8); }
   .game .tray { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(8px, 2vw, 18px); padding-bottom: 6px; }
   .game .piece { width: clamp(72px, min(12vw, 15vh), 118px); aspect-ratio: 1; border-radius: 22px; border: 3px solid #fbf6ea; background: rgba(251,246,234,0.88);
     box-shadow: 0 8px 20px rgba(0,0,0,0.35); padding: 8px; display: grid; place-items: center; cursor: pointer;
@@ -201,6 +223,15 @@
   .game .won h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.6rem; margin: 0.2rem 0; }
   .game .won p { color: var(--soft); line-height: 1.5; }
   .game .won .starts { justify-content: center; margin-top: 1.4rem; }
+  /* A phone on its side: a smaller badge and tighter card, so it all fits on the screen. */
+  @media (max-height: 500px) {
+    .game .won { padding: 16px 20px; width: min(30rem, calc(100% - 32px)); }
+    .game .won .sticker { width: 72px !important; height: 72px !important; margin-bottom: 6px; }
+    .game .won .sticker.emoji { font-size: 36px !important; }
+    .game .won h3 { font-size: 2rem; }
+    .game .won p { margin: 0.3rem 0; }
+    .game .won .starts { margin-top: 0.7rem; }
+  }
   .game .item { position: absolute; transform: translate(-50%, -50%) scale(var(--size, 1)); border: 0; padding: 0; background: none; cursor: pointer; }
   .game .item.star { width: 46px; height: 46px; background: #c9cfe6; opacity: 0.55; filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
     clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%); animation: twinkle 2.6s ease-in-out infinite var(--delay); }
@@ -368,6 +399,7 @@
   .game .field > .piece.laid img { width: 100%; }
   .game .piece.laid.wet img { filter: brightness(0.8) saturate(1.2) hue-rotate(-8deg); }
   .game .field > .stonepile { left: 50%; top: auto; bottom: 10px; transform: translateX(-50%); display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; width: min(96%, 560px); }
+  .game .field > .stonepile.side { left: max(12px, env(safe-area-inset-left)); bottom: auto; transform: none; width: calc(3 * clamp(46px, 13vmin, 70px) + 12px); justify-content: flex-start; }
   .game .stonepile .piece { position: relative; width: clamp(46px, 13vmin, 70px); height: clamp(46px, 13vmin, 70px); padding: 4px; }
   .game .ditch { border-radius: 50%; background: rgba(60,40,20,0.35); border: 2px solid rgba(80,55,30,0.5); overflow: hidden; pointer-events: none; z-index: 1; }
   .game .water { --fill: 0; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(closest-side, #8fd0ff, #3f7fd0);
@@ -605,7 +637,7 @@
   .toast .piece-art { display: grid; place-items: center; border-radius: 50%; background: #f6efdc; border: 4px solid #fbf6ea; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
   .toast .piece-art img { max-width: 78%; max-height: 82%; }
   .kingdom .slot .sticker { transform: none; border-width: 2px; }
-  .kingdom .empty { color: var(--soft); font-style: italic; margin: 6px 4px; max-width: 40rem; line-height: 1.5; }
+  .kingdom .empty { flex: none; align-self: center; width: min(24rem, 72vw); color: var(--soft); font-style: italic; font-size: 0.92rem; margin: 0 6px 0 2px; line-height: 1.45; }
 
   /* ---- Family voices: "Read by" on the cover, the grown-up check, and the recorder. */
   .read-by { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 1.6rem; pointer-events: auto; }
@@ -618,13 +650,14 @@
   .gate { position: fixed; inset: 0; z-index: 12; display: grid; place-items: center; padding: 16px; background: rgba(4,5,10,0.7);
     backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.25s; }
   .gate.in { opacity: 1; }
-  .gate .card { width: min(26rem, 100%); padding: 26px 22px; border-radius: 24px; background: #12101a; border: 1px solid rgba(240,204,138,0.45); text-align: center; }
+  .gate { grid-template-columns: minmax(0, 1fr); }
+  .gate .card { box-sizing: border-box; justify-self: center; max-width: 100%; width: min(26rem, 100%); padding: 26px 22px; border-radius: 24px; background: #12101a; border: 1px solid rgba(240,204,138,0.45); text-align: center; }
   .gate h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2rem; margin: 0.3rem 0 1rem; }
   .gate p { color: var(--soft); line-height: 1.5; margin: 0.4rem 0; }
   .gate .answers { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0.6rem 0; }
   .gate .answers .begin { margin: 0; min-width: 5rem; font-size: 0.95rem; }
   .gate .typed { display: flex; gap: 8px; margin: 0.8rem 0 0.4rem; }
-  .gate .name { flex: 1; min-width: 0; font: inherit; padding: 0.6em 0.9em; border-radius: 999px; border: 1px solid rgba(240,204,138,0.4); background: rgba(255,255,255,0.06); color: var(--ink); }
+  .gate .name { flex: 1; width: 0; min-width: 0; font: inherit; font-size: max(16px, 1em); padding: 0.6em 0.9em; border-radius: 999px; border: 1px solid rgba(240,204,138,0.4); background: rgba(255,255,255,0.06); color: var(--ink); }
   .gate .typed .begin { margin: 0; }
   .gate .cancel { margin-top: 0.8rem; background: none; border: 0; color: var(--soft); text-decoration: underline; }
   .recorder { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; overflow-y: auto;
@@ -677,6 +710,12 @@
     .talk .questions { gap: 0.45rem; margin-bottom: 1rem; }
     .talk .questions li { font-size: 1rem; }
     .talk .col { background: rgba(4,5,10,0.62); border-radius: 20px; padding: 16px 16px 18px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    /* An upright phone: the questions and the verse have to fit above the buttons. */
+    .slide.talk { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+    .talk h2 { font-size: 1.9rem; margin-top: 0.2rem; }
+    .talk .questions li { font-size: 0.97rem; line-height: 1.4; }
+    .talk .memory { padding: 12px 14px; }
+    .talk .memory blockquote { font-size: 1.25rem; }
   }
 
   /* ---- Bedtime: calmer pictures, and a goodnight fade at the end. */
@@ -819,13 +858,45 @@
   /* Phones: words sit low over a darker band, art fills the top. */
   @media (max-width: 760px) {
     #scrim { background: linear-gradient(0deg, rgba(4,5,10,0.9) 0%, rgba(4,5,10,0.6) 42%, rgba(4,5,10,0) 70%); }
+    /* The cover and the end page carry more words, up higher: darken the picture behind them too. */
+    #scrim::after { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;
+      background: linear-gradient(0deg, rgba(4,5,10,0.35) 0%, rgba(4,5,10,0.55) 55%, rgba(4,5,10,0.35) 100%); }
+    body.at-cover #scrim::after, body.at-end #scrim::after { opacity: 1; }
     .slide { align-items: flex-end; padding-bottom: calc(16vh + env(safe-area-inset-bottom)); padding-right: 44px; }
     .slide.cover, .slide.title { padding-bottom: calc(22vh + env(safe-area-inset-bottom)); }
-    #hint { top: 28% !important; left: 50% !important; }
     #nav { gap: 6px; }
     #nav button, #nav .navlink { width: 38px; height: 38px; }
     #nav svg { width: 16px; height: 16px; }
     #nav .gap { width: 2px; }
+  }
+
+  /* Short screens (a phone on its side): everything on a page has to fit between the top of the
+     screen and the buttons along the bottom. */
+  @media (max-height: 500px) {
+    #scrim { background: linear-gradient(90deg, rgba(4,5,10,0.88) 0%, rgba(4,5,10,0.7) 38%, rgba(4,5,10,0.2) 66%, rgba(4,5,10,0) 80%); }
+    .slide, .slide.cover, .slide.title { align-items: center;
+      padding-top: max(10px, env(safe-area-inset-top)); padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
+    .cover h1 { font-size: 2.5rem; margin: 0.35rem 0 0.4rem; }
+    .title h2 { font-size: 2.6rem; }
+    .sub { font-size: 0.95rem; }
+    .starts { margin-top: 0.9rem; gap: 10px; }
+    .read-by { margin-top: 0.7rem; }
+    .slide .all-stories, .slide .credit { display: none; }     /* the bar's own button goes to all stories */
+    .end h2 { font-size: 2rem; margin: 0.3rem 0 0.4rem; }
+    .mini { margin-bottom: 0.6rem; }
+    .beat { font-size: 1.25rem; line-height: 1.45; }
+    .source { margin-top: 0.9rem; }
+    .play-game { margin-top: 0.9rem; }
+    /* Talk about it: the questions on the left, the memory verse beside them. */
+    .slide.talk .col { background: rgba(4,5,10,0.62); border-radius: 20px; padding: 14px 16px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      max-width: min(46rem, 100%); display: grid; grid-template-columns: 1.2fr 0.8fr; column-gap: 22px; align-items: center; }
+    .slide.talk .col > .eyebrow, .slide.talk .col > h2, .slide.talk .questions { grid-column: 1; }
+    .slide.talk .memory { grid-column: 2; grid-row: 1 / span 3; padding: 12px 14px; }
+    .talk h2 { font-size: 1.7rem; margin: 0.2rem 0 0.5rem; }
+    .talk .questions { gap: 0.35rem; margin: 0; }
+    .talk .questions li { font-size: 0.95rem; line-height: 1.35; }
+    .talk .memory blockquote { font-size: 1.15rem; }
+    #hint .label { white-space: normal; max-width: 10.5rem; text-align: center; line-height: 1.5; }
   }
 
   @media (prefers-reduced-motion: reduce) {

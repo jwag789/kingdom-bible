@@ -491,6 +491,7 @@ function go(to) {
   $('prev').disabled = to === 0;
   $('next').disabled = to === slides.length - 1;
   document.body.classList.toggle('at-cover', to === 0);
+  document.body.classList.toggle('at-end', slides[to].el.classList.contains('end'));
   changedAt = performance.now();
   history.replaceState(null, '', `#${to}`);
   // Remembered for the Stories page's "Continue reading".

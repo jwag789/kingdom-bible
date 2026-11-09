@@ -42,6 +42,7 @@ export class Stage {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.hint = hint;
+    this.hintText = null; this.hintAt = null; this.hintPlaced = 0;
     this.scenes = story.scenes.map((s, si) => ({
       id: s.id,
       frame: s.frame ?? [0.5, 0.5],
@@ -339,14 +340,43 @@ export class Stage {
 
   showHint(text, at) {
     if (!this.hint) return;
-    if (text) {
-      // Kept on screen even when the spot in the picture is cropped off a narrow screen.
-      const [x, y] = this.toScreen(at[0], at[1]);
+    const now = performance.now();
+    // Placed again when it changes, and a few times a second while the words settle into place.
+    if (text && (text !== this.hintText || at !== this.hintAt || now - this.hintPlaced > 250)) {
+      this.hintText = text; this.hintAt = at; this.hintPlaced = now;
       this.hint.querySelector('.label').textContent = text;
-      this.hint.style.left = `${Math.min(0.85, Math.max(0.15, x)) * 100}%`;
-      this.hint.style.top = `${Math.min(0.9, Math.max(0.1, y)) * 100}%`;
+      this.placeHint(at);
     }
+    if (!text) this.hintText = null;
     this.hint.classList.toggle('on', !!text);
+  }
+
+  // Over the spot in the picture (kept on screen when it's cropped off a narrow one); on phones,
+  // over the middle of the picture. Never on top of the words: above them if there's room,
+  // otherwise beside them, otherwise as high as it can go.
+  placeHint(at) {
+    const W = innerWidth, H = innerHeight, clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    let x, y;
+    if (W <= 760 && H > W) { x = W / 2; y = H * 0.28; }   // an upright phone: over the middle of the picture
+    else { const [fx, fy] = this.toScreen(at[0], at[1]); x = clamp(fx, 0.15, 0.85) * W; y = clamp(fy, 0.1, 0.9) * H; }
+    const col = document.querySelector('.slide.on .col');
+    if (col) {
+      const c = col.getBoundingClientRect();
+      const hw = Math.min(W / 2 - 8, this.hint.offsetWidth / 2 + 12), hh = this.hint.offsetHeight / 2 + 14;
+      const probe = document.createElement('div');
+      probe.style.cssText = 'position:fixed;top:0;visibility:hidden;height:env(safe-area-inset-top,0px)';
+      document.body.append(probe);
+      const safeTop = probe.offsetHeight;
+      probe.remove();
+      const top = safeTop + 16 + hh;
+      if (x + hw > c.left && x - hw < c.right && y + hh > c.top - 20 && y - hh < c.bottom) {
+        if (c.top - 20 - hh >= top) y = c.top - 20 - hh;
+        else if (W > H) x = Math.min(W - hw - 44, Math.max((c.right + W) / 2, c.right + hw + 8));   // on its side: beside the words, clear of the dots
+        else y = top;
+      }
+    }
+    this.hint.style.left = `${x}px`;
+    this.hint.style.top = `${y}px`;
   }
 
   // Plates fill the scene's picture area (see view). A layer with `scale` is drawn that fraction
