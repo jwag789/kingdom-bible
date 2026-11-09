@@ -12,6 +12,8 @@ const icon = d => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" strok
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 // AAC in MP4 first: every phone and browser can play it back (Opus-in-MP4 isn't safe on older iPhones).
 const TYPES = ['audio/mp4;codecs=mp4a.40.2', 'audio/mp4', 'audio/webm;codecs=opus', 'audio/webm'];
+// Safari 17+ / the iPhone app's web view; elsewhere navigator.audioSession doesn't exist.
+const sessionType = t => { try { if (navigator.audioSession) navigator.audioSession.type = t; } catch {} };
 
 // `pages`: [{ key, say, label }] in reading order. Calls onClose(voiceId or null) when done.
 export async function openRecorder({ story, storyId, pages, sound, onClose }) {
@@ -21,10 +23,15 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
   voice.stories ??= {};
   voice.stories[storyId] ??= [];
 
+  // The story plays as 'playback' (heard with the silent switch on, see audio.js), and an iPhone
+  // won't open the microphone in that mode: switch to 'play-and-record' while recording.
+  sessionType('play-and-record');
   let stream;
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
-  } catch {
+  } catch (err) {
+    sessionType('playback');
+    console.warn('Microphone:', navigator.mediaDevices ? `${err?.name}: ${err?.message}` : 'navigator.mediaDevices is missing');
     alert('The microphone isn’t available. Check that this app is allowed to use it, then try again.');
     return;
   }
@@ -137,6 +144,7 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
     player.pause();
     stream.getTracks().forEach(t => t.stop());
     meter.close();
+    sessionType('playback');
     sound.ctx?.resume();
     root.classList.remove('in');
     document.body.classList.remove('game-open');
