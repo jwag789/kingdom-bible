@@ -912,6 +912,59 @@
     .slide, .slide.on { transition: none; transform: none; filter: none; }
     #hint .dot, .at-cover #next { animation: none; }
   }
+  /* ---- Cream: the menus (Stories, Games, the sticker book, the Kingdom's tray, the grown-up
+     cards and the recorder) sit on warm paper, like the cut-paper pictures themselves. The story
+     pages and the games stay as they are: the paintings fill the screen there. Anything drawn on
+     top of a painting (the big Start here card, the story covers' badges) keeps its light text. */
+  body.home, .book, .gate .card, .recorder, .kingdom .tray {
+    --ink: #3b2a1a; --soft: rgba(59, 42, 26, 0.68); --gold: #a8652a; --glass: rgba(255, 251, 242, 0.9);
+    --edge: rgba(168, 101, 42, 0.32); --paper-shadow: rgba(90, 60, 25, 0.22);
+    color: var(--ink); text-shadow: none;
+  }
+  /* Games, the Kingdom's meadow and the little pop-ups play over paintings, even when opened from the menus. */
+  .game, .kingdom, .toast { --ink: #f5ecda; --soft: rgba(245, 236, 218, 0.62); --gold: #f0cc8a; --glass: rgba(4, 5, 10, 0.38); color: var(--ink); }
+  #home .hero, #home .art { --ink: #f5ecda; --soft: rgba(245, 236, 218, 0.62); --gold: #f0cc8a; --glass: rgba(4, 5, 10, 0.38); }
+  html.home, body.home { background: radial-gradient(ellipse at 70% -10%, #fffaf0 0%, #f8f0e1 45%, #f1e4cb 100%) fixed; }
+  #home .head h1, #home h3 { color: var(--ink); }
+  #home .art { border-color: #fffdf8; box-shadow: 0 10px 22px var(--paper-shadow); }
+  #home .hero { border-color: #fffdf8; box-shadow: 0 16px 34px rgba(90, 60, 25, 0.28); }
+  #home .stars i { background: rgba(59, 42, 26, 0.18); }
+  #home .stars i.lit { background: #e3a531; }
+  #home .arrow { border-color: var(--edge); color: var(--gold); }
+  #home .arrow:hover { background: rgba(168, 101, 42, 0.1); }
+  .tabbar { background: rgba(255, 251, 242, 0.94); border-color: var(--edge, rgba(168, 101, 42, 0.32)); box-shadow: 0 10px 30px rgba(90, 60, 25, 0.25); }
+  .tabbar .tab { color: rgba(59, 42, 26, 0.6); }
+  .tabbar .tab:hover { color: #3b2a1a; }
+  .tabbar .tab.on { background: rgba(227, 165, 49, 0.22); color: #a8652a; }
+  :is(.book, .recorder, .kingdom .tray, .gate .card) .begin { border-color: var(--edge); }
+  :is(.book, .recorder, .kingdom .tray, .gate .card) .begin:hover { background: rgba(168, 101, 42, 0.1); border-color: var(--gold); }
+
+  /* The sticker book: a sheet of paper over the page. */
+  .book { background: rgba(248, 240, 225, 0.94); }
+  .book .close { border-color: var(--edge); }
+  .book .blank { border-color: rgba(168, 101, 42, 0.35); color: rgba(168, 101, 42, 0.5); background: rgba(255, 255, 255, 0.35); }
+  .book .sticker, #home .sticker { box-shadow: 0 6px 16px var(--paper-shadow), 0 1px 2px rgba(90, 60, 25, 0.3); }
+  .book .sticker.missing, .book .badge.missing { filter: grayscale(1) brightness(0.92) opacity(0.6); }
+  .book .sticker.lamb.missing { filter: grayscale(1) brightness(0.75) opacity(0.5); box-shadow: none; }
+
+  /* The Kingdom's tray along the bottom of the meadow. */
+  .kingdom .top { background: linear-gradient(180deg, rgba(4,5,10,0.62), rgba(4,5,10,0.25) 70%, rgba(4,5,10,0)); padding-bottom: 28px; }
+  .kingdom .tray { background: linear-gradient(0deg, #f1e4cb, #f8f0e1); border-top-color: var(--edge); scrollbar-color: rgba(168, 101, 42, 0.35) transparent; }
+  .kingdom .slot { border-color: var(--edge); background: rgba(255, 255, 255, 0.55); }
+  .kingdom .slot.locked .cutout { filter: brightness(0) opacity(0.22); }
+
+  /* Ask a grown-up, and Who's reading? */
+  .gate { background: rgba(59, 42, 26, 0.35); }
+  .gate .card { background: #fbf5e8; border-color: var(--edge); box-shadow: 0 20px 50px rgba(40, 25, 10, 0.35); }
+  .gate .name { border-color: var(--edge); background: #fffdf8; color: #3b2a1a; }
+  .gate .name::placeholder { color: rgba(59, 42, 26, 0.45); }
+
+  /* The recorder: a teleprompter on paper. */
+  .recorder { background: radial-gradient(ellipse at 50% 0%, #fffaf0, #f8f0e1 55%, #f1e4cb); }
+  .recorder .close, .recorder .step { border-color: var(--edge); }
+  .recorder .dots button { border-color: rgba(168, 101, 42, 0.55); }
+  .recorder .summary { background: #fbf5e8; border-color: var(--edge); box-shadow: 0 20px 50px rgba(40, 25, 10, 0.3); }
+  .recorder .level { background: #a8652a; }
 </style>
 </head>
 <body class="at-cover">
