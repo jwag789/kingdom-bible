@@ -710,6 +710,11 @@
     .talk .questions { gap: 0.45rem; margin-bottom: 1rem; }
     .talk .questions li { font-size: 1rem; }
     .talk .col { background: rgba(4,5,10,0.62); border-radius: 20px; padding: 16px 16px 18px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    /* The end page: next story, buttons and credits all above the buttons along the bottom. */
+    .slide.end { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+    .end h2 { font-size: 2.2rem; }
+    .end .starts { margin-top: 1.4rem; }
+    .end .credit { font-size: 0.75rem; margin-top: 1.2rem; }
     /* An upright phone: the questions and the verse have to fit above the buttons. */
     .slide.talk { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
     .talk h2 { font-size: 1.9rem; margin-top: 0.2rem; }
@@ -897,6 +902,10 @@
     .talk .questions li { font-size: 0.95rem; line-height: 1.35; }
     .talk .memory blockquote { font-size: 1.15rem; }
     #hint .label { white-space: normal; max-width: 10.5rem; text-align: center; line-height: 1.5; }
+  }
+  @media (max-height: 420px) {
+    .beat { font-size: 1.12rem; }
+    .source .toggle, .play-game { font-size: 0.72rem; letter-spacing: 0.12em; }
   }
 
   @media (prefers-reduced-motion: reduce) {
