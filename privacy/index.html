@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Kingdom Bible</title>
+<meta name="description" content="Kingdom Bible collects no personal information: no accounts, no ads, no analytics.">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="../icons/icon-192.png" type="image/png">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  :root { --ink: #f5ecda; --soft: rgba(245, 236, 218, 0.72); --faint: rgba(245, 236, 218, 0.14); --gold: #f0cc8a; --night: #04050a; }
+  * { box-sizing: border-box; }
+  html { background: var(--night); }
+  body { margin: 0; color: var(--ink); background: var(--night); font-family: 'Literata', Georgia, serif; font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  main { width: min(44rem, 100% - 32px); margin: 0 auto; padding: max(40px, env(safe-area-inset-top)) 0 max(56px, env(safe-area-inset-bottom)); }
+  a { color: var(--gold); }
+  .back { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; }
+  .back img { width: 32px; height: 32px; border-radius: 8px; }
+  .eyebrow { margin-top: 2.6rem; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+  h1, h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.1; }
+  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); margin: 0.4rem 0 0.6rem; }
+  h2 { font-size: 1.7rem; margin: 2.4rem 0 0.4rem; }
+  p, li { color: var(--soft); }
+  .lede { color: var(--ink); font-size: 1.1rem; }
+  .summary { border: 1px solid rgba(240,204,138,0.35); border-radius: 18px; padding: 16px 20px; background: #0c0e18; margin: 1.6rem 0; }
+  .summary ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+  .updated { font-size: 0.85rem; }
+  footer { border-top: 1px solid var(--faint); margin-top: 3rem; padding-top: 1.4rem; font-size: 0.85rem; color: var(--soft); }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../about/"><img src="../icons/icon-192.png" alt="">Kingdom Bible</a>
+  <div class="eyebrow">Privacy policy</div>
+  <h1>Your family’s privacy</h1>
+  <p class="updated">Last updated November 9, 2026</p>
+  <p class="lede">Kingdom Bible is made for children. It doesn’t ask who you are, doesn’t track what you do, and doesn’t show ads.</p>
+
+  <div class="summary">
+    <b>In short</b>
+    <ul>
+      <li>No accounts, no sign-up, no names or email addresses.</li>
+      <li>No advertising, and no analytics or tracking of any kind.</li>
+      <li>No in-app purchases.</li>
+      <li>Progress, stickers and recordings are kept on your device.</li>
+      <li>A recording leaves your device only if a grown-up chooses to send it to family.</li>
+    </ul>
+  </div>
+
+  <h2>What stays on your device</h2>
+  <p>As your child reads and plays, the app remembers things like which stories have been read, which stickers and badges have been found, what’s been placed in Your Kingdom, and settings such as sound and bedtime mode. This is saved in the app’s own storage on your device. It is never sent to us or anyone else, and deleting the app (or clearing the website’s data in your browser) erases it.</p>
+
+  <h2>Recording a story in your own voice</h2>
+  <p>A grown-up can record a story in their own voice. This uses the microphone, and only after you allow it. Recordings are saved on your device, and the microphone is used only while you are recording.</p>
+  <p>Grown-ups can choose to <b>send a recording to family</b>. Only then is it uploaded, along with the name you typed for the voice (for example “Grandma”) and which story it is, to secure file storage run by our hosting provider, Supabase. It’s saved under a long random address. Anyone who has that link can listen to it, so share it only with people you trust. Nothing else about you or your device is sent with it.</p>
+  <p>Shared recordings can’t be listed, changed or deleted from inside the app. If you’d like one removed, contact us with the link and we’ll delete it.</p>
+
+  <h2>Grown-up check</h2>
+  <p>Recording and sending recordings sit behind a simple “ask a grown-up” question, so young children don’t start them on their own.</p>
+
+  <h2>Children’s privacy</h2>
+  <p>We don’t knowingly collect any personal information from children, or from anyone. Because there are no accounts and no tracking, there is nothing about your child for us to collect, sell or share.</p>
+
+  <h2>The website</h2>
+  <p>The web version is hosted on GitHub Pages. Like any web host, GitHub may keep standard technical logs (such as IP addresses) to run and protect its service; see GitHub’s privacy statement. We don’t use cookies, and we don’t add any analytics or trackers.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we’ll update this page and the date at the top.</p>
+
+  <h2>Contact</h2>
+  <p data-contact>Questions, or want a shared recording removed? Contact us at <a href="#" data-email></a>.</p>
+
+  <footer>Kingdom Bible · <a href="../about/">About</a> · <a href="../">Open the app</a></footer>
+</main>
+<script>
+  // Fill this in: where parents can reach you (needed for the App Store and for removal requests).
+  const EMAIL = '';
+  const a = document.querySelector('[data-email]');
+  if (EMAIL) { a.href = `mailto:${EMAIL}`; a.textContent = EMAIL; }
+  else document.querySelector('[data-contact]').textContent = 'Questions, or want a shared recording removed? Contact us through the App Store listing.';
+</script>
+</body>
+</html>

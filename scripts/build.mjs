@@ -32,7 +32,7 @@ const writeJson = async (rel, data) => {
 
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
-for (const rel of ['index.html', 'manifest.webmanifest', 'icons', 'fonts', 'src', 'data/props.json', 'art/lamb.png', 'art/props']) await copy(rel);
+for (const rel of ['index.html', 'manifest.webmanifest', 'icons', 'fonts', 'src', 'data/props.json', 'art/lamb.png', 'art/props', 'about', 'privacy']) await copy(rel);
 await writeFile(join(out, '.nojekyll'), '');    // GitHub Pages: serve files as they are
 
 const fullLibrary = await json('data/library.json');
