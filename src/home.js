@@ -11,7 +11,7 @@ import { Collection, openBook } from './stickers.js';
 import { openGame, badgeEl } from './games.js';
 import { Sound } from './audio.js';
 import { openKingdom } from './kingdom.js';
-import { plugin, appReady } from './native.js';
+import { plugin, appReady, launched, coldStart } from './native.js';
 
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 const read = key => { try { return JSON.parse(localStorage.getItem(key) ?? 'null'); } catch { return null; } };
@@ -85,7 +85,7 @@ export async function showHome() {
       (visible ? nativeTabs.show() : nativeTabs.hide()).catch(() => {});
     };
     new MutationObserver(sync).observe(document.body, { childList: true, attributes: true, attributeFilter: ['class'] });
-    sync();
+    launched.then(sync);    // not before the launch picture starts to fade: it would sit on top of it
   }
 
   let current = null;
@@ -240,8 +240,12 @@ export async function showHome() {
   show(location.hash === '#games' ? 'games' : 'stories');
 
   // The app's launch picture fades once the page is drawn and its big painting is decoded (or
-  // after a second and a half, whichever comes first), so it never fades onto an empty card.
+  // after a second and a half, whichever comes first), so it never fades onto an empty card;
+  // and when the app has just opened it stays at least 1.5 s, long enough to be seen rather than
+  // flash past. (Coming back from a story there's no launch picture to wait for.)
   const first = view.querySelector('.hero-art, .art')?.style.backgroundImage.match(/url\("(.+)"\)/)?.[1];
   const decoded = first ? Object.assign(new Image(), { src: first }).decode().catch(() => {}) : null;
-  Promise.race([decoded, new Promise(r => setTimeout(r, 1500))]).then(() => requestAnimationFrame(appReady));
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  Promise.all([Promise.race([decoded, wait(1500)]), coldStart ? wait(1500 - performance.now()) : null])
+    .then(() => requestAnimationFrame(appReady));
 }

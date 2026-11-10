@@ -1,5 +1,6 @@
 // Where the app starts: the Stories page, or a story when the address names one (?story=noah).
 
+import './away.js';     // first, so it sees every sound made: quiet when the app isn't in front
 import { isApp, appReady } from './native.js';
 
 // In the iPhone/iPad app, a quick double tap (small children do it all the time) zoomed the

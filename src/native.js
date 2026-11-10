@@ -19,7 +19,15 @@ export function buzz(style = 'LIGHT') {
 }
 
 // The app opens on its launch picture (cream paper, the icon, the name) and keeps it up until the
-// first page has drawn, then fades it away, rather than flashing an empty screen.
+// first page has drawn, then fades it away, rather than flashing an empty screen. `launched`
+// resolves as the fade starts (the native tab bar waits for it, so it isn't drawn over the
+// picture). coldStart is true only for the first page since the app opened: going back to the
+// Stories page from a story shouldn't wait on a launch picture that's long gone.
+let markLaunched;
+export const launched = new Promise(r => { markLaunched = r; });
+export const coldStart = (() => { try { return !sessionStorage.getItem('kb:up'); } catch { return false; } })();
 export function appReady() {
+  try { sessionStorage.setItem('kb:up', '1'); } catch {}
   plugin('SplashScreen')?.hide({ fadeOutDuration: 450 }).catch(() => {});
+  markLaunched();
 }
