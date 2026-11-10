@@ -54,7 +54,17 @@ export class Sound {
   // Call from a user gesture.
   unlock() {
     if (!this.ctx) this.build();
+    if (this.held) return;
     if (this.ctx.state === 'suspended') this.ctx.resume();
+  }
+
+  // Quiet while something else needs the room (the recorder): nothing starts the sound again, not
+  // even a tap, until it's let go.
+  hold(on) {
+    this.held = on;
+    if (!this.ctx) return;
+    if (on) this.ctx.suspend().catch(() => {});
+    else this.ctx.resume().catch(() => {});
   }
 
   setEnabled(on) {

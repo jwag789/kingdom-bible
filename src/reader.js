@@ -7,7 +7,7 @@ import { Stage } from './stage.js';
 import { Sound } from './audio.js';
 import { Narrator, alignWords } from './narrator.js';
 import { Collection, stickerSrc, showToast, showLambToast, showPiecesToast, showPlaceToast, openBook } from './stickers.js';
-import { buzz, isApp } from './native.js';
+import { buzz, isApp, keepAwake } from './native.js';
 import { openGame } from './games.js';
 import { voices, voicesFor, chosenVoice, chooseVoice, getClip } from './voices.js';
 import { receiveVoice } from './cloud.js';
@@ -267,6 +267,8 @@ story.scenes.forEach((s, si) => {
 const stage = new Stage($('stage'), story, (si, beat) => firstBeat[si] + beat, $('hint'));
 let readAloud = (() => { try { return localStorage.getItem('kb:read') === '1'; } catch { return false; } })();
 let advanceTimer = null;
+let recording = false;    // the recorder is open (or its grown-up check is): no narrator
+keepAwake('read', readAloud);
 
 // The "Read by" choices on the cover.
 function showVoices() {
@@ -287,12 +289,15 @@ function showVoices() {
     for (const v of mine) box.append(choice(v.name, v.id));
   }
   const record = iconButton('button', 'record', 'mic', mine.some(v => !v.remote) ? 'Record more' : 'Read it in your own voice');
-  record.onclick = () => {
+  record.onclick = async () => {
+    recording = true;
     narrator.stop();
     clearTimeout(advanceTimer);
     const pages = slides.filter(sl => sl.say).map(sl => ({ key: sl.key, say: sl.say,
       label: sl.kind === 'cover' ? 'The cover' : `${story.scenes[sl.scene].eyebrow} · ${story.scenes[sl.scene].title}` }));
-    openRecorder({ story, storyId, pages, sound, onClose: async id => { if (id) await useVoice(id); else showVoices(); } });
+    const opened = await openRecorder({ story, storyId, pages, sound,
+      onClose: async id => { recording = false; if (id) await useVoice(id); else showVoices(); } });
+    if (!opened) recording = false;
   };
   box.append(record);
 }
@@ -324,6 +329,7 @@ function setReadAloud(on) {
   readAloud = on;
   try { localStorage.setItem('kb:read', on ? '1' : '0'); } catch {}
   $('read').setAttribute('aria-pressed', on);
+  keepAwake('read', on);      // listening hands-free: don't let the phone lock mid-sentence
   if (on) { setSound(true); narrate(); } else { advanceIn(null); narrator.stop(); }
 }
 function setSound(on) {
@@ -351,7 +357,7 @@ function narrate() {
   advanceIn(null);
   narrator.stop();
   const sl = slides[index];
-  if (!readAloud || !sound.ready || !sl.say) return;
+  if (recording || !readAloud || !sound.ready || !sl.say) return;
   narrator.play(sl.key, sl.say, () => {
     if (!readAloud || index === slides.length - 1) return;
     const waitingForTap = !!stage.waiting;

@@ -12,6 +12,7 @@
 // audio/games/<story>/<key>.m4a; without them the game simply plays silently.
 
 import { PLAY } from './play.js';
+import { feel, keepAwake } from './native.js';
 
 const ASPECT = 16 / 9;
 const shuffle = list => {
@@ -61,6 +62,20 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
   root.append(top, say, tray);
   document.body.append(root);
   document.body.classList.add('game-open');
+  keepAwake('game', true);
+
+  // Haptics for every game, read from what it shows rather than wired into each one: a light tap
+  // when the score ("3 of 12 frogs", "Found 2 of 5") goes up, two soft taps on an "Oops!".
+  let score = null;
+  new MutationObserver(() => {
+    const n = Number(progress.textContent.match(/(\d+) of \d+/)?.[1]);
+    if (!Number.isFinite(n)) return;
+    if (score != null && n > score) feel('right');
+    score = n;
+  }).observe(progress, { childList: true, characterData: true, subtree: true });
+  const OOPS = /^(Oops|Oh no|Not that|That’s not|That one’s too|Try again|Shh! That)/;
+  new MutationObserver(() => { if (OOPS.test(say.textContent)) feel('wrong'); })
+    .observe(say, { childList: true, characterData: true, subtree: true });
   setTimeout(() => root.classList.add('in'), 30);
 
   // Spoken lines: short recordings, played straight (no word highlighting needed here).
@@ -76,6 +91,7 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
     voice.pause();
     root.classList.remove('in');
     document.body.classList.remove('game-open');
+    keepAwake('game', false);
     removeEventListener('keydown', onKey, true);
     setTimeout(() => root.remove(), 350);
     onClose?.();
@@ -254,6 +270,7 @@ export async function openGame({ storyId, game, sound, onWin, onClose }) {
 
   const win = async () => {
     const first = onWin?.();
+    feel('win');
     sound.promise?.();
     confetti(root);
     const card = el('div', 'won');

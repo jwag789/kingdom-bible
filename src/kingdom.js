@@ -14,6 +14,8 @@
 // shape on a phone or a laptop (only the scenery behind it is cropped differently). A piece's
 // size `s` is its height, as a fraction of the meadow's shorter side.
 
+import { feel } from './native.js';
+
 const STORE = 'kb:kingdom';
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 // Saved as { place, places: { <place id>: [pieces] } }. Before there were places it was one list (the meadow's).
@@ -176,6 +178,7 @@ export async function openKingdom({ library, collection, sound, onClose }) {
     const move = ev => {
       const dx = ev.clientX - start.x, dy = ev.clientY - start.y;
       if (!moved && Math.hypot(dx, dy) < 6) return;
+      if (!moved) feel('pick');
       moved = true;
       piece.x = clamp(from.x + dx / box.width, 0.02, 0.98);
       piece.y = clamp(from.y + dy / box.height, 0.02, 0.98);
@@ -189,7 +192,7 @@ export async function openKingdom({ library, collection, sound, onClose }) {
       removeEventListener('pointermove', move);
       removeEventListener('pointerup', up);
       nodes.get(piece)?.classList.remove('lifted');
-      if (moved) { pop(); commit(); }
+      if (moved) { pop(); feel('place'); commit(); }
       select(piece);
     };
     addEventListener('pointermove', move);
@@ -226,6 +229,7 @@ export async function openKingdom({ library, collection, sound, onClose }) {
           pieces.push(piece);
           draw(piece);
           nodes.get(piece).classList.add('lifted');
+          feel('pick');
         }
         piece.x = clamp((ev.clientX - box.left) / box.width, 0.02, 0.98);
         piece.y = clamp((ev.clientY - box.top) / box.height, 0.02, 0.98);
@@ -244,6 +248,7 @@ export async function openKingdom({ library, collection, sound, onClose }) {
         }
         nodes.get(piece)?.classList.remove('lifted');
         pop();
+        feel('place');
         commit();
         select(piece);
       };

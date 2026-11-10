@@ -19,6 +19,7 @@
 		A1B2C3D42F00000100000002 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42F00000100000001 /* PrivacyInfo.xcprivacy */; };
 		A1B2C3D42F00000100000012 /* NativeTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42F00000100000011 /* NativeTabs.swift */; };
 		A1B2C3D42F00000100000014 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42F00000100000013 /* MainViewController.swift */; };
+		A1B2C3D42F00000100000016 /* KeepAwake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42F00000100000015 /* KeepAwake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A1B2C3D42F00000100000001 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A1B2C3D42F00000100000011 /* NativeTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTabs.swift; sourceTree = "<group>"; };
 		A1B2C3D42F00000100000013 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A1B2C3D42F00000100000015 /* KeepAwake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAwake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9582B6822FE993A50072D4E8 /* SceneDelegate.swift */,
 				50379B222058CBB4000EE86E /* capacitor.config.json */,
 				504EC3071FED79650016851F /* AppDelegate.swift */,
+				A1B2C3D42F00000100000015 /* KeepAwake.swift */,
 				A1B2C3D42F00000100000013 /* MainViewController.swift */,
 				A1B2C3D42F00000100000011 /* NativeTabs.swift */,
 				504EC30B1FED79650016851F /* Main.storyboard */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B2C3D42F00000100000016 /* KeepAwake.swift in Sources */,
 				A1B2C3D42F00000100000014 /* MainViewController.swift in Sources */,
 				A1B2C3D42F00000100000012 /* NativeTabs.swift in Sources */,
 				504EC3081FED79650016851F /* AppDelegate.swift in Sources */,

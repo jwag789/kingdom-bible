@@ -6,6 +6,7 @@
 import { grownUpCheck } from './gate.js';
 import { saveClip, getClip, voices, saveVoice, newVoiceId, chooseVoice } from './voices.js';
 import { cloudReady, shareVoice } from './cloud.js';
+import { keepAwake } from './native.js';
 
 // Round buttons get drawn icons: text symbols (−, +, ‹) sit below the middle of a circle.
 const icon = d => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
@@ -16,26 +17,31 @@ const TYPES = ['audio/mp4;codecs=mp4a.40.2', 'audio/mp4', 'audio/webm;codecs=opu
 const sessionType = t => { try { if (navigator.audioSession) navigator.audioSession.type = t; } catch {} };
 
 // `pages`: [{ key, say, label }] in reading order. Calls onClose(voiceId or null) when done.
+// Resolves true once the recorder is open, false if it never opened (no grown-up, no name, no mic).
 export async function openRecorder({ story, storyId, pages, sound, onClose }) {
-  if (!(await grownUpCheck('Recording your voice and sending it to family is for grown-ups.'))) return;
+  if (!(await grownUpCheck('Recording your voice and sending it to family is for grown-ups.'))) return false;
   const voice = await whoIsReading(storyId);
-  if (!voice) return;
+  if (!voice) return false;
   voice.stories ??= {};
   voice.stories[storyId] ??= [];
 
   // The story plays as 'playback' (heard with the silent switch on, see audio.js), and an iPhone
   // won't open the microphone in that mode: switch to 'play-and-record' while recording.
   sessionType('play-and-record');
+  // The story's music would get into the recording. Held, not just paused: a tap on the page would
+  // otherwise start it again, and so would coming back from the microphone permission prompt.
+  sound.hold(true);
   let stream;
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
   } catch (err) {
     sessionType('playback');
+    sound.hold(false);
     console.warn('Microphone:', navigator.mediaDevices ? `${err?.name}: ${err?.message}` : 'navigator.mediaDevices is missing');
     alert('The microphone isn’t available. Check that this app is allowed to use it, then try again.');
-    return;
+    return false;
   }
-  await sound.ctx?.suspend();       // the story's music would get into the recording
+  keepAwake('record', true);    // a grown-up reading page after page shouldn't have the phone lock on them
   const type = TYPES.find(t => window.MediaRecorder?.isTypeSupported?.(t)) ?? '';
 
   const root = el('div', 'recorder');
@@ -145,7 +151,8 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
     stream.getTracks().forEach(t => t.stop());
     meter.close();
     sessionType('playback');
-    sound.ctx?.resume();
+    sound.hold(false);
+    keepAwake('record', false);
     root.classList.remove('in');
     document.body.classList.remove('game-open');
     setTimeout(() => root.remove(), 350);
@@ -202,6 +209,7 @@ export async function openRecorder({ story, storyId, pages, sound, onClose }) {
 
   go(at);
   rec.focus();
+  return true;
 }
 
 // "Who's reading?" — pick a voice already started on this device, or name a new one.
