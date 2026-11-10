@@ -134,9 +134,9 @@ children,kids,storybook,read aloud,bedtime,toddler,preschool,christian,jesus,noa
 
 Upload in this order (the first three show in search results):
 
-1. `03-read-to-me` · 2. `01-stories` · 3. `05-game` · 4. `07-kingdom` · 5. `02-story-cover`
-(shows "Read by: Grandma") · 6. `08-talk-about-it` · 7. `04-games` · 8. `06-stickers` (optional;
-it's sparse)
+1. `03-read-to-me` · 2. `01-home` · 3. `05-game` · 4. `07-kingdom` · 5. `06-me` (reading time,
+stickers, badges) · 6. `04-library` · 7. `02-story-cover` (shows "Read by: Grandma") ·
+8. `08-talk-about-it`
 
 | App Store Connect slot | Folder | Size |
 |---|---|---|
