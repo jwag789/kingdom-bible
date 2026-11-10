@@ -966,6 +966,42 @@
   .recorder .dots button { border-color: rgba(168, 101, 42, 0.55); }
   .recorder .summary { background: #fbf5e8; border-color: var(--edge); box-shadow: 0 20px 50px rgba(40, 25, 10, 0.3); }
   .recorder .level { background: #a8652a; }
+
+  /* ---- Home, Library and Me (home.js). */
+  #home .hero.feature { height: clamp(210px, 26vw, 320px); margin-top: 1.4rem; }
+  #home button.hero { width: 100%; padding: 0; font: inherit; text-align: left; cursor: pointer; }
+  #home .kingdom-card { margin-top: 2rem; }
+  #home .kingdom-card .counts { margin: -0.1rem 0 1rem; color: var(--ink); opacity: 0.9; font-size: 0.9rem; text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
+  /* Library: Stories | Games */
+  #home .seg { display: inline-flex; gap: 2px; margin-top: 1.1rem; padding: 4px; border-radius: 999px;
+    background: rgba(168, 101, 42, 0.1); border: 1px solid var(--edge); }
+  #home .seg button { border: 0; background: none; font: inherit; font-weight: 600; font-size: 0.92rem; padding: 0.55em 1.5em; border-radius: 999px;
+    color: var(--soft); cursor: pointer; transition: background 0.2s, color 0.2s, box-shadow 0.2s; }
+  #home .seg button[aria-selected="true"] { background: #fffdf8; color: var(--gold); box-shadow: 0 2px 8px var(--paper-shadow); }
+  #home .seg + .row { margin-top: 1.4rem; }
+  /* Me: the numbers */
+  #home .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 1.3rem; }
+  #home .stat { background: #fffdf8; border: 1px solid var(--edge); border-radius: 18px; padding: 14px 14px 12px; box-shadow: 0 6px 16px var(--paper-shadow); }
+  #home .stat b { display: block; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1; color: var(--ink); }
+  #home .stat b small { font-family: 'Literata', serif; font-weight: 400; font-size: 0.8rem; color: var(--soft); }
+  #home .stat span { display: block; margin-top: 6px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+  #home .streak { margin: 0.9rem 0 0; color: var(--gold); font-weight: 600; }
+  #home .row-head .open-book { margin-left: auto; align-self: center; border: 1px solid var(--edge); background: #fffdf8; color: var(--gold); border-radius: 999px;
+    font: inherit; font-size: 0.8rem; font-weight: 600; padding: 0.45em 1em; cursor: pointer; white-space: nowrap; }
+  #home .track.sticker-track { grid-auto-columns: 84px; gap: 14px; padding-top: 4px; }
+  #home .sticker-track .sticker { border-width: 3px; }
+  #home .badges { display: flex; flex-wrap: wrap; gap: 14px; }
+  #home .badges .badge { filter: drop-shadow(0 0 8px rgba(227, 165, 49, 0.55)); }
+  #home .empty { color: var(--soft); font-style: italic; margin: 0.2rem 0 0; }
+  #home .save { margin-top: 2.4rem; padding: 18px 20px; border-radius: 20px; background: #fffdf8; border: 1px solid var(--edge); box-shadow: 0 6px 16px var(--paper-shadow); }
+  #home .save h3 { margin: 0 0 0.3rem; }
+  #home .save p { margin: 0; color: var(--soft); }
+  @media (max-width: 560px) {
+    #home .hero.feature { height: 52vw; max-height: 260px; }
+    #home .stats { gap: 9px; }
+    #home .stat { padding: 12px 11px 10px; border-radius: 15px; }
+    #home .stat span { font-size: 0.6rem; letter-spacing: 0.07em; }
+  }
 </style>
 </head>
 <body class="at-cover">
@@ -975,7 +1011,7 @@
 <div id="hint"><span class="dot"></span><span class="label"></span></div>
 <div id="dots" aria-label="Days"></div>
 <nav id="nav" aria-label="Pages">
-  <a id="contents" class="navlink" href="./" aria-label="All stories" title="All stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></a>
+  <a id="contents" class="navlink" href="./#library" aria-label="All stories" title="All stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></a>
   <button id="stickers" aria-label="Sticker book" title="Sticker book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg><span class="count"></span></button>
   <button id="bedtime" class="toggle" aria-label="Bedtime" title="Bedtime" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg></button>
   <button id="read" class="toggle" aria-label="Read it to me" title="Read it to me" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C6.5 4.5 9.5 4.6 12 6.5v13c-2.5-1.9-5.5-2-8-1V5.5z"/><path d="M20 5.5c-2.5-1-5.5-.9-8 1v13c2.5-1.9 5.5-2 8-1V5.5z"/></svg></button>

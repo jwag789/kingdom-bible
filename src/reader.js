@@ -12,6 +12,9 @@ import { openGame } from './games.js';
 import { voices, voicesFor, chosenVoice, chooseVoice, getClip } from './voices.js';
 import { receiveVoice } from './cloud.js';
 import { openRecorder } from './recorder.js';
+import { readingClock, activity } from './stats.js';
+
+readingClock();     // reading time for the Me page
 
 // Which story: ?story=noah reads data/noah.json; with none given, the first one.
 const asked = new URLSearchParams(location.search).get('story');
@@ -184,7 +187,7 @@ addSlide('cover', { scene: 0, beat: -1, at: 0, scrim: 0.9, key: 'cover', say: `$
   col.append(readBy);
   // Back to the Stories page.
   const all = iconButton('a', 'all-stories', 'shelf', 'All stories');
-  all.href = './';
+  all.href = './#library';
   col.append(all);
 });
 
@@ -240,7 +243,7 @@ addSlide('end', { scene: story.scenes.length - 1, beat: beats - 1, at: 1, scrim:
       col.append(starts);
     }
     const all = iconButton('a', 'all-stories', 'shelf', 'All stories');
-    all.href = './';
+    all.href = './#library';
     col.append(all);
   } else {
     col.append(node('div', 'eyebrow', 'The End'), node('h2', '', story.title));
@@ -481,6 +484,7 @@ function go(to) {
   if (to === index && slides[to].el.classList.contains('on')) return false;
   const sceneChanged = slides[to].scene !== slides[index].scene;
   index = to;
+  activity();        // read-aloud turns pages without a touch: still reading
   slides.forEach((sl, i) => {
     sl.el.classList.toggle('on', i === to);
     sl.el.classList.toggle('above', i < to);
