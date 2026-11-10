@@ -11,6 +11,7 @@ import { Collection, openBook } from './stickers.js';
 import { openGame, badgeEl } from './games.js';
 import { Sound } from './audio.js';
 import { openKingdom } from './kingdom.js';
+import { plugin, appReady } from './native.js';
 
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 const read = key => { try { return JSON.parse(localStorage.getItem(key) ?? 'null'); } catch { return null; } };
@@ -63,10 +64,35 @@ export async function showHome() {
   tab('stickers', 'Stickers', () => openBook({ collection, library, games }));
   document.body.append(bar);
 
+  // In the iPhone/iPad app the same four tabs are drawn natively (NativeTabs.swift: Liquid Glass,
+  // SF Symbols, a haptic tick) and the HTML bar stays hidden. A tap comes back here as a click.
+  const nativeTabs = plugin('NativeTabs');
+  if (nativeTabs) {
+    document.documentElement.classList.add('native-tabs');
+    nativeTabs.configure({ tabs: [
+      { id: 'stories', title: 'Stories', symbol: 'book' },
+      { id: 'games', title: 'Games', symbol: 'gamecontroller' },
+      { id: 'kingdom', title: 'Kingdom', symbol: 'crown' },
+      { id: 'stickers', title: 'Stickers', symbol: 'star' },
+    ] }).catch(() => {});
+    nativeTabs.addListener('tap', ({ id }) => bar.querySelector(`.tab-${id}`)?.click());
+    // Shown only where the HTML bar would be: not over a game, the Kingdom or the sticker book.
+    let shown = null;
+    const sync = () => {
+      const visible = !document.body.classList.contains('game-open') && !document.querySelector('.kingdom, .book');
+      if (visible === shown) return;
+      shown = visible;
+      (visible ? nativeTabs.show() : nativeTabs.hide()).catch(() => {});
+    };
+    new MutationObserver(sync).observe(document.body, { childList: true, attributes: true, attributeFilter: ['class'] });
+    sync();
+  }
+
   let current = null;
   const show = (name, { keepScroll = false } = {}) => {
     current = name;
     for (const [id, b] of Object.entries(tabs)) { b.classList.toggle('on', id === name); b.setAttribute('aria-current', id === name ? 'page' : 'false'); }
+    nativeTabs?.select({ id: name }).catch(() => {});
     try { history.replaceState(null, '', name === 'games' ? '#games' : location.pathname + location.search); } catch {}
     const y = scrollY;
     view.replaceChildren(...(name === 'games' ? gamesView() : storiesView()));
@@ -212,4 +238,10 @@ export async function showHome() {
   };
 
   show(location.hash === '#games' ? 'games' : 'stories');
+
+  // The app's launch picture fades once the page is drawn and its big painting is decoded (or
+  // after a second and a half, whichever comes first), so it never fades onto an empty card.
+  const first = view.querySelector('.hero-art, .art')?.style.backgroundImage.match(/url\("(.+)"\)/)?.[1];
+  const decoded = first ? Object.assign(new Image(), { src: first }).decode().catch(() => {}) : null;
+  Promise.race([decoded, new Promise(r => setTimeout(r, 1500))]).then(() => requestAnimationFrame(appReady));
 }

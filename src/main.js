@@ -1,6 +1,6 @@
 // Where the app starts: the Stories page, or a story when the address names one (?story=noah).
 
-import { isApp } from './native.js';
+import { isApp, appReady } from './native.js';
 
 // In the iPhone/iPad app, a quick double tap (small children do it all the time) zoomed the
 // page in and left it stuck there. The app's web view honors a fixed scale; the website keeps
@@ -8,5 +8,5 @@ import { isApp } from './native.js';
 if (isApp()) document.querySelector('meta[name=viewport]')?.setAttribute('content',
   'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover');
 
-if (new URLSearchParams(location.search).get('story')) await import('./reader.js');
-else (await import('./home.js')).showHome();
+if (new URLSearchParams(location.search).get('story')) { await import('./reader.js'); appReady(); }
+else (await import('./home.js')).showHome();    // fades the launch picture itself, once its painting is in

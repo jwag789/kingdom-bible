@@ -5,10 +5,18 @@
   "backgroundColor": "#04050a",
   "ios": {
     "contentInset": "never",
-    "scrollEnabled": false,
     "backgroundColor": "#04050a"
   },
   "android": {
     "backgroundColor": "#04050a"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "launchShowDuration": 8000,
+      "launchFadeOutDuration": 450,
+      "backgroundColor": "#f8f0e1",
+      "showSpinner": false
+    }
   }
 }

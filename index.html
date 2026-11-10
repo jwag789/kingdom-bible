@@ -808,6 +808,7 @@
   .tabbar .tab:hover { color: var(--ink); }
   .tabbar .tab.on { background: rgba(240,204,138,0.18); color: var(--gold); }
   body.game-open .tabbar, body:has(.kingdom) .tabbar, body:has(.book) .tabbar { display: none; }
+  html.native-tabs .tabbar { display: none; }   /* the iPhone/iPad app draws its own (NativeTabs.swift) */
 
   @media (max-width: 560px) {
     #home .hero { aspect-ratio: auto; min-height: 0; height: 64vw; max-height: 330px; }
